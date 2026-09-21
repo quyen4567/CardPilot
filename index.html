@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0d2743" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <title>CardPilot MVP</title>
+  <style>
+    :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
+    *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .app{max-width:520px;margin:0 auto;min-height:100vh;background:var(--bg);padding-bottom:88px}.top{background:linear-gradient(135deg,#0d2743,#12395f);color:#fff;padding:calc(18px + env(safe-area-inset-top)) 18px 20px;position:sticky;top:0;z-index:3}.top h1{font-size:23px;margin:0}.sub{font-size:13px;opacity:.82;margin-top:4px}
+    .content{padding:16px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:0 2px 10px rgba(16,24,40,.05)}.card h3{margin:0 0 5px;font-size:15px}.big{font-size:26px;font-weight:800}.small{font-size:12px;color:var(--muted)}.section{margin:18px 0 8px;font-size:17px;font-weight:800}.row{display:flex;gap:12px;align-items:center}.between{display:flex;justify-content:space-between;gap:10px;align-items:center}.pill{display:inline-flex;padding:5px 9px;border-radius:999px;font-size:11px;font-weight:700}.green{background:#e9f8ef;color:#087a3f}.amber{background:#fff4dd;color:#9a5b00}.red{background:#feeceb;color:#b42318}.blue{background:#eaf1ff;color:#175cd3}.progress{height:9px;background:#e9edf3;border-radius:99px;overflow:hidden}.bar{height:100%;background:var(--green)}
+    button,.btn{border:none;border-radius:12px;padding:11px 13px;font-weight:700;background:var(--blue);color:#fff;cursor:pointer}.btn.secondary{background:#eef4ff;color:#175cd3}.btn.ghost{background:#fff;color:#344054;border:1px solid var(--line)}input,select{width:100%;padding:11px 12px;border:1px solid #d0d5dd;border-radius:10px;background:#fff;font:inherit}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.list{display:flex;flex-direction:column;gap:10px}.item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px}.item-title{font-weight:800}.meta{color:var(--muted);font-size:12px;margin-top:3px}.tabs{position:fixed;bottom:0;left:0;right:0;max-width:520px;margin:auto;background:#fff;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);padding:8px 4px calc(8px + env(safe-area-inset-bottom));z-index:5}.tab{background:none;color:#667085;padding:7px 4px;font-size:11px}.tab.active{color:var(--blue)}.tab span{display:block;font-size:18px;margin-bottom:2px}.hidden{display:none}.kpi{font-weight:800;font-size:18px}.right{text-align:right}.note{background:#fff8e6;border:1px solid #f5d78e;padding:11px;border-radius:12px;font-size:12px}.empty{color:var(--muted);text-align:center;padding:30px 10px}.link{color:var(--blue);font-weight:700;cursor:pointer}.danger{color:var(--red)}
+  </style>
+</head>
+<body>
+<div class="app">
+  <header class="top"><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></header>
+  <main class="content">
+    <section id="homeView"></section>
+    <section id="cardsView" class="hidden"></section>
+    <section id="applyView" class="hidden"></section>
+    <section id="offersView" class="hidden"></section>
+    <section id="benefitsView" class="hidden"></section>
+  </main>
+  <nav class="tabs">
+    <button class="tab active" data-view="homeView"><span>⌂</span>Home</button>
+    <button class="tab" data-view="cardsView"><span>▣</span>My Cards</button>
+    <button class="tab" data-view="applyView"><span>✈</span>Apply Next</button>
+    <button class="tab" data-view="offersView"><span>★</span>Offers</button>
+    <button class="tab" data-view="benefitsView"><span>◷</span>Benefits</button>
+  </nav>
+</div>
+<script>
+const $=s=>document.querySelector(s); const $$=s=>[...document.querySelectorAll(s)];
+const defaultData={
+  profile:{five24Goal:true,cpTargetYear:2028,businessFirst:true,maxSpend:8000,notes:'Preserve both Southwest business cards for late 2027; target bonuses posting in early 2028.'},
+  cards:[
+    {id:1,name:'Amex Business Gold',type:'Business',opened:'2026-08-14',af:375,reports:false,sub:{bonus:'Welcome bonus',need:15000,done:8300,due:'2026-11-22',active:true}},
+    {id:2,name:'Atmos Rewards Business',type:'Business',opened:'2026-06-03',af:95,reports:false},
+    {id:3,name:'Chase Ink Unlimited',type:'Business',opened:'2026-03-07',af:0,reports:false},
+    {id:4,name:'Southwest Rapid Rewards Personal',type:'Personal',opened:'2024-01-12',af:149,reports:true},
+    {id:5,name:'Chase Sapphire Preferred',type:'Personal',opened:'2023-09-20',af:95,reports:true},
+    {id:6,name:'Hilton Honors Personal',type:'Personal',opened:'2023-05-06',af:0,reports:true}
+  ],
+  expenses:[
+    {id:1,name:'Insurance premium',amount:6700,date:'2026-10-15',fee:0,assigned:'Amex Business Gold'}
+  ],
+  benefits:[
+    {id:1,name:'Atmos companion certificate #1',expires:'2027-01-09',value:'$99 companion fare'},
+    {id:2,name:'Atmos companion certificate #2',expires:'2027-02-03',value:'$99 companion fare'},
+    {id:3,name:'Southwest Companion Pass',expires:'2027-02-28',value:'Companion Pass'}
+  ],
+  offers:[
+    {id:1,name:'World of Hyatt Business',type:'Business',bonus:70000,unit:'Hyatt points',hist:80000,spend:7000,af:199,reports:false,status:'wait',reason:'Current offer is below historical high.'},
+    {id:2,name:'Citi AAdvantage Business',type:'Business',bonus:75000,unit:'AA miles',hist:75000,spend:5000,af:99,reports:false,status:'consider',reason:'Useful when offer is elevated; preserves personal slots.'},
+    {id:3,name:'Southwest Premier Business',type:'Business',bonus:80000,unit:'RR points',hist:120000,spend:3000,af:149,reports:false,status:'save',reason:'Save for late 2027 Companion Pass strategy.'},
+    {id:4,name:'Southwest Performance Business',type:'Business',bonus:80000,unit:'RR points',hist:120000,spend:5000,af:299,reports:false,status:'save',reason:'Save for late 2027 Companion Pass strategy.'},
+    {id:5,name:'U.S. Bank Triple Cash Business',type:'Business',bonus:750,unit:'cash',hist:750,spend:6000,af:0,reports:false,status:'consider',reason:'Low annual fee and spend requirement fits many organic expenses.'},
+    {id:6,name:'Carnival Rewards Mastercard',type:'Personal',bonus:50000,unit:'points',hist:50000,spend:1000,af:0,reports:true,status:'avoid',reason:'Uses a personal 5/24 slot.'}
+  ]
+};
+let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
+function save(){localStorage.setItem('cardpilotData',JSON.stringify(data)); render();}
+function fmt(n){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n)}
+function daysTo(d){return Math.ceil((new Date(d+'T12:00:00')-new Date())/86400000)}
+function five24(){const cutoff=new Date(); cutoff.setMonth(cutoff.getMonth()-24); return data.cards.filter(c=>c.type==='Personal'&&c.reports&&new Date(c.opened)>=cutoff).length}
+function activeSub(){return data.cards.find(c=>c.sub&&c.sub.active)}
+function pct(a,b){return Math.min(100,Math.round(a/b*100))}
+function home(){const s=activeSub(), f=five24(), exp=[...data.benefits].sort((a,b)=>new Date(a.expires)-new Date(b.expires))[0]; const rem=s?Math.max(0,s.sub.need-s.sub.done):0;
+return `<div class="grid">
+<div class="card"><div class="small">Chase 5/24</div><div class="big">${f}/24</div><div class="small">${Math.max(0,5-f)} slots before 5/24</div></div>
+<div class="card"><div class="small">Active SUB</div><div class="kpi">${s?s.name:'None'}</div><div class="small">${s?fmt(rem)+' remaining':'Add a card SUB'}</div></div>
+<div class="card"><div class="small">Next best move</div><div class="kpi">Wait / finish SUB</div><div class="small">Protect business-card runway</div></div>
+<div class="card"><div class="small">Expiring soon</div><div class="kpi">${exp?daysTo(exp.expires)+' days':''}</div><div class="small">${exp?exp.name:'No benefit added'}</div></div>
+</div>
+${s?`<div class="section">SUB progress</div><div class="card"><div class="between"><div><h3>${s.name}</h3><div class="small">Due ${s.sub.due}</div></div><span class="pill green">Active</span></div><div style="margin-top:12px" class="progress"><div class="bar" style="width:${pct(s.sub.done,s.sub.need)}%"></div></div><div class="between" style="margin-top:8px"><b>${fmt(s.sub.done)} / ${fmt(s.sub.need)}</b><span class="small">${pct(s.sub.done,s.sub.need)}%</span></div></div>`:''}
+<div class="section">Upcoming spend</div><div class="list">${data.expenses.map(e=>`<div class="item between"><div><div class="item-title">${e.name}</div><div class="meta">${e.date}${e.fee?` • ${e.fee}% fee`:''}${e.assigned?` • Assigned: ${e.assigned}`:''}</div></div><div class="right"><div class="kpi">${fmt(e.amount)}</div><div class="small">${s&&e.amount>=rem?'Can finish active SUB':'Organic spend'}</div></div></div>`).join('')||'<div class="empty">No upcoming expenses yet.</div>'}</div><div class="section">Strategy timeline</div>${timeline()}
+<div class="section">Quick actions</div><div class="grid"><button onclick="showView('cardsView');showAddCard()">+ Add card</button><button class="btn secondary" onclick="showView('benefitsView')">Use before you lose</button><button class="btn ghost" onclick="showStrategy()">Strategy settings</button><button class="btn ghost" onclick="exportData()">Export data</button></div><div id="strategyBox"></div>`}
+function timeline(){
+ const items=[]; const s=activeSub();
+ if(s) items.push({when:'NOW',title:'Finish '+s.name,detail:fmt(Math.max(0,s.sub.need-s.sub.done))+' remaining by '+s.sub.due,cls:'green'});
+ const exp=[...data.benefits].sort((a,b)=>new Date(a.expires)-new Date(b.expires));
+ if(exp.length) items.push({when:'BEFORE '+exp[0].expires,title:'Use expiring benefit',detail:exp[0].name,cls:'amber'});
+ if(data.profile.cpTargetYear) items.push({when:'LATE '+(data.profile.cpTargetYear-1),title:'Re-check Southwest business offers',detail:'Verify eligibility and time bonuses for '+data.profile.cpTargetYear,cls:'blue'});
+ items.push({when:'NEXT',title:'Open only when organic spend fits',detail:'Preferred maximum new SUB spend: '+fmt(data.profile.maxSpend||8000),cls:'blue'});
+ return '<div class="list">'+items.map(x=>`<div class="item"><div class="between"><b>${x.title}</b><span class="pill ${x.cls}">${x.when}</span></div><div class="small" style="margin-top:5px">${x.detail}</div></div>`).join('')+'</div>';
+}
+function showStrategy(){const box=$('#strategyBox'); if(!box)return; box.innerHTML=`<div class="card" style="margin-top:12px"><h3>Strategy settings</h3><label class="small">Maximum comfortable spend for a new SUB</label><input id="pmax" type="number" value="${data.profile.maxSpend||8000}"><label class="small" style="display:block;margin-top:9px">Companion Pass target year</label><input id="pcy" type="number" value="${data.profile.cpTargetYear||2028}"><label class="small" style="display:block;margin-top:9px">Strategy notes</label><input id="pnotes" value="${(data.profile.notes||'').replaceAll('"','&quot;')}"><label class="small" style="display:block;margin:10px 0"><input id="pbiz" type="checkbox" style="width:auto" ${data.profile.businessFirst?'checked':''}> Prioritize business cards / preserve 5/24</label><button onclick="saveStrategy()">Save strategy</button><button class="btn ghost" style="margin-left:6px" onclick="importData()">Import data</button></div>`}
+function saveStrategy(){data.profile.maxSpend=+$('#pmax').value||8000;data.profile.cpTargetYear=+$('#pcy').value||2028;data.profile.notes=$('#pnotes').value;data.profile.businessFirst=$('#pbiz').checked;save();showStrategy()}
+function exportData(){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='cardpilot-backup.json';a.click();URL.revokeObjectURL(a.href)}
+function importData(){const i=document.createElement('input');i.type='file';i.accept='.json,application/json';i.onchange=()=>{const r=new FileReader();r.onload=()=>{try{data=JSON.parse(r.result);save();alert('CardPilot data imported.')}catch(e){alert('Could not import that file.')}};r.readAsText(i.files[0])};i.click()}
+function addSpendToSub(id){const c=data.cards.find(x=>x.id===id);if(!c||!c.sub)return;const v=prompt('Add qualifying spend amount:');if(v===null)return;c.sub.done=Math.min(c.sub.need,c.sub.done+(+v||0));if(c.sub.done>=c.sub.need)c.sub.active=false;save();showView('cardsView')}
+function cards(){return `<div class="between"><div class="section" style="margin-top:0">My Cards</div><button onclick="showAddCard()">+ Add</button></div><div id="addCardBox"></div><div class="list">${data.cards.map(c=>`<div class="item"><div class="between"><div><div class="item-title">${c.name}</div><div class="meta">${c.type} • Opened ${c.opened} • AF ${fmt(c.af)}</div></div><span class="pill ${c.reports?'amber':'green'}">${c.reports?'May count 5/24':'No 5/24'}</span></div>${c.sub&&c.sub.active?`<div style="margin-top:10px" class="progress"><div class="bar" style="width:${pct(c.sub.done,c.sub.need)}%"></div></div><div class="small" style="margin-top:5px">SUB: ${fmt(c.sub.need-c.sub.done)} remaining</div><button class="btn secondary" style="margin-top:8px;padding:7px 9px" onclick="addSpendToSub(${c.id})">+ SUB spend</button>`:''}<div class="small danger" style="margin-top:8px;cursor:pointer" onclick="removeCard(${c.id})">Remove</div></div>`).join('')}</div>`}
+function showAddCard(){const box=$('#addCardBox'); if(!box)return; box.innerHTML=`<div class="card" style="margin-bottom:12px"><h3>Add card</h3><div class="formgrid"><input id="cn" placeholder="Card name"><select id="ct"><option>Business</option><option>Personal</option></select><input id="co" type="date"><input id="caf" type="number" placeholder="Annual fee"></div><label class="small" style="display:block;margin:10px 0"><input id="cr" type="checkbox" style="width:auto"> Reports as personal account</label><button onclick="addCard()">Save card</button></div>`}
+function addCard(){const n=$('#cn').value.trim(); if(!n)return; data.cards.push({id:Date.now(),name:n,type:$('#ct').value,opened:$('#co').value||new Date().toISOString().slice(0,10),af:+$('#caf').value||0,reports:$('#cr').checked}); save(); showView('cardsView')}
+function removeCard(id){data.cards=data.cards.filter(c=>c.id!==id); save(); showView('cardsView')}
+function apply(){const s=activeSub(); const affordable=data.offers.filter(o=>o.spend<=(data.profile.maxSpend||8000)); return `<div class="section" style="margin-top:0">Apply Next</div>${s?`<div class="note"><b>Finish your current SUB first.</b><br>${s.name}: ${fmt(s.sub.need-s.sub.done)} remaining before ${s.sub.due}.</div>`:''}<div class="section">For you</div><div class="small" style="margin-bottom:10px">${data.profile.businessFirst?'Business-first mode is on. ':''}${affordable.length} tracked offers fit your ≤${fmt(data.profile.maxSpend||8000)} spend preference.</div><div class="list">${[...data.offers].sort((a,b)=>({consider:1,wait:2,save:3,avoid:4}[a.status]-({consider:1,wait:2,save:3,avoid:4}[b.status]))).map(o=>offerCard(o,true)).join('')}</div><div class="section">Companion Pass plan</div><div class="card"><h3>Southwest 2028–2029 strategy</h3><div class="small">Preserve both Southwest business cards until late 2027, then time qualifying bonuses to post in 2028. Re-check Chase rules and offers before applying.</div><div style="margin-top:10px"><span class="pill blue">Target: early 2028</span></div></div>`}
+function offerCard(o,reason=false){const strength=Math.round(o.bonus/o.hist*100);const cls=o.status==='consider'?'green':o.status==='wait'?'amber':o.status==='save'?'blue':'red'; const label=o.status==='consider'?'Strong candidate':o.status==='wait'?'Wait':o.status==='save'?'Save for later':'Avoid for now'; return `<div class="item"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.type} • AF ${fmt(o.af)} • Spend ${fmt(o.spend)}</div></div><span class="pill ${cls}">${label}</span></div><div class="between" style="margin-top:9px"><div><b>${o.bonus.toLocaleString()} ${o.unit}</b></div><div class="small">${strength}% of historical high</div></div>${reason?`<div class="small" style="margin-top:7px">${o.reason}</div>`:''}</div>`}
+function offers(){return `<div class="section" style="margin-top:0">Current & historical offers</div><div class="note">MVP note: offers below are sample data. In production, connect this screen to a verified offer database and source URLs.</div><div class="list" style="margin-top:12px">${data.offers.map(o=>offerCard(o,true)).join('')}</div>`}
+function benefits(){const sorted=[...data.benefits].sort((a,b)=>new Date(a.expires)-new Date(b.expires));return `<div class="between"><div class="section" style="margin-top:0">Benefits</div><button onclick="showAddBenefit()">+ Add</button></div><div id="addBenefitBox"></div><div class="list">${sorted.map(b=>`<div class="item between"><div><div class="item-title">${b.name}</div><div class="meta">${b.value||''} • Expires ${b.expires}</div></div><span class="pill ${daysTo(b.expires)<60?'red':daysTo(b.expires)<120?'amber':'green'}">${daysTo(b.expires)} days</span></div>`).join('')||'<div class="empty">No benefits tracked yet.</div>'}</div><div class="section">Upcoming spend</div><div class="card"><h3>Add an expense</h3><div class="formgrid"><input id="en" placeholder="Expense name"><input id="ea" type="number" placeholder="Amount"><input id="ed" type="date"><input id="ef" type="number" step="0.1" placeholder="Card fee %"><select id="eas"><option value="">Unassigned</option>${data.cards.map(c=>`<option>${c.name}</option>`).join('')}</select></div><button style="margin-top:10px" onclick="addExpense()">Save expense</button></div>`}
+function showAddBenefit(){const box=$('#addBenefitBox'); if(!box)return; box.innerHTML=`<div class="card" style="margin-bottom:12px"><h3>Add benefit</h3><div class="formgrid"><input id="bn" placeholder="Benefit name"><input id="bv" placeholder="Value / note"><input id="be" type="date"></div><button style="margin-top:10px" onclick="addBenefit()">Save benefit</button></div>`}
+function addBenefit(){if(!$('#bn').value)return; data.benefits.push({id:Date.now(),name:$('#bn').value,value:$('#bv').value,expires:$('#be').value}); save(); showView('benefitsView')}
+function addExpense(){if(!$('#en').value||!$('#ea').value)return; data.expenses.push({id:Date.now(),name:$('#en').value,amount:+$('#ea').value,date:$('#ed').value,fee:+$('#ef').value||0,assigned:$('#eas')?$('#eas').value:''}); save(); showView('benefitsView')}
+function render(){ $('#homeView').innerHTML=home(); $('#cardsView').innerHTML=cards(); $('#applyView').innerHTML=apply(); $('#offersView').innerHTML=offers(); $('#benefitsView').innerHTML=benefits(); }
+function showView(id){$$('main section').forEach(s=>s.classList.add('hidden')); $('#'+id).classList.remove('hidden'); $$('.tab').forEach(t=>t.classList.toggle('active',t.dataset.view===id)); const titles={homeView:'CardPilot',cardsView:'My Cards',applyView:'Apply Next',offersView:'Offers',benefitsView:'Benefits'}; $('#title').textContent=titles[id]; window.scrollTo(0,0)}
+$$('.tab').forEach(t=>t.onclick=()=>showView(t.dataset.view));
+render(); if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js');
+</script>
+</body></html>
