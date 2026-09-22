@@ -62,6 +62,12 @@ const defaultData={
   ]
 };
 let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
+// v5.1 migration: existing users who already finished onboarding should see the new plan once.
+if(data.profile && data.profile.setupComplete && data.profile.recommendationVersion !== '5.1'){
+  data.profile.showRecommendation=true;
+  data.profile.recommendationVersion='5.1';
+  localStorage.setItem('cardpilotData',JSON.stringify(data));
+}
 function save(){localStorage.setItem('cardpilotData',JSON.stringify(data)); render();}
 function fmt(n){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n)}
 function daysTo(d){return Math.ceil((new Date(d+'T12:00:00')-new Date())/86400000)}
@@ -104,6 +110,7 @@ function recommendationPlan(){
   if(goal==='Southwest Companion Pass' && !preserveSouthwest){steps.push({title:'Build a Companion Pass timeline',detail:'CardPilot should sequence Southwest applications so qualifying points post in the intended calendar year.'});}
   return {steps,best,goal,f};
 }
+function openPlan(){data.profile.showRecommendation=true;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
 function recommendationScreen(){
   const p=recommendationPlan();
   const headline=activeSub()?'Finish your current SUB before opening another card':p.best?`Next card to review: ${p.best.name}`:'Your strategy is ready';
@@ -113,6 +120,7 @@ function recommendationScreen(){
 function home(){if(!setupComplete())return onboarding();if(data.profile.showRecommendation)return recommendationScreen();const s=activeSub(),f=five24(),exp=[...data.benefits].filter(b=>b.expires).sort((a,b)=>new Date(a.expires)-new Date(b.expires))[0],rem=s?Math.max(0,s.sub.need-s.sub.done):0,action=nextAction(),needs=setupNeeds();
 return `<div class="hero"><div class="small">WHAT SHOULD I DO NOW?</div><h2>${action.title}</h2><div>${action.detail}</div><div class="small" style="margin-top:8px"><b>Why:</b> ${action.why}</div>${s?`<button class="primary-action" onclick="showView('cardsView')">Update SUB progress</button>`:`<button class="primary-action" onclick="showView('applyView')">Show me what to consider</button>`}</div>
 ${needs.length?`<div class="note"><b>CardPilot needs ${needs.length} more thing${needs.length>1?'s':''} from you.</b>${needs.map(x=>`<div class="todo"><span class="stepdot">›</span><span>${x}</span></div>`).join('')}</div>`:''}
+${(()=>{const rp=recommendationPlan();return `<div class="card" style="margin-top:14px"><div class="between"><div><div class="small">YOUR PLAN</div><h3 style="margin-top:4px">${rp.steps[0]?rp.steps[0].title:'Your strategy is ready'}</h3></div><button class="btn ghost" onclick="openPlan()">View full plan</button></div>${rp.steps[1]?`<div class="small" style="margin-top:8px"><b>Next:</b> ${rp.steps[1].title}</div>`:''}</div>`})()}
 <div class="grid" style="margin-top:14px"><div class="card"><div class="small">Chase 5/24</div><div class="big">${data.cards.length?f+'/24':'—'}</div><div class="small">${data.cards.length?Math.max(0,5-f)+' slots before 5/24':'Finish card setup'}</div></div><div class="card"><div class="small">Active SUB</div><div class="kpi">${s?s.name:'None'}</div><div class="small">${s?fmt(rem)+' remaining':'No active bonus'}</div></div><div class="card"><div class="small">Strategy</div><div class="kpi">${data.profile.businessFirst?'Business first':'Personal + business'}</div><div class="small">Goal: ${data.profile.goal||'Not set'}</div></div><div class="card"><div class="small">Expiring soon</div><div class="kpi">${exp?daysTo(exp.expires)+' days':'—'}</div><div class="small">${exp?exp.name:'No benefit added'}</div></div></div>
 ${s?`<div class="section">SUB progress</div><div class="card"><div class="between"><div><h3>${s.name}</h3><div class="small">Due ${s.sub.due||'not set'}</div></div><span class="pill green">Active</span></div><div style="margin-top:12px" class="progress"><div class="bar" style="width:${pct(s.sub.done,s.sub.need)}%"></div></div><div class="between" style="margin-top:8px"><b>${fmt(s.sub.done)} / ${fmt(s.sub.need)}</b><span class="small">${pct(s.sub.done,s.sub.need)}%</span></div></div>`:''}
 <div class="section">Upcoming spend</div><div class="list">${data.expenses.map(e=>`<div class="item between"><div><div class="item-title">${e.name}</div><div class="meta">${e.date}${e.assigned?` • Assigned: ${e.assigned}`:''}</div></div><div class="right"><div class="kpi">${fmt(e.amount)}</div><div class="small">${s&&e.amount>=rem?'Can finish active SUB':''}</div></div></div>`).join('')||'<div class="empty">No upcoming expenses added.</div>'}</div><div style="text-align:center;margin-top:16px"><button class="btn ghost" onclick="restartSetup()">Review setup</button></div>`}
