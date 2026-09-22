@@ -63,9 +63,9 @@ const defaultData={
 };
 let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
 // v5.1 migration: existing users who already finished onboarding should see the new plan once.
-if(data.profile && data.profile.setupComplete && data.profile.recommendationVersion !== '5.1'){
+if(data.profile && data.profile.setupComplete && data.profile.recommendationVersion !== '6.0'){
   data.profile.showRecommendation=true;
-  data.profile.recommendationVersion='5.1';
+  data.profile.recommendationVersion='6.0';
   localStorage.setItem('cardpilotData',JSON.stringify(data));
 }
 function save(){localStorage.setItem('cardpilotData',JSON.stringify(data)); render();}
@@ -92,23 +92,132 @@ function setSpend(v){data.profile.maxSpend=v;finishSetupStep(4)}
 function setGoal(g){data.profile.goal=g;finishSetupStep(5)}
 function finishOnboarding(biz){data.profile.businessFirst=biz;data.profile.setupComplete=true;data.profile.setupStep=5;data.profile.showRecommendation=true;save();showView('homeView')}
 function restartSetup(){data.profile.setupComplete=false;data.profile.setupStep=1;save();showView('homeView')}
+function offerTags(o){
+  const n=(o.name+' '+o.unit).toLowerCase();
+  return {
+    southwest:n.includes('southwest')||n.includes('rr points'),
+    hotel:n.includes('hyatt')||n.includes('hilton')||n.includes('marriott')||n.includes('ihg')||n.includes('hotel'),
+    airline:n.includes('aadvantage')||n.includes('southwest')||n.includes('atmos')||n.includes('airline')||n.includes('miles'),
+    cash:n.includes('cash')||String(o.unit).toLowerCase()==='cash',
+    cruise:n.includes('carnival')||n.includes('royal')||n.includes('norwegian')||n.includes('cruise')
+  };
+}
+function offerFit(o){
+  const f=five24();
+  const goal=data.profile.goal||'Help me decide';
+  const max=Number(data.profile.maxSpend||8000);
+  const sub=activeSub();
+  const rem=sub?Math.max(0,Number(sub.sub.need||0)-Number(sub.sub.done||0)):0;
+  const openBiz=!!data.profile.businessFirst;
+  const tags=offerTags(o);
+  const reasons=[];
+  const cautions=[];
+  let score=50;
+  let forced=null;
+
+  // 1) Protect a strategy that is intentionally being saved for a future calendar year.
+  if(tags.southwest && o.type==='Business' && data.profile.cpTargetYear){
+    const y=Number(data.profile.cpTargetYear);
+    if(y>=new Date().getFullYear()+1){
+      forced='save';
+      reasons.push(`Preserve this card for the ${y} Companion Pass strategy.`);
+      score=5;
+    }
+  }
+
+  // 2) Finish active SUBs before taking on a competing minimum-spend target.
+  if(sub && rem>0){
+    const covering=data.expenses.some(e=>e.assigned===sub.name && Number(e.amount||0)>=rem);
+    if(covering){
+      reasons.push(`Your existing ${sub.name} SUB appears covered by an assigned expense.`);
+      score+=4;
+    } else {
+      cautions.push(`${fmt(rem)} still remains on ${sub.name}.`);
+      score-=22;
+      if(!forced) forced='wait';
+    }
+  }
+
+  // 3) Spend fit. maxSpend is the user's comfortable 3-month organic spend ceiling.
+  const spendHeadroom=Math.max(0,max-(sub?rem:0));
+  if(o.spend<=max){score+=12;reasons.push(`${fmt(o.spend)} minimum spend fits your ${fmt(max)} 3-month spend setting.`)}
+  else {score-=30;cautions.push(`${fmt(o.spend)} minimum spend exceeds your ${fmt(max)} spend setting.`);if(!forced)forced='wait'}
+  if(sub && rem>0 && o.spend>spendHeadroom){
+    cautions.push(`After reserving spend for the active SUB, there may not be enough room for this offer yet.`);
+    score-=10;
+  }
+
+  // 4) 5/24 / business-card runway.
+  if(o.type==='Business'){
+    if(openBiz){score+=14;reasons.push('Business cards are enabled in your setup, which can preserve personal-card capacity when the account does not report personally.')}
+    else {score-=18;cautions.push('You told CardPilot to use personal cards only.');if(!forced)forced='avoid'}
+  } else if(o.reports){
+    if(f>=4){score-=28;cautions.push(`At ${f}/24, a new personal account may consume a scarce Chase slot.`);if(!forced)forced='wait'}
+    else if(f===3){score-=12;cautions.push('You are 3/24, so a personal application uses one of two remaining 5/24 slots.')}
+    else {score-=3}
+  }
+
+  // 5) Offer strength vs historical high.
+  const strength=o.hist?Math.round(Number(o.bonus)/Number(o.hist)*100):null;
+  if(strength!==null){
+    if(strength>=100){score+=18;reasons.push('The tracked offer is at its historical high.')}
+    else if(strength>=90){score+=9;reasons.push(`The tracked offer is ${strength}% of the historical high.`)}
+    else if(strength>=80){reasons.push(`The tracked offer is ${strength}% of the historical high.`)}
+    else {score-=14;cautions.push(`The tracked offer is only ${strength}% of the historical high.`);if(!forced)forced='wait'}
+  }
+
+  // 6) Goal fit. This does not override hard constraints above.
+  if(goal==='Cash back'){
+    if(tags.cash){score+=15;reasons.push('This offer matches your cash-back goal.')} else score-=5;
+  } else if(goal==='Hotel nights / status'){
+    if(tags.hotel){score+=15;reasons.push('This offer matches your hotel goal.')} else score-=4;
+  } else if(goal==='Southwest Companion Pass'){
+    if(tags.southwest){score+=12;reasons.push('This card is relevant to your Companion Pass goal, subject to your saved timing strategy.')} else score-=5;
+  } else if(goal==='Travel points'){
+    if(tags.airline||tags.hotel){score+=10;reasons.push('This earns a travel-focused rewards currency.')}
+  } else if(goal==='Maximum SUBs'){
+    if(strength>=90){score+=7}
+  }
+
+  // 7) Annual-fee friction: modest penalty only; high-value offers can still rank well.
+  if(Number(o.af||0)===0){score+=5;reasons.push('No annual fee lowers the cost of testing the card long term.')}
+  else if(Number(o.af||0)>=300){score-=8;cautions.push(`The ${fmt(o.af)} annual fee needs enough benefit value to justify it.`)}
+  else if(Number(o.af||0)>=150){score-=3}
+
+  let status=forced;
+  if(!status){
+    if(score>=75)status='consider';
+    else if(score>=52)status='wait';
+    else status='avoid';
+  }
+  const labels={consider:'Consider next',wait:'Wait',save:'Preserve for later',avoid:'Not a fit now'};
+  return {score,status,label:labels[status],strength,reasons,cautions};
+}
+function rankedOffers(){
+  const order={consider:0,wait:1,save:2,avoid:3};
+  return data.offers.map(o=>({offer:o,fit:offerFit(o)})).sort((a,b)=>order[a.fit.status]-order[b.fit.status]||b.fit.score-a.fit.score);
+}
 function recommendationPlan(){
   const s=activeSub();
   const f=five24();
-  const max=data.profile.maxSpend||8000;
   const goal=data.profile.goal||'Help me decide';
-  const preserveSouthwest=!!data.profile.cpTargetYear;
-  const candidates=data.offers.filter(o=>o.status==='consider' && o.spend<=max && (!data.profile.businessFirst || o.type==='Business'));
-  const waits=data.offers.filter(o=>o.status==='wait' && o.spend<=max && (!data.profile.businessFirst || o.type==='Business'));
-  const best=candidates[0]||waits[0]||data.offers.find(o=>o.spend<=max)||null;
+  const ranked=rankedOffers();
+  const best=ranked.find(x=>x.fit.status==='consider')||ranked.find(x=>x.fit.status==='wait')||null;
   const steps=[];
-  if(s){const rem=Math.max(0,s.sub.need-s.sub.done);steps.push({title:`Finish ${s.name} first`,detail:`${fmt(rem)} remains${s.sub.due?` before ${s.sub.due}`:''}. CardPilot will not put another minimum-spend target ahead of this one.`});}
-  if(best){steps.push({title:`${s?'Then consider':'Consider'} ${best.name}`,detail:`Tracked offer: ${best.bonus.toLocaleString()} ${best.unit}; spend ${fmt(best.spend)}; annual fee ${fmt(best.af)}. ${best.reason}`});}
-  if(preserveSouthwest){steps.push({title:'Preserve the Southwest business cards',detail:`Keep them available for the ${data.profile.cpTargetYear} Companion Pass strategy rather than using them now.`});}
-  if(f>=4){steps.push({title:'Protect your remaining 5/24 capacity',detail:`You are currently ${f}/24 based on saved accounts. Favor business-card opportunities when appropriate.`});}
-  else if(data.profile.businessFirst){steps.push({title:'Use business cards strategically',detail:`Your setup says business cards are an option. This can preserve personal-card capacity while you pursue bonuses.`});}
-  if(goal==='Southwest Companion Pass' && !preserveSouthwest){steps.push({title:'Build a Companion Pass timeline',detail:'CardPilot should sequence Southwest applications so qualifying points post in the intended calendar year.'});}
-  return {steps,best,goal,f};
+  if(s){
+    const rem=Math.max(0,Number(s.sub.need||0)-Number(s.sub.done||0));
+    const covering=data.expenses.find(e=>e.assigned===s.name&&Number(e.amount||0)>=rem);
+    steps.push({title:`Finish ${s.name} first`,detail:`${fmt(rem)} remains${s.sub.due?` before ${s.sub.due}`:''}.${covering?` ${covering.name} appears large enough to complete it.`:' Avoid starting a second minimum-spend target until this is safely covered.'}`});
+  }
+  if(best){
+    const o=best.offer, fit=best.fit;
+    steps.push({title:`${s?'Then review':'Review'} ${o.name}`,detail:`${fit.label} • score ${fit.score}/100. ${fit.reasons[0]||fit.cautions[0]||'This is the best fit among the offers currently tracked.'}`});
+  }
+  const saved=ranked.filter(x=>x.fit.status==='save');
+  if(saved.length){steps.push({title:'Preserve specific future opportunities',detail:saved.map(x=>x.offer.name).join(' + ')+' are being held for a later strategy rather than recommended now.'});}
+  if(f>=4){steps.push({title:'Protect your remaining 5/24 capacity',detail:`You are ${f}/24 based on saved accounts. Personal applications receive a significant penalty unless their value clearly justifies the slot.`});}
+  else if(data.profile.businessFirst){steps.push({title:'Keep business cards in the mix',detail:'CardPilot gives business offers extra weight when they fit your spend because you said business cards are an option.'});}
+  return {steps,best:best?best.offer:null,bestFit:best?best.fit:null,goal,f,ranked};
 }
 function openPlan(){data.profile.showRecommendation=true;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
 function recommendationScreen(){
@@ -134,12 +243,31 @@ function toggleEditSubFields(){const el=$('#editSubFields');if(el)el.classList.t
 function clearCardEditor(){const box=$('#addCardBox');if(box)box.innerHTML=''}
 function saveCardEdit(id){const c=data.cards.find(x=>x.id===id);if(!c)return;c.name=$('#ecn').value.trim()||c.name;c.type=$('#ect').value;c.af=+$('#ecaf').value||0;c.opened=$('#eco').value||c.opened;c.reports=$('#ecr').checked;c.five24Override=$('#ec524').value;if($('#esactive').checked){c.sub={bonus:$('#esbonus').value.trim()||'Welcome bonus',need:+$('#esneed').value||0,done:+$('#esdone').value||0,due:$('#esdue').value,active:true}}else if(c.sub){c.sub.active=false}save();showView('cardsView')}
 function removeCard(id){const c=data.cards.find(x=>x.id===id);if(!c)return;if(!confirm(`Remove ${c.name}? This cannot be undone.`))return;data.cards=data.cards.filter(c=>c.id!==id); save(); showView('cardsView')}
-function apply(){const s=activeSub(); const affordable=data.offers.filter(o=>o.spend<=(data.profile.maxSpend||8000)); const goal=data.profile.goal||'Not set'; return `<div class="section" style="margin-top:0">Apply Next</div>${s?`<div class="note"><b>Finish your current SUB first.</b><br>${s.name}: ${fmt(s.sub.need-s.sub.done)} remaining before ${s.sub.due}.</div>`:''}<div class="section">For you</div><div class="small" style="margin-bottom:10px">${data.profile.businessFirst?'Business-first mode is on. ':''}${affordable.length} tracked offers fit your ≤${fmt(data.profile.maxSpend||8000)} spend preference. Goal: ${goal}.</div><div class="list">${[...data.offers].sort((a,b)=>({consider:1,wait:2,save:3,avoid:4}[a.status]-({consider:1,wait:2,save:3,avoid:4}[b.status]))).map(o=>offerCard(o,true)).join('')}</div><div class="section">Companion Pass plan</div><div class="card"><h3>Southwest 2028–2029 strategy</h3><div class="small">Preserve both Southwest business cards until late 2027, then time qualifying bonuses to post in 2028. Re-check Chase rules and offers before applying.</div><div style="margin-top:10px"><span class="pill blue">Target: early 2028</span></div></div>`}
-function offerCard(o,reason=false){const strength=Math.round(o.bonus/o.hist*100);const cls=o.status==='consider'?'green':o.status==='wait'?'amber':o.status==='save'?'blue':'red'; const label=o.status==='consider'?'Strong candidate':o.status==='wait'?'Wait':o.status==='save'?'Save for later':'Avoid for now'; return `<div class="item"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.type} • AF ${fmt(o.af)} • Spend ${fmt(o.spend)}</div></div><span class="pill ${cls}">${label}</span></div><div class="between" style="margin-top:9px"><div><b>${o.bonus.toLocaleString()} ${o.unit}</b></div><div class="small">${strength}% of historical high</div></div>${reason?`<div class="small" style="margin-top:7px">${o.reason}</div><button class="btn ghost" style="margin-top:8px;padding:7px 10px" onclick="whyOffer(${o.id})">Why?</button>`:''}</div>`}
-
-function whyOffer(id){const o=data.offers.find(x=>x.id===id);if(!o)return;const reasons=[];const s=activeSub();reasons.push('CardPilot first checks active SUBs, 5/24 impact, business-card preference, spend fit, offer strength, and any strategy you are preserving.');if(s)reasons.push(`You have an active SUB on ${s.name}.`);if(data.profile.businessFirst&&o.type==='Business')reasons.push('Business-first mode is on, so this may preserve a personal 5/24 slot.');if(data.profile.businessFirst&&o.type==='Personal')reasons.push('This is a personal card and may use a 5/24 slot.');if(o.spend>(data.profile.maxSpend||8000))reasons.push(`Its ${fmt(o.spend)} spend requirement exceeds your preferred ${fmt(data.profile.maxSpend||8000)} maximum.`);else reasons.push(`Its ${fmt(o.spend)} spend requirement fits your current spend setting.`);if(o.hist&&o.bonus<o.hist)reasons.push(`The tracked offer is below the historical high (${o.bonus.toLocaleString()} vs ${o.hist.toLocaleString()}).`);if(o.name.includes('Southwest')&&data.profile.cpTargetYear)reasons.push(`Your strategy preserves Southwest business-card opportunities for the ${data.profile.cpTargetYear} Companion Pass plan.`);reasons.push(o.reason);alert(reasons.join('\n\n'))}
-
-function offers(){return `<div class="section" style="margin-top:0">Current & historical offers</div><div class="note">MVP note: offers below are sample data. In production, connect this screen to a verified offer database and source URLs.</div><div class="list" style="margin-top:12px">${data.offers.map(o=>offerCard(o,true)).join('')}</div>`}
+function apply(){
+  const s=activeSub();
+  const goal=data.profile.goal||'Not set';
+  const ranked=rankedOffers();
+  const counts={consider:0,wait:0,save:0,avoid:0};ranked.forEach(x=>counts[x.fit.status]++);
+  return `<div class="section" style="margin-top:0">Apply Next</div>
+  ${s?`<div class="note"><b>Current priority: finish ${s.name}.</b><br>${fmt(Math.max(0,s.sub.need-s.sub.done))} remaining${s.sub.due?` before ${s.sub.due}`:''}. Recommendations below account for that commitment.</div>`:''}
+  <div class="card" style="margin-bottom:12px"><div class="small">HOW THE ALGORITHM IS THINKING</div><h3 style="margin-top:4px">${counts.consider} consider • ${counts.wait} wait • ${counts.save} preserve</h3><div class="small">Goal: ${goal}. Spend ceiling: ${fmt(data.profile.maxSpend||8000)}. 5/24: ${five24()}/24. Business cards: ${data.profile.businessFirst?'included':'not included'}.</div></div>
+  <div class="section">For you</div><div class="list">${ranked.map(x=>offerCard(x.offer,true,x.fit)).join('')}</div>
+  ${data.profile.cpTargetYear?`<div class="section">Saved strategy</div><div class="card"><h3>Southwest Companion Pass</h3><div class="small">CardPilot is preserving Southwest business-card opportunities for your ${data.profile.cpTargetYear} plan instead of ranking them as immediate applications.</div></div>`:''}`
+}
+function offerCard(o,reason=false,fit=null){
+  fit=fit||offerFit(o);
+  const cls=fit.status==='consider'?'green':fit.status==='wait'?'amber':fit.status==='save'?'blue':'red';
+  return `<div class="item"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.type} • AF ${fmt(o.af)} • Spend ${fmt(o.spend)}</div></div><span class="pill ${cls}">${fit.label}</span></div><div class="between" style="margin-top:9px"><div><b>${o.bonus.toLocaleString()} ${o.unit}</b></div><div class="small">${fit.strength!==null?fit.strength+'% of historical high':'Historical high not set'}</div></div>${reason?`<div class="small" style="margin-top:7px"><b>Fit score ${fit.score}/100.</b> ${fit.reasons[0]||fit.cautions[0]||''}</div><button class="btn ghost" style="margin-top:8px;padding:7px 10px" onclick="whyOffer(${o.id})">Why?</button>`:''}</div>`
+}
+function whyOffer(id){
+  const o=data.offers.find(x=>x.id===id);if(!o)return;
+  const fit=offerFit(o);
+  const parts=[`${o.name}: ${fit.label} (${fit.score}/100)`];
+  if(fit.reasons.length)parts.push('Why it fits:\n• '+fit.reasons.join('\n• '));
+  if(fit.cautions.length)parts.push('What holds it back:\n• '+fit.cautions.join('\n• '));
+  parts.push('CardPilot evaluates active SUB commitments, organic spend fit, 5/24 impact, business-card availability, offer strength versus historical highs, your stated goal, annual fee, and any strategy you are intentionally preserving.');
+  alert(parts.join('\n\n'));
+}
 function benefits(){const sorted=[...data.benefits].sort((a,b)=>new Date(a.expires)-new Date(b.expires));return `<div class="between"><div class="section" style="margin-top:0">Benefits</div><button onclick="showAddBenefit()">+ Add</button></div><div id="addBenefitBox"></div><div class="list">${sorted.map(b=>`<div class="item between"><div><div class="item-title">${b.name}</div><div class="meta">${b.value||''} • Expires ${b.expires}</div></div><span class="pill ${daysTo(b.expires)<60?'red':daysTo(b.expires)<120?'amber':'green'}">${daysTo(b.expires)} days</span></div>`).join('')||'<div class="empty">No benefits tracked yet.</div>'}</div><div class="section">Upcoming spend</div><div class="card"><h3>Add an expense</h3><div class="formgrid"><input id="en" placeholder="Expense name"><input id="ea" type="number" placeholder="Amount"><input id="ed" type="date"><input id="ef" type="number" step="0.1" placeholder="Card fee %"><select id="eas"><option value="">Unassigned</option>${data.cards.map(c=>`<option>${c.name}</option>`).join('')}</select></div><button style="margin-top:10px" onclick="addExpense()">Save expense</button></div>`}
 function showAddBenefit(){const box=$('#addBenefitBox'); if(!box)return; box.innerHTML=`<div class="card" style="margin-bottom:12px"><h3>Add benefit</h3><div class="formgrid"><input id="bn" placeholder="Benefit name"><input id="bv" placeholder="Value / note"><input id="be" type="date"></div><button style="margin-top:10px" onclick="addBenefit()">Save benefit</button></div>`}
 function addBenefit(){if(!$('#bn').value)return; data.benefits.push({id:Date.now(),name:$('#bn').value,value:$('#bv').value,expires:$('#be').value}); save(); showView('benefitsView')}
