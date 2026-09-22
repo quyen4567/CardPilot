@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v10.6.6</title>
+  <title>CardPilot v10.6.7</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.6.6</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.6.7</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -352,8 +352,29 @@ function relationshipSummary(){const r=data.profile.relationships||{};const a=[]
 function relationshipEffect(o){const r=data.profile.relationships||{},tags=offerTags(o),reasons=[],cautions=[];let score=0;const name=String(o.name||'').toLowerCase();if(o.issuer==='Bank of America' || tags.bofa){if(o.type==='Personal'&&r.bofaPersonal&&r.bofaPersonal!=='none'){const m={member:[3,'10%'], 'preferred-plus':[7,'25%'], 'preferred-honors':[11,'50%'], premier:[16,'75%']}[r.bofaPersonal];if(m){score+=m[0];reasons.push(`Your BofA/Merrill relationship can add a ${m[1]} rewards bonus on eligible personal BofA cards.`)}}if(o.type==='Business'&&r.bofaBusiness&&r.bofaBusiness!=='none'){const m={gold:[7,'25%'],platinum:[11,'50%'],'platinum-honors':[16,'75%']}[r.bofaBusiness];if(m){score+=m[0];reasons.push(`Your Preferred Rewards for Business tier can add a ${m[1]} rewards bonus on eligible BofA business cards.`)}}}if(o.issuer==='Citi'&&name.includes('strata elite')){if(r.citi==='citigold'){score+=10;reasons.push('Your Citigold relationship can provide a $145 annual relationship credit on Strata Elite when terms are met.')}if(r.citi==='private'){score+=15;reasons.push('Your Citigold Private Client relationship can materially reduce Strata Elite cost through its relationship credit, including a first-year credit under current terms.')}}if(name.includes('charles schwab')){if(!r.schwab||r.schwab==='none'){score-=18;cautions.push('This card requires an eligible Schwab relationship.')}else{const m={eligible:[4,'eligible Schwab access'],'250k':[8,'$100 annual appreciation bonus'],'1m':[12,'$200 annual appreciation bonus'],'10m':[18,'up to $1,000 annual appreciation bonus']}[r.schwab];if(m){score+=m[0];reasons.push(`Your Schwab relationship may provide ${m[1]} under current terms.`)}}}if(name.includes('morgan stanley')){if(!r.morganStanley||r.morganStanley==='none'){score-=18;cautions.push('This card requires an eligible Morgan Stanley relationship.')}else if(r.morganStanley==='cashplus'){score+=20;reasons.push('Your eligible Morgan Stanley Platinum CashPlus relationship may provide an annual engagement bonus that can offset the Platinum annual fee.')}else{score+=5;reasons.push('You have the eligible Morgan Stanley relationship required for this card.')}}if(o.issuer==='Bilt'||name.includes('bilt')){if(r.bilt==='card'){score-=25;cautions.push('You already have a Bilt card, so CardPilot avoids treating another Bilt card as a new portfolio opportunity.')}else if(r.bilt==='member'){score+=3;reasons.push('Your existing Bilt membership makes the Bilt ecosystem somewhat more relevant.')}}return {score,reasons,cautions}}
 function toggleInterest(v){data.profile.interests=Array.isArray(data.profile.interests)?data.profile.interests:[];if(v==='none'){data.profile.interests=['none']}else{data.profile.interests=data.profile.interests.filter(x=>x!=='none');data.profile.interests=data.profile.interests.includes(v)?data.profile.interests.filter(x=>x!==v):[...data.profile.interests,v]}if(!data.profile.interests.includes('airline'))data.profile.subInterests.airline=[];if(!data.profile.interests.includes('hotel'))data.profile.subInterests.hotel=[];if(!data.profile.interests.includes('cruise'))data.profile.subInterests.cruise=[];localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
 function toggleSubInterest(group,v){data.profile.subInterests=data.profile.subInterests||{airline:[],hotel:[],cruise:[]};const a=data.profile.subInterests[group]||[];data.profile.subInterests[group]=a.includes(v)?a.filter(x=>x!==v):[...a,v];localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
-function finishOnboarding(){if(!Array.isArray(data.profile.interests)||!data.profile.interests.length){data.profile.interests=['none']}data.profile.setupComplete=true;data.profile.setupStep=6;data.profile.showRecommendation=true;data.profile.recommendationVersion='10.5.3';delete data.profile.postSetupTarget;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
-function restartSetup(){if(!confirm('Start the CardPilot questions over? Your saved cards and benefits will stay.'))return;delete data.profile.cardPath;delete data.profile.feePref;delete data.profile.interests;delete data.profile.subInterests;delete data.profile.includeChaseOver524;delete data.profile.preferredAirlines;data.profile.subInterests={airline:[],hotel:[],cruise:[]};data.profile.businessFirst=true;data.profile.setupComplete=false;data.profile.setupStep=1;data.profile.showRecommendation=false;save();showView('homeView')}
+function finishOnboarding(){if(!Array.isArray(data.profile.interests)||!data.profile.interests.length){data.profile.interests=['none']}data.profile.setupComplete=true;data.profile.setupStep=6;data.profile.showRecommendation=true;data.profile.recommendationVersion='10.6.7';delete data.profile.postSetupTarget;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
+function restartSetup(){if(!confirm('Start the CardPilot questions over? Your saved cards, benefits, banking relationships, and saved strategies will stay.'))return;
+  // Reset every questionnaire answer so old choices cannot leak into a new recommendation run.
+  delete data.profile.cardPath;
+  delete data.profile.businessType;
+  delete data.profile.feePref;
+  delete data.profile.interests;
+  delete data.profile.subInterests;
+  delete data.profile.includeChaseOver524;
+  delete data.profile.preferredAirlines;
+  delete data.profile.overlapPref;
+  delete data.profile.excludeOwnedCards;
+  data.profile.subInterests={airline:[],hotel:[],cruise:[]};
+  data.profile.preferredAirlines=[];
+  data.profile.overlapPref='some';
+  data.profile.excludeOwnedCards=true;
+  data.profile.businessFirst=true;
+  data.profile.setupComplete=false;
+  data.profile.setupStep=1;
+  data.profile.showRecommendation=false;
+  data.profile.questionnaireStartedAt=Date.now();
+  save();showView('homeView')}
+
 function offerTags(o){
   const n=(o.name+' '+o.unit+' '+(o.tags||[]).join(' ')+' '+(o.offerNote||'')).toLowerCase();
   const companion=n.includes('companion')||n.includes('southwest')||n.includes('atmos')||n.includes('alaska')||n.includes('hawaiian');
@@ -411,7 +432,7 @@ function offerFit(o){
   if(o.status==='closed-new') return {status:'avoid',label:'Closed to new applicants',score:0,strength:null,reasons:[],cautions:['This product is retained for tracking but is not currently open to new applicants.'],disabled:true,matchCount:0};
   const f=five24(), tags=offerTags(o), interests=Array.isArray(data.profile.interests)?data.profile.interests:['none'];
   const selected=interests.filter(x=>x!=='none');
-  const reasons=[],cautions=[];let score=40,forced=null,disabled=false,waitReason=false,matchCount=0;
+  const reasons=[],cautions=[];let score=40,forced=null,disabled=false,waitReason=false,matchCount=0,categoryMatchCount=0;
   const path=data.profile.cardPath||'either';
   if(path==='business'&&o.type!=='Business'){forced='avoid';score=0;disabled=true;cautions.push('You selected the business-card pathway.');}
   if(path==='personal'&&o.type!=='Personal'){forced='avoid';score=0;disabled=true;cautions.push('You selected the personal-card pathway.');}
@@ -446,7 +467,7 @@ function offerFit(o){
     if(key==='hist') continue;
     const rule=interestRules[key];
     if(!rule) continue;
-    if(tags[rule.tag]){matchCount++;score+=22;reasons.push(`Matches your ${rule.label} preference.`)}
+    if(tags[rule.tag]){matchCount++;categoryMatchCount++;score+=22;reasons.push(`Matches your ${rule.label} preference.`)}
     else{score-=8;cautions.push(`Does not meaningfully match your ${rule.label} preference.`)}
   }
 
@@ -463,6 +484,7 @@ function offerFit(o){
   // Historical-high offer strength only materially affects ranking if the user asked for it.
   const subMatch=subInterestMatches(tags);
   if(subMatch.total){
+    categoryMatchCount+=subMatch.matches;
     score+=subMatch.matches*12;
     subMatch.reasons.forEach(r=>reasons.push(r));
     if(subMatch.matches===0){score-=20;cautions.push('This card does not match the specific benefit choices you selected.');}
@@ -487,9 +509,9 @@ function offerFit(o){
   // If the user chose one or more concrete interests and this card matches none of them,
   // cap the card as "Not a fit now" regardless of a strong generic SUB or $0 annual fee.
   const concreteSelected=selected.filter(x=>x!=='hist');
-  if(concreteSelected.length>0 && matchCount===0){
+  if(concreteSelected.length>0 && categoryMatchCount===0){
     score=Math.min(score,44);
-    cautions.unshift('This card does not match any of the benefit categories you selected.')
+    cautions.unshift('This card does not match any of the benefit categories you selected in this questionnaire run.')
   }
 
   const rel=relationshipEffect(o);score+=rel.score;rel.reasons.forEach(x=>reasons.push(x));rel.cautions.forEach(x=>cautions.push(x));
@@ -505,12 +527,19 @@ function offerFit(o){
   score=Math.max(0,Math.min(100,Math.round(score)));
   let status=forced;
   if(!status){
-    if(score>=68 && (concreteSelected.length===0 || matchCount>0)) status='consider';
-    else if(waitReason && (concreteSelected.length===0 || matchCount>0)) status='wait';
+    const histOnly=selected.length===1&&interests.includes('hist');
+    const categoryEligible=concreteSelected.length===0||categoryMatchCount>0;
+    // A historical-high offer can be a valid recommendation on its own when that is the user's only selected priority.
+    if(((score>=68&&categoryEligible)||(histOnly&&matchCount>0&&score>=60))) status='consider';
+    else if(waitReason&&categoryEligible) status='wait';
     else status='avoid';
   }
+  if(status==='avoid'&&!forced){
+    const alreadyExplained=cautions.some(x=>/does not match|annual fee|5\/24|closed|requires|historical-high data|below its historical/i.test(x));
+    if(!alreadyExplained)cautions.unshift(`Overall fit score ${score}/100 is below CardPilot's current recommendation threshold after applying only your current questionnaire choices, relationship benefits, and portfolio-overlap settings.`);
+  }
   const labels={consider:'Consider next',wait:'Wait for a better offer',save:'Preserve for later',avoid:f>=5&&isChase(o)&&!data.profile.includeChaseOver524?'5/24 — approval unlikely':'Not a fit now'};
-  return {score,status,label:labels[status],strength,reasons,cautions,disabled,matchCount};
+  return {score,status,label:labels[status],strength,reasons,cautions,disabled,matchCount,categoryMatchCount};
 }
 function rankedOffers(){
   const order={consider:0,wait:1,save:2,avoid:3};
