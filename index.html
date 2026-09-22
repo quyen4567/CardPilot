@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v10.10.2</title>
+  <title>CardPilot v10.10.3</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.10.2</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.10.3</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -401,7 +401,7 @@ function setSubSpendPref(v){data.profile.subSpendPref=v;localStorage.setItem('ca
 function setAnnualSpendPref(v){data.profile.annualSpendPref=v;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
 function annualSpendAmount(){const v=data.profile.annualSpendPref||'any';return ({'10000':10000,'25000':25000,'50000':50000,'100000':100000,'100000plus':100000})[v]||null}
 function annualSpendLabel(){const v=data.profile.annualSpendPref||'any';return ({'10000':'About $10K/year','25000':'About $25K/year','50000':'About $50K/year','100000':'About $100K/year','100000plus':'$100K+/year',any:'No preference'})[v]||'No preference'}
-function finishOnboarding(){if(!Array.isArray(data.profile.interests)||!data.profile.interests.length){data.profile.interests=['none']}data.profile.setupComplete=true;data.profile.setupStep=7;data.profile.showRecommendation=true;data.profile.recommendationVersion='10.9.2';delete data.profile.postSetupTarget;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
+function finishOnboarding(){if(!Array.isArray(data.profile.interests)||!data.profile.interests.length){data.profile.interests=['none']}data.profile.setupComplete=true;data.profile.setupStep=7;data.profile.showRecommendation=true;data.profile.recommendationVersion='10.10.3';delete data.profile.postSetupTarget;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('applyView')}
 function restartSetup(){if(!confirm('Start the CardPilot questions over? Your saved cards, benefits, banking relationships, and saved strategies will stay.'))return;
   // Reset every questionnaire answer so old choices cannot leak into a new recommendation run.
   delete data.profile.cardPath;
