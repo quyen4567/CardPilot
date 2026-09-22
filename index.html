@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v10.9.1</title>
+  <title>CardPilot v10.10.0</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.9.1</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.10.0</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -48,21 +48,21 @@ let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
 // Current offer fields are a snapshot verified 2026-09-21 where available.
 const BUSINESS_CATALOG=[
   // Chase
-  {id:7001,issuer:'Chase',name:'Ink Business Unlimited',type:'Business',bonus:1000,unit:'cash',hist:null,spend:8000,af:0,reports:false,verified:true,verifiedDate:'2026-09-21',tags:['cash','ultimate rewards']},
-  {id:7002,issuer:'Chase',name:'Ink Business Cash',type:'Business',bonus:1000,unit:'cash',hist:null,spend:8000,af:0,reports:false,verified:true,verifiedDate:'2026-09-21',tags:['cash','ultimate rewards']},
+  {id:7001,issuer:'Chase',name:'Ink Business Unlimited',type:'Business',bonus:1000,unit:'cash',hist:1000,spend:8000,af:0,reports:false,verified:true,verifiedDate:'2026-09-22',offerNote:'100K Ultimate Rewards points / $1,000 cash-equivalent offer was tracked in 2026 and ended Sept. 17 on standard channels; verify live availability before applying. Source: Doctor of Credit.',offerType:'recent/verify-live',confidence:'high',tags:['cash','ultimate rewards']},
+  {id:7002,issuer:'Chase',name:'Ink Business Cash',type:'Business',bonus:1000,unit:'cash',hist:1000,spend:8000,af:0,reports:false,verified:true,verifiedDate:'2026-09-22',offerNote:'100K Ultimate Rewards points / $1,000 cash-equivalent offer was tracked in 2026 and ended Sept. 17 on standard channels; verify live availability before applying. Source: Doctor of Credit.',offerType:'recent/verify-live',confidence:'high',tags:['cash','ultimate rewards']},
   {id:7003,issuer:'Chase',name:'Ink Business Preferred',type:'Business',bonus:100000,unit:'Ultimate Rewards points',hist:120000,spend:8000,af:95,reports:false,verified:true,verifiedDate:'2026-09-21',tags:['travel','transferable']},
   {id:7004,issuer:'Chase',name:'Ink Business Premier',type:'Business',bonus:1000,unit:'cash',hist:null,spend:10000,af:195,reports:false,verified:true,verifiedDate:'2026-09-21',tags:['cash']},
   {id:7005,issuer:'Chase',name:'Sapphire Reserve for Business',type:'Business',bonus:200000,unit:'Ultimate Rewards points',hist:200000,spend:30000,af:795,reports:false,verified:true,verifiedDate:'2026-09-21',tags:['travel','transferable','premium']},
   {id:7006,issuer:'Chase',name:'World of Hyatt Business',type:'Business',bonus:70000,unit:'Hyatt points',hist:80000,spend:7000,af:199,reports:false,verified:true,verifiedDate:'2026-09-21',tags:['hotel','hyatt']},
-  {id:7007,issuer:'Chase',name:'IHG One Rewards Premier Business',type:'Business',bonus:140000,unit:'IHG points',hist:null,spend:4000,af:99,reports:false,verified:true,verifiedDate:'2026-09-21',tags:['hotel','ihg']},
+  {id:7007,issuer:'Chase',name:'IHG One Rewards Premier Business',type:'Business',bonus:140000,unit:'IHG points',hist:200000,spend:4000,af:99,reports:false,verified:true,verifiedDate:'2026-09-21',tags:['hotel','ihg']},
   {id:7008,issuer:'Chase',name:'Southwest Performance Business',type:'Business',bonus:80000,unit:'Rapid Rewards points',hist:120000,spend:5000,af:299,reports:false,verified:true,verifiedDate:'2026-09-21',tags:['airline','southwest']},
   {id:7009,issuer:'Chase',name:'Southwest Premier Business',type:'Business',bonus:60000,unit:'Rapid Rewards points',hist:120000,spend:3000,af:149,reports:false,verified:true,verifiedDate:'2026-09-21',tags:['airline','southwest']},
   {id:7010,issuer:'Chase',name:'United Business',type:'Business',bonus:110000,unit:'United miles + PQP',hist:null,spend:null,af:150,reports:false,verified:true,verifiedDate:'2026-09-21',offerNote:'Up to 110K miles + 2,000 PQP after qualifying activities.',tags:['airline','united']},
   {id:7011,issuer:'Chase',name:'United Club Business',type:'Business',bonus:110000,unit:'United miles + PQP',hist:null,spend:null,af:695,reports:false,verified:true,verifiedDate:'2026-09-21',offerNote:'Up to 110K miles + 2,000 PQP after qualifying activities.',tags:['airline','united','premium']},
 
   // American Express
-  {id:7101,issuer:'American Express',name:'Business Platinum Card',type:'Business',bonus:300000,unit:'Membership Rewards points',hist:null,spend:20000,af:895,reports:false,verified:true,verifiedDate:'2026-09-21',offerNote:'Offer can vary by applicant; as high as 300K.',tags:['travel','transferable','premium']},
-  {id:7102,issuer:'American Express',name:'Business Gold Card',type:'Business',bonus:200000,unit:'Membership Rewards points',hist:null,spend:15000,af:375,reports:false,verified:true,verifiedDate:'2026-09-21',offerNote:'Offer can vary by applicant; as high as 200K.',tags:['travel','transferable']},
+  {id:7101,issuer:'American Express',name:'Business Platinum Card',type:'Business',bonus:300000,unit:'Membership Rewards points',hist:300000,spend:20000,af:895,reports:false,verified:true,verifiedDate:'2026-09-22',offerNote:'Current public Amex flow: as high as 300K after $20K in 3 months. Personalized offer may be lower. Historical high: 300K. Source: American Express + Doctor of Credit.',offerType:'personalized/up-to',confidence:'high',tags:['travel','transferable','premium']},
+  {id:7102,issuer:'American Express',name:'Business Gold Card',type:'Business',bonus:200000,unit:'Membership Rewards points',hist:200000,spend:15000,af:375,reports:false,verified:true,verifiedDate:'2026-09-22',offerNote:'Current public Amex flow: as high as 200K after $15K in 3 months. Personalized offer may be lower. Historical high tracked: 200K. Source: American Express + Doctor of Credit.',offerType:'personalized/up-to',confidence:'high',tags:['travel','transferable']},
   {id:7103,issuer:'American Express',name:'Graphite Business Cash Unlimited',type:'Business',bonus:0,unit:'offer varies',hist:null,spend:20000,af:295,reports:false,verified:true,verifiedDate:'2026-09-21',offerNote:'Welcome offer varies; verify before applying.',tags:['cash']},
   {id:7104,issuer:'American Express',name:'Blue Business Cash',type:'Business',bonus:500,unit:'cash',hist:null,spend:5000,af:0,reports:false,verified:true,verifiedDate:'2026-09-21',offerNote:'A $500 pre-approved offer is available on some Amex pages; public offers may differ.',tags:['cash']},
   {id:7105,issuer:'American Express',name:'Blue Business Plus',type:'Business',bonus:0,unit:'offer varies',hist:null,spend:null,af:0,reports:false,verified:true,verifiedDate:'2026-09-21',offerNote:'Current welcome offer varies / verify in-session.',tags:['travel','transferable']},
@@ -74,8 +74,8 @@ const BUSINESS_CATALOG=[
   {id:7111,issuer:'American Express',name:'Hilton Honors Business',type:'Business',bonus:150000,unit:'Hilton points + free night',hist:null,spend:8000,af:195,reports:false,verified:true,verifiedDate:'2026-09-21',offerNote:'150K points + Free Night Reward after $8K; offer ends 1/13/2027.',tags:['hotel','hilton']},
 
   // Capital One
-  {id:7201,issuer:'Capital One',name:'Venture X Business',type:'Business',bonus:150000,unit:'Capital One miles',hist:null,spend:30000,af:395,reports:false,verified:true,verifiedDate:'2026-09-21',tags:['travel','transferable','premium']},
-  {id:7202,issuer:'Capital One',name:'Venture Business',type:'Business',bonus:100000,unit:'Capital One miles',hist:null,spend:10000,af:95,reports:false,verified:true,verifiedDate:'2026-09-21',tags:['travel','transferable']},
+  {id:7201,issuer:'Capital One',name:'Venture X Business',type:'Business',bonus:150000,unit:'Capital One miles',hist:400000,spend:30000,af:395,reports:false,verified:true,verifiedDate:'2026-09-22',offerNote:'Current tracked base offer: 150K after $30K. Historical high reached 400K total with a much larger $150K total-spend requirement; compare spend tiers before treating offers as equivalent. Source: Doctor of Credit.',offerType:'public',confidence:'high',tags:['travel','transferable','premium']},
+  {id:7202,issuer:'Capital One',name:'Venture Business',type:'Business',bonus:100000,unit:'Capital One miles',hist:150000,spend:10000,af:95,reports:false,verified:true,verifiedDate:'2026-09-22',offerNote:'Current tracked offer: 100K after $10K in 3 months. Prior launch/rebrand offer reached 150K with $30K spend. Source: Doctor of Credit.',offerType:'public',confidence:'high',tags:['travel','transferable']},
   {id:7203,issuer:'Capital One',name:'VentureOne Business',type:'Business',bonus:50000,unit:'Capital One miles',hist:null,spend:4500,af:0,reports:false,verified:true,verifiedDate:'2026-09-21',tags:['travel','transferable']},
   {id:7204,issuer:'Capital One',name:'Spark Cash Plus',type:'Business',bonus:2000,unit:'cash',hist:null,spend:30000,af:150,reports:false,verified:true,verifiedDate:'2026-09-21',tags:['cash']},
   {id:7205,issuer:'Capital One',name:'Spark Cash',type:'Business',bonus:1000,unit:'cash',hist:null,spend:10000,af:95,reports:false,verified:true,verifiedDate:'2026-09-21',tags:['cash']},
@@ -226,12 +226,12 @@ function migrateV8(){
     data.profile.cardPath=data.profile.businessFirst===true?'business':data.profile.businessFirst===false?'personal':'either';
   }
   data.profile.businessFirst=data.profile.cardPath!=='personal';
-  if(data.catalogVersion!=='10.2'){
+  if(data.catalogVersion!=='10.10.0'){
     const oldPersonal=(data.offers||[]).filter(o=>o.type==='Personal');
     const overrides=new Map(oldPersonal.map(o=>[o.name,o]));
     const mergedPersonal=PERSONAL_CATALOG.map(o=>overrides.has(o.name)?{...o,...overrides.get(o.name),id:o.id}:o);
     data.offers=[...BUSINESS_CATALOG,...mergedPersonal];
-    data.catalogVersion='10.2';
+    data.catalogVersion='10.10.0';
     localStorage.setItem('cardpilotData',JSON.stringify(data));
   }
 }
@@ -262,6 +262,9 @@ if(data.profile.recommendationVersion!=='10.0'){
 data.profile.subInterests=data.profile.subInterests||{airline:[],hotel:[],cruise:[]};
 data.profile.savedStrategies=Array.isArray(data.profile.savedStrategies)?data.profile.savedStrategies:[];
 data.profile.relationships=data.profile.relationships||{bofaPersonal:'none',bofaBusiness:'none',citi:'none',schwab:'none',morganStanley:'none'};
+// v10.10: post-recommendation refinement controls.
+if(!data.profile.refineRank)data.profile.refineRank='overall';
+if(!data.profile.refineType)data.profile.refineType='all';
 if(!data.profile.relationships.bofaPersonal)data.profile.relationships.bofaPersonal='none';
 if(!data.profile.relationships.bofaBusiness)data.profile.relationships.bofaBusiness='none';
 if(!data.profile.relationships.citi)data.profile.relationships.citi='none';
@@ -398,7 +401,7 @@ function setSubSpendPref(v){data.profile.subSpendPref=v;localStorage.setItem('ca
 function setAnnualSpendPref(v){data.profile.annualSpendPref=v;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
 function annualSpendAmount(){const v=data.profile.annualSpendPref||'any';return ({'10000':10000,'25000':25000,'50000':50000,'100000':100000,'100000plus':100000})[v]||null}
 function annualSpendLabel(){const v=data.profile.annualSpendPref||'any';return ({'10000':'About $10K/year','25000':'About $25K/year','50000':'About $50K/year','100000':'About $100K/year','100000plus':'$100K+/year',any:'No preference'})[v]||'No preference'}
-function finishOnboarding(){if(!Array.isArray(data.profile.interests)||!data.profile.interests.length){data.profile.interests=['none']}data.profile.setupComplete=true;data.profile.setupStep=7;data.profile.showRecommendation=true;data.profile.recommendationVersion='10.9.1';delete data.profile.postSetupTarget;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
+function finishOnboarding(){if(!Array.isArray(data.profile.interests)||!data.profile.interests.length){data.profile.interests=['none']}data.profile.setupComplete=true;data.profile.setupStep=7;data.profile.showRecommendation=true;data.profile.recommendationVersion='10.9.2';delete data.profile.postSetupTarget;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
 function restartSetup(){if(!confirm('Start the CardPilot questions over? Your saved cards, benefits, banking relationships, and saved strategies will stay.'))return;
   // Reset every questionnaire answer so old choices cannot leak into a new recommendation run.
   delete data.profile.cardPath;
@@ -739,17 +742,79 @@ function clearCardEditor(){const box=$('#addCardBox');if(box)box.innerHTML=''}
 function saveCardEdit(id){const c=data.cards.find(x=>x.id===id);if(!c)return;c.name=$('#ecn').value.trim()||c.name;c.type=$('#ect').value;c.af=+$('#ecaf').value||0;c.opened=$('#eco').value||c.opened;c.reports=$('#ecr').checked;c.five24Override=$('#ec524').value;delete c.sub;save();showView('cardsView')}
 function removeCard(id){const c=data.cards.find(x=>x.id===id);if(!c)return;if(!confirm(`Remove ${c.name}? This cannot be undone.`))return;data.cards=data.cards.filter(c=>c.id!==id);save();showView('cardsView')}
 function relationshipsPage(){const r=data.profile.relationships||{};return `<div class="between"><div><div class="section" style="margin-top:0">Relationships & ecosystems</div><div class="small">Save your relationships here and choose whether CardPilot should apply relationship economics to recommendations.</div></div><button class="btn ghost" onclick="showView('homeView')">Done</button></div><div class="card" style="margin-top:14px"><div class="small">WHY THIS MATTERS</div><h3 style="margin-top:4px">Relationship benefits can change the best card</h3><div class="small">Examples include boosted Bank of America rewards, Citi relationship credits, and relationship-only Amex Platinum variants. When enabled, these settings affect recommendations but do not override a poor match with your selected goals. You can also save them without using them in ranking.</div></div><div class="card" style="margin-top:12px">${relationshipChoicesHTML()}${overlapChoicesHTML()}<div class="note" style="margin-top:12px"><b>Saved automatically.</b> ${data.profile.applyRelationships===false?'Relationships are saved, but economic boosts are not being used in rankings.':'Relationship advantages are currently being used in rankings.'}</div></div><div class="section">Current relationships</div><div class="card"><div class="kpi">${relationshipSummary()}</div><div class="small" style="margin-top:5px">You can return here anytime from Home or Apply Next.</div></div>`}
+function offerCashValue(o){
+  const unit=String(o.unit||'').toLowerCase();
+  return unit.includes('cash') ? Number(o.bonus||0) : 0;
+}
+function offerEstimatedSubValue(o){
+  const cash=offerCashValue(o);
+  if(cash>0)return cash;
+  const v=bonusValueRange(o);
+  return v?Number(v.mid||0):0;
+}
+function refineTypeMatches(o,type){
+  if(!type||type==='all')return true;
+  const t=offerTags(o);
+  if(type==='cash')return offerCashValue(o)>0||t.cash;
+  if(type==='points')return !!pointCurrency(o)||t.points;
+  if(type==='hotel')return t.hotel;
+  if(type==='airline')return t.airline;
+  if(type==='travel')return t.airline||t.hotel||t.premium||t.points;
+  if(type==='business')return o.type==='Business';
+  if(type==='personal')return o.type==='Personal';
+  return true;
+}
+function refinementCandidates(){
+  const type=data.profile.refineType||'all';
+  const rank=data.profile.refineRank||'overall';
+  let arr=rankedOffers().filter(x=>!x.fit.disabled&&x.fit.status!=='save'&&refineTypeMatches(x.offer,type));
+  if(rank==='value')arr.sort((a,b)=>offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score);
+  else if(rank==='cash')arr=arr.filter(x=>offerCashValue(x.offer)>0).sort((a,b)=>offerCashValue(b.offer)-offerCashValue(a.offer)||b.fit.score-a.fit.score);
+  else if(rank==='points')arr=arr.filter(x=>pointCurrency(x.offer)).sort((a,b)=>offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score);
+  else if(rank==='fee')arr.sort((a,b)=>Number(a.offer.af||0)-Number(b.offer.af||0)||b.fit.score-a.fit.score);
+  else arr.sort((a,b)=>b.fit.score-a.fit.score);
+  return arr;
+}
+function refinementSummary(){
+  const rank=data.profile.refineRank||'overall',type=data.profile.refineType||'all';
+  const rankMap={overall:'Best overall fit',value:'Highest estimated SUB value',cash:'Highest cash SUB',points:'Highest estimated points/miles value',fee:'Lowest annual fee'};
+  const typeMap={all:'All reward types',cash:'Cash / cash back',points:'Points & miles',hotel:'Hotel',airline:'Airline',travel:'Travel',business:'Business cards',personal:'Personal cards'};
+  return `${rankMap[rank]||rankMap.overall} • ${typeMap[type]||typeMap.all}`;
+}
+function setRefineRank(v){data.profile.refineRank=v;save();render();showView('applyView')}
+function setRefineType(v){data.profile.refineType=v;save();render();showView('applyView')}
+function clearRefinement(){data.profile.refineRank='overall';data.profile.refineType='all';save();render();showView('applyView')}
+function refinementPanelHTML(){
+  const rank=data.profile.refineRank||'overall',type=data.profile.refineType||'all';
+  const rankChoices=[['overall','Best overall fit'],['value','Highest estimated SUB value'],['cash','Highest cash SUB'],['points','Highest points/miles value'],['fee','Lowest annual fee']];
+  const typeChoices=[['all','All'],['cash','Cash'],['points','Points & miles'],['hotel','Hotel'],['airline','Airline'],['travel','Travel'],['business','Business'],['personal','Personal']];
+  return `<details class="card" style="margin:12px 0" ${rank!=='overall'||type!=='all'?'open':''}><summary><b>Fine-tune these recommendations</b></summary><div class="small" style="margin:8px 0 12px">Start broad, then narrow the cards without redoing setup. For example, rank by highest estimated SUB value first, then show only cash, points, hotel, or airline cards.</div><div class="subchoices"><h4>Rank by</h4><div class="interestgrid">${rankChoices.map(x=>`<button class="interest ${rank===x[0]?'selected':''}" onclick="setRefineRank('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="subchoices" style="margin-top:14px"><h4>Narrow to</h4><div class="interestgrid">${typeChoices.map(x=>`<button class="interest ${type===x[0]?'selected':''}" onclick="setRefineType('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="between" style="margin-top:12px"><div class="small"><b>Current refinement:</b> ${refinementSummary()}</div><button class="btn ghost" onclick="clearRefinement()">Reset refinement</button></div></details>`;
+}
+function refinedRecommendationCard(x,rank){
+  const o=x.offer,fit=x.fit,est=offerEstimatedSubValue(o),cash=offerCashValue(o);
+  const rankMode=data.profile.refineRank||'overall';
+  const badge=rank===1?'Top refined match':rank===2?'Next':'Also consider';
+  let metric='';
+  if(rankMode==='value')metric=est?`<div class="small" style="margin-top:5px;color:#365d96"><b>Estimated SUB value used for this ranking:</b> about ${fmt(Math.round(est))}</div>`:'';
+  if(rankMode==='cash')metric=cash?`<div class="small" style="margin-top:5px;color:#365d96"><b>Cash SUB used for this ranking:</b> ${fmt(cash)}</div>`:'';
+  if(rankMode==='points')metric=est?`<div class="small" style="margin-top:5px;color:#365d96"><b>Estimated points/miles SUB value used for this ranking:</b> about ${fmt(Math.round(est))}</div>`:'';
+  if(rankMode==='fee')metric=`<div class="small" style="margin-top:5px;color:#365d96"><b>Annual fee used for this ranking:</b> ${fmt(Number(o.af||0))}</div>`;
+  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${o.spend!==null&&o.spend!==undefined?'Spend '+fmt(o.spend):'Spend: verify'}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${Number(o.bonus||0)?Number(o.bonus).toLocaleString()+' '+o.unit:'Offer varies / verify'}</b><div class="small">${fit.strength!==null?fit.strength+'% of historical high':'Historical high not set'}</div></div>${bonusValueText(o)}${metric}<div class="small" style="margin-top:8px"><b>Base fit score ${fit.score}/100</b></div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this card?</button><div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
+}
 function apply(){
   const ranked=rankedOffers(), f=five24();
   const considers=ranked.filter(x=>x.fit.status==='consider').sort((a,b)=>b.fit.score-a.fit.score);
   const waits=ranked.filter(x=>x.fit.status==='wait').sort((a,b)=>b.fit.score-a.fit.score);
   const nonmatches=ranked.filter(x=>x.fit.status==='avoid').sort((a,b)=>b.fit.score-a.fit.score);
   const overlap=companionSelected()?companionOverlapAdvice():null, sw=southwestTimingAdvice();
+  const refineActive=(data.profile.refineRank||'overall')!=='overall'||(data.profile.refineType||'all')!=='all';
+  const refined=refineActive?refinementCandidates().slice(0,5):[];
   const rankedCards=considers.slice(0,3).map((x,i)=>rankedOfferCard(x,i+1)).join('');
-  const noStrong=considers.length?'' : `<div class="note" style="margin-bottom:12px"><b>No strong apply-now match.</b><div class="small" style="margin-top:5px">CardPilot will not promote a card that fails your current preferences. Check Worth waiting for or adjust your preferences.</div></div>`;
+  const refinedCards=refineActive?refined.map((x,i)=>refinedRecommendationCard(x,i+1)).join(''):'';
+  const noStrong=considers.length?'' : `<div class="note" style="margin-bottom:12px"><b>No strong apply-now match.</b><div class="small" style="margin-top:5px">CardPilot will not promote a card that fails your current preferences. You can still use Fine-tune recommendations to rank the eligible pool by SUB value or reward type.</div></div>`;
   const waitHtml=waits.length?`<details class="card" style="margin-top:14px"><summary><b>Worth waiting for (${waits.length})</b></summary><div class="small" style="margin:8px 0 10px">Good fits where timing or the current offer gives CardPilot a reason to wait.</div><div class="list">${waits.map(x=>offerCard(x.offer,true,x.fit)).join('')}</div></details>`:'';
-  const noMatchHtml=nonmatches.length?`<details class="card" style="margin-top:12px"><summary><b>See cards that didn't match (${nonmatches.length})</b></summary><div class="small" style="margin:8px 0 10px">These are intentionally kept out of your recommendations.</div><div class="list">${nonmatches.map(x=>offerCard(x.offer,true,x.fit)).join('')}</div></details>`:'';
-  return `<div class="between" style="margin-bottom:12px"><button class="btn ghost" onclick="showView('homeView')">← Home</button><button class="btn ghost" onclick="restartSetup()">Change preferences</button></div>${f>=5?`<div class="warningbox"><b>${f}/24: Chase cards are ${data.profile.includeChaseOver524?'included by your override':'grayed out by default'}.</b></div>`:''}${overlap?`<div class="note" style="margin-bottom:12px"><b>Companion benefit strategy:</b> ${overlap.message}</div>`:''}<div class="section" style="margin-top:0">Top recommendations for you</div><div class="small" style="margin-bottom:12px">Ranked by your current cards, 5/24 position and preservation preference, preferences, banking relationships, benefit overlap, annual-fee preference, SUB spend range, optional ongoing-spend estimate, and tracked offer strength.</div>${noStrong}<div class="list">${rankedCards}</div>${waitHtml}${noMatchHtml}${valuationInfoHTML()}${sw?`<div class="card strategy-card" style="margin-top:12px"><div class="small">SAVED STRATEGY</div><h3>Southwest Companion Pass — target ${sw.target}</h3><div class="small">Suggested application window: <b>${sw.applyWindow}</b></div><div class="small" style="margin-top:6px">${sw.note}</div></div>`:''}`;
+  const noMatchHtml=nonmatches.length?`<details class="card" style="margin-top:12px"><summary><b>See cards that didn't match (${nonmatches.length})</b></summary><div class="small" style="margin:8px 0 10px">These are intentionally kept out of your main recommendations. Hard eligibility and setup constraints remain in force even when you fine-tune results.</div><div class="list">${nonmatches.map(x=>offerCard(x.offer,true,x.fit)).join('')}</div></details>`:'';
+  return `<div class="between" style="margin-bottom:12px"><button class="btn ghost" onclick="showView('homeView')">← Home</button><button class="btn ghost" onclick="restartSetup()">Change preferences</button></div>${f>=5?`<div class="warningbox"><b>${f}/24: Chase cards are ${data.profile.includeChaseOver524?'included by your override':'grayed out by default'}.</b></div>`:''}${overlap?`<div class="note" style="margin-bottom:12px"><b>Companion benefit strategy:</b> ${overlap.message}</div>`:''}<div class="section" style="margin-top:0">Top recommendations for you</div><div class="small" style="margin-bottom:12px">Start with CardPilot's overall ranking, then fine-tune the result set without answering the setup questions again.</div>${noStrong}<div class="list">${rankedCards}</div>${refinementPanelHTML()}${refineActive?`<div class="section">Refined results</div><div class="small" style="margin-bottom:10px"><b>${refinementSummary()}</b>. These are ranked from the eligible pool after your original pathway, 5/24, fee, and SUB-spend constraints are applied.</div>${refined.length?`<div class="list">${refinedCards}</div>`:`<div class="note"><b>No cards match this refinement.</b><div class="small" style="margin-top:5px">Try a broader reward type or reset the refinement.</div></div>`}`:''}${waitHtml}${noMatchHtml}${valuationInfoHTML()}${sw?`<div class="card strategy-card" style="margin-top:12px"><div class="small">SAVED STRATEGY</div><h3>Southwest Companion Pass — target ${sw.target}</h3><div class="small">Suggested application window: <b>${sw.applyWindow}</b></div><div class="small" style="margin-top:6px">${sw.note}</div></div>`:''}`;
 }
 function rankedOfferCard(x,rank){
   const o=x.offer, fit=x.fit;
