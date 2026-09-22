@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v10.10.3</title>
+  <title>CardPilot v10.10.4</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.10.3</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.10.4</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -401,7 +401,7 @@ function setSubSpendPref(v){data.profile.subSpendPref=v;localStorage.setItem('ca
 function setAnnualSpendPref(v){data.profile.annualSpendPref=v;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
 function annualSpendAmount(){const v=data.profile.annualSpendPref||'any';return ({'10000':10000,'25000':25000,'50000':50000,'100000':100000,'100000plus':100000})[v]||null}
 function annualSpendLabel(){const v=data.profile.annualSpendPref||'any';return ({'10000':'About $10K/year','25000':'About $25K/year','50000':'About $50K/year','100000':'About $100K/year','100000plus':'$100K+/year',any:'No preference'})[v]||'No preference'}
-function finishOnboarding(){if(!Array.isArray(data.profile.interests)||!data.profile.interests.length){data.profile.interests=['none']}data.profile.setupComplete=true;data.profile.setupStep=7;data.profile.showRecommendation=true;data.profile.recommendationVersion='10.10.3';delete data.profile.postSetupTarget;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('applyView')}
+function finishOnboarding(){if(!Array.isArray(data.profile.interests)||!data.profile.interests.length){data.profile.interests=['none']}data.profile.setupComplete=true;data.profile.setupStep=7;data.profile.showRecommendation=true;data.profile.recommendationVersion='10.10.4';delete data.profile.postSetupTarget;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('applyView')}
 function restartSetup(){if(!confirm('Start the CardPilot questions over? Your saved cards, benefits, banking relationships, and saved strategies will stay.'))return;
   // Reset every questionnaire answer so old choices cannot leak into a new recommendation run.
   delete data.profile.cardPath;
@@ -531,6 +531,34 @@ function bonusValueText(o){
   const bofaPotential=v.currency==='bofa'&&String(o.name||'').toLowerCase().includes('premium rewards elite')?`<div class="small" style="margin-top:2px;color:#365d96"><b>Potential airfare value:</b> up to about ${fmt(Math.round(Number(o.bonus||0)*0.0125))} if points receive the card's current 20% airfare savings when redeemed under eligible terms.</div>`:'';
   return `<div class="small" style="margin-top:5px"><b>Estimated point value:</b> ${range} <span style="color:#667085">(${v.cppLow.toFixed(2)}–${v.cppHigh.toFixed(2)}¢/pt)</span></div>${bofaPotential}<div class="small" style="margin-top:2px;color:#667085">*Estimated redemption value only; actual value can vary significantly.</div>${cert}`;
 }
+
+function historicalOfferText(o){
+  const hist=Number(o.hist||0);
+  const current=Number(o.bonus||0);
+  const histDate=o.histPublicDate||'';
+  const targeted=Number(o.targetedHigh||0);
+  const targetedDate=o.targetedHighDate||'';
+  if(!hist){
+    return 'Historical public high not yet verified';
+  }
+  let pct='';
+  if(current>0){
+    const ratio=Math.round((current/hist)*100);
+    pct=`${ratio}% of verified public high`;
+  } else {
+    pct=`Verified public high: ${hist.toLocaleString()} ${o.unit||''}`.trim();
+  }
+  let dateText='';
+  if(histDate){
+    dateText=o.histPublicStatus==='current' ? ` • public high current as of ${histDate}` : ` • last public high ${histDate}`;
+  }
+  let targetText='';
+  if(targeted>hist){
+    targetText=` • targeted/YMMV high ${targeted.toLocaleString()}${targetedDate?` (${targetedDate})`:''}`;
+  }
+  return `${pct}${dateText}${targetText}`;
+}
+
 function valuationInfoHTML(){
   return `<details class="card" style="margin-top:14px"><summary><b>How CardPilot values points</b></summary><div class="small" style="margin-top:9px"><b>Estimated values only.</b> Point and mile values are estimates based on typical redemption values and can vary significantly depending on how, when, and where you redeem. They are not cash values or guaranteed redemption rates.</div><div class="small" style="margin-top:8px">CardPilot uses valuation ranges rather than a single fixed value. Current ranges include Bank of America points, Hyatt, Marriott, Hilton, IHG, Wyndham, Choice, Bilt, Chase Ultimate Rewards, Amex Membership Rewards, Citi ThankYou, Capital One miles, and Wells Fargo Rewards.</div><div class="small" style="margin-top:8px">Sources include current independent valuation references such as Frequent Miler and The Points Guy where available. <b>Last updated ${VALUATION_LAST_UPDATED}.</b></div><div class="small" style="margin-top:8px">Free-night certificates and other non-point perks are shown separately because their value depends heavily on the specific redemption.</div></details>`;
 }
