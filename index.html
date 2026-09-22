@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v10.10.4</title>
+  <title>CardPilot v10.10.6</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.10.4</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.10.6</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -401,7 +401,7 @@ function setSubSpendPref(v){data.profile.subSpendPref=v;localStorage.setItem('ca
 function setAnnualSpendPref(v){data.profile.annualSpendPref=v;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
 function annualSpendAmount(){const v=data.profile.annualSpendPref||'any';return ({'10000':10000,'25000':25000,'50000':50000,'100000':100000,'100000plus':100000})[v]||null}
 function annualSpendLabel(){const v=data.profile.annualSpendPref||'any';return ({'10000':'About $10K/year','25000':'About $25K/year','50000':'About $50K/year','100000':'About $100K/year','100000plus':'$100K+/year',any:'No preference'})[v]||'No preference'}
-function finishOnboarding(){if(!Array.isArray(data.profile.interests)||!data.profile.interests.length){data.profile.interests=['none']}data.profile.setupComplete=true;data.profile.setupStep=7;data.profile.showRecommendation=true;data.profile.recommendationVersion='10.10.4';delete data.profile.postSetupTarget;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('applyView')}
+function finishOnboarding(){if(!Array.isArray(data.profile.interests)||!data.profile.interests.length){data.profile.interests=['none']}data.profile.setupComplete=true;data.profile.setupStep=7;data.profile.showRecommendation=true;data.profile.recommendationVersion='10.10.6';delete data.profile.postSetupTarget;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('applyView')}
 function restartSetup(){if(!confirm('Start the CardPilot questions over? Your saved cards, benefits, banking relationships, and saved strategies will stay.'))return;
   // Reset every questionnaire answer so old choices cannot leak into a new recommendation run.
   delete data.profile.cardPath;
@@ -661,23 +661,19 @@ function offerFit(o){
     else if(overlap&&overlap.days>=0){score+=6;reasons.push('Your existing companion benefit is nearing expiration, so planning a replacement may be timely.');}
     else{score+=12;reasons.push('This card aligns with your Companion Pass / companion-fare preference.');}
   }
+  // Historical offer data is informational only. It never raises or lowers fit,
+  // and missing historical data never makes a card a worse recommendation.
   if(interests.includes('hist')){
-    if(strength===null){score-=8;cautions.push('Historical-high data is not set for this offer.')}
-    else if(strength>=100){matchCount++;score+=20;reasons.push('The tracked offer is at its historical high, matching your SUB preference.')}
-    else if(strength>=90){matchCount++;score+=14;reasons.push(`The tracked offer is ${strength}% of its historical high, matching your near-max SUB preference.`)}
-    else if(strength>=80){score-=4;waitReason=true;cautions.push(`The offer is only ${strength}% of its historical high; waiting may improve the SUB.`)}
-    else{score-=14;waitReason=true;cautions.push(`The offer is only ${strength}% of its historical high; waiting is more attractive if historical-max SUB matters to you.`)}
-  } else if(strength!==null && strength<70){
-    // When historical max was not selected, only very weak offers get a small caution.
-    score-=3;cautions.push(`The tracked offer is well below its historical high (${strength}%), but historical max was not one of your selected priorities.`)
+    if(strength===null)cautions.push("Historical public-high data is not yet verified; this does not reduce the card's recommendation score.");
+    else reasons.push(`Historical context: the current tracked offer is ${strength}% of the verified public high.`);
   }
 
-  // If the user chose one or more concrete interests and this card matches none of them,
-  // cap the card as "Not a fit now" regardless of a strong generic SUB or $0 annual fee.
+  // Benefit preferences are soft signals. A card can still be a strong recommendation
+  // if it has excellent welcome-bonus economics and fits the user's hard constraints.
   const concreteSelected=selected.filter(x=>x!=='hist');
   if(concreteSelected.length>0 && categoryMatchCount===0){
-    score=Math.min(score,44);
-    cautions.unshift('This card does not match any of the benefit categories you selected in this questionnaire run.')
+    score-=6;
+    cautions.unshift('This card does not directly match the benefit categories you selected, but CardPilot can still surface it when the welcome-bonus return is strong.');
   }
 
   const val=bonusValueRange(o);
@@ -711,23 +707,42 @@ function offerFit(o){
   score=Math.max(0,Math.min(100,Math.round(score)));
   let status=forced;
   if(!status){
-    const histOnly=selected.length===1&&interests.includes('hist');
-    const categoryEligible=concreteSelected.length===0||categoryMatchCount>0;
-    // A historical-high offer can be a valid recommendation on its own when that is the user's only selected priority.
-    if(((score>=68&&categoryEligible)||(histOnly&&matchCount>0&&score>=60))) status='consider';
-    else if(waitReason&&categoryEligible) status='wait';
+    const roi=subReturnRange(o);
+    const hasKnownSub=!!roi && Number(o.bonus||0)>0 && Number(o.spend||0)>0;
+    // Apply-now status is driven primarily by affordability and measurable SUB economics.
+    // Historical-high data is never a gate. Preferences and portfolio fit remain secondary signals.
+    if(hasKnownSub) status='consider';
+    else if(Number(o.bonus||0)>0) status='consider';
     else status='avoid';
   }
   if(status==='avoid'&&!forced){
-    const alreadyExplained=cautions.some(x=>/does not match|annual fee|5\/24|closed|requires|historical-high data|below its historical/i.test(x));
-    if(!alreadyExplained)cautions.unshift(`Overall fit score ${score}/100 is below CardPilot's current recommendation threshold after applying only your current questionnaire choices, relationship benefits, and portfolio-overlap settings.`);
+    const alreadyExplained=cautions.some(x=>/does not match|annual fee|5\/24|closed|requires|minimum-spend|current welcome offer/i.test(x));
+    if(!alreadyExplained)cautions.unshift('CardPilot does not yet have enough verified welcome-offer data to compare the return on required spend for this card.');
   }
   const labels={consider:'Consider next',wait:'Wait for a better offer',save:'Preserve for later',avoid:f>=5&&isChase(o)&&!data.profile.includeChaseOver524?'5/24 — approval unlikely':'Not a fit now'};
   return {score,status,label:labels[status],strength,reasons,cautions,disabled,matchCount,categoryMatchCount};
 }
 function rankedOffers(){
   const order={consider:0,wait:1,save:2,avoid:3};
-  return pathwayOffers().map(o=>({offer:o,fit:offerFit(o)})).sort((a,b)=>order[a.fit.status]-order[b.fit.status]||b.fit.score-a.fit.score);
+  return pathwayOffers().map(o=>({offer:o,fit:offerFit(o)})).sort((a,b)=>{
+    const s=order[a.fit.status]-order[b.fit.status];
+    if(s)return s;
+    if(a.fit.status==='consider'){
+      // Default ranking hierarchy:
+      // 1) highest estimated total SUB value,
+      // 2) lower required spend when SUB values are equal/very close,
+      // 3) higher SUB return on required spend,
+      // 4) strategic fit (5/24, fees, preferences, relationships, overlap).
+      const av=offerEstimatedSubValue(a.offer), bv=offerEstimatedSubValue(b.offer);
+      if(bv!==av)return bv-av;
+      const aspend=Number(a.offer.spend||Infinity), bSpend=Number(b.offer.spend||Infinity);
+      if(aspend!==bSpend)return aspend-bSpend;
+      const ar=subReturnRange(a.offer), br=subReturnRange(b.offer);
+      const aroi=ar?ar.mid:-1, broi=br?br.mid:-1;
+      if(broi!==aroi)return broi-aroi;
+    }
+    return b.fit.score-a.fit.score;
+  });
 }
 function recommendationPlan(){const f=five24(),ranked=rankedOffers(),best=ranked.find(x=>x.fit.status==='consider')||ranked.find(x=>x.fit.status==='wait')||null,steps=[];if(best){steps.push({title:`Review ${best.offer.name}`,detail:`${best.fit.label} • score ${best.fit.score}/100. ${best.fit.reasons[0]||best.fit.cautions[0]||'Best current fit among tracked cards.'}`})}const saved=ranked.filter(x=>x.fit.status==='save');if(saved.length)steps.push({title:'Preserve future opportunities',detail:saved.map(x=>x.offer.name).join(' + ')+' are intentionally being saved for later.'});if(f>=5&&!data.profile.includeChaseOver524)steps.push({title:'Chase is grayed out',detail:`You are ${f}/24, so CardPilot excludes Chase personal and business products by default. You can override this in setup, but it is not recommended.`});else if(f===4)steps.push({title:'Protect your final 5/24 slot',detail:'A new personal account can move you to 5/24. Business cards that do not report personally may preserve that slot.'});return {steps,best:best?best.offer:null,bestFit:best?best.fit:null,f,ranked}}
 function openPlan(){data.profile.showRecommendation=true;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
@@ -816,12 +831,12 @@ function refinementCandidates(){
   else if(rank==='cash')arr=arr.filter(x=>offerCashValue(x.offer)>0).sort((a,b)=>offerCashValue(b.offer)-offerCashValue(a.offer)||b.fit.score-a.fit.score);
   else if(rank==='points')arr=arr.filter(x=>pointCurrency(x.offer)).sort((a,b)=>offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score);
   else if(rank==='fee')arr.sort((a,b)=>Number(a.offer.af||0)-Number(b.offer.af||0)||b.fit.score-a.fit.score);
-  else arr.sort((a,b)=>b.fit.score-a.fit.score);
+  else arr.sort((a,b)=>{const av=offerEstimatedSubValue(a.offer),bv=offerEstimatedSubValue(b.offer);if(bv!==av)return bv-av;const aspend=Number(a.offer.spend||Infinity),bspend=Number(b.offer.spend||Infinity);if(aspend!==bspend)return aspend-bspend;const ar=subReturnRange(a.offer),br=subReturnRange(b.offer);const aroi=ar?ar.mid:-1,broi=br?br.mid:-1;if(broi!==aroi)return broi-aroi;return b.fit.score-a.fit.score;});
   return arr;
 }
 function refinementSummary(){
   const rank=data.profile.refineRank||'overall',type=data.profile.refineType||'all';
-  const rankMap={overall:'Best overall fit',value:'Highest estimated SUB value',roi:'Best SUB return on spend',cash:'Highest cash SUB',points:'Highest estimated points/miles value',fee:'Lowest annual fee'};
+  const rankMap={overall:'Highest total SUB value → spend → return',value:'Highest estimated SUB value',roi:'Best SUB return on spend',cash:'Highest cash SUB',points:'Highest estimated points/miles value',fee:'Lowest annual fee'};
   const typeMap={all:'All reward types',cash:'Cash / cash back',points:'Points & miles',hotel:'Hotel',airline:'Airline',travel:'Travel',business:'Business cards',personal:'Personal cards'};
   return `${rankMap[rank]||rankMap.overall} • ${typeMap[type]||typeMap.all}`;
 }
@@ -830,9 +845,9 @@ function setRefineType(v){data.profile.refineType=v;save();render();showView('ap
 function clearRefinement(){data.profile.refineRank='overall';data.profile.refineType='all';save();render();showView('applyView')}
 function refinementPanelHTML(){
   const rank=data.profile.refineRank||'overall',type=data.profile.refineType||'all';
-  const rankChoices=[['overall','Best overall fit'],['value','Highest estimated SUB value'],['roi','Best SUB return on spend'],['cash','Highest cash SUB'],['points','Highest points/miles value'],['fee','Lowest annual fee']];
+  const rankChoices=[['overall','SUB value → spend → return'],['value','Highest estimated SUB value'],['roi','Best SUB return on spend'],['cash','Highest cash SUB'],['points','Highest points/miles value'],['fee','Lowest annual fee']];
   const typeChoices=[['all','All'],['cash','Cash'],['points','Points & miles'],['hotel','Hotel'],['airline','Airline'],['travel','Travel'],['business','Business'],['personal','Personal']];
-  return `<details class="card" style="margin:12px 0" ${rank!=='overall'||type!=='all'?'open':''}><summary><b>Fine-tune these recommendations</b></summary><div class="small" style="margin:8px 0 12px">Start broad, then narrow the cards without redoing setup. For example, rank by highest estimated SUB value or best SUB return on spend first, then show only cash, points, hotel, or airline cards.</div><div class="subchoices"><h4>Rank by</h4><div class="interestgrid">${rankChoices.map(x=>`<button class="interest ${rank===x[0]?'selected':''}" onclick="setRefineRank('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="subchoices" style="margin-top:14px"><h4>Narrow to</h4><div class="interestgrid">${typeChoices.map(x=>`<button class="interest ${type===x[0]?'selected':''}" onclick="setRefineType('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="between" style="margin-top:12px"><div class="small"><b>Current refinement:</b> ${refinementSummary()}</div><button class="btn ghost" onclick="clearRefinement()">Reset refinement</button></div></details>`;
+  return `<details class="card" style="margin:12px 0" ${rank!=='overall'||type!=='all'?'open':''}><summary><b>Fine-tune these recommendations</b></summary><div class="small" style="margin:8px 0 12px">Start with the highest estimated total SUB value among cards that fit your spend limit. Then compare required spend and SUB return on spend. Strategic factors such as 5/24, fees, preferences, relationships, and overlap break ties and refine the result. Historical public highs are informational only.</div><div class="subchoices"><h4>Rank by</h4><div class="interestgrid">${rankChoices.map(x=>`<button class="interest ${rank===x[0]?'selected':''}" onclick="setRefineRank('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="subchoices" style="margin-top:14px"><h4>Narrow to</h4><div class="interestgrid">${typeChoices.map(x=>`<button class="interest ${type===x[0]?'selected':''}" onclick="setRefineType('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="between" style="margin-top:12px"><div class="small"><b>Current refinement:</b> ${refinementSummary()}</div><button class="btn ghost" onclick="clearRefinement()">Reset refinement</button></div></details>`;
 }
 function refinedRecommendationCard(x,rank){
   const o=x.offer,fit=x.fit,est=offerEstimatedSubValue(o),cash=offerCashValue(o);
@@ -848,7 +863,7 @@ function refinedRecommendationCard(x,rank){
 }
 function apply(){
   const ranked=rankedOffers(), f=five24();
-  const considers=ranked.filter(x=>x.fit.status==='consider').sort((a,b)=>b.fit.score-a.fit.score);
+  const considers=ranked.filter(x=>x.fit.status==='consider');
   const waits=ranked.filter(x=>x.fit.status==='wait').sort((a,b)=>b.fit.score-a.fit.score);
   const nonmatches=ranked.filter(x=>x.fit.status==='avoid').sort((a,b)=>b.fit.score-a.fit.score);
   const overlap=companionSelected()?companionOverlapAdvice():null, sw=southwestTimingAdvice();
@@ -859,7 +874,7 @@ function apply(){
   const noStrong=considers.length?'' : `<div class="note" style="margin-bottom:12px"><b>No strong apply-now match.</b><div class="small" style="margin-top:5px">CardPilot will not promote a card that fails your current preferences. You can still use Fine-tune recommendations to rank the eligible pool by SUB value or reward type.</div></div>`;
   const waitHtml=waits.length?`<details class="card" style="margin-top:14px"><summary><b>Worth waiting for (${waits.length})</b></summary><div class="small" style="margin:8px 0 10px">Good fits where timing or the current offer gives CardPilot a reason to wait.</div><div class="list">${waits.map(x=>offerCard(x.offer,true,x.fit)).join('')}</div></details>`:'';
   const noMatchHtml=nonmatches.length?`<details class="card" style="margin-top:12px"><summary><b>See cards that didn't match (${nonmatches.length})</b></summary><div class="small" style="margin:8px 0 10px">These are intentionally kept out of your main recommendations. Hard eligibility and setup constraints remain in force even when you fine-tune results.</div><div class="list">${nonmatches.map(x=>offerCard(x.offer,true,x.fit)).join('')}</div></details>`:'';
-  return `<div class="between" style="margin-bottom:12px"><button class="btn ghost" onclick="showView('homeView')">← Home</button><button class="btn ghost" onclick="restartSetup()">Change preferences</button></div>${f>=5?`<div class="warningbox"><b>${f}/24: Chase cards are ${data.profile.includeChaseOver524?'included by your override':'grayed out by default'}.</b></div>`:''}${overlap?`<div class="note" style="margin-bottom:12px"><b>Companion benefit strategy:</b> ${overlap.message}</div>`:''}<div class="section" style="margin-top:0">Top recommendations for you</div><div class="small" style="margin-bottom:12px">Start with CardPilot's overall ranking, then fine-tune the result set without answering the setup questions again.</div>${noStrong}<div class="list">${rankedCards}</div>${refinementPanelHTML()}${refineActive?`<div class="section">Refined results</div><div class="small" style="margin-bottom:10px"><b>${refinementSummary()}</b>. These are ranked from the eligible pool after your original pathway, 5/24, fee, and SUB-spend constraints are applied.</div>${refined.length?`<div class="list">${refinedCards}</div>`:`<div class="note"><b>No cards match this refinement.</b><div class="small" style="margin-top:5px">Try a broader reward type or reset the refinement.</div></div>`}`:''}${waitHtml}${noMatchHtml}${valuationInfoHTML()}${sw?`<div class="card strategy-card" style="margin-top:12px"><div class="small">SAVED STRATEGY</div><h3>Southwest Companion Pass — target ${sw.target}</h3><div class="small">Suggested application window: <b>${sw.applyWindow}</b></div><div class="small" style="margin-top:6px">${sw.note}</div></div>`:''}`;
+  return `<div class="between" style="margin-bottom:12px"><button class="btn ghost" onclick="showView('homeView')">← Home</button><button class="btn ghost" onclick="restartSetup()">Change preferences</button></div>${f>=5?`<div class="warningbox"><b>${f}/24: Chase cards are ${data.profile.includeChaseOver524?'included by your override':'grayed out by default'}.</b></div>`:''}${overlap?`<div class="note" style="margin-bottom:12px"><b>Companion benefit strategy:</b> ${overlap.message}</div>`:''}<div class="section" style="margin-top:0">Top recommendations for you</div><div class="small" style="margin-bottom:12px">CardPilot starts with estimated total SUB value among cards whose required spend fits your setup. It then compares required spend and SUB return on spend, followed by 5/24 strategy, fees, preferences, relationships, and overlap. Historical highs are shown for context only and never reduce a card's ranking.</div>${noStrong}<div class="list">${rankedCards}</div>${refinementPanelHTML()}${refineActive?`<div class="section">Refined results</div><div class="small" style="margin-bottom:10px"><b>${refinementSummary()}</b>. These are ranked from the eligible pool after your original pathway, 5/24, fee, and SUB-spend constraints are applied.</div>${refined.length?`<div class="list">${refinedCards}</div>`:`<div class="note"><b>No cards match this refinement.</b><div class="small" style="margin-top:5px">Try a broader reward type or reset the refinement.</div></div>`}`:''}${waitHtml}${noMatchHtml}${valuationInfoHTML()}${sw?`<div class="card strategy-card" style="margin-top:12px"><div class="small">SAVED STRATEGY</div><h3>Southwest Companion Pass — target ${sw.target}</h3><div class="small">Suggested application window: <b>${sw.applyWindow}</b></div><div class="small" style="margin-top:6px">${sw.note}</div></div>`:''}`;
 }
 function rankedOfferCard(x,rank){
   const o=x.offer, fit=x.fit;
@@ -878,7 +893,7 @@ function whyOffer(id){
   const parts=[`${o.name}: ${fit.label} (${fit.score}/100)`];
   if(fit.reasons.length)parts.push('Why it fits:\n• '+fit.reasons.join('\n• '));
   if(fit.cautions.length)parts.push('What holds it back:\n• '+fit.cautions.join('\n• '));
-  parts.push(`Pathway: ${pathLabel()}. CardPilot evaluates 5/24 constraints and your preservation preference, annual-fee preference, offer strength versus historical highs, your selected interests, banking/investment relationship benefits, and any strategy you are intentionally preserving.`);
+  parts.push(`Pathway: ${pathLabel()}. CardPilot first checks that the required spend fits your selected limit. Among eligible cards, it ranks estimated total SUB value first, then required spend, then SUB return on spend, followed by 5/24 strategy, annual-fee preference, selected interests, banking/investment relationship benefits, portfolio overlap, and any saved strategy. Historical offer data is displayed only as context and does not penalize ranking.`);
   alert(parts.join('\n\n'));
 }
 
