@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v10.9.0</title>
+  <title>CardPilot v10.9.1</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.9.0</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.9.1</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -398,7 +398,7 @@ function setSubSpendPref(v){data.profile.subSpendPref=v;localStorage.setItem('ca
 function setAnnualSpendPref(v){data.profile.annualSpendPref=v;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
 function annualSpendAmount(){const v=data.profile.annualSpendPref||'any';return ({'10000':10000,'25000':25000,'50000':50000,'100000':100000,'100000plus':100000})[v]||null}
 function annualSpendLabel(){const v=data.profile.annualSpendPref||'any';return ({'10000':'About $10K/year','25000':'About $25K/year','50000':'About $50K/year','100000':'About $100K/year','100000plus':'$100K+/year',any:'No preference'})[v]||'No preference'}
-function finishOnboarding(){if(!Array.isArray(data.profile.interests)||!data.profile.interests.length){data.profile.interests=['none']}data.profile.setupComplete=true;data.profile.setupStep=7;data.profile.showRecommendation=true;data.profile.recommendationVersion='10.9.0';delete data.profile.postSetupTarget;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
+function finishOnboarding(){if(!Array.isArray(data.profile.interests)||!data.profile.interests.length){data.profile.interests=['none']}data.profile.setupComplete=true;data.profile.setupStep=7;data.profile.showRecommendation=true;data.profile.recommendationVersion='10.9.1';delete data.profile.postSetupTarget;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
 function restartSetup(){if(!confirm('Start the CardPilot questions over? Your saved cards, benefits, banking relationships, and saved strategies will stay.'))return;
   // Reset every questionnaire answer so old choices cannot leak into a new recommendation run.
   delete data.profile.cardPath;
@@ -482,6 +482,10 @@ const POINT_VALUATIONS={
   wells:{label:'Wells Fargo Rewards',low:1.50,high:1.75,source:'CardPilot range / TPG upper reference'}
 };
 function pointCurrency(o){
+  const unit=String(o.unit||'').toLowerCase();
+  // Cash-denominated offers must stay cash. Some cash-back cards earn rewards as points
+  // behind the scenes, but the advertised welcome offer has a fixed cash value.
+  if(unit.includes('cash'))return null;
   const t=String((o.unit||'')+' '+(o.tags||[]).join(' ')+' '+(o.name||'')).toLowerCase();
   if(t.includes('bofa points')||t.includes('bank of america points'))return 'bofa';
   if(t.includes('hyatt'))return 'hyatt';
@@ -510,7 +514,12 @@ function bonusValueText(o){
   const unit=String(o.unit||'').toLowerCase();
   if(!v){
     if(Number(o.bonus||0)>0 && unit.includes('cash')){
-      return `<div class="small" style="margin-top:5px"><b>Cash value:</b> ${fmt(Number(o.bonus||0))} <span style="color:#667085">(fixed cash amount)</span></div>`;
+      const cash=Number(o.bonus||0);
+      const isTransferableInk = o.issuer==='Chase' && /Ink Business (Unlimited|Cash)/i.test(String(o.name||'')) && (o.tags||[]).includes('ultimate rewards');
+      const potential = isTransferableInk
+        ? `<div class="small" style="margin-top:2px;color:#365d96"><b>Potential travel value:</b> about ${fmt(Math.round(cash*1.75))}–${fmt(Math.round(cash*2.05))} if these rewards are combined with an eligible Chase Ultimate Rewards card that supports partner transfers, using CardPilot's estimated UR valuation range.</div><div class="small" style="margin-top:2px;color:#667085">*Potential travel value is estimated only and is not a guaranteed cash value.</div>`
+        : '';
+      return `<div class="small" style="margin-top:5px"><b>Cash value:</b> ${fmt(cash)} <span style="color:#667085">(fixed cash amount)</span></div>${potential}`;
     }
     return '';
   }
