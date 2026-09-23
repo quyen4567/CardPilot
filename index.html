@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v10.10.27</title>
+  <title>CardPilot v10.10.28</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.10.27</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.10.28</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -158,7 +158,7 @@ const PERSONAL_CATALOG=[
   {id:8207,issuer:'Citi',name:'AAdvantage Platinum Select',type:'Personal',bonus:0,unit:'AAdvantage miles',hist:80000,spend:null,af:99,reports:true,status:'open',verified:true,verifiedDate:'2026-09-21',offerNote:'Verify current offer.',tags:['airline','aadvantage']},
   {id:8208,issuer:'Citi',name:'AAdvantage Globe',type:'Personal',bonus:0,unit:'AAdvantage miles',hist:90000,spend:null,af:350,reports:true,status:'open',verified:true,verifiedDate:'2026-09-21',offerNote:'Verify current offer.',tags:['airline','aadvantage']},
   {id:8209,issuer:'Citi',name:'Costco Anywhere Visa',type:'Personal',bonus:0,unit:'cash back',hist:null,spend:null,af:0,reports:true,status:'open',verified:true,verifiedDate:'2026-09-21',offerNote:'Requires Costco membership; no standard sign-up bonus tracked.',tags:['cash','costco']},
-  {id:8210,issuer:'Citi',name:'AT&T Points Plus',type:'Personal',bonus:250,unit:'cash',hist:null,spend:500,af:0,reports:true,status:'open',verified:true,verifiedDate:'2026-09-21',offerNote:'DoC tracks $250 after $500 spend.',tags:['cash','citi']},
+  {id:8210,issuer:'Citi',name:'AT&T Points Plus',type:'Personal',bonus:200,unit:'cash',hist:null,spend:1000,af:0,reports:true,status:'open',verified:true,verifiedDate:'2026-09-23',offerState:'current-public-verified',offerNote:'Issuer verified: $200 statement credit after $1,000 in purchases in the first 3 months. $0 annual fee. Official Citi terms control.',issuerUrl:'https://www.citi.com/credit-cards/citi-att-pointsplus-credit-card',issuerUrlVerified:'2026-09-23',tags:['cash','citi']},
 
   // Capital One
   {id:8301,issuer:'Capital One',name:'Venture X Rewards',type:'Personal',bonus:0,unit:'Capital One miles',hist:null,spend:null,af:395,reports:true,status:'open',verified:true,verifiedDate:'2026-09-21',offerNote:'Verify current offer.',tags:['travel','transferable','premium','capital one']},
@@ -171,7 +171,7 @@ const PERSONAL_CATALOG=[
   {id:8401,issuer:'Bank of America',name:'Premium Rewards',type:'Personal',bonus:60000,unit:'BofA points',hist:60000,spend:4000,af:95,reports:true,status:'open',verified:true,verifiedDate:'2026-09-21',offerNote:'DoC tracks elevated 60K offer.',tags:['travel','cash','bofa']},
   {id:8402,issuer:'Bank of America',name:'Premium Rewards Elite',type:'Personal',bonus:75000,unit:'BofA points',hist:75000,spend:5000,af:550,reports:true,status:'open',verified:true,verifiedDate:'2026-09-21',offerNote:'DoC tracks elevated 75K offer.',tags:['travel','premium','bofa']},
   {id:8403,issuer:'Bank of America',name:'Customized Cash Rewards',type:'Personal',bonus:200,unit:'cash',hist:null,spend:null,af:0,reports:true,status:'open',verified:true,verifiedDate:'2026-09-21',offerNote:'Issuer currently advertises $200 online cash rewards bonus and first-year category boost.',tags:['cash','bofa']},
-  {id:8404,issuer:'Bank of America',name:'Unlimited Cash Rewards',type:'Personal',bonus:200,unit:'cash',hist:null,spend:1000,af:0,reports:true,status:'open',verified:true,verifiedDate:'2026-09-21',offerNote:'DoC tracks $200 plus a first-year earning boost.',tags:['cash','bofa']},
+  {id:8404,issuer:'Bank of America',name:'Unlimited Cash Rewards',type:'Personal',bonus:250,unit:'cash',hist:null,spend:1000,af:0,reports:true,status:'open',verified:true,verifiedDate:'2026-09-23',offerState:'current-public-verified',offerNote:'Issuer verified limited-time online offer: $250 cash rewards bonus after at least $1,000 in purchases in the first 90 days. Base unlimited cash back is 1.5%; relationship boosts apply only when eligible and enabled.',issuerUrl:'https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/',issuerUrlVerified:'2026-09-23',tags:['cash','bofa']},
   {id:8405,issuer:'Bank of America',name:'Travel Rewards',type:'Personal',bonus:0,unit:'BofA points',hist:null,spend:null,af:0,reports:true,status:'open',verified:true,verifiedDate:'2026-09-21',offerNote:'Verify current offer.',tags:['travel','bofa']},
   {id:8406,issuer:'Bank of America',name:'Atmos Rewards Ascent',type:'Personal',bonus:0,unit:'Atmos points + companion fare',hist:85000,spend:null,af:95,reports:true,status:'open',verified:true,verifiedDate:'2026-09-21',offerNote:'Elevated offer reached 85K in 2026; verify current offer.',tags:['airline','atmos']},
   {id:8407,issuer:'Bank of America',name:'Atmos Rewards Summit',type:'Personal',bonus:0,unit:'Atmos points',hist:100000,spend:null,af:395,reports:true,status:'open',verified:true,verifiedDate:'2026-09-21',offerNote:'Elevated offer reached 100K in 2026; verify current offer.',tags:['airline','atmos','premium']},
@@ -269,6 +269,7 @@ data.profile.relationships=data.profile.relationships||{bofaPersonal:'none',bofa
 // v10.10.26: quick setup reordered to annual fee → desired benefits → personal/business/either.
 // v10.10.18: add effective catch-all cash-back rates (including relationship boosts) and prioritize stronger baseline cash-back when selected.
 if(!data.profile.refineRank)data.profile.refineRank='overall';
+if(['value','roi','cash','points','catchall','fee'].includes(data.profile.refineRank)) data.profile.refineRank=({value:'bonus',roi:'bonus',cash:'bonus',points:'bonus',catchall:'rewards',fee:'cost'})[data.profile.refineRank];
 if(!data.profile.refineType)data.profile.refineType='all';
 if(!data.profile.relationships.bofaPersonal)data.profile.relationships.bofaPersonal='none';
 if(!data.profile.relationships.bofaBusiness)data.profile.relationships.bofaBusiness='none';
@@ -1031,18 +1032,15 @@ function refinementCandidates(){
   const type=data.profile.refineType||'all';
   const rank=data.profile.refineRank||'overall';
   let arr=rankedOffers().filter(x=>!x.fit.disabled&&x.fit.status!=='save'&&refineTypeMatches(x.offer,type));
-  if(rank==='value')arr.sort((a,b)=>offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score);
-  else if(rank==='roi')arr=arr.filter(x=>subReturnRange(x.offer)).sort((a,b)=>subReturnRange(b.offer).mid-subReturnRange(a.offer).mid||offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score);
-  else if(rank==='cash')arr=arr.filter(x=>offerCashValue(x.offer)>0).sort((a,b)=>offerCashValue(b.offer)-offerCashValue(a.offer)||b.fit.score-a.fit.score);
-  else if(rank==='points')arr=arr.filter(x=>pointCurrency(x.offer)).sort((a,b)=>offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score);
-  else if(rank==='catchall')arr=arr.filter(x=>catchAllCashRate(x.offer)).sort((a,b)=>(catchAllCashRate(b.offer)?.effective||0)-(catchAllCashRate(a.offer)?.effective||0)||b.fit.score-a.fit.score);
-  else if(rank==='fee')arr.sort((a,b)=>Number(a.offer.af||0)-Number(b.offer.af||0)||b.fit.score-a.fit.score);
-  else arr.sort((a,b)=>{const av=offerEstimatedSubValue(a.offer),bv=offerEstimatedSubValue(b.offer);if(bv!==av)return bv-av;const aspend=Number(a.offer.spend||Infinity),bspend=Number(b.offer.spend||Infinity);if(aspend!==bspend)return aspend-bspend;const ar=subReturnRange(a.offer),br=subReturnRange(b.offer);const aroi=ar?ar.mid:-1,broi=br?br.mid:-1;if(broi!==aroi)return broi-aroi;return b.fit.score-a.fit.score;});
+  if(rank==='bonus')arr.sort((a,b)=>{const av=offerEstimatedSubValue(a.offer),bv=offerEstimatedSubValue(b.offer);if(bv!==av)return bv-av;const ar=subReturnRange(a.offer),br=subReturnRange(b.offer);const aroi=ar?ar.mid:-1,broi=br?br.mid:-1;if(broi!==aroi)return broi-aroi;return Number(a.offer.spend||Infinity)-Number(b.offer.spend||Infinity)||b.fit.score-a.fit.score;});
+  else if(rank==='rewards')arr.sort((a,b)=>{const ac=catchAllCashRate(a.offer)?.effective||0,bc=catchAllCashRate(b.offer)?.effective||0;if(bc!==ac)return bc-ac;return b.fit.score-a.fit.score;});
+  else if(rank==='cost')arr.sort((a,b)=>Number(a.offer.af||0)-Number(b.offer.af||0)||b.fit.score-a.fit.score);
+  else arr.sort((a,b)=>b.fit.score-a.fit.score||offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer));
   return arr;
 }
 function refinementSummary(){
   const rank=data.profile.refineRank||'overall',type=data.profile.refineType||'all';
-  const rankMap={overall:'Highest total sign-up bonus value → spend → return',value:'Highest estimated sign-up bonus value',roi:'Best sign-up bonus return on spend',cash:'Highest cash sign-up bonus',points:'Highest estimated points/miles value',catchall:'Highest catch-all cash back',fee:'Lowest annual fee'};
+  const rankMap={overall:'Best overall',bonus:'Best sign-up bonus',rewards:'Best ongoing rewards',cost:'Lowest cost'};
   const typeMap={all:'All reward types',cash:'Cash / cash back',points:'Points & miles',hotel:'Hotel',airline:'Airline',travel:'Travel',business:'Business cards',personal:'Personal cards'};
   return `${rankMap[rank]||rankMap.overall} • ${typeMap[type]||typeMap.all}`;
 }
@@ -1051,91 +1049,78 @@ function setRefineType(v){data.profile.refineType=v;save();render();showView('ap
 function clearRefinement(){data.profile.refineRank='overall';data.profile.refineType='all';save();render();showView('applyView');setTimeout(()=>document.getElementById('refinementPanel')?.scrollIntoView({behavior:'smooth',block:'start'}),40)}
 function refinementPanelHTML(){
   const rank=data.profile.refineRank||'overall',type=data.profile.refineType||'all';
-  const rankChoices=[['overall','Sign-up bonus value → spend → return'],['value','Highest estimated sign-up bonus value'],['roi','Best sign-up bonus return on spend'],['cash','Highest cash sign-up bonus'],['points','Highest points/miles value'],['catchall','Highest catch-all cash back'],['fee','Lowest annual fee']];
+  const rankChoices=[['overall','Best overall'],['bonus','Best sign-up bonus'],['rewards','Best ongoing rewards'],['cost','Lowest cost']];
   const typeChoices=[['all','All'],['cash','Cash'],['points','Points & miles'],['hotel','Hotel'],['airline','Airline'],['travel','Travel'],['business','Business'],['personal','Personal']];
-  return `<details id="refinementPanel" class="card" style="margin:12px 0" ${rank!=='overall'||type!=='all'?'open':''}><summary><b>Fine-tune these recommendations</b></summary><div class="small" style="margin:8px 0 12px">Start with the highest estimated total sign-up bonus value among cards that fit your spend limit. Then compare required spend and sign-up bonus return on spend. Strategic factors such as 5/24, fees, preferences, relationships, and overlap break ties and refine the result. Historical public highs are informational only.</div><div class="subchoices"><h4>Rank by</h4><div class="interestgrid">${rankChoices.map(x=>`<button class="interest ${rank===x[0]?'selected':''}" onclick="setRefineRank('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="subchoices" style="margin-top:14px"><h4>Narrow to</h4><div class="interestgrid">${typeChoices.map(x=>`<button class="interest ${type===x[0]?'selected':''}" onclick="setRefineType('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="between" style="margin-top:12px"><div class="small"><b>Current refinement:</b> ${refinementSummary()}</div><button class="btn ghost" onclick="clearRefinement()">Reset refinement</button></div></details>`;
+  return `<details id="refinementPanel" class="card" style="margin:12px 0" ${rank!=='overall'||type!=='all'?'open':''}><summary><b>Fine-tune these recommendations</b></summary><div class="small" style="margin:8px 0 12px">Choose what matters most. CardPilot handles the detailed math, eligibility, 5/24, fees, relationships, and overlap behind the scenes.</div><div class="subchoices"><h4>Rank recommendations by</h4><div class="interestgrid">${rankChoices.map(x=>`<button class="interest ${rank===x[0]?'selected':''}" onclick="setRefineRank('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="subchoices" style="margin-top:14px"><h4>Show me</h4><div class="interestgrid">${typeChoices.map(x=>`<button class="interest ${type===x[0]?'selected':''}" onclick="setRefineType('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="between" style="margin-top:12px"><div class="small"><b>Current view:</b> ${refinementSummary()}</div><button class="btn ghost" onclick="clearRefinement()">Reset</button></div></details>`;
 }
 
 function officialCardUrl(o){
+  if(o.issuerUrl && o.issuerUrlVerified)return {url:o.issuerUrl,exact:true};
   const n=(o.name||'').toLowerCase(), i=(o.issuer||'').toLowerCase();
-  const exact=[
-    [/unlimited cash rewards/, 'https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/'],
-    [/venture rewards$/, 'https://www.capitalone.com/credit-cards/venture/'],
-    [/at&t points plus/, 'https://www.citi.com/credit-cards/citi-att-pointsplus-credit-card'],
-    [/bilt palladium|bilt obsidian|bilt blue/, 'https://www.bilt.com/card'],
-    [/robinhood gold card/, 'https://robinhood.com/creditcard'],
-    [/business platinum card/, 'https://www.americanexpress.com/en-us/business/credit-cards/business-platinum/'],
-    [/business gold card/, 'https://www.americanexpress.com/en-us/business/credit-cards/business-gold-card/'],
-    [/platinum card for morgan stanley/, 'https://www.americanexpress.com/us/credit-cards/card/platinum-card-morgan-stanley/'],
-    [/platinum card for charles schwab/, 'https://www.schwab.com/credit-cards'],
-    [/choice privileges mastercard/, 'https://creditcards.wellsfargo.com/choice-privileges-credit-card/'],
-    [/choice privileges select mastercard/, 'https://creditcards.wellsfargo.com/choice-privileges-select-credit-card/']
-  ];
-  for(const [re,url] of exact) if(re.test(n)) return url;
-  if(i.includes('chase')) return 'https://creditcards.chase.com/';
-  if(i.includes('american express')) return 'https://www.americanexpress.com/us/credit-cards/';
-  if(i.includes('capital one')) return 'https://www.capitalone.com/credit-cards/';
-  if(i.includes('citi')) return 'https://www.citi.com/credit-cards/';
-  if(i.includes('bank of america')) return 'https://www.bankofamerica.com/credit-cards/';
-  if(i.includes('wells fargo')) return 'https://creditcards.wellsfargo.com/';
-  if(i.includes('u.s. bank')||i.includes('us bank')) return 'https://www.usbank.com/credit-cards.html';
-  if(i.includes('bilt')) return 'https://www.bilt.com/card';
-  if(i.includes('robinhood')) return 'https://robinhood.com/creditcard';
-  if(i.includes('fidelity')) return 'https://www.fidelity.com/spend-save/visa-signature-card';
-  if(i.includes('barclays')) return 'https://cards.barclaycardus.com/';
-  if(i.includes('discover')) return 'https://www.discover.com/credit-cards/';
-  return '';
+  if(i.includes('chase')) return {url:'https://creditcards.chase.com/',exact:false};
+  if(i.includes('american express')) return {url:'https://www.americanexpress.com/us/credit-cards/',exact:false};
+  if(i.includes('capital one')) return {url:'https://www.capitalone.com/credit-cards/',exact:false};
+  if(i.includes('citi')) return {url:'https://www.citi.com/credit-cards/',exact:false};
+  if(i.includes('bank of america')) return {url:'https://www.bankofamerica.com/credit-cards/',exact:false};
+  if(i.includes('wells fargo')) return {url:'https://creditcards.wellsfargo.com/',exact:false};
+  if(i.includes('u.s. bank')||i.includes('us bank')) return {url:'https://www.usbank.com/credit-cards.html',exact:false};
+  if(i.includes('bilt')) return {url:'https://www.bilt.com/card',exact:false};
+  if(i.includes('robinhood')) return {url:'https://robinhood.com/creditcard',exact:false};
+  if(i.includes('fidelity')) return {url:'https://www.fidelity.com/spend-save/visa-signature-card',exact:false};
+  if(i.includes('barclays')) return {url:'https://cards.barclaycardus.com/',exact:false};
+  if(i.includes('discover')) return {url:'https://www.discover.com/credit-cards/',exact:false};
+  return null;
 }
 function issuerLinkHTML(o){
-  const url=officialCardUrl(o); if(!url)return '';
-  return `<a class="btn ghost" style="margin-top:9px;text-decoration:none;display:inline-block" href="${url}" target="_blank" rel="noopener noreferrer">Issuer details / Apply ↗</a>`;
+  const dest=officialCardUrl(o); if(!dest)return '';
+  const label=dest.exact?'Issuer details / Apply ↗':'Official issuer site ↗';
+  return `<a class="btn ghost" style="margin-top:9px;text-decoration:none;display:inline-block" href="${dest.url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 }
+
 function refinedRecommendationCard(x,rank){
   const o=x.offer,fit=x.fit,est=offerEstimatedSubValue(o),cash=offerCashValue(o);
   const rankMode=data.profile.refineRank||'overall';
   const badge=rank===1?'Top refined match':rank===2?'Next':'Also consider';
   let metric='';
-  if(rankMode==='roi'){const r=subReturnRange(o);metric=r?`<div class="small" style="margin-top:5px;color:#365d96"><b>Spend-efficiency ranking:</b> ${Math.abs(r.low-r.high)<0.05?r.low.toFixed(1)+'%':r.low.toFixed(1)+'%–'+r.high.toFixed(1)+'%'}</div>`:'';}
-  if(rankMode==='value')metric=est?`<div class="small" style="margin-top:5px;color:#365d96"><b>Estimated sign-up bonus value used for this ranking:</b> about ${fmt(Math.round(est))}</div>`:'';
-  if(rankMode==='cash')metric=cash?`<div class="small" style="margin-top:5px;color:#365d96"><b>Cash sign-up bonus used for this ranking:</b> ${fmt(cash)}</div>`:'';
-  if(rankMode==='points')metric=est?`<div class="small" style="margin-top:5px;color:#365d96"><b>Estimated points/miles sign-up bonus value used for this ranking:</b> about ${fmt(Math.round(est))}</div>`:'';
-  if(rankMode==='catchall'){const cr=catchAllCashRate(o);metric=cr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Catch-all rate used for this ranking:</b> ${cr.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')}%</div>`:'';}
-  if(rankMode==='fee')metric=`<div class="small" style="margin-top:5px;color:#365d96"><b>Annual fee used for this ranking:</b> ${fmt(Number(o.af||0))}</div>`;
-  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${perksHTML(o)}${metric}<div class="small" style="margin-top:8px"><b>Base fit score ${fit.score}/100</b></div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
+  if(rankMode==='bonus'){const est=offerEstimatedSubValue(o);metric=est?`<div class="small" style="margin-top:5px;color:#365d96"><b>Why it ranks here:</b> strong sign-up bonus value for the required spend.</div>`:'';}
+  if(rankMode==='rewards'){const cr=catchAllCashRate(o);metric=cr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Ongoing rewards:</b> ${cr.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')}% effective catch-all cash back.</div>`:`<div class="small" style="margin-top:5px;color:#365d96"><b>Why it ranks here:</b> ongoing rewards match your selected benefits.</div>`;}
+  if(rankMode==='cost')metric=`<div class="small" style="margin-top:5px;color:#365d96"><b>Cost:</b> ${fmt(Number(o.af||0))} annual fee.</div>`;
+  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${perksHTML(o)}${metric}<button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
 }
 function apply(){
   const ranked=rankedOffers(), f=five24();
   const considers=ranked.filter(x=>x.fit.status==='consider');
   const waits=ranked.filter(x=>x.fit.status==='wait').sort((a,b)=>b.fit.score-a.fit.score);
-  const nonmatches=ranked.filter(x=>x.fit.status==='avoid').sort((a,b)=>b.fit.score-a.fit.score);
+  let nonmatches=ranked.filter(x=>x.fit.status==='avoid').sort((a,b)=>b.fit.score-a.fit.score);
   const overlap=companionSelected()?companionOverlapAdvice():null, sw=southwestTimingAdvice();
   const refineActive=(data.profile.refineRank||'overall')!=='overall'||(data.profile.refineType||'all')!=='all';
   const refined=refineActive?refinementCandidates().slice(0,5):[];
+  if(refineActive){const refinedIds=new Set(refined.map(x=>x.offer.id));nonmatches=nonmatches.filter(x=>!refinedIds.has(x.offer.id));}
   const rankedCards=considers.slice(0,3).map((x,i)=>rankedOfferCard(x,i+1)).join('');
   const refinedCards=refineActive?refined.map((x,i)=>refinedRecommendationCard(x,i+1)).join(''):'';
   const noStrong=considers.length?'' : `<div class="note" style="margin-bottom:12px"><b>No strong apply-now match.</b><div class="small" style="margin-top:5px">CardPilot will not promote a card that fails your current preferences. You can still use Fine-tune recommendations to rank the eligible pool by sign-up bonus value or reward type.</div></div>`;
   const waitHtml=waits.length?`<details class="card" style="margin-top:14px"><summary><b>Worth waiting for (${waits.length})</b></summary><div class="small" style="margin:8px 0 10px">Good fits where timing or the current offer gives CardPilot a reason to wait.</div><div class="list">${waits.map(x=>offerCard(x.offer,true,x.fit)).join('')}</div></details>`:'';
   const noMatchHtml=nonmatches.length?`<details class="card" style="margin-top:12px"><summary><b>See cards that didn't match (${nonmatches.length})</b></summary><div class="small" style="margin:8px 0 10px">These are intentionally kept out of your main recommendations. Hard eligibility and setup constraints remain in force even when you fine-tune results.</div><div class="list">${nonmatches.map(x=>offerCard(x.offer,true,x.fit)).join('')}</div></details>`:'';
-  return `<div class="between" style="margin-bottom:12px"><button class="btn ghost" onclick="showView('homeView')">← Home</button><button class="btn ghost" onclick="openPreferencePicker()">Fine-tune</button></div>${f>=5?`<div class="warningbox"><b>${f}/24: Chase cards are ${data.profile.includeChaseOver524?'included by your override':'grayed out by default'}.</b></div>`:''}${overlap?`<div class="note" style="margin-bottom:12px"><b>Companion benefit strategy:</b> ${overlap.message}</div>`:''}<div class="section" style="margin-top:0">Top recommendations for you</div><div class="small" style="margin-bottom:12px">CardPilot starts with estimated total sign-up bonus value among cards whose required spend fits your setup. It then compares required spend and sign-up bonus return on spend, followed by 5/24 strategy, fees, preferences, relationships, and overlap. Historical highs are shown for context only and never reduce a card's ranking.</div>${noStrong}<div class="list">${rankedCards}</div>${refinementPanelHTML()}${refineActive?`<div id="refinedResults" class="section">Refined results</div><div class="small" style="margin-bottom:10px"><b>${refinementSummary()}</b>. These are ranked from the eligible pool after your original pathway, 5/24, fee, and sign-up-bonus spend constraints are applied.</div>${refined.length?`<div class="list">${refinedCards}</div>`:`<div class="note"><b>No cards match this refinement.</b><div class="small" style="margin-top:5px">Try a broader reward type or reset the refinement.</div></div>`}`:''}${waitHtml}${noMatchHtml}${valuationInfoHTML()}${sw?`<div class="card strategy-card" style="margin-top:12px"><div class="small">SAVED STRATEGY</div><h3>Southwest Companion Pass — target ${sw.target}</h3><div class="small">Suggested application window: <b>${sw.applyWindow}</b></div><div class="small" style="margin-top:6px">${sw.note}</div></div>`:''}`;
+  return `<div class="between" style="margin-bottom:12px"><button class="btn ghost" onclick="showView('homeView')">← Home</button><button class="btn ghost" onclick="openPreferencePicker()">Fine-tune</button></div>${f>=5?`<div class="warningbox"><b>${f}/24: Chase cards are ${data.profile.includeChaseOver524?'included by your override':'grayed out by default'}.</b></div>`:''}${overlap?`<div class="note" style="margin-bottom:12px"><b>Companion benefit strategy:</b> ${overlap.message}</div>`:''}<div class="section" style="margin-top:0">Top recommendations for you</div><div class="small" style="margin-bottom:12px">CardPilot balances your preferences, sign-up bonus value, required spend, ongoing rewards, annual fee, 5/24 strategy, relationships, eligibility, and overlap. Fine-tune below only if you want to emphasize a specific outcome.</div>${noStrong}<div class="list">${rankedCards}</div>${refinementPanelHTML()}${refineActive?`<div id="refinedResults" class="section">Refined results</div><div class="small" style="margin-bottom:10px"><b>${refinementSummary()}</b>. These are ranked from the eligible pool after your original pathway, 5/24, fee, and sign-up-bonus spend constraints are applied.</div>${refined.length?`<div class="list">${refinedCards}</div>`:`<div class="note"><b>No cards match this refinement.</b><div class="small" style="margin-top:5px">Try a broader reward type or reset the refinement.</div></div>`}`:''}${waitHtml}${noMatchHtml}${valuationInfoHTML()}${sw?`<div class="card strategy-card" style="margin-top:12px"><div class="small">SAVED STRATEGY</div><h3>Southwest Companion Pass — target ${sw.target}</h3><div class="small">Suggested application window: <b>${sw.applyWindow}</b></div><div class="small" style="margin-top:6px">${sw.note}</div></div>`:''}`;
 }
 function rankedOfferCard(x,rank){
   const o=x.offer, fit=x.fit;
   const badge=rank===1?'Best match':rank===2?'Next best':'Strong alternative';
   const why=[...fit.reasons].slice(0,4).map(r=>`<div style="margin-top:4px;color:#157347">✓ ${r}</div>`).join('');
-  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:8px"><b>Fit score ${fit.score}/100</b>${why}</div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this is #${rank}</button>${issuerLinkHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
+  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:8px">${why}</div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this is #${rank}</button>${issuerLinkHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
 }
 function offerCard(o,reason=false,fit=null){
   fit=fit||offerFit(o);
   const cls=fit.status==='consider'?'green':fit.status==='wait'?'amber':fit.status==='save'?'blue':'red';
-  return `<div class="item ${fit.disabled?'disabled-card':''}"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div><span class="pill ${cls}">${fit.label}</span></div><div class="between" style="margin-top:9px"><div><b>${currentOfferLabel(o)}</b></div><div class="small">${historicalOfferText(o)}</div></div>${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}${o.offerNote?`<div class="small" style="margin-top:6px">${o.offerNote}</div>`:''}${reason?`<div class="small" style="margin-top:7px"><b>Fit score ${fit.score}/100.</b>${fit.reasons[0]?` <span style="color:#157347">✓ ${fit.reasons[0]}</span>`:''}${fit.cautions[0]?`<div style="margin-top:4px;color:#9b2c2c">✕ ${fit.cautions[0]}</div>`:''}</div><button class="btn ghost" style="margin-top:8px;padding:7px 10px" onclick="whyOffer(${o.id})">Why?</button>`:''}${issuerLinkHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`
+  return `<div class="item ${fit.disabled?'disabled-card':''}"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div><span class="pill ${cls}">${fit.label}</span></div><div class="between" style="margin-top:9px"><div><b>${currentOfferLabel(o)}</b></div><div class="small">${historicalOfferText(o)}</div></div>${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}${o.offerNote?`<div class="small" style="margin-top:6px">${o.offerNote}</div>`:''}${reason?`<div class="small" style="margin-top:7px">${fit.reasons[0]?` <span style="color:#157347">✓ ${fit.reasons[0]}</span>`:''}${fit.cautions[0]?`<div style="margin-top:4px;color:#9b2c2c">✕ ${fit.cautions[0]}</div>`:''}</div><button class="btn ghost" style="margin-top:8px;padding:7px 10px" onclick="whyOffer(${o.id})">Why?</button>`:''}${issuerLinkHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`
 }
 function whyOffer(id){
   const o=data.offers.find(x=>x.id===id);if(!o)return;
   const fit=offerFit(o);
-  const parts=[`${o.name}: ${fit.label} (${fit.score}/100)`];
+  const parts=[`${o.name}: ${fit.label}`];
   if(fit.reasons.length)parts.push('Why it fits:\n• '+fit.reasons.join('\n• '));
   if(fit.cautions.length)parts.push('What holds it back:\n• '+fit.cautions.join('\n• ')); const be=bonusEligibilityInfo(o); if(be.warnings.length)parts.push('Welcome-bonus eligibility:\n• '+be.warnings.join('\n• '));
-  parts.push(`Pathway: ${pathLabel()}. CardPilot first checks that the required spend fits your selected limit. Among eligible cards, it ranks estimated total sign-up bonus value first, then required spend, then sign-up bonus return on spend, followed by 5/24 strategy, annual-fee preference, selected interests, banking/investment relationship benefits, portfolio overlap, and any saved strategy. Historical offer data is displayed only as context and does not penalize ranking.`);
+  parts.push(`Pathway: ${pathLabel()}. CardPilot checks your hard eligibility and setup constraints first, then compares the factors that matter for your selected ranking: preferences, sign-up bonus economics, ongoing rewards, annual fee, 5/24 strategy, relationships, eligibility, and portfolio overlap. Historical offer data is context only.`);
   alert(parts.join('\n\n'));
 }
 
