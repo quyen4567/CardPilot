@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v10.10.24</title>
+  <title>CardPilot v10.10.27</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.10.24</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.10.27</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -265,6 +265,8 @@ data.profile.relationships=data.profile.relationships||{bofaPersonal:'none',bofa
 // v10.10: post-recommendation refinement controls.
 // v10.10.20: streamlined onboarding — wallet + 3 quick questions, with the full 7-step editor retained behind the scenes.
 // v10.10.19: add flexible step-by-step preference editing without resetting saved answers.
+// v10.10.25: cash-back ranking now always considers catch-all rate; relationship boosts apply only when actually saved and enabled.
+// v10.10.26: quick setup reordered to annual fee → desired benefits → personal/business/either.
 // v10.10.18: add effective catch-all cash-back rates (including relationship boosts) and prioritize stronger baseline cash-back when selected.
 if(!data.profile.refineRank)data.profile.refineRank='overall';
 if(!data.profile.refineType)data.profile.refineType='all';
@@ -349,7 +351,7 @@ function quickOnboarding(){
   const paths=[['personal','Personal'],['business','Business'],['either','Either / compare both']];
   const fees=[['0','Up to $0'],['95','Up to $95'],['250','Up to $250'],['550','Up to $550'],['895','Up to $895'],['any','No fee limit'],['justify','Only if benefits justify it']];
   const goals=[['hist','Big sign-up bonus'],['cash','Cash back'],['points','Points & miles'],['airline','Airline'],['hotel','Hotel'],['premium','Premium travel'],['apr','0% APR'],['none','No preference']];
-  return `<div class="card"><div class="small">QUICK SETUP · 2 OF 2</div><h2 style="margin:5px 0 6px">What should you get next?</h2><div class="small">Three quick choices are enough for an initial recommendation. CardPilot handles 5/24, relationship boosts, overlap, bonus eligibility, and other strategy rules behind the scenes.</div><div class="subchoices"><h4>1. Personal, business, or either?</h4><div class="chipgrid">${paths.map(x=>`<button class="chip ${data.profile.cardPath===x[0]?'selected':''}" onclick="setPathFromSetup('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="subchoices"><h4>2. How do you feel about annual fees?</h4><div class="small" style="margin-bottom:8px">Choose the highest fee you are comfortable considering, or let CardPilot allow a higher fee only when the benefits justify it.</div><div class="chipgrid">${fees.map(x=>`<button class="chip ${data.profile.feePref===x[0]?'selected':''}" onclick="setFeePref('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="subchoices"><h4>3. What benefits do you primarily want from your credit card?</h4><div class="small" style="margin-bottom:8px">Choose one or more.</div><div class="chipgrid">${goals.map(x=>`<button class="chip ${(data.profile.interests||[]).includes(x[0])?'selected':''}" onclick="toggleInterest('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="row" style="gap:10px;margin-top:16px"><button class="btn ghost" onclick="setQuickStage(1)">← Wallet</button><button class="primary-action" style="margin-top:0" ${data.profile.cardPath&&data.profile.feePref&&(data.profile.interests||[]).length?'':'disabled'} onclick="finishQuickSetup()">Show my recommendations</button></div><div style="text-align:center;margin-top:10px"><button class="btn ghost" onclick="beginPreferenceEditing(3)">Fine-tune advanced settings</button></div></div>`;
+  return `<div class="card"><div class="small">QUICK SETUP · 2 OF 2</div><h2 style="margin:5px 0 6px">What should you get next?</h2><div class="small">Three quick choices are enough for an initial recommendation. CardPilot handles 5/24, relationship boosts, overlap, bonus eligibility, and other strategy rules behind the scenes.</div><div class="subchoices"><h4>1. How do you feel about annual fees?</h4><div class="small" style="margin-bottom:8px">Choose the highest fee you are comfortable considering, or let CardPilot allow a higher fee only when the benefits justify it.</div><div class="chipgrid">${fees.map(x=>`<button class="chip ${data.profile.feePref===x[0]?'selected':''}" onclick="setFeePref('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="subchoices"><h4>2. What benefits do you primarily want from your credit card?</h4><div class="small" style="margin-bottom:8px">Choose one or more.</div><div class="chipgrid">${goals.map(x=>`<button class="chip ${(data.profile.interests||[]).includes(x[0])?'selected':''}" onclick="toggleInterest('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="subchoices"><h4>3. Is this card for personal use, business use, or either?</h4><div class="small" style="margin-bottom:8px">Choose the card type you want CardPilot to compare.</div><div class="chipgrid">${paths.map(x=>`<button class="chip ${data.profile.cardPath===x[0]?'selected':''}" onclick="setPathFromSetup('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="row" style="gap:10px;margin-top:16px"><button class="btn ghost" onclick="setQuickStage(1)">← Wallet</button><button class="primary-action" style="margin-top:0" ${data.profile.cardPath&&data.profile.feePref&&(data.profile.interests||[]).length?'':'disabled'} onclick="finishQuickSetup()">Show my recommendations</button></div><div style="text-align:center;margin-top:10px"><button class="btn ghost" onclick="beginPreferenceEditing(3)">Fine-tune advanced settings</button></div></div>`;
 }
 function onboarding(){return data.profile.editingPreferences?advancedOnboarding():quickOnboarding()}
 function setQuickStage(n){data.profile.quickStage=Number(n)||1;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
@@ -485,8 +487,39 @@ function catchAllCashRate(o){
   if(base===null)return null;
   return {base,effective:base,note,relationshipBoost:0};
 }
-function catchAllCashText(o){const x=catchAllCashRate(o);if(!x)return '';const e=x.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'');const b=x.base.toFixed(3).replace(/0+$/,'').replace(/\.$/,'');const rel=x.relationshipBoost?` <span style="color:#667085">(base ${b}% + saved relationship boost)</span>`:'';let t=`<div class="small" style="margin-top:6px;color:#0b6b3a"><b>Effective catch-all cash back:</b> ${e}%${rel}</div>`;if(x.note)t+=`<div class="small" style="margin-top:2px;color:#667085">${x.note}</div>`;const spend=annualSpendAmount();if(spend)t+=`<div class="small" style="margin-top:2px;color:#365d96">At ${annualSpendLabel()}, that rate is about <b>${fmt(Math.round(spend*x.effective/100))}/year</b> before annual fees, category bonuses, caps, or credits.</div>`;return t}
-function cashBackRateScore(o){const ints=data.profile.interests||[], cash=(data.profile.subInterests||{}).cash||[];if(!ints.includes('cash'))return {score:0,reason:null};const x=catchAllCashRate(o);if(!x)return {score:0,reason:null};const catchall=cash.includes('catchall')||cash.includes('overall')||cash.length===0;if(!catchall)return {score:0,reason:null};let score=0;if(x.effective>=3)score=18;else if(x.effective>=2.625)score=15;else if(x.effective>=2)score=10;else if(x.effective>=1.5)score=5;else score=1;return {score,reason:`Effective catch-all cash-back rate is ${x.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')}%${x.relationshipBoost?' after your saved relationship boost':''}.`}}
+function catchAllCashText(o){
+  const x=catchAllCashRate(o);if(!x)return '';
+  const e=x.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'');
+  const b=x.base.toFixed(3).replace(/0+$/,'').replace(/\.$/,'');
+  const rel=x.relationshipBoost
+    ? ` <span style="color:#667085">(base ${b}% + relationship boost)</span>`
+    : ` <span style="color:#667085">(base ${b}%; no relationship boost)</span>`;
+  let t=`<div class="small" style="margin-top:6px;color:#0b6b3a"><b>Effective catch-all cash back:</b> ${e}%${rel}</div>`;
+  if(x.note)t+=`<div class="small" style="margin-top:2px;color:#667085">${x.note}</div>`;
+  const spend=annualSpendAmount();
+  if(spend)t+=`<div class="small" style="margin-top:2px;color:#365d96">At ${annualSpendLabel()}, that rate is about <b>${fmt(Math.round(spend*x.effective/100))}/year</b> before annual fees, category bonuses, caps, or credits.</div>`;
+  return t
+}
+function cashBackRateScore(o){
+  const ints=data.profile.interests||[], cash=(data.profile.subInterests||{}).cash||[];
+  if(!ints.includes('cash'))return {score:0,reason:null};
+  const x=catchAllCashRate(o);if(!x)return {score:0,reason:null};
+  const catchallPriority=cash.includes('catchall')||cash.includes('overall')||cash.length===0;
+  // Every cash-back card gets some credit for its baseline/effective catch-all rate.
+  // If the user explicitly prioritizes catch-all or overall cash back, weight it more heavily.
+  let baseScore=0;
+  if(x.effective>=3)baseScore=18;
+  else if(x.effective>=2.625)baseScore=15;
+  else if(x.effective>=2)baseScore=10;
+  else if(x.effective>=1.5)baseScore=5;
+  else if(x.effective>0)baseScore=1;
+  const score=catchallPriority?baseScore:Math.max(1,Math.round(baseScore*0.45));
+  const rate=x.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'');
+  const relationshipText=x.relationshipBoost
+    ? ` after your saved relationship boost`
+    : (String(o.issuer||'').toLowerCase()==='bank of america' ? ` with no relationship boost applied` : '');
+  return {score,reason:`Catch-all cash-back rate is ${rate}%${relationshipText}. Higher baseline catch-all rates receive more weight when cash back is selected.`};
+}
 
 function relationshipEffect(o){const r=data.profile.relationships||{},tags=offerTags(o),reasons=[],cautions=[];let score=0;const name=String(o.name||'').toLowerCase(),issuer=String(o.issuer||'').toLowerCase();const useRel=data.profile.applyRelationships!==false;
   // Even when relationship economics are saved-only, keep true access/membership requirements visible.
@@ -1022,6 +1055,41 @@ function refinementPanelHTML(){
   const typeChoices=[['all','All'],['cash','Cash'],['points','Points & miles'],['hotel','Hotel'],['airline','Airline'],['travel','Travel'],['business','Business'],['personal','Personal']];
   return `<details id="refinementPanel" class="card" style="margin:12px 0" ${rank!=='overall'||type!=='all'?'open':''}><summary><b>Fine-tune these recommendations</b></summary><div class="small" style="margin:8px 0 12px">Start with the highest estimated total sign-up bonus value among cards that fit your spend limit. Then compare required spend and sign-up bonus return on spend. Strategic factors such as 5/24, fees, preferences, relationships, and overlap break ties and refine the result. Historical public highs are informational only.</div><div class="subchoices"><h4>Rank by</h4><div class="interestgrid">${rankChoices.map(x=>`<button class="interest ${rank===x[0]?'selected':''}" onclick="setRefineRank('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="subchoices" style="margin-top:14px"><h4>Narrow to</h4><div class="interestgrid">${typeChoices.map(x=>`<button class="interest ${type===x[0]?'selected':''}" onclick="setRefineType('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="between" style="margin-top:12px"><div class="small"><b>Current refinement:</b> ${refinementSummary()}</div><button class="btn ghost" onclick="clearRefinement()">Reset refinement</button></div></details>`;
 }
+
+function officialCardUrl(o){
+  const n=(o.name||'').toLowerCase(), i=(o.issuer||'').toLowerCase();
+  const exact=[
+    [/unlimited cash rewards/, 'https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/'],
+    [/venture rewards$/, 'https://www.capitalone.com/credit-cards/venture/'],
+    [/at&t points plus/, 'https://www.citi.com/credit-cards/citi-att-pointsplus-credit-card'],
+    [/bilt palladium|bilt obsidian|bilt blue/, 'https://www.bilt.com/card'],
+    [/robinhood gold card/, 'https://robinhood.com/creditcard'],
+    [/business platinum card/, 'https://www.americanexpress.com/en-us/business/credit-cards/business-platinum/'],
+    [/business gold card/, 'https://www.americanexpress.com/en-us/business/credit-cards/business-gold-card/'],
+    [/platinum card for morgan stanley/, 'https://www.americanexpress.com/us/credit-cards/card/platinum-card-morgan-stanley/'],
+    [/platinum card for charles schwab/, 'https://www.schwab.com/credit-cards'],
+    [/choice privileges mastercard/, 'https://creditcards.wellsfargo.com/choice-privileges-credit-card/'],
+    [/choice privileges select mastercard/, 'https://creditcards.wellsfargo.com/choice-privileges-select-credit-card/']
+  ];
+  for(const [re,url] of exact) if(re.test(n)) return url;
+  if(i.includes('chase')) return 'https://creditcards.chase.com/';
+  if(i.includes('american express')) return 'https://www.americanexpress.com/us/credit-cards/';
+  if(i.includes('capital one')) return 'https://www.capitalone.com/credit-cards/';
+  if(i.includes('citi')) return 'https://www.citi.com/credit-cards/';
+  if(i.includes('bank of america')) return 'https://www.bankofamerica.com/credit-cards/';
+  if(i.includes('wells fargo')) return 'https://creditcards.wellsfargo.com/';
+  if(i.includes('u.s. bank')||i.includes('us bank')) return 'https://www.usbank.com/credit-cards.html';
+  if(i.includes('bilt')) return 'https://www.bilt.com/card';
+  if(i.includes('robinhood')) return 'https://robinhood.com/creditcard';
+  if(i.includes('fidelity')) return 'https://www.fidelity.com/spend-save/visa-signature-card';
+  if(i.includes('barclays')) return 'https://cards.barclaycardus.com/';
+  if(i.includes('discover')) return 'https://www.discover.com/credit-cards/';
+  return '';
+}
+function issuerLinkHTML(o){
+  const url=officialCardUrl(o); if(!url)return '';
+  return `<a class="btn ghost" style="margin-top:9px;text-decoration:none;display:inline-block" href="${url}" target="_blank" rel="noopener noreferrer">Issuer details / Apply ↗</a>`;
+}
 function refinedRecommendationCard(x,rank){
   const o=x.offer,fit=x.fit,est=offerEstimatedSubValue(o),cash=offerCashValue(o);
   const rankMode=data.profile.refineRank||'overall';
@@ -1033,7 +1101,7 @@ function refinedRecommendationCard(x,rank){
   if(rankMode==='points')metric=est?`<div class="small" style="margin-top:5px;color:#365d96"><b>Estimated points/miles sign-up bonus value used for this ranking:</b> about ${fmt(Math.round(est))}</div>`:'';
   if(rankMode==='catchall'){const cr=catchAllCashRate(o);metric=cr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Catch-all rate used for this ranking:</b> ${cr.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')}%</div>`:'';}
   if(rankMode==='fee')metric=`<div class="small" style="margin-top:5px;color:#365d96"><b>Annual fee used for this ranking:</b> ${fmt(Number(o.af||0))}</div>`;
-  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${perksHTML(o)}${metric}<div class="small" style="margin-top:8px"><b>Base fit score ${fit.score}/100</b></div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this card?</button><div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
+  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${perksHTML(o)}${metric}<div class="small" style="margin-top:8px"><b>Base fit score ${fit.score}/100</b></div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
 }
 function apply(){
   const ranked=rankedOffers(), f=five24();
@@ -1054,12 +1122,12 @@ function rankedOfferCard(x,rank){
   const o=x.offer, fit=x.fit;
   const badge=rank===1?'Best match':rank===2?'Next best':'Strong alternative';
   const why=[...fit.reasons].slice(0,4).map(r=>`<div style="margin-top:4px;color:#157347">✓ ${r}</div>`).join('');
-  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:8px"><b>Fit score ${fit.score}/100</b>${why}</div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this is #${rank}</button><div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
+  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:8px"><b>Fit score ${fit.score}/100</b>${why}</div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this is #${rank}</button>${issuerLinkHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
 }
 function offerCard(o,reason=false,fit=null){
   fit=fit||offerFit(o);
   const cls=fit.status==='consider'?'green':fit.status==='wait'?'amber':fit.status==='save'?'blue':'red';
-  return `<div class="item ${fit.disabled?'disabled-card':''}"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div><span class="pill ${cls}">${fit.label}</span></div><div class="between" style="margin-top:9px"><div><b>${currentOfferLabel(o)}</b></div><div class="small">${historicalOfferText(o)}</div></div>${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}${o.offerNote?`<div class="small" style="margin-top:6px">${o.offerNote}</div>`:''}${reason?`<div class="small" style="margin-top:7px"><b>Fit score ${fit.score}/100.</b>${fit.reasons[0]?` <span style="color:#157347">✓ ${fit.reasons[0]}</span>`:''}${fit.cautions[0]?`<div style="margin-top:4px;color:#9b2c2c">✕ ${fit.cautions[0]}</div>`:''}</div><button class="btn ghost" style="margin-top:8px;padding:7px 10px" onclick="whyOffer(${o.id})">Why?</button>`:''}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`
+  return `<div class="item ${fit.disabled?'disabled-card':''}"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div><span class="pill ${cls}">${fit.label}</span></div><div class="between" style="margin-top:9px"><div><b>${currentOfferLabel(o)}</b></div><div class="small">${historicalOfferText(o)}</div></div>${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}${o.offerNote?`<div class="small" style="margin-top:6px">${o.offerNote}</div>`:''}${reason?`<div class="small" style="margin-top:7px"><b>Fit score ${fit.score}/100.</b>${fit.reasons[0]?` <span style="color:#157347">✓ ${fit.reasons[0]}</span>`:''}${fit.cautions[0]?`<div style="margin-top:4px;color:#9b2c2c">✕ ${fit.cautions[0]}</div>`:''}</div><button class="btn ghost" style="margin-top:8px;padding:7px 10px" onclick="whyOffer(${o.id})">Why?</button>`:''}${issuerLinkHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`
 }
 function whyOffer(id){
   const o=data.offers.find(x=>x.id===id);if(!o)return;
