@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v10.10.13</title>
+  <title>CardPilot v10.10.15</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.10.13</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v10.10.15</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -263,7 +263,7 @@ data.profile.subInterests=data.profile.subInterests||{airline:[],hotel:[],cruise
 data.profile.savedStrategies=Array.isArray(data.profile.savedStrategies)?data.profile.savedStrategies:[];
 data.profile.relationships=data.profile.relationships||{bofaPersonal:'none',bofaBusiness:'none',citi:'none',schwab:'none',morganStanley:'none'};
 // v10.10: post-recommendation refinement controls.
-// v10.10.12: welcome-bonus eligibility education and bonus-history tracking.
+// v10.10.15: consolidated fixes through offer-state, Bilt mixed-SUB valuation, refinement scroll preservation, and bonus-history tracking.
 if(!data.profile.refineRank)data.profile.refineRank='overall';
 if(!data.profile.refineType)data.profile.refineType='all';
 if(!data.profile.relationships.bofaPersonal)data.profile.relationships.bofaPersonal='none';
@@ -570,7 +570,11 @@ function bonusValueText(o){
 
 
 function currentOfferLabel(o){
-  if(Number(o.bonus||0)>0) return Number(o.bonus).toLocaleString()+' '+(o.unit||'');
+  const bonus=Number(o.bonus||0), extra=Number(o.bonusCashExtra||0);
+  if(bonus>0){
+    const main=bonus.toLocaleString()+' '+(o.unit||'');
+    return extra>0 ? `${main} + ${fmt(extra)} ${String(o.issuer||'').toLowerCase()==='bilt'?'Bilt Cash':'cash'}` : main;
+  }
   if(o.offerState==='no-standard-public-sub') return 'No standard public SUB';
   if(o.offerState==='invitation-waitlist') return 'Invitation / waitlist offer';
   if(o.offerState==='personalized') return 'Personalized / up-to offer';
@@ -841,14 +845,15 @@ function removeCard(id){const c=data.cards.find(x=>x.id===id);if(!c)return;if(!c
 function relationshipsPage(){const r=data.profile.relationships||{};return `<div class="between"><div><div class="section" style="margin-top:0">Relationships & ecosystems</div><div class="small">Save your relationships here and choose whether CardPilot should apply relationship economics to recommendations.</div></div><button class="btn ghost" onclick="showView('homeView')">Done</button></div><div class="card" style="margin-top:14px"><div class="small">WHY THIS MATTERS</div><h3 style="margin-top:4px">Relationship benefits can change the best card</h3><div class="small">Examples include boosted Bank of America rewards, Citi relationship credits, and relationship-only Amex Platinum variants. When enabled, these settings affect recommendations but do not override a poor match with your selected goals. You can also save them without using them in ranking.</div></div><div class="card" style="margin-top:12px">${relationshipChoicesHTML()}${overlapChoicesHTML()}<div class="note" style="margin-top:12px"><b>Saved automatically.</b> ${data.profile.applyRelationships===false?'Relationships are saved, but economic boosts are not being used in rankings.':'Relationship advantages are currently being used in rankings.'}</div></div><div class="section">Current relationships</div><div class="card"><div class="kpi">${relationshipSummary()}</div><div class="small" style="margin-top:5px">You can return here anytime from Home or Apply Next.</div></div>`}
 function offerCashValue(o){
   const unit=String(o.unit||'').toLowerCase();
-  const fixedCash=unit.includes('cash') ? Number(o.bonus||0) : 0;
+  const isPointOffer=!!pointCurrency(o);
+  const fixedCash=(!isPointOffer && unit.includes('cash')) ? Number(o.bonus||0) : 0;
   return fixedCash + Number(o.bonusCashExtra||0);
 }
 function offerEstimatedSubValue(o){
   const unit=String(o.unit||'').toLowerCase();
-  const fixedCash=unit.includes('cash') ? Number(o.bonus||0) : 0;
-  const extraCash=Number(o.bonusCashExtra||0);
   const v=bonusValueRange(o);
+  const fixedCash=(!v && unit.includes('cash')) ? Number(o.bonus||0) : 0;
+  const extraCash=Number(o.bonusCashExtra||0);
   const pointsMid=v?Number(v.mid||0):0;
   return fixedCash + extraCash + pointsMid;
 }
@@ -856,9 +861,9 @@ function subReturnRange(o){
   const spend=Number(o.spend||0);
   if(!spend)return null;
   const unit=String(o.unit||'').toLowerCase();
-  const fixedCash=unit.includes('cash') ? Number(o.bonus||0) : 0;
-  const extraCash=Number(o.bonusCashExtra||0);
   const v=bonusValueRange(o);
+  const fixedCash=(!v && unit.includes('cash')) ? Number(o.bonus||0) : 0;
+  const extraCash=Number(o.bonusCashExtra||0);
   const lowValue=fixedCash+extraCash+(v?Number(v.low||0):0);
   const highValue=fixedCash+extraCash+(v?Number(v.high||0):0);
   if(!lowValue&&!highValue)return null;
