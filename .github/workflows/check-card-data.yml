@@ -3,6 +3,7 @@ name: Check CardPilot card data
 "on":
   workflow_dispatch: {}
   schedule:
+    # Daily issuer/offer monitoring. 13:17 UTC is about 6:17 AM Pacific during daylight time.
     - cron: "17 13 * * *"
   push:
     paths:
@@ -27,13 +28,13 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Validate catalog structure
+      - name: Validate catalog structure and contradictions
         run: node scripts/verify-catalog.mjs cards.json
 
       - name: Check issuer links
         run: node scripts/check-links.mjs cards.json
 
-      - name: Check configured offer terms
+      - name: Check current offer terms
         run: node scripts/check-offers.mjs cards.json
 
       - name: Upload monitoring reports
