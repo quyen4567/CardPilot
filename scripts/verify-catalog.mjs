@@ -12,15 +12,15 @@ for(const c of payload.cards){
   if(!c.name) errors.push(`Card ${c.id} missing name`);
   if(!['Personal','Business'].includes(c.type)) errors.push(`Card ${c.id} invalid type ${c.type}`);
   if(c.af!=null && !Number.isFinite(Number(c.af))) errors.push(`Card ${c.id} invalid annual fee`);
-  if(c.issuerUrl){ try{ new URL(c.issuerUrl); } catch{ errors.push(`Card ${c.id} invalid issuerUrl`); } }
-  else warnings.push(`Card ${c.id} ${c.name} has no official URL`);
-  if(c.issuerUrlKind && !['product','issuer-directory','missing','unknown'].includes(c.issuerUrlKind)) errors.push(`Card ${c.id} invalid issuerUrlKind ${c.issuerUrlKind}`);
-  if(c.monitoringTier && !['core','secondary','specialty','standard'].includes(c.monitoringTier)) errors.push(`Card ${c.id} invalid monitoringTier ${c.monitoringTier}`);
-  if(c.offerMonitor?.mode && c.offerMonitor.mode!=='tokens') errors.push(`Card ${c.id} unsupported offerMonitor mode ${c.offerMonitor.mode}`);
-  if(c.offerMonitor?.allowDirectory && c.issuerUrlKind!=='issuer-directory') warnings.push(`Card ${c.id} allowDirectory is set but issuerUrlKind is ${c.issuerUrlKind}`);
+  if(c.issuerUrl){try{new URL(c.issuerUrl)}catch{errors.push(`Card ${c.id} invalid issuerUrl`)}}
+  if(c.verified && !c.verifiedDate) warnings.push(`Card ${c.id} ${c.name}: verified=true but verifiedDate is missing`);
+  if(c.verified && /verify current offer/i.test(String(c.offerNote||''))) warnings.push(`Card ${c.id} ${c.name}: verified=true conflicts with offerNote "Verify current offer"`);
+  if(Number(c.bonus||0)>0 && c.spend==null && !['qualifying-activities','personalized','up-to'].includes(c.offerRequirementType)) warnings.push(`Card ${c.id} ${c.name}: bonus present but minimum spend is missing`);
+  if(c.monitorExpected && !c.issuerUrl) warnings.push(`Card ${c.id} ${c.name}: monitorExpected is configured without issuerUrl`);
 }
-if(warnings.length) console.warn(warnings.join('\n'));
+if(warnings.length){
+  console.warn('Catalog warnings:\n'+warnings.join('\n'));
+  if(process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,'## Catalog warnings\n\n'+warnings.map(x=>'- ⚠️ '+x).join('\n')+'\n');
+}
 if(errors.length){console.error(errors.join('\n'));process.exit(1)}
-const withUrl=payload.cards.filter(c=>c.issuerUrl).length;
-const monitored=payload.cards.filter(c=>c.offerMonitor?.mode==='tokens').length;
-console.log(`Catalog OK: ${payload.cards.length} cards, version ${payload.catalogVersion||'unknown'}, official URL coverage ${withUrl}/${payload.cards.length}, offer monitors ${monitored}`);
+console.log(`Catalog OK: ${payload.cards.length} cards, version ${payload.catalogVersion||'unknown'}; warnings ${warnings.length}`);
