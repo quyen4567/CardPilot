@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.2.18</title>
+  <title>CardPilot v11.2.19</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -47,7 +47,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.2.18</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.2.19</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -297,7 +297,7 @@ function setOwnedCardMode(mode){
 function setExcludeOwned(v){setOwnedCardMode(v?'exact':'include')}
 function preferredAirlineLabel(){const a=data.profile.preferredAirlines||[];if(!a.length||a.includes('none'))return 'No preference';const m={southwest:'Southwest',atmos:'Alaska / Atmos',american:'American',delta:'Delta',united:'United',jetblue:'JetBlue',hawaiian:'Hawaiian',other:'Other'};return a.map(x=>m[x]||x).join(', ')}
 function preferredHotelLabel(){const a=data.profile.preferredHotels||[];if(!a.length||a.includes('none'))return 'No preference';const m={hyatt:'World of Hyatt',marriott:'Marriott Bonvoy',hilton:'Hilton Honors',ihg:'IHG One Rewards',wyndham:'Wyndham Rewards',choice:'Choice Privileges',other:'Other'};return a.map(x=>m[x]||x).join(', ')}
-function airlineProgram(o){const n=String((o.name||'')+' '+(o.issuer||'')+' '+(o.tags||[]).join(' ')).toLowerCase();if(n.includes('southwest'))return 'southwest';if(n.includes('alaska')||n.includes('atmos'))return 'atmos';if(n.includes('aadvantage')||n.includes('american airlines'))return 'american';if(n.includes('delta'))return 'delta';if(n.includes('united'))return 'united';if(n.includes('jetblue'))return 'jetblue';if(n.includes('hawaiian'))return 'hawaiian';return null}
+function airlineProgram(o){const n=String((o.name||'')+' '+(o.issuer||'')+' '+(o.tags||[]).join(' ')).toLowerCase();if(n.includes('southwest'))return 'southwest';if(n.includes('alaska')||n.includes('atmos'))return 'atmos';if(n.includes('aadvantage')||n.includes('american airlines'))return 'american';if(n.includes('delta'))return 'delta';if(n.includes('united'))return 'united';if(n.includes('jetblue'))return 'jetblue';if(n.includes('hawaiian'))return 'hawaiian';if(n.includes('aeroplan')||n.includes('air canada'))return 'aeroplan';if(n.includes('british airways'))return 'british-airways';if(n.includes('iberia'))return 'iberia';if(n.includes('aer lingus'))return 'aer-lingus';if(n.includes('virgin atlantic'))return 'virgin-atlantic';if(n.includes('flying blue')||n.includes('air france')||n.includes('klm'))return 'flying-blue';if(n.includes('frontier'))return 'frontier';if(n.includes('spirit'))return 'spirit';return null}
 function hotelProgram(o){const n=String((o.name||'')+' '+(o.issuer||'')+' '+(o.tags||[]).join(' ')).toLowerCase();if(n.includes('hyatt'))return 'hyatt';if(n.includes('marriott')||n.includes('bonvoy'))return 'marriott';if(n.includes('hilton'))return 'hilton';if(n.includes('ihg'))return 'ihg';if(n.includes('wyndham'))return 'wyndham';if(n.includes('choice'))return 'choice';return null}
 function exactCardOwned(o){const target=String(o.name||'').trim().toLowerCase();return (data.cards||[]).some(c=>String(c.name||'').trim().toLowerCase()===target)}
 function subChoiceGroup(group,title,opts){const cur=(data.profile.subInterests&&data.profile.subInterests[group])||[];return `<div class="subchoices"><h4>${title}</h4><div class="chipgrid">${opts.map(x=>`<button class="chip ${cur.includes(x[0])?'selected':''}" onclick="toggleSubInterest('${group}','${x[0]}')">${x[1]}</button>`).join('')}</div></div>`}
@@ -457,7 +457,7 @@ function offerTags(o){
   return {
     southwest:n.includes('southwest')||n.includes('rapid rewards'),
     hotel:n.includes('hyatt')||n.includes('hilton')||n.includes('marriott')||n.includes('ihg')||n.includes('wyndham')||n.includes('hotel'),
-    airline:n.includes('aadvantage')||n.includes('southwest')||n.includes('atmos')||n.includes('airline')||n.includes('delta')||n.includes('united')||n.includes('jetblue')||n.includes('aeroplan')||n.includes('british airways')||n.includes('iberia')||n.includes('aer lingus')||n.includes('virgin')||n.includes('miles'),
+    airline:!!airlineProgram(o),
     cash:n.includes('cash')||String(o.unit).toLowerCase()==='cash',
     cruise:n.includes('carnival')||n.includes('royal')||n.includes('norwegian')||n.includes('cruise')||n.includes('virgin voyages'),
     points:n.includes('point')||n.includes('mile')||n.includes('membership rewards')||n.includes('ultimate rewards')||n.includes('thankyou')||n.includes('bilt'),
@@ -664,6 +664,14 @@ function travelRewardsPreferenceFit(o,tags){
   if(tags.points && String(o.name||'').toLowerCase().includes('freedom'))return {level:'partial',score:10,reason:'Earns Ultimate Rewards that can become more useful for travel when paired with an eligible Chase transferable-points card.'};
   return {level:'none',score:-8,reason:null};
 }
+function airlinePreferenceFit(o,tags){
+  const prog=airlineProgram(o);
+  if(prog)return {level:'strong',score:30,reason:'Airline-specific card that directly matches your airline preference.'};
+  const raw=(o.tags||[]).map(x=>String(x).toLowerCase());
+  const cur=pointCurrency(o);
+  if(raw.includes('transferable')||raw.includes('travel')||(cur&&tags.points))return {level:'flexible',score:4,reason:'Flexible travel rewards may be useful for airfare, but this is not an airline-specific card.'};
+  return {level:'none',score:-8,reason:null};
+}
 function hotelPreferenceFit(o,tags){
   const prog=hotelProgram(o);
   if(prog)return {level:'strong',score:22,reason:'Matches your hotel benefits preference through a hotel-specific card/program.'};
@@ -734,6 +742,14 @@ function offerFit(o){
       score+=tf.score;
       if(tf.level!=='none'){matchCount++;categoryMatchCount++;if(tf.reason)reasons.push(tf.reason)}
       else cautions.push('Does not meaningfully match your travel rewards preference.');
+      continue;
+    }
+    if(key==='airline'){
+      const af=airlinePreferenceFit(o,tags);
+      score+=af.score;
+      if(af.level==='strong'){matchCount++;categoryMatchCount++;if(af.reason)reasons.push(af.reason)}
+      else if(af.level==='flexible'){if(af.reason)reasons.push(af.reason);cautions.push('This is a flexible travel card, not an airline-specific card.')}
+      else cautions.push('Does not meaningfully match your airline benefits preference.');
       continue;
     }
     if(key==='hotel'){
@@ -885,7 +901,7 @@ function categorySpecificityTier(o,key){
   }
   if(key==='airline'){
     if(airlineProgram(o))return 3;
-    if(tags.airline)return 2;
+    // Flexible currencies belong to Travel rewards, not Airline. They can appear only as lower-tier alternatives.
     if(raw.includes('transferable')&&tags.points)return 1;
     return 0;
   }
