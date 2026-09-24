@@ -17,6 +17,7 @@ for(const c of payload.cards){
   if(c.issuerUrlKind && !['product','issuer-directory','missing','unknown'].includes(c.issuerUrlKind)) errors.push(`Card ${c.id} invalid issuerUrlKind ${c.issuerUrlKind}`);
   if(c.monitoringTier && !['core','secondary','specialty','standard'].includes(c.monitoringTier)) errors.push(`Card ${c.id} invalid monitoringTier ${c.monitoringTier}`);
   if(c.offerMonitor?.mode && c.offerMonitor.mode!=='tokens') errors.push(`Card ${c.id} unsupported offerMonitor mode ${c.offerMonitor.mode}`);
+  if(c.offerMonitor?.allowDirectory && c.issuerUrlKind!=='issuer-directory') warnings.push(`Card ${c.id} allowDirectory is set but issuerUrlKind is ${c.issuerUrlKind}`);
 }
 if(warnings.length) console.warn(warnings.join('\n'));
 if(errors.length){console.error(errors.join('\n'));process.exit(1)}
