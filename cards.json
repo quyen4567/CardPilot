@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 1,
-  "catalogVersion": "2026-09-23.2",
-  "generatedAt": "2026-09-23",
+  "schemaVersion": "1.2",
+  "catalogVersion": "10.11.2",
+  "generatedAt": "2026-09-23T00:00:00Z",
   "cards": [
     {
       "id": 7001,
@@ -26,7 +26,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7002,
@@ -51,7 +52,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7003,
@@ -73,7 +75,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7004,
@@ -94,7 +97,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7005,
@@ -117,7 +121,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7006,
@@ -139,7 +144,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7007,
@@ -161,7 +167,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7008,
@@ -183,7 +190,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7009,
@@ -205,7 +213,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7010,
@@ -228,7 +237,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7011,
@@ -252,7 +262,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7101,
@@ -278,7 +289,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7102,
@@ -303,7 +315,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7103,
@@ -325,7 +338,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7104,
@@ -347,7 +361,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7105,
@@ -370,7 +385,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7106,
@@ -393,7 +409,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7107,
@@ -416,7 +433,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7108,
@@ -439,7 +457,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7109,
@@ -463,7 +482,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7110,
@@ -486,7 +506,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7111,
@@ -509,7 +530,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7201,
@@ -535,7 +557,8 @@
       "issuerUrl": "https://www.capitalone.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7202,
@@ -560,7 +583,8 @@
       "issuerUrl": "https://www.capitalone.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7203,
@@ -583,7 +607,8 @@
       "issuerUrl": "https://www.capitalone.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7204,
@@ -604,7 +629,8 @@
       "issuerUrl": "https://www.capitalone.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7205,
@@ -626,7 +652,8 @@
       "issuerUrl": "https://www.capitalone.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7206,
@@ -648,7 +675,8 @@
       "issuerUrl": "https://www.capitalone.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7207,
@@ -673,7 +701,8 @@
       "issuerUrl": "https://www.capitalone.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7301,
@@ -696,7 +725,8 @@
       "issuerUrl": "https://www.citi.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7302,
@@ -731,7 +761,8 @@
       "issuerUrl": "https://www.citi.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7401,
@@ -760,7 +791,8 @@
       "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7402,
@@ -787,7 +819,8 @@
       "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7403,
@@ -809,7 +842,8 @@
       "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7404,
@@ -832,7 +866,8 @@
       "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7405,
@@ -855,7 +890,8 @@
       "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7501,
@@ -876,7 +912,8 @@
       "issuerUrl": "https://www.usbank.com/credit-cards.html",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7502,
@@ -898,7 +935,8 @@
       "issuerUrl": "https://www.usbank.com/credit-cards.html",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7503,
@@ -919,7 +957,8 @@
       "issuerUrl": "https://www.usbank.com/credit-cards.html",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7504,
@@ -941,7 +980,8 @@
       "issuerUrl": "https://www.usbank.com/credit-cards.html",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7505,
@@ -963,7 +1003,8 @@
       "issuerUrl": "https://www.usbank.com/credit-cards.html",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7601,
@@ -992,7 +1033,8 @@
       "issuerUrl": "https://creditcards.wellsfargo.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7701,
@@ -1015,7 +1057,8 @@
       "issuerUrl": "https://cards.barclaycardus.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 7702,
@@ -1038,7 +1081,8 @@
       "issuerUrl": "https://cards.barclaycardus.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8001,
@@ -1063,7 +1107,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8002,
@@ -1089,7 +1134,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8003,
@@ -1114,7 +1160,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8004,
@@ -1139,7 +1186,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8005,
@@ -1163,7 +1211,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8006,
@@ -1187,7 +1236,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8007,
@@ -1211,7 +1261,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8008,
@@ -1235,7 +1286,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8009,
@@ -1259,7 +1311,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8010,
@@ -1284,7 +1337,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8011,
@@ -1308,7 +1362,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8012,
@@ -1332,7 +1387,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8013,
@@ -1356,7 +1412,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8014,
@@ -1380,7 +1437,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8015,
@@ -1404,7 +1462,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8016,
@@ -1428,7 +1487,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8017,
@@ -1452,7 +1512,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8018,
@@ -1476,7 +1537,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8019,
@@ -1500,7 +1562,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8020,
@@ -1524,7 +1587,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8021,
@@ -1548,7 +1612,8 @@
       "issuerUrl": "https://creditcards.chase.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8101,
@@ -1574,7 +1639,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8102,
@@ -1600,7 +1666,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8103,
@@ -1625,7 +1692,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8104,
@@ -1650,7 +1718,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8105,
@@ -1674,7 +1743,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8106,
@@ -1698,7 +1768,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8107,
@@ -1722,7 +1793,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8108,
@@ -1747,7 +1819,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8109,
@@ -1771,7 +1844,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8110,
@@ -1795,7 +1869,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8111,
@@ -1820,7 +1895,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8112,
@@ -1844,7 +1920,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8113,
@@ -1869,7 +1946,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8114,
@@ -1897,7 +1975,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8115,
@@ -1925,7 +2004,8 @@
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8201,
@@ -1950,7 +2030,8 @@
       "issuerUrl": "https://www.citi.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8202,
@@ -1977,7 +2058,8 @@
       "issuerUrl": "https://www.citi.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8203,
@@ -2001,7 +2083,8 @@
       "issuerUrl": "https://www.citi.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8204,
@@ -2025,7 +2108,8 @@
       "issuerUrl": "https://www.citi.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8205,
@@ -2050,7 +2134,8 @@
       "issuerUrl": "https://www.citi.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8206,
@@ -2075,7 +2160,8 @@
       "issuerUrl": "https://www.citi.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8207,
@@ -2099,7 +2185,8 @@
       "issuerUrl": "https://www.citi.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8208,
@@ -2123,7 +2210,8 @@
       "issuerUrl": "https://www.citi.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8209,
@@ -2147,7 +2235,8 @@
       "issuerUrl": "https://www.citi.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8210,
@@ -2172,7 +2261,8 @@
         "citi"
       ],
       "issuerUrlKind": "product",
-      "linkSource": "existing_product_link"
+      "linkSource": "existing_product_link",
+      "monitoringTier": "core"
     },
     {
       "id": 8301,
@@ -2198,7 +2288,8 @@
       "issuerUrl": "https://www.capitalone.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8302,
@@ -2223,7 +2314,8 @@
       "issuerUrl": "https://www.capitalone.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8303,
@@ -2247,7 +2339,8 @@
       "issuerUrl": "https://www.capitalone.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8304,
@@ -2272,7 +2365,8 @@
       "issuerUrl": "https://www.capitalone.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8305,
@@ -2296,7 +2390,8 @@
       "issuerUrl": "https://www.capitalone.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8401,
@@ -2321,7 +2416,8 @@
       "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8402,
@@ -2346,7 +2442,8 @@
       "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8403,
@@ -2370,7 +2467,8 @@
       "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8404,
@@ -2395,7 +2493,8 @@
         "bofa"
       ],
       "issuerUrlKind": "product",
-      "linkSource": "existing_product_link"
+      "linkSource": "existing_product_link",
+      "monitoringTier": "core"
     },
     {
       "id": 8405,
@@ -2419,7 +2518,8 @@
       "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8406,
@@ -2443,7 +2543,8 @@
       "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8407,
@@ -2468,7 +2569,8 @@
       "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8408,
@@ -2492,7 +2594,8 @@
       "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8409,
@@ -2516,7 +2619,8 @@
       "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8501,
@@ -2541,7 +2645,8 @@
       "issuerUrl": "https://creditcards.wellsfargo.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8502,
@@ -2566,7 +2671,8 @@
       "issuerUrl": "https://creditcards.wellsfargo.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8503,
@@ -2590,7 +2696,8 @@
       "issuerUrl": "https://creditcards.wellsfargo.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8504,
@@ -2614,7 +2721,8 @@
       "issuerUrl": "https://creditcards.wellsfargo.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8505,
@@ -2638,7 +2746,8 @@
       "issuerUrl": "https://creditcards.wellsfargo.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8506,
@@ -2662,7 +2771,8 @@
       "issuerUrl": "https://creditcards.wellsfargo.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8507,
@@ -2686,7 +2796,8 @@
       "issuerUrl": "https://creditcards.wellsfargo.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8508,
@@ -2710,7 +2821,8 @@
       "issuerUrl": "https://creditcards.wellsfargo.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8601,
@@ -2734,7 +2846,8 @@
       "issuerUrl": "https://www.usbank.com/credit-cards.html",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8602,
@@ -2759,7 +2872,8 @@
       "issuerUrl": "https://www.usbank.com/credit-cards.html",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8603,
@@ -2783,7 +2897,8 @@
       "issuerUrl": "https://www.usbank.com/credit-cards.html",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8604,
@@ -2807,7 +2922,8 @@
       "issuerUrl": "https://www.usbank.com/credit-cards.html",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8605,
@@ -2831,7 +2947,8 @@
       "issuerUrl": "https://www.usbank.com/credit-cards.html",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8606,
@@ -2855,7 +2972,8 @@
       "issuerUrl": "https://www.usbank.com/credit-cards.html",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8701,
@@ -2879,7 +2997,8 @@
       "issuerUrl": "https://cards.barclaycardus.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8702,
@@ -2904,7 +3023,8 @@
       "issuerUrl": "https://cards.barclaycardus.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8703,
@@ -2928,7 +3048,8 @@
       "issuerUrl": "https://cards.barclaycardus.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8704,
@@ -2952,7 +3073,8 @@
       "issuerUrl": "https://cards.barclaycardus.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8705,
@@ -2977,7 +3099,8 @@
       "issuerUrl": "https://cards.barclaycardus.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8706,
@@ -3001,7 +3124,8 @@
       "issuerUrl": "https://cards.barclaycardus.com/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8801,
@@ -3028,7 +3152,8 @@
       "issuerUrl": "https://www.bilt.com/card",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8816,
@@ -3058,7 +3183,8 @@
       "issuerUrl": "https://www.bilt.com/card",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8817,
@@ -3091,7 +3217,8 @@
       "issuerUrl": "https://www.bilt.com/card",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8802,
@@ -3115,7 +3242,8 @@
       "issuerUrl": "https://www.discover.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8803,
@@ -3140,7 +3268,8 @@
       "issuerUrl": "https://www.discover.com/credit-cards/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "core"
     },
     {
       "id": 8804,
@@ -3164,7 +3293,8 @@
       "issuerUrl": "https://www.apple.com/apple-card/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "standard"
     },
     {
       "id": 8805,
@@ -3188,7 +3318,8 @@
       "issuerUrl": "https://www.fidelity.com/spend-save/visa-signature-card",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "secondary"
     },
     {
       "id": 8815,
@@ -3215,7 +3346,8 @@
       "issuerUrl": "https://robinhood.com/creditcard/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "secondary"
     },
     {
       "id": 8806,
@@ -3239,7 +3371,8 @@
       "issuerUrl": "https://www.sofi.com/credit-card/",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "secondary"
     },
     {
       "id": 8807,
@@ -3263,7 +3396,8 @@
       "issuerUrl": "https://www.pnc.com/en/personal-banking/banking/credit-cards.html",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "secondary"
     },
     {
       "id": 8808,
@@ -3287,7 +3421,8 @@
       "issuerUrl": "https://www.usaa.com/inet/wc/banking/credit-cards",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "secondary"
     },
     {
       "id": 8809,
@@ -3311,7 +3446,8 @@
       "issuerUrl": "https://www.navyfederal.org/loans-cards/credit-cards.html",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "secondary"
     },
     {
       "id": 8810,
@@ -3335,7 +3471,8 @@
       "issuerUrl": "https://www.penfed.org/credit-cards",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "secondary"
     },
     {
       "id": 8811,
@@ -3359,34 +3496,244 @@
       "issuerUrl": "https://www.synchrony.com/financing/credit-cards",
       "issuerUrlKind": "issuer-directory",
       "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrlVerified": null,
+      "monitoringTier": "secondary"
     },
     {
       "id": 8812,
-      "issuer": "Carnival",
+      "issuer": "Barclays / Carnival",
       "name": "Carnival Rewards Mastercard",
       "type": "Personal",
-      "bonus": 50000,
-      "unit": "points",
+      "bonus": 30000,
+      "unit": "Carnival Rewards points",
       "hist": 50000,
       "spend": 1000,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
+      "verifiedDate": "2026-09-23",
       "tags": [
-        "cruise"
+        "cruise",
+        "carnival",
+        "cash-equivalent"
       ],
-      "issuerUrl": "https://www.carnival.com/credit-card",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null
+      "issuerUrl": "https://www.carnival.com/carnival-mastercard",
+      "issuerUrlKind": "product",
+      "linkSource": "official_product_page",
+      "issuerUrlVerified": null,
+      "offerType": "public",
+      "confidence": "high",
+      "offerNote": "30,000 points after $1,000 in purchases in the first 90 days; worth $300 onboard credit on the current Carnival card page.",
+      "perks": [
+        "Up to 6x Carnival Rewards points on eligible Carnival purchases when combined with Carnival Rewards earning",
+        "2x at eligible restaurants and grocery stores",
+        "1x on other eligible purchases",
+        "0% promotional APR for 6 months on eligible Carnival cruise bookings",
+        "No annual fee",
+        "No foreign transaction fees"
+      ],
+      "monitoringTier": "specialty",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "30,000",
+          "1,000",
+          "90 days",
+          "No annual fee"
+        ]
+      }
+    },
+    {
+      "id": 8900,
+      "issuer": "Bank of America / Norwegian Cruise Line",
+      "name": "Norwegian Cruise Line World Mastercard",
+      "type": "Personal",
+      "bonus": 30000,
+      "unit": "WorldPoints",
+      "hist": 30000,
+      "spend": 1500,
+      "af": 0,
+      "reports": true,
+      "status": "open",
+      "verified": true,
+      "verifiedDate": "2026-09-23",
+      "offerType": "public",
+      "confidence": "high",
+      "tags": [
+        "cruise",
+        "norwegian",
+        "travel"
+      ],
+      "issuerUrl": "https://www.ncl.com/world-points",
+      "issuerUrlKind": "product",
+      "linkSource": "official_product_page",
+      "issuerUrlVerified": "2026-09-23",
+      "offerNote": "30,000 bonus points after $1,500 in the first 90 days; NCL states this equals $300 onboard credit.",
+      "perks": [
+        "3x on Norwegian Cruise Line purchases",
+        "2x on eligible airline and hotel purchases",
+        "1x on other purchases",
+        "No annual fee",
+        "No foreign transaction fees"
+      ],
+      "monitoringTier": "specialty",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "30,000",
+          "1,500",
+          "90 days",
+          "No Annual Fee"
+        ]
+      }
+    },
+    {
+      "id": 8901,
+      "issuer": "Barclays / Princess Cruises",
+      "name": "Princess Rewards Visa",
+      "type": "Personal",
+      "bonus": 20000,
+      "unit": "Princess Rewards points",
+      "hist": 20000,
+      "spend": 1000,
+      "af": 0,
+      "reports": true,
+      "status": "open",
+      "verified": true,
+      "verifiedDate": "2026-09-23",
+      "offerType": "public",
+      "confidence": "high",
+      "tags": [
+        "cruise",
+        "princess",
+        "travel"
+      ],
+      "issuerUrl": "https://www.princess.com/",
+      "issuerUrlKind": "product",
+      "linkSource": "official_product_page",
+      "issuerUrlVerified": "2026-09-23",
+      "offerNote": "Princess currently advertises 20,000 bonus points after $1,000 in the first 90 days, stated as worth $200 onboard credit.",
+      "perks": [
+        "2x on Princess purchases including onboard purchases",
+        "1x on other purchases",
+        "No annual fee",
+        "No foreign transaction fees"
+      ],
+      "monitoringTier": "specialty",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "20,000",
+          "1,000",
+          "90 days",
+          "Princess"
+        ]
+      }
+    },
+    {
+      "id": 8902,
+      "issuer": "Bank of America / Royal Caribbean Group",
+      "name": "Royal ONE Visa Signature",
+      "type": "Personal",
+      "bonus": 30000,
+      "unit": "Royal ONE points",
+      "hist": 30000,
+      "spend": 1500,
+      "af": 0,
+      "reports": true,
+      "status": "open",
+      "verified": true,
+      "verifiedDate": "2026-09-23",
+      "offerType": "public",
+      "confidence": "high",
+      "tags": [
+        "cruise",
+        "royal caribbean",
+        "celebrity",
+        "silversea",
+        "travel"
+      ],
+      "issuerUrl": "https://www.royalcaribbean.com/royal-one-visa-card",
+      "issuerUrlKind": "product",
+      "linkSource": "official_product_page",
+      "issuerUrlVerified": "2026-09-23",
+      "offerNote": "30,000 points after $1,500 in the first 90 days; issuer states 30,000 points equals $300 in cruise rewards.",
+      "perks": [
+        "3x on eligible Royal Caribbean, Celebrity Cruises and Silversea purchases",
+        "2x on groceries, gas and EV charging",
+        "1x on other purchases",
+        "Priority boarding",
+        "Annual $100 cruise discount after $10,000 annual spend",
+        "No foreign transaction fees"
+      ],
+      "monitoringTier": "specialty",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "30,000",
+          "1,500",
+          "90 days",
+          "$0 Annual Fee"
+        ]
+      }
+    },
+    {
+      "id": 8903,
+      "issuer": "Bank of America / Royal Caribbean Group",
+      "name": "Royal ONE Plus Visa Signature",
+      "type": "Personal",
+      "bonus": 60000,
+      "unit": "Royal ONE points",
+      "hist": 60000,
+      "spend": 2500,
+      "af": 99,
+      "reports": true,
+      "status": "open",
+      "verified": true,
+      "verifiedDate": "2026-09-23",
+      "offerType": "public",
+      "confidence": "high",
+      "tags": [
+        "cruise",
+        "royal caribbean",
+        "celebrity",
+        "silversea",
+        "travel"
+      ],
+      "issuerUrl": "https://www.royalcaribbean.com/royal-one-visa-card",
+      "issuerUrlKind": "product",
+      "linkSource": "official_product_page",
+      "issuerUrlVerified": "2026-09-23",
+      "offerNote": "60,000 points after $2,500 in the first 90 days; issuer states 60,000 points equals $600 in cruise rewards.",
+      "perks": [
+        "4x on eligible Royal Caribbean, Celebrity Cruises and Silversea purchases",
+        "2x on airline, hotel, dining, grocery, gas and EV charging",
+        "1x on other purchases",
+        "Priority suite boarding and luggage",
+        "Annual $200 cruise discount after $20,000 annual spend",
+        "Up to $120 TSA PreCheck/Global Entry credit every four years"
+      ],
+      "monitoringTier": "specialty",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "60,000",
+          "2,500",
+          "90 days",
+          "$99 Annual Fee"
+        ]
+      }
     }
   ],
   "linkCoverage": {
-    "cardsWithOfficialUrl": 139,
-    "totalCards": 139,
-    "note": "Product-specific URLs are preferred. Cards without one use an official issuer directory fallback until an exact product URL is verified."
+    "cardsWithOfficialUrl": 143,
+    "totalCards": 143
+  },
+  "monitoringPolicy": {
+    "core": "daily link checks; offer-monitoring where configured",
+    "secondary": "link checks; automation blocks are warnings",
+    "specialty": "link checks; offer-monitoring where configured; shown when relevant",
+    "standard": "link checks; offer-monitoring added progressively"
   }
 }
