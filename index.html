@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.1.0</title>
+  <title>CardPilot v11.2.0</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -32,11 +32,21 @@
     .simple-rec{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px}.simple-rec.top-pick{border:2px solid #1769ff;box-shadow:0 8px 24px rgba(23,105,255,.08)}.rankline{display:flex;gap:10px;align-items:flex-start}.ranknum{width:30px;height:30px;border-radius:50%;background:#1769ff;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;flex:0 0 auto}.rec-bonus{font-size:16px;font-weight:850;margin-top:10px}.reason-list{margin-top:9px;display:flex;flex-direction:column;gap:4px}.reason-item{font-size:12px;color:#157347}.rec-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:11px}.details-clean{margin-top:10px;border-top:1px solid var(--line);padding-top:9px}.details-clean summary{cursor:pointer;color:#475467;font-size:12px;font-weight:700}
     .more-list{display:flex;flex-direction:column;gap:10px}.more-row{width:100%;background:#fff;color:var(--text);border:1px solid var(--line);padding:14px;border-radius:14px;text-align:left;display:flex;justify-content:space-between;align-items:center}.more-row b{font-size:14px}.more-row span{color:var(--muted);font-size:12px;display:block;margin-top:3px;font-weight:500}.more-arrow{font-size:20px;color:#98a2b3}
     .tabs{grid-template-columns:repeat(4,1fr)}
+
+    /* v11.2 engaging home + calmer alternatives */
+    .top{position:relative;background:linear-gradient(125deg,#0b2340 0%,#104e78 58%,#3478a8 100%)}
+    .home-stage{margin:-4px -4px 0}.home-hero{position:relative;overflow:hidden;border-radius:26px;padding:22px;background:linear-gradient(140deg,#122a4a 0%,#1d5c91 54%,#6c5ce7 118%);color:#fff;box-shadow:0 18px 42px rgba(20,58,96,.20)}
+    .home-hero:before{content:'';position:absolute;width:180px;height:180px;border:1px solid rgba(255,255,255,.16);border-radius:50%;right:-70px;top:-78px}.home-hero:after{content:'✦';position:absolute;right:24px;top:20px;font-size:44px;color:#fff;opacity:.18}
+    .eyebrow{font-size:11px;font-weight:850;letter-spacing:.09em;opacity:.8}.home-hero h2{font-size:30px;line-height:1.04;margin:8px 0 9px;letter-spacing:-.7px}.home-hero p{font-size:14px;line-height:1.45;margin:0;max-width:390px;color:#e8f1ff}.hero-cta{width:100%;margin-top:17px;background:#fff;color:#174b7a;font-size:17px;padding:14px 16px;box-shadow:0 7px 18px rgba(8,30,60,.14)}.hero-foot{margin-top:9px;font-size:11px;color:#dcecff;text-align:center}
+    .snapshot{margin-top:13px;background:#fff;border:1px solid #e5e9f2;border-radius:20px;padding:15px;box-shadow:0 8px 22px rgba(31,55,90,.06)}.snapshot-top{display:flex;justify-content:space-between;gap:12px;align-items:center}.snapshot-title{font-size:12px;font-weight:850;color:#475467}.snapshot-count{font-size:25px;font-weight:900;letter-spacing:-.4px}.slot-row.bigslots{gap:7px;margin-top:11px}.slot-row.bigslots .slot{height:10px;flex:1;width:auto}.snapshot-note{font-size:11px;color:#667085;margin-top:7px}
+    .home-section-title{font-size:18px;font-weight:900;margin:20px 2px 10px;letter-spacing:-.2px}.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.home-tile{position:relative;overflow:hidden;min-height:126px;border:0;border-radius:20px;padding:15px;text-align:left;color:#172033;box-shadow:0 8px 20px rgba(31,55,90,.06)}.home-tile:nth-child(1){background:linear-gradient(145deg,#fff1dd,#fffaf3)}.home-tile:nth-child(2){background:linear-gradient(145deg,#e9f7ff,#f7fcff)}.home-tile:nth-child(3){background:linear-gradient(145deg,#ecfbf4,#f8fffb)}.home-tile:nth-child(4){background:linear-gradient(145deg,#f0edff,#fbfaff)}.tile-icon{font-size:27px;display:block;margin-bottom:10px}.home-tile b{font-size:15px;display:block}.home-tile small{display:block;font-size:11px;color:#667085;line-height:1.35;margin-top:4px;font-weight:550}
+    .insight{margin-top:14px;border:0;border-radius:20px;padding:16px;background:linear-gradient(135deg,#fff,#f6f9ff);box-shadow:0 8px 22px rgba(31,55,90,.06)}.insight-head{display:flex;align-items:center;justify-content:space-between;gap:8px}.insight-label{font-size:11px;font-weight:900;letter-spacing:.07em;color:#6c5ce7}.insight h3{font-size:17px;margin:7px 0 4px}.insight .small{line-height:1.45}.source-badge{font-size:10px;background:#e9fbf3;color:#087a49;border-radius:999px;padding:6px 8px;font-weight:800}
+    .other-card .pill.red{display:none}.other-card .why-not{color:#667085}.other-card{background:#fafbfc}.other-card .meta{font-size:11px}.other-card button{font-size:11px}.other-preview{display:flex;flex-direction:column;gap:9px}.data-note{font-size:11px;color:#8a5a00;margin-top:5px}.tabs{box-shadow:0 -8px 24px rgba(16,24,40,.04)}
   </style>
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.1.0</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.2.0</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -841,16 +851,19 @@ function home(){
   const f=five24(), top=rankedOffers().find(x=>x.fit.status==='consider')||rankedOffers()[0];
   const exp=[...data.benefits].filter(b=>b.expires).sort((a,b)=>new Date(a.expires)-new Date(b.expires))[0];
   const used=Math.max(0,Math.min(5,f));
-  return `<div class="fun-hero"><div class="small">YOUR CARDPILOT</div><h2>Ready to find a card that fits? ✨</h2><p>Tell us what matters. CardPilot handles the complicated rules, your wallet, and 5/24 behind the scenes.</p><button class="primary-action" onclick="openFindFlow()">✨ Find my card</button><div class="trust-line">✓ Your saved wallet and strategy stay private in this browser</div></div>
-  <div class="card" style="margin-top:12px"><div class="between"><div><div class="small">YOUR 5/24 SNAPSHOT</div><div class="kpi" style="margin-top:3px">${data.cards.length?f+'/24':'Add cards to calculate'}</div></div><span class="trust-chip">✓ Strategy considered</span></div>${data.cards.length?`<div class="slot-row">${[0,1,2,3,4].map(i=>`<span class="slot ${i<used?'used':''}"></span>`).join('')}</div><div class="small" style="margin-top:6px">${Math.max(0,5-f)} of the first 5 slots remain before 5/24.</div>`:`<div class="small" style="margin-top:7px">Add account-open dates and CardPilot will track your rolling count.</div>`}</div>
-  <div class="section">Explore</div><div class="explore-grid">
-    <button class="explore-card" onclick="browseCards()"><span class="explore-emoji">🔥</span><b>Browse cards</b><span>Search cash back, travel, business and specialty cards.</span></button>
-    <button class="explore-card" onclick="showView('cardsView')"><span class="explore-emoji">👛</span><b>My wallet</b><span>${data.cards.length} saved card${data.cards.length===1?'':'s'} and opening dates.</span></button>
-    <button class="explore-card" onclick="showView('moreView')"><span class="explore-emoji">🧭</span><b>My strategy</b><span>Relationships, benefits and advanced preferences.</span></button>
-    <button class="explore-card" onclick="showView('applyView')"><span class="explore-emoji">💡</span><b>Why these cards?</b><span>See personalized recommendations and reasoning.</span></button>
-  </div>
-  ${top?`<div class="card" style="margin-top:14px"><div class="between"><div class="small">CARDPILOT NOTICED</div><span class="trust-chip">Official data tracked</span></div><h3 style="margin-top:6px">${top.offer.name}</h3><div class="small">${currentOfferLabel(top.offer)} • Annual fee ${fmt(top.offer.af||0)}</div><button class="btn ghost" style="margin-top:10px" onclick="showView('applyView')">See why it fits →</button></div>`:''}
-  ${exp?`<div class="note" style="margin-top:12px"><b>⏰ Benefit expiring soon:</b> ${exp.name}${exp.expires?` • ${exp.expires}`:''}</div>`:''}`
+  const slotsLeft=Math.max(0,5-f);
+  return `<div class="home-stage">
+    <div class="home-hero"><div class="eyebrow">CARDPILOT • YOUR NEXT MOVE</div><h2>Make your next card count. ✨</h2><p>Tell CardPilot what you want. We’ll compare your wallet, 5/24 strategy, fees and current card data behind the scenes.</p><button class="hero-cta" onclick="openFindFlow()">Find my card →</button><div class="hero-foot">About 30 seconds • No sign-up required</div></div>
+    <div class="snapshot"><div class="snapshot-top"><div><div class="snapshot-title">YOUR 5/24 SNAPSHOT</div><div class="snapshot-count">${data.cards.length?f+'/24':'Set up wallet'}</div></div><span class="trust-chip">✓ Strategy considered</span></div>${data.cards.length?`<div class="slot-row bigslots">${[0,1,2,3,4].map(i=>`<span class="slot ${i<used?'used':''}"></span>`).join('')}</div><div class="snapshot-note">${slotsLeft} of the first 5 slots currently remain.</div>`:`<div class="snapshot-note">Add your cards and opening dates to see your rolling 5/24 picture.</div>`}</div>
+    <div class="home-section-title">Explore</div><div class="home-grid">
+      <button class="home-tile" onclick="browseCards()"><span class="tile-icon">🔥</span><b>Browse cards</b><small>Current offers, cash back, travel, business and specialty cards.</small></button>
+      <button class="home-tile" onclick="showView('cardsView')"><span class="tile-icon">👛</span><b>My wallet</b><small>${data.cards.length} saved card${data.cards.length===1?'':'s'}, opening dates and annual fees.</small></button>
+      <button class="home-tile" onclick="showView('moreView')"><span class="tile-icon">🧭</span><b>My strategy</b><small>5/24, relationships, benefits and advanced preferences.</small></button>
+      <button class="home-tile" onclick="showView('applyView')"><span class="tile-icon">✨</span><b>My matches</b><small>See what fits now and understand why CardPilot picked it.</small></button>
+    </div>
+    ${top?`<div class="insight"><div class="insight-head"><span class="insight-label">💡 CARDPILOT NOTICED</span><span class="source-badge">Offer data tracked</span></div><h3>${top.offer.name}</h3><div class="small">${currentOfferLabel(top.offer)} • Annual fee ${fmt(top.offer.af||0)}</div><button class="btn ghost" style="margin-top:10px" onclick="showView('applyView')">See why it fits →</button></div>`:''}
+    ${exp?`<div class="insight"><div class="insight-label">⏰ COMING UP</div><h3>${exp.name}</h3><div class="small">A saved benefit expires ${exp.expires}. Review it before it disappears.</div></div>`:''}
+  </div>`
 }
 
 
@@ -980,8 +993,12 @@ function five24AfterApprovalHTML(o){
   return '';
 }
 function simpleOtherCard(x){
-  const o=x.offer,fit=x.fit; const why=(fit.cautions&&fit.cautions[0])||'It does not match your current search as closely as the cards above.';
-  return `<div class="other-card"><div class="between"><div><b>${o.name}</b><div class="meta">${o.issuer||''} • ${o.type} • Annual fee ${fmt(o.af||0)}</div></div><span class="pill red">Not a match</span></div><div class="why-not">Why not: ${why}</div><button class="btn ghost" style="margin-top:8px;padding:7px 9px" onclick="whyOffer(${o.id})">Why it didn't match</button></div>`;
+  const o=x.offer,fit=x.fit;
+  const cautions=(fit.cautions||[]);
+  const dataQuality=cautions.find(c=>/verify|not set|not yet verified|minimum-spend/i.test(c));
+  const realWhy=cautions.find(c=>!/verify|not set|not yet verified|minimum-spend/i.test(c));
+  const why=realWhy||'This card ranks below your strongest matches for the preferences you selected.';
+  return `<div class="other-card"><div><b>${o.name}</b><div class="meta">${o.issuer||''} • ${o.type} • Annual fee ${fmt(o.af||0)}</div></div><div class="why-not">${why}</div>${dataQuality?`<div class="data-note">⚠ Offer detail needs verification; this is not treated as a user mismatch.</div>`:''}<button class="btn ghost" style="margin-top:8px;padding:7px 9px" onclick="whyOffer(${o.id})">See details</button></div>`;
 }
 function simpleRecommendationCard(x,rank){
   const o=x.offer, fit=x.fit;
@@ -1005,7 +1022,7 @@ function apply(){
   ${refinementPanelHTML()}
   ${refineActive?`<div id="refinedResults" class="section">Refined results</div><div class="list">${refined.map((x,i)=>simpleRecommendationCard(x,i+1)).join('')}</div>`:''}
   ${waits.length?`<details class="card" style="margin-top:14px"><summary><b>Worth waiting for (${waits.length})</b></summary><div class="small" style="margin:8px 0">Strong possibilities where timing or eligibility gives CardPilot a reason to wait.</div><div class="list">${waits.slice(0,8).map(x=>offerCard(x.offer,true,x.fit)).join('')}</div></details>`:''}
-  ${nonmatches.length?`<details class="card" style="margin-top:12px"><summary><b>Other cards (${nonmatches.length})</b></summary><div class="small" style="margin:8px 0">These aren't strong matches for this search. Secured/credit-building cards stay hidden unless you browse for them.</div><div class="list">${nonmatches.slice(0,12).map(x=>simpleOtherCard(x)).join('')}</div></details>`:''}
+  ${nonmatches.length?`<details class="card" style="margin-top:12px"><summary><b>Other cards (${nonmatches.length})</b></summary><div class="small" style="margin:8px 0">Optional alternatives. CardPilot shows the first 3 so your best matches stay in focus.</div><div class="other-preview">${nonmatches.slice(0,3).map(x=>simpleOtherCard(x)).join('')}</div>${nonmatches.length>3?`<div class="small" style="margin-top:9px">${nonmatches.length-3} more are available in Browse cards.</div>`:''}</details>`:''}
   ${valuationInfoHTML()}`;
 }
 
