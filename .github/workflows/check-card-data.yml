@@ -8,7 +8,9 @@ name: Check CardPilot card data
     paths:
       - "cards.json"
       - "scripts/check-links.mjs"
+      - "scripts/check-offers.mjs"
       - "scripts/verify-catalog.mjs"
+      - ".github/workflows/check-card-data.yml"
 
 permissions:
   contents: read
@@ -28,21 +30,18 @@ jobs:
       - name: Validate catalog structure
         run: node scripts/verify-catalog.mjs cards.json
 
-      - name: Check verified issuer links
-        id: links
-        continue-on-error: true
+      - name: Check issuer links
         run: node scripts/check-links.mjs cards.json
 
-      - name: Upload link report
+      - name: Check configured offer terms
+        run: node scripts/check-offers.mjs cards.json
+
+      - name: Upload monitoring reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: cardpilot-link-report
-          path: link-report.json
+          name: cardpilot-data-monitoring-reports
+          path: |
+            link-report.json
+            offer-report.json
           if-no-files-found: warn
-
-      - name: Fail if broken links were found
-        if: steps.links.outcome == 'failure'
-        run: |
-          echo "One or more issuer links failed. Open the cardpilot-link-report artifact for details."
-          exit 1
