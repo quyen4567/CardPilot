@@ -1,7 +1,7 @@
 {
-  "schemaVersion": "1.3",
-  "catalogVersion": "10.11.3",
-  "generatedAt": "2026-09-23T00:00:00Z",
+  "schemaVersion": 1,
+  "catalogVersion": "2026-09-24.2",
+  "generatedAt": "2026-09-24",
   "cards": [
     {
       "id": 7001,
@@ -22,12 +22,7 @@
       "tags": [
         "cash",
         "ultimate rewards"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7002,
@@ -48,12 +43,7 @@
       "tags": [
         "cash",
         "ultimate rewards"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7003,
@@ -67,27 +57,11 @@
       "af": 95,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-23",
+      "verifiedDate": "2026-09-21",
       "tags": [
         "travel",
         "transferable"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/business-credit-cards/ink/business-preferred",
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "issuerUrlVerified": "2026-09-23",
-      "monitoringTier": "core",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "Ink Business Preferred",
-          "100,000",
-          "8,000",
-          "3 months",
-          "$95"
-        ]
-      },
-      "offerNote": "Issuer verified 2026-09-23: 100,000 bonus points after $8,000 in purchases in the first 3 months; $95 annual fee."
+      ]
     },
     {
       "id": 7004,
@@ -104,12 +78,7 @@
       "verifiedDate": "2026-09-21",
       "tags": [
         "cash"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7005,
@@ -128,12 +97,7 @@
         "travel",
         "transferable",
         "premium"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7006,
@@ -151,12 +115,7 @@
       "tags": [
         "hotel",
         "hyatt"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7007,
@@ -174,12 +133,7 @@
       "tags": [
         "hotel",
         "ihg"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7008,
@@ -197,12 +151,7 @@
       "tags": [
         "airline",
         "southwest"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7009,
@@ -220,12 +169,7 @@
       "tags": [
         "airline",
         "southwest"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7010,
@@ -244,12 +188,7 @@
       "tags": [
         "airline",
         "united"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7011,
@@ -269,12 +208,7 @@
         "airline",
         "united",
         "premium"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7101,
@@ -296,12 +230,7 @@
         "travel",
         "transferable",
         "premium"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7102,
@@ -322,45 +251,25 @@
       "tags": [
         "travel",
         "transferable"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7103,
       "issuer": "American Express",
       "name": "Graphite Business Cash Unlimited",
       "type": "Business",
-      "bonus": 2000,
-      "unit": "cash",
+      "bonus": 0,
+      "unit": "offer varies",
       "hist": null,
-      "spend": 50000,
+      "spend": 20000,
       "af": 295,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-23",
-      "offerNote": "Issuer verified 2026-09-23: $2,000 cash back after $50,000 in purchases within the first 6 months; $295 annual fee; unlimited 2% cash back under current terms.",
+      "verifiedDate": "2026-09-21",
+      "offerNote": "Welcome offer varies; verify before applying.",
       "tags": [
         "cash"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/graphite-business-cash-unlimited-card/",
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "issuerUrlVerified": "2026-09-23",
-      "monitoringTier": "core",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "Graphite",
-          "2,000",
-          "50,000",
-          "6 months",
-          "$295"
-        ]
-      }
+      ]
     },
     {
       "id": 7104,
@@ -378,12 +287,7 @@
       "offerNote": "A $500 pre-approved offer is available on some Amex pages; public offers may differ.",
       "tags": [
         "cash"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7105,
@@ -402,12 +306,7 @@
       "tags": [
         "travel",
         "transferable"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7106,
@@ -426,12 +325,7 @@
       "tags": [
         "travel",
         "transferable"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7107,
@@ -450,12 +344,7 @@
       "tags": [
         "airline",
         "delta"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7108,
@@ -474,12 +363,7 @@
       "tags": [
         "airline",
         "delta"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7109,
@@ -499,12 +383,7 @@
         "airline",
         "delta",
         "premium"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7110,
@@ -523,12 +402,7 @@
       "tags": [
         "hotel",
         "marriott"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7111,
@@ -547,12 +421,7 @@
       "tags": [
         "hotel",
         "hilton"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7201,
@@ -574,12 +443,7 @@
         "travel",
         "transferable",
         "premium"
-      ],
-      "issuerUrl": "https://www.capitalone.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7202,
@@ -600,12 +464,7 @@
       "tags": [
         "travel",
         "transferable"
-      ],
-      "issuerUrl": "https://www.capitalone.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7203,
@@ -624,12 +483,7 @@
       "tags": [
         "travel",
         "transferable"
-      ],
-      "issuerUrl": "https://www.capitalone.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7204,
@@ -646,12 +500,7 @@
       "verifiedDate": "2026-09-21",
       "tags": [
         "cash"
-      ],
-      "issuerUrl": "https://www.capitalone.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7205,
@@ -669,12 +518,7 @@
       "reportingNote": "Capital One reports primary cardholder activity for this business card to personal credit bureaus, so it can add a personal account for 5/24 purposes.",
       "tags": [
         "cash"
-      ],
-      "issuerUrl": "https://www.capitalone.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7206,
@@ -692,12 +536,7 @@
       "reportingNote": "Capital One reports primary cardholder activity for this business card to personal credit bureaus, so it can add a personal account for 5/24 purposes.",
       "tags": [
         "cash"
-      ],
-      "issuerUrl": "https://www.capitalone.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7207,
@@ -718,12 +557,7 @@
       "tags": [
         "cash",
         "capital one"
-      ],
-      "issuerUrl": "https://www.capitalone.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7301,
@@ -742,12 +576,7 @@
       "tags": [
         "airline",
         "aadvantage"
-      ],
-      "issuerUrl": "https://www.citi.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7302,
@@ -778,12 +607,7 @@
         "gas",
         "dining",
         "travel"
-      ],
-      "issuerUrl": "https://www.citi.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7401,
@@ -808,12 +632,7 @@
       "tags": [
         "cash",
         "bofa"
-      ],
-      "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7402,
@@ -836,12 +655,7 @@
       "tags": [
         "cash",
         "bofa"
-      ],
-      "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7403,
@@ -859,12 +673,7 @@
       "tags": [
         "travel",
         "bofa"
-      ],
-      "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7404,
@@ -883,12 +692,7 @@
       "tags": [
         "airline",
         "atmos"
-      ],
-      "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7405,
@@ -907,12 +711,7 @@
       "tags": [
         "cash",
         "secured"
-      ],
-      "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7501,
@@ -929,12 +728,7 @@
       "verifiedDate": "2026-09-21",
       "tags": [
         "cash"
-      ],
-      "issuerUrl": "https://www.usbank.com/credit-cards.html",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7502,
@@ -952,12 +746,7 @@
       "offerNote": "0% intro APR for 12 billing cycles; no standard sign-up bonus tracked.",
       "tags": [
         "apr"
-      ],
-      "issuerUrl": "https://www.usbank.com/credit-cards.html",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7503,
@@ -974,12 +763,7 @@
       "verifiedDate": "2026-09-21",
       "tags": [
         "travel"
-      ],
-      "issuerUrl": "https://www.usbank.com/credit-cards.html",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7504,
@@ -997,12 +781,7 @@
       "offerNote": "$0 intro annual fee first year, then $95.",
       "tags": [
         "travel"
-      ],
-      "issuerUrl": "https://www.usbank.com/credit-cards.html",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7505,
@@ -1020,12 +799,7 @@
       "offerNote": "$0 intro annual fee first year, then $95.",
       "tags": [
         "travel"
-      ],
-      "issuerUrl": "https://www.usbank.com/credit-cards.html",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7601,
@@ -1050,12 +824,7 @@
       "tags": [
         "cash",
         "catchall"
-      ],
-      "issuerUrl": "https://creditcards.wellsfargo.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7701,
@@ -1074,12 +843,7 @@
       "tags": [
         "hotel",
         "wyndham"
-      ],
-      "issuerUrl": "https://cards.barclaycardus.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 7702,
@@ -1098,12 +862,7 @@
       "tags": [
         "airline",
         "jetblue"
-      ],
-      "issuerUrl": "https://cards.barclaycardus.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8001,
@@ -1124,12 +883,7 @@
         "travel",
         "transferable",
         "chase"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8002,
@@ -1151,12 +905,7 @@
         "transferable",
         "premium",
         "chase"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8003,
@@ -1177,12 +926,7 @@
         "cash",
         "ultimate rewards",
         "chase"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8004,
@@ -1203,12 +947,7 @@
         "cash",
         "ultimate rewards",
         "chase"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8005,
@@ -1228,12 +967,7 @@
       "tags": [
         "airline",
         "southwest"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8006,
@@ -1253,12 +987,7 @@
       "tags": [
         "airline",
         "southwest"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8007,
@@ -1278,12 +1007,7 @@
       "tags": [
         "airline",
         "southwest"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8008,
@@ -1303,12 +1027,7 @@
       "tags": [
         "airline",
         "united"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8009,
@@ -1328,12 +1047,7 @@
       "tags": [
         "airline",
         "united"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8010,
@@ -1354,12 +1068,7 @@
         "airline",
         "united",
         "premium"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8011,
@@ -1379,12 +1088,7 @@
       "tags": [
         "airline",
         "united"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8012,
@@ -1404,12 +1108,7 @@
       "tags": [
         "hotel",
         "hyatt"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8013,
@@ -1429,12 +1128,7 @@
       "tags": [
         "hotel",
         "ihg"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8014,
@@ -1454,12 +1148,7 @@
       "tags": [
         "hotel",
         "ihg"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8015,
@@ -1479,12 +1168,7 @@
       "tags": [
         "hotel",
         "marriott"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8016,
@@ -1504,12 +1188,7 @@
       "tags": [
         "hotel",
         "marriott"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8017,
@@ -1529,12 +1208,7 @@
       "tags": [
         "hotel",
         "marriott"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8018,
@@ -1554,12 +1228,7 @@
       "tags": [
         "airline",
         "aeroplan"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8019,
@@ -1579,12 +1248,7 @@
       "tags": [
         "airline",
         "avios"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8020,
@@ -1604,12 +1268,7 @@
       "tags": [
         "airline",
         "avios"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8021,
@@ -1629,12 +1288,7 @@
       "tags": [
         "airline",
         "avios"
-      ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8101,
@@ -1656,12 +1310,7 @@
         "transferable",
         "premium",
         "amex"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8102,
@@ -1683,12 +1332,7 @@
         "transferable",
         "dining",
         "amex"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8103,
@@ -1709,12 +1353,7 @@
         "travel",
         "transferable",
         "amex"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8104,
@@ -1735,12 +1374,7 @@
         "cash",
         "grocery",
         "amex"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8105,
@@ -1760,12 +1394,7 @@
       "tags": [
         "cash",
         "amex"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8106,
@@ -1785,12 +1414,7 @@
       "tags": [
         "airline",
         "delta"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8107,
@@ -1810,12 +1434,7 @@
       "tags": [
         "airline",
         "delta"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8108,
@@ -1836,12 +1455,7 @@
         "airline",
         "delta",
         "premium"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8109,
@@ -1861,12 +1475,7 @@
       "tags": [
         "hotel",
         "hilton"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8110,
@@ -1886,12 +1495,7 @@
       "tags": [
         "hotel",
         "hilton"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8111,
@@ -1912,12 +1516,7 @@
         "hotel",
         "hilton",
         "premium"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8112,
@@ -1937,12 +1536,7 @@
       "tags": [
         "hotel",
         "marriott"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8113,
@@ -1963,12 +1557,7 @@
         "hotel",
         "marriott",
         "premium"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8114,
@@ -1992,12 +1581,7 @@
         "amex",
         "schwab",
         "relationship"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8115,
@@ -2021,48 +1605,28 @@
         "amex",
         "morgan-stanley",
         "relationship"
-      ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8201,
       "issuer": "Citi",
       "name": "Strata Premier",
       "type": "Personal",
-      "bonus": 60000,
+      "bonus": 0,
       "unit": "ThankYou points",
       "hist": null,
-      "spend": 4000,
+      "spend": null,
       "af": 95,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-23",
-      "offerNote": "Issuer verified 2026-09-23: 60,000 ThankYou points after $4,000 in the first 3 months; $95 annual fee.",
+      "verifiedDate": "2026-09-21",
+      "offerNote": "Verify current offer and current bonus-eligibility language.",
       "tags": [
         "travel",
         "transferable",
         "citi"
-      ],
-      "issuerUrl": "https://www.citi.com/credit-cards/citi-strata-premier-credit-card",
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "issuerUrlVerified": "2026-09-23",
-      "monitoringTier": "core",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "Citi Strata Premier",
-          "60,000",
-          "4,000",
-          "3 months",
-          "$95"
-        ]
-      }
+      ]
     },
     {
       "id": 8202,
@@ -2085,12 +1649,7 @@
         "transferable",
         "premium",
         "citi"
-      ],
-      "issuerUrl": "https://www.citi.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8203,
@@ -2110,12 +1669,7 @@
       "tags": [
         "travel",
         "citi"
-      ],
-      "issuerUrl": "https://www.citi.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8204,
@@ -2135,12 +1689,7 @@
       "tags": [
         "cash",
         "citi"
-      ],
-      "issuerUrl": "https://www.citi.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8205,
@@ -2161,12 +1710,7 @@
         "cash",
         "citi",
         "legacy"
-      ],
-      "issuerUrl": "https://www.citi.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8206,
@@ -2187,12 +1731,7 @@
         "airline",
         "aadvantage",
         "premium"
-      ],
-      "issuerUrl": "https://www.citi.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8207,
@@ -2212,12 +1751,7 @@
       "tags": [
         "airline",
         "aadvantage"
-      ],
-      "issuerUrl": "https://www.citi.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8208,
@@ -2237,12 +1771,7 @@
       "tags": [
         "airline",
         "aadvantage"
-      ],
-      "issuerUrl": "https://www.citi.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8209,
@@ -2262,12 +1791,7 @@
       "tags": [
         "cash",
         "costco"
-      ],
-      "issuerUrl": "https://www.citi.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8210,
@@ -2290,20 +1814,7 @@
       "tags": [
         "cash",
         "citi"
-      ],
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "monitoringTier": "core",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "AT&T Points Plus",
-          "200",
-          "1,000",
-          "3 months",
-          "$0"
-        ]
-      }
+      ]
     },
     {
       "id": 8301,
@@ -2325,12 +1836,7 @@
         "transferable",
         "premium",
         "capital one"
-      ],
-      "issuerUrl": "https://www.capitalone.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8302,
@@ -2345,29 +1851,13 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-23",
-      "offerNote": "Issuer verified 2026-09-23 limited-time offer: 75,000 miles after $4,000 in 3 months plus a $300 Capital One Travel stays credit in the first cardholder year; $95 annual fee.",
+      "verifiedDate": "2026-09-21",
+      "offerNote": "DoC tracks 75K + $300 Capital One Travel credit.",
       "tags": [
         "travel",
         "transferable",
         "capital one"
-      ],
-      "issuerUrl": "https://www.capitalone.com/credit-cards/venture/",
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "issuerUrlVerified": "2026-09-23",
-      "monitoringTier": "core",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "Venture Rewards",
-          "75,000",
-          "4,000",
-          "3 months",
-          "$95",
-          "$300"
-        ]
-      }
+      ]
     },
     {
       "id": 8303,
@@ -2387,12 +1877,7 @@
       "tags": [
         "travel",
         "capital one"
-      ],
-      "issuerUrl": "https://www.capitalone.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8304,
@@ -2413,12 +1898,7 @@
         "cash",
         "dining",
         "capital one"
-      ],
-      "issuerUrl": "https://www.capitalone.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8305,
@@ -2438,12 +1918,7 @@
       "tags": [
         "cash",
         "capital one"
-      ],
-      "issuerUrl": "https://www.capitalone.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8401,
@@ -2458,28 +1933,13 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-23",
-      "offerNote": "Issuer verified 2026-09-23: 60,000 online bonus points after $4,000 in purchases in the first 90 days; $95 annual fee.",
+      "verifiedDate": "2026-09-21",
+      "offerNote": "DoC tracks elevated 60K offer.",
       "tags": [
         "travel",
         "cash",
         "bofa"
-      ],
-      "issuerUrl": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-credit-card/",
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "issuerUrlVerified": "2026-09-23",
-      "monitoringTier": "core",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "Premium Rewards",
-          "60,000",
-          "4,000",
-          "90 days",
-          "$95"
-        ]
-      }
+      ]
     },
     {
       "id": 8402,
@@ -2494,28 +1954,13 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-23",
-      "offerNote": "Issuer verified 2026-09-23: 75,000 online bonus points after $5,000 in purchases in the first 90 days; $550 annual fee.",
+      "verifiedDate": "2026-09-21",
+      "offerNote": "DoC tracks elevated 75K offer.",
       "tags": [
         "travel",
         "premium",
         "bofa"
-      ],
-      "issuerUrl": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-elite-credit-card/",
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "issuerUrlVerified": "2026-09-23",
-      "monitoringTier": "core",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "Premium Rewards Elite",
-          "75,000",
-          "5,000",
-          "90 days",
-          "$550"
-        ]
-      }
+      ]
     },
     {
       "id": 8403,
@@ -2535,12 +1980,7 @@
       "tags": [
         "cash",
         "bofa"
-      ],
-      "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8404,
@@ -2563,20 +2003,7 @@
       "tags": [
         "cash",
         "bofa"
-      ],
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "monitoringTier": "core",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "Unlimited Cash Rewards",
-          "250",
-          "1,000",
-          "90 days",
-          "No annual fee"
-        ]
-      }
+      ]
     },
     {
       "id": 8405,
@@ -2596,12 +2023,7 @@
       "tags": [
         "travel",
         "bofa"
-      ],
-      "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8406,
@@ -2621,12 +2043,7 @@
       "tags": [
         "airline",
         "atmos"
-      ],
-      "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8407,
@@ -2647,12 +2064,7 @@
         "airline",
         "atmos",
         "premium"
-      ],
-      "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8408,
@@ -2672,12 +2084,7 @@
       "tags": [
         "airline",
         "flying blue"
-      ],
-      "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8409,
@@ -2697,12 +2104,7 @@
       "tags": [
         "airline",
         "spirit"
-      ],
-      "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8501,
@@ -2723,12 +2125,7 @@
         "travel",
         "cash",
         "wells fargo"
-      ],
-      "issuerUrl": "https://creditcards.wellsfargo.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8502,
@@ -2749,47 +2146,27 @@
         "travel",
         "transferable",
         "wells fargo"
-      ],
-      "issuerUrl": "https://creditcards.wellsfargo.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8503,
       "issuer": "Wells Fargo",
       "name": "Active Cash",
       "type": "Personal",
-      "bonus": 100,
+      "bonus": 200,
       "unit": "cash",
       "hist": null,
-      "spend": 500,
+      "spend": 1500,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-23",
-      "offerNote": "Issuer verified 2026-09-23: $100 cash rewards bonus after $500 in purchases in the first 3 months; $0 annual fee; unlimited 2% cash rewards on purchases.",
+      "verifiedDate": "2026-09-21",
+      "offerNote": "DoC tracks $200 after $1,500 in six months.",
       "tags": [
         "cash",
         "wells fargo"
-      ],
-      "issuerUrl": "https://creditcards.wellsfargo.com/active-cash-credit-card/",
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "issuerUrlVerified": "2026-09-23",
-      "monitoringTier": "core",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "Active Cash",
-          "100",
-          "500",
-          "3 months",
-          "$0 Annual Fee"
-        ]
-      }
+      ]
     },
     {
       "id": 8504,
@@ -2809,12 +2186,7 @@
       "tags": [
         "cash",
         "wells fargo"
-      ],
-      "issuerUrl": "https://creditcards.wellsfargo.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8505,
@@ -2834,12 +2206,7 @@
       "tags": [
         "hotel",
         "choice"
-      ],
-      "issuerUrl": "https://creditcards.wellsfargo.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8506,
@@ -2859,12 +2226,7 @@
       "tags": [
         "hotel",
         "choice"
-      ],
-      "issuerUrl": "https://creditcards.wellsfargo.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8507,
@@ -2884,12 +2246,7 @@
       "tags": [
         "travel",
         "expedia"
-      ],
-      "issuerUrl": "https://creditcards.wellsfargo.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8508,
@@ -2909,12 +2266,7 @@
       "tags": [
         "travel",
         "expedia"
-      ],
-      "issuerUrl": "https://creditcards.wellsfargo.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8601,
@@ -2929,25 +2281,12 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-23",
-      "offerNote": "Issuer directory verified 2026-09-23: U.S. Bank Smartly is currently offered with unlimited 2% base cash back; relationship bonuses may increase earnings under current terms.",
+      "verifiedDate": "2026-09-21",
+      "offerNote": "Relationship-based earning; verify current terms.",
       "tags": [
         "cash",
         "us bank"
-      ],
-      "issuerUrl": "https://www.usbank.com/credit-cards.html",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_page",
-      "issuerUrlVerified": "2026-09-23",
-      "monitoringTier": "core",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "Smartly",
-          "2% cash back"
-        ],
-        "allowDirectory": true
-      }
+      ]
     },
     {
       "id": 8602,
@@ -2968,12 +2307,7 @@
         "cash",
         "dining",
         "us bank"
-      ],
-      "issuerUrl": "https://www.usbank.com/credit-cards.html",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8603,
@@ -2993,12 +2327,7 @@
       "tags": [
         "travel",
         "us bank"
-      ],
-      "issuerUrl": "https://www.usbank.com/credit-cards.html",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8604,
@@ -3018,12 +2347,7 @@
       "tags": [
         "cash",
         "us bank"
-      ],
-      "issuerUrl": "https://www.usbank.com/credit-cards.html",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8605,
@@ -3043,12 +2367,7 @@
       "tags": [
         "cash",
         "us bank"
-      ],
-      "issuerUrl": "https://www.usbank.com/credit-cards.html",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8606,
@@ -3068,12 +2387,7 @@
       "tags": [
         "apr",
         "us bank"
-      ],
-      "issuerUrl": "https://www.usbank.com/credit-cards.html",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8701,
@@ -3093,12 +2407,7 @@
       "tags": [
         "airline",
         "jetblue"
-      ],
-      "issuerUrl": "https://cards.barclaycardus.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8702,
@@ -3119,12 +2428,7 @@
         "airline",
         "jetblue",
         "premium"
-      ],
-      "issuerUrl": "https://cards.barclaycardus.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8703,
@@ -3144,12 +2448,7 @@
       "tags": [
         "hotel",
         "wyndham"
-      ],
-      "issuerUrl": "https://cards.barclaycardus.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8704,
@@ -3169,12 +2468,7 @@
       "tags": [
         "hotel",
         "wyndham"
-      ],
-      "issuerUrl": "https://cards.barclaycardus.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8705,
@@ -3195,12 +2489,7 @@
         "hotel",
         "wyndham",
         "premium"
-      ],
-      "issuerUrl": "https://cards.barclaycardus.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8706,
@@ -3220,12 +2509,7 @@
       "tags": [
         "airline",
         "aadvantage"
-      ],
-      "issuerUrl": "https://cards.barclaycardus.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8801,
@@ -3240,29 +2524,15 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-23",
-      "offerNote": "Issuer verified 2026-09-23: $100 Bilt Cash upon approval; $0 annual fee under current Bilt Card 2.0 terms.",
+      "verifiedDate": "2026-09-22",
+      "offerNote": "Current Bilt 2.0 entry card. $100 Bilt Cash on approval under current terms; $0 annual fee; earns Bilt rewards on everyday spend and housing through Bilt.",
       "tags": [
         "bilt",
         "travel",
         "transferable",
         "housing",
         "cash"
-      ],
-      "issuerUrl": "https://www.bilt.com/card",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_page",
-      "issuerUrlVerified": "2026-09-23",
-      "monitoringTier": "core",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "Bilt Blue Card",
-          "100",
-          "No annual fee"
-        ],
-        "allowDirectory": true
-      }
+      ]
     },
     {
       "id": 8816,
@@ -3277,8 +2547,8 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-23",
-      "offerNote": "Issuer verified 2026-09-23: $200 Bilt Cash upon approval with no minimum spend; $95 annual fee.",
+      "verifiedDate": "2026-09-22",
+      "offerNote": "Current Bilt 2.0 mid-tier card. $200 Bilt Cash on approval under current terms; $95 annual fee; 3X dining or grocery, 2X travel, and $100 annual Bilt Travel Hotel credit.",
       "tags": [
         "bilt",
         "travel",
@@ -3288,21 +2558,7 @@
         "property credit",
         "dining",
         "grocery"
-      ],
-      "issuerUrl": "https://www.bilt.com/card/obsidian",
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "issuerUrlVerified": "2026-09-23",
-      "monitoringTier": "core",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "Bilt Obsidian",
-          "200",
-          "no minimum spend",
-          "$95"
-        ]
-      }
+      ]
     },
     {
       "id": 8817,
@@ -3318,8 +2574,8 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-23",
-      "offerNote": "Issuer verified 2026-09-23: 50,000 Bilt Points + Gold status after $4,000 in non-housing purchases in the first 90 days, plus $300 Bilt Cash on approval; $495 annual fee.",
+      "verifiedDate": "2026-09-22",
+      "offerNote": "Current Bilt 2.0 premium card. 50,000 Bilt Points + Gold Status after $4,000 in everyday spend within 90 days, plus $300 Bilt Cash on approval; $400 annual Bilt Travel Hotel credit, $200 annual Bilt Cash, and Priority Pass.",
       "tags": [
         "bilt",
         "travel",
@@ -3331,23 +2587,7 @@
         "lounge",
         "priority pass",
         "status"
-      ],
-      "issuerUrl": "https://www.bilt.com/card/palladium",
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "issuerUrlVerified": "2026-09-23",
-      "monitoringTier": "core",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "Bilt Palladium",
-          "50,000",
-          "4,000",
-          "90 days",
-          "300",
-          "$495"
-        ]
-      }
+      ]
     },
     {
       "id": 8802,
@@ -3367,12 +2607,7 @@
       "tags": [
         "cash",
         "discover"
-      ],
-      "issuerUrl": "https://www.discover.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8803,
@@ -3393,12 +2628,7 @@
         "cash",
         "travel",
         "discover"
-      ],
-      "issuerUrl": "https://www.discover.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      ]
     },
     {
       "id": 8804,
@@ -3418,12 +2648,7 @@
       "tags": [
         "cash",
         "apple"
-      ],
-      "issuerUrl": "https://www.apple.com/apple-card/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "standard"
+      ]
     },
     {
       "id": 8805,
@@ -3443,12 +2668,7 @@
       "tags": [
         "cash",
         "fidelity"
-      ],
-      "issuerUrl": "https://www.fidelity.com/spend-save/visa-signature-card",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "secondary"
+      ]
     },
     {
       "id": 8815,
@@ -3471,12 +2691,7 @@
         "travel",
         "robinhood",
         "relationship"
-      ],
-      "issuerUrl": "https://robinhood.com/creditcard/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "secondary"
+      ]
     },
     {
       "id": 8806,
@@ -3496,12 +2711,7 @@
       "tags": [
         "cash",
         "sofi"
-      ],
-      "issuerUrl": "https://www.sofi.com/credit-card/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "secondary"
+      ]
     },
     {
       "id": 8807,
@@ -3521,12 +2731,7 @@
       "tags": [
         "cash",
         "pnc"
-      ],
-      "issuerUrl": "https://www.pnc.com/en/personal-banking/banking/credit-cards.html",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "secondary"
+      ]
     },
     {
       "id": 8808,
@@ -3546,12 +2751,7 @@
       "tags": [
         "travel",
         "usaa"
-      ],
-      "issuerUrl": "https://www.usaa.com/inet/wc/banking/credit-cards",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "secondary"
+      ]
     },
     {
       "id": 8809,
@@ -3571,12 +2771,7 @@
       "tags": [
         "travel",
         "navy federal"
-      ],
-      "issuerUrl": "https://www.navyfederal.org/loans-cards/credit-cards.html",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "secondary"
+      ]
     },
     {
       "id": 8810,
@@ -3596,12 +2791,7 @@
       "tags": [
         "travel",
         "penfed"
-      ],
-      "issuerUrl": "https://www.penfed.org/credit-cards",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "secondary"
+      ]
     },
     {
       "id": 8811,
@@ -3621,148 +2811,31 @@
       "tags": [
         "airline",
         "virgin"
-      ],
-      "issuerUrl": "https://www.synchrony.com/financing/credit-cards",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "secondary"
+      ]
     },
     {
       "id": 8812,
-      "issuer": "Barclays / Carnival",
+      "issuer": "Barclays",
       "name": "Carnival Rewards Mastercard",
       "type": "Personal",
-      "bonus": 30000,
-      "unit": "Carnival Rewards points",
+      "bonus": 50000,
+      "unit": "points",
       "hist": 50000,
       "spend": 1000,
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": true,
-      "verifiedDate": "2026-09-23",
+      "verified": false,
+      "verifiedDate": null,
       "tags": [
-        "cruise",
         "carnival",
-        "cash-equivalent"
+        "cruise"
       ],
-      "issuerUrl": "https://www.carnival.com/carnival-mastercard",
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "issuerUrlVerified": "2026-09-23",
-      "offerType": "public",
-      "confidence": "high",
-      "offerNote": "30,000 points after $1,000 in purchases in the first 90 days; worth $300 onboard credit on the current Carnival card page.",
-      "perks": [
-        "Up to 6x Carnival Rewards points on eligible Carnival purchases when combined with Carnival Rewards earning",
-        "2x at eligible restaurants and grocery stores",
-        "1x on other eligible purchases",
-        "0% promotional APR for 6 months on eligible Carnival cruise bookings",
-        "No annual fee",
-        "No foreign transaction fees"
-      ],
-      "monitoringTier": "specialty",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "30,000",
-          "1,000",
-          "90 days",
-          "No annual fee"
-        ]
-      }
-    },
-    {
-      "id": 8900,
-      "issuer": "Bank of America / Norwegian Cruise Line",
-      "name": "Norwegian Cruise Line World Mastercard",
-      "type": "Personal",
-      "bonus": 30000,
-      "unit": "WorldPoints",
-      "hist": 30000,
-      "spend": 1500,
-      "af": 0,
-      "reports": true,
-      "status": "open",
-      "verified": true,
-      "verifiedDate": "2026-09-23",
-      "offerType": "public",
-      "confidence": "high",
-      "tags": [
-        "cruise",
-        "norwegian",
-        "travel"
-      ],
-      "issuerUrl": "https://www.ncl.com/world-points",
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "issuerUrlVerified": "2026-09-23",
-      "offerNote": "30,000 bonus points after $1,500 in the first 90 days; NCL states this equals $300 onboard credit.",
-      "perks": [
-        "3x on Norwegian Cruise Line purchases",
-        "2x on eligible airline and hotel purchases",
-        "1x on other purchases",
-        "No annual fee",
-        "No foreign transaction fees"
-      ],
-      "monitoringTier": "specialty",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "30,000",
-          "1,500",
-          "90 days",
-          "No Annual Fee"
-        ]
-      }
+      "offerNote": "Carnival co-branded card issued by Barclays. Earns Carnival Rewards Points on card purchases; current exact welcome-offer terms should be verified before applying."
     },
     {
       "id": 8901,
-      "issuer": "Barclays / Princess Cruises",
-      "name": "Princess Rewards Visa",
-      "type": "Personal",
-      "bonus": 20000,
-      "unit": "Princess Rewards points",
-      "hist": 20000,
-      "spend": 1000,
-      "af": 0,
-      "reports": true,
-      "status": "open",
-      "verified": true,
-      "verifiedDate": "2026-09-23",
-      "offerType": "public",
-      "confidence": "high",
-      "tags": [
-        "cruise",
-        "princess",
-        "travel"
-      ],
-      "issuerUrl": "https://www.princess.com/",
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "issuerUrlVerified": "2026-09-23",
-      "offerNote": "Princess currently advertises 20,000 bonus points after $1,000 in the first 90 days, stated as worth $200 onboard credit.",
-      "perks": [
-        "2x on Princess purchases including onboard purchases",
-        "1x on other purchases",
-        "No annual fee",
-        "No foreign transaction fees"
-      ],
-      "monitoringTier": "specialty",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "20,000",
-          "1,000",
-          "90 days",
-          "Princess"
-        ]
-      }
-    },
-    {
-      "id": 8902,
-      "issuer": "Bank of America / Royal Caribbean Group",
+      "issuer": "Bank of America",
       "name": "Royal ONE Visa Signature",
       "type": "Personal",
       "bonus": 30000,
@@ -3773,43 +2846,19 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-23",
-      "offerType": "public",
-      "confidence": "high",
+      "verifiedDate": "2026-09-24",
+      "offerNote": "30,000 bonus points, redeemable for $300 in onboard credit or cruise discounts, after $1,500 in purchases in the first 90 days. Rewards can be used across Royal Caribbean, Celebrity Cruises, and Silversea.",
       "tags": [
         "cruise",
         "royal caribbean",
         "celebrity",
         "silversea",
         "travel"
-      ],
-      "issuerUrl": "https://www.royalcaribbean.com/royal-one-visa-card",
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "issuerUrlVerified": "2026-09-23",
-      "offerNote": "30,000 points after $1,500 in the first 90 days; issuer states 30,000 points equals $300 in cruise rewards.",
-      "perks": [
-        "3x on eligible Royal Caribbean, Celebrity Cruises and Silversea purchases",
-        "2x on groceries, gas and EV charging",
-        "1x on other purchases",
-        "Priority boarding",
-        "Annual $100 cruise discount after $10,000 annual spend",
-        "No foreign transaction fees"
-      ],
-      "monitoringTier": "specialty",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "30,000",
-          "1,500",
-          "90 days",
-          "$0 Annual Fee"
-        ]
-      }
+      ]
     },
     {
-      "id": 8903,
-      "issuer": "Bank of America / Royal Caribbean Group",
+      "id": 8902,
+      "issuer": "Bank of America",
       "name": "Royal ONE Plus Visa Signature",
       "type": "Personal",
       "bonus": 60000,
@@ -3820,49 +2869,58 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-23",
-      "offerType": "public",
-      "confidence": "high",
+      "verifiedDate": "2026-09-24",
+      "offerNote": "60,000 bonus points, redeemable for $600 in onboard credit or cruise discounts, after $2,500 in purchases in the first 90 days. $99 annual fee; cruise perks include priority suite boarding and luggage benefits.",
       "tags": [
         "cruise",
         "royal caribbean",
         "celebrity",
         "silversea",
+        "travel",
+        "premium"
+      ]
+    },
+    {
+      "id": 8903,
+      "issuer": "Bank of America",
+      "name": "Norwegian Cruise Line World Mastercard",
+      "type": "Personal",
+      "bonus": 20000,
+      "unit": "WorldPoints",
+      "hist": null,
+      "spend": 1000,
+      "af": 0,
+      "reports": true,
+      "status": "open",
+      "verified": true,
+      "verifiedDate": "2026-09-24",
+      "offerNote": "20,000 bonus points after $1,000 in purchases in the first 90 days, worth $200 onboard credit or $200 off a Norwegian cruise. No annual fee and no foreign transaction fee.",
+      "tags": [
+        "cruise",
+        "norwegian",
         "travel"
-      ],
-      "issuerUrl": "https://www.royalcaribbean.com/royal-one-visa-card",
-      "issuerUrlKind": "product",
-      "linkSource": "official_product_page",
-      "issuerUrlVerified": "2026-09-23",
-      "offerNote": "60,000 points after $2,500 in the first 90 days; issuer states 60,000 points equals $600 in cruise rewards.",
-      "perks": [
-        "4x on eligible Royal Caribbean, Celebrity Cruises and Silversea purchases",
-        "2x on airline, hotel, dining, grocery, gas and EV charging",
-        "1x on other purchases",
-        "Priority suite boarding and luggage",
-        "Annual $200 cruise discount after $20,000 annual spend",
-        "Up to $120 TSA PreCheck/Global Entry credit every four years"
-      ],
-      "monitoringTier": "specialty",
-      "offerMonitor": {
-        "mode": "tokens",
-        "tokens": [
-          "60,000",
-          "2,500",
-          "90 days",
-          "$99 Annual Fee"
-        ]
-      }
+      ]
+    },
+    {
+      "id": 8904,
+      "issuer": "Barclays",
+      "name": "Princess Rewards Visa",
+      "type": "Personal",
+      "bonus": 20000,
+      "unit": "Princess points",
+      "hist": null,
+      "spend": 1000,
+      "af": 0,
+      "reports": true,
+      "status": "open",
+      "verified": true,
+      "verifiedDate": "2026-09-24",
+      "offerNote": "20,000 bonus points after $1,000 in purchases in the first 90 days, worth $200 in onboard credit. Earns 2X on Princess purchases and 1X elsewhere.",
+      "tags": [
+        "cruise",
+        "princess",
+        "travel"
+      ]
     }
-  ],
-  "linkCoverage": {
-    "cardsWithOfficialUrl": 143,
-    "totalCards": 143
-  },
-  "monitoringPolicy": {
-    "core": "daily link checks; offer-monitoring where configured",
-    "secondary": "link checks; automation blocks are warnings",
-    "specialty": "link checks; offer-monitoring where configured; shown when relevant",
-    "standard": "link checks; offer-monitoring added progressively"
-  }
+  ]
 }
