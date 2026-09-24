@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "1.2",
-  "catalogVersion": "10.11.2",
+  "schemaVersion": "1.3",
+  "catalogVersion": "10.11.3",
   "generatedAt": "2026-09-23T00:00:00Z",
   "cards": [
     {
@@ -67,16 +67,27 @@
       "af": 95,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
+      "verifiedDate": "2026-09-23",
       "tags": [
         "travel",
         "transferable"
       ],
-      "issuerUrl": "https://creditcards.chase.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      "issuerUrl": "https://creditcards.chase.com/business-credit-cards/ink/business-preferred",
+      "issuerUrlKind": "product",
+      "linkSource": "official_product_page",
+      "issuerUrlVerified": "2026-09-23",
+      "monitoringTier": "core",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "Ink Business Preferred",
+          "100,000",
+          "8,000",
+          "3 months",
+          "$95"
+        ]
+      },
+      "offerNote": "Issuer verified 2026-09-23: 100,000 bonus points after $8,000 in purchases in the first 3 months; $95 annual fee."
     },
     {
       "id": 7004,
@@ -323,23 +334,33 @@
       "issuer": "American Express",
       "name": "Graphite Business Cash Unlimited",
       "type": "Business",
-      "bonus": 0,
-      "unit": "offer varies",
+      "bonus": 2000,
+      "unit": "cash",
       "hist": null,
-      "spend": 20000,
+      "spend": 50000,
       "af": 295,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Welcome offer varies; verify before applying.",
+      "verifiedDate": "2026-09-23",
+      "offerNote": "Issuer verified 2026-09-23: $2,000 cash back after $50,000 in purchases within the first 6 months; $295 annual fee; unlimited 2% cash back under current terms.",
       "tags": [
         "cash"
       ],
-      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/graphite-business-cash-unlimited-card/",
+      "issuerUrlKind": "product",
+      "linkSource": "official_product_page",
+      "issuerUrlVerified": "2026-09-23",
+      "monitoringTier": "core",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "Graphite",
+          "2,000",
+          "50,000",
+          "6 months",
+          "$295"
+        ]
+      }
     },
     {
       "id": 7104,
@@ -2012,26 +2033,36 @@
       "issuer": "Citi",
       "name": "Strata Premier",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 60000,
       "unit": "ThankYou points",
       "hist": null,
-      "spend": null,
+      "spend": 4000,
       "af": 95,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer and current bonus-eligibility language.",
+      "verifiedDate": "2026-09-23",
+      "offerNote": "Issuer verified 2026-09-23: 60,000 ThankYou points after $4,000 in the first 3 months; $95 annual fee.",
       "tags": [
         "travel",
         "transferable",
         "citi"
       ],
-      "issuerUrl": "https://www.citi.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      "issuerUrl": "https://www.citi.com/credit-cards/citi-strata-premier-credit-card",
+      "issuerUrlKind": "product",
+      "linkSource": "official_product_page",
+      "issuerUrlVerified": "2026-09-23",
+      "monitoringTier": "core",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "Citi Strata Premier",
+          "60,000",
+          "4,000",
+          "3 months",
+          "$95"
+        ]
+      }
     },
     {
       "id": 8202,
@@ -2261,8 +2292,18 @@
         "citi"
       ],
       "issuerUrlKind": "product",
-      "linkSource": "existing_product_link",
-      "monitoringTier": "core"
+      "linkSource": "official_product_page",
+      "monitoringTier": "core",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "AT&T Points Plus",
+          "200",
+          "1,000",
+          "3 months",
+          "$0"
+        ]
+      }
     },
     {
       "id": 8301,
@@ -2304,18 +2345,29 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "DoC tracks 75K + $300 Capital One Travel credit.",
+      "verifiedDate": "2026-09-23",
+      "offerNote": "Issuer verified 2026-09-23 limited-time offer: 75,000 miles after $4,000 in 3 months plus a $300 Capital One Travel stays credit in the first cardholder year; $95 annual fee.",
       "tags": [
         "travel",
         "transferable",
         "capital one"
       ],
-      "issuerUrl": "https://www.capitalone.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      "issuerUrl": "https://www.capitalone.com/credit-cards/venture/",
+      "issuerUrlKind": "product",
+      "linkSource": "official_product_page",
+      "issuerUrlVerified": "2026-09-23",
+      "monitoringTier": "core",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "Venture Rewards",
+          "75,000",
+          "4,000",
+          "3 months",
+          "$95",
+          "$300"
+        ]
+      }
     },
     {
       "id": 8303,
@@ -2406,18 +2458,28 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "DoC tracks elevated 60K offer.",
+      "verifiedDate": "2026-09-23",
+      "offerNote": "Issuer verified 2026-09-23: 60,000 online bonus points after $4,000 in purchases in the first 90 days; $95 annual fee.",
       "tags": [
         "travel",
         "cash",
         "bofa"
       ],
-      "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      "issuerUrl": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-credit-card/",
+      "issuerUrlKind": "product",
+      "linkSource": "official_product_page",
+      "issuerUrlVerified": "2026-09-23",
+      "monitoringTier": "core",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "Premium Rewards",
+          "60,000",
+          "4,000",
+          "90 days",
+          "$95"
+        ]
+      }
     },
     {
       "id": 8402,
@@ -2432,18 +2494,28 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "DoC tracks elevated 75K offer.",
+      "verifiedDate": "2026-09-23",
+      "offerNote": "Issuer verified 2026-09-23: 75,000 online bonus points after $5,000 in purchases in the first 90 days; $550 annual fee.",
       "tags": [
         "travel",
         "premium",
         "bofa"
       ],
-      "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      "issuerUrl": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-elite-credit-card/",
+      "issuerUrlKind": "product",
+      "linkSource": "official_product_page",
+      "issuerUrlVerified": "2026-09-23",
+      "monitoringTier": "core",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "Premium Rewards Elite",
+          "75,000",
+          "5,000",
+          "90 days",
+          "$550"
+        ]
+      }
     },
     {
       "id": 8403,
@@ -2493,8 +2565,18 @@
         "bofa"
       ],
       "issuerUrlKind": "product",
-      "linkSource": "existing_product_link",
-      "monitoringTier": "core"
+      "linkSource": "official_product_page",
+      "monitoringTier": "core",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "Unlimited Cash Rewards",
+          "250",
+          "1,000",
+          "90 days",
+          "No annual fee"
+        ]
+      }
     },
     {
       "id": 8405,
@@ -2679,25 +2761,35 @@
       "issuer": "Wells Fargo",
       "name": "Active Cash",
       "type": "Personal",
-      "bonus": 200,
+      "bonus": 100,
       "unit": "cash",
       "hist": null,
-      "spend": 1500,
+      "spend": 500,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "DoC tracks $200 after $1,500 in six months.",
+      "verifiedDate": "2026-09-23",
+      "offerNote": "Issuer verified 2026-09-23: $100 cash rewards bonus after $500 in purchases in the first 3 months; $0 annual fee; unlimited 2% cash rewards on purchases.",
       "tags": [
         "cash",
         "wells fargo"
       ],
-      "issuerUrl": "https://creditcards.wellsfargo.com/",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      "issuerUrl": "https://creditcards.wellsfargo.com/active-cash-credit-card/",
+      "issuerUrlKind": "product",
+      "linkSource": "official_product_page",
+      "issuerUrlVerified": "2026-09-23",
+      "monitoringTier": "core",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "Active Cash",
+          "100",
+          "500",
+          "3 months",
+          "$0 Annual Fee"
+        ]
+      }
     },
     {
       "id": 8504,
@@ -2837,17 +2929,25 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Relationship-based earning; verify current terms.",
+      "verifiedDate": "2026-09-23",
+      "offerNote": "Issuer directory verified 2026-09-23: U.S. Bank Smartly is currently offered with unlimited 2% base cash back; relationship bonuses may increase earnings under current terms.",
       "tags": [
         "cash",
         "us bank"
       ],
       "issuerUrl": "https://www.usbank.com/credit-cards.html",
       "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      "linkSource": "official_issuer_page",
+      "issuerUrlVerified": "2026-09-23",
+      "monitoringTier": "core",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "Smartly",
+          "2% cash back"
+        ],
+        "allowDirectory": true
+      }
     },
     {
       "id": 8602,
@@ -3140,8 +3240,8 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-22",
-      "offerNote": "Current Bilt 2.0 entry card. $100 Bilt Cash on approval under current terms; $0 annual fee; earns Bilt rewards on everyday spend and housing through Bilt.",
+      "verifiedDate": "2026-09-23",
+      "offerNote": "Issuer verified 2026-09-23: $100 Bilt Cash upon approval; $0 annual fee under current Bilt Card 2.0 terms.",
       "tags": [
         "bilt",
         "travel",
@@ -3151,9 +3251,18 @@
       ],
       "issuerUrl": "https://www.bilt.com/card",
       "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      "linkSource": "official_issuer_page",
+      "issuerUrlVerified": "2026-09-23",
+      "monitoringTier": "core",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "Bilt Blue Card",
+          "100",
+          "No annual fee"
+        ],
+        "allowDirectory": true
+      }
     },
     {
       "id": 8816,
@@ -3168,8 +3277,8 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-22",
-      "offerNote": "Current Bilt 2.0 mid-tier card. $200 Bilt Cash on approval under current terms; $95 annual fee; 3X dining or grocery, 2X travel, and $100 annual Bilt Travel Hotel credit.",
+      "verifiedDate": "2026-09-23",
+      "offerNote": "Issuer verified 2026-09-23: $200 Bilt Cash upon approval with no minimum spend; $95 annual fee.",
       "tags": [
         "bilt",
         "travel",
@@ -3180,11 +3289,20 @@
         "dining",
         "grocery"
       ],
-      "issuerUrl": "https://www.bilt.com/card",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      "issuerUrl": "https://www.bilt.com/card/obsidian",
+      "issuerUrlKind": "product",
+      "linkSource": "official_product_page",
+      "issuerUrlVerified": "2026-09-23",
+      "monitoringTier": "core",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "Bilt Obsidian",
+          "200",
+          "no minimum spend",
+          "$95"
+        ]
+      }
     },
     {
       "id": 8817,
@@ -3200,8 +3318,8 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-22",
-      "offerNote": "Current Bilt 2.0 premium card. 50,000 Bilt Points + Gold Status after $4,000 in everyday spend within 90 days, plus $300 Bilt Cash on approval; $400 annual Bilt Travel Hotel credit, $200 annual Bilt Cash, and Priority Pass.",
+      "verifiedDate": "2026-09-23",
+      "offerNote": "Issuer verified 2026-09-23: 50,000 Bilt Points + Gold status after $4,000 in non-housing purchases in the first 90 days, plus $300 Bilt Cash on approval; $495 annual fee.",
       "tags": [
         "bilt",
         "travel",
@@ -3214,11 +3332,22 @@
         "priority pass",
         "status"
       ],
-      "issuerUrl": "https://www.bilt.com/card",
-      "issuerUrlKind": "issuer-directory",
-      "linkSource": "official_issuer_directory_fallback",
-      "issuerUrlVerified": null,
-      "monitoringTier": "core"
+      "issuerUrl": "https://www.bilt.com/card/palladium",
+      "issuerUrlKind": "product",
+      "linkSource": "official_product_page",
+      "issuerUrlVerified": "2026-09-23",
+      "monitoringTier": "core",
+      "offerMonitor": {
+        "mode": "tokens",
+        "tokens": [
+          "Bilt Palladium",
+          "50,000",
+          "4,000",
+          "90 days",
+          "300",
+          "$495"
+        ]
+      }
     },
     {
       "id": 8802,
@@ -3521,7 +3650,7 @@
       "issuerUrl": "https://www.carnival.com/carnival-mastercard",
       "issuerUrlKind": "product",
       "linkSource": "official_product_page",
-      "issuerUrlVerified": null,
+      "issuerUrlVerified": "2026-09-23",
       "offerType": "public",
       "confidence": "high",
       "offerNote": "30,000 points after $1,000 in purchases in the first 90 days; worth $300 onboard credit on the current Carnival card page.",
