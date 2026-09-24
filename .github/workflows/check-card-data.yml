@@ -1,1 +1,39 @@
+name: Check CardPilot card data
 
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 13 * * *'
+  push:
+    paths:
+      - 'cards.json'
+      - 'scripts/check-links.mjs'
+      - 'scripts/verify-catalog.mjs'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate catalog structure
+        run: node scripts/verify-catalog.mjs cards.json
+      - name: Check verified issuer links
+        id: links
+        continue-on-error: true
+        run: node scripts/check-links.mjs cards.json
+      - name: Upload link report
+        uses: actions/upload-artifact@v4
+        with:
+          name: cardpilot-link-report
+          path: link-report.json
+      - name: Fail if broken links were found
+        if: steps.links.outcome == 'failure'
+        run: |
+          echo 'One or more issuer links failed. Open the link-report artifact for details.'
+          exit 1
