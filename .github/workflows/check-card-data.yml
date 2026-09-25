@@ -14,7 +14,7 @@ name: Check CardPilot card data
       - ".github/workflows/check-card-data.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   verify:
@@ -36,6 +36,20 @@ jobs:
 
       - name: Check current offer terms
         run: node scripts/check-offers.mjs cards.json
+
+
+      - name: Publish latest monitoring status for CardPilot
+        if: always()
+        run: |
+          git config user.name "cardpilot-monitor"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add offer-report.json link-report.json
+          if git diff --cached --quiet; then
+            echo "No monitoring report changes to publish."
+          else
+            git commit -m "chore: refresh CardPilot monitoring status"
+            git push
+          fi
 
       - name: Upload monitoring reports
         if: always()
