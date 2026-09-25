@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-09-24.3",
+  "catalogVersion": "2026-09-24.4",
   "generatedAt": "2026-09-24",
   "cards": [
     {
@@ -8,20 +8,29 @@
       "issuer": "Chase",
       "name": "Ink Business Unlimited",
       "type": "Business",
-      "bonus": 1000,
+      "bonus": 750,
       "unit": "cash",
       "hist": 1000,
-      "spend": 8000,
+      "spend": 6000,
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-22",
-      "offerNote": "100K Ultimate Rewards points / $1,000 cash-equivalent offer was tracked in 2026 and ended Sept. 17 on standard channels; verify live availability before applying. Source: Doctor of Credit.",
-      "offerType": "recent/verify-live",
+      "verifiedDate": "2026-09-24",
+      "offerNote": "Current public Chase offer: $750 cash back after $6,000 in purchases in the first 3 months after account opening. $0 annual fee. Offers can vary by channel and change over time.",
+      "offerType": "public-current",
       "confidence": "high",
       "tags": [
         "cash",
         "ultimate rewards"
+      ],
+      "offerState": "verified-current",
+      "issuerUrl": "https://creditcards.chase.com/business-credit-cards/ink/unlimited",
+      "issuerUrlVerified": "2026-09-24",
+      "monitorExpected": [
+        "750 cash back",
+        "6000",
+        "3 months",
+        "0 annual fee"
       ]
     },
     {
@@ -29,20 +38,29 @@
       "issuer": "Chase",
       "name": "Ink Business Cash",
       "type": "Business",
-      "bonus": 1000,
+      "bonus": 750,
       "unit": "cash",
       "hist": 1000,
-      "spend": 8000,
+      "spend": 6000,
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-22",
-      "offerNote": "100K Ultimate Rewards points / $1,000 cash-equivalent offer was tracked in 2026 and ended Sept. 17 on standard channels; verify live availability before applying. Source: Doctor of Credit.",
-      "offerType": "recent/verify-live",
+      "verifiedDate": "2026-09-24",
+      "offerNote": "Current public Chase offer: $750 cash back after $6,000 in purchases in the first 3 months after account opening. $0 annual fee. Offers can vary by channel and change over time.",
+      "offerType": "public-current",
       "confidence": "high",
       "tags": [
         "cash",
         "ultimate rewards"
+      ],
+      "offerState": "verified-current",
+      "issuerUrl": "https://creditcards.chase.com/business-credit-cards/ink/cash",
+      "issuerUrlVerified": "2026-09-24",
+      "monitorExpected": [
+        "750 cash back",
+        "6000",
+        "3 months",
+        "0 annual fee"
       ]
     },
     {

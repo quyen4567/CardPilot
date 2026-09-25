@@ -79,7 +79,8 @@ let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
 // Card catalog is loaded from cards.json so offer/link updates do not require rebuilding the UI.
 let BUSINESS_CATALOG=[];
 let PERSONAL_CATALOG=[];
-const CATALOG_VERSION='2026-09-24.3';
+let OFFER_MONITOR_STATUS={};
+const CATALOG_VERSION='2026-09-24.4';
 
 function migrateV8(){
   data.profile=data.profile||{};
@@ -1095,6 +1096,8 @@ function offerCashValue(o){
   return fixedCash + Number(o.bonusCashExtra||0);
 }
 function offerEstimatedSubValue(o){
+  const live=liveOfferMonitor(o);
+  if(live&&['needs_review','broken'].includes(live.status)) return 0;
   const unit=String(o.unit||'').toLowerCase();
   const v=bonusValueRange(o);
   const fixedCash=(!v && unit.includes('cash')) ? Number(o.bonus||0) : 0;
@@ -1103,6 +1106,8 @@ function offerEstimatedSubValue(o){
   return fixedCash + extraCash + pointsMid;
 }
 function subReturnRange(o){
+  const live=liveOfferMonitor(o);
+  if(live&&['needs_review','broken'].includes(live.status)) return null;
   const spend=Number(o.spend||0);
   if(!spend)return null;
   const calcBonus=(o.spendQualifiedBonus!==null&&o.spendQualifiedBonus!==undefined)?Number(o.spendQualifiedBonus):Number(o.bonus||0);
@@ -1287,7 +1292,7 @@ function refinedRecommendationCard(x,rank){
     if(mode==='keeper')metricBits.push(`Keeper score emphasizes ongoing value, useful benefits, earning power, and annual-fee economics.`);
   }
   const metric=metricBits.length?`<div class="small" style="margin-top:7px;color:#365d96"><b>Why it ranks here:</b> ${metricBits.join(' • ')}</div>`:'';
-  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerRequirementText(o)}${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${metric}<button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
+  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerRequirementText(o)}${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${metric}<button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}${(()=>{const q=effectiveOfferDataStatus(o);const color=q.status==='verified'?'#157347':q.status==='blocked_by_issuer'?'#8a5a00':'#9b2c2c';return `<div class="small" style="margin-top:7px;color:${color}"><b>${q.label}</b>${q.detail?` • ${q.detail}`:''}</div>`})()}</div>`;
 }
 
 function five24AfterApprovalHTML(o){
@@ -1363,12 +1368,22 @@ function rankedOfferCard(x,rank){
   const o=x.offer, fit=x.fit;
   const badge=rank===1?'Best match':rank===2?'Next best':'Strong alternative';
   const why=[...fit.reasons].slice(0,4).map(r=>`<div style="margin-top:4px;color:#157347">✓ ${r}</div>`).join('');
-  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerRequirementText(o)}${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:8px">${why}</div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this is #${rank}</button>${issuerLinkHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
+  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerRequirementText(o)}${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:8px">${why}</div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this is #${rank}</button>${issuerLinkHTML(o)}${(()=>{const q=effectiveOfferDataStatus(o);const color=q.status==='verified'?'#157347':q.status==='blocked_by_issuer'?'#8a5a00':'#9b2c2c';return `<div class="small" style="margin-top:7px;color:${color}"><b>${q.label}</b>${q.detail?` • ${q.detail}`:''}</div>`})()}</div>`;
+}
+
+function liveOfferMonitor(o){return OFFER_MONITOR_STATUS[String(o.id)]||null}
+function effectiveOfferDataStatus(o){
+  const m=liveOfferMonitor(o);
+  if(m&&m.status==='needs_review')return {status:'needs_review',label:'Offer needs review',detail:(m.issues||[])[0]||'Issuer-page terms no longer match the tracked offer.'};
+  if(m&&m.status==='blocked_by_issuer')return {status:'blocked_by_issuer',label:'Issuer check blocked',detail:'Automated issuer-page verification was blocked; this is not treated as a broken offer.'};
+  if(m&&m.status==='broken')return {status:'broken',label:'Source problem',detail:(m.issues||[])[0]||'The configured offer source could not be verified.'};
+  if(o.verified)return {status:'verified',label:'Offer verified',detail:o.verifiedDate?('Checked '+o.verifiedDate):'Current offer tracked'};
+  return {status:'needs_review',label:'Offer needs review',detail:'Current public offer has not been verified.'};
 }
 function offerCard(o,reason=false,fit=null){
   fit=fit||offerFit(o);
   const cls=fit.status==='consider'?'green':fit.status==='wait'?'amber':fit.status==='save'?'blue':'red';
-  return `<div class="item ${fit.disabled?'disabled-card':''}"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div><span class="pill ${cls}">${fit.label}</span></div><div class="between" style="margin-top:9px"><div><b>${currentOfferLabel(o)}</b></div><div class="small">${historicalOfferText(o)}</div></div>${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}${o.offerNote?`<div class="small" style="margin-top:6px">${o.offerNote}</div>`:''}${reason?`<div class="small" style="margin-top:7px">${fit.reasons[0]?` <span style="color:#157347">✓ ${fit.reasons[0]}</span>`:''}${fit.cautions[0]?`<div style="margin-top:4px;color:#9b2c2c">✕ ${fit.cautions[0]}</div>`:''}</div><button class="btn ghost" style="margin-top:8px;padding:7px 10px" onclick="whyOffer(${o.id})">Why?</button>`:''}${issuerLinkHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`
+  return `<div class="item ${fit.disabled?'disabled-card':''}"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div><span class="pill ${cls}">${fit.label}</span></div><div class="between" style="margin-top:9px"><div><b>${currentOfferLabel(o)}</b></div><div class="small">${historicalOfferText(o)}</div></div>${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}${o.offerNote?`<div class="small" style="margin-top:6px">${o.offerNote}</div>`:''}${reason?`<div class="small" style="margin-top:7px">${fit.reasons[0]?` <span style="color:#157347">✓ ${fit.reasons[0]}</span>`:''}${fit.cautions[0]?`<div style="margin-top:4px;color:#9b2c2c">✕ ${fit.cautions[0]}</div>`:''}</div><button class="btn ghost" style="margin-top:8px;padding:7px 10px" onclick="whyOffer(${o.id})">Why?</button>`:''}${issuerLinkHTML(o)}${(()=>{const q=effectiveOfferDataStatus(o);const color=q.status==='verified'?'#157347':q.status==='blocked_by_issuer'?'#8a5a00':'#9b2c2c';return `<div class="small" style="margin-top:7px;color:${color}"><b>${q.label}</b>${q.detail?` • ${q.detail}`:''}</div>`})()}</div>`
 }
 function whyOffer(id){
   const o=data.offers.find(x=>x.id===id);if(!o)return;
@@ -1389,14 +1404,18 @@ function marketOffers(){
 function setMarketPath(p){data.profile.marketPath=p;save();render();showView('offersView')}
 function marketStatus(o){
   if(o.status==='closed-new')return {label:'Closed to new applicants',tone:'red'};
+  const live=effectiveOfferDataStatus(o);
+  if(live.status==='needs_review')return {label:'Offer needs review',tone:'amber'};
+  if(live.status==='blocked_by_issuer')return {label:'Issuer check blocked',tone:'amber'};
+  if(live.status==='broken')return {label:'Source problem',tone:'red'};
   const q=offerDataQuality(o);
   if(q.needsReview)return {label:'Offer needs verification',tone:'amber'};
   if(o.status&&o.status!=='open')return {label:String(o.status).replace(/-/g,' '),tone:'blue'};
-  return {label:'Open / tracked',tone:'green'};
+  return {label:'Open card',tone:'green'};
 }
 function marketCard(o){
   const st=marketStatus(o);
-  return `<div class="item"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af||0)} • ${currentSpendLabel(o)}</div></div><span class="pill ${st.tone}">${st.label}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerRequirementText(o)}${bonusValueText(o)}${personalReportingWarningHTML(o)}${o.offerNote?`<div class="small" style="margin-top:7px">${o.offerNote}</div>`:''}<div class="small" style="margin-top:7px">${o.verified?`Offer data checked ${o.verifiedDate||''}`:'Current offer still needs verification'} • Browse view does not judge whether this card fits your personal strategy.</div>${issuerLinkHTML(o)}</div>`;
+  return `<div class="item"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af||0)} • ${currentSpendLabel(o)}</div></div><span class="pill ${st.tone}">${st.label}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerRequirementText(o)}${bonusValueText(o)}${personalReportingWarningHTML(o)}${o.offerNote?`<div class="small" style="margin-top:7px">${o.offerNote}</div>`:''}<div class="small" style="margin-top:7px">${(()=>{const q=effectiveOfferDataStatus(o);return `<b>${q.label}</b>${q.detail?` • ${q.detail}`:''}`})()} • Browse view does not judge whether this card fits your personal strategy.</div>${issuerLinkHTML(o)}</div>`;
 }
 function offers(){
   const list=marketOffers();
@@ -1444,6 +1463,7 @@ async function loadCatalog(){
     if(!r.ok) throw new Error('cards.json HTTP '+r.status);
     const payload=await r.json();
     if(!payload||!Array.isArray(payload.cards)) throw new Error('Invalid cards.json');
+    try{const mr=await fetch('offer-report.json?v='+Date.now(),{cache:'no-store'});if(mr.ok){const rep=await mr.json();OFFER_MONITOR_STATUS=Object.fromEntries((rep.results||[]).map(x=>[String(x.id),x]));}}catch(_e){OFFER_MONITOR_STATUS={};}
     BUSINESS_CATALOG=payload.cards.filter(c=>c.type==='Business');
     PERSONAL_CATALOG=payload.cards.filter(c=>c.type==='Personal');
     if(payload.catalogVersion) data.catalogSourceVersion=payload.catalogVersion;
