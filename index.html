@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.2.20</title>
+  <title>CardPilot v11.2.23</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -47,7 +47,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.2.20</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.2.23</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -830,7 +830,7 @@ function offerFit(o){
   // A concrete benefit selection is a gate for the main recommendation list.
   // Generic SUB economics can rank matching cards, but cannot turn an unrelated card
   // (for example AT&T Points Plus in a Travel-only search) into a Top-10 recommendation.
-  const concreteSelected=selected.filter(x=>x!=='hist');
+  const concreteSelected=selected.filter(x=>!['hist','none'].includes(x));
   if(concreteSelected.length>0 && categoryMatchCount===0){
     forced='avoid';
     score=Math.min(score,20);
@@ -1335,7 +1335,11 @@ function apply(){
   const ranked=rankedOffers(), f=five24();
   // Top 10 is primarily a product-fit list. Cards with strong category fit can appear even
   // when the current welcome offer still needs verification; those cards are labeled clearly.
-  const topPool=ranked.filter(x=>(x.fit.status==='consider'||x.fit.status==='verify') && x.fit.categoryMatchCount>0);
+  // Only require a category match when the user actually selected a concrete benefit category.
+  // Historical-max / big-SUB and "not sure" are ranking goals, not product categories.
+  const concreteSelected=(data.profile.interests||[]).filter(x=>!['hist','none'].includes(x));
+  const requireCategoryMatch=concreteSelected.length>0;
+  const topPool=ranked.filter(x=>(x.fit.status==='consider'||x.fit.status==='verify') && (!requireCategoryMatch || x.fit.categoryMatchCount>0));
   const top=topPool.slice(0,10);
   const topIds=new Set(top.map(x=>x.offer.id));
   const waits=ranked.filter(x=>x.fit.status==='wait');
@@ -1347,8 +1351,8 @@ function apply(){
   return `<div class="between" style="margin-bottom:12px"><button class="btn ghost" onclick="showView('homeView')">← Home</button><button class="btn ghost" onclick="openPreferencePicker()">Fine-tune</button></div>
   <div class="welcome"><div class="small">FIND A CARD</div><h2>Your best matches ✨</h2><p>CardPilot considered your wallet, strategy and saved preferences. You can change this search without changing your saved cards.</p></div><div class="session-actions"><button class="btn ghost" onclick="changeFindAnswers()">✏️ Change 3 quick answers</button><button class="btn ghost" onclick="restartFindFlow()">↻ New search</button></div><button class="btn ghost danger" style="width:100%;margin:0 0 13px" onclick="resetAllRecommendationSettings()">Reset all recommendation settings</button><div class="small" style="margin:-5px 4px 12px;text-align:center">Keeps My Cards and banking relationships. Clears all other recommendation answers, fine-tuning, benefits and strategy settings.</div>
   ${f>=5?`<div class="warningbox"><b>${f}/24:</b> Chase cards affected by 5/24 are handled using your saved settings.</div>`:''}
-  ${top.length?`<div class="section" style="margin-top:14px">Top ${Math.min(10,top.length)} recommendations</div><div class="section-hint"><b>Selected benefits:</b> ${interestsLabel()}. Only cards matching at least one selected benefit can appear here. If fewer than 10 cards satisfy your fee, benefit, spend, eligibility, and strategy constraints, CardPilot shows fewer rather than padding the list with unrelated cards. Unverified current offer details are labeled separately.</div><div class="list" style="margin-top:12px">${top.map((x,i)=>simpleRecommendationCard(x,i+1)).join('')}</div>`:`<div class="note"><b>No strong match right now.</b><div class="small" style="margin-top:5px">No card currently satisfies all of the selected constraints. Try changing one preference or browse the full card market.</div></div>`}
-  <div class="card" style="margin-top:14px"><div class="small">REFINE YOUR LIST</div><h3 style="margin:4px 0 5px">Want to narrow the top 10?</h3><div class="small">Use the quick fine-tuning sections below. Advanced strategy settings remain available separately when you need them.</div></div>
+  ${top.length?`<div class="section" style="margin-top:14px">${top.length===1?'1 strong match':`Top ${Math.min(10,top.length)} recommendations`}</div><div class="section-hint"><b>Selected benefits:</b> ${interestsLabel()}. Only cards matching at least one selected benefit can appear here. If fewer than 10 cards satisfy your fee, benefit, spend, eligibility, and strategy constraints, CardPilot shows fewer rather than padding the list with unrelated cards. Unverified current offer details are labeled separately.</div><div class="list" style="margin-top:12px">${top.map((x,i)=>simpleRecommendationCard(x,i+1)).join('')}</div>`:`<div class="note"><b>No strong match right now.</b><div class="small" style="margin-top:5px">No card currently satisfies all of the selected constraints. Try changing one preference or browse the full card market.</div></div>`}
+  <div class="card" style="margin-top:14px"><div class="small">ADJUST YOUR RESULTS</div><h3 style="margin:4px 0 5px">Change the search or fine-tune the results</h3><div class="small">Broaden / Change Search returns to your 3 quick questions with your current answers preserved. Fine-Tune Results changes how matching cards are ranked without changing those answers.</div><div class="row" style="gap:10px;margin-top:12px;flex-wrap:wrap"><button class="btn ghost" onclick="changeFindAnswers()">Broaden / Change Search</button><button class="btn ghost" onclick="document.getElementById('refinementPanel')?.setAttribute('open','');document.getElementById('refinementPanel')?.scrollIntoView({behavior:'smooth',block:'start'})">Fine-Tune Results</button></div></div>
   ${refinementPanelHTML()}
   ${refineActive?`<div id="refinedResults" class="section">Refined top 10</div><div class="section-hint">Ranked by your 1st, 2nd, and 3rd priorities in that order.</div><div class="list">${refined.map((x,i)=>refinedRecommendationCard(x,i+1)).join('')}</div>`:''}
   ${waits.length?`<details class="card" style="margin-top:14px"><summary><b>Worth waiting for (${waits.length})</b></summary><div class="section-hint">Strong possibilities where timing or eligibility gives CardPilot a concrete reason to wait.</div><div class="list">${waits.slice(0,6).map(x=>offerCard(x.offer,true,x.fit)).join('')}</div></details>`:''}
