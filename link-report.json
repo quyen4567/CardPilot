@@ -1,0 +1,104 @@
+{
+  "catalogVersion": "2026-09-24.4",
+  "checkedAt": "2026-09-25T01:54:43.324Z",
+  "checked": 8,
+  "broken": 0,
+  "results": [
+    {
+      "id": 7001,
+      "issuer": "Chase",
+      "name": "Ink Business Unlimited",
+      "url": "https://creditcards.chase.com/business-credit-cards/ink/unlimited",
+      "lastVerified": "2026-09-24",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://creditcards.chase.com/business-credit-cards/ink/unlimited",
+      "hostChanged": false,
+      "checkedAt": "2026-09-25T01:54:42.938Z"
+    },
+    {
+      "id": 7002,
+      "issuer": "Chase",
+      "name": "Ink Business Cash",
+      "url": "https://creditcards.chase.com/business-credit-cards/ink/cash",
+      "lastVerified": "2026-09-24",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://creditcards.chase.com/business-credit-cards/ink/cash",
+      "hostChanged": false,
+      "checkedAt": "2026-09-25T01:54:42.977Z"
+    },
+    {
+      "id": 8008,
+      "issuer": "Chase",
+      "name": "United Explorer",
+      "url": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
+      "lastVerified": "2026-09-24",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
+      "hostChanged": false,
+      "checkedAt": "2026-09-25T01:54:42.947Z"
+    },
+    {
+      "id": 8009,
+      "issuer": "Chase",
+      "name": "United Quest",
+      "url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
+      "lastVerified": "2026-09-24",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
+      "hostChanged": false,
+      "checkedAt": "2026-09-25T01:54:42.939Z"
+    },
+    {
+      "id": 8010,
+      "issuer": "Chase",
+      "name": "United Club",
+      "url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
+      "lastVerified": "2026-09-24",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
+      "hostChanged": false,
+      "checkedAt": "2026-09-25T01:54:42.959Z"
+    },
+    {
+      "id": 8011,
+      "issuer": "Chase",
+      "name": "United Gateway",
+      "url": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
+      "lastVerified": "2026-09-24",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
+      "hostChanged": false,
+      "checkedAt": "2026-09-25T01:54:43.206Z"
+    },
+    {
+      "id": 8210,
+      "issuer": "Citi",
+      "name": "AT&T Points Plus",
+      "url": "https://www.citi.com/credit-cards/citi-att-pointsplus-credit-card",
+      "lastVerified": "2026-09-23",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.citi.com/credit-cards/citi-att-pointsplus-credit-card",
+      "hostChanged": false,
+      "checkedAt": "2026-09-25T01:54:43.324Z"
+    },
+    {
+      "id": 8404,
+      "issuer": "Bank of America",
+      "name": "Unlimited Cash Rewards",
+      "url": "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/",
+      "lastVerified": "2026-09-23",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/",
+      "hostChanged": false,
+      "checkedAt": "2026-09-25T01:54:43.305Z"
+    }
+  ]
+}
