@@ -1,9 +1,9 @@
 {
-  "catalogVersion": "2026-09-24.4",
-  "checkedAt": "2026-09-26T13:29:15.132Z",
+  "catalogVersion": "2026-09-26.1",
+  "checkedAt": "2026-09-26T17:16:18.858Z",
   "counts": {
-    "verified": 63,
-    "needs_review": 80,
+    "verified": 72,
+    "needs_review": 71,
     "blocked_by_issuer": 0,
     "broken": 0
   },
@@ -24,7 +24,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7002,
@@ -42,7 +42,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7003,
@@ -51,7 +51,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7004,
@@ -60,7 +60,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7005,
@@ -69,7 +69,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7006,
@@ -78,7 +78,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7007,
@@ -87,7 +87,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7008,
@@ -96,7 +96,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7009,
@@ -105,7 +105,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7010,
@@ -116,7 +116,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7011,
@@ -127,7 +127,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7101,
@@ -136,7 +136,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7102,
@@ -145,7 +145,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7103,
@@ -156,7 +156,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7104,
@@ -165,7 +165,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7105,
@@ -176,7 +176,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7106,
@@ -187,7 +187,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7107,
@@ -198,7 +198,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7108,
@@ -209,7 +209,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7109,
@@ -220,7 +220,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7110,
@@ -229,7 +229,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7111,
@@ -238,7 +238,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7201,
@@ -247,7 +247,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7202,
@@ -256,7 +256,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7203,
@@ -265,7 +265,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7204,
@@ -274,7 +274,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7205,
@@ -283,7 +283,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7206,
@@ -292,7 +292,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7207,
@@ -301,7 +301,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7301,
@@ -312,7 +312,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7302,
@@ -321,7 +321,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7401,
@@ -330,7 +330,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7402,
@@ -339,7 +339,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7403,
@@ -348,7 +348,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7404,
@@ -357,7 +357,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7405,
@@ -368,7 +368,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7501,
@@ -377,7 +377,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7502,
@@ -388,7 +388,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7503,
@@ -397,7 +397,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7504,
@@ -406,7 +406,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7505,
@@ -415,7 +415,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7601,
@@ -424,7 +424,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7701,
@@ -433,7 +433,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 7702,
@@ -444,29 +444,43 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8001,
       "issuer": "Chase",
       "name": "Sapphire Preferred",
-      "status": "needs_review",
-      "source": "catalog-only",
-      "issues": [
-        "No current bonus is stored and no explicit no-offer state is set."
+      "status": "verified",
+      "httpStatus": 200,
+      "url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+      "finalUrl": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+      "expectedTerms": [
+        "75,000",
+        "5,000",
+        "3 months",
+        "95 annual fee"
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "missingTerms": [],
+      "issues": [],
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8002,
       "issuer": "Chase",
       "name": "Sapphire Reserve",
-      "status": "needs_review",
-      "source": "catalog-only",
-      "issues": [
-        "No current bonus is stored and no explicit no-offer state is set."
+      "status": "verified",
+      "httpStatus": 200,
+      "url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+      "finalUrl": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+      "expectedTerms": [
+        "100,000",
+        "6,000",
+        "3 months",
+        "795 annual fee"
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "missingTerms": [],
+      "issues": [],
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8003,
@@ -475,7 +489,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8004,
@@ -486,40 +500,61 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8005,
       "issuer": "Chase",
       "name": "Southwest Rapid Rewards Plus",
-      "status": "needs_review",
-      "source": "catalog-only",
-      "issues": [
-        "No current bonus is stored and no explicit no-offer state is set."
+      "status": "verified",
+      "httpStatus": 200,
+      "url": "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
+      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
+      "expectedTerms": [
+        "50,000",
+        "1,000",
+        "3 months",
+        "99"
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "missingTerms": [],
+      "issues": [],
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8006,
       "issuer": "Chase",
       "name": "Southwest Rapid Rewards Premier",
-      "status": "needs_review",
-      "source": "catalog-only",
-      "issues": [
-        "No current bonus is stored and no explicit no-offer state is set."
+      "status": "verified",
+      "httpStatus": 200,
+      "url": "https://creditcards.chase.com/travel-credit-cards/southwest/premier",
+      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/southwest/premier",
+      "expectedTerms": [
+        "55,000",
+        "1,500",
+        "3 months",
+        "149"
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "missingTerms": [],
+      "issues": [],
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8007,
       "issuer": "Chase",
       "name": "Southwest Rapid Rewards Priority",
-      "status": "needs_review",
-      "source": "catalog-only",
-      "issues": [
-        "No current bonus is stored and no explicit no-offer state is set."
+      "status": "verified",
+      "httpStatus": 200,
+      "url": "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
+      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
+      "expectedTerms": [
+        "60,000",
+        "2,000",
+        "3 months",
+        "229"
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "missingTerms": [],
+      "issues": [],
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8008,
@@ -540,7 +575,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8009,
@@ -563,7 +598,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8010,
@@ -584,7 +619,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8011,
@@ -605,7 +640,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8012,
@@ -617,7 +652,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8013,
@@ -629,7 +664,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8014,
@@ -641,7 +676,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8015,
@@ -653,7 +688,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8016,
@@ -665,7 +700,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8017,
@@ -677,7 +712,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8018,
@@ -689,7 +724,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8019,
@@ -701,7 +736,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8020,
@@ -713,7 +748,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8021,
@@ -725,7 +760,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8101,
@@ -734,7 +769,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8102,
@@ -745,7 +780,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8103,
@@ -757,7 +792,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8104,
@@ -766,7 +801,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8105,
@@ -775,7 +810,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8106,
@@ -786,7 +821,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8107,
@@ -798,7 +833,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8108,
@@ -810,7 +845,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8109,
@@ -822,7 +857,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8110,
@@ -834,7 +869,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8111,
@@ -846,7 +881,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8112,
@@ -857,7 +892,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8113,
@@ -868,7 +903,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8114,
@@ -879,7 +914,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8115,
@@ -890,7 +925,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8201,
@@ -902,30 +937,51 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8202,
       "issuer": "Citi",
       "name": "Strata Elite",
       "status": "needs_review",
-      "source": "catalog-only",
-      "issues": [
-        "Bonus is present but spend requirement is missing."
+      "httpStatus": 200,
+      "url": "https://www.citi.com/credit-cards/citi-strata-elite-credit-card",
+      "finalUrl": "https://www.citi.com/credit-cards/citi-strata-elite-credit-card",
+      "expectedTerms": [
+        "75,000",
+        "6,000",
+        "3 months",
+        "595"
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "missingTerms": [
+        "75,000"
+      ],
+      "issues": [
+        "Missing expected term: 75,000"
+      ],
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8203,
       "issuer": "Citi",
       "name": "Strata",
       "status": "needs_review",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set."
+      "httpStatus": 200,
+      "url": "https://www.citi.com/credit-cards/citi-strata-credit-card",
+      "finalUrl": "https://www.citi.com/credit-cards/citi-strata-credit-card",
+      "expectedTerms": [
+        "20,000",
+        "1,000",
+        "3 months",
+        "0 annual fee"
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "missingTerms": [
+        "20,000"
+      ],
+      "issues": [
+        "Missing expected term: 20,000"
+      ],
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8204,
@@ -934,7 +990,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8205,
@@ -945,7 +1001,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8206,
@@ -954,7 +1010,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8207,
@@ -966,7 +1022,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8208,
@@ -978,7 +1034,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8209,
@@ -989,7 +1045,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8210,
@@ -1002,19 +1058,25 @@
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8301,
       "issuer": "Capital One",
       "name": "Venture X Rewards",
-      "status": "needs_review",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set."
+      "status": "verified",
+      "httpStatus": 200,
+      "url": "https://www.capitalone.com/credit-cards/venture-x/",
+      "finalUrl": "https://www.capitalone.com/credit-cards/venture-x/",
+      "expectedTerms": [
+        "75,000",
+        "4,000",
+        "3 months",
+        "395"
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "missingTerms": [],
+      "issues": [],
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8302,
@@ -1023,40 +1085,61 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8303,
       "issuer": "Capital One",
       "name": "VentureOne Rewards",
-      "status": "needs_review",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set."
+      "status": "verified",
+      "httpStatus": 200,
+      "url": "https://www.capitalone.com/credit-cards/ventureone/",
+      "finalUrl": "https://www.capitalone.com/credit-cards/ventureone/",
+      "expectedTerms": [
+        "20,000",
+        "500",
+        "3 months",
+        "0 annual fee"
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "missingTerms": [],
+      "issues": [],
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8304,
       "issuer": "Capital One",
       "name": "Savor Cash Rewards",
       "status": "verified",
-      "source": "catalog-only",
+      "httpStatus": 200,
+      "url": "https://www.capitalone.com/credit-cards/savor/",
+      "finalUrl": "https://www.capitalone.com/credit-cards/savor/",
+      "expectedTerms": [
+        "200",
+        "500",
+        "3 months",
+        "0 annual fee"
+      ],
+      "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8305,
       "issuer": "Capital One",
       "name": "Quicksilver Cash Rewards",
-      "status": "needs_review",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set."
+      "status": "verified",
+      "httpStatus": 200,
+      "url": "https://www.capitalone.com/credit-cards/quicksilver/",
+      "finalUrl": "https://www.capitalone.com/credit-cards/quicksilver/",
+      "expectedTerms": [
+        "200",
+        "500",
+        "3 months",
+        "0 annual fee"
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "missingTerms": [],
+      "issues": [],
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8401,
@@ -1065,7 +1148,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8402,
@@ -1074,7 +1157,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8403,
@@ -1085,7 +1168,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8404,
@@ -1098,43 +1181,83 @@
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8405,
       "issuer": "Bank of America",
       "name": "Travel Rewards",
-      "status": "needs_review",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set."
+      "status": "verified",
+      "httpStatus": 200,
+      "url": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/",
+      "finalUrl": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/",
+      "expectedTerms": [
+        "25,000",
+        "1,000",
+        "90 days",
+        "no annual fee"
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "missingTerms": [],
+      "issues": [],
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8406,
       "issuer": "Bank of America",
       "name": "Atmos Rewards Ascent",
       "status": "needs_review",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set."
+      "httpStatus": 200,
+      "url": "https://www.bankofamerica.com/credit-cards/",
+      "finalUrl": "https://www.bankofamerica.com/credit-cards/",
+      "expectedTerms": [
+        "50,000",
+        "1,500",
+        "90 days",
+        "99 Companion Fare",
+        "95 annual fee"
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "missingTerms": [
+        "50,000",
+        "90 days",
+        "99 Companion Fare",
+        "95 annual fee"
+      ],
+      "issues": [
+        "Missing expected term: 50,000",
+        "Missing expected term: 90 days",
+        "Missing expected term: 99 Companion Fare",
+        "Missing expected term: 95 annual fee"
+      ],
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8407,
       "issuer": "Bank of America",
       "name": "Atmos Rewards Summit",
       "status": "needs_review",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set."
+      "httpStatus": 200,
+      "url": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-infinite-credit-card/",
+      "finalUrl": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-infinite-credit-card/",
+      "expectedTerms": [
+        "70,000",
+        "25,000-point Global Companion Award",
+        "3,000",
+        "90 days",
+        "395 annual fee"
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "missingTerms": [
+        "70,000",
+        "25,000-point Global Companion Award",
+        "90 days",
+        "395 annual fee"
+      ],
+      "issues": [
+        "Missing expected term: 70,000",
+        "Missing expected term: 25,000-point Global Companion Award",
+        "Missing expected term: 90 days",
+        "Missing expected term: 395 annual fee"
+      ],
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8408,
@@ -1146,7 +1269,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8409,
@@ -1158,7 +1281,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8501,
@@ -1170,7 +1293,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8502,
@@ -1179,7 +1302,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8503,
@@ -1188,7 +1311,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8504,
@@ -1200,7 +1323,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8505,
@@ -1211,7 +1334,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8506,
@@ -1223,7 +1346,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8507,
@@ -1235,7 +1358,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8508,
@@ -1247,7 +1370,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8601,
@@ -1258,7 +1381,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8602,
@@ -1270,7 +1393,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8603,
@@ -1282,7 +1405,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8604,
@@ -1293,7 +1416,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8605,
@@ -1302,7 +1425,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8606,
@@ -1313,7 +1436,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8701,
@@ -1322,7 +1445,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8702,
@@ -1334,7 +1457,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8703,
@@ -1346,7 +1469,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8704,
@@ -1358,7 +1481,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8705,
@@ -1367,7 +1490,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8706,
@@ -1378,7 +1501,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8801,
@@ -1389,7 +1512,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8816,
@@ -1400,7 +1523,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8817,
@@ -1409,7 +1532,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8802,
@@ -1420,7 +1543,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8803,
@@ -1431,7 +1554,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8804,
@@ -1442,7 +1565,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8805,
@@ -1451,7 +1574,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8815,
@@ -1460,7 +1583,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8806,
@@ -1469,7 +1592,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8807,
@@ -1478,7 +1601,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8808,
@@ -1489,7 +1612,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8809,
@@ -1500,7 +1623,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8810,
@@ -1511,7 +1634,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8811,
@@ -1522,7 +1645,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8812,
@@ -1531,7 +1654,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8901,
@@ -1540,7 +1663,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8902,
@@ -1549,7 +1672,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8903,
@@ -1558,7 +1681,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     },
     {
       "id": 8904,
@@ -1567,7 +1690,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-09-26T13:29:15.132Z"
+      "checkedAt": "2026-09-26T17:16:18.858Z"
     }
   ]
 }
