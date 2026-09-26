@@ -1,6 +1,6 @@
 {
   "catalogVersion": "2026-09-24.4",
-  "checkedAt": "2026-09-25T13:32:55.302Z",
+  "checkedAt": "2026-09-26T13:29:15.073Z",
   "checked": 8,
   "broken": 0,
   "results": [
@@ -14,7 +14,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/ink/unlimited",
       "hostChanged": false,
-      "checkedAt": "2026-09-25T13:32:54.921Z"
+      "checkedAt": "2026-09-26T13:29:14.650Z"
     },
     {
       "id": 7002,
@@ -26,7 +26,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/ink/cash",
       "hostChanged": false,
-      "checkedAt": "2026-09-25T13:32:54.911Z"
+      "checkedAt": "2026-09-26T13:29:14.652Z"
     },
     {
       "id": 8008,
@@ -38,7 +38,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
       "hostChanged": false,
-      "checkedAt": "2026-09-25T13:32:54.914Z"
+      "checkedAt": "2026-09-26T13:29:14.725Z"
     },
     {
       "id": 8009,
@@ -50,7 +50,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
       "hostChanged": false,
-      "checkedAt": "2026-09-25T13:32:54.915Z"
+      "checkedAt": "2026-09-26T13:29:14.724Z"
     },
     {
       "id": 8010,
@@ -62,7 +62,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
       "hostChanged": false,
-      "checkedAt": "2026-09-25T13:32:54.916Z"
+      "checkedAt": "2026-09-26T13:29:14.752Z"
     },
     {
       "id": 8011,
@@ -74,7 +74,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
       "hostChanged": false,
-      "checkedAt": "2026-09-25T13:32:55.063Z"
+      "checkedAt": "2026-09-26T13:29:14.841Z"
     },
     {
       "id": 8210,
@@ -86,7 +86,7 @@
       "status": 200,
       "finalUrl": "https://www.citi.com/credit-cards/citi-att-pointsplus-credit-card",
       "hostChanged": false,
-      "checkedAt": "2026-09-25T13:32:55.131Z"
+      "checkedAt": "2026-09-26T13:29:14.947Z"
     },
     {
       "id": 8404,
@@ -98,7 +98,7 @@
       "status": 200,
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/",
       "hostChanged": false,
-      "checkedAt": "2026-09-25T13:32:55.302Z"
+      "checkedAt": "2026-09-26T13:29:15.073Z"
     }
   ]
 }
