@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-09-26.1",
+  "catalogVersion": "2026-09-26.2",
   "generatedAt": "2026-09-26T16:30:00Z",
   "cards": [
     {
@@ -643,14 +643,26 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-22",
-      "offerNote": "Verified public high: $500. A $1,000 after $10,000 spend YMMV/special offer was documented again Feb. 18, 2023; it is tracked separately from the public high.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Bank of America online offer: $500 cash rewards bonus after at least $5,000 in purchases within 90 days of account opening. Online-only offer; issuer says it may not be available if you leave the page, visit a financial center, or call.",
       "offerType": "public",
-      "confidence": "high",
+      "confidence": "official-issuer",
       "tags": [
         "cash",
         "bofa"
-      ]
+      ],
+      "spendQualifiedBonus": 500,
+      "spendPeriod": "90 days of account opening",
+      "issuerUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-unlimited-cash-rewards",
+      "issuerUrlVerified": "2026-09-26",
+      "monitorExpected": [
+        "500",
+        "5,000",
+        "90 days",
+        "no annual fee"
+      ],
+      "offerState": "verified-current",
+      "promoNote": "Ongoing rewards: unlimited 1.5% cash back on purchases; eligible Preferred Rewards for Business members can earn a relationship bonus, up to 2.62% at Platinum Honors."
     },
     {
       "id": 7402,
@@ -666,14 +678,26 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-22",
-      "offerNote": "Documented public historical high: $750 after $5,000 spend, published Feb. 28, 2021. Current tracked offer: $500 after $5,000 spend.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Bank of America online offer: $500 cash rewards bonus after at least $5,000 in purchases within 90 days of account opening. Online-only offer; issuer says it may not be available if you leave the page, visit a financial center, or call.",
       "offerType": "public",
-      "confidence": "high",
+      "confidence": "official-issuer",
       "tags": [
         "cash",
         "bofa"
-      ]
+      ],
+      "spendQualifiedBonus": 500,
+      "spendPeriod": "90 days of account opening",
+      "issuerUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-customized-cash-rewards",
+      "issuerUrlVerified": "2026-09-26",
+      "monitorExpected": [
+        "500",
+        "5,000",
+        "90 days",
+        "no annual fee"
+      ],
+      "offerState": "verified-current",
+      "promoNote": "Ongoing rewards: 3% cash back in a choice category, 2% on dining, and 1% on other purchases. The 3% and 2% rates apply to the first $50,000 in combined choice-category/dining purchases each calendar year, then 1%; eligible Preferred Rewards for Business members can earn more."
     },
     {
       "id": 7403,
@@ -687,11 +711,26 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
+      "verifiedDate": "2026-09-26",
       "tags": [
         "travel",
         "bofa"
-      ]
+      ],
+      "spendQualifiedBonus": 50000,
+      "spendPeriod": "first 90 days of account opening",
+      "issuerUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-travel-rewards",
+      "issuerUrlVerified": "2026-09-26",
+      "monitorExpected": [
+        "50,000",
+        "5,000",
+        "90 days",
+        "no annual fee"
+      ],
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer",
+      "offerNote": "Official Bank of America online offer: 50,000 bonus points after at least $5,000 in purchases in the first 90 days of account opening; issuer states the bonus can be redeemed for a $500 statement credit toward travel or dining purchases.",
+      "promoNote": "Ongoing rewards: 3 points per $1 on travel booked through the Bank of America Travel Center and 1.5 points per $1 on other purchases; eligible Preferred Rewards for Business members can earn more."
     },
     {
       "id": 7404,
@@ -2178,17 +2217,33 @@
       "bonus": 200,
       "unit": "cash",
       "hist": null,
-      "spend": null,
+      "spend": 1000,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Issuer currently advertises $200 online cash rewards bonus and first-year category boost.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Bank of America offer: $200 online cash rewards bonus after at least $1,000 in purchases in the first 90 days of account opening; no annual fee.",
       "tags": [
         "cash",
         "bofa"
-      ]
+      ],
+      "spendQualifiedBonus": 200,
+      "spendPeriod": "first 90 days of account opening",
+      "issuerUrl": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
+      "issuerUrlVerified": "2026-09-26",
+      "monitorExpected": [
+        "200",
+        "1,000",
+        "90 days",
+        "no annual fee",
+        "6% cash back",
+        "first year"
+      ],
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer",
+      "promoNote": "First-year reward promotion: 6% cash back in the selected choice category (3% base + 3% first-year bonus), 2% at grocery stores and wholesale clubs, and 1% on other purchases. The 6%/2% rates apply to the first $2,500 in combined eligible purchases each quarter; after the first-year bonus ends, the choice-category rate returns to 3%. The first-year category boost is kept separate from the $200 sign-up bonus because its value depends on actual eligible spend."
     },
     {
       "id": 8404,

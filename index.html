@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.2.26</title>
+  <title>CardPilot v11.2.27</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -47,7 +47,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, with application eligibility in context.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.2.26</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, with application eligibility in context.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.2.27</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -80,7 +80,7 @@ let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
 let BUSINESS_CATALOG=[];
 let PERSONAL_CATALOG=[];
 let OFFER_MONITOR_STATUS={};
-const CATALOG_VERSION='2026-09-26.1';
+const CATALOG_VERSION='2026-09-26.2';
 
 function migrateV8(){
   data.profile=data.profile||{};
@@ -594,6 +594,11 @@ function offerRequirementText(o){
   if(o.additionalRequirement)bits.push(o.additionalRequirement);
   if(!bits.length && o.offerRequirementText)bits.push(o.offerRequirementText);
   return bits.length?`<div class="small" style="margin-top:4px;color:#667085">${bits.join(' • ')}</div>`:'';
+}
+
+function promotionalOfferText(o){
+  if(!o.promoNote)return '';
+  return `<div class="small" style="margin-top:6px;color:#365d96"><b>Current reward promotion:</b> ${o.promoNote}</div>`;
 }
 
 function historicalOfferText(o){
@@ -1301,7 +1306,7 @@ function refinedRecommendationCard(x,rank){
     if(mode==='keeper')metricBits.push(`Keeper score emphasizes ongoing value, useful benefits, earning power, and annual-fee economics.`);
   }
   const metric=metricBits.length?`<div class="small" style="margin-top:7px;color:#365d96"><b>Why it ranks here:</b> ${metricBits.join(' • ')}</div>`:'';
-  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerRequirementText(o)}${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${metric}<button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}${(()=>{const q=effectiveOfferDataStatus(o);const color=q.status==='verified'?'#157347':q.status==='blocked_by_issuer'?'#8a5a00':'#9b2c2c';return `<div class="small" style="margin-top:7px;color:${color}"><b>${q.label}</b>${q.detail?` • ${q.detail}`:''}</div>`})()}</div>`;
+  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerRequirementText(o)}${promotionalOfferText(o)}${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${metric}<button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}${(()=>{const q=effectiveOfferDataStatus(o);const color=q.status==='verified'?'#157347':q.status==='blocked_by_issuer'?'#8a5a00':'#9b2c2c';return `<div class="small" style="margin-top:7px;color:${color}"><b>${q.label}</b>${q.detail?` • ${q.detail}`:''}</div>`})()}</div>`;
 }
 
 function five24AfterApprovalHTML(o){
@@ -1335,7 +1340,7 @@ function simpleRecommendationCard(x,rank){
   const badge=needsVerify?'Offer needs verification':rank===1?'Top recommendation':rank===2?'Also strong':'Worth considering';
   const tone=needsVerify?'amber':'green';
   const verifyNote=needsVerify?`<div class="data-note" style="margin-top:8px"><b>⚠ Card fit looks relevant, but the current welcome offer or required spend is not fully verified.</b> Confirm the live issuer terms before applying.</div>`:'';
-  return `<div class="simple-rec ${rank===1?'top-pick':''}"><div class="between"><div class="rankline"><span class="ranknum">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • Annual fee ${fmt(o.af||0)}</div></div></div><span class="pill ${tone}">${badge}</span></div><div class="rec-bonus">${currentOfferLabel(o)}</div>${offerRequirementText(o)}${bonusValueText(o)}${reasons.length?`<div class="reason-list">${reasons.map(r=>`<div class="reason-item">✓ ${r}</div>`).join('')}</div>`:''}${verifyNote}${five24AfterApprovalHTML(o)}<div class="rec-buttons"><button class="btn ghost" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}</div><details class="details-clean"><summary>Advanced details</summary>${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:7px">${historicalOfferText(o)}${o.verifiedDate?` • Offer data checked ${o.verifiedDate}`:''}</div></details></div>`;
+  return `<div class="simple-rec ${rank===1?'top-pick':''}"><div class="between"><div class="rankline"><span class="ranknum">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • Annual fee ${fmt(o.af||0)}</div></div></div><span class="pill ${tone}">${badge}</span></div><div class="rec-bonus">${currentOfferLabel(o)}</div>${offerRequirementText(o)}${promotionalOfferText(o)}${bonusValueText(o)}${reasons.length?`<div class="reason-list">${reasons.map(r=>`<div class="reason-item">✓ ${r}</div>`).join('')}</div>`:''}${verifyNote}${five24AfterApprovalHTML(o)}<div class="rec-buttons"><button class="btn ghost" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}</div><details class="details-clean"><summary>Advanced details</summary>${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:7px">${historicalOfferText(o)}${o.verifiedDate?` • Offer data checked ${o.verifiedDate}`:''}</div></details></div>`;
 }
 
 function apply(){
@@ -1381,7 +1386,7 @@ function rankedOfferCard(x,rank){
   const o=x.offer, fit=x.fit;
   const badge=rank===1?'Best match':rank===2?'Next best':'Strong alternative';
   const why=[...fit.reasons].slice(0,4).map(r=>`<div style="margin-top:4px;color:#157347">✓ ${r}</div>`).join('');
-  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerRequirementText(o)}${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:8px">${why}</div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this is #${rank}</button>${issuerLinkHTML(o)}${(()=>{const q=effectiveOfferDataStatus(o);const color=q.status==='verified'?'#157347':q.status==='blocked_by_issuer'?'#8a5a00':'#9b2c2c';return `<div class="small" style="margin-top:7px;color:${color}"><b>${q.label}</b>${q.detail?` • ${q.detail}`:''}</div>`})()}</div>`;
+  return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerRequirementText(o)}${promotionalOfferText(o)}${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:8px">${why}</div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this is #${rank}</button>${issuerLinkHTML(o)}${(()=>{const q=effectiveOfferDataStatus(o);const color=q.status==='verified'?'#157347':q.status==='blocked_by_issuer'?'#8a5a00':'#9b2c2c';return `<div class="small" style="margin-top:7px;color:${color}"><b>${q.label}</b>${q.detail?` • ${q.detail}`:''}</div>`})()}</div>`;
 }
 
 function liveOfferMonitor(o){return OFFER_MONITOR_STATUS[String(o.id)]||null}
@@ -1396,7 +1401,7 @@ function effectiveOfferDataStatus(o){
 function offerCard(o,reason=false,fit=null){
   fit=fit||offerFit(o);
   const cls=fit.status==='consider'?'green':fit.status==='wait'?'amber':fit.status==='save'?'blue':'red';
-  return `<div class="item ${fit.disabled?'disabled-card':''}"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div><span class="pill ${cls}">${fit.label}</span></div><div class="between" style="margin-top:9px"><div><b>${currentOfferLabel(o)}</b></div><div class="small">${historicalOfferText(o)}</div></div>${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}${o.offerNote?`<div class="small" style="margin-top:6px">${o.offerNote}</div>`:''}${reason?`<div class="small" style="margin-top:7px">${fit.reasons[0]?` <span style="color:#157347">✓ ${fit.reasons[0]}</span>`:''}${fit.cautions[0]?`<div style="margin-top:4px;color:#9b2c2c">✕ ${fit.cautions[0]}</div>`:''}</div><button class="btn ghost" style="margin-top:8px;padding:7px 10px" onclick="whyOffer(${o.id})">Why?</button>`:''}${issuerLinkHTML(o)}${(()=>{const q=effectiveOfferDataStatus(o);const color=q.status==='verified'?'#157347':q.status==='blocked_by_issuer'?'#8a5a00':'#9b2c2c';return `<div class="small" style="margin-top:7px;color:${color}"><b>${q.label}</b>${q.detail?` • ${q.detail}`:''}</div>`})()}</div>`
+  return `<div class="item ${fit.disabled?'disabled-card':''}"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div><span class="pill ${cls}">${fit.label}</span></div><div class="between" style="margin-top:9px"><div><b>${currentOfferLabel(o)}</b></div><div class="small">${historicalOfferText(o)}</div></div>${promotionalOfferText(o)}${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}${o.offerNote?`<div class="small" style="margin-top:6px">${o.offerNote}</div>`:''}${reason?`<div class="small" style="margin-top:7px">${fit.reasons[0]?` <span style="color:#157347">✓ ${fit.reasons[0]}</span>`:''}${fit.cautions[0]?`<div style="margin-top:4px;color:#9b2c2c">✕ ${fit.cautions[0]}</div>`:''}</div><button class="btn ghost" style="margin-top:8px;padding:7px 10px" onclick="whyOffer(${o.id})">Why?</button>`:''}${issuerLinkHTML(o)}${(()=>{const q=effectiveOfferDataStatus(o);const color=q.status==='verified'?'#157347':q.status==='blocked_by_issuer'?'#8a5a00':'#9b2c2c';return `<div class="small" style="margin-top:7px;color:${color}"><b>${q.label}</b>${q.detail?` • ${q.detail}`:''}</div>`})()}</div>`
 }
 function whyOffer(id){
   const o=data.offers.find(x=>x.id===id);if(!o)return;
@@ -1428,7 +1433,7 @@ function marketStatus(o){
 }
 function marketCard(o){
   const st=marketStatus(o);
-  return `<div class="item"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af||0)} • ${currentSpendLabel(o)}</div></div><span class="pill ${st.tone}">${st.label}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerRequirementText(o)}${bonusValueText(o)}${personalReportingWarningHTML(o)}${o.offerNote?`<div class="small" style="margin-top:7px">${o.offerNote}</div>`:''}<div class="small" style="margin-top:7px">${(()=>{const q=effectiveOfferDataStatus(o);return `<b>${q.label}</b>${q.detail?` • ${q.detail}`:''}`})()} • Browse view does not judge whether this card fits your personal strategy.</div>${issuerLinkHTML(o)}</div>`;
+  return `<div class="item"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af||0)} • ${currentSpendLabel(o)}</div></div><span class="pill ${st.tone}">${st.label}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerRequirementText(o)}${promotionalOfferText(o)}${bonusValueText(o)}${personalReportingWarningHTML(o)}${o.offerNote?`<div class="small" style="margin-top:7px">${o.offerNote}</div>`:''}<div class="small" style="margin-top:7px">${(()=>{const q=effectiveOfferDataStatus(o);return `<b>${q.label}</b>${q.detail?` • ${q.detail}`:''}`})()} • Browse view does not judge whether this card fits your personal strategy.</div>${issuerLinkHTML(o)}</div>`;
 }
 function offers(){
   const list=marketOffers();
