@@ -50,15 +50,15 @@ async function fetchCard(c){
   const controller=new AbortController();
   const timer=setTimeout(()=>controller.abort(),20000);
   try{
-    const res=await fetch(c.issuerUrl,{redirect:'follow',signal:controller.signal,headers:{'user-agent':'CardPilot-OfferMonitor/1.1 (+https://github.com/)'}});
+    const res=await fetch(c.issuerUrl,{redirect:'follow',signal:controller.signal,headers:{'user-agent':'CardPilot-OfferMonitor/1.2 (+https://github.com/)'}});
     const body=await res.text();
     if([401,403,406,429].includes(res.status)) return {id:c.id,issuer:c.issuer,name:c.name,status:'blocked_by_issuer',httpStatus:res.status,url:c.issuerUrl,issues:localIssues,checkedAt:now.toISOString()};
     if(res.status<200||res.status>=400) return {id:c.id,issuer:c.issuer,name:c.name,status:'broken',httpStatus:res.status,url:c.issuerUrl,issues:[...localIssues,`HTTP ${res.status}`],checkedAt:now.toISOString()};
     const expected=Array.isArray(c.monitorExpected)?c.monitorExpected:[];
     const missing=expected.filter(t=>!termFound(body,t));
-    const issues=[...localIssues,...missing.map(t=>`Missing expected term: ${t}`)];
+    const issues=[...localIssues,...missing.map(t=>`Issuer page loaded, but expected offer wording was not fully extracted: ${t}`)];
     const status=issues.length?'needs_review':'verified';
-    return {id:c.id,issuer:c.issuer,name:c.name,status,httpStatus:res.status,url:c.issuerUrl,finalUrl:res.url,expectedTerms:expected,missingTerms:missing,issues,checkedAt:now.toISOString()};
+    return {id:c.id,issuer:c.issuer,name:c.name,status,httpStatus:res.status,url:c.issuerUrl,finalUrl:res.url,source:c.issuerUrlVerified?'direct-product-page':'issuer-page',expectedTerms:expected,missingTerms:missing,issues,checkedAt:now.toISOString()};
   }catch(error){
     const msg=String(error);
     const blocked=/abort|timeout/i.test(msg);
