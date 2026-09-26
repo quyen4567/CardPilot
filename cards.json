@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-09-24.4",
-  "generatedAt": "2026-09-24",
+  "catalogVersion": "2026-09-26.1",
+  "generatedAt": "2026-09-26T16:30:00Z",
   "cards": [
     {
       "id": 7001,
@@ -887,43 +887,65 @@
       "issuer": "Chase",
       "name": "Sapphire Preferred",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 75000,
       "unit": "Ultimate Rewards points",
       "hist": 100000,
-      "spend": null,
+      "spend": 5000,
       "af": 95,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Public offer changes frequently; verify before applying.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Chase public offer: 75,000 points after $5,000 in purchases in the first 3 months; $95 annual fee.",
       "tags": [
         "travel",
         "transferable",
         "chase"
-      ]
+      ],
+      "issuerUrl": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+      "monitorExpected": [
+        "75,000",
+        "5,000",
+        "3 months",
+        "95 annual fee"
+      ],
+      "issuerUrlVerified": "2026-09-26",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer"
     },
     {
       "id": 8002,
       "issuer": "Chase",
       "name": "Sapphire Reserve",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 100000,
       "unit": "Ultimate Rewards points",
       "hist": 150000,
-      "spend": null,
+      "spend": 6000,
       "af": 795,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current public offer before applying.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Chase public offer: 100,000 points after $6,000 in purchases in the first 3 months; $795 annual fee.",
       "tags": [
         "travel",
         "transferable",
         "premium",
         "chase"
-      ]
+      ],
+      "issuerUrl": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+      "monitorExpected": [
+        "100,000",
+        "6,000",
+        "3 months",
+        "795 annual fee"
+      ],
+      "issuerUrlVerified": "2026-09-26",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer"
     },
     {
       "id": 8003,
@@ -972,60 +994,93 @@
       "issuer": "Chase",
       "name": "Southwest Rapid Rewards Plus",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 50000,
       "unit": "Rapid Rewards points",
       "hist": 85000,
-      "spend": null,
+      "spend": 1000,
       "af": 99,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Offer varies; Companion Pass timing can matter.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Chase public offer: 50,000 Rapid Rewards points after $1,000 in purchases in the first 3 months; $99 annual fee. Offer availability can vary by application channel.",
       "tags": [
         "airline",
         "southwest"
-      ]
+      ],
+      "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
+      "monitorExpected": [
+        "50,000",
+        "1,000",
+        "3 months",
+        "99"
+      ],
+      "issuerUrlVerified": "2026-09-26",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer"
     },
     {
       "id": 8006,
       "issuer": "Chase",
       "name": "Southwest Rapid Rewards Premier",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 55000,
       "unit": "Rapid Rewards points",
       "hist": 85000,
-      "spend": null,
+      "spend": 1500,
       "af": 149,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Offer varies; Companion Pass timing can matter.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Chase public offer: 55,000 Rapid Rewards points after $1,500 in purchases in the first 3 months; $149 annual fee. Offer availability can vary by application channel.",
       "tags": [
         "airline",
         "southwest"
-      ]
+      ],
+      "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/southwest/premier",
+      "monitorExpected": [
+        "55,000",
+        "1,500",
+        "3 months",
+        "149"
+      ],
+      "issuerUrlVerified": "2026-09-26",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer"
     },
     {
       "id": 8007,
       "issuer": "Chase",
       "name": "Southwest Rapid Rewards Priority",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 60000,
       "unit": "Rapid Rewards points",
       "hist": 90000,
-      "spend": null,
+      "spend": 2000,
       "af": 229,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Offer varies; Companion Pass timing can matter.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Chase public offer: 60,000 Rapid Rewards points after $2,000 in purchases in the first 3 months; $229 annual fee. Offer availability can vary by application channel.",
       "tags": [
         "airline",
         "southwest"
-      ]
+      ],
+      "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
+      "monitorExpected": [
+        "60,000",
+        "2,000",
+        "3 months",
+        "229"
+      ],
+      "issuerUrlVerified": "2026-09-26",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer"
     },
     {
       "id": 8008,
@@ -1724,40 +1779,61 @@
       "bonus": 75000,
       "unit": "ThankYou points",
       "hist": 100000,
-      "spend": null,
+      "spend": 6000,
       "af": 595,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-22",
-      "offerState": "current-public-verified",
-      "offerNote": "Current Citi card listing shows a 75K bonus after qualifying purchases. Citi says offers may vary; exact spend requirement is not reliably exposed in the public page data CardPilot can verify. Historical public high: 100K.",
+      "verifiedDate": "2026-09-26",
+      "offerState": "verified-current",
+      "offerNote": "Official Citi public offer: 75,000 ThankYou points after $6,000 in purchases in the first 3 months; $595 annual fee. Citi notes offers may vary by application channel.",
       "tags": [
         "travel",
         "transferable",
         "premium",
         "citi"
-      ]
+      ],
+      "issuerUrl": "https://www.citi.com/credit-cards/citi-strata-elite-credit-card",
+      "monitorExpected": [
+        "75,000",
+        "6,000",
+        "3 months",
+        "595"
+      ],
+      "issuerUrlVerified": "2026-09-26",
+      "offerType": "public",
+      "confidence": "official-issuer"
     },
     {
       "id": 8203,
       "issuer": "Citi",
       "name": "Strata",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 20000,
       "unit": "ThankYou points",
       "hist": null,
-      "spend": null,
+      "spend": 1000,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Citi public offer: 20,000 ThankYou points after $1,000 in purchases in the first 3 months; $0 annual fee. Citi notes offers may vary by application channel.",
       "tags": [
         "travel",
         "citi"
-      ]
+      ],
+      "issuerUrl": "https://www.citi.com/credit-cards/citi-strata-credit-card",
+      "monitorExpected": [
+        "20,000",
+        "1,000",
+        "3 months",
+        "0 annual fee"
+      ],
+      "issuerUrlVerified": "2026-09-26",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer"
     },
     {
       "id": 8204,
@@ -1909,22 +1985,33 @@
       "issuer": "Capital One",
       "name": "Venture X Rewards",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 75000,
       "unit": "Capital One miles",
       "hist": null,
-      "spend": null,
+      "spend": 4000,
       "af": 395,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Capital One public offer: 75,000 bonus miles after $4,000 in purchases within the first 3 months; $395 annual fee.",
       "tags": [
         "travel",
         "transferable",
         "premium",
         "capital one"
-      ]
+      ],
+      "issuerUrl": "https://www.capitalone.com/credit-cards/venture-x/",
+      "monitorExpected": [
+        "75,000",
+        "4,000",
+        "3 months",
+        "395"
+      ],
+      "issuerUrlVerified": "2026-09-26",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer"
     },
     {
       "id": 8302,
@@ -1952,27 +2039,38 @@
       "issuer": "Capital One",
       "name": "VentureOne Rewards",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 20000,
       "unit": "Capital One miles",
       "hist": null,
-      "spend": null,
+      "spend": 500,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Capital One public offer: 20,000 bonus miles after $500 in purchases within the first 3 months; $0 annual fee.",
       "tags": [
         "travel",
         "capital one"
-      ]
+      ],
+      "issuerUrl": "https://www.capitalone.com/credit-cards/ventureone/",
+      "monitorExpected": [
+        "20,000",
+        "500",
+        "3 months",
+        "0 annual fee"
+      ],
+      "issuerUrlVerified": "2026-09-26",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer"
     },
     {
       "id": 8304,
       "issuer": "Capital One",
       "name": "Savor Cash Rewards",
       "type": "Personal",
-      "bonus": 250,
+      "bonus": 200,
       "unit": "cash",
       "hist": null,
       "spend": 500,
@@ -1980,33 +2078,55 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "DoC tracks $250 after $500 spend.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Capital One public offer: $200 cash bonus after $500 in purchases within the first 3 months; $0 annual fee.",
       "tags": [
         "cash",
         "dining",
         "capital one"
-      ]
+      ],
+      "issuerUrl": "https://www.capitalone.com/credit-cards/savor/",
+      "monitorExpected": [
+        "200",
+        "500",
+        "3 months",
+        "0 annual fee"
+      ],
+      "issuerUrlVerified": "2026-09-26",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer"
     },
     {
       "id": 8305,
       "issuer": "Capital One",
       "name": "Quicksilver Cash Rewards",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 200,
       "unit": "cash",
       "hist": null,
-      "spend": null,
+      "spend": 500,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Capital One public offer: $200 cash bonus after $500 in purchases within the first 3 months; $0 annual fee.",
       "tags": [
         "cash",
         "capital one"
-      ]
+      ],
+      "issuerUrl": "https://www.capitalone.com/credit-cards/quicksilver/",
+      "monitorExpected": [
+        "200",
+        "500",
+        "3 months",
+        "0 annual fee"
+      ],
+      "issuerUrlVerified": "2026-09-26",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer"
     },
     {
       "id": 8401,
@@ -2098,61 +2218,96 @@
       "issuer": "Bank of America",
       "name": "Travel Rewards",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 25000,
       "unit": "BofA points",
       "hist": null,
-      "spend": null,
+      "spend": 1000,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Bank of America public offer: 25,000 online bonus points after at least $1,000 in purchases in the first 90 days; no annual fee.",
       "tags": [
         "travel",
         "bofa"
-      ]
+      ],
+      "issuerUrl": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/",
+      "monitorExpected": [
+        "25,000",
+        "1,000",
+        "90 days",
+        "no annual fee"
+      ],
+      "issuerUrlVerified": "2026-09-26",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer"
     },
     {
       "id": 8406,
       "issuer": "Bank of America",
       "name": "Atmos Rewards Ascent",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 50000,
       "unit": "Atmos points + companion fare",
       "hist": 85000,
-      "spend": null,
+      "spend": 1500,
       "af": 95,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Elevated offer reached 85K in 2026; verify current offer.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Bank of America public offer: 50,000 Atmos points plus a $99 Companion Fare (plus taxes/fees from $23) after $1,500 in purchases within the first 90 days; $95 annual fee.",
       "tags": [
         "airline",
         "atmos"
-      ]
+      ],
+      "issuerUrl": "https://www.bankofamerica.com/credit-cards/",
+      "monitorExpected": [
+        "50,000",
+        "1,500",
+        "90 days",
+        "99 Companion Fare",
+        "95 annual fee"
+      ],
+      "issuerUrlVerified": "2026-09-26",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer"
     },
     {
       "id": 8407,
       "issuer": "Bank of America",
       "name": "Atmos Rewards Summit",
       "type": "Personal",
-      "bonus": 0,
-      "unit": "Atmos points",
+      "bonus": 70000,
+      "unit": "Atmos points + Global Companion Award",
       "hist": 100000,
-      "spend": null,
+      "spend": 3000,
       "af": 395,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Elevated offer reached 100K in 2026; verify current offer.",
+      "verifiedDate": "2026-09-26",
+      "offerNote": "Official Bank of America public offer: 70,000 Atmos points plus a 25,000-point Global Companion Award after $3,000 in purchases within the first 90 days; $395 annual fee.",
       "tags": [
         "airline",
         "atmos",
         "premium"
-      ]
+      ],
+      "issuerUrl": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-infinite-credit-card/",
+      "monitorExpected": [
+        "70,000",
+        "25,000-point Global Companion Award",
+        "3,000",
+        "90 days",
+        "395 annual fee"
+      ],
+      "issuerUrlVerified": "2026-09-26",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer"
     },
     {
       "id": 8408,
