@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.2.29</title>
+  <title>CardPilot v11.2.30</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -47,7 +47,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, with application eligibility in context.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.2.29</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, with application eligibility in context.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.2.30</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -1313,7 +1313,7 @@ function five24AfterApprovalHTML(o){
   if(!o||o.type!=='Business')return '';
   const f=five24(),adds=!!o.reports,after=adds?f+1:f;
   if(adds)return `<div class="impact524"><b>⚠ Reports to personal credit</b><br>${f}/24 → <b>${after}/24</b><div class="small" style="margin-top:3px">CardPilot tracks this specific business product as reporting to personal credit, so it may affect future Chase application eligibility.</div></div>`;
-  return `<div class="impact524"><b>✓ Normally does not report as a new personal account</b><div class="small" style="margin-top:3px">CardPilot tracks this business product as normally not adding a new personal credit-card account while in good standing. That reporting behavior can matter for future Chase eligibility. Issuer practices can change.</div></div>`;
+  return `<div class="impact524"><b>✓ Normally does not report as a new personal account</b><div class="small" style="margin-top:3px">CardPilot tracks this business product as normally not adding a new personal credit-card account while in good standing. Issuer practices can change.</div></div>`;
 }
 
 function simpleOtherCard(x){
