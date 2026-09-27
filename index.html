@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.2.30</title>
+  <title>CardPilot v11.2.32</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -47,7 +47,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, with application eligibility in context.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.2.30</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, with application eligibility in context.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.2.32</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -233,7 +233,7 @@ function finishQuickSetup(){
   if(!data.profile.ownedCardMode)data.profile.ownedCardMode='exact';
   if(!data.profile.annualSpendPref)data.profile.annualSpendPref='any';
   data.profile.applyRelationships=data.profile.applyRelationships!==false;
-  data.profile.editingPreferences=false;data.profile.setupComplete=true;data.profile.setupStep=7;data.profile.quickStage=2;data.profile.showRecommendation=false;setSearchMode('results');
+  data.profile.editingPreferences=false;data.profile.setupComplete=true;data.profile.setupStep=7;data.profile.quickStage=2;data.profile.showRecommendation=false;data.profile.resultLimit=5;setSearchMode('results');
   localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('applyView');
 }
 function advancedOnboarding(){const step=+(data.profile.setupStep||1);const pctv=Math.round(step/7*100);let body='';const f=five24();
@@ -1014,7 +1014,7 @@ function openFindFlow(){
 }
 function changeFindAnswers(){
   // Edit only the three quick-search answers. Saved wallet, relationships and advanced strategy remain intact.
-  setSearchMode('questions'); data.profile.quickStage=2; data.profile.showRecommendation=false; data.profile.questionnaireStartedAt=Date.now(); save(); render(); showView('applyView');
+  setSearchMode('questions'); data.profile.quickStage=2; data.profile.showRecommendation=false; data.profile.resultLimit=5; data.profile.questionnaireStartedAt=Date.now(); save(); render(); showView('applyView');
 }
 function restartFindFlow(){
   if(!confirm('Start this card search over? Your saved cards, relationships, benefits, and advanced planning settings will stay.'))return;
@@ -1022,7 +1022,7 @@ function restartFindFlow(){
   setSearchMode('questions'); data.profile.quickStage=2; data.profile.showRecommendation=false;
   data.profile.feePref=null; data.profile.interests=[]; data.profile.subSpendPref=null; data.profile.cardPath='either';
   data.profile.refineRank='overall'; data.profile.refinePriority1='overall'; data.profile.refinePriority2=''; data.profile.refinePriority3='';
-  data.profile.refineType='all'; data.profile.refineCardType='all'; data.profile.questionnaireStartedAt=Date.now();
+  data.profile.refineType='all'; data.profile.refineCardType='all'; data.profile.resultLimit=5; data.profile.questionnaireStartedAt=Date.now();
   save(); render(); showView('applyView');
 }
 function resetAllRecommendationSettings(){
@@ -1043,6 +1043,7 @@ function resetAllRecommendationSettings(){
     annualSpendPref:'any',
     preserve524Pref:'none',
     overlapPref:'some',
+    resultLimit:5,
     ownedCardMode:'exact',
     excludeOwnedCards:true,
     savedStrategies:[],
@@ -1071,13 +1072,10 @@ function resetAllRecommendationSettings(){
 }
 function browseCards(){showView('offersView')}
 function home(){
-  const f=five24(), top=rankedOffers().find(x=>x.fit.status==='consider')||rankedOffers()[0];
+  const top=rankedOffers().find(x=>x.fit.status==='consider')||rankedOffers()[0];
   const exp=[...data.benefits].filter(b=>b.expires).sort((a,b)=>new Date(a.expires)-new Date(b.expires))[0];
-  const used=Math.max(0,Math.min(5,f));
-  const slotsLeft=Math.max(0,5-f);
   return `<div class="home-stage">
-    <div class="home-hero"><div class="eyebrow">CARDPILOT • YOUR NEXT CREDIT CARD MOVE</div><h2>Make your next card count. ✨</h2><p>Fast enough to be fun, careful enough for a real application decision. CardPilot compares your wallet, application eligibility, fees, offer quality and saved preferences.</p><div class="home-minirow"><div class="home-mini"><b>${data.cards.length?f+'/24':'Wallet first'}</b>Chase eligibility snapshot</div><div class="home-mini"><b>${data.offers.length} cards</b>in the current catalog</div></div><button class="hero-cta" onclick="openFindFlow()">Find my card →</button><div class="hero-foot">3 quick choices • Advanced controls only when you want them</div></div>
-    <div class="snapshot"><div class="snapshot-top"><div><div class="snapshot-title">APPLICATION PLANNING</div><div class="snapshot-count">${data.cards.length?f+'/24':'Set up wallet'}</div></div><span class="trust-chip">✓ Eligibility context</span></div>${data.cards.length?`<div class="slot-row bigslots">${[0,1,2,3,4].map(i=>`<span class="slot ${i<used?'used':''}"></span>`).join('')}</div><div class="snapshot-note">Estimated recent-account count: ${f}/24 under the commonly reported Chase 5/24 framework.</div>`:`<div class="snapshot-note">Add your cards and opening dates to estimate your recent-account picture for Chase application planning.</div>`}</div>
+    <div class="home-hero"><div class="eyebrow">CARDPILOT • YOUR NEXT CREDIT CARD MOVE</div><h2>Make your next card count. ✨</h2><p>Fast enough to be fun, careful enough for a real application decision. CardPilot compares your wallet, fees, offer quality and saved preferences.</p><div class="home-minirow"><div class="home-mini"><b>Personalized picks</b>based on your preferences</div><div class="home-mini"><b>${data.offers.length} cards</b>in the current catalog</div></div><button class="hero-cta" onclick="openFindFlow()">Find my card →</button><div class="hero-foot">3 quick choices • Advanced controls only when you want them</div></div>
     <div class="home-section-title">Explore</div><div class="home-grid">
       <button class="home-tile" onclick="browseCards()"><span class="tile-icon">🔥</span><b>Browse cards</b><small>Current offers, cash back, travel, business and specialty cards.</small></button>
       <button class="home-tile" onclick="showView('cardsView')"><span class="tile-icon">👛</span><b>My wallet</b><small>${data.cards.length} saved card${data.cards.length===1?'':'s'}, opening dates and annual fees.</small></button>
@@ -1190,7 +1188,7 @@ function rankingMetric(x,criterion){
   if(criterion==='bonus')return offerEstimatedSubValue(o);
   if(criterion==='leastspend')return o.spend==null?-Infinity:-Number(o.spend);
   if(criterion==='efficiency')return subReturnRange(o)?.mid||-Infinity;
-  if(criterion==='everyday'){
+  if(criterion==='general'){
     const type=data.profile.refineType||'all';
     const cash=catchAllCashRate(o)?.effective||0, pts=catchAllPointsRate(o);
     const pointValue=pts?.valuePct?((pts.valuePct.low+pts.valuePct.high)/2):0;
@@ -1198,15 +1196,15 @@ function rankingMetric(x,criterion){
     if(type==='points')return pointValue||pts?.rate||0;
     return Math.max(cash,pointValue);
   }
-  if(criterion==='keeper')return keeperScore(o,x.fit);
-  if(criterion==='overall')return Number(x.fit?.score||0);
+  
   return 0;
 }
 function priorityList(){
-  const p1=data.profile.refinePriority1||data.profile.refineRank||'overall';
+  const allowed=new Set(['bonus','leastspend','general']);
+  const p1=data.profile.refinePriority1||'';
   const p2=data.profile.refinePriority2||'';
   const p3=data.profile.refinePriority3||'';
-  return [p1,p2,p3].filter(Boolean).filter((v,i,a)=>a.indexOf(v)===i);
+  return [p1,p2,p3].filter(v=>allowed.has(v)).filter((v,i,a)=>a.indexOf(v)===i);
 }
 function refinementCandidates(){
   const type=data.profile.refineType||'all';
@@ -1222,7 +1220,7 @@ function refinementCandidates(){
   });
   return arr;
 }
-function rankLabel(v){return ({overall:'Best overall match',bonus:'Best sign-up bonus value',leastspend:'Lowest spend to earn a sign-up bonus',efficiency:'Best bonus value for the required spend',everyday:'Best everyday rewards',keeper:'Best long-term keeper card'})[v]||v}
+function rankLabel(v){return ({bonus:'Best sign-up bonus value',leastspend:'Lowest spend to earn a sign-up bonus',general:'Best general rewards rate'})[v]||v}
 function refinementSummary(){
   const ps=priorityList(),type=data.profile.refineType||'all',cardType=data.profile.refineCardType||'all';
   const typeMap={all:'All rewards',cash:'Cash back',points:'Points & miles',hotel:'Hotel',airline:'Airline',cruise:'Cruise',travel:'Travel'};
@@ -1230,7 +1228,7 @@ function refinementSummary(){
   return `${ps.map(rankLabel).join(' → ')} • ${cardMap[cardType]||cardMap.all} • ${typeMap[type]||typeMap.all}`;
 }
 function applyRefinement(){
-  const p1=document.getElementById('refinePriority1')?.value||'overall';
+  const p1=document.getElementById('refinePriority1')?.value||'bonus';
   let p2=document.getElementById('refinePriority2')?.value||'';
   let p3=document.getElementById('refinePriority3')?.value||'';
   if(p2===p1)p2=''; if(p3===p1||p3===p2)p3='';
@@ -1240,9 +1238,9 @@ function applyRefinement(){
   data.profile.refineRank=p1; data.profile.refineCardType=cardType; data.profile.refineType=type; save(); render(); showView('applyView');
   setTimeout(()=>document.getElementById('refinedResults')?.scrollIntoView({behavior:'smooth',block:'start'}),60);
 }
-function clearRefinement(){data.profile.refinePriority1='overall';data.profile.refinePriority2='';data.profile.refinePriority3='';data.profile.refineRank='overall';data.profile.refineCardType='all';data.profile.refineType='all';save();render();showView('applyView');setTimeout(()=>document.getElementById('refinementPanel')?.scrollIntoView({behavior:'smooth',block:'start'}),40)}
+function clearRefinement(){data.profile.refinePriority1='';data.profile.refinePriority2='';data.profile.refinePriority3='';data.profile.refineRank='';data.profile.refineCardType='all';data.profile.refineType='all';save();render();showView('applyView');setTimeout(()=>document.getElementById('refinementPanel')?.scrollIntoView({behavior:'smooth',block:'start'}),40)}
 function priorityOptions(selected,allowBlank=false){
-  const opts=[['overall','Best overall match'],['bonus','Best sign-up bonus value'],['leastspend','Lowest spend to earn a sign-up bonus'],['efficiency','Best bonus value for the required spend'],['everyday','Best everyday rewards'],['keeper','Best long-term keeper card']];
+  const opts=[['bonus','Best sign-up bonus value'],['leastspend','Lowest spend to earn a sign-up bonus'],['general','Best general rewards rate']];
   return (allowBlank?`<option value="" ${!selected?'selected':''}>No additional priority</option>`:'')+opts.map(x=>`<option value="${x[0]}" ${selected===x[0]?'selected':''}>${x[1]}</option>`).join('');
 }
 function syncPriorityChoices(){
@@ -1251,18 +1249,18 @@ function syncPriorityChoices(){
   ids.forEach((id,idx)=>{const el=document.getElementById(id);if(!el)return;[...el.options].forEach(opt=>{if(!opt.value)return;opt.disabled=vals.some((v,j)=>j!==idx&&v===opt.value);});});
 }
 function refinementPanelHTML(){
-  const p1=data.profile.refinePriority1||data.profile.refineRank||'overall',p2=data.profile.refinePriority2||'',p3=data.profile.refinePriority3||'',type=data.profile.refineType||'all',cardType=data.profile.refineCardType||'all';
+  const p1=['bonus','leastspend','general'].includes(data.profile.refinePriority1)?data.profile.refinePriority1:'bonus',p2=data.profile.refinePriority2||'',p3=data.profile.refinePriority3||'',type=data.profile.refineType||'all',cardType=data.profile.refineCardType||'all';
   const cardChoices=[['all','Personal + business'],['Business','Business only'],['Personal','Personal only']];
   const typeChoices=[['all','All reward types'],['cash','Cash back'],['points','Points & miles'],['hotel','Hotel'],['airline','Airline'],['cruise','Cruise lines'],['travel','Travel']];
-  const changed=p1!=='overall'||!!p2||!!p3||type!=='all'||cardType!=='all';
-  return `<details id="refinementPanel" class="card" style="margin:12px 0" ${changed?'open':''}><summary><b>Fine-tune the top 10</b><span class="small" style="margin-left:8px">${changed?refinementSummary():'Optional'}</span></summary><div class="small" style="margin:8px 0 14px">Tell CardPilot what matters first, second, and third. Second and third priorities are optional.</div>
+  const changed=['bonus','leastspend','general'].includes(data.profile.refinePriority1)||!!p2||!!p3||type!=='all'||cardType!=='all';
+  return `<details id="refinementPanel" class="card" style="margin:12px 0" ${changed?'open':''}><summary><b>Fine-tune results</b><span class="small" style="margin-left:8px">${changed?refinementSummary():'Optional'}</span></summary><div class="small" style="margin:8px 0 14px">Tell CardPilot what matters first, second, and third. Second and third priorities are optional.</div>
   <div class="subchoices"><h4 style="margin:0 0 8px">1st priority</h4><select id="refinePriority1" class="input" style="width:100%" onchange="syncPriorityChoices()">${priorityOptions(p1)}</select></div>
   <div class="subchoices" style="margin-top:12px"><h4 style="margin:0 0 8px">2nd priority <span class="small">(optional)</span></h4><select id="refinePriority2" class="input" style="width:100%" onchange="syncPriorityChoices()">${priorityOptions(p2,true)}</select></div>
   <div class="subchoices" style="margin-top:12px"><h4 style="margin:0 0 8px">3rd priority <span class="small">(optional)</span></h4><select id="refinePriority3" class="input" style="width:100%" onchange="syncPriorityChoices()">${priorityOptions(p3,true)}</select></div>
-  <div class="small" style="margin-top:10px;color:#667085"><b>Best everyday rewards</b> adapts to Reward type: cash back uses catch-all cash rate; Points & miles uses catch-all point earning plus estimated point value.</div>
+  <div class="small" style="margin-top:10px;color:#667085"><b>Best general rewards rate</b> focuses on broadly useful ongoing earning rather than narrow category bonuses.</div>
   <div class="subchoices" style="margin-top:14px"><h4 style="margin:0 0 8px">Card type</h4><select id="refineCardTypeSelect" class="input" style="width:100%">${cardChoices.map(x=>`<option value="${x[0]}" ${cardType===x[0]?'selected':''}>${x[1]}</option>`).join('')}</select></div>
   <div class="subchoices" style="margin-top:12px"><h4 style="margin:0 0 8px">Reward type</h4><select id="refineTypeSelect" class="input" style="width:100%">${typeChoices.map(x=>`<option value="${x[0]}" ${type===x[0]?'selected':''}>${x[1]}</option>`).join('')}</select></div>
-  <button class="btn" style="width:100%;margin-top:14px" onclick="applyRefinement()">Update top 10 ↓</button>${changed?`<button class="btn ghost" style="width:100%;margin-top:8px" onclick="clearRefinement()">Reset fine-tuning</button>`:''}</details>`;
+  <button class="btn" style="width:100%;margin-top:14px" onclick="applyRefinement()">Update results ↓</button>${changed?`<button class="btn ghost" style="width:100%;margin-top:8px" onclick="clearRefinement()">Reset fine-tuning</button>`:''}</details>`;
 }
 
 function officialCardUrl(o){
@@ -1296,14 +1294,12 @@ function refinedRecommendationCard(x,rank){
   for(const mode of ps.slice(0,3)){
     if(mode==='bonus'){const est=offerEstimatedSubValue(o);if(est)metricBits.push(`Estimated sign-up bonus value: ${fmt(Math.round(est))}`);}
     if(mode==='leastspend')metricBits.push(o.spend!=null?`Required spend: ${fmt(Number(o.spend))}`:'Required spend not verified');
-    if(mode==='efficiency'){const rr=subReturnRange(o);if(rr)metricBits.push(`Bonus value / required spend: about ${rr.mid.toFixed(1)}%`);}
-    if(mode==='everyday'){
+    if(mode==='general'){
       const cash=catchAllCashRate(o),pts=catchAllPointsRate(o),type=data.profile.refineType||'all';
       if(type==='cash'&&cash)metricBits.push(`Catch-all cash back: ${cash.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')}%`);
       else if(type==='points'&&pts)metricBits.push(`Catch-all points: ${pts.rate}x${pts.valuePct?` (~${pts.valuePct.low.toFixed(1)}–${pts.valuePct.high.toFixed(1)}% estimated value)`:''}`);
       else if(cash||pts){const c=cash?`${cash.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')}% cash`:'';const q=pts?`${pts.rate}x points`:'';metricBits.push(`Everyday earning: ${[c,q].filter(Boolean).join(' / ')}`);}
     }
-    if(mode==='keeper')metricBits.push(`Keeper score emphasizes ongoing value, useful benefits, earning power, and annual-fee economics.`);
   }
   const metric=metricBits.length?`<div class="small" style="margin-top:7px;color:#365d96"><b>Why it ranks here:</b> ${metricBits.join(' • ')}</div>`:'';
   return `<div class="item" style="${rank===1?'border:2px solid #1f6fff;':''}"><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerRequirementText(o)}${promotionalOfferText(o)}${bonusValueText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${metric}<button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}${(()=>{const q=effectiveOfferDataStatus(o);const color=q.status==='verified'?'#157347':q.status==='blocked_by_issuer'?'#8a5a00':'#9b2c2c';return `<div class="small" style="margin-top:7px;color:${color}"><b>${q.label}</b>${q.detail?` • ${q.detail}`:''}</div>`})()}</div>`;
@@ -1343,32 +1339,35 @@ function simpleRecommendationCard(x,rank){
   return `<div class="simple-rec ${rank===1?'top-pick':''}"><div class="between"><div class="rankline"><span class="ranknum">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • Annual fee ${fmt(o.af||0)}</div></div></div><span class="pill ${tone}">${badge}</span></div><div class="rec-bonus">${currentOfferLabel(o)}</div>${offerRequirementText(o)}${promotionalOfferText(o)}${bonusValueText(o)}${reasons.length?`<div class="reason-list">${reasons.map(r=>`<div class="reason-item">✓ ${r}</div>`).join('')}</div>`:''}${verifyNote}${five24AfterApprovalHTML(o)}<div class="rec-buttons"><button class="btn ghost" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}</div><details class="details-clean"><summary>Advanced details</summary>${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:7px">${historicalOfferText(o)}${o.verifiedDate?` • Offer data checked ${o.verifiedDate}`:''}</div></details></div>`;
 }
 
+function showNextFive(){data.profile.resultLimit=Math.min((Number(data.profile.resultLimit||5)+5),50);save();render();showView('applyView');setTimeout(()=>document.getElementById('moreResultsAnchor')?.scrollIntoView({behavior:'smooth',block:'center'}),40)}
+
 function apply(){
   if(data.profile.editingPreferences) return advancedOnboarding();
   if(searchIsQuestions()) return quickOnboarding();
   const ranked=rankedOffers(), f=five24();
-  // Top 10 is primarily a product-fit list. Cards with strong category fit can appear even
+  // Recommendations are primarily a product-fit list. Cards with strong category fit can appear even
   // when the current welcome offer still needs verification; those cards are labeled clearly.
   // Only require a category match when the user actually selected a concrete benefit category.
   // Historical-max / big-SUB and "not sure" are ranking goals, not product categories.
   const concreteSelected=(data.profile.interests||[]).filter(x=>!['hist','none'].includes(x));
   const requireCategoryMatch=concreteSelected.length>0;
   const topPool=ranked.filter(x=>(x.fit.status==='consider'||x.fit.status==='verify') && (!requireCategoryMatch || x.fit.categoryMatchCount>0));
-  const top=topPool.slice(0,10);
+  const resultLimit=Math.max(5,Number(data.profile.resultLimit||5));
+  const top=topPool.slice(0,resultLimit);
   const topIds=new Set(top.map(x=>x.offer.id));
   const waits=ranked.filter(x=>x.fit.status==='wait');
   const verification=ranked.filter(x=>x.fit.status==='verify'&&!topIds.has(x.offer.id));
   const specialty=ranked.filter(x=>x.fit.status==='specialty');
   const nonmatches=ranked.filter(x=>x.fit.status==='avoid');
-  const refineActive=(data.profile.refinePriority1||data.profile.refineRank||'overall')!=='overall'||!!data.profile.refinePriority2||!!data.profile.refinePriority3||(data.profile.refineType||'all')!=='all'||(data.profile.refineCardType||'all')!=='all';
-  const refined=refineActive?refinementCandidates().slice(0,10):[];
+  const refineActive=['bonus','leastspend','general'].includes(data.profile.refinePriority1)||!!data.profile.refinePriority2||!!data.profile.refinePriority3||(data.profile.refineType||'all')!=='all'||(data.profile.refineCardType||'all')!=='all';
+  const refined=refineActive?refinementCandidates().slice(0,resultLimit):[];
   return `<div class="between" style="margin-bottom:12px"><button class="btn ghost" onclick="showView('homeView')">← Home</button><button class="btn ghost" onclick="openPreferencePicker()">Fine-tune</button></div>
   <div class="welcome"><div class="small">FIND A CARD</div><h2>Your best matches ✨</h2><p>CardPilot considered your wallet, application-planning context and saved preferences. You can change this search without changing your saved cards.</p></div><div class="session-actions"><button class="btn ghost" onclick="changeFindAnswers()">✏️ Change 3 quick answers</button><button class="btn ghost" onclick="restartFindFlow()">↻ New search</button></div><button class="btn ghost danger" style="width:100%;margin:0 0 13px" onclick="resetAllRecommendationSettings()">Reset all recommendation settings</button><div class="small" style="margin:-5px 4px 12px;text-align:center">Keeps My Cards and banking relationships. Clears all other recommendation answers, fine-tuning, benefits and planning settings.</div>
   ${f>=5?`<div class="warningbox"><b>${f}/24:</b> Chase cards affected by 5/24 are handled using your saved settings.</div>`:''}
-  ${top.length?`<div class="section" style="margin-top:14px">${top.length===1?'1 strong match':`Top ${Math.min(10,top.length)} recommendations`}</div><div class="section-hint"><b>Selected benefits:</b> ${interestsLabel()}. Only cards matching at least one selected benefit can appear here. If fewer than 10 cards satisfy your fee, benefit, spend, eligibility, and strategy constraints, CardPilot shows fewer rather than padding the list with unrelated cards. Unverified current offer details are labeled separately.</div><div class="list" style="margin-top:12px">${top.map((x,i)=>simpleRecommendationCard(x,i+1)).join('')}</div>`:`<div class="note"><b>No strong match right now.</b><div class="small" style="margin-top:5px">No card currently satisfies all of the selected constraints. Try changing one preference or browse the full card market.</div></div>`}
+  ${top.length?`<div class="section" style="margin-top:14px">${top.length===1?'1 strong match':`${top.length} recommendations shown`}</div><div class="section-hint"><b>Selected benefits:</b> ${interestsLabel()}. CardPilot only includes cards that fit the selected benefit categories and your other search constraints. Unverified current offer details are labeled separately.</div><div class="list" style="margin-top:12px">${top.map((x,i)=>simpleRecommendationCard(x,i+1)).join('')}</div>${topPool.length>top.length?`<div id="moreResultsAnchor" style="margin-top:12px"><button class="btn ghost" style="width:100%" onclick="showNextFive()">Show next 5</button><div class="small" style="text-align:center;margin-top:6px">${topPool.length-top.length} more matching card${topPool.length-top.length===1?'':'s'} available.</div></div>`:''}`:`<div class="note"><b>No strong match right now.</b><div class="small" style="margin-top:5px">No card currently satisfies all of the selected constraints. Try changing one preference or browse the full card market.</div></div>`}
   <div class="card" style="margin-top:14px"><div class="small">ADJUST YOUR RESULTS</div><h3 style="margin:4px 0 5px">Change the search or fine-tune the results</h3><div class="small">Broaden / Change Search returns to your 3 quick questions with your current answers preserved. Fine-Tune Results changes how matching cards are ranked without changing those answers.</div><div class="row" style="gap:10px;margin-top:12px;flex-wrap:wrap"><button class="btn ghost" onclick="changeFindAnswers()">Broaden / Change Search</button><button class="btn ghost" onclick="document.getElementById('refinementPanel')?.setAttribute('open','');document.getElementById('refinementPanel')?.scrollIntoView({behavior:'smooth',block:'start'})">Fine-Tune Results</button></div></div>
   ${refinementPanelHTML()}
-  ${refineActive?`<div id="refinedResults" class="section">Refined top 10</div><div class="section-hint">Ranked by your 1st, 2nd, and 3rd priorities in that order.</div><div class="list">${refined.map((x,i)=>refinedRecommendationCard(x,i+1)).join('')}</div>`:''}
+  ${refineActive?`<div id="refinedResults" class="section">Fine-tuned results</div><div class="section-hint">Ranked by your selected priorities in order.</div><div class="list">${refined.map((x,i)=>refinedRecommendationCard(x,i+1)).join('')}</div>`:''}
   ${waits.length?`<details class="card" style="margin-top:14px"><summary><b>Worth waiting for (${waits.length})</b></summary><div class="section-hint">Strong possibilities where timing or eligibility gives CardPilot a concrete reason to wait.</div><div class="list">${waits.slice(0,6).map(x=>offerCard(x.offer,true,x.fit)).join('')}</div></details>`:''}
   ${verification.length?`<details class="card" style="margin-top:12px"><summary><b>Offer data to verify (${verification.length})</b></summary><div class="section-hint">These are <b>not</b> counted as preference mismatches. CardPilot is missing enough current offer data that it would be misleading to rank them as apply-now recommendations.</div><div class="other-preview">${verification.slice(0,4).map(x=>simpleVerifyCard(x)).join('')}</div>${verification.length>4?`<div class="small" style="margin-top:9px">${verification.length-4} more are available in Browse Cards.</div>`:''}</details>`:''}
   ${nonmatches.length?`<details class="card" style="margin-top:12px"><summary><b>Other cards that don't match this search (${nonmatches.length})</b></summary><div class="section-hint">Kept compact on purpose. These cards have an actual preference, eligibility, fee, spend, ownership, or eligibility, preference, or setup reason for ranking lower.</div><div class="other-preview">${nonmatches.slice(0,3).map(x=>simpleOtherCard(x)).join('')}</div>${nonmatches.length>3?`<div class="small" style="margin-top:9px">${nonmatches.length-3} more are available in Browse Cards.</div>`:''}</details>`:''}
