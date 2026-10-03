@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.2.32</title>
+  <title>CardPilot v11.2.36</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -47,7 +47,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, with application eligibility in context.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.2.32</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, with application eligibility in context.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.2.36</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -80,7 +80,7 @@ let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
 let BUSINESS_CATALOG=[];
 let PERSONAL_CATALOG=[];
 let OFFER_MONITOR_STATUS={};
-const CATALOG_VERSION='2026-09-26.3';
+const CATALOG_VERSION='2026-09-27.1';
 
 function migrateV8(){
   data.profile=data.profile||{};
@@ -604,28 +604,33 @@ function promotionalOfferText(o){
 function historicalOfferText(o){
   const hist=Number(o.hist||0);
   const current=Number(o.bonus||0);
+  const status=String(o.histStatus||'');
   const histDate=o.histPublicDate||'';
+  const histSpend=(o.histPublicSpend!==null&&o.histPublicSpend!==undefined)?Number(o.histPublicSpend):null;
+  const source=o.histSourceLabel||'';
   const targeted=Number(o.targetedHigh||0);
   const targetedDate=o.targetedHighDate||'';
+  const alt=o.histAlternativeNote||'';
   if(!hist){
-    return 'Historical public high not yet verified';
+    return status==='research-pending' ? 'Historical high research pending' : 'Historical public high not yet verified';
   }
-  let pct='';
-  if(current>0){
+  const comparable=o.histComparable!==false;
+  let main='';
+  if(current>0 && comparable){
     const ratio=Math.round((current/hist)*100);
-    pct=`${ratio}% of verified public high`;
+    const prefix=status==='verified-public-high'?'verified public high':'tracked public high';
+    main=`${ratio}% of ${prefix}`;
   } else {
-    pct=`Verified public high: ${hist.toLocaleString()} ${o.unit||''}`.trim();
+    const prefix=status==='verified-public-high'?'Verified public high':'Tracked public high';
+    main=`${prefix}: ${hist.toLocaleString()} ${o.unit||''}`.trim();
   }
-  let dateText='';
-  if(histDate){
-    dateText=o.histPublicStatus==='current' ? ` • public high current as of ${histDate}` : ` • last public high ${histDate}`;
-  }
-  let targetText='';
-  if(targeted>hist){
-    targetText=` • targeted/YMMV high ${targeted.toLocaleString()}${targetedDate?` (${targetedDate})`:''}`;
-  }
-  return `${pct}${dateText}${targetText}`;
+  const details=[];
+  if(histSpend)details.push(`high required ${fmt(histSpend)} spend`);
+  if(histDate)details.push(`seen ${histDate}`);
+  if(source)details.push(`source: ${source}`);
+  if(targeted>hist)details.push(`targeted/YMMV high ${targeted.toLocaleString()}${targetedDate?` (${targetedDate})`:''}`);
+  if(alt)details.push(alt);
+  return `${main}${details.length?' • '+details.join(' • '):''}`;
 }
 
 function perksHTML(o){
@@ -775,8 +780,19 @@ function offerFit(o){
     if(key==='hotel'){
       const hf=hotelPreferenceFit(o,tags);
       score+=hf.score;
-      if(hf.level!=='none'){matchCount++;categoryMatchCount++;if(hf.reason)reasons.push(hf.reason)}
-      else cautions.push('Does not meaningfully match your hotel benefits preference.');
+      // Hotel is a strict product-category choice. Only hotel-program/co-branded
+      // cards qualify for the Hotel recommendation category. General travel cards
+      // and cards with incidental hotel benefits may still qualify through another
+      // selected benefit (for example Travel rewards), but not through Hotel alone.
+      if(hf.level==='strong'){
+        matchCount++;categoryMatchCount++;if(hf.reason)reasons.push(hf.reason)
+      }else if(hf.level==='partial'){
+        cautions.push('This card has some hotel-related benefits, but it is not a hotel-program card.');
+      }else if(hf.level==='flexible'){
+        cautions.push('Flexible rewards may be useful for hotel travel, but this is not a hotel-program card.');
+      }else{
+        cautions.push('Does not meaningfully match your hotel benefits preference.');
+      }
       continue;
     }
     if(key==='cruise'){
@@ -1307,8 +1323,7 @@ function refinedRecommendationCard(x,rank){
 
 function five24AfterApprovalHTML(o){
   if(!o||o.type!=='Business')return '';
-  const f=five24(),adds=!!o.reports,after=adds?f+1:f;
-  if(adds)return `<div class="impact524"><b>⚠ Reports to personal credit</b><br>${f}/24 → <b>${after}/24</b><div class="small" style="margin-top:3px">CardPilot tracks this specific business product as reporting to personal credit, so it may affect future Chase application eligibility.</div></div>`;
+  if(o.reports)return `<div class="impact524"><b>⚠ Reports to personal credit</b><div class="small" style="margin-top:3px">CardPilot tracks this business product as reporting to personal credit. Issuer reporting practices can change.</div></div>`;
   return `<div class="impact524"><b>✓ Normally does not report as a new personal account</b><div class="small" style="margin-top:3px">CardPilot tracks this business product as normally not adding a new personal credit-card account while in good standing. Issuer practices can change.</div></div>`;
 }
 

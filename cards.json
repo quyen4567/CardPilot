@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-09-26.2",
-  "generatedAt": "2026-09-26T16:30:00Z",
+  "catalogVersion": "2026-09-27.1",
+  "generatedAt": "2026-09-27T15:30:00Z",
   "cards": [
     {
       "id": 7001,
@@ -31,7 +31,9 @@
         "6000",
         "3 months",
         "0 annual fee"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 7002,
@@ -61,7 +63,9 @@
         "6000",
         "3 months",
         "0 annual fee"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 7003,
@@ -79,7 +83,9 @@
       "tags": [
         "travel",
         "transferable"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 7004,
@@ -88,7 +94,7 @@
       "type": "Business",
       "bonus": 1000,
       "unit": "cash",
-      "hist": null,
+      "hist": 1000,
       "spend": 10000,
       "af": 195,
       "reports": false,
@@ -96,7 +102,13 @@
       "verifiedDate": "2026-09-21",
       "tags": [
         "cash"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 10000,
+      "histPublicDate": "2026-09",
+      "histStatus": "best-documented",
+      "histSourceLabel": "Chase / public offer record",
+      "histSourceUrl": "https://creditcards.chase.com/business-credit-cards/ink/premier"
     },
     {
       "id": 7005,
@@ -115,7 +127,9 @@
         "travel",
         "transferable",
         "premium"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 7006,
@@ -133,7 +147,9 @@
       "tags": [
         "hotel",
         "hyatt"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 7007,
@@ -151,7 +167,9 @@
       "tags": [
         "hotel",
         "ihg"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 7008,
@@ -169,7 +187,9 @@
       "tags": [
         "airline",
         "southwest"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 7009,
@@ -187,7 +207,9 @@
       "tags": [
         "airline",
         "southwest"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 7010,
@@ -196,7 +218,7 @@
       "type": "Business",
       "bonus": 110000,
       "unit": "United miles + PQP",
-      "hist": null,
+      "hist": 150000,
       "spend": null,
       "af": 150,
       "reports": false,
@@ -206,7 +228,13 @@
       "tags": [
         "airline",
         "united"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 20000,
+      "histPublicDate": "2022",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Upgraded Points",
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/united-business-card/welcome-offer-history/"
     },
     {
       "id": 7011,
@@ -215,7 +243,7 @@
       "type": "Business",
       "bonus": 110000,
       "unit": "United miles + PQP",
-      "hist": null,
+      "hist": 125000,
       "spend": null,
       "af": 695,
       "reports": false,
@@ -226,7 +254,13 @@
         "airline",
         "united",
         "premium"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 5000,
+      "histPublicDate": "2025-03",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "The Points Guy",
+      "histSourceUrl": "https://thepointsguy.com/credit-cards/united-chase-best-welcome-offers/"
     },
     {
       "id": 7101,
@@ -248,7 +282,9 @@
         "travel",
         "transferable",
         "premium"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 7102,
@@ -269,7 +305,9 @@
       "tags": [
         "travel",
         "transferable"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 7103,
@@ -287,7 +325,9 @@
       "offerNote": "Welcome offer varies; verify before applying.",
       "tags": [
         "cash"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 7104,
@@ -296,7 +336,7 @@
       "type": "Business",
       "bonus": 500,
       "unit": "cash",
-      "hist": null,
+      "hist": 750,
       "spend": 5000,
       "af": 0,
       "reports": false,
@@ -305,7 +345,13 @@
       "offerNote": "A $500 pre-approved offer is available on some Amex pages; public offers may differ.",
       "tags": [
         "cash"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 6000,
+      "histPublicDate": "2026",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "American Express",
+      "histSourceUrl": "https://www.americanexpress.com/en-us/campaigns/small-business/credit-cards/blue-business-cash/explore-now/"
     },
     {
       "id": 7105,
@@ -314,7 +360,7 @@
       "type": "Business",
       "bonus": 0,
       "unit": "offer varies",
-      "hist": null,
+      "hist": 15000,
       "spend": null,
       "af": 0,
       "reports": false,
@@ -324,7 +370,15 @@
       "tags": [
         "travel",
         "transferable"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 3000,
+      "histPublicDate": "2021-2026",
+      "targetedHigh": 75000,
+      "targetedHighDate": "2026-01",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club / Upgraded Points",
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/amex-blue-business-plus/"
     },
     {
       "id": 7106,
@@ -343,7 +397,9 @@
       "tags": [
         "travel",
         "transferable"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 7107,
@@ -352,7 +408,7 @@
       "type": "Business",
       "bonus": 0,
       "unit": "Delta miles",
-      "hist": null,
+      "hist": 90000,
       "spend": null,
       "af": 150,
       "reports": false,
@@ -362,7 +418,13 @@
       "tags": [
         "airline",
         "delta"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 6000,
+      "histPublicDate": "2026-08",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Upgraded Points",
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/gold-delta-skymiles-business-credit-card-american-express/welcome-offer-history/"
     },
     {
       "id": 7108,
@@ -371,7 +433,7 @@
       "type": "Business",
       "bonus": 0,
       "unit": "Delta miles",
-      "hist": null,
+      "hist": 100000,
       "spend": null,
       "af": 350,
       "reports": false,
@@ -381,7 +443,13 @@
       "tags": [
         "airline",
         "delta"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 8000,
+      "histPublicDate": "2026-08",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "The Points Guy",
+      "histSourceUrl": "https://thepointsguy.com/credit-cards/reviews/platinum-delta-skymiles-business-card-review/"
     },
     {
       "id": 7109,
@@ -390,7 +458,7 @@
       "type": "Business",
       "bonus": 0,
       "unit": "Delta miles",
-      "hist": null,
+      "hist": 200000,
       "spend": null,
       "af": 650,
       "reports": false,
@@ -401,7 +469,13 @@
         "airline",
         "delta",
         "premium"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 20000,
+      "histPublicDate": "2026-08",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Upgraded Points",
+      "histSourceUrl": "https://upgradedpoints.com/news/delta-amex-best-ever-welcome-offers-2026/"
     },
     {
       "id": 7110,
@@ -410,7 +484,7 @@
       "type": "Business",
       "bonus": 100000,
       "unit": "Marriott points + 50K free night",
-      "hist": null,
+      "hist": 125000,
       "spend": 8000,
       "af": 125,
       "reports": false,
@@ -420,7 +494,14 @@
       "tags": [
         "hotel",
         "marriott"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 5000,
+      "histPublicDate": "2023-03",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Upgraded Points",
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/marriott-bonvoy-business-card/welcome-offer-history/",
+      "histAlternativeNote": "Historical offers also reached 5 Free Night Awards (up to 50K points each), which is not directly comparable to a points-only bonus."
     },
     {
       "id": 7111,
@@ -429,7 +510,7 @@
       "type": "Business",
       "bonus": 150000,
       "unit": "Hilton points + free night",
-      "hist": null,
+      "hist": 180000,
       "spend": 8000,
       "af": 195,
       "reports": false,
@@ -439,7 +520,13 @@
       "tags": [
         "hotel",
         "hilton"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 10000,
+      "histPublicDate": "2024-03",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "The Points Guy",
+      "histSourceUrl": "https://thepointsguy.com/credit-cards/hilton-american-express-best-welcome-offers/"
     },
     {
       "id": 7201,
@@ -461,7 +548,9 @@
         "travel",
         "transferable",
         "premium"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 7202,
@@ -482,7 +571,9 @@
       "tags": [
         "travel",
         "transferable"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 7203,
@@ -491,7 +582,7 @@
       "type": "Business",
       "bonus": 50000,
       "unit": "Capital One miles",
-      "hist": null,
+      "hist": 50000,
       "spend": 4500,
       "af": 0,
       "reports": true,
@@ -501,7 +592,13 @@
       "tags": [
         "travel",
         "transferable"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 4500,
+      "histPublicDate": "2026",
+      "histStatus": "best-documented",
+      "histSourceLabel": "Doctor of Credit",
+      "histSourceUrl": "https://www.doctorofcredit.com/capital-one-business-spark-cash-select-spark-miles-select-increased-signup-bonus-750-50000-no-annual-fee/"
     },
     {
       "id": 7204,
@@ -510,7 +607,7 @@
       "type": "Business",
       "bonus": 2000,
       "unit": "cash",
-      "hist": null,
+      "hist": 3000,
       "spend": 30000,
       "af": 150,
       "reports": false,
@@ -518,7 +615,13 @@
       "verifiedDate": "2026-09-21",
       "tags": [
         "cash"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 100000,
+      "histPublicDate": "2024-02",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Doctor of Credit",
+      "histSourceUrl": "https://www.doctorofcredit.com/capital-one-spark-cash-plus-1500-3000-signup-bonus-20000-100000-spend-required/"
     },
     {
       "id": 7205,
@@ -527,7 +630,7 @@
       "type": "Business",
       "bonus": 1000,
       "unit": "cash",
-      "hist": null,
+      "hist": 1500,
       "spend": 10000,
       "af": 95,
       "reports": true,
@@ -536,7 +639,13 @@
       "reportingNote": "Capital One reports primary cardholder activity for this business card to personal credit bureaus, so it can add a personal account for 5/24 purposes.",
       "tags": [
         "cash"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 15000,
+      "histPublicDate": "2025",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Doctor of Credit",
+      "histSourceUrl": "https://www.doctorofcredit.com/capital-one-spark-cash-business-card-1000-signup-bonus-with-10000-spend/"
     },
     {
       "id": 7206,
@@ -545,7 +654,7 @@
       "type": "Business",
       "bonus": 750,
       "unit": "cash",
-      "hist": null,
+      "hist": 750,
       "spend": 6000,
       "af": 0,
       "reports": true,
@@ -554,7 +663,13 @@
       "reportingNote": "Capital One reports primary cardholder activity for this business card to personal credit bureaus, so it can add a personal account for 5/24 purposes.",
       "tags": [
         "cash"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 6000,
+      "histPublicDate": "2025-09",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Doctor of Credit",
+      "histSourceUrl": "https://www.doctorofcredit.com/capital-one-business-spark-cash-select-spark-miles-select-increased-signup-bonus-750-50000-no-annual-fee/"
     },
     {
       "id": 7207,
@@ -575,7 +690,9 @@
       "tags": [
         "cash",
         "capital one"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 7301,
@@ -594,7 +711,9 @@
       "tags": [
         "airline",
         "aadvantage"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 7302,
@@ -625,7 +744,9 @@
         "gas",
         "dining",
         "travel"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 7401,
@@ -662,7 +783,9 @@
         "no annual fee"
       ],
       "offerState": "verified-current",
-      "promoNote": "Ongoing rewards: unlimited 1.5% cash back on purchases; eligible Preferred Rewards for Business members can earn a relationship bonus, up to 2.62% at Platinum Honors."
+      "promoNote": "Ongoing rewards: unlimited 1.5% cash back on purchases; eligible Preferred Rewards for Business members can earn a relationship bonus, up to 2.62% at Platinum Honors.",
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 7402,
@@ -697,7 +820,9 @@
         "no annual fee"
       ],
       "offerState": "verified-current",
-      "promoNote": "Ongoing rewards: 3% cash back in a choice category, 2% on dining, and 1% on other purchases. The 3% and 2% rates apply to the first $50,000 in combined choice-category/dining purchases each calendar year, then 1%; eligible Preferred Rewards for Business members can earn more."
+      "promoNote": "Ongoing rewards: 3% cash back in a choice category, 2% on dining, and 1% on other purchases. The 3% and 2% rates apply to the first $50,000 in combined choice-category/dining purchases each calendar year, then 1%; eligible Preferred Rewards for Business members can earn more.",
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 7403,
@@ -730,7 +855,9 @@
       "offerType": "public",
       "confidence": "official-issuer",
       "offerNote": "Official Bank of America online offer: 50,000 bonus points after at least $5,000 in purchases in the first 90 days of account opening; issuer states the bonus can be redeemed for a $500 statement credit toward travel or dining purchases.",
-      "promoNote": "Ongoing rewards: 3 points per $1 on travel booked through the Bank of America Travel Center and 1.5 points per $1 on other purchases; eligible Preferred Rewards for Business members can earn more."
+      "promoNote": "Ongoing rewards: 3 points per $1 on travel booked through the Bank of America Travel Center and 1.5 points per $1 on other purchases; eligible Preferred Rewards for Business members can earn more.",
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 7404,
@@ -749,26 +876,9 @@
       "tags": [
         "airline",
         "atmos"
-      ]
-    },
-    {
-      "id": 7405,
-      "issuer": "Bank of America",
-      "name": "Business Advantage Unlimited Cash Rewards Secured",
-      "type": "Business",
-      "bonus": 0,
-      "unit": "cash back",
-      "hist": null,
-      "spend": null,
-      "af": 0,
-      "reports": false,
-      "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Secured business card; $1,000 minimum security deposit.",
-      "tags": [
-        "cash",
-        "secured"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 7501,
@@ -785,7 +895,9 @@
       "verifiedDate": "2026-09-21",
       "tags": [
         "cash"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 7502,
@@ -803,7 +915,9 @@
       "offerNote": "0% intro APR for 12 billing cycles; no standard sign-up bonus tracked.",
       "tags": [
         "apr"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 7503,
@@ -812,7 +926,7 @@
       "type": "Business",
       "bonus": 75000,
       "unit": "points",
-      "hist": null,
+      "hist": 75000,
       "spend": 10000,
       "af": 95,
       "reports": false,
@@ -820,7 +934,13 @@
       "verifiedDate": "2026-09-21",
       "tags": [
         "travel"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 10000,
+      "histPublicDate": "2024-02",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club / U.S. Bank",
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/us-bank-business-altitude-power/"
     },
     {
       "id": 7504,
@@ -838,7 +958,9 @@
       "offerNote": "$0 intro annual fee first year, then $95.",
       "tags": [
         "travel"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 7505,
@@ -847,7 +969,7 @@
       "type": "Business",
       "bonus": 60000,
       "unit": "points",
-      "hist": null,
+      "hist": 75000,
       "spend": 6000,
       "af": 95,
       "reports": false,
@@ -856,7 +978,13 @@
       "offerNote": "$0 intro annual fee first year, then $95.",
       "tags": [
         "travel"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 7500,
+      "histPublicDate": "2020",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club / Doctor of Credit",
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/us-bank-business-leverage/"
     },
     {
       "id": 7601,
@@ -865,7 +993,7 @@
       "type": "Business",
       "bonus": 500,
       "unit": "cash",
-      "hist": null,
+      "hist": 500,
       "spend": 5000,
       "af": 0,
       "reports": false,
@@ -881,7 +1009,13 @@
       "tags": [
         "cash",
         "catchall"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 5000,
+      "histPublicDate": "2022-08",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club / US Credit Card Guide",
+      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/wells-fargo-signify-business-cash/"
     },
     {
       "id": 7701,
@@ -890,7 +1024,7 @@
       "type": "Business",
       "bonus": 100000,
       "unit": "Wyndham points",
-      "hist": null,
+      "hist": 100000,
       "spend": 3500,
       "af": 149,
       "reports": false,
@@ -900,7 +1034,13 @@
       "tags": [
         "hotel",
         "wyndham"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 3500,
+      "histPublicDate": "2026-06",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club",
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/wyndham-earner-business/"
     },
     {
       "id": 7702,
@@ -909,7 +1049,7 @@
       "type": "Business",
       "bonus": 50000,
       "unit": "TrueBlue points",
-      "hist": null,
+      "hist": 80000,
       "spend": null,
       "af": 99,
       "reports": false,
@@ -919,7 +1059,13 @@
       "tags": [
         "airline",
         "jetblue"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 6000,
+      "histPublicDate": "2025-08",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "BonusEagle",
+      "histSourceUrl": "https://www.bonuseagle.com/offers"
     },
     {
       "id": 8001,
@@ -951,7 +1097,9 @@
       "issuerUrlVerified": "2026-09-26",
       "offerState": "verified-current",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8002,
@@ -984,7 +1132,9 @@
       "issuerUrlVerified": "2026-09-26",
       "offerState": "verified-current",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8003,
@@ -993,7 +1143,7 @@
       "type": "Personal",
       "bonus": 200,
       "unit": "cash / UR",
-      "hist": null,
+      "hist": 300,
       "spend": 500,
       "af": 0,
       "reports": true,
@@ -1005,7 +1155,13 @@
         "cash",
         "ultimate rewards",
         "chase"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 500,
+      "histPublicDate": "2025-12",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "The Points Guy",
+      "histSourceUrl": "https://thepointsguy.com/credit-cards/chase-best-welcome-offers/"
     },
     {
       "id": 8004,
@@ -1014,7 +1170,7 @@
       "type": "Personal",
       "bonus": 0,
       "unit": "cash / UR",
-      "hist": null,
+      "hist": 200,
       "spend": null,
       "af": 0,
       "reports": true,
@@ -1026,7 +1182,13 @@
         "cash",
         "ultimate rewards",
         "chase"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 500,
+      "histPublicDate": "2020-09",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club",
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/chase-freedom-flex/"
     },
     {
       "id": 8005,
@@ -1057,7 +1219,9 @@
       "issuerUrlVerified": "2026-09-26",
       "offerState": "verified-current",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8006,
@@ -1088,7 +1252,9 @@
       "issuerUrlVerified": "2026-09-26",
       "offerState": "verified-current",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8007,
@@ -1119,7 +1285,9 @@
       "issuerUrlVerified": "2026-09-26",
       "offerState": "verified-current",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8008,
@@ -1156,7 +1324,9 @@
         "10,000",
         "authorized user",
         "150"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8009,
@@ -1195,7 +1365,9 @@
         "10,000",
         "authorized user",
         "350"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8010,
@@ -1204,7 +1376,7 @@
       "type": "Personal",
       "bonus": 90000,
       "unit": "United miles",
-      "hist": null,
+      "hist": 120000,
       "spend": 5000,
       "af": 695,
       "reports": true,
@@ -1233,7 +1405,13 @@
         "10,000",
         "authorized user",
         "695"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 6000,
+      "histPublicDate": "2022-03",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Upgraded Points",
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/united-club-infinite-card/welcome-offer-history/"
     },
     {
       "id": 8011,
@@ -1242,7 +1420,7 @@
       "type": "Personal",
       "bonus": 40000,
       "unit": "United miles",
-      "hist": null,
+      "hist": 40000,
       "spend": 1000,
       "af": 0,
       "reports": true,
@@ -1270,7 +1448,13 @@
         "10,000",
         "authorized user",
         "no annual fee"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 1000,
+      "histPublicDate": "2026",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club / Upgraded Points",
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/united-gateway/"
     },
     {
       "id": 8012,
@@ -1279,7 +1463,7 @@
       "type": "Personal",
       "bonus": 0,
       "unit": "Hyatt points",
-      "hist": null,
+      "hist": 65000,
       "spend": null,
       "af": 95,
       "reports": true,
@@ -1290,7 +1474,14 @@
       "tags": [
         "hotel",
         "hyatt"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 3000,
+      "histPublicDate": "2024-01",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Upgraded Points",
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/chase-hyatt-credit-card/welcome-offer-history/",
+      "histAlternativeNote": "The card has also offered 5 Category 1-4 free-night awards; certificate offers are not directly comparable to points-only offers."
     },
     {
       "id": 8013,
@@ -1310,7 +1501,9 @@
       "tags": [
         "hotel",
         "ihg"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8014,
@@ -1330,7 +1523,9 @@
       "tags": [
         "hotel",
         "ihg"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8015,
@@ -1350,7 +1545,9 @@
       "tags": [
         "hotel",
         "marriott"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8016,
@@ -1359,7 +1556,7 @@
       "type": "Personal",
       "bonus": 0,
       "unit": "Marriott points",
-      "hist": null,
+      "hist": 250000,
       "spend": null,
       "af": 95,
       "reports": true,
@@ -1370,7 +1567,13 @@
       "tags": [
         "hotel",
         "marriott"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 5000,
+      "histPublicDate": "2026",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "BonusEagle",
+      "histSourceUrl": "https://www.bonuseagle.com/offers"
     },
     {
       "id": 8017,
@@ -1390,7 +1593,9 @@
       "tags": [
         "hotel",
         "marriott"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8018,
@@ -1410,7 +1615,9 @@
       "tags": [
         "airline",
         "aeroplan"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8019,
@@ -1430,7 +1637,9 @@
       "tags": [
         "airline",
         "avios"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8020,
@@ -1450,7 +1659,9 @@
       "tags": [
         "airline",
         "avios"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8021,
@@ -1470,7 +1681,9 @@
       "tags": [
         "airline",
         "avios"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8101,
@@ -1492,7 +1705,9 @@
         "transferable",
         "premium",
         "amex"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8102,
@@ -1501,7 +1716,7 @@
       "type": "Personal",
       "bonus": 0,
       "unit": "Membership Rewards points",
-      "hist": null,
+      "hist": 100000,
       "spend": null,
       "af": 325,
       "reports": true,
@@ -1514,7 +1729,13 @@
         "transferable",
         "dining",
         "amex"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 4000,
+      "histPublicDate": "2022-06",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Upgraded Points",
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/american-express-gold-card/welcome-bonus-offer-history/"
     },
     {
       "id": 8103,
@@ -1535,7 +1756,9 @@
         "travel",
         "transferable",
         "amex"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8104,
@@ -1544,7 +1767,7 @@
       "type": "Personal",
       "bonus": 300,
       "unit": "cash",
-      "hist": null,
+      "hist": 350,
       "spend": 3000,
       "af": 95,
       "reports": true,
@@ -1556,7 +1779,13 @@
         "cash",
         "grocery",
         "amex"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 3000,
+      "histPublicDate": "2022-06",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Upgraded Points",
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/american-express-blue-cash-preferred/welcome-offer-history/"
     },
     {
       "id": 8105,
@@ -1565,7 +1794,7 @@
       "type": "Personal",
       "bonus": 250,
       "unit": "cash",
-      "hist": null,
+      "hist": 250,
       "spend": 2000,
       "af": 0,
       "reports": true,
@@ -1576,7 +1805,13 @@
       "tags": [
         "cash",
         "amex"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 2000,
+      "histPublicDate": "2026",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "BonusEagle / Upgraded Points",
+      "histSourceUrl": "https://www.bonuseagle.com/offers"
     },
     {
       "id": 8106,
@@ -1596,7 +1831,9 @@
       "tags": [
         "airline",
         "delta"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8107,
@@ -1605,7 +1842,7 @@
       "type": "Personal",
       "bonus": 0,
       "unit": "Delta miles",
-      "hist": null,
+      "hist": 100000,
       "spend": null,
       "af": 350,
       "reports": true,
@@ -1616,7 +1853,13 @@
       "tags": [
         "airline",
         "delta"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 4000,
+      "histPublicDate": "2026",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "BonusEagle",
+      "histSourceUrl": "https://www.bonuseagle.com/offers"
     },
     {
       "id": 8108,
@@ -1625,7 +1868,7 @@
       "type": "Personal",
       "bonus": 0,
       "unit": "Delta miles",
-      "hist": null,
+      "hist": 125000,
       "spend": null,
       "af": 650,
       "reports": true,
@@ -1637,7 +1880,13 @@
         "airline",
         "delta",
         "premium"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 6000,
+      "histPublicDate": "historical",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "BonusEagle",
+      "histSourceUrl": "https://www.bonuseagle.com/offers"
     },
     {
       "id": 8109,
@@ -1646,7 +1895,7 @@
       "type": "Personal",
       "bonus": 0,
       "unit": "Hilton points",
-      "hist": null,
+      "hist": 130000,
       "spend": null,
       "af": 0,
       "reports": true,
@@ -1657,7 +1906,13 @@
       "tags": [
         "hotel",
         "hilton"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 5000,
+      "histPublicDate": "historical",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "The Points Guy",
+      "histSourceUrl": "https://thepointsguy.com/credit-cards/hilton-american-express-best-welcome-offers/"
     },
     {
       "id": 8110,
@@ -1666,7 +1921,7 @@
       "type": "Personal",
       "bonus": 0,
       "unit": "Hilton points",
-      "hist": null,
+      "hist": 180000,
       "spend": null,
       "af": 150,
       "reports": true,
@@ -1677,7 +1932,13 @@
       "tags": [
         "hotel",
         "hilton"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 10000,
+      "histPublicDate": "2024-03",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "The Points Guy",
+      "histSourceUrl": "https://thepointsguy.com/credit-cards/hilton-american-express-best-welcome-offers/"
     },
     {
       "id": 8111,
@@ -1686,7 +1947,7 @@
       "type": "Personal",
       "bonus": 0,
       "unit": "Hilton points",
-      "hist": null,
+      "hist": 200000,
       "spend": null,
       "af": 550,
       "reports": true,
@@ -1698,7 +1959,13 @@
         "hotel",
         "hilton",
         "premium"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 6000,
+      "histPublicDate": "2026-09",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Upgraded Points / TPG",
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/hilton-honors-american-express-aspire-card/welcome-offer-history/"
     },
     {
       "id": 8112,
@@ -1718,7 +1985,9 @@
       "tags": [
         "hotel",
         "marriott"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8113,
@@ -1739,7 +2008,9 @@
         "hotel",
         "marriott",
         "premium"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8114,
@@ -1763,7 +2034,9 @@
         "amex",
         "schwab",
         "relationship"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8115,
@@ -1787,7 +2060,9 @@
         "amex",
         "morgan-stanley",
         "relationship"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8201,
@@ -1796,7 +2071,7 @@
       "type": "Personal",
       "bonus": 0,
       "unit": "ThankYou points",
-      "hist": null,
+      "hist": 80000,
       "spend": null,
       "af": 95,
       "reports": true,
@@ -1808,7 +2083,13 @@
         "travel",
         "transferable",
         "citi"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 4000,
+      "histPublicDate": "2021-07",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club",
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/citi-strata-premier/"
     },
     {
       "id": 8202,
@@ -1841,7 +2122,9 @@
       ],
       "issuerUrlVerified": "2026-09-26",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8203,
@@ -1850,7 +2133,7 @@
       "type": "Personal",
       "bonus": 20000,
       "unit": "ThankYou points",
-      "hist": null,
+      "hist": 30000,
       "spend": 1000,
       "af": 0,
       "reports": true,
@@ -1872,7 +2155,13 @@
       "issuerUrlVerified": "2026-09-26",
       "offerState": "verified-current",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 1000,
+      "histPublicDate": "2025-07",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club",
+      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/citi-strata/"
     },
     {
       "id": 8204,
@@ -1881,7 +2170,7 @@
       "type": "Personal",
       "bonus": 200,
       "unit": "cash / ThankYou points",
-      "hist": null,
+      "hist": 200,
       "spend": 1500,
       "af": 0,
       "reports": true,
@@ -1892,7 +2181,13 @@
       "tags": [
         "cash",
         "citi"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 1500,
+      "histPublicDate": "2023-11",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "BonusEagle",
+      "histSourceUrl": "https://www.bonuseagle.com/offers"
     },
     {
       "id": 8205,
@@ -1913,7 +2208,9 @@
         "cash",
         "citi",
         "legacy"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8206,
@@ -1934,7 +2231,9 @@
         "airline",
         "aadvantage",
         "premium"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8207,
@@ -1954,7 +2253,9 @@
       "tags": [
         "airline",
         "aadvantage"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8208,
@@ -1974,7 +2275,9 @@
       "tags": [
         "airline",
         "aadvantage"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8209,
@@ -1994,7 +2297,9 @@
       "tags": [
         "cash",
         "costco"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8210,
@@ -2017,7 +2322,9 @@
       "tags": [
         "cash",
         "citi"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8301,
@@ -2026,7 +2333,7 @@
       "type": "Personal",
       "bonus": 75000,
       "unit": "Capital One miles",
-      "hist": null,
+      "hist": 100000,
       "spend": 4000,
       "af": 395,
       "reports": true,
@@ -2050,7 +2357,13 @@
       "issuerUrlVerified": "2026-09-26",
       "offerState": "verified-current",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 10000,
+      "histPublicDate": "2021-11",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Upgraded Points",
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/capital-one-venture-x/welcome-bonus-offer-history/"
     },
     {
       "id": 8302,
@@ -2059,7 +2372,7 @@
       "type": "Personal",
       "bonus": 75000,
       "unit": "Capital One miles + travel credit",
-      "hist": null,
+      "hist": 100000,
       "spend": 4000,
       "af": 95,
       "reports": true,
@@ -2071,7 +2384,13 @@
         "travel",
         "transferable",
         "capital one"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 20000,
+      "histPublicDate": "2020-09",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Upgraded Points",
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/capital-one-venture-rewards-credit-card/welcome-bonus-offer-history/"
     },
     {
       "id": 8303,
@@ -2080,7 +2399,7 @@
       "type": "Personal",
       "bonus": 20000,
       "unit": "Capital One miles",
-      "hist": null,
+      "hist": 40000,
       "spend": 500,
       "af": 0,
       "reports": true,
@@ -2102,7 +2421,13 @@
       "issuerUrlVerified": "2026-09-26",
       "offerState": "verified-current",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 1000,
+      "histPublicDate": "2023-02",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club",
+      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/capital-one-ventureone/"
     },
     {
       "id": 8304,
@@ -2111,7 +2436,7 @@
       "type": "Personal",
       "bonus": 200,
       "unit": "cash",
-      "hist": null,
+      "hist": 250,
       "spend": 500,
       "af": 0,
       "reports": true,
@@ -2134,7 +2459,13 @@
       "issuerUrlVerified": "2026-09-26",
       "offerState": "verified-current",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 500,
+      "histPublicDate": "2024-10",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club",
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/capital-one-savor/"
     },
     {
       "id": 8305,
@@ -2143,7 +2474,7 @@
       "type": "Personal",
       "bonus": 200,
       "unit": "cash",
-      "hist": null,
+      "hist": 200,
       "spend": 500,
       "af": 0,
       "reports": true,
@@ -2165,7 +2496,13 @@
       "issuerUrlVerified": "2026-09-26",
       "offerState": "verified-current",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 500,
+      "histPublicDate": "2020-10",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club",
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/capital-one-quicksilver/"
     },
     {
       "id": 8401,
@@ -2186,7 +2523,9 @@
         "travel",
         "cash",
         "bofa"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8402,
@@ -2207,7 +2546,9 @@
         "travel",
         "premium",
         "bofa"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8403,
@@ -2216,7 +2557,7 @@
       "type": "Personal",
       "bonus": 200,
       "unit": "cash",
-      "hist": null,
+      "hist": 200,
       "spend": 1000,
       "af": 0,
       "reports": true,
@@ -2243,7 +2584,13 @@
       "offerState": "verified-current",
       "offerType": "public",
       "confidence": "official-issuer",
-      "promoNote": "First-year reward promotion: 6% cash back in the selected choice category (3% base + 3% first-year bonus), 2% at grocery stores and wholesale clubs, and 1% on other purchases. The 6%/2% rates apply to the first $2,500 in combined eligible purchases each quarter; after the first-year bonus ends, the choice-category rate returns to 3%. The first-year category boost is kept separate from the $200 sign-up bonus because its value depends on actual eligible spend."
+      "promoNote": "First-year reward promotion: 6% cash back in the selected choice category (3% base + 3% first-year bonus), 2% at grocery stores and wholesale clubs, and 1% on other purchases. The 6%/2% rates apply to the first $2,500 in combined eligible purchases each quarter; after the first-year bonus ends, the choice-category rate returns to 3%. The first-year category boost is kept separate from the $200 sign-up bonus because its value depends on actual eligible spend.",
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 500,
+      "histPublicDate": "2016-03",
+      "histStatus": "best-documented",
+      "histSourceLabel": "Pocket Finance Club / Doctor of Credit",
+      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/susan-g-komen-cash-rewards/"
     },
     {
       "id": 8404,
@@ -2252,7 +2599,7 @@
       "type": "Personal",
       "bonus": 250,
       "unit": "cash",
-      "hist": null,
+      "hist": 250,
       "spend": 1000,
       "af": 0,
       "reports": true,
@@ -2266,7 +2613,13 @@
       "tags": [
         "cash",
         "bofa"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 1000,
+      "histPublicDate": "2026-09",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club",
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/bank-of-america-unlimited-cash/"
     },
     {
       "id": 8405,
@@ -2275,7 +2628,7 @@
       "type": "Personal",
       "bonus": 25000,
       "unit": "BofA points",
-      "hist": null,
+      "hist": 25000,
       "spend": 1000,
       "af": 0,
       "reports": true,
@@ -2297,7 +2650,13 @@
       "issuerUrlVerified": "2026-09-26",
       "offerState": "verified-current",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 1000,
+      "histPublicDate": "2020+",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club",
+      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/bank-of-america-travel-rewards/"
     },
     {
       "id": 8406,
@@ -2329,7 +2688,9 @@
       "issuerUrlVerified": "2026-09-26",
       "offerState": "verified-current",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8407,
@@ -2362,7 +2723,9 @@
       "issuerUrlVerified": "2026-09-26",
       "offerState": "verified-current",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8408,
@@ -2382,7 +2745,9 @@
       "tags": [
         "airline",
         "flying blue"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8409,
@@ -2402,7 +2767,9 @@
       "tags": [
         "airline",
         "spirit"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8501,
@@ -2411,7 +2778,7 @@
       "type": "Personal",
       "bonus": 0,
       "unit": "Wells Fargo Rewards",
-      "hist": null,
+      "hist": 30000,
       "spend": null,
       "af": 0,
       "reports": true,
@@ -2423,7 +2790,13 @@
         "travel",
         "cash",
         "wells fargo"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 1500,
+      "histPublicDate": "2022-09",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club",
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/wells-fargo-autograph/"
     },
     {
       "id": 8502,
@@ -2444,7 +2817,9 @@
         "travel",
         "transferable",
         "wells fargo"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8503,
@@ -2453,7 +2828,7 @@
       "type": "Personal",
       "bonus": 200,
       "unit": "cash",
-      "hist": null,
+      "hist": 250,
       "spend": 1500,
       "af": 0,
       "reports": true,
@@ -2464,7 +2839,13 @@
       "tags": [
         "cash",
         "wells fargo"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 1000,
+      "histPublicDate": "2022-08",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Thiccstack",
+      "histSourceUrl": "https://thiccstack.com/cards/wellsfargo-active-cash"
     },
     {
       "id": 8504,
@@ -2484,7 +2865,9 @@
       "tags": [
         "cash",
         "wells fargo"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8505,
@@ -2493,7 +2876,7 @@
       "type": "Personal",
       "bonus": 60000,
       "unit": "Choice points",
-      "hist": null,
+      "hist": 60000,
       "spend": null,
       "af": 0,
       "reports": true,
@@ -2504,7 +2887,13 @@
       "tags": [
         "hotel",
         "choice"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 1000,
+      "histPublicDate": "2026-06",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "NerdWallet",
+      "histSourceUrl": "https://www.nerdwallet.com/credit-cards/news/choice-privileges-60K-bonus-june-2026"
     },
     {
       "id": 8506,
@@ -2524,7 +2913,9 @@
       "tags": [
         "hotel",
         "choice"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8507,
@@ -2533,7 +2924,7 @@
       "type": "Personal",
       "bonus": 0,
       "unit": "OneKeyCash",
-      "hist": null,
+      "hist": 400,
       "spend": null,
       "af": 0,
       "reports": true,
@@ -2544,7 +2935,13 @@
       "tags": [
         "travel",
         "expedia"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 1000,
+      "histPublicDate": "2024-07",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Credit Compound",
+      "histSourceUrl": "https://creditcompound.com/cards/one-key-card"
     },
     {
       "id": 8508,
@@ -2564,7 +2961,9 @@
       "tags": [
         "travel",
         "expedia"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8601,
@@ -2584,7 +2983,9 @@
       "tags": [
         "cash",
         "us bank"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8602,
@@ -2605,7 +3006,9 @@
         "cash",
         "dining",
         "us bank"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8603,
@@ -2625,7 +3028,9 @@
       "tags": [
         "travel",
         "us bank"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8604,
@@ -2645,7 +3050,9 @@
       "tags": [
         "cash",
         "us bank"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8605,
@@ -2665,7 +3072,9 @@
       "tags": [
         "cash",
         "us bank"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8606,
@@ -2685,7 +3094,9 @@
       "tags": [
         "apr",
         "us bank"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8701,
@@ -2705,7 +3116,9 @@
       "tags": [
         "airline",
         "jetblue"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8702,
@@ -2726,7 +3139,9 @@
         "airline",
         "jetblue",
         "premium"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8703,
@@ -2746,7 +3161,9 @@
       "tags": [
         "hotel",
         "wyndham"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8704,
@@ -2755,7 +3172,7 @@
       "type": "Personal",
       "bonus": 0,
       "unit": "Wyndham points",
-      "hist": null,
+      "hist": 100000,
       "spend": null,
       "af": 95,
       "reports": true,
@@ -2766,7 +3183,13 @@
       "tags": [
         "hotel",
         "wyndham"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histPublicSpend": 1500,
+      "histPublicDate": "2026-06",
+      "histStatus": "verified-public-high",
+      "histSourceLabel": "Pocket Finance Club",
+      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/wyndham-earner-plus/"
     },
     {
       "id": 8705,
@@ -2787,7 +3210,9 @@
         "hotel",
         "wyndham",
         "premium"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8706,
@@ -2807,7 +3232,9 @@
       "tags": [
         "airline",
         "aadvantage"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8801,
@@ -2830,7 +3257,9 @@
         "transferable",
         "housing",
         "cash"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8816,
@@ -2856,7 +3285,9 @@
         "property credit",
         "dining",
         "grocery"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8817,
@@ -2885,7 +3316,9 @@
         "lounge",
         "priority pass",
         "status"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8802,
@@ -2905,7 +3338,9 @@
       "tags": [
         "cash",
         "discover"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8803,
@@ -2926,7 +3361,9 @@
         "cash",
         "travel",
         "discover"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8804,
@@ -2946,7 +3383,9 @@
       "tags": [
         "cash",
         "apple"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8805,
@@ -2966,7 +3405,9 @@
       "tags": [
         "cash",
         "fidelity"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8815,
@@ -2989,7 +3430,9 @@
         "travel",
         "robinhood",
         "relationship"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8806,
@@ -3009,7 +3452,9 @@
       "tags": [
         "cash",
         "sofi"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8807,
@@ -3029,7 +3474,9 @@
       "tags": [
         "cash",
         "pnc"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8808,
@@ -3049,7 +3496,9 @@
       "tags": [
         "travel",
         "usaa"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8809,
@@ -3069,7 +3518,9 @@
       "tags": [
         "travel",
         "navy federal"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8810,
@@ -3089,7 +3540,9 @@
       "tags": [
         "travel",
         "penfed"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8811,
@@ -3109,7 +3562,9 @@
       "tags": [
         "airline",
         "virgin"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8812,
@@ -3129,7 +3584,9 @@
         "carnival",
         "cruise"
       ],
-      "offerNote": "Carnival co-branded card issued by Barclays. Earns Carnival Rewards Points on card purchases; current exact welcome-offer terms should be verified before applying."
+      "offerNote": "Carnival co-branded card issued by Barclays. Earns Carnival Rewards Points on card purchases; current exact welcome-offer terms should be verified before applying.",
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8901,
@@ -3152,7 +3609,9 @@
         "celebrity",
         "silversea",
         "travel"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8902,
@@ -3176,7 +3635,9 @@
         "silversea",
         "travel",
         "premium"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8903,
@@ -3197,7 +3658,9 @@
         "cruise",
         "norwegian",
         "travel"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     },
     {
       "id": 8904,
@@ -3218,7 +3681,16 @@
         "cruise",
         "princess",
         "travel"
-      ]
+      ],
+      "histResearchDate": "2026-09-27",
+      "histStatus": "research-pending"
     }
-  ]
+  ],
+  "historicalHighResearch": {
+    "researchDate": "2026-09-27",
+    "cardsWithHistoricalValue": 103,
+    "sourceBackedThisPass": 49,
+    "researchPending": 39,
+    "note": "Historical offers can differ in spend, credits, certificates, targeting, or channel. CardPilot only compares percentages when the stored numeric bonus is reasonably comparable."
+  }
 }
