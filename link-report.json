@@ -1,6 +1,6 @@
 {
-  "catalogVersion": "2026-10-02.1",
-  "checkedAt": "2026-10-03T07:08:21.202Z",
+  "catalogVersion": "2026-10-03.1",
+  "checkedAt": "2026-10-03T17:17:48.369Z",
   "checked": 35,
   "broken": 0,
   "results": [
@@ -14,7 +14,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/ink/unlimited",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:19.194Z"
+      "checkedAt": "2026-10-03T17:17:46.475Z"
     },
     {
       "id": 7002,
@@ -26,7 +26,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/ink/cash",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:19.215Z"
+      "checkedAt": "2026-10-03T17:17:46.464Z"
     },
     {
       "id": 7007,
@@ -38,7 +38,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/IHG/business",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:19.333Z"
+      "checkedAt": "2026-10-03T17:17:46.538Z"
     },
     {
       "id": 7009,
@@ -50,7 +50,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:19.322Z"
+      "checkedAt": "2026-10-03T17:17:46.601Z"
     },
     {
       "id": 7010,
@@ -62,7 +62,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/united/united-business-card",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:19.362Z"
+      "checkedAt": "2026-10-03T17:17:46.597Z"
     },
     {
       "id": 7011,
@@ -74,7 +74,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/united/united-club-business",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:19.501Z"
+      "checkedAt": "2026-10-03T17:17:46.752Z"
     },
     {
       "id": 7401,
@@ -86,7 +86,7 @@
       "status": 200,
       "finalUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-unlimited-cash-rewards",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:19.643Z"
+      "checkedAt": "2026-10-03T17:17:47.006Z"
     },
     {
       "id": 7402,
@@ -98,7 +98,7 @@
       "status": 200,
       "finalUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-customized-cash-rewards",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:19.509Z"
+      "checkedAt": "2026-10-03T17:17:46.975Z"
     },
     {
       "id": 7403,
@@ -110,7 +110,7 @@
       "status": 200,
       "finalUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-travel-rewards",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:19.513Z"
+      "checkedAt": "2026-10-03T17:17:47.021Z"
     },
     {
       "id": 8001,
@@ -122,7 +122,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:19.499Z"
+      "checkedAt": "2026-10-03T17:17:46.731Z"
     },
     {
       "id": 8002,
@@ -134,7 +134,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:19.792Z"
+      "checkedAt": "2026-10-03T17:17:47.181Z"
     },
     {
       "id": 8004,
@@ -146,7 +146,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:19.751Z"
+      "checkedAt": "2026-10-03T17:17:47.140Z"
     },
     {
       "id": 8005,
@@ -158,7 +158,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:19.758Z"
+      "checkedAt": "2026-10-03T17:17:47.179Z"
     },
     {
       "id": 8006,
@@ -170,7 +170,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/southwest/premier",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:19.761Z"
+      "checkedAt": "2026-10-03T17:17:47.190Z"
     },
     {
       "id": 8007,
@@ -182,7 +182,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:19.779Z"
+      "checkedAt": "2026-10-03T17:17:47.219Z"
     },
     {
       "id": 8008,
@@ -194,7 +194,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:20.069Z"
+      "checkedAt": "2026-10-03T17:17:47.338Z"
     },
     {
       "id": 8009,
@@ -206,7 +206,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:20.047Z"
+      "checkedAt": "2026-10-03T17:17:47.546Z"
     },
     {
       "id": 8010,
@@ -218,7 +218,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:20.055Z"
+      "checkedAt": "2026-10-03T17:17:47.506Z"
     },
     {
       "id": 8011,
@@ -230,7 +230,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:20.103Z"
+      "checkedAt": "2026-10-03T17:17:47.544Z"
     },
     {
       "id": 8013,
@@ -242,7 +242,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/one-rewards",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:20.159Z"
+      "checkedAt": "2026-10-03T17:17:47.519Z"
     },
     {
       "id": 8014,
@@ -254,7 +254,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:20.301Z"
+      "checkedAt": "2026-10-03T17:17:47.669Z"
     },
     {
       "id": 8018,
@@ -266,7 +266,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:20.272Z"
+      "checkedAt": "2026-10-03T17:17:47.663Z"
     },
     {
       "id": 8202,
@@ -278,7 +278,7 @@
       "status": 200,
       "finalUrl": "https://www.citi.com/credit-cards/citi-strata-elite-credit-card",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:20.302Z"
+      "checkedAt": "2026-10-03T17:17:47.697Z"
     },
     {
       "id": 8203,
@@ -290,7 +290,7 @@
       "status": 200,
       "finalUrl": "https://www.citi.com/credit-cards/citi-strata-credit-card",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:20.331Z"
+      "checkedAt": "2026-10-03T17:17:47.694Z"
     },
     {
       "id": 8210,
@@ -302,7 +302,7 @@
       "status": 200,
       "finalUrl": "https://www.citi.com/credit-cards/citi-att-pointsplus-credit-card",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:20.324Z"
+      "checkedAt": "2026-10-03T17:17:47.652Z"
     },
     {
       "id": 8301,
@@ -314,7 +314,7 @@
       "status": 200,
       "finalUrl": "https://www.capitalone.com/credit-cards/venture-x/",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:20.525Z"
+      "checkedAt": "2026-10-03T17:17:47.900Z"
     },
     {
       "id": 8303,
@@ -326,7 +326,7 @@
       "status": 200,
       "finalUrl": "https://www.capitalone.com/credit-cards/ventureone/",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:20.528Z"
+      "checkedAt": "2026-10-03T17:17:47.894Z"
     },
     {
       "id": 8304,
@@ -338,7 +338,7 @@
       "status": 200,
       "finalUrl": "https://www.capitalone.com/credit-cards/savor/",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:20.948Z"
+      "checkedAt": "2026-10-03T17:17:47.918Z"
     },
     {
       "id": 8305,
@@ -350,7 +350,7 @@
       "status": 200,
       "finalUrl": "https://www.capitalone.com/credit-cards/quicksilver/",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:21.010Z"
+      "checkedAt": "2026-10-03T17:17:47.912Z"
     },
     {
       "id": 8403,
@@ -362,7 +362,7 @@
       "status": 200,
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:20.863Z"
+      "checkedAt": "2026-10-03T17:17:48.169Z"
     },
     {
       "id": 8404,
@@ -374,7 +374,7 @@
       "status": 200,
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:21.107Z"
+      "checkedAt": "2026-10-03T17:17:48.319Z"
     },
     {
       "id": 8405,
@@ -386,7 +386,7 @@
       "status": 200,
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:21.072Z"
+      "checkedAt": "2026-10-03T17:17:48.368Z"
     },
     {
       "id": 8406,
@@ -398,7 +398,7 @@
       "status": 200,
       "finalUrl": "https://www.bankofamerica.com/credit-cards/",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:21.094Z"
+      "checkedAt": "2026-10-03T17:17:48.347Z"
     },
     {
       "id": 8407,
@@ -410,7 +410,7 @@
       "status": 200,
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-infinite-credit-card/",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:21.202Z"
+      "checkedAt": "2026-10-03T17:17:48.345Z"
     },
     {
       "id": 8022,
@@ -422,7 +422,7 @@
       "status": 200,
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select",
       "hostChanged": false,
-      "checkedAt": "2026-10-03T07:08:21.170Z"
+      "checkedAt": "2026-10-03T17:17:48.313Z"
     }
   ]
 }
