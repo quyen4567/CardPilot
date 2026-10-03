@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.3.1</title>
+  <title>CardPilot v11.3.3</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -47,7 +47,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.1</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.3</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -121,6 +121,8 @@ if(data.profile.recommendationVersion!=='10.0'){
 }
 data.profile.subInterests=data.profile.subInterests||{airline:[],hotel:[],cruise:[],cash:[]};
 data.profile.savedStrategies=Array.isArray(data.profile.savedStrategies)?data.profile.savedStrategies:[];
+// v11.3.2: restore historical-high fine-tune ranking and keep single-category searches focused on that category.
+// v11.3.3: separate Big sign-up bonus from Historical-high sign-up bonus in benefit selection.
 // v11.3.1: cash-back intent distinguishes true cash, cash-equivalent points, and discounted cash redemptions.
 // UI refinements: $10K+ replaces no-limit SUB spend, lowest annual fee label, and offer-strength badges/ranking.
 if(!['pure','equivalent','any'].includes(data.profile.cashRewardMode))data.profile.cashRewardMode='equivalent';
@@ -132,7 +134,7 @@ data.profile.relationships=data.profile.relationships||{bofaPersonal:'none',bofa
 // v10.10.26: quick setup reordered to annual fee → desired benefits → personal/business/either.
 // v10.10.18: add effective catch-all cash-back rates (including relationship boosts) and prioritize stronger baseline cash-back when selected.
 if(!data.profile.refineRank)data.profile.refineRank='overall';
-if(['efficiency','hist100','cost','keeper','everyday'].includes(data.profile.refineRank))data.profile.refineRank='overall';
+if(['efficiency','cost','keeper','everyday'].includes(data.profile.refineRank))data.profile.refineRank='overall';
 if(['value','roi','cash','points','catchall','fee'].includes(data.profile.refineRank)) data.profile.refineRank=({value:'bonus',roi:'bonus',cash:'bonus',points:'bonus',catchall:'rewards',fee:'cost'})[data.profile.refineRank];
 if(!data.profile.refineType)data.profile.refineType='all';
 if(!data.profile.relationships.bofaPersonal)data.profile.relationships.bofaPersonal='none';
@@ -218,7 +220,7 @@ function quickOnboarding(){
   const q=Number(data.profile.quickStage||1), f=five24();
   if(q===1)return `<div class="card"><div class="small">QUICK SETUP · 1 OF 2</div><h2 style="margin:5px 0 6px">Your wallet</h2><div class="small">CardPilot reuses this information for future recommendations, so you only need to maintain it when something changes.</div><div class="grid" style="margin-top:14px"><div class="note"><b>${data.cards.length} card${data.cards.length===1?'':'s'} saved</b><div class="small" style="margin-top:4px">${data.cards.length?`Current rolling count: ${f}/24`:'Add open dates so CardPilot can calculate 5/24.'}</div><button class="btn ghost" style="margin-top:10px" onclick="showView('cardsView')">${data.cards.length?'Review cards':'Add my cards'}</button></div><div class="note"><b>Relationships & ecosystems</b><div class="small" style="margin-top:4px">${relationshipSummary()}</div><button class="btn ghost" style="margin-top:10px" onclick="showView('relationshipsView')">Review relationships</button></div></div><button class="primary-action" onclick="setQuickStage(2)">Continue — 3 quick questions</button><div class="small" style="text-align:center;margin-top:8px">Your detailed strategy settings stay available under Fine-tune.</div></div>`;
   const fees=[['0','Up to $0'],['95','Up to $95'],['250','Up to $250'],['550','Up to $550'],['895','Up to $895'],['any','No fee limit'],['justify','Only if benefits justify it']];
-  const goals=[['hist','Big sign-up bonus'],['cash','Cash back'],['points','Travel rewards'],['airline','Airline'],['hotel','Hotel'],['premium','Premium travel'],['apr','0% APR'],['none','Not sure — recommend for me']];
+  const goals=[['hist','Big sign-up bonus'],['historical','Historical-high sign-up bonus'],['cash','Cash back'],['points','Travel rewards'],['airline','Airline'],['hotel','Hotel'],['premium','Premium travel'],['apr','0% APR'],['none','Not sure — recommend for me']];
   return `<div class="card"><div class="small">QUICK SETUP · 2 OF 2</div><h2 style="margin:5px 0 6px">What should you get next?</h2><div class="small">Three quick choices are enough for an initial recommendation. CardPilot handles 5/24, relationship boosts, overlap, bonus eligibility, and other strategy rules behind the scenes.</div><div class="subchoices"><h4>1. How do you feel about annual fees?</h4><div class="small" style="margin-bottom:8px">Choose the highest fee you are comfortable considering, or let CardPilot allow a higher fee only when the benefits justify it.</div><div class="chipgrid">${fees.map(x=>`<button class="chip ${data.profile.feePref===x[0]?'selected':''}" onclick="setFeePref('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="subchoices"><h4>2. What benefits do you primarily want from your credit card?</h4><div class="small" style="margin-bottom:8px">Choose one or more.</div><div class="chipgrid">${goals.map(x=>`<button class="chip ${(data.profile.interests||[]).includes(x[0])?'selected':''}" onclick="toggleInterest('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="subchoices"><h4>3. How much can you comfortably spend to earn a sign-up bonus?</h4><div class="small" style="margin-bottom:8px">Choose the highest minimum-spend requirement you can comfortably complete. CardPilot will avoid recommending bonuses above this limit.</div><div class="chipgrid">${[['1000','Up to $1,000'],['3000','Up to $3,000'],['5000','Up to $5,000'],['10000','Up to $10,000'],['10000plus','$10,000+'],['nobonus',"I don't care about a sign-up bonus"]].map(x=>`<button class="chip ${data.profile.subSpendPref===x[0]?'selected':''}" onclick="setSubSpendPref('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="row" style="gap:10px;margin-top:16px"><button class="btn ghost" onclick="setQuickStage(1)">← Wallet</button><button class="primary-action" style="margin-top:0" ${data.profile.subSpendPref&&data.profile.feePref&&(data.profile.interests||[]).length?'':'disabled'} onclick="finishQuickSetup()">Show my recommendations</button></div><div style="text-align:center;margin-top:10px"><button class="btn ghost" onclick="beginPreferenceEditing(3)">Fine-tune advanced settings</button></div></div>`;
 }
 function onboarding(){return data.profile.editingPreferences?advancedOnboarding():quickOnboarding()}
@@ -240,7 +242,7 @@ if(step===2)body=`<div class="card"><div class="row"><span class="stepdot">2</sp
 if(step===3){if(f<5&&!data.profile.cardPath)data.profile.cardPath='business';body=`<div class="card"><div class="row"><span class="stepdot">3</span><div><h3>What should CardPilot consider next?</h3><div class="small">${f<5?`You are <b>${f}/24</b>. CardPilot suggests considering business cards that do not report to personal credit first, which can help preserve room for future personal-card applications.`:`You are <b>${f}/24</b>. Choose personal cards, business cards, or both; CardPilot will handle card-level eligibility separately.`}</div></div></div>${f>=5?`<div class="warningbox"><b>You are currently ${f}/24.</b><div class="small" style="margin-top:5px">Chase products affected by 5/24 are grayed out by default. This does not prevent you from comparing other personal and business cards.</div><label class="checkrow small"><input type="checkbox" ${data.profile.includeChaseOver524?'checked':''} onchange="toggleChaseOverride(this.checked)"><span><b>Include Chase cards anyway</b><br>Not recommended based on your current 5/24 status.</span></label></div>`:`<div class="note" style="margin-top:12px"><b>Business does not require an LLC or corporation.</b> Users with legitimate business activity may operate as a sole proprietor, LLC, corporation, partnership, or another business structure.</div>`}<div class="list" style="margin-top:14px"><button class="choice ${data.profile.cardPath==='business'?'selected':''}" onclick="setPathFromSetup('business')"><b>${f<5?'Recommended: ':''}Business cards</b><br><span class="small">${f<5?'Prefer business cards that do not report to personal credit; CardPilot will flag exceptions that can increase 5/24.':'Only evaluate business-card options.'}</span></button><button class="choice ${data.profile.cardPath==='personal'?'selected':''}" onclick="setPathFromSetup('personal')"><b>Personal cards</b><br><span class="small">Only evaluate personal-card options.</span></button><button class="choice ${data.profile.cardPath==='either'?'selected':''}" onclick="setPathFromSetup('either')"><b>Compare both</b><br><span class="small">Compare personal and business cards together.</span></button></div>${f<5?preserve524ChoicesHTML():''}<div class="row" style="margin-top:16px;gap:10px"><button class="btn ghost" onclick="finishSetupStep(2)">← Back</button><button class="primary-action" onclick="finishSetupStep(4)">Continue</button></div></div>`;}
 if(step===4)body=`<div class="card"><div class="row"><span class="stepdot">4</span><div><h3>How do you feel about annual fees?</h3><div class="small">CardPilot will use this preference when ranking cards.</div></div></div><div class="list" style="margin-top:14px">${[['0','Up to $0','Only show cards with no annual fee'],['95','Up to $95','Include any card with an annual fee of $95 or less'],['250','Up to $250','Include any card with an annual fee of $250 or less'],['550','Up to $550','Include any card with an annual fee of $550 or less'],['895','Up to $895','Include any card with an annual fee of $895 or less'],['any','No fee limit','Do not use annual fee as a hard limit'],['justify','Only if benefits justify it','Allow higher fees when the incremental benefits are worth it']].map(x=>`<button class="choice ${data.profile.feePref===x[0]?'selected':''}" onclick="setFeePref('${x[0]}')"><b>${x[1]}</b><br><span class="small">${x[2]}</span></button>`).join('')}</div><div class="row" style="margin-top:16px;gap:10px"><button class="btn ghost" onclick="finishSetupStep(3)">← Back</button><button class="primary-action" style="margin-top:0" ${data.profile.feePref?'':'disabled'} onclick="finishSetupStep(5)">Continue</button></div></div>`;
 if(step===5)body=`<div class="card"><div class="row"><span class="stepdot">5</span><div><h3>How much are you willing or able to spend to earn a sign-up bonus?</h3><div class="small">Choose the highest minimum-spend requirement you are comfortable completing. This keeps recommendations realistic.</div></div></div><div class="list" style="margin-top:14px">${[['1000','Up to $1,000'],['3000','Up to $3,000'],['5000','Up to $5,000'],['10000','Up to $10,000'],['10000plus','$10,000+'],['nobonus',"I don't care about a sign-up bonus"]].map(x=>`<button class="choice ${data.profile.subSpendPref===x[0]?'selected':''}" onclick="setSubSpendPref('${x[0]}')"><b>${x[1]}</b>${x[0]==='10000plus'?'<br><span class="small">No upper minimum-spend filter.</span>':x[0]==='nobonus'?'<br><span class="small">Do not prioritize a welcome offer.</span>':''}</button>`).join('')}</div><div class="subchoices" style="margin-top:16px"><h4>Optional: ongoing annual card spend</h4><div class="small" style="margin-bottom:10px">This is not purchase tracking. CardPilot only uses a rough annual amount to compare long-term earning rates, especially relationship cards such as Bank of America.</div><div class="interestgrid">${[['10000','About $10K/year'],['25000','About $25K/year'],['50000','About $50K/year'],['100000','About $100K/year'],['100000plus','$100K+/year'],['any','No preference']].map(x=>`<button class="interest ${data.profile.annualSpendPref===x[0]?'selected':''}" onclick="setAnnualSpendPref('${x[0]}')">${x[1]}</button>`).join('')}</div></div><div class="row" style="margin-top:16px;gap:10px"><button class="btn ghost" onclick="finishSetupStep(4)">← Back</button><button class="primary-action" onclick="finishSetupStep(6)">Continue</button></div></div>`;
-if(step===6){const opts=[['hist','Historical maximum / near-max sign-up bonus'],['points','Travel rewards'],['cash','Cash back'],['airline','Airline benefits'],['hotel','Hotel benefits'],['cruise','Cruise benefits'],['premium','Premium travel benefits'],['apr','0% APR / balance transfer'],['none','No preference / show strong fits']];body=`<div class="card"><div class="row"><span class="stepdot">6</span><div><h3>What matters in your next card?</h3><div class="small">Select all that apply. Airline, hotel, and cruise choices expand into specific benefits, and airline/hotel preferences can be personalized by brand.</div></div></div><div class="interestgrid" style="margin-top:14px">${opts.map(x=>`<button class="interest ${(data.profile.interests||[]).includes(x[0])?'selected':''}" onclick="toggleInterest('${x[0]}')">${x[1]}</button>`).join('')}</div>${secondaryChoicesHTML()}${(data.profile.interests||[]).includes('airline')?preferredAirlinesHTML():''}${(data.profile.interests||[]).includes('hotel')?preferredHotelsHTML():''}<div class="row" style="margin-top:14px;gap:10px"><button class="btn ghost" onclick="finishSetupStep(5)">← Back</button><button class="primary-action" onclick="finishSetupStep(7)">Continue</button></div></div>`;}
+if(step===6){const opts=[['hist','Big sign-up bonus'],['historical','Historical-high sign-up bonus'],['points','Travel rewards'],['cash','Cash back'],['airline','Airline benefits'],['hotel','Hotel benefits'],['cruise','Cruise benefits'],['premium','Premium travel benefits'],['apr','0% APR / balance transfer'],['none','No preference / show strong fits']];body=`<div class="card"><div class="row"><span class="stepdot">6</span><div><h3>What matters in your next card?</h3><div class="small">Select all that apply. Airline, hotel, and cruise choices expand into specific benefits, and airline/hotel preferences can be personalized by brand.</div></div></div><div class="interestgrid" style="margin-top:14px">${opts.map(x=>`<button class="interest ${(data.profile.interests||[]).includes(x[0])?'selected':''}" onclick="toggleInterest('${x[0]}')">${x[1]}</button>`).join('')}</div>${secondaryChoicesHTML()}${(data.profile.interests||[]).includes('airline')?preferredAirlinesHTML():''}${(data.profile.interests||[]).includes('hotel')?preferredHotelsHTML():''}<div class="row" style="margin-top:14px;gap:10px"><button class="btn ghost" onclick="finishSetupStep(5)">← Back</button><button class="primary-action" onclick="finishSetupStep(7)">Continue</button></div></div>`;}
 if(step===7)body=`<div class="card"><div class="row"><span class="stepdot">7</span><div><h3>How should CardPilot treat your existing portfolio?</h3><div class="small">Choose how much benefit overlap you want and whether cards you already hold should appear in new-card recommendations.</div></div></div>${overlapChoicesHTML()}${ownedCardPreferenceHTML()}${bonusRulesPanelHTML()}<div class="row" style="margin-top:14px;gap:10px"><button class="btn ghost" onclick="finishSetupStep(6)">← Back</button><button type="button" class="primary-action" onclick="finishOnboarding()">Show my recommendations</button></div></div>`;
 return `${preferenceStepNavHTML()}<div class="hero"><h2>${data.profile.editingPreferences?'Edit your CardPilot preferences':'Welcome to CardPilot'}</h2><div class="small">${data.profile.editingPreferences?'Jump to any setup step above. Your other answers stay unchanged.':'First we understand your cards and relationships. Then we recommend what to consider next — and when.'}</div><div class="setup-progress"><div style="width:${pctv}%"></div></div><b>Setup ${step} of 7</b></div>${body}`}
 function secondaryChoicesHTML(){const ints=data.profile.interests||[], s=data.profile.subInterests||{airline:[],hotel:[],cruise:[],cash:[]};let out='';if(ints.includes('cash'))out+=`<div class="subchoices"><h4>What should count as cash back?</h4><div class="small" style="margin-bottom:8px">CardPilot defaults to cash plus points that are readily redeemable at about 1¢ each. Travel-only valuations are not used for cash-back rankings.</div><div class="chipgrid">${[['equivalent','Cash + cash-equivalent points'],['pure','Only true cash-back rewards'],['any','Any points redeemable for cash']].map(x=>`<button class="chip ${data.profile.cashRewardMode===x[0]?'selected':''}" onclick="setCashRewardMode('${x[0]}')">${x[1]}</button>`).join('')}</div></div>`+subChoiceGroup('cash','Which cash-back style matters?',[['catchall','Best unlimited / catch-all rate'],['dining','Dining'],['gas','Gas / EV charging'],['grocery','Groceries'],['shopping','Online shopping'],['travel','Travel'],['drugstore','Drugstores'],['entertainment','Entertainment / streaming'],['home','Home improvement'],['rotating','Rotating categories'],['choice','Choose-your-own category'],['wallet','Mobile wallet'],['business','Business purchases'],['overall','Maximize overall cash back']]);if(ints.includes('airline'))out+=subChoiceGroup('airline','Which airline benefits matter?',[['companion','Companion Pass / companion fare'],['bags','Free checked bags'],['boarding','Priority boarding'],['lounge','Lounge access'],['status','Airline status / status boosts'],['seats','Upgrades / preferred seating'],['credits','Flight credits'],['award','Award-flight discounts'],['miles','Mileage / transferable airline points']]);if(ints.includes('hotel'))out+=subChoiceGroup('hotel','Which hotel benefits matter?',[['free-night','Free-night certificates'],['status','Automatic hotel status'],['elite-nights','Elite-night credits'],['breakfast','Breakfast / food benefits'],['property-credit','Property / resort credits'],['award-night','Fourth / fifth-night benefits'],['upgrades','Room upgrades']]);if(ints.includes('cruise'))out+=subChoiceGroup('cruise','Which cruise benefits matter?',[['onboard','Onboard credit'],['companion','Companion / second-guest offers'],['status','Cruise status benefits'],['discounts','Cruise discounts'],['priority','Priority boarding / luggage'],['points','Cruise points / rewards']]);return out}
@@ -773,7 +775,7 @@ function offerFit(o){
     apr:{tag:'apr',label:'0% APR / balance-transfer benefits'}
   };
   for(const key of selected){
-    if(key==='hist') continue;
+    if(key==='hist'||key==='historical') continue;
     const rule=interestRules[key];
     if(!rule) continue;
     const matchesRule=key==='cash'?cashRewardEligible(o):tags[rule.tag];
@@ -781,7 +783,7 @@ function offerFit(o){
     else{score-=8;cautions.push(`Does not meaningfully match your ${rule.label} preference.`)}
   }
 
-  const cashOnlyGoal=selected.includes('cash') && selected.filter(x=>!['hist','cash'].includes(x)).length===0;
+  const cashOnlyGoal=selected.includes('cash') && selected.filter(x=>!['hist','historical','cash'].includes(x)).length===0;
   if(cashOnlyGoal&&!cashRewardEligible(o)){score-=35;cautions.unshift('You selected cash back. This card is not a true cash-back or qualifying cash-equivalent rewards card under your current cash setting.');}
 
   // Preferred airline fit: boosts airline cards the user actually uses without hard-excluding other airlines.
@@ -820,13 +822,23 @@ function offerFit(o){
   // Historical offer data is informational only. It never raises or lowers fit,
   // and missing historical data never makes a card a worse recommendation.
   if(interests.includes('hist')){
-    if(strength===null)cautions.push("Historical public-high data is not yet verified; this does not reduce the card's recommendation score.");
-    else reasons.push(`Historical context: the current tracked offer is ${strength}% of the verified public high.`);
+    const est=offerEstimatedSubValue(o);
+    if(est>=1500){score+=18;reasons.push(`Large current sign-up bonus with an estimated value around ${fmt(est)}.`)}
+    else if(est>=1000){score+=12;reasons.push(`Strong current sign-up bonus with an estimated value around ${fmt(est)}.`)}
+    else if(est>=600){score+=6;reasons.push(`Meaningful current sign-up bonus with an estimated value around ${fmt(est)}.`)}
+  }
+  if(interests.includes('historical')){
+    const h=historicalHighInfo(o);
+    if(!h.known||!h.comparable){cautions.push("Historical public-high data is not yet verified or directly comparable; this does not reduce the card's recommendation score.");}
+    else if(h.ratio>=0.999){score+=24;reasons.push('Current offer matches this card\'s verified historical public high.');}
+    else if(h.ratio>=0.90){score+=16;reasons.push(`Current offer is ${Math.round(h.ratio*100)}% of its verified historical public high.`);}
+    else if(h.ratio>=0.75){score+=8;reasons.push(`Current offer is ${Math.round(h.ratio*100)}% of its verified historical public high.`);}
+    else reasons.push(`Historical context: current offer is ${Math.round(h.ratio*100)}% of its verified historical public high.`);
   }
 
   // Benefit preferences are soft signals. A card can still be a strong recommendation
   // if it has excellent welcome-bonus economics and fits the user's hard constraints.
-  const concreteSelected=selected.filter(x=>x!=='hist');
+  const concreteSelected=selected.filter(x=>!['hist','historical'].includes(x));
   if(concreteSelected.length>0 && categoryMatchCount===0){
     score-=6;
     cautions.unshift('This card does not directly match the benefit categories you selected, but CardPilot can still surface it when the welcome-bonus return is strong.');
@@ -915,7 +927,7 @@ function rankedOffers(){
 }
 function recommendationPlan(){const f=five24(),ranked=rankedOffers(),best=ranked.find(x=>x.fit.status==='consider')||ranked.find(x=>x.fit.status==='wait')||null,steps=[];if(best){steps.push({title:`Review ${best.offer.name}`,detail:`${best.fit.label} • score ${best.fit.score}/100. ${best.fit.reasons[0]||best.fit.cautions[0]||'Best current fit among tracked cards.'}`})}const saved=ranked.filter(x=>x.fit.status==='save');if(saved.length)steps.push({title:'Preserve future opportunities',detail:saved.map(x=>x.offer.name).join(' + ')+' are intentionally being saved for later.'});if(f>=5&&!data.profile.includeChaseOver524)steps.push({title:'Chase is grayed out',detail:`You are ${f}/24, so CardPilot excludes Chase personal and business products by default. You can override this in setup, but it is not recommended.`});else if(f===4)steps.push({title:'Protect your final 5/24 slot',detail:'A new personal account can move you to 5/24. Business cards that do not report personally may preserve that slot.'});return {steps,best:best?best.offer:null,bestFit:best?best.fit:null,f,ranked}}
 function openPlan(){data.profile.showRecommendation=true;localStorage.setItem('cardpilotData',JSON.stringify(data));render();showView('homeView')}
-function interestsLabel(){const map={hist:'historical max sign-up bonus',points:'points & miles',cash:'cash back',airline:'airline benefits',hotel:'hotel benefits',cruise:'cruise benefits',premium:'premium travel',apr:'0% APR',none:'no preference'};let base=(data.profile.interests||[]).map(x=>map[x]||x).join(', ')||'not set';const s=data.profile.subInterests||{};const details=[...(s.cash||[]),...(s.airline||[]),...(s.hotel||[]),...(s.cruise||[])];const extras=[];if((data.profile.interests||[]).includes('airline')&&(data.profile.preferredAirlines||[]).length&&!data.profile.preferredAirlines.includes('none'))extras.push(`airlines: ${preferredAirlineLabel()}`);if((data.profile.interests||[]).includes('hotel')&&(data.profile.preferredHotels||[]).length&&!data.profile.preferredHotels.includes('none'))extras.push(`hotels: ${preferredHotelLabel()}`);const suffix=[details.length?details.join(', '):'',...extras].filter(Boolean).join(' • ');return suffix?base+` (${suffix})`:base}
+function interestsLabel(){const map={hist:'big sign-up bonus',historical:'historical-high sign-up bonus',points:'points & miles',cash:'cash back',airline:'airline benefits',hotel:'hotel benefits',cruise:'cruise benefits',premium:'premium travel',apr:'0% APR',none:'no preference'};let base=(data.profile.interests||[]).map(x=>map[x]||x).join(', ')||'not set';const s=data.profile.subInterests||{};const details=[...(s.cash||[]),...(s.airline||[]),...(s.hotel||[]),...(s.cruise||[])];const extras=[];if((data.profile.interests||[]).includes('airline')&&(data.profile.preferredAirlines||[]).length&&!data.profile.preferredAirlines.includes('none'))extras.push(`airlines: ${preferredAirlineLabel()}`);if((data.profile.interests||[]).includes('hotel')&&(data.profile.preferredHotels||[]).length&&!data.profile.preferredHotels.includes('none'))extras.push(`hotels: ${preferredHotelLabel()}`);const suffix=[details.length?details.join(', '):'',...extras].filter(Boolean).join(' • ');return suffix?base+` (${suffix})`:base}
 function recommendationScreen(){
   const p=recommendationPlan();
   const considers=p.ranked.filter(x=>x.fit.status==='consider').slice(0,3);
@@ -1045,7 +1057,7 @@ function refinementCandidates(){
   if(rank==='bonus')arr.sort((a,b)=>{const av=offerEstimatedSubValue(a.offer),bv=offerEstimatedSubValue(b.offer);if(bv!==av)return bv-av;const ar=subReturnRange(a.offer),br=subReturnRange(b.offer);const aroi=ar?ar.mid:-1,broi=br?br.mid:-1;if(broi!==aroi)return broi-aroi;return Number(a.offer.spend||Infinity)-Number(b.offer.spend||Infinity)||b.fit.score-a.fit.score;});
   else if(rank==='leastspend')arr.sort((a,b)=>{const as=Number(a.offer.spend||Infinity),bs=Number(b.offer.spend||Infinity);if(as!==bs)return as-bs;return offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score;});
   else if(rank==='efficiency')arr.sort((a,b)=>{const ar=subReturnRange(a.offer)?.mid||0,br=subReturnRange(b.offer)?.mid||0;if(br!==ar)return br-ar;return offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score;});
-  else if(rank==='hist100')arr.sort((a,b)=>{const ah=historicalHighInfo(a.offer).isHigh?1:0,bh=historicalHighInfo(b.offer).isHigh?1:0;if(bh!==ah)return bh-ah;return offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score;});
+  else if(rank==='hist100')arr.sort((a,b)=>{const ah=historicalHighInfo(a.offer),bh=historicalHighInfo(b.offer);const ak=(ah.known&&ah.comparable)?1:0,bk=(bh.known&&bh.comparable)?1:0;if(bk!==ak)return bk-ak;if(bh.ratio!==ah.ratio)return bh.ratio-ah.ratio;return offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score;});
   else if(rank==='rewards')arr.sort((a,b)=>{const ac=catchAllCashRate(a.offer)?.effective||0,bc=catchAllCashRate(b.offer)?.effective||0;if(bc!==ac)return bc-ac;return b.fit.score-a.fit.score;});
   else if(rank==='cost')arr.sort((a,b)=>Number(a.offer.af||0)-Number(b.offer.af||0)||b.fit.score-a.fit.score);
   else arr.sort((a,b)=>b.fit.score-a.fit.score||offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer));
@@ -1053,7 +1065,7 @@ function refinementCandidates(){
 }
 function refinementSummary(){
   const rank=data.profile.refineRank||'overall',type=data.profile.refineType||'all',cardType=data.profile.refineCardType||'all';
-  const rankMap={overall:'Best overall match',bonus:'Best sign-up bonus value',leastspend:'Lowest spend to earn a sign-up bonus',rewards:'Best general rewards rate'};
+  const rankMap={overall:'Best overall match',bonus:'Best sign-up bonus value',leastspend:'Lowest spend to earn a sign-up bonus',rewards:'Best general rewards rate',hist100:'Best historical-high offer'};
   const typeMap={all:'All rewards',cash:'Cash back',points:'Points & miles',hotel:'Hotel',airline:'Airline',travel:'Travel'};
   const cardMap={all:'Personal + business',Business:'Business only',Personal:'Personal only'};
   return `${rankMap[rank]||rankMap.overall} • ${cardMap[cardType]||cardMap.all} • ${typeMap[type]||typeMap.all}`;
@@ -1068,7 +1080,7 @@ function applyRefinement(){
 function clearRefinement(){data.profile.refineRank='overall';data.profile.refineCardType='all';data.profile.refineType='all';save();render();showView('applyView');setTimeout(()=>document.getElementById('refinementPanel')?.scrollIntoView({behavior:'smooth',block:'start'}),40)}
 function refinementPanelHTML(){
   const rank=data.profile.refineRank||'overall',type=data.profile.refineType||'all',cardType=data.profile.refineCardType||'all';
-  const rankChoices=[['overall','Best overall match'],['bonus','Best sign-up bonus value'],['leastspend','Lowest spend to earn a sign-up bonus'],['rewards','Best general rewards rate']];
+  const rankChoices=[['overall','Best overall match'],['bonus','Best sign-up bonus value'],['leastspend','Lowest spend to earn a sign-up bonus'],['rewards','Best general rewards rate'],['hist100','Best historical-high offer']];
   const cardChoices=[['all','Personal + business'],['Business','Business only'],['Personal','Personal only']];
   const typeChoices=[['all','All reward types'],['cash','Cash back'],['points','Points & miles'],['hotel','Hotel'],['airline','Airline'],['travel','Travel']];
   const changed=rank!=='overall'||type!=='all'||cardType!=='all';
@@ -1137,6 +1149,20 @@ function simpleSpecialtyCard(x){
   const o=x.offer;
   return `<div class="specialty-card"><b>${o.name}</b><div class="meta">${o.issuer||''} • ${o.type} • Annual fee ${fmt(o.af||0)}</div><div class="small" style="margin-top:5px">Specialty product — available in Browse Cards without cluttering your main recommendation list.</div></div>`;
 }
+function mainIntentMatches(o){
+  const selected=(data.profile.interests||[]).filter(x=>!['none','hist','historical'].includes(x));
+  if(selected.length!==1)return true;
+  const goal=selected[0],t=offerTags(o),raw=(o.tags||[]).map(x=>String(x).toLowerCase());
+  const flexibleTravel=raw.includes('transferable')&&(raw.includes('travel')||t.premium||t.points);
+  if(goal==='hotel')return t.hotel||flexibleTravel;
+  if(goal==='airline')return t.airline||flexibleTravel;
+  if(goal==='cruise')return t.cruise||flexibleTravel;
+  if(goal==='cash')return cashRewardEligible(o);
+  if(goal==='points')return !!pointCurrency(o)||t.points;
+  if(goal==='premium')return t.premium;
+  if(goal==='apr')return t.apr;
+  return true;
+}
 function simpleRecommendationCard(x,rank,compact=false){
   const o=x.offer, fit=x.fit;
   const reasons=(fit.reasons||[]).slice(0,compact?1:3);
@@ -1154,8 +1180,9 @@ function apply(){
   if(data.profile.editingPreferences) return advancedOnboarding();
   if(searchIsQuestions()) return quickOnboarding();
   const ranked=rankedOffers(), f=five24();
-  const eligible=ranked.filter(x=>x.fit.status==='consider');
-  const topAll=(eligible.length?eligible:ranked.filter(x=>x.fit.status!=='avoid')).slice(0,10);
+  const eligible=ranked.filter(x=>x.fit.status==='consider'&&mainIntentMatches(x.offer));
+  const fallback=ranked.filter(x=>x.fit.status!=='avoid'&&mainIntentMatches(x.offer));
+  const topAll=(eligible.length?eligible:fallback).slice(0,10);
   const top=topAll.slice(0,5);
   const extraTop=topAll.slice(5,10);
   const waits=ranked.filter(x=>x.fit.status==='wait');
