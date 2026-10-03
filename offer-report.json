@@ -1,6 +1,6 @@
 {
   "catalogVersion": "2026-10-02.1",
-  "checkedAt": "2026-10-03T07:05:21.884Z",
+  "checkedAt": "2026-10-03T07:08:21.304Z",
   "counts": {
     "verified": 80,
     "needs_review": 63,
@@ -16,6 +16,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/ink/unlimited",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/ink/unlimited",
+      "source": "direct-product-page",
       "expectedTerms": [
         "750 cash back",
         "6000",
@@ -24,7 +25,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7002,
@@ -34,6 +35,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/ink/cash",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/ink/cash",
+      "source": "direct-product-page",
       "expectedTerms": [
         "750 cash back",
         "6000",
@@ -42,7 +44,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7003,
@@ -51,7 +53,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7004,
@@ -60,7 +62,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7005,
@@ -69,7 +71,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7006,
@@ -78,7 +80,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7007,
@@ -88,6 +90,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/IHG/business",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/IHG/business",
+      "source": "direct-product-page",
       "expectedTerms": [
         "190,000",
         "5,000",
@@ -98,7 +101,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7008,
@@ -107,7 +110,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7009,
@@ -117,6 +120,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business",
+      "source": "direct-product-page",
       "expectedTerms": [
         "80,000",
         "3,000",
@@ -125,7 +129,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7010,
@@ -135,6 +139,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/united/united-business-card",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/united/united-business-card",
+      "source": "direct-product-page",
       "expectedTerms": [
         "100,000",
         "90,000",
@@ -148,7 +153,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7011,
@@ -158,6 +163,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/united/united-club-business",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/united/united-club-business",
+      "source": "direct-product-page",
       "expectedTerms": [
         "100,000",
         "90,000",
@@ -171,7 +177,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7101,
@@ -180,7 +186,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7102,
@@ -189,7 +195,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7103,
@@ -200,7 +206,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7104,
@@ -209,7 +215,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7105,
@@ -220,7 +226,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7106,
@@ -231,7 +237,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7107,
@@ -242,7 +248,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7108,
@@ -253,7 +259,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7109,
@@ -264,7 +270,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7110,
@@ -273,7 +279,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7111,
@@ -282,7 +288,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7201,
@@ -291,7 +297,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7202,
@@ -300,7 +306,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7203,
@@ -309,7 +315,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7204,
@@ -318,7 +324,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7205,
@@ -327,7 +333,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7206,
@@ -336,7 +342,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7207,
@@ -345,7 +351,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7301,
@@ -356,7 +362,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7302,
@@ -365,7 +371,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7401,
@@ -375,6 +381,7 @@
       "httpStatus": 200,
       "url": "https://business.bankofamerica.com/en/credit-cards/business-advantage-unlimited-cash-rewards",
       "finalUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-unlimited-cash-rewards",
+      "source": "direct-product-page",
       "expectedTerms": [
         "500",
         "5,000",
@@ -383,7 +390,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7402,
@@ -393,6 +400,7 @@
       "httpStatus": 200,
       "url": "https://business.bankofamerica.com/en/credit-cards/business-advantage-customized-cash-rewards",
       "finalUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-customized-cash-rewards",
+      "source": "direct-product-page",
       "expectedTerms": [
         "500",
         "5,000",
@@ -401,7 +409,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7403,
@@ -411,6 +419,7 @@
       "httpStatus": 200,
       "url": "https://business.bankofamerica.com/en/credit-cards/business-advantage-travel-rewards",
       "finalUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-travel-rewards",
+      "source": "direct-product-page",
       "expectedTerms": [
         "50,000",
         "5,000",
@@ -419,7 +428,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7404,
@@ -428,7 +437,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7501,
@@ -437,7 +446,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7502,
@@ -448,7 +457,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7503,
@@ -457,7 +466,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7504,
@@ -466,7 +475,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7505,
@@ -475,7 +484,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7601,
@@ -484,7 +493,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7701,
@@ -493,7 +502,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 7702,
@@ -504,7 +513,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8001,
@@ -514,6 +523,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
       "finalUrl": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+      "source": "direct-product-page",
       "expectedTerms": [
         "75,000",
         "5,000",
@@ -522,7 +532,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8002,
@@ -532,6 +542,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
       "finalUrl": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+      "source": "direct-product-page",
       "expectedTerms": [
         "100,000",
         "6,000",
@@ -540,7 +551,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8003,
@@ -549,7 +560,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8004,
@@ -559,6 +570,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex",
       "finalUrl": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex",
+      "source": "direct-product-page",
       "expectedTerms": [
         "250",
         "500",
@@ -567,7 +579,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8005,
@@ -577,6 +589,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
+      "source": "direct-product-page",
       "expectedTerms": [
         "50,000",
         "1,000",
@@ -585,7 +598,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8006,
@@ -595,6 +608,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/southwest/premier",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/southwest/premier",
+      "source": "direct-product-page",
       "expectedTerms": [
         "55,000",
         "1,500",
@@ -603,7 +617,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8007,
@@ -613,6 +627,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
+      "source": "direct-product-page",
       "expectedTerms": [
         "60,000",
         "2,000",
@@ -621,7 +636,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8008,
@@ -631,6 +646,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
+      "source": "direct-product-page",
       "expectedTerms": [
         "80,000",
         "70,000",
@@ -642,7 +658,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8009,
@@ -652,6 +668,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
+      "source": "direct-product-page",
       "expectedTerms": [
         "90,000",
         "80,000",
@@ -663,7 +680,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8010,
@@ -673,6 +690,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
+      "source": "direct-product-page",
       "expectedTerms": [
         "100,000",
         "90,000",
@@ -684,7 +702,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8011,
@@ -694,6 +712,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
+      "source": "direct-product-page",
       "expectedTerms": [
         "50,000",
         "40,000",
@@ -705,7 +724,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8012,
@@ -717,7 +736,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8013,
@@ -727,6 +746,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/one-rewards",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/one-rewards",
+      "source": "direct-product-page",
       "expectedTerms": [
         "125,000",
         "2,000",
@@ -737,7 +757,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8014,
@@ -747,6 +767,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier",
+      "source": "direct-product-page",
       "expectedTerms": [
         "180,000",
         "3,000",
@@ -757,7 +778,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8015,
@@ -769,7 +790,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8016,
@@ -781,7 +802,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8017,
@@ -793,7 +814,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8018,
@@ -803,6 +824,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan",
+      "source": "direct-product-page",
       "expectedTerms": [
         "115,000",
         "75,000",
@@ -815,7 +837,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8019,
@@ -827,7 +849,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8020,
@@ -839,7 +861,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8021,
@@ -851,7 +873,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8101,
@@ -860,7 +882,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8102,
@@ -871,7 +893,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8103,
@@ -883,7 +905,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8104,
@@ -892,7 +914,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8105,
@@ -901,7 +923,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8106,
@@ -912,7 +934,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8107,
@@ -924,7 +946,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8108,
@@ -936,7 +958,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8109,
@@ -948,7 +970,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8110,
@@ -960,7 +982,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8111,
@@ -972,7 +994,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8112,
@@ -983,7 +1005,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8113,
@@ -994,7 +1016,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8114,
@@ -1005,7 +1027,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8115,
@@ -1016,7 +1038,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8201,
@@ -1027,7 +1049,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8202,
@@ -1037,6 +1059,7 @@
       "httpStatus": 200,
       "url": "https://www.citi.com/credit-cards/citi-strata-elite-credit-card",
       "finalUrl": "https://www.citi.com/credit-cards/citi-strata-elite-credit-card",
+      "source": "direct-product-page",
       "expectedTerms": [
         "75,000",
         "6,000",
@@ -1047,9 +1070,9 @@
         "75,000"
       ],
       "issues": [
-        "Missing expected term: 75,000"
+        "Issuer page loaded, but expected offer wording was not fully extracted: 75,000"
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8203,
@@ -1059,6 +1082,7 @@
       "httpStatus": 200,
       "url": "https://www.citi.com/credit-cards/citi-strata-credit-card",
       "finalUrl": "https://www.citi.com/credit-cards/citi-strata-credit-card",
+      "source": "direct-product-page",
       "expectedTerms": [
         "20,000",
         "1,000",
@@ -1069,9 +1093,9 @@
         "20,000"
       ],
       "issues": [
-        "Missing expected term: 20,000"
+        "Issuer page loaded, but expected offer wording was not fully extracted: 20,000"
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8204,
@@ -1080,7 +1104,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8205,
@@ -1091,7 +1115,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8206,
@@ -1100,7 +1124,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8207,
@@ -1112,7 +1136,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8208,
@@ -1124,7 +1148,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8209,
@@ -1135,7 +1159,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8210,
@@ -1145,10 +1169,11 @@
       "httpStatus": 200,
       "url": "https://www.citi.com/credit-cards/citi-att-pointsplus-credit-card",
       "finalUrl": "https://www.citi.com/credit-cards/citi-att-pointsplus-credit-card",
+      "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8301,
@@ -1158,6 +1183,7 @@
       "httpStatus": 200,
       "url": "https://www.capitalone.com/credit-cards/venture-x/",
       "finalUrl": "https://www.capitalone.com/credit-cards/venture-x/",
+      "source": "direct-product-page",
       "expectedTerms": [
         "75,000",
         "4,000",
@@ -1166,7 +1192,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8302,
@@ -1175,7 +1201,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8303,
@@ -1185,6 +1211,7 @@
       "httpStatus": 200,
       "url": "https://www.capitalone.com/credit-cards/ventureone/",
       "finalUrl": "https://www.capitalone.com/credit-cards/ventureone/",
+      "source": "direct-product-page",
       "expectedTerms": [
         "20,000",
         "500",
@@ -1193,7 +1220,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8304,
@@ -1203,6 +1230,7 @@
       "httpStatus": 200,
       "url": "https://www.capitalone.com/credit-cards/savor/",
       "finalUrl": "https://www.capitalone.com/credit-cards/savor/",
+      "source": "direct-product-page",
       "expectedTerms": [
         "200",
         "500",
@@ -1211,7 +1239,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8305,
@@ -1221,6 +1249,7 @@
       "httpStatus": 200,
       "url": "https://www.capitalone.com/credit-cards/quicksilver/",
       "finalUrl": "https://www.capitalone.com/credit-cards/quicksilver/",
+      "source": "direct-product-page",
       "expectedTerms": [
         "200",
         "500",
@@ -1229,7 +1258,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8401,
@@ -1238,7 +1267,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8402,
@@ -1247,7 +1276,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8403,
@@ -1257,6 +1286,7 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
+      "source": "direct-product-page",
       "expectedTerms": [
         "200",
         "1,000",
@@ -1267,7 +1297,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8404,
@@ -1277,10 +1307,11 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/",
+      "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8405,
@@ -1290,6 +1321,7 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/",
+      "source": "direct-product-page",
       "expectedTerms": [
         "25,000",
         "1,000",
@@ -1298,7 +1330,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8406,
@@ -1308,6 +1340,7 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/",
+      "source": "direct-product-page",
       "expectedTerms": [
         "50,000",
         "1,500",
@@ -1322,12 +1355,12 @@
         "95 annual fee"
       ],
       "issues": [
-        "Missing expected term: 50,000",
-        "Missing expected term: 90 days",
-        "Missing expected term: 99 Companion Fare",
-        "Missing expected term: 95 annual fee"
+        "Issuer page loaded, but expected offer wording was not fully extracted: 50,000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 90 days",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 99 Companion Fare",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 95 annual fee"
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8407,
@@ -1337,6 +1370,7 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-infinite-credit-card/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-infinite-credit-card/",
+      "source": "direct-product-page",
       "expectedTerms": [
         "70,000",
         "25,000-point Global Companion Award",
@@ -1351,12 +1385,12 @@
         "395 annual fee"
       ],
       "issues": [
-        "Missing expected term: 70,000",
-        "Missing expected term: 25,000-point Global Companion Award",
-        "Missing expected term: 90 days",
-        "Missing expected term: 395 annual fee"
+        "Issuer page loaded, but expected offer wording was not fully extracted: 70,000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 25,000-point Global Companion Award",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 90 days",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 395 annual fee"
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8408,
@@ -1368,7 +1402,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8409,
@@ -1380,7 +1414,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8501,
@@ -1392,7 +1426,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8502,
@@ -1401,7 +1435,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8503,
@@ -1410,7 +1444,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8504,
@@ -1422,7 +1456,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8505,
@@ -1433,7 +1467,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8506,
@@ -1445,7 +1479,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8507,
@@ -1457,7 +1491,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8508,
@@ -1469,7 +1503,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8601,
@@ -1480,7 +1514,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8602,
@@ -1492,7 +1526,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8603,
@@ -1504,7 +1538,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8604,
@@ -1515,7 +1549,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8605,
@@ -1524,7 +1558,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8606,
@@ -1535,7 +1569,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8701,
@@ -1544,7 +1578,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8702,
@@ -1556,7 +1590,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8703,
@@ -1568,7 +1602,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8704,
@@ -1580,7 +1614,7 @@
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8705,
@@ -1589,7 +1623,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8706,
@@ -1600,7 +1634,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8801,
@@ -1611,7 +1645,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8816,
@@ -1622,7 +1656,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8817,
@@ -1631,7 +1665,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8802,
@@ -1642,7 +1676,7 @@
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8803,
@@ -1653,7 +1687,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8804,
@@ -1664,7 +1698,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8805,
@@ -1673,7 +1707,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8815,
@@ -1682,7 +1716,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8806,
@@ -1691,7 +1725,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8807,
@@ -1700,7 +1734,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8808,
@@ -1711,7 +1745,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8809,
@@ -1722,7 +1756,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8810,
@@ -1733,7 +1767,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8811,
@@ -1744,7 +1778,7 @@
       "issues": [
         "Bonus is present but spend requirement is missing."
       ],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8812,
@@ -1753,7 +1787,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8901,
@@ -1762,7 +1796,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8902,
@@ -1771,7 +1805,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8903,
@@ -1780,7 +1814,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8904,
@@ -1789,7 +1823,7 @@
       "status": "verified",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     },
     {
       "id": 8022,
@@ -1799,6 +1833,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select",
+      "source": "direct-product-page",
       "expectedTerms": [
         "200,000",
         "5,000",
@@ -1809,7 +1844,7 @@
       ],
       "missingTerms": [],
       "issues": [],
-      "checkedAt": "2026-10-03T07:05:21.884Z"
+      "checkedAt": "2026-10-03T07:08:21.304Z"
     }
   ]
 }
