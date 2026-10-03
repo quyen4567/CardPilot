@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.3.5</title>
+  <title>CardPilot v11.3.7</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -47,7 +47,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.5</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.7</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -123,6 +123,8 @@ data.profile.subInterests=data.profile.subInterests||{airline:[],hotel:[],cruise
 data.profile.savedStrategies=Array.isArray(data.profile.savedStrategies)?data.profile.savedStrategies:[];
 // v11.3.2: restore historical-high fine-tune ranking and keep single-category searches focused on that category.
 // v11.3.4: add Next 5 / Show fewer controls for fine-tuned refined results.
+// v11.3.7: preserve category intent through refinement; broadening is explicit and user-controlled.
+// v11.3.6: historical-high refinement requires a verified current offer + known comparable history; unknown history is shown separately.
 // v11.3.3: separate Big sign-up bonus from Historical-high sign-up bonus in benefit selection.
 // v11.3.1: cash-back intent distinguishes true cash, cash-equivalent points, and discounted cash redemptions.
 // UI refinements: $10K+ replaces no-limit SUB spend, lowest annual fee label, and offer-strength badges/ranking.
@@ -465,6 +467,7 @@ function restartSetup(){if(!confirm('Start the quick CardPilot setup over? Your 
   data.profile.quickStage=1;
   data.profile.editingPreferences=false;
   data.profile.showRecommendation=false;
+  data.profile.broadenSearch=false;
   setSearchMode('questions');
   data.profile.questionnaireStartedAt=Date.now();
   save();render();showView('applyView')}
@@ -969,7 +972,7 @@ function restartFindFlow(){
   // Reset the current Find-a-Card session only; do not erase the user's long-term CardPilot profile.
   setSearchMode('questions'); data.profile.quickStage=2; data.profile.showRecommendation=false;
   data.profile.feePref=null; data.profile.interests=[]; data.profile.subSpendPref=null; data.profile.cardPath='either';
-  data.profile.refineRank='overall'; data.profile.refineType='all'; data.profile.showMoreRecommendations=false; data.profile.questionnaireStartedAt=Date.now();
+  data.profile.refineRank='overall'; data.profile.refineType='all'; data.profile.showMoreRecommendations=false; data.profile.broadenSearch=false; data.profile.questionnaireStartedAt=Date.now();
   save(); render(); showView('applyView');
 }
 function browseCards(){showView('offersView')}
@@ -1054,15 +1057,37 @@ function refinementCandidates(){
   const type=data.profile.refineType||'all';
   const cardType=data.profile.refineCardType||'all';
   const rank=data.profile.refineRank||'overall';
-  let arr=rankedOffers().filter(x=>!x.fit.disabled&&x.fit.status!=='save'&&refineTypeMatches(x.offer,type)&&(cardType==='all'||x.offer.type===cardType));
+  // Fine-tuning reranks/narrows the recommendation pool from the user's original search.
+  // It must not introduce unrelated cards unless the user explicitly broadens the search.
+  let arr=recommendationPool().filter(x=>!x.fit.disabled&&x.fit.status!=='save'&&refineTypeMatches(x.offer,type)&&(cardType==='all'||x.offer.type===cardType));
   if(rank==='bonus')arr.sort((a,b)=>{const av=offerEstimatedSubValue(a.offer),bv=offerEstimatedSubValue(b.offer);if(bv!==av)return bv-av;const ar=subReturnRange(a.offer),br=subReturnRange(b.offer);const aroi=ar?ar.mid:-1,broi=br?br.mid:-1;if(broi!==aroi)return broi-aroi;return Number(a.offer.spend||Infinity)-Number(b.offer.spend||Infinity)||b.fit.score-a.fit.score;});
   else if(rank==='leastspend')arr.sort((a,b)=>{const as=Number(a.offer.spend||Infinity),bs=Number(b.offer.spend||Infinity);if(as!==bs)return as-bs;return offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score;});
   else if(rank==='efficiency')arr.sort((a,b)=>{const ar=subReturnRange(a.offer)?.mid||0,br=subReturnRange(b.offer)?.mid||0;if(br!==ar)return br-ar;return offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score;});
-  else if(rank==='hist100')arr.sort((a,b)=>{const ah=historicalHighInfo(a.offer),bh=historicalHighInfo(b.offer);const ak=(ah.known&&ah.comparable)?1:0,bk=(bh.known&&bh.comparable)?1:0;if(bk!==ak)return bk-ak;if(bh.ratio!==ah.ratio)return bh.ratio-ah.ratio;return offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score;});
+  else if(rank==='hist100'){
+    arr=arr.filter(x=>{
+      const o=x.offer,h=historicalHighInfo(o);
+      return !!o.verified && Number(o.bonus||0)>0 && h.known && h.comparable;
+    });
+    arr.sort((a,b)=>{const ah=historicalHighInfo(a.offer),bh=historicalHighInfo(b.offer);if(bh.ratio!==ah.ratio)return bh.ratio-ah.ratio;return offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score;});
+  }
   else if(rank==='rewards')arr.sort((a,b)=>{const ac=catchAllCashRate(a.offer)?.effective||0,bc=catchAllCashRate(b.offer)?.effective||0;if(bc!==ac)return bc-ac;return b.fit.score-a.fit.score;});
   else if(rank==='cost')arr.sort((a,b)=>Number(a.offer.af||0)-Number(b.offer.af||0)||b.fit.score-a.fit.score);
   else arr.sort((a,b)=>b.fit.score-a.fit.score||offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer));
   return arr;
+}
+function historicalHighUnknownCandidates(){
+  if((data.profile.refineRank||'overall')!=='hist100')return [];
+  const type=data.profile.refineType||'all';
+  const cardType=data.profile.refineCardType||'all';
+  return recommendationPool().filter(x=>{
+    const o=x.offer,h=historicalHighInfo(o);
+    return !x.fit.disabled && x.fit.status!=='save' && refineTypeMatches(o,type) && (cardType==='all'||o.type===cardType)
+      && !!o.verified && Number(o.bonus||0)>0 && (!h.known || !h.comparable);
+  }).sort((a,b)=>offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score);
+}
+function historicalUnknownCard(x){
+  const o=x.offer;
+  return `<div class="item"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div><span class="pill amber">History needs verification</span></div><div style="margin-top:9px"><b>${currentOfferLabel(o)}</b></div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}<div class="small" style="margin-top:7px;color:#667085"><b>Historical high:</b> current public offer is verified, but CardPilot does not yet have a verified comparable historical public high for this card.</div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}</div>`;
 }
 function refinementSummary(){
   const rank=data.profile.refineRank||'overall',type=data.profile.refineType||'all',cardType=data.profile.refineCardType||'all';
@@ -1159,16 +1184,47 @@ function simpleSpecialtyCard(x){
 function mainIntentMatches(o){
   const selected=(data.profile.interests||[]).filter(x=>!['none','hist','historical'].includes(x));
   if(selected.length!==1)return true;
-  const goal=selected[0],t=offerTags(o),raw=(o.tags||[]).map(x=>String(x).toLowerCase());
-  const flexibleTravel=raw.includes('transferable')&&(raw.includes('travel')||t.premium||t.points);
-  if(goal==='hotel')return t.hotel||flexibleTravel;
-  if(goal==='airline')return t.airline||flexibleTravel;
-  if(goal==='cruise')return t.cruise||flexibleTravel;
+  const goal=selected[0],t=offerTags(o);
+  // A single explicit category is a hard intent gate. Adjacent/flexible cards only appear
+  // after the user chooses Broaden search.
+  if(goal==='hotel')return t.hotel;
+  if(goal==='airline')return t.airline;
+  if(goal==='cruise')return t.cruise;
   if(goal==='cash')return cashRewardEligible(o);
   if(goal==='points')return !!pointCurrency(o)||t.points;
   if(goal==='premium')return t.premium;
   if(goal==='apr')return t.apr;
   return true;
+}
+function broadenIntentMatches(o){
+  if(mainIntentMatches(o))return true;
+  const selected=(data.profile.interests||[]).filter(x=>!['none','hist','historical'].includes(x));
+  if(selected.length!==1)return true;
+  const goal=selected[0],t=offerTags(o),raw=(o.tags||[]).map(x=>String(x).toLowerCase());
+  const flexibleTravel=raw.includes('transferable')&&(raw.includes('travel')||t.premium||t.points);
+  if(goal==='hotel')return flexibleTravel||t.premium;
+  if(goal==='airline')return flexibleTravel||t.premium;
+  if(goal==='cruise')return t.points||t.premium;
+  return false;
+}
+function recommendationPool(){
+  const ranked=rankedOffers();
+  const exact=ranked.filter(x=>x.fit.status==='consider'&&mainIntentMatches(x.offer));
+  const exactFallback=ranked.filter(x=>x.fit.status!=='avoid'&&mainIntentMatches(x.offer));
+  const base=exact.length?exact:exactFallback;
+  if(!data.profile.broadenSearch)return base;
+  const seen=new Set(base.map(x=>x.offer.id));
+  const adjacent=ranked.filter(x=>x.fit.status==='consider'&&!seen.has(x.offer.id)&&broadenIntentMatches(x.offer));
+  const adjacentFallback=ranked.filter(x=>x.fit.status!=='avoid'&&!seen.has(x.offer.id)&&broadenIntentMatches(x.offer));
+  return [...base,...(adjacent.length?adjacent:adjacentFallback)];
+}
+function toggleBroadenSearch(){
+  data.profile.broadenSearch=!data.profile.broadenSearch;
+  data.profile.showMoreRecommendations=false;
+  data.profile.showMoreRefinedRecommendations=false;
+  localStorage.setItem('cardpilotData',JSON.stringify(data));
+  render();showView('applyView',true);
+  setTimeout(()=>document.getElementById('recommendationResults')?.scrollIntoView({behavior:'smooth',block:'start'}),40);
 }
 function simpleRecommendationCard(x,rank,compact=false){
   const o=x.offer, fit=x.fit;
@@ -1187,9 +1243,10 @@ function apply(){
   if(data.profile.editingPreferences) return advancedOnboarding();
   if(searchIsQuestions()) return quickOnboarding();
   const ranked=rankedOffers(), f=five24();
-  const eligible=ranked.filter(x=>x.fit.status==='consider'&&mainIntentMatches(x.offer));
-  const fallback=ranked.filter(x=>x.fit.status!=='avoid'&&mainIntentMatches(x.offer));
-  const topAll=(eligible.length?eligible:fallback).slice(0,10);
+  const exactEligible=ranked.filter(x=>x.fit.status==='consider'&&mainIntentMatches(x.offer));
+  const exactFallback=ranked.filter(x=>x.fit.status!=='avoid'&&mainIntentMatches(x.offer));
+  const exactPool=exactEligible.length?exactEligible:exactFallback;
+  const topAll=recommendationPool().slice(0,10);
   const top=topAll.slice(0,5);
   const extraTop=topAll.slice(5,10);
   const waits=ranked.filter(x=>x.fit.status==='wait');
@@ -1200,13 +1257,14 @@ function apply(){
   const refinedAll=refineActive?refinementCandidates().slice(0,10):[];
   const refined=refinedAll.slice(0,5);
   const extraRefined=refinedAll.slice(5,10);
+  const historicalUnknown=refineActive?historicalHighUnknownCandidates():[];
   return `<div class="between" style="margin-bottom:12px"><button class="btn ghost" onclick="showView('homeView')">← Home</button><button class="btn ghost" onclick="openPreferencePicker()">Fine-tune</button></div>
   <div class="welcome"><div class="small">FIND A CARD</div><h2>Your best matches ✨</h2><p>CardPilot considered your wallet, strategy and saved preferences. You can change this search without changing your saved cards.</p></div><div class="session-actions"><button class="btn ghost" onclick="changeFindAnswers()">✏️ Change 3 quick answers</button><button class="btn ghost" onclick="restartFindFlow()">↻ New search</button></div>
   ${f>=5?`<div class="warningbox"><b>${f}/24:</b> Chase cards affected by 5/24 are handled using your saved settings.</div>`:''}
-  ${top.length?`<div id="recommendationResults" class="section" style="margin-top:14px">Top ${Math.min(5,top.length)} recommendations</div><div class="section-hint">These are ranked matches, but all five use the same visual treatment so you can decide which tradeoffs matter most.</div><div class="list" style="margin-top:12px">${top.map((x,i)=>simpleRecommendationCard(x,i+1,false)).join('')}${data.profile.showMoreRecommendations?extraTop.map((x,i)=>simpleRecommendationCard(x,i+6,true)).join(''):''}</div>${extraTop.length?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleMoreRecommendations()">${data.profile.showMoreRecommendations?'Show fewer':'Show 5 more'}</button>`:''}`:`<div class="note"><b>No strong match right now.</b><div class="small" style="margin-top:5px">Try changing one preference or browse the full card market.</div></div>`}
+  ${top.length?`<div id="recommendationResults" class="section" style="margin-top:14px">Top ${Math.min(5,top.length)} recommendations</div><div class="section-hint">These are ranked matches from the categories you selected. ${top.length===1?'This result uses':`All ${top.length} use`} the same visual treatment so you can decide which tradeoffs matter most.</div><div class="list" style="margin-top:12px">${top.map((x,i)=>simpleRecommendationCard(x,i+1,false)).join('')}${data.profile.showMoreRecommendations?extraTop.map((x,i)=>simpleRecommendationCard(x,i+6,true)).join(''):''}</div>${extraTop.length?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleMoreRecommendations()">${data.profile.showMoreRecommendations?'Show fewer':'Show 5 more'}</button>`:''}${exactPool.length<5?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleBroadenSearch()">${data.profile.broadenSearch?'Use original search':'Broaden search'}</button><div class="small" style="margin-top:6px;text-align:center;color:#667085">${data.profile.broadenSearch?'Showing adjacent card categories in addition to your original selection.':'Only '+exactPool.length+' card'+(exactPool.length===1?'':'s')+' matched your selected category closely. Broaden only if you want adjacent options.'}</div>`:''}`:`<div class="note"><b>No strong match right now.</b><div class="small" style="margin-top:5px">Try changing one preference or broaden the search.</div><button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleBroadenSearch()">${data.profile.broadenSearch?'Use original search':'Broaden search'}</button></div>`}
   <div class="card" style="margin-top:14px"><div class="small">REFINE YOUR LIST</div><h3 style="margin:4px 0 5px">Want to fine-tune these recommendations?</h3><div class="small">Use the quick fine-tuning sections below. Advanced strategy settings remain available separately when you need them.</div></div>
   ${refinementPanelHTML()}
-  ${refineActive?`<div id="refinedResults" class="section">Refined results</div><div class="section-hint">Showing your top 5 refined matches first.</div><div class="list">${refined.map((x,i)=>simpleRecommendationCard(x,i+1)).join('')}${data.profile.showMoreRefinedRecommendations?extraRefined.map((x,i)=>simpleRecommendationCard(x,i+6,true)).join(''):''}</div>${extraRefined.length?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleMoreRefinedRecommendations()">${data.profile.showMoreRefinedRecommendations?'Show fewer':'Next 5'}</button>`:''}`:''}
+  ${refineActive?`<div id="refinedResults" class="section">Refined results</div><div class="section-hint">${(data.profile.refineRank||'overall')==='hist100'?`Ranking only the ${refinedAll.length} recommended card${refinedAll.length===1?'':'s'} from your search that have a verified current offer and a verified comparable historical public high.`:`Reranking the ${refinedAll.length} recommended card${refinedAll.length===1?'':'s'} from your original search; fine-tuning does not add unrelated cards.`}</div><div class="list">${refined.map((x,i)=>simpleRecommendationCard(x,i+1)).join('')}${data.profile.showMoreRefinedRecommendations?extraRefined.map((x,i)=>simpleRecommendationCard(x,i+6,true)).join(''):''}</div>${extraRefined.length?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleMoreRefinedRecommendations()">${data.profile.showMoreRefinedRecommendations?'Show fewer':'Next 5'}</button>`:''}${(data.profile.refineRank||'overall')==='hist100'&&historicalUnknown.length?`<details class="card" style="margin-top:14px" open><summary><b>Historical high not yet verified (${historicalUnknown.length})</b></summary><div class="section-hint">These cards have a verified current public offer, but CardPilot does not yet have a verified comparable historical public high. They are shown separately rather than being ranked against known historical highs.</div><div class="list">${historicalUnknown.slice(0,5).map(historicalUnknownCard).join('')}</div>${historicalUnknown.length>5?`<div class="small" style="margin-top:9px">${historicalUnknown.length-5} more are available in Browse Cards.</div>`:''}</details>`:''}`:''}
   ${waits.length?`<details class="card" style="margin-top:14px"><summary><b>Worth waiting for (${waits.length})</b></summary><div class="section-hint">Strong possibilities where timing or eligibility gives CardPilot a concrete reason to wait.</div><div class="list">${waits.slice(0,6).map(x=>offerCard(x.offer,true,x.fit)).join('')}</div></details>`:''}
   ${verification.length?`<details class="card" style="margin-top:12px"><summary><b>Offer data to verify (${verification.length})</b></summary><div class="section-hint">These are <b>not</b> counted as preference mismatches. CardPilot is missing enough current offer data that it would be misleading to rank them as apply-now recommendations.</div><div class="other-preview">${verification.slice(0,4).map(x=>simpleVerifyCard(x)).join('')}</div>${verification.length>4?`<div class="small" style="margin-top:9px">${verification.length-4} more are available in Browse Cards.</div>`:''}</details>`:''}
   ${nonmatches.length?`<details class="card" style="margin-top:12px"><summary><b>Other cards that don't match this search (${nonmatches.length})</b></summary><div class="section-hint">Kept compact on purpose. These cards have an actual preference, eligibility, fee, spend, ownership, or strategy reason for ranking lower.</div><div class="other-preview">${nonmatches.slice(0,3).map(x=>simpleOtherCard(x)).join('')}</div>${nonmatches.length>3?`<div class="small" style="margin-top:9px">${nonmatches.length-3} more are available in Browse Cards.</div>`:''}</details>`:''}
