@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.3.4</title>
+  <title>CardPilot v11.3.5</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -47,7 +47,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.4</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.5</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -1203,7 +1203,7 @@ function apply(){
   return `<div class="between" style="margin-bottom:12px"><button class="btn ghost" onclick="showView('homeView')">← Home</button><button class="btn ghost" onclick="openPreferencePicker()">Fine-tune</button></div>
   <div class="welcome"><div class="small">FIND A CARD</div><h2>Your best matches ✨</h2><p>CardPilot considered your wallet, strategy and saved preferences. You can change this search without changing your saved cards.</p></div><div class="session-actions"><button class="btn ghost" onclick="changeFindAnswers()">✏️ Change 3 quick answers</button><button class="btn ghost" onclick="restartFindFlow()">↻ New search</button></div>
   ${f>=5?`<div class="warningbox"><b>${f}/24:</b> Chase cards affected by 5/24 are handled using your saved settings.</div>`:''}
-  ${top.length?`<div id="recommendationResults" class="section" style="margin-top:14px">Top ${Math.min(5,top.length)} recommendations</div><div class="section-hint">These are ranked matches, but all five use the same visual treatment so you can decide which tradeoffs matter most.</div><div class="list" style="margin-top:12px">${top.map((x,i)=>simpleRecommendationCard(x,i+1,i>=3)).join('')}${data.profile.showMoreRecommendations?extraTop.map((x,i)=>simpleRecommendationCard(x,i+6,true)).join(''):''}</div>${extraTop.length?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleMoreRecommendations()">${data.profile.showMoreRecommendations?'Show fewer':'Show 5 more'}</button>`:''}`:`<div class="note"><b>No strong match right now.</b><div class="small" style="margin-top:5px">Try changing one preference or browse the full card market.</div></div>`}
+  ${top.length?`<div id="recommendationResults" class="section" style="margin-top:14px">Top ${Math.min(5,top.length)} recommendations</div><div class="section-hint">These are ranked matches, but all five use the same visual treatment so you can decide which tradeoffs matter most.</div><div class="list" style="margin-top:12px">${top.map((x,i)=>simpleRecommendationCard(x,i+1,false)).join('')}${data.profile.showMoreRecommendations?extraTop.map((x,i)=>simpleRecommendationCard(x,i+6,true)).join(''):''}</div>${extraTop.length?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleMoreRecommendations()">${data.profile.showMoreRecommendations?'Show fewer':'Show 5 more'}</button>`:''}`:`<div class="note"><b>No strong match right now.</b><div class="small" style="margin-top:5px">Try changing one preference or browse the full card market.</div></div>`}
   <div class="card" style="margin-top:14px"><div class="small">REFINE YOUR LIST</div><h3 style="margin:4px 0 5px">Want to fine-tune these recommendations?</h3><div class="small">Use the quick fine-tuning sections below. Advanced strategy settings remain available separately when you need them.</div></div>
   ${refinementPanelHTML()}
   ${refineActive?`<div id="refinedResults" class="section">Refined results</div><div class="section-hint">Showing your top 5 refined matches first.</div><div class="list">${refined.map((x,i)=>simpleRecommendationCard(x,i+1)).join('')}${data.profile.showMoreRefinedRecommendations?extraRefined.map((x,i)=>simpleRecommendationCard(x,i+6,true)).join(''):''}</div>${extraRefined.length?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleMoreRefinedRecommendations()">${data.profile.showMoreRefinedRecommendations?'Show fewer':'Next 5'}</button>`:''}`:''}
