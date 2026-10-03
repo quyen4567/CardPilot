@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.3.0</title>
+  <title>CardPilot v11.3.1</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -30,7 +30,7 @@
     .welcome{padding:4px 0 8px}.welcome h2{font-size:28px;line-height:1.08;margin:6px 0 8px;letter-spacing:-.5px}.welcome p{margin:0;color:var(--muted);line-height:1.45}
     .action-stack{display:flex;flex-direction:column;gap:11px;margin-top:15px}.action-tile{width:100%;text-align:left;background:#fff;color:var(--text);border:1px solid var(--line);padding:15px;border-radius:16px;box-shadow:0 2px 10px rgba(16,24,40,.04);display:flex;align-items:center;gap:12px}.action-tile.primary{background:linear-gradient(135deg,#1769ff,#0f57db);color:#fff;border-color:#1769ff}.action-icon{width:42px;height:42px;border-radius:12px;background:#eef4ff;color:#1769ff;display:flex;align-items:center;justify-content:center;font-size:20px;flex:0 0 auto}.action-tile.primary .action-icon{background:rgba(255,255,255,.16);color:#fff}.action-copy b{display:block;font-size:16px}.action-copy span{display:block;font-size:12px;margin-top:3px;opacity:.75;font-weight:500;line-height:1.3}
     .mini-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.mini-stat{background:#fff;border:1px solid var(--line);border-radius:13px;padding:11px;text-align:center}.mini-stat b{display:block;font-size:17px}.mini-stat span{font-size:10px;color:var(--muted)}
-    .simple-rec{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px}.simple-rec.top-pick{border:2px solid #1769ff;box-shadow:0 8px 24px rgba(23,105,255,.08)}.rankline{display:flex;gap:10px;align-items:flex-start}.ranknum{width:30px;height:30px;border-radius:50%;background:#1769ff;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;flex:0 0 auto}.rec-bonus{font-size:16px;font-weight:850;margin-top:10px}.reason-list{margin-top:9px;display:flex;flex-direction:column;gap:4px}.reason-item{font-size:12px;color:#157347}.rec-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:11px}.details-clean{margin-top:10px;border-top:1px solid var(--line);padding-top:9px}.details-clean summary{cursor:pointer;color:#475467;font-size:12px;font-weight:700}
+    .simple-rec{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px}.rankline{display:flex;gap:10px;align-items:flex-start}.ranknum{width:30px;height:30px;border-radius:50%;background:#1769ff;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;flex:0 0 auto}.rec-bonus{font-size:16px;font-weight:850;margin-top:10px}.reason-list{margin-top:9px;display:flex;flex-direction:column;gap:4px}.reason-item{font-size:12px;color:#157347}.rec-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:11px}.details-clean{margin-top:10px;border-top:1px solid var(--line);padding-top:9px}.details-clean summary{cursor:pointer;color:#475467;font-size:12px;font-weight:700}
     .more-list{display:flex;flex-direction:column;gap:10px}.more-row{width:100%;background:#fff;color:var(--text);border:1px solid var(--line);padding:14px;border-radius:14px;text-align:left;display:flex;justify-content:space-between;align-items:center}.more-row b{font-size:14px}.more-row span{color:var(--muted);font-size:12px;display:block;margin-top:3px;font-weight:500}.more-arrow{font-size:20px;color:#98a2b3}
     .tabs{grid-template-columns:repeat(4,1fr)}
 
@@ -47,7 +47,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.0</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.1</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -78,7 +78,7 @@ let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
 // Card catalog is loaded from cards.json so offer/link updates do not require rebuilding the UI.
 let BUSINESS_CATALOG=[];
 let PERSONAL_CATALOG=[];
-const CATALOG_VERSION='2026-09-23.1';
+const CATALOG_VERSION='2026-10-02.1';
 
 function migrateV8(){
   data.profile=data.profile||{};
@@ -132,6 +132,7 @@ data.profile.relationships=data.profile.relationships||{bofaPersonal:'none',bofa
 // v10.10.26: quick setup reordered to annual fee → desired benefits → personal/business/either.
 // v10.10.18: add effective catch-all cash-back rates (including relationship boosts) and prioritize stronger baseline cash-back when selected.
 if(!data.profile.refineRank)data.profile.refineRank='overall';
+if(['efficiency','hist100','cost','keeper','everyday'].includes(data.profile.refineRank))data.profile.refineRank='overall';
 if(['value','roi','cash','points','catchall','fee'].includes(data.profile.refineRank)) data.profile.refineRank=({value:'bonus',roi:'bonus',cash:'bonus',points:'bonus',catchall:'rewards',fee:'cost'})[data.profile.refineRank];
 if(!data.profile.refineType)data.profile.refineType='all';
 if(!data.profile.relationships.bofaPersonal)data.profile.relationships.bofaPersonal='none';
@@ -274,7 +275,22 @@ function bonusEligibilityInfo(o){
       const exact=findOwnedLike(x=>x===n), anySap=findOwnedLike(x=>x.includes('sapphire preferred')||x.includes('sapphire reserve'));
       if(exact.length||anySap.length){if(exact.length)likely=true;warnings.push('Current Sapphire terms can restrict the bonus based on current Sapphire holdings and prior history with this specific Sapphire product.');}
       else warnings.push('Sapphire bonus eligibility changed in 2026; verify the current application terms and any pre-application eligibility message.');
+    }else if(n.includes('ihg one rewards premier select')){
+      const exact=findOwnedLike(x=>x===n);
+      if(exact.length){likely=true;warnings.push('Premier Select eligibility is card-specific: current cardmembers and prior cardmembers who received this card bonus within the last 24 months are restricted.');}
+      else warnings.push('Premier Select uses a card-specific 24-month bonus restriction; verify current Chase terms before applying.');
+    }else if(n.includes('ihg one rewards')){
+      const anyIHG=findOwnedLike(x=>x.includes('ihg one rewards') && !x.includes('business'));
+      if(anyIHG.length){likely=true;warnings.push('Current personal IHG terms restrict the offer if you hold any personal IHG One Rewards card or received a bonus for any personal IHG One Rewards card within the last 24 months.');}
+      else warnings.push('Current personal IHG offers use a family-wide 24-month bonus restriction; verify Chase terms before applying.');
     }else warnings.push('Chase bonus eligibility varies by product; verify the current offer terms before applying.');
+  }
+  if(issuer.includes('citi')){
+    const held=findOwnedLike(x=>x===n || (n.includes('strata premier')&&x.includes('citi premier')) || (n==='strata'&&x.includes('strata student')));
+    if(n.includes('strata')){
+      if(held.length){likely=true;warnings.push('Citi states the new-account bonus may be unavailable if you currently have or previously had the applicable Strata product; predecessor products can also matter for some Strata cards.');}
+      else warnings.push('Citi Strata bonus eligibility now uses prior-product ownership language; verify the application terms you receive.');
+    }
   }
   if(issuer.includes('american express')||issuer==='amex'){
     const held=findOwnedLike(x=>x===n);
@@ -833,7 +849,7 @@ function offerFit(o){
     else if(preserve==='some'){score+=4;reasons.push('Business card: may preserve personal 5/24 capacity because this account normally does not report personally.')}
   }
   if(o.type==='Business'&&o.reports){
-    cautions.unshift('This business card reports to personal credit, so it can increase your 5/24 count.');
+    cautions.unshift('This business card reports to personal credit.');
   }
   if(o.reports&&f===4){
     if(preserve==='very'){score-=16;cautions.push('At 4/24, this personal-reporting account may use your final Chase slot, and you marked preservation as very important.')}
@@ -940,7 +956,7 @@ function restartFindFlow(){
   // Reset the current Find-a-Card session only; do not erase the user's long-term CardPilot profile.
   setSearchMode('questions'); data.profile.quickStage=2; data.profile.showRecommendation=false;
   data.profile.feePref=null; data.profile.interests=[]; data.profile.subSpendPref=null; data.profile.cardPath='either';
-  data.profile.refineRank='overall'; data.profile.refineType='all'; data.profile.questionnaireStartedAt=Date.now();
+  data.profile.refineRank='overall'; data.profile.refineType='all'; data.profile.showMoreRecommendations=false; data.profile.questionnaireStartedAt=Date.now();
   save(); render(); showView('applyView');
 }
 function browseCards(){showView('offersView')}
@@ -969,8 +985,8 @@ function cards(){return `<div class="between" style="margin-bottom:10px"><button
 function showAddCard(){const box=$('#addCardBox');if(!box)return;addCardFilter='both';box.innerHTML=`<div class="card" style="margin-bottom:12px"><h3>Add card</h3><div class="small">CARD DATABASE</div><div class="row" style="margin:8px 0 12px;flex-wrap:wrap"><button id="acfPersonal" class="btn ghost" onclick="setAddCardFilter('personal')">Personal</button><button id="acfBusiness" class="btn ghost" onclick="setAddCardFilter('business')">Business</button><button id="acfBoth" class="btn" onclick="setAddCardFilter('both')">Both</button></div><div class="field"><label class="field-label" for="cardSearch">Find your card</label><input id="cardSearch" placeholder="Search card or issuer — e.g. Sapphire, Amex Gold, Atmos" oninput="renderCardSearch()"><div id="cardSearchResults" class="list" style="margin-top:8px"></div><div class="help">Choose a card to prefill type, annual fee, and normal 5/24 treatment. Can't find it? Add it manually below.</div></div><div class="subbox"><div class="formgrid"><div class="field"><label class="field-label" for="cn">Card name</label><textarea class="namebox" id="cn" placeholder="Card name"></textarea></div><div class="field"><label class="field-label" for="ct">Card type</label><select id="ct"><option>Business</option><option>Personal</option></select></div><div class="field"><label class="field-label" for="caf">Annual fee</label><input id="caf" type="number" placeholder="Annual fee"></div><div class="field"><label class="field-label" for="co">Account open date</label><input id="co" type="date"></div></div><div id="selectedCardMeta" class="help"></div></div><div class="subbox"><label class="field-label" for="c524">5/24 treatment</label><select id="c524"><option value="auto">Auto / based on reporting</option><option value="count">Force: counts toward 5/24</option><option value="nocount">Force: does not count toward 5/24</option></select><label class="small" style="display:block;margin:10px 0"><input id="cr" type="checkbox" style="width:auto"> Reports as personal account</label><div class="help">Use an override only when you know the account should be treated differently.</div></div><div class="subbox"><label class="field-label" for="cbonus">Welcome bonus history (optional)</label><select id="cbonus"><option value="unknown">Unknown / not sure</option><option value="yes">Yes — I received the welcome bonus</option><option value="no">No — I did not receive the welcome bonus</option></select><div class="field" style="margin-top:10px"><label class="field-label" for="cbonusdate">Bonus received date (if known)</label><input id="cbonusdate" type="date"></div><div class="help">This helps CardPilot flag Chase/Amex welcome-offer restrictions. Current application terms still control.</div></div><button style="margin-top:12px" onclick="addCard()">Save card</button></div>`}
 function setAddCardFilter(f){addCardFilter=f;['Personal','Business','Both'].forEach(x=>{const el=$('#acf'+x);if(el)el.className='btn '+(f===x.toLowerCase()||f==='both'&&x==='Both'?'':'ghost')});renderCardSearch()}
 function catalogCardsForAdd(){const all=[...data.offers];const seen=new Set();return all.filter(o=>{const k=(o.issuer+'|'+o.name+'|'+o.type).toLowerCase();if(seen.has(k))return false;seen.add(k);return true})}
-function renderCardSearch(){const q=($('#cardSearch')?.value||'').trim().toLowerCase(),box=$('#cardSearchResults');if(!box)return;if(!q){box.innerHTML='';return}let rows=catalogCardsForAdd().filter(o=>(addCardFilter==='both'||o.type.toLowerCase()===addCardFilter)&&(`${o.name} ${o.issuer} ${(o.tags||[]).join(' ')}`).toLowerCase().includes(q)).slice(0,10);box.innerHTML=rows.map(o=>`<button class="choice" onclick="chooseCatalogCard(${o.id})"><b>${o.name}</b><br><span class="small">${o.issuer} • ${o.type} • AF ${fmt(o.af||0)}${o.type==='Business'&&o.reports?' • ⚠ reports personally / may add to 5/24':''}</span></button>`).join('')||'<div class="small">No matching card. Use manual entry below.</div>'}
-function chooseCatalogCard(id){const o=catalogCardsForAdd().find(x=>String(x.id)===String(id))||data.offers.find(x=>String(x.id)===String(id));if(!o)return;$('#cn').value=o.name;$('#ct').value=o.type;$('#caf').value=o.af||0;$('#cr').checked=!!o.reports;$('#c524').value='auto';const m=$('#selectedCardMeta');if(m)m.innerHTML=`✓ Selected: <b>${o.issuer} ${o.name}</b> • ${o.type}. ${o.reports?(o.type==='Business'?'⚠ This business card reports to personal credit and can increase your 5/24 count.':'Normally treated as a personal-reporting account for this database.'):'Normally treated as not reporting as a personal revolving account for this database.'}`;const results=$('#cardSearchResults');if(results)results.innerHTML='';const search=$('#cardSearch');if(search)search.value=o.name;const target=$('#cn');if(target)target.scrollIntoView({behavior:'smooth',block:'center'})}
+function renderCardSearch(){const q=($('#cardSearch')?.value||'').trim().toLowerCase(),box=$('#cardSearchResults');if(!box)return;if(!q){box.innerHTML='';return}let rows=catalogCardsForAdd().filter(o=>(addCardFilter==='both'||o.type.toLowerCase()===addCardFilter)&&(`${o.name} ${o.issuer} ${(o.tags||[]).join(' ')}`).toLowerCase().includes(q)).slice(0,10);box.innerHTML=rows.map(o=>`<button class="choice" onclick="chooseCatalogCard(${o.id})"><b>${o.name}</b><br><span class="small">${o.issuer} • ${o.type} • AF ${fmt(o.af||0)}${o.type==='Business'&&o.reports?' • ⚠ reports to personal credit':''}</span></button>`).join('')||'<div class="small">No matching card. Use manual entry below.</div>'}
+function chooseCatalogCard(id){const o=catalogCardsForAdd().find(x=>String(x.id)===String(id))||data.offers.find(x=>String(x.id)===String(id));if(!o)return;$('#cn').value=o.name;$('#ct').value=o.type;$('#caf').value=o.af||0;$('#cr').checked=!!o.reports;$('#c524').value='auto';const m=$('#selectedCardMeta');if(m)m.innerHTML=`✓ Selected: <b>${o.issuer} ${o.name}</b> • ${o.type}. ${o.reports?(o.type==='Business'?'⚠ This business card reports to personal credit.':'Normally treated as a personal-reporting account for this database.'):'Normally treated as not reporting as a personal revolving account for this database.'}`;const results=$('#cardSearchResults');if(results)results.innerHTML='';const search=$('#cardSearch');if(search)search.value=o.name;const target=$('#cn');if(target)target.scrollIntoView({behavior:'smooth',block:'center'})}
 function addCard(){if(!$('#cn').value.trim())return;data.cards.unshift({id:Date.now(),name:$('#cn').value.trim(),type:$('#ct').value,opened:$('#co').value,af:+$('#caf').value||0,reports:$('#cr').checked,five24Override:$('#c524').value,bonusReceived:$('#cbonus')?.value||'unknown',bonusReceivedDate:$('#cbonusdate')?.value||''});save();showView('cardsView')}
 function showEditCard(id){const c=data.cards.find(x=>x.id===id);if(!c)return;const box=$('#addCardBox');if(!box)return;box.innerHTML=`<div class="card" style="margin-bottom:12px"><h3>Edit card</h3><div class="formgrid"><div class="field"><label class="field-label" for="ecn">Card name</label><textarea class="namebox" id="ecn">${c.name}</textarea></div><div class="field"><label class="field-label" for="ect">Card type</label><select id="ect"><option ${c.type==='Business'?'selected':''}>Business</option><option ${c.type==='Personal'?'selected':''}>Personal</option></select></div><div class="field"><label class="field-label" for="ecaf">Annual fee</label><input id="ecaf" type="number" value="${c.af||0}"></div><div class="field"><label class="field-label" for="eco">Account open date</label><input id="eco" type="date" value="${c.opened||''}"></div></div><div class="subbox"><label class="field-label" for="ec524">5/24 treatment</label><select id="ec524"><option value="auto" ${(c.five24Override||'auto')==='auto'?'selected':''}>Auto / based on reporting</option><option value="count" ${c.five24Override==='count'?'selected':''}>Force: counts toward 5/24</option><option value="nocount" ${c.five24Override==='nocount'?'selected':''}>Force: does not count toward 5/24</option></select><label class="small" style="display:block;margin:10px 0"><input id="ecr" type="checkbox" style="width:auto" ${c.reports?'checked':''}> Reports as personal account</label></div><div class="subbox"><label class="field-label" for="ecbonus">Welcome bonus history</label><select id="ecbonus"><option value="unknown" ${(c.bonusReceived||'unknown')==='unknown'?'selected':''}>Unknown / not sure</option><option value="yes" ${c.bonusReceived==='yes'?'selected':''}>Yes — I received the welcome bonus</option><option value="no" ${c.bonusReceived==='no'?'selected':''}>No — I did not receive the welcome bonus</option></select><div class="field" style="margin-top:10px"><label class="field-label" for="ecbonusdate">Bonus received date (if known)</label><input id="ecbonusdate" type="date" value="${c.bonusReceivedDate||''}"></div></div><div class="row" style="margin-top:12px"><button onclick="saveCardEdit(${c.id})">Save changes</button><button class="btn ghost" onclick="clearCardEditor()">Cancel</button></div></div>`;box.scrollIntoView({behavior:'smooth',block:'start'})}
 function clearCardEditor(){const box=$('#addCardBox');if(box)box.innerHTML=''}
@@ -1037,7 +1053,7 @@ function refinementCandidates(){
 }
 function refinementSummary(){
   const rank=data.profile.refineRank||'overall',type=data.profile.refineType||'all',cardType=data.profile.refineCardType||'all';
-  const rankMap={overall:'Best overall',bonus:'Best sign-up bonus',rewards:'Best ongoing rewards',cost:'Lowest annual fee',leastspend:'Least spend to earn reward',efficiency:'Best sign-up bonus rate vs spend',hist100:'At historical-high sign-up bonus'};
+  const rankMap={overall:'Best overall match',bonus:'Best sign-up bonus value',leastspend:'Lowest spend to earn a sign-up bonus',rewards:'Best general rewards rate'};
   const typeMap={all:'All rewards',cash:'Cash back',points:'Points & miles',hotel:'Hotel',airline:'Airline',travel:'Travel'};
   const cardMap={all:'Personal + business',Business:'Business only',Personal:'Personal only'};
   return `${rankMap[rank]||rankMap.overall} • ${cardMap[cardType]||cardMap.all} • ${typeMap[type]||typeMap.all}`;
@@ -1052,7 +1068,7 @@ function applyRefinement(){
 function clearRefinement(){data.profile.refineRank='overall';data.profile.refineCardType='all';data.profile.refineType='all';save();render();showView('applyView');setTimeout(()=>document.getElementById('refinementPanel')?.scrollIntoView({behavior:'smooth',block:'start'}),40)}
 function refinementPanelHTML(){
   const rank=data.profile.refineRank||'overall',type=data.profile.refineType||'all',cardType=data.profile.refineCardType||'all';
-  const rankChoices=[['overall','Best overall'],['bonus','Best sign-up bonus'],['leastspend','Least spend to earn reward'],['efficiency','Best sign-up bonus rate vs spend'],['hist100','At historical-high sign-up bonus'],['rewards','Best ongoing rewards'],['cost','Lowest annual fee']];
+  const rankChoices=[['overall','Best overall match'],['bonus','Best sign-up bonus value'],['leastspend','Lowest spend to earn a sign-up bonus'],['rewards','Best general rewards rate']];
   const cardChoices=[['all','Personal + business'],['Business','Business only'],['Personal','Personal only']];
   const typeChoices=[['all','All reward types'],['cash','Cash back'],['points','Points & miles'],['hotel','Hotel'],['airline','Airline'],['travel','Travel']];
   const changed=rank!=='overall'||type!=='all'||cardType!=='all';
@@ -1119,43 +1135,52 @@ function simpleVerifyCard(x){
 }
 function simpleSpecialtyCard(x){
   const o=x.offer;
-  return `<div class="specialty-card"><b>${o.name}</b><div class="meta">${o.issuer||''} • ${o.type} • Annual fee ${fmt(o.af||0)}</div><div class="small" style="margin-top:5px">${isSecuredOffer(o)?'Secured card — kept out of normal rewards-card recommendations unless specifically relevant.':'Specialty product — available in Browse Cards without cluttering your main recommendation list.'}</div></div>`;
+  return `<div class="specialty-card"><b>${o.name}</b><div class="meta">${o.issuer||''} • ${o.type} • Annual fee ${fmt(o.af||0)}</div><div class="small" style="margin-top:5px">Specialty product — available in Browse Cards without cluttering your main recommendation list.</div></div>`;
 }
-function simpleRecommendationCard(x,rank){
+function simpleRecommendationCard(x,rank,compact=false){
   const o=x.offer, fit=x.fit;
-  const reasons=(fit.reasons||[]).slice(0,3);
-  const badge=rank===1?'Recommendation #1':rank===2?'Recommendation #2':'Recommendation';
-  return `<div class="simple-rec"><div class="between"><div class="rankline"><span class="ranknum">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • Annual fee ${fmt(o.af||0)}</div></div></div><span class="pill green">${badge}</span></div><div class="rec-bonus">${currentOfferLabel(o)}</div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}${cashRewardText(o)}${reasons.length?`<div class="reason-list">${reasons.map(r=>`<div class="reason-item">✓ ${r}</div>`).join('')}</div>`:''}${five24AfterApprovalHTML(o)}<div class="rec-buttons"><button class="btn ghost" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}</div><details class="details-clean"><summary>Advanced details</summary>${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:7px">${historicalOfferText(o)}${o.verifiedDate?` • Offer data checked ${o.verifiedDate}`:''}</div></details></div>`;
+  const reasons=(fit.reasons||[]).slice(0,compact?1:3);
+  const badge=fit.status==='verify'?'Offer needs verification':'Recommendation';
+  const body=`<div class="rec-bonus">${currentOfferLabel(o)}</div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}${cashRewardText(o)}${reasons.length?`<div class="reason-list">${reasons.map(r=>`<div class="reason-item">✓ ${r}</div>`).join('')}</div>`:''}${five24AfterApprovalHTML(o)}<div class="rec-buttons"><button class="btn ghost" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}</div><details class="details-clean"><summary>Advanced details</summary>${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:7px">${historicalOfferText(o)}${o.verifiedDate?` • Offer data checked ${o.verifiedDate}`:''}</div></details>`;
+  return `<div class="simple-rec"><div class="between"><div class="rankline"><span class="ranknum">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • Annual fee ${fmt(o.af||0)}</div></div></div><span class="pill green">${badge}</span></div>${compact?`<details class="details-clean"><summary>See offer & fit details</summary>${body}</details>`:body}</div>`;
+}
+function toggleMoreRecommendations(){
+  data.profile.showMoreRecommendations=!data.profile.showMoreRecommendations;
+  localStorage.setItem('cardpilotData',JSON.stringify(data));
+  render();showView('applyView',true);
+  setTimeout(()=>document.getElementById('recommendationResults')?.scrollIntoView({behavior:'smooth',block:'start'}),40);
 }
 function apply(){
   if(data.profile.editingPreferences) return advancedOnboarding();
   if(searchIsQuestions()) return quickOnboarding();
   const ranked=rankedOffers(), f=five24();
   const eligible=ranked.filter(x=>x.fit.status==='consider');
-  const top=(eligible.length?eligible:ranked.filter(x=>x.fit.status!=='avoid')).slice(0,10);
+  const topAll=(eligible.length?eligible:ranked.filter(x=>x.fit.status!=='avoid')).slice(0,10);
+  const top=topAll.slice(0,5);
+  const extraTop=topAll.slice(5,10);
   const waits=ranked.filter(x=>x.fit.status==='wait');
   const verification=ranked.filter(x=>x.fit.status==='verify');
   const specialty=ranked.filter(x=>x.fit.status==='specialty');
   const nonmatches=ranked.filter(x=>x.fit.status==='avoid');
   const refineActive=(data.profile.refineRank||'overall')!=='overall'||(data.profile.refineType||'all')!=='all'||(data.profile.refineCardType||'all')!=='all';
-  const refined=refineActive?refinementCandidates().slice(0,10):[];
+  const refined=refineActive?refinementCandidates().slice(0,5):[];
   return `<div class="between" style="margin-bottom:12px"><button class="btn ghost" onclick="showView('homeView')">← Home</button><button class="btn ghost" onclick="openPreferencePicker()">Fine-tune</button></div>
   <div class="welcome"><div class="small">FIND A CARD</div><h2>Your best matches ✨</h2><p>CardPilot considered your wallet, strategy and saved preferences. You can change this search without changing your saved cards.</p></div><div class="session-actions"><button class="btn ghost" onclick="changeFindAnswers()">✏️ Change 3 quick answers</button><button class="btn ghost" onclick="restartFindFlow()">↻ New search</button></div>
   ${f>=5?`<div class="warningbox"><b>${f}/24:</b> Chase cards affected by 5/24 are handled using your saved settings.</div>`:''}
-  ${top.length?`<div class="section" style="margin-top:14px">Top 10 recommendations</div><div class="section-hint">Your strongest current matches, ranked before any optional fine-tuning.</div><div class="list" style="margin-top:12px">${top.map((x,i)=>simpleRecommendationCard(x,i+1)).join('')}</div>`:`<div class="note"><b>No strong match right now.</b><div class="small" style="margin-top:5px">Try changing one preference or browse the full card market.</div></div>`}
-  <div class="card" style="margin-top:14px"><div class="small">REFINE YOUR LIST</div><h3 style="margin:4px 0 5px">Want to narrow the top 10?</h3><div class="small">Use the quick fine-tuning sections below. Advanced strategy settings remain available separately when you need them.</div></div>
+  ${top.length?`<div id="recommendationResults" class="section" style="margin-top:14px">Top ${Math.min(5,top.length)} recommendations</div><div class="section-hint">These are ranked matches, but all five use the same visual treatment so you can decide which tradeoffs matter most.</div><div class="list" style="margin-top:12px">${top.map((x,i)=>simpleRecommendationCard(x,i+1,i>=3)).join('')}${data.profile.showMoreRecommendations?extraTop.map((x,i)=>simpleRecommendationCard(x,i+6,true)).join(''):''}</div>${extraTop.length?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleMoreRecommendations()">${data.profile.showMoreRecommendations?'Show fewer':'Show 5 more'}</button>`:''}`:`<div class="note"><b>No strong match right now.</b><div class="small" style="margin-top:5px">Try changing one preference or browse the full card market.</div></div>`}
+  <div class="card" style="margin-top:14px"><div class="small">REFINE YOUR LIST</div><h3 style="margin:4px 0 5px">Want to fine-tune these recommendations?</h3><div class="small">Use the quick fine-tuning sections below. Advanced strategy settings remain available separately when you need them.</div></div>
   ${refinementPanelHTML()}
   ${refineActive?`<div id="refinedResults" class="section">Refined results</div><div class="list">${refined.map((x,i)=>simpleRecommendationCard(x,i+1)).join('')}</div>`:''}
   ${waits.length?`<details class="card" style="margin-top:14px"><summary><b>Worth waiting for (${waits.length})</b></summary><div class="section-hint">Strong possibilities where timing or eligibility gives CardPilot a concrete reason to wait.</div><div class="list">${waits.slice(0,6).map(x=>offerCard(x.offer,true,x.fit)).join('')}</div></details>`:''}
   ${verification.length?`<details class="card" style="margin-top:12px"><summary><b>Offer data to verify (${verification.length})</b></summary><div class="section-hint">These are <b>not</b> counted as preference mismatches. CardPilot is missing enough current offer data that it would be misleading to rank them as apply-now recommendations.</div><div class="other-preview">${verification.slice(0,4).map(x=>simpleVerifyCard(x)).join('')}</div>${verification.length>4?`<div class="small" style="margin-top:9px">${verification.length-4} more are available in Browse Cards.</div>`:''}</details>`:''}
   ${nonmatches.length?`<details class="card" style="margin-top:12px"><summary><b>Other cards that don't match this search (${nonmatches.length})</b></summary><div class="section-hint">Kept compact on purpose. These cards have an actual preference, eligibility, fee, spend, ownership, or strategy reason for ranking lower.</div><div class="other-preview">${nonmatches.slice(0,3).map(x=>simpleOtherCard(x)).join('')}</div>${nonmatches.length>3?`<div class="small" style="margin-top:9px">${nonmatches.length-3} more are available in Browse Cards.</div>`:''}</details>`:''}
-  ${specialty.length?`<details class="card" style="margin-top:12px"><summary><b>Specialty & secured cards (${specialty.length})</b></summary><div class="section-hint">Available when you need them, but intentionally separated from mainstream rewards recommendations.</div><div class="other-preview">${specialty.slice(0,3).map(x=>simpleSpecialtyCard(x)).join('')}</div></details>`:''}
+  ${specialty.length?`<details class="card" style="margin-top:12px"><summary><b>Specialty cards (${specialty.length})</b></summary><div class="section-hint">Available when you need them, but intentionally separated from mainstream rewards recommendations.</div><div class="other-preview">${specialty.slice(0,3).map(x=>simpleSpecialtyCard(x)).join('')}</div></details>`:''}
   ${valuationInfoHTML()}`;
 }
 
 function personalReportingWarningHTML(o){
   if(o?.type==='Business'&&o?.reports){
-    return `<div class="warningbox" style="margin-top:9px"><b>⚠ Reports to personal credit</b><div class="small" style="margin-top:4px">Although this is a business card, the account is reported to personal credit bureaus and can increase your 5/24 count.</div></div>`;
+    return `<div class="warningbox" style="margin-top:9px"><b>⚠ Reports to personal credit</b><div class="small" style="margin-top:4px">Although this is a business card, the account is reported to personal credit bureaus.</div></div>`;
   }
   return '';
 }
@@ -1244,8 +1269,8 @@ async function loadCatalog(){
     if(!r.ok) throw new Error('cards.json HTTP '+r.status);
     const payload=await r.json();
     if(!payload||!Array.isArray(payload.cards)) throw new Error('Invalid cards.json');
-    BUSINESS_CATALOG=payload.cards.filter(c=>c.type==='Business');
-    PERSONAL_CATALOG=payload.cards.filter(c=>c.type==='Personal');
+    BUSINESS_CATALOG=payload.cards.filter(c=>c.type==='Business'&&!isSecuredOffer(c));
+    PERSONAL_CATALOG=payload.cards.filter(c=>c.type==='Personal'&&!isSecuredOffer(c));
     if(payload.catalogVersion) data.catalogSourceVersion=payload.catalogVersion;
     migrateV8();
     data.catalogLoadStatus='live';
