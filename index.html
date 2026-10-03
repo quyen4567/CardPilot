@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.3.7</title>
+  <title>CardPilot v11.3.9</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -47,7 +47,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.7</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.9</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -124,6 +124,7 @@ data.profile.savedStrategies=Array.isArray(data.profile.savedStrategies)?data.pr
 // v11.3.2: restore historical-high fine-tune ranking and keep single-category searches focused on that category.
 // v11.3.4: add Next 5 / Show fewer controls for fine-tuned refined results.
 // v11.3.7: preserve category intent through refinement; broadening is explicit and user-controlled.
+// v11.3.9: strict airline classification requires an airline/co-brand signal; generic transferable "miles" no longer count as airline cards.
 // v11.3.6: historical-high refinement requires a verified current offer + known comparable history; unknown history is shown separately.
 // v11.3.3: separate Big sign-up bonus from Historical-high sign-up bonus in benefit selection.
 // v11.3.1: cash-back intent distinguishes true cash, cash-equivalent points, and discounted cash redemptions.
@@ -473,12 +474,14 @@ function restartSetup(){if(!confirm('Start the quick CardPilot setup over? Your 
   save();render();showView('applyView')}
 
 function offerTags(o){
-  const n=(o.name+' '+o.unit+' '+(o.tags||[]).join(' ')+' '+(o.offerNote||'')).toLowerCase();
+  const rawTags=(o.tags||[]).map(x=>String(x).toLowerCase());
+  const n=(o.name+' '+o.unit+' '+rawTags.join(' ')+' '+(o.offerNote||'')).toLowerCase();
   const companion=n.includes('companion')||n.includes('southwest')||n.includes('atmos')||n.includes('alaska')||n.includes('hawaiian');
+  const airlineCoBrand=rawTags.includes('airline')||rawTags.includes('southwest')||rawTags.includes('atmos')||rawTags.includes('aadvantage')||rawTags.includes('delta')||rawTags.includes('united')||rawTags.includes('jetblue')||rawTags.includes('aeroplan')||rawTags.includes('avios')||rawTags.includes('flying blue')||rawTags.includes('spirit')||n.includes('southwest')||n.includes('rapid rewards')||n.includes('aadvantage')||n.includes('american airlines')||n.includes('atmos rewards')||n.includes('alaska airlines')||n.includes('delta skymiles')||n.includes('united explorer')||n.includes('united quest')||n.includes('united club')||n.includes('united gateway')||n.includes('jetblue')||n.includes('aeroplan')||n.includes('british airways')||n.includes('iberia visa')||n.includes('aer lingus')||n.includes('air france klm')||n.includes('free spirit');
   return {
     southwest:n.includes('southwest')||n.includes('rapid rewards'),
     hotel:n.includes('hyatt')||n.includes('hilton')||n.includes('marriott')||n.includes('ihg')||n.includes('wyndham')||n.includes('hotel'),
-    airline:n.includes('aadvantage')||n.includes('southwest')||n.includes('atmos')||n.includes('airline')||n.includes('delta')||n.includes('united')||n.includes('jetblue')||n.includes('aeroplan')||n.includes('british airways')||n.includes('iberia')||n.includes('aer lingus')||n.includes('virgin')||n.includes('miles'),
+    airline:airlineCoBrand,
     cash:n.includes('cash')||String(o.unit).toLowerCase()==='cash',
     cruise:n.includes('carnival')||n.includes('royal')||n.includes('norwegian')||n.includes('cruise')||n.includes('virgin voyages'),
     points:n.includes('point')||n.includes('mile')||n.includes('membership rewards')||n.includes('ultimate rewards')||n.includes('thankyou')||n.includes('bilt'),
@@ -1108,7 +1111,6 @@ function toggleMoreRefinedRecommendations(){
   data.profile.showMoreRefinedRecommendations=!data.profile.showMoreRefinedRecommendations;
   localStorage.setItem('cardpilotData',JSON.stringify(data));
   render();showView('applyView',true);
-  setTimeout(()=>document.getElementById('refinedResults')?.scrollIntoView({behavior:'smooth',block:'start'}),40);
 }
 function refinementPanelHTML(){
   const rank=data.profile.refineRank||'overall',type=data.profile.refineType||'all',cardType=data.profile.refineCardType||'all';
@@ -1224,7 +1226,6 @@ function toggleBroadenSearch(){
   data.profile.showMoreRefinedRecommendations=false;
   localStorage.setItem('cardpilotData',JSON.stringify(data));
   render();showView('applyView',true);
-  setTimeout(()=>document.getElementById('recommendationResults')?.scrollIntoView({behavior:'smooth',block:'start'}),40);
 }
 function simpleRecommendationCard(x,rank,compact=false){
   const o=x.offer, fit=x.fit;
@@ -1237,7 +1238,6 @@ function toggleMoreRecommendations(){
   data.profile.showMoreRecommendations=!data.profile.showMoreRecommendations;
   localStorage.setItem('cardpilotData',JSON.stringify(data));
   render();showView('applyView',true);
-  setTimeout(()=>document.getElementById('recommendationResults')?.scrollIntoView({behavior:'smooth',block:'start'}),40);
 }
 function apply(){
   if(data.profile.editingPreferences) return advancedOnboarding();
