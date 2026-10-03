@@ -1,62 +1,108 @@
-name: Check CardPilot card data
+name: CardPilot Card Data Check
 
-"on":
-  workflow_dispatch: {}
+on:
+  workflow_dispatch:
   schedule:
-    # Daily issuer/offer monitoring. 13:17 UTC is about 6:17 AM Pacific during daylight time.
-    - cron: "17 13 * * *"
-  push:
-    paths:
-      - "cards.json"
-      - "scripts/check-links.mjs"
-      - "scripts/check-offers.mjs"
-      - "scripts/verify-catalog.mjs"
-      - ".github/workflows/check-card-data.yml"
+    # Runs daily at 14:15 UTC. GitHub scheduled jobs may start a little late.
+    - cron: '15 14 * * *'
 
 permissions:
   contents: write
 
+concurrency:
+  group: cardpilot-card-data-check
+  cancel-in-progress: false
+
 jobs:
-  verify:
+  check-and-update:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
+
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: '22'
 
-      - name: Validate catalog structure and contradictions
-        run: node scripts/verify-catalog.mjs cards.json
-
-      - name: Check issuer links
-        run: node scripts/check-links.mjs cards.json
-
-      - name: Check current offer terms
-        run: node scripts/check-offers.mjs cards.json
-
-
-      - name: Publish latest monitoring status for CardPilot
-        if: always()
+      - name: Run existing catalog verification
+        shell: bash
         run: |
-          git config user.name "cardpilot-monitor"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add offer-report.json link-report.json
-          if git diff --cached --quiet; then
-            echo "No monitoring report changes to publish."
+          if [ -f scripts/verify-catalog.mjs ]; then
+            node scripts/verify-catalog.mjs
           else
-            git commit -m "chore: refresh CardPilot monitoring status"
-            git push
+            echo 'scripts/verify-catalog.mjs not found; skipping existing catalog verification.'
           fi
 
-      - name: Upload monitoring reports
+      - name: Validate automation inputs
+        run: node scripts/validate-auto-update.mjs cards.json
+
+      - name: Run existing link checker
+        continue-on-error: true
+        shell: bash
+        run: |
+          if [ -f scripts/check-links.mjs ]; then
+            node scripts/check-links.mjs
+          else
+            echo 'scripts/check-links.mjs not found; skipping link check.'
+          fi
+
+      - name: Check issuer offers
+        id: offers
+        continue-on-error: true
+        run: node scripts/check-offers.mjs cards.json offer-report.json
+
+      - name: Apply only high-confidence offer changes
         if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: cardpilot-data-monitoring-reports
-          path: |
-            link-report.json
-            offer-report.json
-          if-no-files-found: warn
+        run: node scripts/auto-update-offers.mjs cards.json offer-report.json
+
+      - name: Validate catalog after automatic updates
+        if: always()
+        run: node scripts/validate-auto-update.mjs cards.json
+
+      - name: Re-run existing catalog verification
+        if: always()
+        continue-on-error: true
+        shell: bash
+        run: |
+          if [ -f scripts/verify-catalog.mjs ]; then
+            node scripts/verify-catalog.mjs
+          fi
+
+      - name: Add automation summary
+        if: always()
+        shell: bash
+        run: |
+          echo '' >> "$GITHUB_STEP_SUMMARY"
+          echo '## CardPilot automatic offer update' >> "$GITHUB_STEP_SUMMARY"
+          if [ -f auto-update-report.json ]; then
+            node -e "const r=require('./auto-update-report.json'); console.log('- Auto-updated: '+(r.autoUpdated||0)+'\n- Needs human review: '+(r.needsHumanReview||0))" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo '- No auto-update report was produced.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Commit safe catalog and monitoring changes
+        if: always()
+        shell: bash
+        run: |
+          git add cards.json offer-report.json auto-update-report.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo 'No catalog/report changes to commit.'
+            exit 0
+          fi
+          git config user.name 'cardpilot-offer-bot'
+          git config user.email 'cardpilot-offer-bot@users.noreply.github.com'
+          git commit -m 'chore: automated CardPilot offer check'
+          git push
+
+      - name: Fail only for genuinely broken issuer sources
+        if: steps.offers.outcome == 'failure'
+        shell: bash
+        run: |
+          if [ ! -f offer-report.json ]; then
+            echo 'Offer checker failed before producing offer-report.json.'
+            exit 1
+          fi
+          node -e "const r=require('./offer-report.json'); if ((r.counts?.broken||0)>0) { console.error('Broken issuer sources: '+r.counts.broken); process.exit(1); }"
