@@ -1,14 +1,14 @@
 {
-  "catalogVersion": "2026-10-03.2",
-  "checkedAt": "2026-10-04T04:18:06.987Z",
+  "catalogVersion": "2026-10-04.3",
+  "checkedAt": "2026-10-04T20:04:10.021Z",
   "counts": {
-    "verified": 34,
+    "verified": 31,
     "needs_review": 5,
     "blocked_by_issuer": 0,
     "broken": 0,
-    "unmonitored": 104
+    "unmonitored": 107
   },
-  "monitoredCards": 39,
+  "monitoredCards": 36,
   "totalCards": 143,
   "changeCandidates": [],
   "results": [
@@ -38,7 +38,7 @@
         "snippet": "Earn $750 cash back after you spend $6,000",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7002,
@@ -66,7 +66,7 @@
         "snippet": "Earn $750 cash back after you spend $6,000",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7007,
@@ -108,7 +108,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7009,
@@ -136,7 +136,7 @@
         "snippet": "80,000 points after you spend $3,000 on purchases",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7010,
@@ -176,7 +176,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7011,
@@ -216,7 +216,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7401,
@@ -240,7 +240,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7402,
@@ -264,7 +264,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7403,
@@ -288,19 +288,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
-    },
-    {
-      "id": 7702,
-      "issuer": "Barclays",
-      "name": "JetBlue Business",
-      "status": "needs_review",
-      "httpStatus": 500,
-      "url": "https://www.jetblue.com/trueblue/credit-cards/jetblue-card-comparison",
-      "issues": [
-        "Issuer server returned HTTP 500; treated as temporary issuer error, not a CardPilot workflow failure."
-      ],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8001,
@@ -335,7 +323,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8002,
@@ -370,7 +358,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8004,
@@ -405,7 +393,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8005,
@@ -433,7 +421,7 @@
         "snippet": "Earn 50,000 bonus points * 2X points on Southwest Airlines purchases and on the first $5,000 in combined purchases at gas stations and grocery stores per year * 1X points on all other purchases * NEW CARDMEMBER OFFER Earn 50,000 bonus points after you spend $1,000",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8006,
@@ -461,7 +449,7 @@
         "snippet": "Earn 55,000 bonus points * 3X points on Southwest Airlines purchases * 2X points on the first $8,000 in combined purchases at grocery stores and restaurants per year * NEW CARDMEMBER OFFER Earn 55,000 bonus points after you spend $1,500",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8007,
@@ -489,7 +477,7 @@
         "snippet": "Earn 60,000 bonus points * 4X points on Southwest Airlines purchases * 2X points at gas stations and restaurants * NEW CARDMEMBER OFFER Earn 60,000 bonus points after you spend $2,000",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8008,
@@ -527,7 +515,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8009,
@@ -565,7 +553,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8010,
@@ -603,7 +591,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8011,
@@ -641,37 +629,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
-    },
-    {
-      "id": 8012,
-      "issuer": "Chase",
-      "name": "World of Hyatt",
-      "status": "verified",
-      "httpStatus": 200,
-      "url": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
-      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
-      "source": "direct-product-page",
-      "expectedTerms": [],
-      "missingTerms": [],
-      "issues": [],
-      "detectedOffer": {
-        "confidence": "review",
-        "reason": "Detected 2 unique bonus/spend pairs",
-        "candidates": [
-          {
-            "bonus": 60000,
-            "spend": 3000,
-            "snippet": "60,000 Bonus Points 30,000 Bonus Points after you spend $3,000 on purchases"
-          },
-          {
-            "bonus": 30000,
-            "spend": 3000,
-            "snippet": "30,000 Bonus Points After You Spend $3,000 On Purchases"
-          }
-        ]
-      },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8013,
@@ -708,7 +666,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8014,
@@ -745,49 +703,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
-    },
-    {
-      "id": 8015,
-      "issuer": "Chase",
-      "name": "Marriott Bonvoy Bold",
-      "status": "verified",
-      "httpStatus": 200,
-      "url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold",
-      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold",
-      "source": "direct-product-page",
-      "expectedTerms": [],
-      "missingTerms": [],
-      "issues": [],
-      "detectedOffer": {
-        "confidence": "high",
-        "changed": false,
-        "bonus": 45000,
-        "spend": 1000,
-        "af": 0,
-        "snippet": "45,000 Bonus Points After You Spend $1,000 On Purchases",
-        "reason": "Unique direct offer pattern detected"
-      },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
-    },
-    {
-      "id": 8016,
-      "issuer": "Chase",
-      "name": "Marriott Bonvoy Boundless",
-      "status": "verified",
-      "httpStatus": 200,
-      "url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless",
-      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless",
-      "source": "direct-product-page",
-      "expectedTerms": [],
-      "missingTerms": [],
-      "issues": [],
-      "detectedOffer": {
-        "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
-        "candidates": []
-      },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8018,
@@ -831,7 +747,35 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
+    },
+    {
+      "id": 8201,
+      "issuer": "Citi",
+      "name": "Strata Premier",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.citi.com/credit-cards/citi-strata-premier-credit-card",
+      "finalUrl": "https://www.citi.com/credit-cards/citi-strata-premier-credit-card",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "60,000",
+        "4,000",
+        "3 months",
+        "95"
+      ],
+      "missingTerms": [
+        "4,000"
+      ],
+      "issues": [
+        "Issuer page loaded, but expected offer wording was not fully extracted: 4,000"
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8202,
@@ -859,7 +803,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8203,
@@ -887,7 +831,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8210,
@@ -906,7 +850,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8301,
@@ -930,7 +874,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8303,
@@ -958,7 +902,7 @@
         "snippet": "20,000 bonus miles once you spend $500 on purchases",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8304,
@@ -982,7 +926,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8305,
@@ -1006,7 +950,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8403,
@@ -1032,7 +976,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8404,
@@ -1051,7 +995,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8405,
@@ -1075,7 +1019,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8406,
@@ -1110,7 +1054,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8407,
@@ -1145,7 +1089,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8022,
@@ -1187,7 +1131,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7003,
@@ -1196,7 +1140,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7004,
@@ -1205,7 +1149,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7005,
@@ -1214,7 +1158,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7006,
@@ -1223,7 +1167,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7008,
@@ -1232,7 +1176,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7101,
@@ -1241,7 +1185,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7102,
@@ -1250,7 +1194,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7103,
@@ -1258,8 +1202,10 @@
       "name": "Graphite Business Cash Unlimited",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7104,
@@ -1268,7 +1214,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7105,
@@ -1276,8 +1222,10 @@
       "name": "Blue Business Plus",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7106,
@@ -1285,8 +1233,10 @@
       "name": "Business Green Rewards Card",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7107,
@@ -1294,8 +1244,10 @@
       "name": "Delta SkyMiles Gold Business",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7108,
@@ -1303,8 +1255,10 @@
       "name": "Delta SkyMiles Platinum Business",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7109,
@@ -1312,8 +1266,10 @@
       "name": "Delta SkyMiles Reserve Business",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7110,
@@ -1322,7 +1278,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7111,
@@ -1331,7 +1287,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7201,
@@ -1340,7 +1296,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7202,
@@ -1349,7 +1305,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7203,
@@ -1358,7 +1314,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7204,
@@ -1367,7 +1323,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7205,
@@ -1376,7 +1332,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7206,
@@ -1385,7 +1341,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7207,
@@ -1394,7 +1350,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7301,
@@ -1402,8 +1358,10 @@
       "name": "Citi / AAdvantage Business World Elite Mastercard",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7302,
@@ -1412,7 +1370,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7404,
@@ -1421,7 +1379,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7501,
@@ -1430,7 +1388,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7502,
@@ -1438,8 +1396,10 @@
       "name": "Business Shield",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7503,
@@ -1448,7 +1408,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7504,
@@ -1457,7 +1417,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7505,
@@ -1466,7 +1426,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7601,
@@ -1475,7 +1435,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 7701,
@@ -1484,7 +1444,18 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
+    },
+    {
+      "id": 7702,
+      "issuer": "Barclays",
+      "name": "JetBlue Business",
+      "status": "unmonitored",
+      "source": "catalog-only",
+      "issues": [
+        "Bonus is present but spend requirement is missing."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8003,
@@ -1493,7 +1464,43 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
+    },
+    {
+      "id": 8012,
+      "issuer": "Chase",
+      "name": "World of Hyatt",
+      "status": "unmonitored",
+      "source": "catalog-only",
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
+    },
+    {
+      "id": 8015,
+      "issuer": "Chase",
+      "name": "Marriott Bonvoy Bold",
+      "status": "unmonitored",
+      "source": "catalog-only",
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
+    },
+    {
+      "id": 8016,
+      "issuer": "Chase",
+      "name": "Marriott Bonvoy Boundless",
+      "status": "unmonitored",
+      "source": "catalog-only",
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8017,
@@ -1501,8 +1508,11 @@
       "name": "Marriott Bonvoy Bountiful",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8019,
@@ -1510,8 +1520,11 @@
       "name": "British Airways Visa Signature",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8020,
@@ -1519,8 +1532,11 @@
       "name": "Iberia Visa Signature",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8021,
@@ -1528,8 +1544,11 @@
       "name": "Aer Lingus Visa Signature",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8101,
@@ -1538,7 +1557,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8102,
@@ -1546,8 +1565,10 @@
       "name": "Gold Card",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8103,
@@ -1555,8 +1576,11 @@
       "name": "Green Card",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8104,
@@ -1565,7 +1589,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8105,
@@ -1574,7 +1598,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8106,
@@ -1582,8 +1606,10 @@
       "name": "Delta SkyMiles Gold",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Bonus is present but spend requirement is missing."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8107,
@@ -1591,8 +1617,11 @@
       "name": "Delta SkyMiles Platinum",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8108,
@@ -1600,8 +1629,11 @@
       "name": "Delta SkyMiles Reserve",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8109,
@@ -1609,8 +1641,11 @@
       "name": "Hilton Honors",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8110,
@@ -1618,8 +1653,11 @@
       "name": "Hilton Honors Surpass",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8111,
@@ -1627,8 +1665,11 @@
       "name": "Hilton Honors Aspire",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8112,
@@ -1636,8 +1677,10 @@
       "name": "Marriott Bonvoy Bevy",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Bonus is present but spend requirement is missing."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8113,
@@ -1645,8 +1688,10 @@
       "name": "Marriott Bonvoy Brilliant",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Bonus is present but spend requirement is missing."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8114,
@@ -1654,8 +1699,10 @@
       "name": "Platinum Card for Charles Schwab",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8115,
@@ -1663,17 +1710,10 @@
       "name": "Platinum Card for Morgan Stanley",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
-    },
-    {
-      "id": 8201,
-      "issuer": "Citi",
-      "name": "Strata Premier",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Bonus is present but spend requirement is missing."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8204,
@@ -1682,7 +1722,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8205,
@@ -1690,8 +1730,10 @@
       "name": "Custom Cash",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8206,
@@ -1700,7 +1742,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8207,
@@ -1708,8 +1750,11 @@
       "name": "AAdvantage Platinum Select",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8208,
@@ -1717,8 +1762,11 @@
       "name": "AAdvantage Globe",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8209,
@@ -1726,8 +1774,10 @@
       "name": "Costco Anywhere Visa",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8302,
@@ -1736,7 +1786,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8401,
@@ -1745,7 +1795,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8402,
@@ -1754,7 +1804,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8408,
@@ -1762,8 +1812,11 @@
       "name": "Air France KLM World Elite Mastercard",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8409,
@@ -1771,8 +1824,11 @@
       "name": "Free Spirit Travel More World Elite Mastercard",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8501,
@@ -1780,8 +1836,11 @@
       "name": "Autograph",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8502,
@@ -1790,7 +1849,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8503,
@@ -1799,7 +1858,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8504,
@@ -1807,8 +1866,11 @@
       "name": "Attune",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8505,
@@ -1816,8 +1878,10 @@
       "name": "Choice Privileges Mastercard",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Bonus is present but spend requirement is missing."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8506,
@@ -1825,8 +1889,11 @@
       "name": "Choice Privileges Select Mastercard",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8507,
@@ -1834,8 +1901,11 @@
       "name": "One Key Card",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8508,
@@ -1843,8 +1913,11 @@
       "name": "One Key+ Card",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8601,
@@ -1852,8 +1925,10 @@
       "name": "Smartly Visa Signature",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8602,
@@ -1861,8 +1936,11 @@
       "name": "Altitude Go",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8603,
@@ -1870,8 +1948,11 @@
       "name": "Altitude Connect",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8604,
@@ -1879,8 +1960,10 @@
       "name": "Cash+",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Bonus is present but spend requirement is missing."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8605,
@@ -1889,7 +1972,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8606,
@@ -1897,8 +1980,10 @@
       "name": "Shield Visa",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8701,
@@ -1907,7 +1992,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8702,
@@ -1915,8 +2000,11 @@
       "name": "JetBlue Premier",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8703,
@@ -1924,8 +2012,11 @@
       "name": "Wyndham Rewards Earner",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8704,
@@ -1933,8 +2024,11 @@
       "name": "Wyndham Rewards Earner Plus",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8705,
@@ -1943,7 +2037,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8706,
@@ -1951,8 +2045,10 @@
       "name": "AAdvantage Aviator Red",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8801,
@@ -1960,8 +2056,10 @@
       "name": "Bilt Blue Card",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Bonus is present but spend requirement is missing."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8816,
@@ -1969,8 +2067,10 @@
       "name": "Bilt Obsidian Card",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Bonus is present but spend requirement is missing."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8817,
@@ -1979,7 +2079,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8802,
@@ -1987,8 +2087,10 @@
       "name": "Discover it Cash Back",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8803,
@@ -1996,8 +2098,10 @@
       "name": "Discover it Miles",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Bonus is present but spend requirement is missing."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8804,
@@ -2005,8 +2109,10 @@
       "name": "Apple Card",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Bonus is present but spend requirement is missing."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8805,
@@ -2015,7 +2121,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8815,
@@ -2024,7 +2130,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8806,
@@ -2033,7 +2139,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8807,
@@ -2042,7 +2148,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8808,
@@ -2050,8 +2156,10 @@
       "name": "Eagle Navigator Visa Signature",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Bonus is present but spend requirement is missing."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8809,
@@ -2059,8 +2167,10 @@
       "name": "Flagship Rewards",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Bonus is present but spend requirement is missing."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8810,
@@ -2068,8 +2178,10 @@
       "name": "Pathfinder Rewards",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Bonus is present but spend requirement is missing."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8811,
@@ -2077,8 +2189,10 @@
       "name": "Virgin Red Rewards Mastercard",
       "status": "unmonitored",
       "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "issues": [
+        "Bonus is present but spend requirement is missing."
+      ],
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8812,
@@ -2087,7 +2201,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8901,
@@ -2096,7 +2210,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8902,
@@ -2105,7 +2219,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8903,
@@ -2114,7 +2228,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     },
     {
       "id": 8904,
@@ -2123,7 +2237,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T04:18:06.987Z"
+      "checkedAt": "2026-10-04T20:04:10.021Z"
     }
   ]
 }
