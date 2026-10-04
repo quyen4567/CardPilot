@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-10-04.3",
-  "generatedAt": "2026-10-04T19:00:00Z",
+  "catalogVersion": "2026-10-04.5",
+  "generatedAt": "2026-10-04T19:30:00Z",
   "cards": [
     {
       "id": 7001,
@@ -85,7 +85,18 @@
         "transferable"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "pointsEarnCurrency": "ur",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 3,
+          "category": "travel, shipping, internet/cable/phone, and eligible social/search advertising",
+          "type": "fixed",
+          "capNote": "3X on the first $150,000 in combined eligible purchases each account anniversary year."
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 7004,
@@ -356,7 +367,23 @@
         "premium"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "pointsEarnCurrency": "mr",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 5,
+          "category": "flights and prepaid hotels through Amex Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 2,
+          "category": "key U.S. business categories and eligible purchases of $5,000+",
+          "type": "fixed",
+          "capNote": "2X on up to $2 million of these eligible purchases per calendar year."
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 7102,
@@ -379,7 +406,24 @@
         "transferable"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "pointsEarnCurrency": "mr",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 4,
+          "category": "top 2 eligible business categories each billing cycle",
+          "type": "automatic",
+          "capNote": "4X on the first $150,000 in combined purchases from the eligible categories each calendar year, then 1X."
+        },
+        {
+          "rate": 3,
+          "category": "flights and prepaid hotels through Amex Travel",
+          "type": "portal"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "pointsEarnNote": "Eligible 4X categories include U.S. advertising, electronics/software/cloud, restaurants, gas, transit and wireless service."
     },
     {
       "id": 7103,
@@ -625,7 +669,22 @@
       "histStatus": "tracked-catalog-history",
       "alternatePublicOffer": "Official Capital One business comparison channel has displayed a limited-time 300,000-mile + $1,300 Capital One Business Travel value offer after $120,000 in the first 4 months. Direct product page continues to show the 150,000-mile / $30,000 base offer; do not replace the base offer until channels converge.",
       "alternateOfferStatus": "needs-review",
-      "alternateOfferVerifiedDate": "2026-10-02"
+      "alternateOfferVerifiedDate": "2026-10-02",
+      "pointsEarnCurrency": "capitalone",
+      "pointsCatchAllRate": 2,
+      "pointsCategories": [
+        {
+          "rate": 10,
+          "category": "hotels and rental cars through Capital One Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 5,
+          "category": "flights and vacation rentals through Capital One Travel",
+          "type": "portal"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 7202,
@@ -648,7 +707,17 @@
         "transferable"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "pointsEarnCurrency": "capitalone",
+      "pointsCatchAllRate": 2,
+      "pointsCategories": [
+        {
+          "rate": 5,
+          "category": "hotels and rental cars through Capital One Travel",
+          "type": "portal"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 7203,
@@ -1174,7 +1243,49 @@
       "offerType": "public",
       "confidence": "official-issuer",
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "pointsEarnCurrency": "ur",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 5,
+          "category": "Chase Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 3,
+          "category": "dining worldwide",
+          "type": "fixed"
+        },
+        {
+          "rate": 3,
+          "category": "gas & EV charging",
+          "type": "fixed"
+        },
+        {
+          "rate": 3,
+          "category": "online groceries",
+          "type": "fixed",
+          "capNote": "Excludes Target, Walmart and wholesale clubs."
+        },
+        {
+          "rate": 3,
+          "category": "select streaming",
+          "type": "fixed"
+        },
+        {
+          "rate": 3,
+          "category": "eligible vacation-home brands",
+          "type": "fixed"
+        },
+        {
+          "rate": 2,
+          "category": "other travel",
+          "type": "fixed"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "pointsEarnNote": "1X on other eligible purchases."
     },
     {
       "id": 8002,
@@ -1209,7 +1320,28 @@
       "offerType": "public",
       "confidence": "official-issuer",
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "pointsEarnCurrency": "ur",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 8,
+          "category": "Chase Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 4,
+          "category": "flights and hotels booked direct",
+          "type": "fixed"
+        },
+        {
+          "rate": 3,
+          "category": "dining",
+          "type": "fixed"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "pointsEarnNote": "1X on other eligible purchases."
     },
     {
       "id": 8003,
@@ -1274,7 +1406,17 @@
         "500",
         "3 months",
         "0 annual fee"
-      ]
+      ],
+      "categoryCashBackRate": 5,
+      "categoryCashBackCategory": "activated quarterly bonus categories",
+      "categoryCashBackPeriod": "each activated calendar quarter",
+      "categoryCashBackCapNote": "5% applies to up to $1,500 in combined activated bonus-category purchases each quarter; then 1%. Q4 2026: grocery stores (excluding Walmart and Target), dining, and American Red Cross donations.",
+      "categoryCashBackType": "rotating",
+      "catchAllCashBackRate": 1,
+      "rewardsVerifiedDate": "2026-10-04",
+      "rewardsSource": "official-issuer",
+      "currentQuarterCategories": "Q4 2026: grocery stores (excluding Walmart and Target), dining, and American Red Cross donations",
+      "currentQuarterEnd": "2026-12-31"
     },
     {
       "id": 8005,
@@ -1389,7 +1531,7 @@
       "status": "open",
       "verified": true,
       "verifiedDate": "2026-10-03",
-      "offerNote": "Official Chase page labels the current 80,000-mile offer \u201cOUR BEST OFFER RETURNS\u201d: 70,000 miles after $3,000 in purchases in the first 3 months, plus 10,000 miles after adding an authorized user in the first 3 months. $0 intro annual fee first year, then $150. Higher special-channel offers are tracked separately.",
+      "offerNote": "Official Chase page labels the current 80,000-mile offer “OUR BEST OFFER RETURNS”: 70,000 miles after $3,000 in purchases in the first 3 months, plus 10,000 miles after adding an authorized user in the first 3 months. $0 intro annual fee first year, then $150. Higher special-channel offers are tracked separately.",
       "tags": [
         "airline",
         "united"
@@ -1420,7 +1562,27 @@
       "histComparable": true,
       "targetedHigh": 90000,
       "targetedHighDate": "2026-10-02",
-      "targetedHighNote": "Required a United agent promotional code for the final 5,000 miles, so CardPilot does not use it as the comparable standard public high."
+      "targetedHighNote": "Required a United agent promotional code for the final 5,000 miles, so CardPilot does not use it as the comparable standard public high.",
+      "pointsEarnCurrency": "united",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 3,
+          "category": "eligible United purchases",
+          "type": "airline"
+        },
+        {
+          "rate": 2,
+          "category": "hotel stays booked with the hotel",
+          "type": "hotel"
+        },
+        {
+          "rate": 2,
+          "category": "dining",
+          "type": "fixed"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8009,
@@ -1679,7 +1841,22 @@
         "marriott"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "pointsEarnCurrency": "marriott",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 3,
+          "category": "eligible Marriott Bonvoy hotel purchases",
+          "type": "hotel"
+        },
+        {
+          "rate": 2,
+          "category": "grocery stores, rideshare, select food delivery, streaming, internet/cable/phone",
+          "type": "fixed"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8016,
@@ -1705,7 +1882,23 @@
       "histPublicDate": "2026",
       "histStatus": "verified-public-high",
       "histSourceLabel": "BonusEagle",
-      "histSourceUrl": "https://www.bonuseagle.com/offers"
+      "histSourceUrl": "https://www.bonuseagle.com/offers",
+      "pointsEarnCurrency": "marriott",
+      "pointsCatchAllRate": 2,
+      "pointsCategories": [
+        {
+          "rate": 6,
+          "category": "eligible Marriott Bonvoy hotel purchases",
+          "type": "hotel"
+        },
+        {
+          "rate": 3,
+          "category": "grocery stores, gas stations and dining",
+          "type": "fixed",
+          "capNote": "3X on the first $6,000 in combined purchases in these categories annually."
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8017,
@@ -1727,7 +1920,23 @@
         "marriott"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "pointsEarnCurrency": "marriott",
+      "pointsCatchAllRate": 2,
+      "pointsCategories": [
+        {
+          "rate": 6,
+          "category": "eligible Marriott Bonvoy hotel purchases",
+          "type": "hotel"
+        },
+        {
+          "rate": 4,
+          "category": "grocery stores and dining",
+          "type": "fixed",
+          "capNote": "4X on the first $15,000 in combined purchases in these categories annually."
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8018,
@@ -1743,7 +1952,7 @@
       "status": "open",
       "verified": true,
       "verifiedDate": "2026-10-02",
-      "offerNote": "Official Chase best-ever offer: up to 115,000 Aeroplan points \u2014 75,000 after $4,000 in purchases in the first 3 months, plus 40,000 after $20,000 total purchases in the first 12 months. $195 annual fee.",
+      "offerNote": "Official Chase best-ever offer: up to 115,000 Aeroplan points — 75,000 after $4,000 in purchases in the first 3 months, plus 40,000 after $20,000 total purchases in the first 12 months. $195 annual fee.",
       "tags": [
         "airline",
         "aeroplan"
@@ -1859,7 +2068,23 @@
         "amex"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "pointsEarnCurrency": "mr",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 5,
+          "category": "flights booked directly with airlines or through Amex Travel",
+          "type": "fixed",
+          "capNote": "5X flight earning is capped at $500,000 in purchases per calendar year."
+        },
+        {
+          "rate": 5,
+          "category": "prepaid hotels through Amex Travel",
+          "type": "portal"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8102,
@@ -1887,7 +2112,39 @@
       "histPublicDate": "2022-06",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points",
-      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/american-express-gold-card/welcome-bonus-offer-history/"
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/american-express-gold-card/welcome-bonus-offer-history/",
+      "pointsEarnCurrency": "mr",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 5,
+          "category": "prepaid hotels through Amex Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 4,
+          "category": "restaurants worldwide",
+          "type": "fixed",
+          "capNote": "4X on up to $50,000 in restaurant purchases per calendar year, then 1X."
+        },
+        {
+          "rate": 4,
+          "category": "U.S. supermarkets",
+          "type": "fixed",
+          "capNote": "4X on up to $25,000 in U.S. supermarket purchases per calendar year, then 1X."
+        },
+        {
+          "rate": 3,
+          "category": "flights booked direct or through Amex Travel",
+          "type": "travel"
+        },
+        {
+          "rate": 2,
+          "category": "prepaid car rentals and cruises through Amex Travel",
+          "type": "portal"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8103,
@@ -1937,7 +2194,16 @@
       "histPublicDate": "2022-06",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points",
-      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/american-express-blue-cash-preferred/welcome-offer-history/"
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/american-express-blue-cash-preferred/welcome-offer-history/",
+      "categoryCashBackRate": 6,
+      "categoryCashBackCategory": "U.S. supermarkets and select U.S. streaming subscriptions",
+      "categoryCashBackPeriod": "ongoing under current terms",
+      "categoryCashBackCapNote": "6% at U.S. supermarkets applies to up to $6,000 in purchases per calendar year, then 1%; select U.S. streaming subscriptions earn 6% without that supermarket cap. Also earns 3% on transit and at U.S. gas stations.",
+      "categoryCashBackType": "fixed",
+      "catchAllCashBackRate": 1,
+      "introAnnualFeeNote": "$0 introductory annual fee for the first year, then $95.",
+      "rewardsVerifiedDate": "2026-10-04",
+      "rewardsSource": "official-issuer"
     },
     {
       "id": 8105,
@@ -2064,7 +2330,32 @@
       "histPublicDate": "historical",
       "histStatus": "verified-public-high",
       "histSourceLabel": "The Points Guy",
-      "histSourceUrl": "https://thepointsguy.com/credit-cards/hilton-american-express-best-welcome-offers/"
+      "histSourceUrl": "https://thepointsguy.com/credit-cards/hilton-american-express-best-welcome-offers/",
+      "pointsEarnCurrency": "hilton",
+      "pointsCatchAllRate": 3,
+      "pointsCategories": [
+        {
+          "rate": 7,
+          "category": "eligible Hilton purchases",
+          "type": "hotel"
+        },
+        {
+          "rate": 5,
+          "category": "U.S. restaurants",
+          "type": "fixed"
+        },
+        {
+          "rate": 5,
+          "category": "U.S. supermarkets",
+          "type": "fixed"
+        },
+        {
+          "rate": 5,
+          "category": "U.S. gas stations",
+          "type": "fixed"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8110,
@@ -2090,7 +2381,37 @@
       "histPublicDate": "2024-03",
       "histStatus": "verified-public-high",
       "histSourceLabel": "The Points Guy",
-      "histSourceUrl": "https://thepointsguy.com/credit-cards/hilton-american-express-best-welcome-offers/"
+      "histSourceUrl": "https://thepointsguy.com/credit-cards/hilton-american-express-best-welcome-offers/",
+      "pointsEarnCurrency": "hilton",
+      "pointsCatchAllRate": 3,
+      "pointsCategories": [
+        {
+          "rate": 12,
+          "category": "eligible Hilton purchases",
+          "type": "hotel"
+        },
+        {
+          "rate": 6,
+          "category": "U.S. restaurants",
+          "type": "fixed"
+        },
+        {
+          "rate": 6,
+          "category": "U.S. supermarkets",
+          "type": "fixed"
+        },
+        {
+          "rate": 6,
+          "category": "U.S. gas stations",
+          "type": "fixed"
+        },
+        {
+          "rate": 4,
+          "category": "U.S. online retail",
+          "type": "fixed"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8111,
@@ -2117,7 +2438,22 @@
       "histPublicDate": "2026-09",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points / TPG",
-      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/hilton-honors-american-express-aspire-card/welcome-offer-history/"
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/hilton-honors-american-express-aspire-card/welcome-offer-history/",
+      "pointsEarnCurrency": "hilton",
+      "pointsCatchAllRate": 3,
+      "pointsCategories": [
+        {
+          "rate": 14,
+          "category": "eligible Hilton purchases",
+          "type": "hotel"
+        },
+        {
+          "rate": 7,
+          "category": "U.S. restaurants and select travel purchases",
+          "type": "fixed"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8112,
@@ -2188,7 +2524,17 @@
         "relationship"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "pointsEarnCurrency": "mr",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 5,
+          "category": "eligible flights and prepaid hotels",
+          "type": "travel"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8115,
@@ -2214,7 +2560,17 @@
         "relationship"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "pointsEarnCurrency": "mr",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 5,
+          "category": "eligible flights and prepaid hotels",
+          "type": "travel"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8201,
@@ -2255,7 +2611,37 @@
         "4,000",
         "3 months",
         "95"
-      ]
+      ],
+      "pointsEarnCurrency": "thankyou",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 10,
+          "category": "hotels, car rentals and attractions through Citi Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 3,
+          "category": "air travel and other hotels",
+          "type": "travel"
+        },
+        {
+          "rate": 3,
+          "category": "restaurants",
+          "type": "fixed"
+        },
+        {
+          "rate": 3,
+          "category": "supermarkets",
+          "type": "fixed"
+        },
+        {
+          "rate": 3,
+          "category": "gas & EV charging",
+          "type": "fixed"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8202,
@@ -2292,7 +2678,33 @@
       "histResearchDate": "2026-09-27",
       "histStatus": "tracked-catalog-history",
       "eligibilityNote": "Citi states the new-account bonus is not available if you currently have or previously had this same Strata product; other account-history factors can also affect eligibility.",
-      "eligibilityVerifiedDate": "2026-10-02"
+      "eligibilityVerifiedDate": "2026-10-02",
+      "pointsEarnCurrency": "thankyou",
+      "pointsCatchAllRate": 1.5,
+      "pointsCategories": [
+        {
+          "rate": 12,
+          "category": "hotels, car rentals and attractions through Citi Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 6,
+          "category": "air travel through Citi Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 6,
+          "category": "restaurants during Citi Nights",
+          "type": "time-window",
+          "capNote": "Citi Nights applies Friday and Saturday from 6 PM–6 AM ET under current terms."
+        },
+        {
+          "rate": 3,
+          "category": "restaurants outside Citi Nights",
+          "type": "fixed"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8203,
@@ -2331,7 +2743,42 @@
       "histSourceLabel": "Pocket Finance Club",
       "histSourceUrl": "https://www.pocketfinanceclub.com/cards/citi-strata/",
       "eligibilityNote": "Citi states the new-account bonus is not available if you currently have or previously had this same Strata product; other account-history factors can also affect eligibility.",
-      "eligibilityVerifiedDate": "2026-10-02"
+      "eligibilityVerifiedDate": "2026-10-02",
+      "pointsEarnCurrency": "thankyou",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 5,
+          "category": "hotels, car rentals and attractions through Citi Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 3,
+          "category": "supermarkets",
+          "type": "fixed"
+        },
+        {
+          "rate": 3,
+          "category": "select transit",
+          "type": "fixed"
+        },
+        {
+          "rate": 3,
+          "category": "gas & EV charging",
+          "type": "fixed"
+        },
+        {
+          "rate": 3,
+          "category": "one eligible self-select category",
+          "type": "choice"
+        },
+        {
+          "rate": 2,
+          "category": "restaurants",
+          "type": "fixed"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8204,
@@ -2380,7 +2827,17 @@
         "legacy"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "categoryCashBackRate": 5,
+      "categoryCashBackCategory": "your top eligible spend category each billing cycle",
+      "categoryCashBackPeriod": "each billing cycle for existing cardmembers",
+      "categoryCashBackCapNote": "5% applies to the first $500 spent in the top eligible category each billing cycle, then 1%. Citi stopped accepting new applications May 28, 2026.",
+      "categoryCashBackType": "automatic",
+      "catchAllCashBackRate": 1,
+      "rewardsVerifiedDate": "2026-10-04",
+      "rewardsSource": "official-issuer",
+      "issuerUrl": "https://www.citi.com/credit-cards/citi-custom-cash-credit-card",
+      "issuerUrlVerified": "2026-10-04"
     },
     {
       "id": 8206,
@@ -2533,7 +2990,22 @@
       "histPublicDate": "2021-11",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points",
-      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/capital-one-venture-x/welcome-bonus-offer-history/"
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/capital-one-venture-x/welcome-bonus-offer-history/",
+      "pointsEarnCurrency": "capitalone",
+      "pointsCatchAllRate": 2,
+      "pointsCategories": [
+        {
+          "rate": 10,
+          "category": "hotels and rental cars through Capital One Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 5,
+          "category": "flights and vacation rentals through Capital One Travel",
+          "type": "portal"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8302,
@@ -2560,7 +3032,17 @@
       "histPublicDate": "2020-09",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points",
-      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/capital-one-venture-rewards-credit-card/welcome-bonus-offer-history/"
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/capital-one-venture-rewards-credit-card/welcome-bonus-offer-history/",
+      "pointsEarnCurrency": "capitalone",
+      "pointsCatchAllRate": 2,
+      "pointsCategories": [
+        {
+          "rate": 5,
+          "category": "hotels, vacation rentals and rental cars through Capital One Travel",
+          "type": "portal"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8303,
@@ -2872,7 +3354,23 @@
       "offerType": "public",
       "confidence": "official-issuer",
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "pointsEarnCurrency": "atmos",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 3,
+          "category": "eligible Alaska Airlines and Hawaiian Airlines purchases",
+          "type": "airline"
+        },
+        {
+          "rate": 2,
+          "category": "gas, EV charging, cable, streaming and local transit/rideshare",
+          "type": "fixed"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "pointsEarnNote": "Eligible Bank of America account holders can receive a 10% rewards bonus on points earned from card purchases."
     },
     {
       "id": 8407,
@@ -2907,7 +3405,18 @@
       "offerType": "public",
       "confidence": "official-issuer",
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "pointsEarnCurrency": "atmos",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 3,
+          "category": "eligible dining, foreign transactions, Alaska Airlines and Hawaiian Airlines purchases",
+          "type": "fixed"
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "pointsEarnNote": "Eligible Bank of America account holders can receive a 10% rewards bonus on points earned from card purchases."
     },
     {
       "id": 8408,
@@ -3150,7 +3659,7 @@
     {
       "id": 8601,
       "issuer": "U.S. Bank",
-      "name": "Smartly Visa Signature",
+      "name": "Bank Smartly Visa Signature",
       "type": "Personal",
       "bonus": 0,
       "unit": "cash",
@@ -3160,14 +3669,42 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Relationship-based earning; verify current terms.",
+      "verifiedDate": "2026-10-04",
+      "offerNote": "Official U.S. Bank terms: unlimited 2% cash back on every eligible purchase, with Smartly relationship tiers up to 4% on the first $10,000 in eligible net purchases each billing cycle; $0 annual fee.",
       "tags": [
         "cash",
-        "us bank"
+        "us bank",
+        "relationship",
+        "high-cash-rate",
+        "catch-all"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "categoryCashBackRate": 0,
+      "catchAllCashBackRate": 2,
+      "catchAllCashBackCapNote": "The 2% base rate is unlimited. Smartly relationship bonuses apply to the first $10,000 in eligible net purchases each billing cycle; purchases above that earn the 2% base rate. Certain purchase types are excluded from the relationship bonus.",
+      "relationshipCashBackTiers": {
+        "10000": 2.5,
+        "50000": 3,
+        "100000": 4
+      },
+      "relationshipRequirement": "U.S. Bank Smartly Savings plus qualifying balances in U.S. Bank Smartly Checking and/or Safe Debit accounts are required for the 2.5%–4% tiers.",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer",
+      "issuerUrl": "https://www.usbank.com/credit-cards/bank-smartly-visa-signature-credit-card.html",
+      "issuerUrlVerified": "2026-10-04",
+      "rewardsVerifiedDate": "2026-10-04",
+      "rewardsSource": "official-issuer",
+      "monitorExpected": [
+        "2% cash back",
+        "2.5%",
+        "3%",
+        "4%",
+        "10,000",
+        "100,000",
+        "no annual fee"
+      ]
     },
     {
       "id": 8602,
@@ -3222,19 +3759,42 @@
       "bonus": 200,
       "unit": "cash",
       "hist": 200,
-      "spend": null,
+      "spend": 1000,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "DoC tracks $200; spend requirement can change.",
+      "verifiedDate": "2026-10-04",
+      "offerNote": "Official U.S. Bank offer: $200 bonus after $1,000 in eligible purchases within the first 90 days; $0 annual fee.",
       "tags": [
         "cash",
-        "us bank"
+        "us bank",
+        "choice-category",
+        "high-cash-rate"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "categoryCashBackRate": 5,
+      "categoryCashBackCategory": "two categories you choose each quarter",
+      "categoryCashBackPeriod": "each quarter after enrollment",
+      "categoryCashBackCapNote": "5% applies to the first $2,000 in combined eligible purchases each quarter across the two selected 5% categories; then 1%. You can also choose one 2% everyday category each quarter.",
+      "categoryCashBackType": "selected",
+      "catchAllCashBackRate": 1,
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer",
+      "issuerUrl": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html",
+      "issuerUrlVerified": "2026-10-04",
+      "rewardsVerifiedDate": "2026-10-04",
+      "rewardsSource": "official-issuer",
+      "monitorExpected": [
+        "200",
+        "1,000",
+        "90 days",
+        "5% cash back",
+        "2,000",
+        "no annual fee"
+      ]
     },
     {
       "id": 8605,
@@ -3441,7 +4001,39 @@
         "cash"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "pointsEarnCurrency": "bilt",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 4,
+          "category": "Bilt partner restaurants",
+          "type": "partner",
+          "capNote": "Up to 4X; partner rate varies."
+        },
+        {
+          "rate": 3,
+          "category": "hotels through Bilt Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 3,
+          "category": "Lyft after linking Bilt and Lyft",
+          "type": "partner"
+        },
+        {
+          "rate": 2,
+          "category": "flights through Bilt Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 1.25,
+          "category": "rent and mortgage",
+          "type": "housing",
+          "capNote": "Up to 1.25X depending on the selected Bilt housing rewards option and current terms."
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8816,
@@ -3469,7 +4061,50 @@
         "grocery"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "pointsEarnCurrency": "bilt",
+      "pointsCatchAllRate": 1,
+      "pointsCategories": [
+        {
+          "rate": 6,
+          "category": "Bilt partner restaurants",
+          "type": "partner",
+          "capNote": "Up to 6X when dining is the selected 3X category; partner rate varies."
+        },
+        {
+          "rate": 4,
+          "category": "hotels through Bilt Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 3,
+          "category": "your choice of dining or grocery",
+          "type": "choice",
+          "capNote": "Grocery 3X is capped at $25,000 per calendar year; dining is uncapped under current terms."
+        },
+        {
+          "rate": 3,
+          "category": "flights through Bilt Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 3,
+          "category": "Lyft after linking Bilt and Lyft",
+          "type": "partner"
+        },
+        {
+          "rate": 2,
+          "category": "other travel",
+          "type": "travel"
+        },
+        {
+          "rate": 1.25,
+          "category": "rent and mortgage",
+          "type": "housing",
+          "capNote": "Up to 1.25X depending on housing rewards option."
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04"
     },
     {
       "id": 8817,
@@ -3500,7 +4135,40 @@
         "status"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "pointsEarnCurrency": "bilt",
+      "pointsCatchAllRate": 2,
+      "pointsCategories": [
+        {
+          "rate": 5,
+          "category": "Bilt partner restaurants",
+          "type": "partner",
+          "capNote": "Up to 5X; partner rate varies."
+        },
+        {
+          "rate": 4,
+          "category": "hotels through Bilt Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 4,
+          "category": "Lyft after linking Bilt and Lyft",
+          "type": "partner"
+        },
+        {
+          "rate": 3,
+          "category": "flights through Bilt Travel",
+          "type": "portal"
+        },
+        {
+          "rate": 1.25,
+          "category": "rent and mortgage",
+          "type": "housing",
+          "capNote": "Up to 1.25X depending on housing rewards option."
+        }
+      ],
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "pointsEarnNote": "2X on other everyday purchases."
     },
     {
       "id": 8802,
@@ -3519,10 +4187,24 @@
       "offerNote": "First-year Cashback Match can be more important than a fixed sign-up bonus.",
       "tags": [
         "cash",
-        "discover"
+        "discover",
+        "rotating",
+        "high-cash-rate"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "categoryCashBackRate": 5,
+      "categoryCashBackCategory": "activated quarterly bonus categories",
+      "categoryCashBackPeriod": "each activated calendar quarter",
+      "categoryCashBackCapNote": "5% applies to up to $1,500 in activated category purchases each quarter; then the standard 1% rate. Q4 2026: restaurants, entertainment and utilities.",
+      "categoryCashBackType": "rotating",
+      "catchAllCashBackRate": 1,
+      "rewardsVerifiedDate": "2026-10-04",
+      "rewardsSource": "official-issuer",
+      "currentQuarterCategories": "Q4 2026: restaurants, entertainment and utilities",
+      "currentQuarterEnd": "2026-12-31",
+      "issuerUrl": "https://www.discover.com/credit-cards/cash-back/it-card/",
+      "issuerUrlVerified": "2026-10-04"
     },
     {
       "id": 8803,
@@ -3604,17 +4286,31 @@
       "reports": true,
       "status": "waitlist",
       "verified": true,
-      "verifiedDate": "2026-09-22",
+      "verifiedDate": "2026-10-04",
       "offerState": "no-standard-public-sub",
       "offerNote": "No standard public welcome bonus identified. Card access is currently via waitlist/invitation and requires Robinhood Gold. Earns 3% cash back on eligible purchases under current terms.",
       "tags": [
         "cash",
         "travel",
         "robinhood",
-        "relationship"
+        "relationship",
+        "high-cash-rate",
+        "catch-all"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "catchAllCashBackRate": 3,
+      "catchAllCashBackCapNote": "3% applies to eligible consumer purchases. An active annual Robinhood Gold subscription is required; excluded transactions include cash-like, certain bill-pay, government/tax, and business-type transactions.",
+      "relationshipRequirement": "Active annual Robinhood Gold subscription required to earn points; a Robinhood investing account is required for brokerage cash-back redemption.",
+      "rewardsVerifiedDate": "2026-10-04",
+      "rewardsSource": "official-issuer",
+      "issuerUrl": "https://robinhood.com/creditcard/",
+      "issuerUrlVerified": "2026-10-04",
+      "monitorExpected": [
+        "3% cash back",
+        "Robinhood Gold",
+        "no annual fee"
+      ]
     },
     {
       "id": 8806,
@@ -3910,6 +4606,55 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "Chase",
       "histSourceUrl": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select"
+    },
+    {
+      "id": 8905,
+      "issuer": "AAA / Comenity Capital Bank",
+      "name": "AAA Daily Advantage Visa Signature",
+      "type": "Personal",
+      "bonus": 100,
+      "unit": "cash",
+      "hist": null,
+      "spend": 1000,
+      "af": 0,
+      "reports": true,
+      "status": "open",
+      "verified": true,
+      "verifiedDate": "2026-10-04",
+      "offerNote": "Official AAA offer: $100 statement credit after $1,000 in purchases within the first 90 days; no annual fee and no foreign transaction fee.",
+      "tags": [
+        "cash",
+        "grocery",
+        "gas",
+        "wholesale clubs",
+        "aaa",
+        "high-cash-rate"
+      ],
+      "spendQualifiedBonus": 100,
+      "spendPeriod": "first 90 days of account opening",
+      "issuerUrl": "https://www.ace.aaa.com/financial/aaa-credit-card.html",
+      "issuerUrlVerified": "2026-10-04",
+      "monitorExpected": [
+        "100",
+        "1,000",
+        "90 days",
+        "5% cash back",
+        "3% cash back",
+        "no annual fee"
+      ],
+      "offerState": "verified-current",
+      "offerType": "public",
+      "confidence": "official-issuer",
+      "categoryCashBackRate": 5,
+      "categoryCashBackCategory": "grocery store purchases",
+      "categoryCashBackPeriod": "each calendar year under current terms",
+      "categoryCashBackCapNote": "Earns 5% at grocery stores and 3% on gas/EV charging, wholesale clubs, streaming, pharmacy and AAA purchases. Grocery, wholesale-club and gas rewards share a maximum of $500 cash back per calendar year; after that, those purchases earn 1% for the rest of the year.",
+      "categoryCashBackType": "fixed",
+      "catchAllCashBackRate": 1,
+      "rewardsVerifiedDate": "2026-10-04",
+      "rewardsSource": "official-issuer",
+      "histResearchDate": "2026-10-04",
+      "histStatus": "research-pending"
     }
   ],
   "historicalHighResearch": {
