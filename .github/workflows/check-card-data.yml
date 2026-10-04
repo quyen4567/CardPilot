@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: cardpilot-card-data-check
@@ -82,6 +83,71 @@ jobs:
           else
             echo '- No auto-update report was produced.' >> "$GITHUB_STEP_SUMMARY"
           fi
+
+
+      - name: Create or update review notification issue
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const title = '[CardPilot] Offer review needed';
+            let offer = {};
+            let auto = {};
+            try { offer = JSON.parse(fs.readFileSync('offer-report.json','utf8')); } catch {}
+            try { auto = JSON.parse(fs.readFileSync('auto-update-report.json','utf8')); } catch {}
+
+            const needsReview = Number(offer?.counts?.needs_review || 0);
+            const blocked = Number(offer?.counts?.blocked_by_issuer || 0);
+            const broken = Number(offer?.counts?.broken || 0);
+            const human = Number(auto?.needsHumanReview || 0);
+            const shouldNotify = needsReview > 0 || broken > 0 || human > 0;
+
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner, repo, state: 'open', per_page: 100
+            });
+            const existing = issues.find(i => i.title === title && !i.pull_request);
+
+            if (shouldNotify) {
+              const reviewItems = Array.isArray(offer.results)
+                ? offer.results.filter(r => ['needs_review','broken'].includes(r.status)).slice(0,20)
+                : [];
+              const lines = reviewItems.map(r => {
+                const detail = Array.isArray(r.issues) && r.issues.length ? ` — ${r.issues.join('; ')}` : '';
+                return `- **${r.issuer || ''} — ${r.name || ''}**: ${r.status}${detail}`;
+              });
+              const body = [
+                `@${owner} CardPilot found items that need attention.`,
+                '',
+                `- Needs review: ${needsReview}`,
+                `- Human-review offer changes: ${human}`,
+                `- Broken sources: ${broken}`,
+                `- Blocked by issuer: ${blocked}`,
+                '',
+                '### Items needing review',
+                ...(lines.length ? lines : ['- See the latest CardPilot Card Data Check workflow summary.']),
+                '',
+                `Last workflow: ${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`
+              ].join('\n');
+
+              if (existing) {
+                await github.rest.issues.update({ owner, repo, issue_number: existing.number, body });
+                await github.rest.issues.createComment({
+                  owner, repo, issue_number: existing.number,
+                  body: `Updated by workflow run ${context.runNumber}.`
+                });
+              } else {
+                await github.rest.issues.create({ owner, repo, title, body });
+              }
+            } else if (existing) {
+              await github.rest.issues.createComment({
+                owner, repo, issue_number: existing.number,
+                body: 'Latest automated check is clear. Closing this review issue.'
+              });
+              await github.rest.issues.update({ owner, repo, issue_number: existing.number, state: 'closed' });
+            }
 
       - name: Commit safe catalog and monitoring changes
         if: always()
