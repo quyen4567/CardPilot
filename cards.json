@@ -1389,7 +1389,7 @@
       "status": "open",
       "verified": true,
       "verifiedDate": "2026-10-03",
-      "offerNote": "Official Chase page labels the current 80,000-mile offer \u201cOUR BEST OFFER RETURNS\u201d: 70,000 miles after $3,000 in purchases in the first 3 months, plus 10,000 miles after adding an authorized user in the first 3 months. $0 intro annual fee first year, then $150. Higher special-channel offers are tracked separately.",
+      "offerNote": "Official Chase page labels the current 80,000-mile offer “OUR BEST OFFER RETURNS”: 70,000 miles after $3,000 in purchases in the first 3 months, plus 10,000 miles after adding an authorized user in the first 3 months. $0 intro annual fee first year, then $150. Higher special-channel offers are tracked separately.",
       "tags": [
         "airline",
         "united"
@@ -1743,7 +1743,7 @@
       "status": "open",
       "verified": true,
       "verifiedDate": "2026-10-02",
-      "offerNote": "Official Chase best-ever offer: up to 115,000 Aeroplan points \u2014 75,000 after $4,000 in purchases in the first 3 months, plus 40,000 after $20,000 total purchases in the first 12 months. $195 annual fee.",
+      "offerNote": "Official Chase best-ever offer: up to 115,000 Aeroplan points — 75,000 after $4,000 in purchases in the first 3 months, plus 40,000 after $20,000 total purchases in the first 12 months. $195 annual fee.",
       "tags": [
         "airline",
         "aeroplan"
@@ -2726,7 +2726,10 @@
       "offerNote": "Official Bank of America offer: $200 online cash rewards bonus after at least $1,000 in purchases in the first 90 days of account opening; no annual fee.",
       "tags": [
         "cash",
-        "bofa"
+        "bofa",
+        "choice-category",
+        "first-year-promo",
+        "high-cash-rate"
       ],
       "spendQualifiedBonus": 200,
       "spendPeriod": "first 90 days of account opening",
@@ -2749,7 +2752,13 @@
       "histPublicDate": "2016-03",
       "histStatus": "best-documented",
       "histSourceLabel": "Pocket Finance Club / Doctor of Credit",
-      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/susan-g-komen-cash-rewards/"
+      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/susan-g-komen-cash-rewards/",
+      "promoCashBackRate": 6,
+      "promoCashBackCategory": "the category of your choice",
+      "promoCashBackPeriod": "the first year",
+      "promoCashBackCapNote": "The promotional/category rates are subject to the card’s current quarterly combined-purchase cap and terms.",
+      "promoSource": "official-issuer",
+      "promoVerifiedDate": "2026-10-03"
     },
     {
       "id": 8404,
