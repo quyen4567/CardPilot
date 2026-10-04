@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.3.13</title>
+  <title>CardPilot v11.3.14</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -47,7 +47,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.13</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.14</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -127,6 +127,7 @@ data.profile.savedStrategies=Array.isArray(data.profile.savedStrategies)?data.pr
 // v11.3.9: strict airline classification requires an airline/co-brand signal; generic transferable "miles" no longer count as airline cards.
 // v11.3.6: historical-high refinement requires a verified current offer + known comparable history; unknown history is shown separately.
 // v11.3.12: Newly launched is a strict search filter; combine it with another selected category as an AND condition.
+// v11.3.14: historical-high badges compare against verified comparable public offers; targeted/special-channel highs are shown separately.
 // v11.3.3: separate Big sign-up bonus from Historical-high sign-up bonus in benefit selection.
 // v11.3.1: cash-back intent distinguishes true cash, cash-equivalent points, and discounted cash redemptions.
 // UI refinements: $10K+ replaces no-limit SUB spend, lowest annual fee label, and offer-strength badges/ranking.
@@ -648,6 +649,7 @@ function historicalOfferText(o){
   const histDate=o.histPublicDate||'';
   const targeted=Number(o.targetedHigh||0);
   const targetedDate=o.targetedHighDate||'';
+  const targetedNote=o.targetedHighNote||'';
   if(!hist){
     return 'Historical public high not yet verified';
   }
@@ -664,7 +666,7 @@ function historicalOfferText(o){
   }
   let targetText='';
   if(targeted>hist){
-    targetText=` • targeted/YMMV high ${targeted.toLocaleString()}${targetedDate?` (${targetedDate})`:''}`;
+    targetText=` • targeted/special-channel high ${targeted.toLocaleString()}${targetedDate?` (${targetedDate})`:''}${targetedNote?` — ${targetedNote}`:''}`;
   }
   return `${pct}${dateText}${targetText}`;
 }

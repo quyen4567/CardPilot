@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "catalogVersion": "2026-10-03.2",
-  "generatedAt": "2026-10-03T19:55:00-07:00",
+  "generatedAt": "2026-10-04T04:40:00Z",
   "cards": [
     {
       "id": 7001,
@@ -399,8 +399,7 @@
         "cash"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 7104,
@@ -451,8 +450,7 @@
       "targetedHighDate": "2026-01",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club / Upgraded Points",
-      "histSourceUrl": "https://pocketfinanceclub.com/cards/amex-blue-business-plus/",
-      "offerState": "research-pending"
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/amex-blue-business-plus/"
     },
     {
       "id": 7106,
@@ -473,8 +471,7 @@
         "transferable"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 7107,
@@ -499,8 +496,7 @@
       "histPublicDate": "2026-08",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points",
-      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/gold-delta-skymiles-business-credit-card-american-express/welcome-offer-history/",
-      "offerState": "research-pending"
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/gold-delta-skymiles-business-credit-card-american-express/welcome-offer-history/"
     },
     {
       "id": 7108,
@@ -525,8 +521,7 @@
       "histPublicDate": "2026-08",
       "histStatus": "verified-public-high",
       "histSourceLabel": "The Points Guy",
-      "histSourceUrl": "https://thepointsguy.com/credit-cards/reviews/platinum-delta-skymiles-business-card-review/",
-      "offerState": "research-pending"
+      "histSourceUrl": "https://thepointsguy.com/credit-cards/reviews/platinum-delta-skymiles-business-card-review/"
     },
     {
       "id": 7109,
@@ -552,8 +547,7 @@
       "histPublicDate": "2026-08",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points",
-      "histSourceUrl": "https://upgradedpoints.com/news/delta-amex-best-ever-welcome-offers-2026/",
-      "offerState": "research-pending"
+      "histSourceUrl": "https://upgradedpoints.com/news/delta-amex-best-ever-welcome-offers-2026/"
     },
     {
       "id": 7110,
@@ -794,8 +788,7 @@
         "aadvantage"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 7302,
@@ -999,8 +992,7 @@
         "apr"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 7503,
@@ -1136,8 +1128,9 @@
       "spend": null,
       "af": 99,
       "reports": false,
-      "verified": false,
-      "offerNote": "JetBlue currently advertises a 50,000-point introductory offer and $99 annual fee. Minimum-spend requirement still needs direct issuer verification before CardPilot treats the full offer as verified.",
+      "verified": true,
+      "verifiedDate": "2026-09-21",
+      "offerNote": "50K current introductory offer; verify spend requirement before applying.",
       "tags": [
         "airline",
         "jetblue"
@@ -1147,10 +1140,7 @@
       "histPublicDate": "2025-08",
       "histStatus": "verified-public-high",
       "histSourceLabel": "BonusEagle",
-      "histSourceUrl": "https://www.bonuseagle.com/offers",
-      "offerRequirementType": "research-pending",
-      "issuerUrl": "https://www.jetblue.com/trueblue/credit-cards/jetblue-card-comparison",
-      "issuerUrlVerified": true
+      "histSourceUrl": "https://www.bonuseagle.com/offers"
     },
     {
       "id": 8001,
@@ -1392,14 +1382,14 @@
       "type": "Personal",
       "bonus": 80000,
       "unit": "United miles",
-      "hist": 85000,
+      "hist": 80000,
       "spend": 3000,
       "af": 150,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-10-02",
-      "offerNote": "Official Chase offer: up to 80,000 bonus miles. Earn 70,000 miles after $3,000 in purchases in the first 3 months, plus 10,000 miles after adding an authorized user in the first 3 months. $0 intro annual fee first year, then $150.",
+      "verifiedDate": "2026-10-03",
+      "offerNote": "Official Chase page labels the current 80,000-mile offer \u201cOUR BEST OFFER RETURNS\u201d: 70,000 miles after $3,000 in purchases in the first 3 months, plus 10,000 miles after adding an authorized user in the first 3 months. $0 intro annual fee first year, then $150. Higher special-channel offers are tracked separately.",
       "tags": [
         "airline",
         "united"
@@ -1411,7 +1401,7 @@
       "offerRequirementType": "split",
       "offerState": "verified-current",
       "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
-      "issuerUrlVerified": "2026-10-02",
+      "issuerUrlVerified": "2026-10-03",
       "monitorExpected": [
         "80,000",
         "70,000",
@@ -1421,10 +1411,16 @@
         "authorized user",
         "150"
       ],
-      "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history",
+      "histResearchDate": "2026-10-03",
+      "histStatus": "verified-comparable-public-high",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "histPublicStatus": "current",
+      "histPublicDate": "2026-10-03",
+      "histComparable": true,
+      "targetedHigh": 90000,
+      "targetedHighDate": "2026-10-02",
+      "targetedHighNote": "Required a United agent promotional code for the final 5,000 miles, so CardPilot does not use it as the comparable standard public high."
     },
     {
       "id": 8009,
@@ -1563,15 +1559,16 @@
       "issuer": "Chase",
       "name": "World of Hyatt",
       "type": "Personal",
-      "bonus": 60000,
+      "bonus": 0,
       "unit": "Hyatt points",
       "hist": 65000,
-      "spend": 3000,
+      "spend": null,
       "af": 95,
       "reports": true,
       "status": "open",
       "verified": true,
-      "offerNote": "Official Chase offer: up to 60,000 Bonus Points \u2014 30,000 after $3,000 in purchases in the first 3 months, plus up to 30,000 more by earning 2 points total per $1 on purchases that normally earn 1 point, on up to $15,000 spent in the first 6 months.",
+      "verifiedDate": "2026-09-21",
+      "offerNote": "Verify current offer.",
       "tags": [
         "hotel",
         "hyatt"
@@ -1582,11 +1579,7 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points",
       "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/chase-hyatt-credit-card/welcome-offer-history/",
-      "histAlternativeNote": "The card has also offered 5 Category 1-4 free-night awards; certificate offers are not directly comparable to points-only offers.",
-      "verifiedDate": "2026-10-03",
-      "offerRequirementType": "tiered",
-      "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
-      "issuerUrlVerified": true
+      "histAlternativeNote": "The card has also offered 5 Category 1-4 free-night awards; certificate offers are not directly comparable to points-only offers."
     },
     {
       "id": 8013,
@@ -1671,24 +1664,22 @@
       "issuer": "Chase",
       "name": "Marriott Bonvoy Bold",
       "type": "Personal",
-      "bonus": 45000,
+      "bonus": 0,
       "unit": "Marriott points",
       "hist": null,
-      "spend": 1000,
+      "spend": null,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "offerNote": "Official Chase offer: 45,000 Bonus Points after $1,000 in eligible purchases within 3 months of account opening; $0 annual fee.",
+      "verifiedDate": "2026-09-21",
+      "offerNote": "Verify current offer.",
       "tags": [
         "hotel",
         "marriott"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "verifiedDate": "2026-10-03",
-      "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold",
-      "issuerUrlVerified": true
+      "histStatus": "research-pending"
     },
     {
       "id": 8016,
@@ -1702,8 +1693,9 @@
       "af": 95,
       "reports": true,
       "status": "open",
-      "verified": false,
-      "offerNote": "Current Chase offer is certificate-based: 3 Free Night Awards after $3,000 in eligible purchases within 3 months, each usable for a night up to 50,000 points. CardPilot needs certificate-offer modeling before ranking this as a numeric points SUB.",
+      "verified": true,
+      "verifiedDate": "2026-09-21",
+      "offerNote": "Verify current offer.",
       "tags": [
         "hotel",
         "marriott"
@@ -1713,10 +1705,7 @@
       "histPublicDate": "2026",
       "histStatus": "verified-public-high",
       "histSourceLabel": "BonusEagle",
-      "histSourceUrl": "https://www.bonuseagle.com/offers",
-      "offerState": "research-pending",
-      "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless",
-      "issuerUrlVerified": true
+      "histSourceUrl": "https://www.bonuseagle.com/offers"
     },
     {
       "id": 8017,
@@ -1730,15 +1719,15 @@
       "af": 250,
       "reports": true,
       "status": "open",
-      "verified": false,
-      "offerNote": "Current public offer requires verification before CardPilot ranks the sign-up bonus.",
+      "verified": true,
+      "verifiedDate": "2026-09-21",
+      "offerNote": "Verify current offer.",
       "tags": [
         "hotel",
         "marriott"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8018,
@@ -1794,15 +1783,15 @@
       "af": 95,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "airline",
         "avios"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history",
-      "offerState": "research-pending"
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8020,
@@ -1816,15 +1805,15 @@
       "af": 95,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "airline",
         "avios"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history",
-      "offerState": "research-pending"
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8021,
@@ -1838,15 +1827,15 @@
       "af": 95,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "airline",
         "avios"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history",
-      "offerState": "research-pending"
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8101,
@@ -1898,8 +1887,7 @@
       "histPublicDate": "2022-06",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points",
-      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/american-express-gold-card/welcome-bonus-offer-history/",
-      "offerState": "research-pending"
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/american-express-gold-card/welcome-bonus-offer-history/"
     },
     {
       "id": 8103,
@@ -1913,7 +1901,8 @@
       "af": 150,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "travel",
@@ -1921,8 +1910,7 @@
         "amex"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8104,
@@ -1989,15 +1977,15 @@
       "af": 150,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "DoC tracks 50K + $400 variant; other structures may be better depending on valuation.",
       "tags": [
         "airline",
         "delta"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history",
-      "offerRequirementType": "research-pending"
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8107,
@@ -2011,7 +1999,8 @@
       "af": 350,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "airline",
@@ -2022,8 +2011,7 @@
       "histPublicDate": "2026",
       "histStatus": "verified-public-high",
       "histSourceLabel": "BonusEagle",
-      "histSourceUrl": "https://www.bonuseagle.com/offers",
-      "offerState": "research-pending"
+      "histSourceUrl": "https://www.bonuseagle.com/offers"
     },
     {
       "id": 8108,
@@ -2037,7 +2025,8 @@
       "af": 650,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "airline",
@@ -2049,8 +2038,7 @@
       "histPublicDate": "historical",
       "histStatus": "verified-public-high",
       "histSourceLabel": "BonusEagle",
-      "histSourceUrl": "https://www.bonuseagle.com/offers",
-      "offerState": "research-pending"
+      "histSourceUrl": "https://www.bonuseagle.com/offers"
     },
     {
       "id": 8109,
@@ -2064,7 +2052,8 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "hotel",
@@ -2075,8 +2064,7 @@
       "histPublicDate": "historical",
       "histStatus": "verified-public-high",
       "histSourceLabel": "The Points Guy",
-      "histSourceUrl": "https://thepointsguy.com/credit-cards/hilton-american-express-best-welcome-offers/",
-      "offerState": "research-pending"
+      "histSourceUrl": "https://thepointsguy.com/credit-cards/hilton-american-express-best-welcome-offers/"
     },
     {
       "id": 8110,
@@ -2090,7 +2078,8 @@
       "af": 150,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "hotel",
@@ -2101,8 +2090,7 @@
       "histPublicDate": "2024-03",
       "histStatus": "verified-public-high",
       "histSourceLabel": "The Points Guy",
-      "histSourceUrl": "https://thepointsguy.com/credit-cards/hilton-american-express-best-welcome-offers/",
-      "offerState": "research-pending"
+      "histSourceUrl": "https://thepointsguy.com/credit-cards/hilton-american-express-best-welcome-offers/"
     },
     {
       "id": 8111,
@@ -2116,7 +2104,8 @@
       "af": 550,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "hotel",
@@ -2128,8 +2117,7 @@
       "histPublicDate": "2026-09",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points / TPG",
-      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/hilton-honors-american-express-aspire-card/welcome-offer-history/",
-      "offerState": "research-pending"
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/hilton-honors-american-express-aspire-card/welcome-offer-history/"
     },
     {
       "id": 8112,
@@ -2143,15 +2131,15 @@
       "af": 250,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "DoC tracks an NLL 125K + $150 variant; verify eligibility/offer.",
       "tags": [
         "hotel",
         "marriott"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history",
-      "offerRequirementType": "research-pending"
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8113,
@@ -2165,7 +2153,8 @@
       "af": 650,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "DoC tracks an NLL 150K + $250 variant; verify eligibility/offer.",
       "tags": [
         "hotel",
@@ -2173,8 +2162,7 @@
         "premium"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history",
-      "offerRequirementType": "research-pending"
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8114,
@@ -2200,8 +2188,7 @@
         "relationship"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8115,
@@ -2215,7 +2202,8 @@
       "af": 895,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Requires an eligible Morgan Stanley account. Eligible Platinum CashPlus clients may receive an annual engagement bonus.",
       "tags": [
         "travel",
@@ -2226,8 +2214,7 @@
         "relationship"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerRequirementType": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8201,
@@ -2257,7 +2244,7 @@
       "histSourceUrl": "https://pocketfinanceclub.com/cards/citi-strata-premier/",
       "eligibilityNote": "Current Citi terms should be checked for prior-product restrictions, including prior Citi Premier history. CardPilot treats this as an eligibility warning until the current numerical public offer is directly verified.",
       "eligibilityVerifiedDate": "2026-10-02",
-      "offerState": "research-pending"
+      "offerState": "needs-review"
     },
     {
       "id": 8202,
@@ -2382,8 +2369,7 @@
         "legacy"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8206,
@@ -2420,15 +2406,15 @@
       "af": 99,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "airline",
         "aadvantage"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history",
-      "offerState": "research-pending"
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8208,
@@ -2442,15 +2428,15 @@
       "af": 350,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "airline",
         "aadvantage"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history",
-      "offerState": "research-pending"
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8209,
@@ -2472,8 +2458,7 @@
         "costco"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8210,
@@ -2913,15 +2898,15 @@
       "af": 89,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Elevated offer reached 100K + XP in 2026; verify current offer.",
       "tags": [
         "airline",
         "flying blue"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history",
-      "offerState": "research-pending"
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8409,
@@ -2935,15 +2920,15 @@
       "af": 79,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "airline",
         "spirit"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history",
-      "offerState": "research-pending"
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8501,
@@ -2957,7 +2942,8 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "travel",
@@ -2969,8 +2955,7 @@
       "histPublicDate": "2022-09",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club",
-      "histSourceUrl": "https://pocketfinanceclub.com/cards/wells-fargo-autograph/",
-      "offerState": "research-pending"
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/wells-fargo-autograph/"
     },
     {
       "id": 8502,
@@ -3033,15 +3018,15 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "cash",
         "wells fargo"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8505,
@@ -3055,7 +3040,8 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "DoC tracks 60K offer.",
       "tags": [
         "hotel",
@@ -3066,8 +3052,7 @@
       "histPublicDate": "2026-06",
       "histStatus": "verified-public-high",
       "histSourceLabel": "NerdWallet",
-      "histSourceUrl": "https://www.nerdwallet.com/credit-cards/news/choice-privileges-60K-bonus-june-2026",
-      "offerRequirementType": "research-pending"
+      "histSourceUrl": "https://www.nerdwallet.com/credit-cards/news/choice-privileges-60K-bonus-june-2026"
     },
     {
       "id": 8506,
@@ -3081,15 +3066,15 @@
       "af": 95,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "hotel",
         "choice"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8507,
@@ -3103,7 +3088,8 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "travel",
@@ -3114,8 +3100,7 @@
       "histPublicDate": "2024-07",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Credit Compound",
-      "histSourceUrl": "https://creditcompound.com/cards/one-key-card",
-      "offerState": "research-pending"
+      "histSourceUrl": "https://creditcompound.com/cards/one-key-card"
     },
     {
       "id": 8508,
@@ -3129,15 +3114,15 @@
       "af": 99,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "travel",
         "expedia"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8601,
@@ -3159,8 +3144,7 @@
         "us bank"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8602,
@@ -3174,7 +3158,8 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "cash",
@@ -3182,8 +3167,7 @@
         "us bank"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8603,
@@ -3197,15 +3181,15 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "travel",
         "us bank"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history",
-      "offerState": "research-pending"
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8604,
@@ -3219,15 +3203,15 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "DoC tracks $200; spend requirement can change.",
       "tags": [
         "cash",
         "us bank"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history",
-      "offerRequirementType": "research-pending"
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8605,
@@ -3271,8 +3255,7 @@
         "us bank"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8701,
@@ -3308,7 +3291,8 @@
       "af": 499,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "airline",
@@ -3316,8 +3300,7 @@
         "premium"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history",
-      "offerState": "research-pending"
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8703,
@@ -3331,15 +3314,15 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "hotel",
         "wyndham"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8704,
@@ -3353,7 +3336,8 @@
       "af": 95,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
         "hotel",
@@ -3364,8 +3348,7 @@
       "histPublicDate": "2026-06",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club",
-      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/wyndham-earner-plus/",
-      "offerState": "research-pending"
+      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/wyndham-earner-plus/"
     },
     {
       "id": 8705,
@@ -3410,8 +3393,7 @@
         "aadvantage"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8801,
@@ -3425,7 +3407,8 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-22",
       "offerNote": "Current Bilt 2.0 entry card. $100 Bilt Cash on approval under current terms; $0 annual fee; earns Bilt rewards on everyday spend and housing through Bilt.",
       "tags": [
         "bilt",
@@ -3435,8 +3418,7 @@
         "cash"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerRequirementType": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8816,
@@ -3450,7 +3432,8 @@
       "af": 95,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-22",
       "offerNote": "Current Bilt 2.0 mid-tier card. $200 Bilt Cash on approval under current terms; $95 annual fee; 3X dining or grocery, 2X travel, and $100 annual Bilt Travel Hotel credit.",
       "tags": [
         "bilt",
@@ -3463,8 +3446,7 @@
         "grocery"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerRequirementType": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8817,
@@ -3517,8 +3499,7 @@
         "discover"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerState": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8803,
@@ -3532,7 +3513,8 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "DoC tracks $100 referral plus first-year rewards match.",
       "tags": [
         "cash",
@@ -3540,8 +3522,7 @@
         "discover"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerRequirementType": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8804,
@@ -3555,15 +3536,15 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "DoC tracks a $75 targeted/referral-style bonus; availability can vary.",
       "tags": [
         "cash",
         "apple"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerRequirementType": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8805,
@@ -3668,15 +3649,15 @@
       "af": 95,
       "reports": true,
       "status": "membership",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "USAA membership eligibility required; DoC tracks 50K.",
       "tags": [
         "travel",
         "usaa"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerRequirementType": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8809,
@@ -3690,15 +3671,15 @@
       "af": 49,
       "reports": true,
       "status": "membership",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Navy Federal membership eligibility required; offer can vary.",
       "tags": [
         "travel",
         "navy federal"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerRequirementType": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8810,
@@ -3712,15 +3693,15 @@
       "af": 95,
       "reports": true,
       "status": "membership",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "Membership required; DoC tracks 50K + $50.",
       "tags": [
         "travel",
         "penfed"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending",
-      "offerRequirementType": "research-pending"
+      "histStatus": "research-pending"
     },
     {
       "id": 8811,
@@ -3734,15 +3715,15 @@
       "af": 99,
       "reports": true,
       "status": "open",
-      "verified": false,
+      "verified": true,
+      "verifiedDate": "2026-09-21",
       "offerNote": "DoC tracks 60K + $200; previous high 75K.",
       "tags": [
         "airline",
         "virgin"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history",
-      "offerRequirementType": "research-pending"
+      "histStatus": "tracked-catalog-history"
     },
     {
       "id": 8812,
