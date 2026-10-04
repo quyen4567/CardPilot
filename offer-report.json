@@ -1,11 +1,11 @@
 {
   "catalogVersion": "2026-10-03.2",
-  "checkedAt": "2026-10-04T03:32:28.819Z",
+  "checkedAt": "2026-10-04T03:51:42.197Z",
   "counts": {
     "verified": 34,
-    "needs_review": 4,
+    "needs_review": 5,
     "blocked_by_issuer": 0,
-    "broken": 1,
+    "broken": 0,
     "unmonitored": 104
   },
   "monitoredCards": 39,
@@ -38,7 +38,7 @@
         "snippet": "Earn $750 cash back after you spend $6,000",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7002,
@@ -66,7 +66,7 @@
         "snippet": "Earn $750 cash back after you spend $6,000",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7007,
@@ -108,7 +108,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7009,
@@ -136,7 +136,7 @@
         "snippet": "80,000 points after you spend $3,000 on purchases",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7010,
@@ -176,7 +176,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7011,
@@ -216,7 +216,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7401,
@@ -240,7 +240,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7402,
@@ -264,7 +264,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7403,
@@ -288,19 +288,19 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7702,
       "issuer": "Barclays",
       "name": "JetBlue Business",
-      "status": "broken",
+      "status": "needs_review",
       "httpStatus": 500,
       "url": "https://www.jetblue.com/trueblue/credit-cards/jetblue-card-comparison",
       "issues": [
-        "HTTP 500"
+        "Issuer server returned HTTP 500; treated as temporary issuer error, not a CardPilot workflow failure."
       ],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8001,
@@ -335,7 +335,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8002,
@@ -370,7 +370,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8004,
@@ -405,7 +405,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8005,
@@ -433,7 +433,7 @@
         "snippet": "Earn 50,000 bonus points * 2X points on Southwest Airlines purchases and on the first $5,000 in combined purchases at gas stations and grocery stores per year * 1X points on all other purchases * NEW CARDMEMBER OFFER Earn 50,000 bonus points after you spend $1,000",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8006,
@@ -461,7 +461,7 @@
         "snippet": "Earn 55,000 bonus points * 3X points on Southwest Airlines purchases * 2X points on the first $8,000 in combined purchases at grocery stores and restaurants per year * NEW CARDMEMBER OFFER Earn 55,000 bonus points after you spend $1,500",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8007,
@@ -489,7 +489,7 @@
         "snippet": "Earn 60,000 bonus points * 4X points on Southwest Airlines purchases * 2X points at gas stations and restaurants * NEW CARDMEMBER OFFER Earn 60,000 bonus points after you spend $2,000",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8008,
@@ -527,7 +527,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8009,
@@ -565,7 +565,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8010,
@@ -603,7 +603,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8011,
@@ -641,7 +641,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8012,
@@ -671,7 +671,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8013,
@@ -708,7 +708,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8014,
@@ -745,7 +745,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8015,
@@ -768,7 +768,7 @@
         "snippet": "45,000 Bonus Points After You Spend $1,000 On Purchases",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8016,
@@ -787,7 +787,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8018,
@@ -831,7 +831,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8202,
@@ -859,7 +859,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8203,
@@ -887,7 +887,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8210,
@@ -906,7 +906,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8301,
@@ -930,7 +930,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8303,
@@ -958,7 +958,7 @@
         "snippet": "20,000 bonus miles once you spend $500 on purchases",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8304,
@@ -982,7 +982,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8305,
@@ -1006,7 +1006,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8403,
@@ -1032,7 +1032,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8404,
@@ -1051,7 +1051,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8405,
@@ -1075,7 +1075,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8406,
@@ -1110,7 +1110,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8407,
@@ -1145,7 +1145,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8022,
@@ -1187,7 +1187,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7003,
@@ -1196,7 +1196,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7004,
@@ -1205,7 +1205,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7005,
@@ -1214,7 +1214,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7006,
@@ -1223,7 +1223,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7008,
@@ -1232,7 +1232,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7101,
@@ -1241,7 +1241,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7102,
@@ -1250,7 +1250,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7103,
@@ -1259,7 +1259,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7104,
@@ -1268,7 +1268,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7105,
@@ -1277,7 +1277,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7106,
@@ -1286,7 +1286,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7107,
@@ -1295,7 +1295,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7108,
@@ -1304,7 +1304,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7109,
@@ -1313,7 +1313,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7110,
@@ -1322,7 +1322,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7111,
@@ -1331,7 +1331,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7201,
@@ -1340,7 +1340,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7202,
@@ -1349,7 +1349,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7203,
@@ -1358,7 +1358,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7204,
@@ -1367,7 +1367,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7205,
@@ -1376,7 +1376,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7206,
@@ -1385,7 +1385,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7207,
@@ -1394,7 +1394,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7301,
@@ -1403,7 +1403,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7302,
@@ -1412,7 +1412,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7404,
@@ -1421,7 +1421,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7501,
@@ -1430,7 +1430,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7502,
@@ -1439,7 +1439,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7503,
@@ -1448,7 +1448,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7504,
@@ -1457,7 +1457,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7505,
@@ -1466,7 +1466,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7601,
@@ -1475,7 +1475,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 7701,
@@ -1484,7 +1484,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8003,
@@ -1493,7 +1493,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8017,
@@ -1502,7 +1502,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8019,
@@ -1511,7 +1511,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8020,
@@ -1520,7 +1520,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8021,
@@ -1529,7 +1529,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8101,
@@ -1538,7 +1538,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8102,
@@ -1547,7 +1547,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8103,
@@ -1556,7 +1556,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8104,
@@ -1565,7 +1565,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8105,
@@ -1574,7 +1574,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8106,
@@ -1583,7 +1583,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8107,
@@ -1592,7 +1592,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8108,
@@ -1601,7 +1601,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8109,
@@ -1610,7 +1610,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8110,
@@ -1619,7 +1619,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8111,
@@ -1628,7 +1628,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8112,
@@ -1637,7 +1637,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8113,
@@ -1646,7 +1646,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8114,
@@ -1655,7 +1655,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8115,
@@ -1664,7 +1664,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8201,
@@ -1673,7 +1673,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8204,
@@ -1682,7 +1682,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8205,
@@ -1691,7 +1691,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8206,
@@ -1700,7 +1700,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8207,
@@ -1709,7 +1709,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8208,
@@ -1718,7 +1718,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8209,
@@ -1727,7 +1727,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8302,
@@ -1736,7 +1736,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8401,
@@ -1745,7 +1745,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8402,
@@ -1754,7 +1754,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8408,
@@ -1763,7 +1763,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8409,
@@ -1772,7 +1772,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8501,
@@ -1781,7 +1781,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8502,
@@ -1790,7 +1790,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8503,
@@ -1799,7 +1799,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8504,
@@ -1808,7 +1808,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8505,
@@ -1817,7 +1817,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8506,
@@ -1826,7 +1826,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8507,
@@ -1835,7 +1835,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8508,
@@ -1844,7 +1844,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8601,
@@ -1853,7 +1853,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8602,
@@ -1862,7 +1862,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8603,
@@ -1871,7 +1871,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8604,
@@ -1880,7 +1880,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8605,
@@ -1889,7 +1889,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8606,
@@ -1898,7 +1898,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8701,
@@ -1907,7 +1907,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8702,
@@ -1916,7 +1916,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8703,
@@ -1925,7 +1925,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8704,
@@ -1934,7 +1934,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8705,
@@ -1943,7 +1943,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8706,
@@ -1952,7 +1952,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8801,
@@ -1961,7 +1961,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8816,
@@ -1970,7 +1970,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8817,
@@ -1979,7 +1979,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8802,
@@ -1988,7 +1988,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8803,
@@ -1997,7 +1997,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8804,
@@ -2006,7 +2006,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8805,
@@ -2015,7 +2015,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8815,
@@ -2024,7 +2024,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8806,
@@ -2033,7 +2033,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8807,
@@ -2042,7 +2042,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8808,
@@ -2051,7 +2051,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8809,
@@ -2060,7 +2060,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8810,
@@ -2069,7 +2069,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8811,
@@ -2078,7 +2078,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8812,
@@ -2087,7 +2087,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8901,
@@ -2096,7 +2096,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8902,
@@ -2105,7 +2105,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8903,
@@ -2114,7 +2114,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     },
     {
       "id": 8904,
@@ -2123,7 +2123,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-04T03:32:28.819Z"
+      "checkedAt": "2026-10-04T03:51:42.197Z"
     }
   ]
 }
