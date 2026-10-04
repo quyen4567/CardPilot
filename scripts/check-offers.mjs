@@ -107,9 +107,10 @@ async function fetchCard(c){
   const controller=new AbortController();
   const timer=setTimeout(()=>controller.abort(),20000);
   try{
-    const res=await fetch(c.issuerUrl,{redirect:'follow',signal:controller.signal,headers:{'user-agent':'Mozilla/5.0 CardPilotOfferMonitor/2.0'}});
+    const res=await fetch(c.issuerUrl,{redirect:'follow',signal:controller.signal,headers:{'user-agent':'Mozilla/5.0 CardPilotOfferMonitor/2.1'}});
     const body=await res.text();
     if([401,403,406,429].includes(res.status)) return {id:c.id,issuer:c.issuer,name:c.name,status:'blocked_by_issuer',httpStatus:res.status,url:c.issuerUrl,issues:localIssues,checkedAt:now.toISOString()};
+    if(res.status>=500 && res.status<=599) return {id:c.id,issuer:c.issuer,name:c.name,status:'needs_review',httpStatus:res.status,url:c.issuerUrl,issues:[...localIssues,`Issuer server returned HTTP ${res.status}; treated as temporary issuer error, not a CardPilot workflow failure.`],checkedAt:now.toISOString()};
     if(res.status<200||res.status>=400) return {id:c.id,issuer:c.issuer,name:c.name,status:'broken',httpStatus:res.status,url:c.issuerUrl,issues:[...localIssues,`HTTP ${res.status}`],checkedAt:now.toISOString()};
     const expected=Array.isArray(c.monitorExpected)?c.monitorExpected:[];
     const missing=expected.filter(t=>!termFound(body,t));
