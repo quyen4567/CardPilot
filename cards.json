@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-10-03.2",
+  "catalogVersion": "2026-10-03.3",
   "generatedAt": "2026-10-04T04:40:00Z",
   "cards": [
     {
@@ -2722,7 +2722,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-26",
+      "verifiedDate": "2026-10-03",
       "offerNote": "Official Bank of America offer: $200 online cash rewards bonus after at least $1,000 in purchases in the first 90 days of account opening; no annual fee.",
       "tags": [
         "cash",
@@ -2734,7 +2734,7 @@
       "spendQualifiedBonus": 200,
       "spendPeriod": "first 90 days of account opening",
       "issuerUrl": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
-      "issuerUrlVerified": "2026-09-26",
+      "issuerUrlVerified": "2026-10-03",
       "monitorExpected": [
         "200",
         "1,000",
