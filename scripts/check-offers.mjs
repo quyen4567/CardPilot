@@ -48,8 +48,8 @@ function localQuality(c){
   const issues=[];
   if(c.verified && /verify current offer/i.test(String(c.offerNote||''))) issues.push('Catalog contradiction: verified=true while offer note says Verify current offer.');
   if(c.verified && !c.verifiedDate) issues.push('Verified offer is missing verifiedDate.');
-  if(Number(c.bonus||0)>0 && c.spend==null && !['qualifying-activities','personalized','up-to'].includes(c.offerRequirementType)) issues.push('Bonus is present but spend requirement is missing.');
-  if(Number(c.bonus||0)===0 && !['no-standard-public-sub','invitation-waitlist','personalized','historical-only'].includes(c.offerState)) issues.push('No current bonus is stored and no explicit no-offer state is set.');
+  if(Number(c.bonus||0)>0 && c.spend==null && !['qualifying-activities','personalized','up-to','research-pending'].includes(c.offerRequirementType)) issues.push('Bonus is present but spend requirement is missing.');
+  if(Number(c.bonus||0)===0 && !['no-standard-public-sub','invitation-waitlist','personalized','historical-only','research-pending'].includes(c.offerState)) issues.push('No current bonus is stored and no explicit no-offer state is set.');
   const age=ageDays(c.verifiedDate);
   if(age>14 && age!==Infinity) issues.push(`Verification is ${age} days old.`);
   return issues;
