@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-10-04.6",
-  "generatedAt": "2026-10-04T20:55:00Z",
+  "catalogVersion": "2026-10-05.7",
+  "generatedAt": "2026-10-05",
   "cards": [
     {
       "id": 7001,
@@ -2797,14 +2797,18 @@
       "offerNote": "DoC tracks $200 after $1,500 in 6 months.",
       "tags": [
         "cash",
-        "citi"
+        "citi",
+        "high-cash-rate",
+        "catch-all"
       ],
       "histResearchDate": "2026-09-27",
       "histPublicSpend": 1500,
       "histPublicDate": "2023-11",
       "histStatus": "verified-public-high",
       "histSourceLabel": "BonusEagle",
-      "histSourceUrl": "https://www.bonuseagle.com/offers"
+      "histSourceUrl": "https://www.bonuseagle.com/offers",
+      "catchAllCashBackRate": 2,
+      "catchAllCashBackCapNote": "2% total cash back structure: 1% when you buy plus 1% as you pay, under current terms."
     },
     {
       "id": 8205,
@@ -4183,8 +4187,8 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "First-year Cashback Match can be more important than a fixed sign-up bonus.",
+      "verifiedDate": "2026-10-05",
+      "offerNote": "Unlimited dollar-for-dollar Cashback Match on all cash back earned during the first year, paid after the first year. No purchase minimum. Earn 5% in activated quarterly categories on up to $1,500 in purchases each quarter, then 1%; earn 1% on other purchases. With the match, those rates are effectively 10% and 2% for the first year after the match is received.",
       "tags": [
         "cash",
         "discover",
@@ -4196,15 +4200,29 @@
       "categoryCashBackRate": 5,
       "categoryCashBackCategory": "activated quarterly bonus categories",
       "categoryCashBackPeriod": "each activated calendar quarter",
-      "categoryCashBackCapNote": "5% applies to up to $1,500 in activated category purchases each quarter; then the standard 1% rate. Q4 2026: restaurants, entertainment and utilities.",
+      "categoryCashBackCapNote": "5% applies to up to $1,500 in activated category purchases each quarter; then the standard 1% rate. Q4 2026: restaurants, entertainment and utilities. The first-year Cashback Match doubles cash back earned, making the 5% category rate effectively 10% after the match.",
       "categoryCashBackType": "rotating",
       "catchAllCashBackRate": 1,
-      "rewardsVerifiedDate": "2026-10-04",
+      "rewardsVerifiedDate": "2026-10-05",
       "rewardsSource": "official-issuer",
       "currentQuarterCategories": "Q4 2026: restaurants, entertainment and utilities",
       "currentQuarterEnd": "2026-12-31",
       "issuerUrl": "https://www.discover.com/credit-cards/cash-back/it-card/",
-      "issuerUrlVerified": "2026-10-04"
+      "issuerUrlVerified": "2026-10-05",
+      "offerState": "first-year-cashback-match",
+      "offerType": "public-first-year-match",
+      "confidence": "official-issuer",
+      "firstYearCashBackMatchMultiplier": 2,
+      "firstYearCashBackMatchPeriod": "first 365 days / first 12 consecutive billing periods under current issuer terms",
+      "firstYearCashBackMatchNote": "Discover automatically matches all cash back earned during the first year, dollar for dollar, after the first year. No purchase minimum and no match cap under the current public offer.",
+      "catchAllCashBackCapNote": "1% unlimited cash back on purchases outside activated 5% categories; the first-year Cashback Match makes this effectively 2% after the match is paid.",
+      "monitorExpected": [
+        "5% cash back",
+        "1% cash back",
+        "1,500",
+        "Cashback Match",
+        "no annual fee"
+      ]
     },
     {
       "id": 8803,
@@ -4268,10 +4286,14 @@
       "offerNote": "DoC tracks $150 after $1,500.",
       "tags": [
         "cash",
-        "fidelity"
+        "fidelity",
+        "high-cash-rate",
+        "catch-all"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "catchAllCashBackRate": 2,
+      "catchAllCashBackCapNote": "2% cash back when rewards are deposited into an eligible Fidelity account."
     },
     {
       "id": 8815,
@@ -4287,8 +4309,8 @@
       "status": "waitlist",
       "verified": true,
       "verifiedDate": "2026-10-04",
-      "offerState": "no-standard-public-sub",
-      "offerNote": "No standard public welcome bonus identified. Card access is currently via waitlist/invitation and requires Robinhood Gold. Earns 3% cash back on eligible purchases under current terms.",
+      "offerState": "invitation-waitlist",
+      "offerNote": "No standard public welcome bonus. The Robinhood Gold Card earns 3% cash back on eligible purchases and has a $0 card annual fee. Access starts through the Robinhood waitlist/invitation flow, and an annual Robinhood Gold subscription ($50) is required to apply for and maintain the card.",
       "tags": [
         "cash",
         "travel",
@@ -4300,8 +4322,8 @@
       "histResearchDate": "2026-09-27",
       "histStatus": "research-pending",
       "catchAllCashBackRate": 3,
-      "catchAllCashBackCapNote": "3% applies to eligible consumer purchases. An active annual Robinhood Gold subscription is required; excluded transactions include cash-like, certain bill-pay, government/tax, and business-type transactions.",
-      "relationshipRequirement": "Active annual Robinhood Gold subscription required to earn points; a Robinhood investing account is required for brokerage cash-back redemption.",
+      "catchAllCashBackCapNote": "3% cash back on eligible purchases. The card itself has a $0 annual fee; an annual Robinhood Gold subscription ($50) is required. Some transaction types are excluded under the rewards terms.",
+      "relationshipRequirement": "Annual Robinhood Gold subscription ($50) required to apply for and maintain the card. The card itself has a $0 annual fee. A Robinhood investing account is required for brokerage cash-back redemption.",
       "rewardsVerifiedDate": "2026-10-04",
       "rewardsSource": "official-issuer",
       "issuerUrl": "https://robinhood.com/creditcard/",
@@ -4309,7 +4331,8 @@
       "monitorExpected": [
         "3% cash back",
         "Robinhood Gold",
-        "no annual fee"
+        "no annual fee",
+        "50"
       ]
     },
     {
@@ -4329,10 +4352,14 @@
       "offerNote": "DoC tracks $200 via select links.",
       "tags": [
         "cash",
-        "sofi"
+        "sofi",
+        "high-cash-rate",
+        "catch-all"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "catchAllCashBackRate": 2,
+      "catchAllCashBackCapNote": "2% cash back on eligible purchases under the current catalog earning structure; issuer terms should be checked before applying."
     },
     {
       "id": 8807,

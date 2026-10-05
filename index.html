@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.3.25</title>
+  <title>CardPilot v11.3.27</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -51,7 +51,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.25</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.27</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -82,7 +82,7 @@ let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
 // Card catalog is loaded from cards.json so offer/link updates do not require rebuilding the UI.
 let BUSINESS_CATALOG=[];
 let PERSONAL_CATALOG=[];
-const CATALOG_VERSION='2026-10-04.6';
+const CATALOG_VERSION='2026-10-05.7';
 
 function migrateV8(){
   data.profile=data.profile||{};
@@ -132,6 +132,8 @@ data.profile.subInterests.points=Array.isArray(data.profile.subInterests.points)
 // v11.3.9: strict airline classification requires an airline/co-brand signal; generic transferable "miles" no longer count as airline cards.
 // v11.3.6: historical-high refinement requires a verified current offer + known comparable history; unknown history is shown separately.
 // v11.3.12: Newly launched is a strict search filter; combine it with another selected category as an AND condition.
+// v11.3.27: ongoing-reward cards can rank without a fixed SUB; Discover Cashback Match is modeled as first-year effective earning (10% activated categories / 2% everywhere after match) with clear activation, cap, and deferred-match disclosure.
+// v11.3.26: ongoing-reward cards with no standard SUB (notably Robinhood Gold) can rank normally for cash-back/points earning searches; membership costs stay separate from card annual fees.
 // v11.3.25: simplify Fine-tune: card type first, inherit reward focus from the quick search, and show reward-specific ranking choices instead of asking reward type again.
 // v11.3.24: structured points/miles earning engine: catch-all + category multipliers, caps, estimated-value normalization, and dedicated points ranking controls.
 // v11.3.23: structured high-cash-back comparison data for Smartly, Robinhood, BCP, Cash+, Freedom Flex, Discover, Citi Custom Cash (legacy), and AAA Daily Advantage; added Smartly balance tiers and generic category/catch-all display.
@@ -426,15 +428,22 @@ function categoryCashBackRate(o){
   const promo=cashPromoInfo(o);
   if(promo)return {effective:promo.rate,kind:'promo',note:`${promo.rate}% promotional cash back in ${promo.category} for ${promo.period}`};
   const rate=Number(o?.categoryCashBackRate||0);
-  if(rate>0)return {effective:rate,kind:'category',category:o.categoryCashBackCategory||'eligible category',period:o.categoryCashBackPeriod||'under current terms',cap:o.categoryCashBackCapNote||'',categoryType:o.categoryCashBackType||'fixed',note:o.categoryCashBackNote||`${rate}% cash back in ${o.categoryCashBackCategory||'an eligible category'} under current terms`};
+  if(rate>0){
+    const match=Number(o?.firstYearCashBackMatchMultiplier||1);
+    const effective=match>1?rate*match:rate;
+    return {effective,statedRate:rate,matchMultiplier:match,kind:match>1?'first-year-match':'category',category:o.categoryCashBackCategory||'eligible category',period:o.categoryCashBackPeriod||'under current terms',cap:o.categoryCashBackCapNote||'',categoryType:o.categoryCashBackType||'fixed',note:o.categoryCashBackNote||`${rate}% cash back in ${o.categoryCashBackCategory||'an eligible category'} under current terms`};
+  }
   return null;
 }
 function categoryCashBackText(o){
   const x=categoryCashBackRate(o);if(!x||x.kind==='promo')return '';
   const rate=x.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'');
+  const stated=(x.statedRate||x.effective).toFixed(3).replace(/0+$/,'').replace(/\.$/,'');
   const icon=x.categoryType==='rotating'?'🔄':'🔥';
   const label=x.categoryType==='rotating'?'Rotating category cash back':'Category cash back';
-  let t=`<div style="margin-top:9px;padding:9px 11px;border-radius:11px;background:#fff8e8;color:#7a4b00">${icon} <b>${label}: ${rate}%</b> — ${x.category}`;
+  const headline=x.kind==='first-year-match'?`${stated}% earned + first-year match = <b>${rate}% effective</b>`:`<b>${label}: ${rate}%</b>`;
+  let t=`<div style="margin-top:9px;padding:9px 11px;border-radius:11px;background:#fff8e8;color:#7a4b00">${icon} ${headline} — ${x.category}`;
+  if(x.kind==='first-year-match')t+=`<div class="small" style="margin-top:3px;color:#667085">The extra match is paid after the first year; activation and quarterly spending caps still apply.</div>`;
   if(x.period)t+=`<div class="small" style="margin-top:3px;color:#667085">${x.period}</div>`;
   if(x.cap)t+=`<div class="small" style="margin-top:3px;color:#667085">${x.cap}</div>`;
   return t+'</div>';
@@ -456,7 +465,13 @@ function catchAllCashRate(o){
     note=effective>base?`${effective}% with your saved Smartly qualifying-balance tier on the first $10,000 in eligible net purchases each billing cycle; 2% base thereafter.`:`Unlimited 2% base cash back. Save a qualifying Smartly balance tier to calculate 2.5%–4% on the first $10,000 in eligible net purchases each billing cycle.`;
     return {base,effective,note,relationshipBoost,cap:o.catchAllCashBackCapNote||''};
   }
-  if(Number(o?.catchAllCashBackRate||0)>0){base=Number(o.catchAllCashBackRate);note=o.catchAllCashBackCapNote||`${base}% on eligible general purchases under current terms.`;return {base,effective:base,note,relationshipBoost:0,cap:o.catchAllCashBackCapNote||''};}
+  if(Number(o?.catchAllCashBackRate||0)>0){
+    base=Number(o.catchAllCashBackRate);
+    const match=Number(o?.firstYearCashBackMatchMultiplier||1);
+    const effective=match>1?base*match:base;
+    note=match>1?`${base}% earned on general purchases, with an unlimited first-year dollar-for-dollar Cashback Match paid after the first year (${effective}% effective first-year return after the match).`:o.catchAllCashBackCapNote||`${base}% on eligible general purchases under current terms.`;
+    return {base,effective,note,relationshipBoost:0,cap:o.catchAllCashBackCapNote||'',matchMultiplier:match};
+  }
   if(n.includes('robinhood gold card')){base=3;note='3% on eligible purchases under current terms; Robinhood Gold membership/access requirements apply.'}
   else if(n.includes('fidelity rewards')){base=2;note='2% when rewards are deposited into an eligible Fidelity account.'}
   else if(n.includes('double cash')){base=2;note='2% total cash back structure on eligible purchases when purchase and payment components are combined.'}
@@ -518,6 +533,7 @@ function cashBackRateScore(o){
   const score=priority?baseScore:Math.max(1,Math.round(baseScore*0.45));
   const rate=r.toFixed(3).replace(/0+$/,'').replace(/\.$/,'');
   if(chosen.kind==='promo')return {score,reason:`Current promotional cash-back rate is ${rate}% in ${cashPromoInfo(o).category} for ${cashPromoInfo(o).period}. CardPilot gives this extra weight when you prioritize the highest cash back in a category or choose-your-own category.`};
+  if(chosen.kind==='first-year-match')return {score,reason:`First-year effective category return is ${rate}% after the issuer's dollar-for-dollar Cashback Match. The card initially earns ${chosen.statedRate}% and the match is paid after the first year; activation and caps still apply.`};
   if(chosen.kind==='category')return {score,reason:`Category cash-back rate is ${rate}% under current category terms and limits.`};
   const relationshipText=catchall?.relationshipBoost
     ? ` after your saved relationship boost`
@@ -530,7 +546,7 @@ function relationshipEffect(o){const r=data.profile.relationships||{},tags=offer
   if(!useRel){
     if(name.includes('charles schwab')&&(!r.schwab||r.schwab==='none')){score-=18;cautions.push('This card requires an eligible Schwab relationship.');}
     if(name.includes('morgan stanley')&&(!r.morganStanley||r.morganStanley==='none')){score-=18;cautions.push('This card requires an eligible Morgan Stanley relationship.');}
-    if(issuer==='robinhood'||name.includes('robinhood')){if(r.robinhood==='gold-card'){score-=25;cautions.push('You already have the Robinhood Gold Card.')}else if(r.robinhood!=='gold'){score-=8;cautions.push('The Robinhood Gold Card currently requires an annual Robinhood Gold subscription and may require waitlist/invitation access.')}}
+    if(issuer==='robinhood'||name.includes('robinhood')){if(r.robinhood==='gold-card'){score-=25;cautions.push('You already have the Robinhood Gold Card.')}else if(r.robinhood!=='gold'){cautions.push('The card itself has a $0 annual fee, but an annual Robinhood Gold subscription is required to apply for and maintain the card; waitlist/invitation access also applies.')}}
     if((issuer.includes('navy federal')||tags['navy federal'])&&r.navy!=='member'){score-=12;cautions.push('Navy Federal membership eligibility is required.');}
     if((issuer.includes('penfed')||tags.penfed)&&r.penfed!=='member'){score-=6;cautions.push('PenFed membership is required before opening this card.');}
     return {score,reasons,cautions};
@@ -539,7 +555,7 @@ function relationshipEffect(o){const r=data.profile.relationships||{},tags=offer
   if(o.issuer==='Citi'&&name.includes('strata elite')){if(r.citi==='citigold'){score+=10;reasons.push('Your Citigold relationship can improve Strata Elite economics through relationship credits under current terms.')}if(r.citi==='private'){score+=15;reasons.push('Your Citigold Private Client relationship can materially improve Strata Elite economics through relationship credits under current terms.')}}
   if(name.includes('charles schwab')){if(!r.schwab||r.schwab==='none'){score-=18;cautions.push('This card requires an eligible Schwab relationship.')}else{score+=r.schwab==='eligible'?4:r.schwab==='250k'?8:r.schwab==='1m'?12:18;reasons.push('Your Schwab relationship can improve access and relationship benefits for this card under current terms.')}}
   if(name.includes('morgan stanley')){if(!r.morganStanley||r.morganStanley==='none'){score-=18;cautions.push('This card requires an eligible Morgan Stanley relationship.')}else if(r.morganStanley==='cashplus'){score+=20;reasons.push('Your eligible Morgan Stanley Platinum CashPlus relationship may provide an annual engagement bonus that can offset the Platinum annual fee.')}else{score+=5;reasons.push('You have the eligible Morgan Stanley relationship required for this card.')}}
-  if(issuer==='robinhood'||name.includes('robinhood')){if(r.robinhood==='gold-card'){score-=25;cautions.push('You already have the Robinhood Gold Card.')}else if(r.robinhood==='gold'){score+=10;reasons.push('Your Robinhood Gold membership satisfies the current membership requirement for the Gold Card.')}else{score-=8;cautions.push('The Robinhood Gold Card currently requires an annual Robinhood Gold subscription and may require waitlist/invitation access.')}}
+  if(issuer==='robinhood'||name.includes('robinhood')){if(r.robinhood==='gold-card'){score-=25;cautions.push('You already have the Robinhood Gold Card.')}else if(r.robinhood==='gold'){score+=6;reasons.push('Your Robinhood Gold membership satisfies the current membership requirement for the Gold Card.')}else{cautions.push('The card itself has a $0 annual fee, but an annual Robinhood Gold subscription is required to apply for and maintain the card; waitlist/invitation access also applies.')}}
   if(issuer==='fidelity'||name.includes('fidelity rewards')){if(r.fidelity&&r.fidelity!=='none'){score+=7;reasons.push('Your Fidelity relationship supports the card’s full 2% cash-back value when rewards are deposited to an eligible Fidelity account.')}else{score-=3;cautions.push('The Fidelity card’s 2% cash-back value applies when rewards are deposited into an eligible Fidelity account.')}}
   if(o.issuer==='Bilt'||name.includes('bilt')){if(r.bilt==='card'){score-=25;cautions.push('You already have a Bilt card, so CardPilot avoids treating another Bilt card as a new portfolio opportunity.')}else if(r.bilt==='member'){score+=3;reasons.push('Your existing Bilt membership makes the Bilt ecosystem somewhat more relevant.')}}
   if((issuer.includes('navy federal')||tags['navy federal'])&&r.navy!=='member'){score-=12;cautions.push('Navy Federal membership eligibility is required.')}if((issuer.includes('penfed')||tags.penfed)&&r.penfed!=='member'){score-=6;cautions.push('PenFed membership is required before opening this card.')}
@@ -787,6 +803,7 @@ function currentOfferLabel(o){
     const main=bonus.toLocaleString()+' '+(o.unit||'');
     return extra>0 ? `${main} + ${fmt(extra)} ${String(o.issuer||'').toLowerCase()==='bilt'?'Bilt Cash':'cash'}` : main;
   }
+  if(o.offerState==='first-year-cashback-match') return 'Unlimited first-year Cashback Match';
   if(o.offerState==='no-standard-public-sub') return 'No sign-up bonus';
   if(o.offerState==='invitation-waitlist') return 'Invitation / waitlist offer';
   if(o.offerState==='personalized') return 'Personalized / up-to offer';
@@ -795,6 +812,7 @@ function currentOfferLabel(o){
 }
 function currentSpendLabel(o){
   if(o.spend!==null&&o.spend!==undefined) return 'Spend '+fmt(o.spend);
+  if(o.offerState==='first-year-cashback-match') return 'No purchase minimum for match';
   if(o.offerState==='no-standard-public-sub') return 'No sign-up bonus';
   return 'Spend requirement: verify';
 }
@@ -853,7 +871,7 @@ function offerVisualBadgesHTML(o){
   if(isNewlyLaunchedCard(o))b.push('<span class="pill blue">🆕 Newly launched / refreshed</span>');
   if(h.isHigh)b.push('<span class="pill green">🔥 Historical-high offer</span>');
   if(currentBonusStrength(o))b.push('<span class="pill">💰 High Current Bonus</span>');
-  const promo=cashPromoInfo(o);if(promo)b.push(`<span class="pill blue">🎉 ${promo.rate.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')}% promo cash back</span>`);else{const cat=categoryCashBackRate(o);if(cat&&cat.effective>=5)b.push(`<span class="pill blue">${cat.categoryType==='rotating'?'🔄':'🔥'} ${cat.effective}% category cash back</span>`);}const ca=catchAllCashRate(o);if(ca&&ca.effective>=3)b.push(`<span class="pill green">💰 ${ca.effective}% cash back everywhere</span>`);const pc=bestPointCategory(o),pa=pointCatchAllInfo(o);if(pc&&pc.rate>=3)b.push(`<span class="pill blue">✈️ ${pc.rate}X ${pc.category}</span>`);if(pa&&pa.rate>=2)b.push(`<span class="pill green">✈️ ${pa.rate}X points/miles everywhere</span>`);
+  const promo=cashPromoInfo(o);if(promo)b.push(`<span class="pill blue">🎉 ${promo.rate.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')}% promo cash back</span>`);else{const cat=categoryCashBackRate(o);if(cat&&cat.effective>=5)b.push(`<span class="pill blue">${cat.categoryType==='rotating'?'🔄':'🔥'} ${cat.effective}% ${cat.kind==='first-year-match'?'first-year effective':'category cash back'}</span>`);}const ca=catchAllCashRate(o);if(ca&&ca.effective>=3)b.push(`<span class="pill green">💰 ${ca.effective}% cash back everywhere</span>`);const pc=bestPointCategory(o),pa=pointCatchAllInfo(o);if(pc&&pc.rate>=3)b.push(`<span class="pill blue">✈️ ${pc.rate}X ${pc.category}</span>`);if(pa&&pa.rate>=2)b.push(`<span class="pill green">✈️ ${pa.rate}X points/miles everywhere</span>`);
   if(Number(o.af||0)===0)b.push('<span class="pill">🏷️ $0 annual fee</span>');
   return b.length?`<div class="row" style="gap:6px;flex-wrap:wrap;margin-top:8px">${b.join('')}</div>`:'';
 }
@@ -936,6 +954,11 @@ function offerFit(o){
   if(tags.southwest&&swPlan){const y=Number(swPlan.targetYear||0);if(y>=new Date().getFullYear()+1){forced='save';score=5;reasons.push(`Preserve this Southwest opportunity for your saved ${y} Companion Pass strategy.`)}}
 
   const strength=o.hist&&Number(o.hist)>0?Math.round(Number(o.bonus||0)/Number(o.hist)*100):null;
+  const ongoingRewardIntent=(
+    selected.includes('cash') && cashRewardEligible(o) && !!(catchAllCashRate(o)||categoryCashBackRate(o))
+  ) || (
+    selected.includes('points') && !!(pointCatchAllInfo(o)||bestPointCategory(o))
+  );
 
   // User-selected interests are the primary ranking signal. A card that matches none of
   // the selected interests should not outrank a card that actually matches the user's goal.
@@ -1054,7 +1077,10 @@ function offerFit(o){
 
   const bonusElig=bonusEligibilityInfo(o);
   if(bonusElig.likely){score-=35;cautions.unshift('Welcome-bonus eligibility may be restricted based on your recorded card/bonus history. Verify the issuer popup or current application terms before proceeding.');}
-  if(!Number(o.bonus||0)){score-=5;cautions.push(o.offerNote||'Current welcome offer needs verification before applying.')}
+  if(!Number(o.bonus||0)){
+    if(ongoingRewardIntent){reasons.push('No standard public welcome bonus; CardPilot is ranking this card for its ongoing rewards instead.');}
+    else{score-=5;cautions.push(o.offerNote||'Current welcome offer needs verification before applying.')}
+  }
   if(Number(o.af||0)===0){score+=1;reasons.push('No annual fee.')}
 
   score=Math.max(0,Math.min(100,Math.round(score)));
@@ -1067,6 +1093,7 @@ function offerFit(o){
     // Missing or unverified offer data is a data-quality state, not a user mismatch.
     if(!status){
       if(isNicheSpecialtyOffer(o)) status='specialty';
+      else if(ongoingRewardIntent) status='consider';
       else if(hasKnownSub) status='consider';
       else if(Number(o.bonus||0)>0 && o.spend!=null) status='consider';
       else if(quality.needsReview && !cautions.some(hardMismatchCaution)) status='verify';
@@ -1379,7 +1406,7 @@ function refinedRecommendationCard(x,rank){
   if(rankMode==='efficiency'){const rr=subReturnRange(o);metric=rr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Bonus efficiency:</b> about ${rr.mid.toFixed(1)}% estimated bonus value per dollar of required spend.</div>`:'';}
   if(rankMode==='rewards'){const cr=catchAllCashRate(o);metric=cr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Ongoing rewards:</b> ${cr.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')}% effective catch-all cash back.</div>`:`<div class="small" style="margin-top:5px;color:#365d96"><b>Why it ranks here:</b> ongoing rewards match your selected benefits.</div>`;}
   if(rankMode==='cashEverywhere'){const cr=catchAllCashRate(o);metric=cr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Everywhere cash back:</b> ${cr.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')}% on eligible general purchases.</div>`:'';}
-  if(rankMode==='cashCategory'){const cr=categoryCashBackRate(o);metric=cr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Category cash back:</b> ${cr.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')}% ${cr.category?`on ${cr.category}`:'in an eligible category'}.</div>`:'';}
+  if(rankMode==='cashCategory'){const cr=categoryCashBackRate(o);metric=cr?`<div class="small" style="margin-top:5px;color:#365d96"><b>${cr.kind==='first-year-match'?'First-year effective category return':'Category cash back'}:</b> ${cr.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')}% ${cr.category?`on ${cr.category}`:'in an eligible category'}${cr.kind==='first-year-match'?' after the first-year match is paid':''}.</div>`:'';}
   if(rankMode==='pointsEverywhere'){const pr=pointCatchAllInfo(o);metric=pr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Everywhere earning:</b> ${pr.rate}X points/miles on eligible general purchases${pr.estimatedLow!=null?` • estimated reward value about ${pr.estimatedLow.toFixed(1)}%–${pr.estimatedHigh.toFixed(1)}%`:''}.</div>`:'';}
   if(rankMode==='pointsCategory'){const pr=bestPointCategory(o);metric=pr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Category earning:</b> ${pr.rate}X on ${pr.category}${pr.estimatedLow!=null?` • estimated reward value about ${pr.estimatedLow.toFixed(1)}%–${pr.estimatedHigh.toFixed(1)}%`:''}.</div>`:'';}
   if(rankMode==='hist100')metric=historicalHighInfo(o).isHigh?`<div class="small" style="margin-top:5px;color:#365d96"><b>Historical high:</b> current offer matches this card's known historical-high bonus.</div>`:`<div class="small" style="margin-top:5px;color:#667085"><b>Historical high:</b> current offer does not match the known historical high.</div>`;
