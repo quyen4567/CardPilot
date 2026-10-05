@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0d2743" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.3.24</title>
+  <title>CardPilot v11.3.25</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -51,7 +51,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.24</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting a 5/24 slot.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.25</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -82,7 +82,7 @@ let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
 // Card catalog is loaded from cards.json so offer/link updates do not require rebuilding the UI.
 let BUSINESS_CATALOG=[];
 let PERSONAL_CATALOG=[];
-const CATALOG_VERSION='2026-10-04.5';
+const CATALOG_VERSION='2026-10-04.6';
 
 function migrateV8(){
   data.profile=data.profile||{};
@@ -132,6 +132,7 @@ data.profile.subInterests.points=Array.isArray(data.profile.subInterests.points)
 // v11.3.9: strict airline classification requires an airline/co-brand signal; generic transferable "miles" no longer count as airline cards.
 // v11.3.6: historical-high refinement requires a verified current offer + known comparable history; unknown history is shown separately.
 // v11.3.12: Newly launched is a strict search filter; combine it with another selected category as an AND condition.
+// v11.3.25: simplify Fine-tune: card type first, inherit reward focus from the quick search, and show reward-specific ranking choices instead of asking reward type again.
 // v11.3.24: structured points/miles earning engine: catch-all + category multipliers, caps, estimated-value normalization, and dedicated points ranking controls.
 // v11.3.23: structured high-cash-back comparison data for Smartly, Robinhood, BCP, Cash+, Freedom Flex, Discover, Citi Custom Cash (legacy), and AAA Daily Advantage; added Smartly balance tiers and generic category/catch-all display.
 // v11.3.22: split cash-back rate intent into highest cash back everywhere vs highest cash back in a category; category-rate searches no longer treat flat-rate cards as category winners.
@@ -1250,31 +1251,54 @@ function refineTypeMatches(o,type){
   if(type==='personal')return o.type==='Personal';
   return true;
 }
+function refinementRewardFocus(){
+  const ints=data.profile.interests||[];
+  const hasCash=ints.includes('cash');
+  const hasPoints=ints.includes('points')||(!hasCash&&(ints.includes('airline')||ints.includes('hotel')));
+  if(hasCash&&hasPoints)return 'either';
+  if(hasCash)return 'cash';
+  if(hasPoints)return 'points';
+  return 'either';
+}
+function refinementRewardLabel(){
+  const f=refinementRewardFocus();
+  return f==='cash'?'Cash back':f==='points'?'Points & miles':'All selected rewards';
+}
+function refinementTypeFromSearch(){
+  const f=refinementRewardFocus();
+  return f==='cash'?'cash':f==='points'?'points':'all';
+}
+function pointCatchAllMid(o){
+  const x=pointCatchAllInfo(o);if(!x)return 0;
+  return ((x.estimatedLow??x.rate)+(x.estimatedHigh??x.rate))/2;
+}
+function pointCategoryMid(o){return bestPointCategory(o)?.estimatedMid||0}
 function refinementCandidates(){
-  const type=data.profile.refineType||'all';
+  const type=refinementTypeFromSearch();
   const cardType=data.profile.refineCardType||'all';
   const rank=data.profile.refineRank||'overall';
-  // Fine-tuning reranks/narrows the recommendation pool from the user's original search.
-  // It must not introduce unrelated cards unless the user explicitly broadens the search.
+  // Fine-tuning inherits the user's reward focus from the quick search. It reranks/narrows
+  // that original recommendation pool and does not ask the user to choose reward type again.
   let arr=recommendationPool().filter(x=>!x.fit.disabled&&x.fit.status!=='save'&&refineTypeMatches(x.offer,type)&&(cardType==='all'||x.offer.type===cardType));
   if(rank==='bonus')arr.sort((a,b)=>{const av=offerEstimatedSubValue(a.offer),bv=offerEstimatedSubValue(b.offer);if(bv!==av)return bv-av;const ar=subReturnRange(a.offer),br=subReturnRange(b.offer);const aroi=ar?ar.mid:-1,broi=br?br.mid:-1;if(broi!==aroi)return broi-aroi;return Number(a.offer.spend||Infinity)-Number(b.offer.spend||Infinity)||b.fit.score-a.fit.score;});
   else if(rank==='leastspend')arr.sort((a,b)=>{const as=Number(a.offer.spend||Infinity),bs=Number(b.offer.spend||Infinity);if(as!==bs)return as-bs;return offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score;});
   else if(rank==='efficiency')arr.sort((a,b)=>{const ar=subReturnRange(a.offer)?.mid||0,br=subReturnRange(b.offer)?.mid||0;if(br!==ar)return br-ar;return offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score;});
   else if(rank==='hist100'){
-    arr=arr.filter(x=>{
-      const o=x.offer,h=historicalHighInfo(o);
-      return !!o.verified && Number(o.bonus||0)>0 && h.known && h.comparable;
-    });
+    arr=arr.filter(x=>{const o=x.offer,h=historicalHighInfo(o);return !!o.verified&&Number(o.bonus||0)>0&&h.known&&h.comparable;});
     arr.sort((a,b)=>{const ah=historicalHighInfo(a.offer),bh=historicalHighInfo(b.offer);if(bh.ratio!==ah.ratio)return bh.ratio-ah.ratio;return offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score;});
   }
-  else if(rank==='rewards')arr.sort((a,b)=>{const ac=catchAllCashRate(a.offer)?.effective||0,bc=catchAllCashRate(b.offer)?.effective||0;if(bc!==ac)return bc-ac;return b.fit.score-a.fit.score;});
+  else if(rank==='cashEverywhere')arr.sort((a,b)=>(catchAllCashRate(b.offer)?.effective||0)-(catchAllCashRate(a.offer)?.effective||0)||b.fit.score-a.fit.score);
+  else if(rank==='cashCategory')arr.sort((a,b)=>(categoryCashBackRate(b.offer)?.effective||0)-(categoryCashBackRate(a.offer)?.effective||0)||b.fit.score-a.fit.score);
+  else if(rank==='pointsEverywhere')arr.sort((a,b)=>pointCatchAllMid(b.offer)-pointCatchAllMid(a.offer)||b.fit.score-a.fit.score);
+  else if(rank==='pointsCategory')arr.sort((a,b)=>pointCategoryMid(b.offer)-pointCategoryMid(a.offer)||b.fit.score-a.fit.score);
+  else if(rank==='rewards')arr.sort((a,b)=>{const ac=catchAllCashRate(a.offer)?.effective||pointCatchAllMid(a.offer)||0,bc=catchAllCashRate(b.offer)?.effective||pointCatchAllMid(b.offer)||0;if(bc!==ac)return bc-ac;return b.fit.score-a.fit.score;});
   else if(rank==='cost')arr.sort((a,b)=>Number(a.offer.af||0)-Number(b.offer.af||0)||b.fit.score-a.fit.score);
   else arr.sort((a,b)=>b.fit.score-a.fit.score||offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer));
   return arr;
 }
 function historicalHighUnknownCandidates(){
   if((data.profile.refineRank||'overall')!=='hist100')return [];
-  const type=data.profile.refineType||'all';
+  const type=refinementTypeFromSearch();
   const cardType=data.profile.refineCardType||'all';
   return recommendationPool().filter(x=>{
     const o=x.offer,h=historicalHighInfo(o);
@@ -1286,33 +1310,40 @@ function historicalUnknownCard(x){
   const o=x.offer;
   return `<div class="item"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div><span class="pill amber">History needs verification</span></div><div style="margin-top:9px"><b>${currentOfferLabel(o)}</b></div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}<div class="small" style="margin-top:7px;color:#667085"><b>Historical high:</b> current public offer is verified, but CardPilot does not yet have a verified comparable historical public high for this card.</div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}</div>`;
 }
+function refinementRankLabel(rank){
+  const m={overall:'Best overall value',bonus:'Most valuable current bonus',leastspend:'Lowest spend to earn a sign-up bonus',efficiency:'Best sign-up bonus return on required spend',hist100:'Best historical-high offer',cost:'Lowest annual fee',cashEverywhere:'Highest cash back everywhere',cashCategory:'Highest cash back in a category',pointsEverywhere:'Best points/miles earning everywhere',pointsCategory:'Best points/miles earning in a category',rewards:'Best general rewards rate'};
+  return m[rank]||m.overall;
+}
 function refinementSummary(){
-  const rank=data.profile.refineRank||'overall',type=data.profile.refineType||'all',cardType=data.profile.refineCardType||'all';
-  const rankMap={overall:'Best overall match',bonus:'Best sign-up bonus value',leastspend:'Lowest spend to earn a sign-up bonus',rewards:'Best general rewards rate',hist100:'Best historical-high offer'};
-  const typeMap={all:'All rewards',cash:'Cash back',points:'Points & miles',hotel:'Hotel',airline:'Airline',travel:'Travel'};
+  const rank=data.profile.refineRank||'overall',cardType=data.profile.refineCardType||'all';
   const cardMap={all:'Personal + business',Business:'Business only',Personal:'Personal only'};
-  return `${rankMap[rank]||rankMap.overall} • ${cardMap[cardType]||cardMap.all} • ${typeMap[type]||typeMap.all}`;
+  return `${cardMap[cardType]||cardMap.all} • ${refinementRewardLabel()} • ${refinementRankLabel(rank)}`;
 }
 function applyRefinement(){
   const rank=document.getElementById('refineRankSelect')?.value||'overall';
   const cardType=document.getElementById('refineCardTypeSelect')?.value||'all';
-  const type=document.getElementById('refineTypeSelect')?.value||'all';
-  data.profile.refineRank=rank; data.profile.refineCardType=cardType; data.profile.refineType=type; data.profile.showMoreRefinedRecommendations=false; save(); render(); showView('applyView');
+  data.profile.refineRank=rank; data.profile.refineCardType=cardType; data.profile.refineType=refinementTypeFromSearch(); data.profile.showMoreRefinedRecommendations=false; save(); render(); showView('applyView');
   setTimeout(()=>document.getElementById('refinedResults')?.scrollIntoView({behavior:'smooth',block:'start'}),60);
 }
-function clearRefinement(){data.profile.refineRank='overall';data.profile.refineCardType='all';data.profile.refineType='all';data.profile.showMoreRefinedRecommendations=false;save();render();showView('applyView');setTimeout(()=>document.getElementById('refinementPanel')?.scrollIntoView({behavior:'smooth',block:'start'}),40)}
+function clearRefinement(){data.profile.refineRank='overall';data.profile.refineCardType='all';data.profile.refineType=refinementTypeFromSearch();data.profile.showMoreRefinedRecommendations=false;save();render();showView('applyView');setTimeout(()=>document.getElementById('refinementPanel')?.scrollIntoView({behavior:'smooth',block:'start'}),40)}
 function toggleMoreRefinedRecommendations(){
   data.profile.showMoreRefinedRecommendations=!data.profile.showMoreRefinedRecommendations;
   localStorage.setItem('cardpilotData',JSON.stringify(data));
   render();showView('applyView',true);
 }
 function refinementPanelHTML(){
-  const rank=data.profile.refineRank||'overall',type=data.profile.refineType||'all',cardType=data.profile.refineCardType||'all';
-  const rankChoices=[['overall','Best overall match'],['bonus','Best sign-up bonus value'],['leastspend','Lowest spend to earn a sign-up bonus'],['rewards','Best general rewards rate'],['hist100','Best historical-high offer']];
+  const rank=data.profile.refineRank||'overall',cardType=data.profile.refineCardType||'all',focus=refinementRewardFocus();
+  const common=[['bonus','Most valuable current bonus'],['leastspend','Lowest spend to earn a sign-up bonus'],['hist100','Best historical-high offer'],['cost','Lowest annual fee']];
+  const rankChoices=focus==='cash'
+    ? [['overall','Best overall cash-back value'],['cashEverywhere','Highest cash back everywhere'],['cashCategory','Highest cash back in a category'],...common]
+    : focus==='points'
+      ? [['overall','Best overall points & miles value'],['pointsEverywhere','Best points/miles earning everywhere'],['pointsCategory','Best points/miles earning in a category'],...common]
+      : [['overall','Best overall reward value'],['bonus','Most valuable current bonus'],['leastspend','Lowest spend to earn a sign-up bonus'],['efficiency','Best sign-up bonus return on required spend'],['hist100','Best historical-high offer'],['cost','Lowest annual fee']];
+  const validRanks=rankChoices.map(x=>x[0]);
+  const selectedRank=validRanks.includes(rank)?rank:'overall';
   const cardChoices=[['all','Personal + business'],['Business','Business only'],['Personal','Personal only']];
-  const typeChoices=[['all','All reward types'],['cash','Cash back'],['points','Points & miles'],['hotel','Hotel'],['airline','Airline'],['travel','Travel']];
-  const changed=rank!=='overall'||type!=='all'||cardType!=='all';
-  return `<details id="refinementPanel" class="card" style="margin:12px 0" ${changed?'open':''}><summary><b>Fine-tune recommendations</b><span class="small" style="margin-left:8px">${changed?refinementSummary():'Optional'}</span></summary><div class="small" style="margin:8px 0 14px">Narrow or rerank your recommendations without restarting the search.</div><div class="subchoices"><h4 style="margin:0 0 8px">1. Ranking priority</h4><select id="refineRankSelect" class="input" style="width:100%">${rankChoices.map(x=>`<option value="${x[0]}" ${rank===x[0]?'selected':''}>${x[1]}</option>`).join('')}</select></div><div class="subchoices" style="margin-top:12px"><h4 style="margin:0 0 8px">2. Card type</h4><select id="refineCardTypeSelect" class="input" style="width:100%">${cardChoices.map(x=>`<option value="${x[0]}" ${cardType===x[0]?'selected':''}>${x[1]}</option>`).join('')}</select></div><div class="subchoices" style="margin-top:12px"><h4 style="margin:0 0 8px">3. Reward type</h4><select id="refineTypeSelect" class="input" style="width:100%">${typeChoices.map(x=>`<option value="${x[0]}" ${type===x[0]?'selected':''}>${x[1]}</option>`).join('')}</select></div><button class="btn" style="width:100%;margin-top:14px" onclick="applyRefinement()">Update recommendations ↓</button>${changed?`<button class="btn ghost" style="width:100%;margin-top:8px" onclick="clearRefinement()">Reset fine-tuning</button>`:''}</details>`;
+  const changed=selectedRank!=='overall'||cardType!=='all';
+  return `<details id="refinementPanel" class="card" style="margin:12px 0" ${changed?'open':''}><summary><b>Fine-tune recommendations</b><span class="small" style="margin-left:8px">${changed?refinementSummary():'Optional'}</span></summary><div class="small" style="margin:8px 0 12px">Your reward focus is already set to <b>${refinementRewardLabel()}</b> from your earlier answers. Fine-tune only what you want to change.</div><div class="subchoices"><h4 style="margin:0 0 8px">1. Card type</h4><select id="refineCardTypeSelect" class="input" style="width:100%">${cardChoices.map(x=>`<option value="${x[0]}" ${cardType===x[0]?'selected':''}>${x[1]}</option>`).join('')}</select></div><div class="subchoices" style="margin-top:10px"><h4 style="margin:0 0 8px">2. What matters most?</h4><select id="refineRankSelect" class="input" style="width:100%">${rankChoices.map(x=>`<option value="${x[0]}" ${selectedRank===x[0]?'selected':''}>${x[1]}</option>`).join('')}</select></div><button class="btn" style="width:100%;margin-top:12px" onclick="applyRefinement()">Update recommendations ↓</button>${changed?`<button class="btn ghost" style="width:100%;margin-top:8px" onclick="clearRefinement()">Reset fine-tuning</button>`:''}</details>`;
 }
 
 function officialCardUrl(o){
@@ -1347,6 +1378,10 @@ function refinedRecommendationCard(x,rank){
   if(rankMode==='leastspend'){metric=o.spend?`<div class="small" style="margin-top:5px;color:#365d96"><b>Required spend:</b> ${fmt(Number(o.spend||0))} to earn the current bonus.</div>`:`<div class="small" style="margin-top:5px;color:#365d96"><b>Required spend:</b> not verified, so this card is ranked behind cards with known requirements.</div>`;}
   if(rankMode==='efficiency'){const rr=subReturnRange(o);metric=rr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Bonus efficiency:</b> about ${rr.mid.toFixed(1)}% estimated bonus value per dollar of required spend.</div>`:'';}
   if(rankMode==='rewards'){const cr=catchAllCashRate(o);metric=cr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Ongoing rewards:</b> ${cr.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')}% effective catch-all cash back.</div>`:`<div class="small" style="margin-top:5px;color:#365d96"><b>Why it ranks here:</b> ongoing rewards match your selected benefits.</div>`;}
+  if(rankMode==='cashEverywhere'){const cr=catchAllCashRate(o);metric=cr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Everywhere cash back:</b> ${cr.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')}% on eligible general purchases.</div>`:'';}
+  if(rankMode==='cashCategory'){const cr=categoryCashBackRate(o);metric=cr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Category cash back:</b> ${cr.effective.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')}% ${cr.category?`on ${cr.category}`:'in an eligible category'}.</div>`:'';}
+  if(rankMode==='pointsEverywhere'){const pr=pointCatchAllInfo(o);metric=pr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Everywhere earning:</b> ${pr.rate}X points/miles on eligible general purchases${pr.estimatedLow!=null?` • estimated reward value about ${pr.estimatedLow.toFixed(1)}%–${pr.estimatedHigh.toFixed(1)}%`:''}.</div>`:'';}
+  if(rankMode==='pointsCategory'){const pr=bestPointCategory(o);metric=pr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Category earning:</b> ${pr.rate}X on ${pr.category}${pr.estimatedLow!=null?` • estimated reward value about ${pr.estimatedLow.toFixed(1)}%–${pr.estimatedHigh.toFixed(1)}%`:''}.</div>`:'';}
   if(rankMode==='hist100')metric=historicalHighInfo(o).isHigh?`<div class="small" style="margin-top:5px;color:#365d96"><b>Historical high:</b> current offer matches this card's known historical-high bonus.</div>`:`<div class="small" style="margin-top:5px;color:#667085"><b>Historical high:</b> current offer does not match the known historical high.</div>`;
   if(rankMode==='cost')metric=`<div class="small" style="margin-top:5px;color:#365d96"><b>Annual fee:</b> ${fmt(Number(o.af||0))}.</div>`;
   return `<div class="item" style=""><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}${cashRewardText(o)}${cashPromoText(o)}${categoryCashBackText(o)}${pointEarningText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${metric}<button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
@@ -1457,7 +1492,7 @@ function apply(){
   const verification=ranked.filter(x=>x.fit.status==='verify');
   const specialty=ranked.filter(x=>x.fit.status==='specialty');
   const nonmatches=ranked.filter(x=>x.fit.status==='avoid');
-  const refineActive=(data.profile.refineRank||'overall')!=='overall'||(data.profile.refineType||'all')!=='all'||(data.profile.refineCardType||'all')!=='all';
+  const refineActive=(data.profile.refineRank||'overall')!=='overall'||(data.profile.refineCardType||'all')!=='all';
   const refinedAll=refineActive?refinementCandidates().slice(0,10):[];
   const refined=refinedAll.slice(0,5);
   const extraRefined=refinedAll.slice(5,10);
