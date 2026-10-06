@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-10-06.2",
+  "catalogVersion": "2026-10-06.3",
   "generatedAt": "2026-10-06",
   "cards": [
     {
@@ -3351,7 +3351,7 @@
         "sourceUrl": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
         "verifiedDate": "2026-10-06",
         "ruleType": "issuer-rule-not-published",
-        "summary": "CardPilot has not verified a repeat-card welcome-bonus restriction for this offer from the current Bank of America issuer page it tracks. Prior ownership is therefore not treated as automatic ineligibility; verify the issuer terms presented with your application."
+        "summary": "CardPilot has not verified a current Bank of America issuer rule that makes prior ownership of Customized Cash Rewards an automatic repeat-bonus disqualifier. Prior ownership therefore remains neutral and the card stays recommendable; verify the terms presented with the application."
       }
     },
     {

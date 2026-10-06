@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.3.30</title>
+  <title>CardPilot v11.3.31</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -127,7 +127,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting an application.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.30</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting an application.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.31</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -158,7 +158,8 @@ let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
 // Card catalog is loaded from cards.json so offer/link updates do not require rebuilding the UI.
 let BUSINESS_CATALOG=[];
 let PERSONAL_CATALOG=[];
-const CATALOG_VERSION='2026-10-06.2';
+const CATALOG_VERSION='2026-10-06.3';
+// v11.3.31: prior ownership is neutral unless a verified official issuer rule restricts eligibility; previously held cards no longer count as current benefit overlap.
 
 function migrateV8(){
   data.profile=data.profile||{};
@@ -421,16 +422,39 @@ function currentCardHistory(test){return findOwnedLike((x,c)=>cardHoldingStatus(
 function anyCardHistory(test){return findOwnedLike(test)}
 function welcomeEligibilityRule(o){return o?.welcomeEligibility||null}
 function bonusEligibilityInfo(o){
-  const rule=welcomeEligibilityRule(o), warnings=[]; let likely=false, needsReview=false;
+  const rule=welcomeEligibilityRule(o), warnings=[]; let likely=false, needsReview=false, informational=false;
   const n=normalizedCardName(o.name);
   const exact=anyCardHistory(x=>x===n);
   const currentExact=currentCardHistory(x=>x===n);
-  if(!rule){if(exact.length&&Number(o.bonus||0)>0){return {likely:false,needsReview:true,warnings:['You recorded prior history with this card, but CardPilot has not yet verified an official issuer repeat-bonus rule for this offer. Verify the issuer terms presented with your application.'],rule:null};}return {likely:false,needsReview:false,warnings:[],rule:null};}
-  if(rule.status==='needs-review'){
-    if(exact.length){needsReview=true;warnings.push(rule.summary||'Official issuer repeat-bonus language is not sufficiently clear in CardPilot’s tracked source. Verify the current issuer terms before applying.');}
-    return {likely:false,needsReview,warnings,rule};
+
+  // Prior ownership by itself is NEVER a disqualifier. CardPilot only restricts a
+  // recommendation when current official issuer wording has been verified and the
+  // recorded history actually matches that issuer rule.
+  if(!rule){
+    if(exact.length&&Number(o.bonus||0)>0){
+      informational=true;
+      warnings.push('Prior ownership is recorded, but CardPilot has no verified current issuer rule restricting a repeat welcome bonus for this card. The card remains eligible for recommendation; verify the terms shown with your application.');
+    }
+    return {likely:false,needsReview:false,informational,warnings,rule:null};
   }
-  if(rule.status!=='verified')return {likely:false,needsReview:false,warnings:[],rule};
+
+  // "Issuer rule not published" is neutral, not negative. Keep the card in normal
+  // ranking. Other ambiguous official wording can be flagged for review, but still
+  // does not become an automatic restriction.
+  if(rule.status==='needs-review'){
+    if(exact.length){
+      if(rule.ruleType==='issuer-rule-not-published'){
+        informational=true;
+        warnings.push(rule.summary||'No verified current issuer repeat-bonus restriction is stored for this card. Prior ownership does not remove it from recommendations.');
+      }else{
+        needsReview=true;
+        warnings.push(rule.summary||'Official issuer repeat-bonus wording is ambiguous. CardPilot keeps the card eligible but recommends checking the current application terms.');
+      }
+    }
+    return {likely:false,needsReview,informational,warnings,rule};
+  }
+  if(rule.status!=='verified')return {likely:false,needsReview:false,informational:false,warnings:[],rule};
+
   if(rule.ruleType==='same-card-ever'){
     if(exact.length){likely=true;warnings.push(rule.summary);}
   }else if(rule.ruleType==='no-fee-business-family-ever'){
@@ -446,10 +470,15 @@ function bonusEligibilityInfo(o){
     if(related.length){likely=true;warnings.push(rule.summary);}
   }
   const exactBonus=exact.find(c=>c.bonusReceived==='yes');
-  if(exactBonus){const d=exactBonus.bonusReceivedDate;warnings.unshift(`You recorded receiving a welcome bonus for this card${d?' on '+d:''}.`);}
-  return {likely,needsReview,warnings,rule};
+  if(exactBonus&&likely){const d=exactBonus.bonusReceivedDate;warnings.unshift(`You recorded receiving a welcome bonus for this card${d?' on '+d:''}.`);}
+  return {likely,needsReview,informational,warnings,rule};
 }
-function bonusEligibilityText(o){const e=bonusEligibilityInfo(o);if(!e.warnings.length)return '';const tone=e.likely?'#9b2c2c':'#7a5a00';const label=e.needsReview?'Welcome bonus eligibility — needs review':'Welcome bonus eligibility';return `<div class="small" style="margin-top:7px;color:${tone}"><b>${label}:</b> ${e.warnings[0]}${e.rule?.verifiedDate?` <span style="color:#667085">• issuer wording checked ${e.rule.verifiedDate}</span>`:''}</div>`}
+function bonusEligibilityText(o){
+  const e=bonusEligibilityInfo(o);if(!e.warnings.length)return '';
+  const tone=e.likely?'#9b2c2c':e.needsReview?'#7a5a00':'#365d96';
+  const label=e.likely?'Welcome bonus eligibility':e.needsReview?'Welcome bonus eligibility — needs review':'Prior-card history';
+  return `<div class="small" style="margin-top:7px;color:${tone}"><b>${label}:</b> ${e.warnings[0]}${e.rule?.verifiedDate?` <span style="color:#667085">• issuer wording checked ${e.rule.verifiedDate}</span>`:''}</div>`
+}
 function setOwnedCardMode(mode){
   data.profile.ownedCardMode=mode;
   data.profile.excludeOwnedCards=mode!=='include';
@@ -1018,7 +1047,7 @@ function subInterestMatches(tags,o){const s=data.profile.subInterests||{airline:
 function southwestTimingAdvice(){const st=savedStrategy('southwest_cp');if(!st)return null;const target=Number(st.targetYear||new Date().getFullYear()+1);const current=new Date().getFullYear();const active=activeCompanionBenefits();const overlap=active.length?active[active.length-1]:null;let applyWindow=`late ${target-1} or early ${target}`;let note=`Aim for qualifying points to post early in ${target} so the pass can cover most of ${target} plus the following calendar year. Verify the current offer's exact spending and posting terms before applying.`;if(overlap&&daysTo(overlap.expires)>180)note=`You already have ${overlap.name} through ${overlap.expires}. Consider using that benefit first, then time a Southwest qualification cycle to reduce overlap. `+note;return {target,applyWindow,note};}
 function benefitSignature(o){const t=offerTags(o),n=String(o.name||'').toLowerCase();return {priorityPass:t.lounge||n.includes('venture x')||n.includes('sapphire reserve')||n.includes('platinum card'),lounge:t.lounge||t.premium,hotelCredit:t.propertyCredit||n.includes('sapphire reserve')||n.includes('venture x')||n.includes('platinum card'),hotelStatus:t.hotelStatus&&t.hotel,freeNight:t.freeNight,airlineCredit:t.airline&&t.credits,freeBags:t.bags,companion:t.companion,eliteNights:t.eliteNights,cruiseCredit:t.onboard};}
 function ownedOfferForCard(c){return (data.offers||[]).find(o=>String(o.name).toLowerCase()===String(c.name).toLowerCase())||{name:c.name||'',issuer:c.issuer||'',af:c.af||0,tags:c.tags||[],offerNote:''};}
-function ownedBenefitInventory(){const keys={};for(const c of data.cards||[]){const sig=benefitSignature(ownedOfferForCard(c));for(const [k,v] of Object.entries(sig))if(v)keys[k]=(keys[k]||0)+1;}return keys;}
+function ownedBenefitInventory(){const keys={};for(const c of data.cards||[]){if(cardHoldingStatus(c)==='previous')continue;const sig=benefitSignature(ownedOfferForCard(c));for(const [k,v] of Object.entries(sig))if(v)keys[k]=(keys[k]||0)+1;}return keys;}
 function portfolioBenefitWanted(k){const ints=data.profile.interests||[];const s=data.profile.subInterests||{airline:[],hotel:[],cruise:[]};if(k==='priorityPass'||k==='lounge')return ints.includes('premium')||(s.airline||[]).includes('lounge');if(k==='hotelCredit')return (s.hotel||[]).includes('property-credit');if(k==='hotelStatus')return (s.hotel||[]).includes('status');if(k==='freeNight')return (s.hotel||[]).includes('free-night');if(k==='eliteNights')return (s.hotel||[]).includes('elite-nights');if(k==='airlineCredit')return (s.airline||[]).includes('credits');if(k==='freeBags')return (s.airline||[]).includes('bags');if(k==='companion')return (s.airline||[]).includes('companion')||(s.cruise||[]).includes('companion');if(k==='cruiseCredit')return (s.cruise||[]).includes('onboard');return false;}
 function portfolioEffect(o){const inv=ownedBenefitInventory(),sig=benefitSignature(o),dupes=[];const labels={priorityPass:'Priority Pass / lounge access',lounge:'premium lounge access',hotelCredit:'hotel/travel credits',hotelStatus:'hotel status',freeNight:'free-night certificates',airlineCredit:'airline credits',freeBags:'free checked bags',companion:'companion benefit',eliteNights:'elite-night credits',cruiseCredit:'cruise/onboard credits'};for(const [k,v] of Object.entries(sig))if(v&&inv[k])dupes.push(labels[k]||k);const pref=data.profile.overlapPref||'some';let score=0,reasons=[],cautions=[];if(dupes.length){if(pref==='avoid')score-=Math.min(24,dupes.length*6);else if(pref==='some')score-=Math.min(10,dupes.length*2);if(pref!=='fine')cautions.push(`Portfolio overlap: ${dupes.slice(0,3).join(', ')}${dupes.length>3?' and more':''}. CardPilot reduces the value of benefits you already have.`);else reasons.push(`You allow benefit overlap, so duplicate ${dupes.slice(0,2).join(' and ')} are not penalized.`);}const adds=[];let wantedAdds=0;for(const [k,v] of Object.entries(sig))if(v&&!inv[k]){adds.push(labels[k]||k);if(portfolioBenefitWanted(k))wantedAdds++;}if(wantedAdds){score+=Math.min(9,wantedAdds*3);reasons.push(`Adds benefits you specifically selected and do not already have: ${adds.filter(label=>Object.entries(labels).some(([k,v])=>v===label&&portfolioBenefitWanted(k))).slice(0,3).join(', ')}.`);}return {score,reasons,cautions,dupes,adds};}
 function subSpendMax(){const v=data.profile.subSpendPref||'any';const limits={1000:1000,3000:3000,5000:5000,10000:10000,'10000plus':Infinity,15000:15000,20000:20000,30000:30000,50000:50000};return Object.prototype.hasOwnProperty.call(limits,v)?limits[v]:Infinity}
@@ -1191,7 +1220,8 @@ function offerFit(o){
   }
 
   const bonusElig=bonusEligibilityInfo(o);
-  if(bonusElig.likely){score-=35;cautions.unshift('Welcome-bonus eligibility may be restricted based on your recorded card/bonus history. Verify the issuer popup or current application terms before proceeding.');}
+  if(bonusElig.likely){score-=35;cautions.unshift('Welcome-bonus eligibility may be restricted based on your recorded card/bonus history and verified issuer terms. Verify the current application terms before proceeding.');}
+  else if(bonusElig.informational){reasons.push('Prior ownership is recorded, but no verified issuer repeat-bonus restriction currently removes this card from consideration.');}
   if(!Number(o.bonus||0)){
     if(ongoingRewardIntent){reasons.push('No standard public welcome bonus; CardPilot is ranking this card for its ongoing rewards instead.');}
     else{score-=5;cautions.push(o.offerNote||'Current welcome offer needs verification before applying.')}
