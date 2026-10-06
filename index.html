@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.3.31</title>
+  <title>CardPilot v11.3.32</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -127,7 +127,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting an application.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.31</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting an application.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.32</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -159,7 +159,7 @@ let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
 let BUSINESS_CATALOG=[];
 let PERSONAL_CATALOG=[];
 const CATALOG_VERSION='2026-10-06.3';
-// v11.3.31: prior ownership is neutral unless a verified official issuer rule restricts eligibility; previously held cards no longer count as current benefit overlap.
+// v11.3.32: prior ownership is neutral unless a verified official issuer rule restricts eligibility; previously held cards no longer count as current benefit overlap.
 
 function migrateV8(){
   data.profile=data.profile||{};
@@ -257,7 +257,6 @@ data.profile.overlapPref=data.profile.overlapPref||'some';
 data.profile.preferredAirlines=Array.isArray(data.profile.preferredAirlines)?data.profile.preferredAirlines:[];
 data.profile.preferredHotels=Array.isArray(data.profile.preferredHotels)?data.profile.preferredHotels:[];
 if(typeof data.profile.excludeOwnedCards!=='boolean')data.profile.excludeOwnedCards=true;
-  data.profile.ownedCardMode='exact';
 if(!data.profile.ownedCardMode)data.profile.ownedCardMode=data.profile.excludeOwnedCards===false?'include':'exact';
 if(!data.profile.subSpendPref)data.profile.subSpendPref='10000plus';
 if(data.profile.subSpendPref==='any')data.profile.subSpendPref='10000plus';
@@ -1643,6 +1642,8 @@ function cardHistoryActionsHTML(o){return `<div class="row" style="gap:8px;margi
 function openCardHistoryModal(id,status){
   const o=data.offers.find(x=>x.id===id);if(!o)return;
   const old=document.getElementById('cardHistoryModal');if(old)old.remove();
+  const matches=(data.cards||[]).filter(c=>normalizedCardName(c.name)===normalizedCardName(o.name));
+  const historyTarget=status==='previous'&&matches.length?`<div class="field" style="margin-top:14px"><label class="field-label">Which saved account should be marked previously held?</label><select id="histExisting">${matches.map((c,i)=>`<option value="${c.id}">Account ${i+1}${c.opened?' • opened '+c.opened:''} • ${cardHoldingStatus(c)==='previous'?'previously held':'currently held'}</option>`).join('')}<option value="new">Add a separate prior account</option></select></div>`:'';
   const wrap=document.createElement('div');wrap.id='cardHistoryModal';wrap.style.cssText='position:fixed;inset:0;background:rgba(15,23,42,.48);z-index:9999;display:flex;align-items:center;justify-content:center;padding:18px';
   wrap.innerHTML=`<div style="width:min(520px,100%);max-height:88vh;overflow:auto;background:#fff;border-radius:22px;padding:20px;box-shadow:0 18px 55px rgba(0,0,0,.28)"><div class="between"><div><div class="small">CARD HISTORY</div><h2 style="margin:4px 0 4px">${o.name}</h2><div class="small">${status==='current'?'Save this as a card you currently hold. It will be removed from recommendations that exclude cards you already have.':'Save a prior card so CardPilot can apply verified issuer welcome-bonus rules without treating it as a current holding.'}</div></div><button class="btn ghost" onclick="document.getElementById('cardHistoryModal').remove()">✕</button></div><div class="field" style="margin-top:14px"><label class="field-label">Account opened (optional)</label><input id="histOpened" type="date"></div><div class="field" style="margin-top:10px"><label class="field-label">Did you receive the welcome bonus?</label><select id="histBonus"><option value="unknown">Not sure / not recorded</option><option value="yes">Yes</option><option value="no">No</option></select></div><div class="field" style="margin-top:10px"><label class="field-label">Bonus received date (optional)</label><input id="histBonusDate" type="date"></div><div class="note" style="margin-top:12px"><b>Issuer-rule only:</b> CardPilot will use official issuer eligibility wording stored for this card. If no verified issuer rule is available, it will not invent one.</div><button class="primary-action" onclick="saveRecommendedCardHistory(${id},'${status}')">Save & rerank recommendations</button></div>`;
   wrap.addEventListener('click',e=>{if(e.target===wrap)wrap.remove()});document.body.appendChild(wrap);
@@ -1653,7 +1654,16 @@ function saveRecommendedCardHistory(id,status){
   if(status==='current'){
     const existing=(data.cards||[]).find(c=>cardHoldingStatus(c)!=='previous'&&normalizedCardName(c.name)===normalizedCardName(o.name));
     if(existing)Object.assign(existing,rec,{id:existing.id});else data.cards.unshift(rec);
-  }else data.cards.unshift(rec);
+  }else{
+    const target=document.getElementById('histExisting')?.value;
+    const existing=(data.cards||[]).find(c=>String(c.id)===target&&normalizedCardName(c.name)===normalizedCardName(o.name));
+    if(existing){
+      existing.holdingStatus='previous';existing.catalogCardId=o.id;
+      if(rec.opened)existing.opened=rec.opened;
+      if(rec.bonusReceived!=='unknown')existing.bonusReceived=rec.bonusReceived;
+      if(rec.bonusReceivedDate)existing.bonusReceivedDate=rec.bonusReceivedDate;
+    }else data.cards.unshift(rec);
+  }
   if(!data.profile.ownedCardMode)data.profile.ownedCardMode='exact';
   document.getElementById('cardHistoryModal')?.remove();save();render();showView('applyView',true);
 }
@@ -1668,6 +1678,13 @@ function toggleMoreRecommendations(){
   data.profile.showMoreRecommendations=!data.profile.showMoreRecommendations;
   localStorage.setItem('cardpilotData',JSON.stringify(data));
   render();showView('applyView',true);
+}
+function excludedCurrentCardsHTML(){
+  const mode=data.profile.ownedCardMode||'exact';
+  if(mode==='include')return '';
+  const excluded=data.offers.filter(o=>exactCardOwned(o)&&mainIntentMatches(o)&&!offerFit(o).disabled);
+  if(!excluded.length)return '';
+  return `<details class="card" style="margin-top:14px" open><summary><b>Cards excluded because your wallet says you currently hold them (${excluded.length})</b></summary><div class="small" style="margin-top:8px">Current ownership and repeat-bonus eligibility are separate. Correct a saved account below, or include current cards to compare another application. Official issuer bonus restrictions still apply.</div>${excluded.map(o=>`<div style="margin-top:12px"><b>${o.name}</b><button class="btn ghost" style="display:block;margin-top:6px" onclick="openCardHistoryModal(${o.id},'previous')">Correct saved card history</button></div>`).join('')}<button class="btn ghost" style="width:100%;margin-top:12px" onclick="setOwnedCardMode('include');showView('applyView',true)">Include cards I already hold</button></details>`;
 }
 function apply(){
   if(data.profile.editingPreferences) return advancedOnboarding();
@@ -1694,7 +1711,8 @@ function apply(){
   ${top.length?`<div id="recommendationResults" class="section" style="margin-top:14px">Top ${Math.min(5,top.length)} recommendations</div><div class="section-hint">These are ranked matches from the categories you selected. ${top.length===1?'This result uses':`All ${top.length} use`} the same visual treatment so you can decide which tradeoffs matter most.</div><div class="list" style="margin-top:12px">${top.map((x,i)=>simpleRecommendationCard(x,i+1,false)).join('')}${data.profile.showMoreRecommendations?extraTop.map((x,i)=>simpleRecommendationCard(x,i+6,true)).join(''):''}</div>${extraTop.length?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleMoreRecommendations()">${data.profile.showMoreRecommendations?'Show fewer':'Show 5 more'}</button>`:''}${exactPool.length<5?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleBroadenSearch()">${data.profile.broadenSearch?'Use original search':'Broaden search'}</button><div class="small" style="margin-top:6px;text-align:center;color:#667085">${data.profile.broadenSearch?'Showing adjacent card categories in addition to your original selection.':'Only '+exactPool.length+' card'+(exactPool.length===1?'':'s')+' matched your selected category closely. Broaden only if you want adjacent options.'}</div>`:''}`:`<div class="note"><b>No strong match right now.</b><div class="small" style="margin-top:5px">Try changing one preference or broaden the search.</div><button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleBroadenSearch()">${data.profile.broadenSearch?'Use original search':'Broaden search'}</button></div>`}
   <div class="card" style="margin-top:14px"><div class="small">REFINE YOUR LIST</div><h3 style="margin:4px 0 5px">Want to fine-tune these recommendations?</h3><div class="small">Use the quick fine-tuning sections below. Advanced strategy settings remain available separately when you need them.</div></div>
   ${refinementPanelHTML()}
-  ${refineActive?`<div id="refinedResults" class="section">Refined results</div><div class="section-hint">${(data.profile.refineRank||'overall')==='hist100'?`Ranking only the ${refinedAll.length} recommended card${refinedAll.length===1?'':'s'} from your search that have a verified current offer and a verified comparable historical public high.`:`Reranking the ${refinedAll.length} recommended card${refinedAll.length===1?'':'s'} from your original search; fine-tuning does not add unrelated cards.`}</div><div class="list">${refined.map((x,i)=>simpleRecommendationCard(x,i+1)).join('')}${data.profile.showMoreRefinedRecommendations?extraRefined.map((x,i)=>simpleRecommendationCard(x,i+6,true)).join(''):''}</div>${extraRefined.length?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleMoreRefinedRecommendations()">${data.profile.showMoreRefinedRecommendations?'Show fewer':'Next 5'}</button>`:''}${(data.profile.refineRank||'overall')==='hist100'&&historicalUnknown.length?`<details class="card" style="margin-top:14px" open><summary><b>Historical high not yet verified (${historicalUnknown.length})</b></summary><div class="section-hint">These cards have a verified current public offer, but CardPilot does not yet have a verified comparable historical public high. They are shown separately rather than being ranked against known historical highs.</div><div class="list">${historicalUnknown.slice(0,5).map(historicalUnknownCard).join('')}</div>${historicalUnknown.length>5?`<div class="small" style="margin-top:9px">${historicalUnknown.length-5} more are available in Browse Cards.</div>`:''}</details>`:''}`:''}
+  ${excludedCurrentCardsHTML()}
+  ${refineActive?`<div id="refinedResults" class="section">Refined results</div><div class="section-hint">${(data.profile.refineRank||'overall')==='hist100'?`Ranking only the ${refinedAll.length} recommended card${refinedAll.length===1?'':'s'} from your search that have a verified current offer and a verified comparable historical public high.`:`Showing the top ${refinedAll.length} cards after checking all eligible cards matching your selected rewards and limits.`}</div><div class="list">${refined.map((x,i)=>simpleRecommendationCard(x,i+1)).join('')}${data.profile.showMoreRefinedRecommendations?extraRefined.map((x,i)=>simpleRecommendationCard(x,i+6,true)).join(''):''}</div>${extraRefined.length?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleMoreRefinedRecommendations()">${data.profile.showMoreRefinedRecommendations?'Show fewer':'Next 5'}</button>`:''}${(data.profile.refineRank||'overall')==='hist100'&&historicalUnknown.length?`<details class="card" style="margin-top:14px" open><summary><b>Historical high not yet verified (${historicalUnknown.length})</b></summary><div class="section-hint">These cards have a verified current public offer, but CardPilot does not yet have a verified comparable historical public high. They are shown separately rather than being ranked against known historical highs.</div><div class="list">${historicalUnknown.slice(0,5).map(historicalUnknownCard).join('')}</div>${historicalUnknown.length>5?`<div class="small" style="margin-top:9px">${historicalUnknown.length-5} more are available in Browse Cards.</div>`:''}</details>`:''}`:''}
   ${waits.length?`<details class="card" style="margin-top:14px"><summary><b>Worth waiting for (${waits.length})</b></summary><div class="section-hint">Strong possibilities where timing or eligibility gives CardPilot a concrete reason to wait.</div><div class="list">${waits.slice(0,6).map(x=>offerCard(x.offer,true,x.fit)).join('')}</div></details>`:''}
   ${verification.length?`<details class="card" style="margin-top:12px"><summary><b>Offer data to verify (${verification.length})</b></summary><div class="section-hint">These are <b>not</b> counted as preference mismatches. CardPilot is missing enough current offer data that it would be misleading to rank them as apply-now recommendations.</div><div class="other-preview">${verification.slice(0,4).map(x=>simpleVerifyCard(x)).join('')}</div>${verification.length>4?`<div class="small" style="margin-top:9px">${verification.length-4} more are available in Browse Cards.</div>`:''}</details>`:''}
   ${nonmatches.length?`<details class="card" style="margin-top:12px"><summary><b>Other cards that don't match this search (${nonmatches.length})</b></summary><div class="section-hint">Kept compact on purpose. These cards have an actual preference, eligibility, fee, spend, ownership, or strategy reason for ranking lower.</div><div class="other-preview">${nonmatches.slice(0,3).map(x=>simpleOtherCard(x)).join('')}</div>${nonmatches.length>3?`<div class="small" style="margin-top:9px">${nonmatches.length-3} more are available in Browse Cards.</div>`:''}</details>`:''}
