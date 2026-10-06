@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-10-06.1",
+  "catalogVersion": "2026-10-06.2",
   "generatedAt": "2026-10-06",
   "cards": [
     {
@@ -33,7 +33,15 @@
         "0 annual fee"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "welcomeEligibility": {
+        "status": "verified",
+        "source": "official-issuer",
+        "sourceUrl": "https://creditcards.chase.com/a1/business-compare-cards/0926",
+        "verifiedDate": "2026-10-06",
+        "ruleType": "no-fee-business-family-ever",
+        "summary": "Chase states the new cardmember bonus may not be available if you have ever had this card or any other Chase for Business card without an annual fee."
+      }
     },
     {
       "id": 7002,
@@ -65,7 +73,15 @@
         "0 annual fee"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "welcomeEligibility": {
+        "status": "verified",
+        "source": "official-issuer",
+        "sourceUrl": "https://creditcards.chase.com/a1/business-compare-cards/0926",
+        "verifiedDate": "2026-10-06",
+        "ruleType": "no-fee-business-family-ever",
+        "summary": "Chase states the new cardmember bonus may not be available if you have ever had this card or any other Chase for Business card without an annual fee."
+      }
     },
     {
       "id": 7003,
@@ -96,7 +112,15 @@
           "capNote": "3X on the first $150,000 in combined eligible purchases each account anniversary year."
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "welcomeEligibility": {
+        "status": "verified",
+        "source": "official-issuer",
+        "sourceUrl": "https://creditcards.chase.com/a1/business-compare-cards/0926",
+        "verifiedDate": "2026-10-06",
+        "ruleType": "same-card-ever",
+        "summary": "Chase states the new cardmember bonus may not be available if you have ever had Ink Business Preferred."
+      }
     },
     {
       "id": 7004,
@@ -119,7 +143,15 @@
       "histPublicDate": "2026-09",
       "histStatus": "best-documented",
       "histSourceLabel": "Chase / public offer record",
-      "histSourceUrl": "https://creditcards.chase.com/business-credit-cards/ink/premier"
+      "histSourceUrl": "https://creditcards.chase.com/business-credit-cards/ink/premier",
+      "welcomeEligibility": {
+        "status": "verified",
+        "source": "official-issuer",
+        "sourceUrl": "https://creditcards.chase.com/a1/business-compare-cards/0926",
+        "verifiedDate": "2026-10-06",
+        "ruleType": "same-card-ever",
+        "summary": "Chase states the new cardmember bonus may not be available if you have ever had Ink Business Premier."
+      }
     },
     {
       "id": 7005,
@@ -140,7 +172,15 @@
         "premium"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "welcomeEligibility": {
+        "status": "verified",
+        "source": "official-issuer",
+        "sourceUrl": "https://creditcards.chase.com/business-credit-cards/sapphire/reserve",
+        "verifiedDate": "2026-10-06",
+        "ruleType": "same-card-ever",
+        "summary": "Chase states the new cardmember bonus may not be available if you have ever had Sapphire Reserve for Business."
+      }
     },
     {
       "id": 7006,
@@ -1285,7 +1325,15 @@
         }
       ],
       "pointsEarnVerifiedDate": "2026-10-04",
-      "pointsEarnNote": "1X on other eligible purchases."
+      "pointsEarnNote": "1X on other eligible purchases.",
+      "welcomeEligibility": {
+        "status": "verified",
+        "source": "official-issuer",
+        "sourceUrl": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+        "verifiedDate": "2026-10-06",
+        "ruleType": "same-card-prior-or-bonus",
+        "summary": "Chase states this card is unavailable if you currently have it open, and the new cardmember bonus may not be available if you previously held this card or received a new cardmember bonus for this card."
+      }
     },
     {
       "id": 8002,
@@ -1341,7 +1389,15 @@
         }
       ],
       "pointsEarnVerifiedDate": "2026-10-04",
-      "pointsEarnNote": "1X on other eligible purchases."
+      "pointsEarnNote": "1X on other eligible purchases.",
+      "welcomeEligibility": {
+        "status": "verified",
+        "source": "official-issuer",
+        "sourceUrl": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+        "verifiedDate": "2026-10-06",
+        "ruleType": "same-card-prior-or-bonus",
+        "summary": "Chase states this card is unavailable if you currently have it open, and the new cardmember bonus may not be available if you previously held this card or received a new cardmember bonus for this card."
+      }
     },
     {
       "id": 8003,
@@ -1531,7 +1587,7 @@
       "status": "open",
       "verified": true,
       "verifiedDate": "2026-10-03",
-      "offerNote": "Official Chase page labels the current 80,000-mile offer “OUR BEST OFFER RETURNS”: 70,000 miles after $3,000 in purchases in the first 3 months, plus 10,000 miles after adding an authorized user in the first 3 months. $0 intro annual fee first year, then $150. Higher special-channel offers are tracked separately.",
+      "offerNote": "Official Chase page labels the current 80,000-mile offer \u201cOUR BEST OFFER RETURNS\u201d: 70,000 miles after $3,000 in purchases in the first 3 months, plus 10,000 miles after adding an authorized user in the first 3 months. $0 intro annual fee first year, then $150. Higher special-channel offers are tracked separately.",
       "tags": [
         "airline",
         "united"
@@ -1952,7 +2008,7 @@
       "status": "open",
       "verified": true,
       "verifiedDate": "2026-10-02",
-      "offerNote": "Official Chase best-ever offer: up to 115,000 Aeroplan points — 75,000 after $4,000 in purchases in the first 3 months, plus 40,000 after $20,000 total purchases in the first 12 months. $195 annual fee.",
+      "offerNote": "Official Chase best-ever offer: up to 115,000 Aeroplan points \u2014 75,000 after $4,000 in purchases in the first 3 months, plus 40,000 after $20,000 total purchases in the first 12 months. $195 annual fee.",
       "tags": [
         "airline",
         "aeroplan"
@@ -2641,7 +2697,18 @@
           "type": "fixed"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "welcomeEligibility": {
+        "status": "verified",
+        "source": "official-issuer",
+        "sourceUrl": "https://www.citi.com/credit-cards/citi-strata-premier-credit-card",
+        "verifiedDate": "2026-10-06",
+        "ruleType": "named-products-ever",
+        "relatedNames": [
+          "Citi Premier"
+        ],
+        "summary": "Citi states the new account bonus is not available if you currently have or previously had a Citi Strata Premier or Citi Premier account."
+      }
     },
     {
       "id": 8202,
@@ -2696,7 +2763,7 @@
           "rate": 6,
           "category": "restaurants during Citi Nights",
           "type": "time-window",
-          "capNote": "Citi Nights applies Friday and Saturday from 6 PM–6 AM ET under current terms."
+          "capNote": "Citi Nights applies Friday and Saturday from 6 PM\u20136 AM ET under current terms."
         },
         {
           "rate": 3,
@@ -2704,7 +2771,15 @@
           "type": "fixed"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "welcomeEligibility": {
+        "status": "verified",
+        "source": "official-issuer",
+        "sourceUrl": "https://www.citi.com/credit-cards/citi-strata-elite-credit-card",
+        "verifiedDate": "2026-10-06",
+        "ruleType": "same-card-ever",
+        "summary": "Citi states the new account bonus is not available if you currently have or previously had a Citi Strata Elite account."
+      }
     },
     {
       "id": 8203,
@@ -2778,7 +2853,18 @@
           "type": "fixed"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "welcomeEligibility": {
+        "status": "verified",
+        "source": "official-issuer",
+        "sourceUrl": "https://www.citi.com/credit-cards/citi-strata-credit-card",
+        "verifiedDate": "2026-10-06",
+        "ruleType": "named-products-ever",
+        "relatedNames": [
+          "Citi Strata Student"
+        ],
+        "summary": "Citi states the new account bonus is not available if you currently have or previously had a Citi Strata or Citi Strata Student account."
+      }
     },
     {
       "id": 8204,
@@ -3258,7 +3344,15 @@
       "promoVerifiedDate": "2026-10-04",
       "promoCashBackBaseRate": 3,
       "promoCashBackExtraRate": 3,
-      "promoRelationshipRule": "BofA Rewards relationship bonuses apply to the normal 3% choice-category earnings, but not to the additional 3% first-year promotional bonus."
+      "promoRelationshipRule": "BofA Rewards relationship bonuses apply to the normal 3% choice-category earnings, but not to the additional 3% first-year promotional bonus.",
+      "welcomeEligibility": {
+        "status": "needs-review",
+        "source": "official-issuer",
+        "sourceUrl": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
+        "verifiedDate": "2026-10-06",
+        "ruleType": "issuer-rule-not-published",
+        "summary": "CardPilot has not verified a repeat-card welcome-bonus restriction for this offer from the current Bank of America issuer page it tracks. Prior ownership is therefore not treated as automatic ineligibility; verify the issuer terms presented with your application."
+      }
     },
     {
       "id": 8404,
@@ -3692,7 +3786,7 @@
         "50000": 3,
         "100000": 4
       },
-      "relationshipRequirement": "U.S. Bank Smartly Savings plus qualifying balances in U.S. Bank Smartly Checking and/or Safe Debit accounts are required for the 2.5%–4% tiers.",
+      "relationshipRequirement": "U.S. Bank Smartly Savings plus qualifying balances in U.S. Bank Smartly Checking and/or Safe Debit accounts are required for the 2.5%\u20134% tiers.",
       "offerState": "verified-current",
       "offerType": "public",
       "confidence": "official-issuer",
