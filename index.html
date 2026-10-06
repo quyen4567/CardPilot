@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#0d2743" />
+  <meta name="theme-color" content="#ffffff" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>CardPilot v11.3.28</title>
+  <title>CardPilot v11.3.29</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -44,6 +44,82 @@
     .insight{margin-top:14px;border:0;border-radius:20px;padding:16px;background:linear-gradient(135deg,#fff,#f6f9ff);box-shadow:0 8px 22px rgba(31,55,90,.06)}.insight-head{display:flex;align-items:center;justify-content:space-between;gap:8px}.insight-label{font-size:11px;font-weight:900;letter-spacing:.07em;color:#6c5ce7}.insight h3{font-size:17px;margin:7px 0 4px}.insight .small{line-height:1.45}.source-badge{font-size:10px;background:#e9fbf3;color:#087a49;border-radius:999px;padding:6px 8px;font-weight:800}
     .other-card .pill.red{display:none}.other-card .why-not{color:#667085}.other-card{background:#fafbfc}.other-card .meta{font-size:11px}.other-card button{font-size:11px}.other-preview{display:flex;flex-direction:column;gap:9px}.data-note{font-size:11px;color:#8a5a00;margin-top:5px}.tabs{box-shadow:0 -8px 24px rgba(16,24,40,.04)}
   
+
+    /* v11.3.29 visual refresh: white-first, calmer surfaces, selective blue */
+    :root{--navy:#182230;--blue:#246bfd;--bg:#f8fafc;--card:#fff;--text:#182230;--muted:#667085;--green:#16845b;--amber:#b76a08;--red:#c9372c;--line:#edf0f4;--soft:#f6f8fb}
+    html{background:#f8fafc}
+    body{background:#f8fafc;color:var(--text);letter-spacing:-.01em}
+    .app{background:#fff;box-shadow:0 0 0 1px rgba(16,24,40,.025)}
+    .content{padding:18px 17px 22px}
+    .top{position:sticky;background:rgba(255,255,255,.96);color:var(--text);border-bottom:1px solid #f0f2f5;box-shadow:none;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:calc(15px + env(safe-area-inset-top)) 18px 14px}
+    .top h1{font-size:22px;letter-spacing:-.45px;color:#172033}
+    .top .sub{color:#7a8493;opacity:1;font-size:12px}
+    .top .small{color:#98a2b3!important}
+    .section,.home-section-title{color:#172033;letter-spacing:-.35px}
+    .card,.item,.simple-rec,.snapshot,.insight,.action-tile,.explore-card,.other-card,.verify-card,.specialty-card{border-color:#f0f2f5;box-shadow:0 5px 18px rgba(16,24,40,.045)}
+    .card,.item,.simple-rec{border-width:1px;border-radius:18px}
+    button,.btn{background:var(--blue);border-radius:13px;box-shadow:none}
+    .btn.secondary{background:#f1f5ff;color:#245fcf}.btn.ghost{background:#fff;color:#475467;border-color:#e9edf2}
+    input,select,.namebox{border-color:#e4e7ec;background:#fff}
+    .choice,.interest,.chip{border-color:#e5e9ef;background:#fff;color:#344054}
+    .choice.selected,.interest.selected,.chip.selected{border-color:#9ebcff;background:#f3f7ff;color:#205ecf;box-shadow:0 0 0 1px rgba(36,107,253,.05)}
+    .setup-progress{background:#eef1f5}.setup-progress>div{background:var(--blue)}
+    .stepdot,.timeline-dot{background:#f0f5ff;color:#245fcf}
+    .hero,.recap{background:#fff;border-color:#eef1f5;box-shadow:0 7px 22px rgba(16,24,40,.045)}
+    .rec-num,.ranknum{background:#172033;color:#fff}
+    .strategy-card{border-left:3px solid var(--blue)}
+    .subchoices,.quick-subpanel{background:#fafbfc;border-color:#eef1f5}
+    .rel-note,.impact524{background:#f7f9fc;border-color:#edf0f4;color:#475467}
+    .rel-logo{background:#f1f5ff;color:#245fcf}
+    .clear-all{border-color:#dfe6f0;color:#245fcf}
+
+    /* Home: mostly white; blue is an action color rather than a backdrop. */
+    .home-stage{margin:0}
+    .home-hero{background:#fff;color:var(--text);border:0;border-radius:24px;padding:20px 18px 18px;box-shadow:0 8px 28px rgba(16,24,40,.055)}
+    .home-hero:before{width:150px;height:150px;border:0;background:radial-gradient(circle,rgba(36,107,253,.09),rgba(36,107,253,0) 70%);right:-35px;top:-50px}
+    .home-hero:after{color:#246bfd;opacity:.13;font-size:40px;right:20px;top:16px}
+    .eyebrow{color:#246bfd;opacity:1;font-size:10px;letter-spacing:.11em}
+    .home-hero h2{color:#172033;font-size:29px;line-height:1.05;margin:8px 0 9px}
+    .home-hero p{color:#667085;font-size:13px;line-height:1.5}
+    .home-minirow{gap:8px;margin-top:14px}
+    .home-mini{background:#f7f9fc;border:0;color:#667085;border-radius:13px;padding:10px 11px}
+    .home-mini b{color:#172033}
+    .hero-cta{background:var(--blue);color:#fff;border-radius:14px;box-shadow:0 6px 16px rgba(36,107,253,.18)}
+    .hero-foot{color:#98a2b3}
+    .snapshot{background:#f8fafc;border:0;box-shadow:none;padding:14px 15px}
+    .slot{background:#e9edf2}.slot.used{background:#246bfd}
+    .home-grid{gap:9px}
+    .home-tile,.home-tile:nth-child(1),.home-tile:nth-child(2),.home-tile:nth-child(3),.home-tile:nth-child(4){background:#fff;border:1px solid #f0f2f5;box-shadow:0 4px 16px rgba(16,24,40,.035);border-radius:18px;min-height:118px}
+    .home-tile:active{background:#f8fafc}
+    .tile-icon{font-size:25px;margin-bottom:9px}
+    .insight{background:#fff;border:1px solid #f0f2f5;box-shadow:0 5px 18px rgba(16,24,40,.04);border-radius:18px}
+    .insight-label{color:#246bfd}.source-badge{background:#eef9f3;color:#147a55}
+
+    /* Results: emphasize the decision, not every data point. */
+    .list{gap:12px}
+    .simple-rec{padding:16px 15px;border:0;box-shadow:0 6px 22px rgba(16,24,40,.055)}
+    .simple-rec .item-title{font-size:15px;line-height:1.25}
+    .simple-rec .meta{color:#7a8493}
+    .rec-bonus{font-size:17px;letter-spacing:-.25px;color:#172033}
+    .reason-list{gap:5px}.reason-item{color:#3d6f5c}
+    .details-clean{border-top-color:#f0f2f5}
+    .pill{font-weight:750}.green{background:#eef8f3;color:#147a55}.amber{background:#fff7e8;color:#9b5b08}.blue{background:#f0f5ff;color:#245fcf}.red{background:#fff1f0;color:#b42318}
+    .other-card{background:#fbfcfd;border:0;box-shadow:none}
+    .note,.warningbox{box-shadow:none}
+
+    /* Navigation stays neutral so the selected destination is the only blue element. */
+    .tabs{background:rgba(255,255,255,.97);border-top-color:#eef1f5;box-shadow:0 -5px 18px rgba(16,24,40,.035)}
+    .tab{color:#8b95a5}.tab.active{color:#246bfd}
+
+    @media(max-width:430px){
+      .content{padding:16px 14px 20px}
+      .home-hero{padding:19px 16px 17px}
+      .home-hero h2{font-size:28px}
+      .home-grid{gap:8px}
+      .home-tile{padding:14px;min-height:112px}
+      .simple-rec{padding:15px 14px}
+    }
+
 .quick-subpanel{margin-top:10px;padding:10px 12px;border:1px solid #dbe4f0;border-radius:14px;background:#f8fbff}
 .quick-offer-group{margin-top:4px;padding-top:2px;border-top:1px solid #edf1f7}
 .compact-chips{grid-template-columns:repeat(auto-fit,minmax(135px,1fr))}
@@ -51,7 +127,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting an application.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.28</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">CardPilot</h1><div class="sub" id="subtitle">Smarter card decisions, without wasting an application.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.29</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -138,7 +214,7 @@ if(data.profile.recommendationUXVersion!=='11.3.28'){if(data.profile.cardPath===
 // v11.3.9: strict airline classification requires an airline/co-brand signal; generic transferable "miles" no longer count as airline cards.
 // v11.3.6: historical-high refinement requires a verified current offer + known comparable history; unknown history is shown separately.
 // v11.3.12: Newly launched is a strict search filter; combine it with another selected category as an AND condition.
-// v11.3.28: beginner-friendly recent-card-history input; unknown history no longer acts like 0/24; new users default to personal + business; removed the no-SUB-spend choice; refreshed quick-setup wording.
+// v11.3.29: visual refresh layered over v11.3.28 beginner-friendly recent-card-history input; unknown history no longer acts like 0/24; new users default to personal + business; removed the no-SUB-spend choice; refreshed quick-setup wording.
 // v11.3.27: ongoing-reward cards can rank without a fixed SUB; Discover Cashback Match is modeled as first-year effective earning (10% activated categories / 2% everywhere after match) with clear activation, cap, and deferred-match disclosure.
 // v11.3.26: ongoing-reward cards with no standard SUB (notably Robinhood Gold) can rank normally for cash-back/points earning searches; membership costs stay separate from card annual fees.
 // v11.3.25: simplify Fine-tune: card type first, inherit reward focus from the quick search, and show reward-specific ranking choices instead of asking reward type again.
