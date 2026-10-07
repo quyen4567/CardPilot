@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>Cardimize v11.3.37</title>
+  <title>Cardimize v11.3.38</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -127,7 +127,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Your next card, made simple.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.37</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Your next card, made simple.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.38</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -136,6 +136,7 @@
     <section id="benefitsView" class="hidden"></section>
     <section id="relationshipsView" class="hidden"></section>
     <section id="moreView" class="hidden"></section>
+    <section id="bankRulesView" class="hidden"></section>
   </main>
   <nav class="tabs">
     <button class="tab active" data-view="homeView"><span>⌂</span>Home</button>
@@ -159,7 +160,7 @@ let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
 let BUSINESS_CATALOG=[];
 let PERSONAL_CATALOG=[];
 const CATALOG_VERSION='2026-10-06.3';
-// v11.3.37: prior ownership is neutral unless a verified official issuer rule restricts eligibility; previously held cards no longer count as current benefit overlap.
+// v11.3.38: prior ownership is neutral unless a verified official issuer rule restricts eligibility; previously held cards no longer count as current benefit overlap.
 
 function migrateV8(){
   data.profile=data.profile||{};
@@ -1365,7 +1366,7 @@ function home(){
     <div class="home-section-title">Explore</div><div class="home-grid">
       <button class="home-tile" onclick="browseCards()"><span class="tile-icon">🔥</span><b>Browse cards</b><small>Explore bonuses, cash back and travel rewards.</small></button>
       <button class="home-tile" onclick="showView('cardsView')"><span class="tile-icon">👛</span><b>My wallet</b><small>${data.cards.length} saved card${data.cards.length===1?'':'s'}, opening dates and annual fees.</small></button>
-      <button class="home-tile" onclick="showView('moreView')"><span class="tile-icon">🧭</span><b>My strategy</b><small>Fine-tune what matters to you.</small></button>
+      <button class="home-tile" onclick="showView('moreView')"><span class="tile-icon">🧭</span><b>Optimize</b><small>Fine-tune what matters to you.</small></button>
       <button class="home-tile" onclick="setSearchMode('results');save();showView('applyView')"><span class="tile-icon">✨</span><b>My matches</b><small>See your matches and why they fit.</small></button>
     </div>
     ${top?`<div class="insight"><div class="insight-head"><span class="insight-label">💡 A CARD TO EXPLORE</span><span class="source-badge">Rewards & bonuses</span></div><h3>${top.offer.name}</h3><div class="small">${currentOfferLabel(top.offer)} • Annual fee ${fmt(top.offer.af||0)}</div><button class="btn ghost" style="margin-top:10px" onclick="setSearchMode('results');save();showView('applyView')">See why it fits →</button></div>`:''}
@@ -1683,7 +1684,7 @@ function simpleRecommendationCard(x,rank,compact=false){
   const o=x.offer, fit=x.fit;
   const reasons=(fit.reasons||[]).slice(0,compact?1:3);
   const badge=fit.status==='verify'?'Offer needs verification':'Recommendation';
-  const body=`<div class="rec-bonus">${currentOfferLabel(o)}</div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}${cashRewardText(o)}${cashPromoText(o)}${categoryCashBackText(o)}${pointEarningText(o)}${reasons.length?`<div class="reason-list">${reasons.map(r=>`<div class="reason-item">✓ ${r}</div>`).join('')}</div>`:''}${five24AfterApprovalHTML(o)}<div class="rec-buttons"><button class="btn ghost" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}</div>${cardHistoryActionsHTML(o)}<details class="details-clean"><summary>Advanced details</summary>${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:7px">${historicalOfferText(o)}${o.verifiedDate?` • Offer data checked ${o.verifiedDate}`:''}</div></details>`;
+  const body=`<div class="rec-bonus">${currentOfferLabel(o)}</div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}${cashRewardText(o)}${cashPromoText(o)}${categoryCashBackText(o)}${pointEarningText(o)}${reasons.length?`<div class="reason-list">${reasons.map(r=>`<div class="reason-item">✓ ${r}</div>`).join('')}</div>`:''}${five24AfterApprovalHTML(o)}<div class="rec-buttons"><button class="btn ghost" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}</div>${cardHistoryActionsHTML(o)}<details class="details-clean"><summary>Advanced details</summary>${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}${bankRulesLinkHTML()}<div class="small" style="margin-top:7px">${historicalOfferText(o)}${o.verifiedDate?` • Offer data checked ${o.verifiedDate}`:''}</div></details>`;
   return `<div class="simple-rec"><div class="between"><div class="rankline"><span class="ranknum">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • Annual fee ${fmt(o.af||0)}</div></div></div><span class="pill green">${badge}</span></div>${compact?`<details class="details-clean"><summary>See offer & fit details</summary>${body}</details>`:body}</div>`;
 }
 function toggleMoreRecommendations(){
@@ -1797,8 +1798,32 @@ function showAddBenefit(){const box=$('#addBenefitBox');if(!box)return;box.inner
 function addBenefit(){if(!$('#bn').value)return;data.benefits.push({id:Date.now(),name:$('#bn').value,kind:$('#bk').value,program:$('#bp').value,value:$('#bv').value,expires:$('#be').value});save();showView('benefitsView')}
 function saveSouthwestStrategy(){const y=+($('#swTarget')?.value||0);if(!y){alert('Enter a target year.');return}data.profile.savedStrategies=(data.profile.savedStrategies||[]).filter(s=>s.type!=='southwest_cp');data.profile.savedStrategies.push({type:'southwest_cp',targetYear:y,note:$('#swNote')?.value||''});save();showView('benefitsView')}
 function removeSouthwestStrategy(){data.profile.savedStrategies=(data.profile.savedStrategies||[]).filter(s=>s.type!=='southwest_cp');save();showView('benefitsView')}
+const BANK_APPLICATION_RULES_CHECKED='2026-10-06';
+const BANK_APPLICATION_RULES={
+  official:[
+    {name:'Amex Business Gold',summary:'Previous ownership may affect your welcome bonus.',counts:'Having this card or a previous version, plus your history with Amex and cards opened or closed.',scope:'Business Gold. Other Amex products have their own terms.',note:'Amex says it will notify you before processing if you are not eligible for the welcome offer. “May not be eligible” is a warning, not a guaranteed denial.',source:'https://www.americanexpress.com/en-us/credit-cards/apply/terms/business/prospect/businessgold-card/45094-9-0?isGCSCardMember=true&key=tncBody&rwdFlag=rwd',sourceLabel:'Amex offer terms'},
+    {name:'Chase Ink Unlimited',summary:'A previous no-fee Chase business card may affect the bonus.',counts:'Ever having Ink Unlimited or another Chase business card without an annual fee.',scope:'Ink Unlimited offer. Check the exact terms for each Ink product.',note:'This concerns the welcome bonus. The issuer uses “may not be available.”',source:'https://creditcards.chase.com/business-credit-cards/ink/unlimited',sourceLabel:'Chase offer terms'},
+    {name:'Chase Sapphire Preferred',summary:'Current ownership prevents another opening; past ownership may affect the bonus.',counts:'Currently holding this card, previously holding it, or receiving its welcome bonus.',scope:'Personal Sapphire Preferred. Other Sapphire products need their own checks.',note:'Do not assume the old 48-month bonus rule still applies to every Sapphire offer.',source:'https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred',sourceLabel:'Chase offer terms'},
+    {name:'Southwest Premier Business',summary:'Current cardholders and some recent bonus recipients cannot earn this bonus.',counts:'Currently holding this specific business card, or previously holding it and receiving its bonus in the last 24 months.',scope:'Premier Business only. Personal Southwest cards have separate eligibility wording.',note:'The bonus date matters for the 24-month lookback.',source:'https://creditcards.chase.com/business-credit-cards/southwest/premier-business',sourceLabel:'Chase offer terms'},
+    {name:'Citi Strata Premier',summary:'Current or previous Premier ownership excludes the new-account bonus.',counts:'Currently or previously having Citi Premier or Citi Strata Premier.',scope:'Personal Strata Premier. Other Citi cards must be checked separately.',note:'The current public page has prior-ownership language rather than the older 48-month wording.',source:'https://www.citi.com/credit-cards/citi-strata-premier-credit-card',sourceLabel:'Citi offer terms'},
+    {name:'Capital One Venture',summary:'A Venture or Venture X bonus in the last 48 months excludes this bonus.',counts:'Receiving a new-cardmember bonus on Venture or Venture X within 48 months.',scope:'Personal Venture offer. Do not apply this wording to all Capital One business cards.',note:'Check the terms on the specific card and application channel.',source:'https://www.capitalone.com/credit-cards/venture/',sourceLabel:'Capital One offer terms'},
+    {name:'Wells Fargo Autograph',summary:'Recent Wells Fargo openings may affect approval and introductory offers.',counts:'A Wells Fargo consumer card opened within 4 months may affect approval. Currently holding Autograph or opening it within 48 months may affect its bonus and introductory offers, even if closed.',scope:'Consumer Autograph offer; not a blanket business-card rule.',note:'Approval and welcome-bonus eligibility are separate checks.',source:'https://creditcards.wellsfargo.com/autograph-visa-credit-card/',sourceLabel:'Wells Fargo offer terms'}
+  ],
+  reported:[
+    {name:'BofA 2/3/4',summary:'Reported limit: 2 BofA cards in 2 months, 3 in 12 months, 4 in 24 months.',counts:'New BofA card approvals in rolling periods. Cards from other banks are not part of this count.',scope:'Commonly used for personal-card planning. Business-card treatment needs a separate check.',note:'An approval-timing pattern, not a repeat-bonus restriction. Relationship exceptions have been reported.',source:'https://www.doctorofcredit.com/httpswww-doctorofcredit-combank-america-312-rule-credit-card-approvals-contribute-data-points/',sourceLabel:'Doctor of Credit • report published 2017-10-04'},
+    {name:'BofA 3/12 and 7/12',summary:'Reported risk at 3+ new cards without a deposit relationship, or 7+ with one, in 12 months.',counts:'New cards across issuers visible in your card history, not just BofA cards.',scope:'Personal applications. Business-card reports conflict; do not assume identical treatment.',note:'Relationship details and exceptions matter. These are reported thresholds, not guaranteed denials.',source:'https://www.doctorofcredit.com/report-bank-of-america-7-12-rule-3-12-rule-for-new-cards/',sourceLabel:'Doctor of Credit • report published 2019-09-24'},
+    {name:'Chase 2/30',summary:'Commonly reported limit of 2 Chase approvals in 30 days.',counts:'Recent Chase approvals. It is separate from the count of cards opened across banks for 5/24.',scope:'Personal and business timing need care. Reports about a stricter business 1/30 limit conflict.',note:'Use this as a timing warning, not a promise that the next application will be approved or denied.',source:'https://pointsnav.com/credit-cards/rules/chase-2-30',sourceLabel:'Points Navigator • reported rule'},
+    {name:'Citi 1/8 and 2/65',summary:'Usually 1 personal application per 8 days and 2 per 65 days.',counts:'Application dates, including processed applications that were denied. Account-opening dates alone cannot measure this accurately.',scope:'Personal cards. Business applications and EIN/SSN combinations have additional nuances.',note:'Cardimize does not calculate this from your saved card opening dates.',source:'https://www.doctorofcredit.com/citis-application-rule-explained-865-rule/',sourceLabel:'Doctor of Credit • report updated 2023-11-03'},
+    {name:'Amex 2/90',summary:'Usually no more than 2 new revolving credit cards in 90 days.',counts:'Amex revolving credit-card approvals. Charge cards generally fall outside this reported limit.',scope:'Personal and business revolving cards. Business Gold and Business Platinum are generally excluded as charge cards.',note:'Separate from Amex welcome-bonus eligibility and its application eligibility message.',source:'https://wallethub.com/answers/cc/amex-90-days-rule-2140846822/',sourceLabel:'WalletHub • reported rule'}
+  ]
+};
+function bankRuleEntryHTML(r){return `<details class="card" style="margin-top:10px"><summary><b>${r.name}</b></summary><p style="margin:10px 0">${r.summary}</p><div class="small"><b>What counts:</b> ${r.counts}</div><div class="small" style="margin-top:8px"><b>Personal or business?</b> ${r.scope}</div><div class="small" style="margin-top:8px">${r.note}</div><div class="small" style="margin-top:10px"><a href="${r.source}" target="_blank" rel="noopener noreferrer">${r.sourceLabel} ↗</a><br>Last checked ${BANK_APPLICATION_RULES_CHECKED}</div></details>`}
+function bankRulesPage(){return `<button class="btn ghost" onclick="showView('moreView')">← Optimize</button><div class="welcome" style="margin-top:12px"><h2>Bank application rules</h2><p>Know what may affect your next card or bonus.</p></div><div class="note"><b>Getting a card and getting its bonus are different.</b><div class="small" style="margin-top:6px">Check the terms shown with your application. These reference notes do not guarantee approval or change your recommendations by themselves.</div></div><div class="section">Official issuer rules</div><div class="section-hint">Published offer terms. Rules can differ by card and where you apply. “May not be eligible” means a warning, not a definite denial.</div>${BANK_APPLICATION_RULES.official.map(bankRuleEntryHTML).join('')}<div class="section">Reported approval patterns</div><div class="section-hint">Patterns from applicant reports and independent sources. Helpful for timing, but not published issuer guarantees. The source date is shown so older evidence stays visible.</div>${BANK_APPLICATION_RULES.reported.map(bankRuleEntryHTML).join('')}<div class="note" style="margin-top:14px"><b>Missing rules stay unknown.</b><div class="small" style="margin-top:6px">Prior ownership alone is not proof that another bonus is unavailable. This includes BofA Customized Cash Rewards when no current issuer restriction is verified.</div></div>`}
+function bankRulesLinkHTML(){return `<div class="small" style="margin-top:10px"><button class="btn ghost" style="padding:7px 10px" onclick="showView('bankRulesView')">Check bank application rules →</button></div>`}
+
 function morePage(){
-  return `<div class="welcome"><div class="small">MORE</div><h2>Strategy & settings</h2><p>Advanced tools stay here so the main Cardimize experience stays simple.</p></div><div class="more-list" style="margin-top:14px">
+  return `<div class="welcome"><div class="small">MORE</div><h2>Optimize</h2><p>Get more from your cards. Plan your next move.</p></div><div class="more-list" style="margin-top:14px">
+  <button class="more-row" onclick="showView('bankRulesView')"><span><b>Bank application rules</b><span>Official bonus rules and reported approval patterns.</span></span><span class="more-arrow">›</span></button>
   <button class="more-row" onclick="showView('relationshipsView')"><span><b>Banking & investment relationships</b><span>BofA/Merrill, Citi, Schwab, Morgan Stanley, Bilt, Robinhood, and more.</span></span><span class="more-arrow">›</span></button>
   <button class="more-row" onclick="showView('benefitsView')"><span><b>Benefits & saved strategies</b><span>Companion benefits, expiration dates, and saved timing strategies.</span></span><span class="more-arrow">›</span></button>
   <button class="more-row" onclick="openPreferencePicker()"><span><b>Advanced preferences</b><span>5/24 preservation, spend limits, reward categories, overlap, and eligibility.</span></span><span class="more-arrow">›</span></button>
@@ -1814,8 +1839,9 @@ function render(){
   $('#benefitsView').innerHTML=benefits();
   $('#relationshipsView').innerHTML=relationshipsPage();
   $('#moreView').innerHTML=morePage();
+  $('#bankRulesView').innerHTML=bankRulesPage();
 }
-function showView(id,preserveScroll=false){const y=window.scrollY;$$('main section').forEach(s=>s.classList.add('hidden')); $('#'+id).classList.remove('hidden'); $$('.tab').forEach(t=>t.classList.toggle('active',t.dataset.view===id)); const titles={homeView:'Cardimize',cardsView:'My Cards',applyView:'Find a Card',offersView:'Browse Cards',benefitsView:'Benefits & Strategies',relationshipsView:'Relationships',moreView:'More'}; $('#title').textContent=titles[id]||'Cardimize'; if(preserveScroll){requestAnimationFrame(()=>window.scrollTo(0,y));}else{window.scrollTo(0,0)}}
+function showView(id,preserveScroll=false){const y=window.scrollY;$$('main section').forEach(s=>s.classList.add('hidden')); $('#'+id).classList.remove('hidden'); $$('.tab').forEach(t=>t.classList.toggle('active',(t.dataset.view===id||(id==='bankRulesView'&&t.dataset.view==='moreView')))); const titles={homeView:'Cardimize',cardsView:'My Cards',applyView:'Find a Card',offersView:'Browse Cards',benefitsView:'Benefits & Strategies',relationshipsView:'Relationships',moreView:'Optimize',bankRulesView:'Bank application rules'}; $('#title').textContent=titles[id]||'Cardimize'; if(preserveScroll){requestAnimationFrame(()=>window.scrollTo(0,y));}else{window.scrollTo(0,0)}}
 $$('.tab').forEach(t=>t.onclick=()=>t.dataset.view==='applyView'?openFindFlow():showView(t.dataset.view));
 async function loadCatalog(){
   try{
