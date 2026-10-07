@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>Cardimize v11.3.38</title>
+  <title>Cardimize v11.3.39</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -127,7 +127,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Your next card, made simple.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.38</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Your next card, made simple.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.39</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -160,7 +160,7 @@ let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
 let BUSINESS_CATALOG=[];
 let PERSONAL_CATALOG=[];
 const CATALOG_VERSION='2026-10-06.3';
-// v11.3.38: prior ownership is neutral unless a verified official issuer rule restricts eligibility; previously held cards no longer count as current benefit overlap.
+// v11.3.39: prior ownership is neutral unless a verified official issuer rule restricts eligibility; previously held cards no longer count as current benefit overlap.
 
 function migrateV8(){
   data.profile=data.profile||{};
@@ -1810,6 +1810,7 @@ const BANK_APPLICATION_RULES={
     {name:'Wells Fargo Autograph',summary:'Recent Wells Fargo openings may affect approval and introductory offers.',counts:'A Wells Fargo consumer card opened within 4 months may affect approval. Currently holding Autograph or opening it within 48 months may affect its bonus and introductory offers, even if closed.',scope:'Consumer Autograph offer; not a blanket business-card rule.',note:'Approval and welcome-bonus eligibility are separate checks.',source:'https://creditcards.wellsfargo.com/autograph-visa-credit-card/',sourceLabel:'Wells Fargo offer terms'}
   ],
   reported:[
+    {name:'Chase 5/24',summary:'Opening 5 or more cards that count in the last 24 months usually makes approval harder for most Chase cards.',counts:'New personal credit-card accounts across banks in the last 24 months, including accounts since closed. Business accounts that report as personal may count too. Authorized-user accounts can be counted automatically; reconsideration may exclude them.',scope:'Most Chase personal and business applications are subject to the reported rule. Chase business cards generally do not add to the count after approval because they usually do not report as personal accounts.',note:'This is a widely reported approval pattern, not a published welcome-bonus rule. Product exceptions and application-channel differences can exist. Being under 5/24 does not guarantee approval.',source:'https://thepointsguy.com/credit-cards/ultimate-guide-chase-5-24-rule/',sourceLabel:'The Points Guy • reported rule'},
     {name:'BofA 2/3/4',summary:'Reported limit: 2 BofA cards in 2 months, 3 in 12 months, 4 in 24 months.',counts:'New BofA card approvals in rolling periods. Cards from other banks are not part of this count.',scope:'Commonly used for personal-card planning. Business-card treatment needs a separate check.',note:'An approval-timing pattern, not a repeat-bonus restriction. Relationship exceptions have been reported.',source:'https://www.doctorofcredit.com/httpswww-doctorofcredit-combank-america-312-rule-credit-card-approvals-contribute-data-points/',sourceLabel:'Doctor of Credit • report published 2017-10-04'},
     {name:'BofA 3/12 and 7/12',summary:'Reported risk at 3+ new cards without a deposit relationship, or 7+ with one, in 12 months.',counts:'New cards across issuers visible in your card history, not just BofA cards.',scope:'Personal applications. Business-card reports conflict; do not assume identical treatment.',note:'Relationship details and exceptions matter. These are reported thresholds, not guaranteed denials.',source:'https://www.doctorofcredit.com/report-bank-of-america-7-12-rule-3-12-rule-for-new-cards/',sourceLabel:'Doctor of Credit • report published 2019-09-24'},
     {name:'Chase 2/30',summary:'Commonly reported limit of 2 Chase approvals in 30 days.',counts:'Recent Chase approvals. It is separate from the count of cards opened across banks for 5/24.',scope:'Personal and business timing need care. Reports about a stricter business 1/30 limit conflict.',note:'Use this as a timing warning, not a promise that the next application will be approved or denied.',source:'https://pointsnav.com/credit-cards/rules/chase-2-30',sourceLabel:'Points Navigator • reported rule'},
