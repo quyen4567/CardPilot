@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>Cardimize v11.3.40</title>
+  <title>Cardimize v11.3.42</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -127,7 +127,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Your next card, made simple.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.40</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Your next card, made simple.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.42</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -159,8 +159,8 @@ let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
 // Card catalog is loaded from cards.json so offer/link updates do not require rebuilding the UI.
 let BUSINESS_CATALOG=[];
 let PERSONAL_CATALOG=[];
-const CATALOG_VERSION='2026-10-06.3';
-// v11.3.40: prior ownership is neutral unless a verified official issuer rule restricts eligibility; previously held cards no longer count as current benefit overlap.
+const CATALOG_VERSION='2026-10-07.2';
+// v11.3.42: prior ownership is neutral unless a verified official issuer rule restricts eligibility; previously held cards no longer count as current benefit overlap.
 
 function migrateV8(){
   data.profile=data.profile||{};
@@ -1040,9 +1040,10 @@ function emptyRecommendationHTML(){
   return `<div class="note"><b>No cards match all your settings.</b><div class="small" style="margin-top:5px">Try changing a preference or broaden the search.</div><button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleBroadenSearch()">${data.profile.broadenSearch?'Use original search':'Broaden search'}</button></div>`;
 }
 function isNewlyLaunchedCard(o){
-  if(o&&o.newlyLaunched===true)return true;
-  if(o&&o.launchDate){const d=new Date(String(o.launchDate)+'T12:00:00');if(!Number.isNaN(d.getTime())){const age=(Date.now()-d.getTime())/86400000;if(age>=0&&age<=180)return true;}}
-  return false;
+  if(!o)return false;
+  const dates=[o.launchDate,o.refreshDate].filter(Boolean);
+  if(dates.length)return dates.some(value=>{const d=new Date(String(value)+'T00:00:00Z');const age=(Date.now()-d.getTime())/86400000;return !Number.isNaN(d.getTime())&&age>=0&&age<=180;});
+  return o.newlyLaunched===true;
 }
 function offerVisualBadgesHTML(o){
   const b=[];

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-10-07.1",
+  "catalogVersion": "2026-10-07.2",
   "generatedAt": "2026-10-07",
   "cards": [
     {
@@ -1053,7 +1053,7 @@
       "type": "Business",
       "bonus": 70000,
       "unit": "Atmos points + $99 companion fare",
-      "hist": null,
+      "hist": 80000,
       "spend": 4000,
       "af": 95,
       "reports": false,
@@ -1064,8 +1064,13 @@
         "airline",
         "atmos"
       ],
-      "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histResearchDate": "2026-10-07",
+      "histStatus": "verified-public-high",
+      "histPublicDate": "2025-09",
+      "histPublicSpend": 5000,
+      "histSourceLabel": "Alaska Airlines announcement; The Points Guy offer history",
+      "histSourceUrl": "https://news.alaskaair.com/loyalty/introducing-atmos-for-business-an-innovative-ecosystem-for-business-travel-that-rewards-companies-and-their-employees/",
+      "histAlternativeNote": "80,000-point public offer documented by Alaska Airlines; public spend requirement and offer periods corroborated by The Points Guy. Higher special-channel offers are not included in this public comparison."
     },
     {
       "id": 7501,
