@@ -1,6 +1,6 @@
 {
   "catalogVersion": "2026-10-07.2",
-  "checkedAt": "2026-10-09T14:34:21.956Z",
+  "checkedAt": "2026-10-10T14:26:48.866Z",
   "counts": {
     "verified": 29,
     "needs_review": 13,
@@ -29,7 +29,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 15 days old."
+        "Verification is 16 days old."
       ],
       "detectedOffer": {
         "confidence": "high",
@@ -40,7 +40,7 @@
         "snippet": "Earn $750 cash back after you spend $6,000",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7002,
@@ -59,7 +59,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 15 days old."
+        "Verification is 16 days old."
       ],
       "detectedOffer": {
         "confidence": "high",
@@ -70,7 +70,7 @@
         "snippet": "Earn $750 cash back after you spend $6,000",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7007,
@@ -112,7 +112,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7009,
@@ -140,7 +140,7 @@
         "snippet": "80,000 points after you spend $3,000 on purchases",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7010,
@@ -180,7 +180,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7011,
@@ -220,7 +220,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7401,
@@ -244,7 +244,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7402,
@@ -268,7 +268,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7403,
@@ -292,7 +292,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8001,
@@ -327,7 +327,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8002,
@@ -362,7 +362,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8004,
@@ -397,7 +397,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8005,
@@ -425,7 +425,7 @@
         "snippet": "Earn 50,000 bonus points * 2X points on Southwest Airlines purchases and on the first $5,000 in combined purchases at gas stations and grocery stores per year * 1X points on all other purchases * NEW CARDMEMBER OFFER Earn 50,000 bonus points after you spend $1,000",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8006,
@@ -453,7 +453,7 @@
         "snippet": "Earn 55,000 bonus points * 3X points on Southwest Airlines purchases * 2X points on the first $8,000 in combined purchases at grocery stores and restaurants per year * NEW CARDMEMBER OFFER Earn 55,000 bonus points after you spend $1,500",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8007,
@@ -481,7 +481,7 @@
         "snippet": "Earn 60,000 bonus points * 4X points on Southwest Airlines purchases * 2X points at gas stations and restaurants * NEW CARDMEMBER OFFER Earn 60,000 bonus points after you spend $2,000",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8008,
@@ -519,7 +519,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8009,
@@ -557,7 +557,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8010,
@@ -595,7 +595,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8011,
@@ -633,7 +633,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8013,
@@ -670,7 +670,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8014,
@@ -707,7 +707,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8018,
@@ -751,7 +751,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8201,
@@ -779,7 +779,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8202,
@@ -807,7 +807,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8203,
@@ -835,7 +835,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8205,
@@ -850,14 +850,14 @@
       "missingTerms": [],
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8210,
@@ -871,14 +871,14 @@
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8301,
@@ -902,7 +902,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8303,
@@ -930,7 +930,7 @@
         "snippet": "20,000 bonus miles once you spend $500 on purchases",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8304,
@@ -954,7 +954,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8305,
@@ -978,7 +978,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8403,
@@ -1004,7 +1004,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8404,
@@ -1018,14 +1018,14 @@
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8405,
@@ -1049,7 +1049,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8406,
@@ -1084,7 +1084,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8407,
@@ -1119,7 +1119,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8601,
@@ -1148,7 +1148,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8604,
@@ -1178,7 +1178,7 @@
         "snippet": "Get a $200 bonus For a limited time, earn a $200 rewards bonus after you spend $1,000",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8802,
@@ -1205,7 +1205,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8815,
@@ -1229,7 +1229,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8022,
@@ -1271,7 +1271,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8905,
@@ -1301,7 +1301,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7003,
@@ -1310,9 +1310,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7004,
@@ -1321,9 +1321,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7005,
@@ -1332,9 +1332,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7006,
@@ -1343,9 +1343,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7008,
@@ -1354,9 +1354,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7101,
@@ -1365,9 +1365,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7102,
@@ -1376,9 +1376,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7103,
@@ -1388,9 +1388,9 @@
       "source": "catalog-only",
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7104,
@@ -1399,9 +1399,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7105,
@@ -1411,9 +1411,9 @@
       "source": "catalog-only",
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7106,
@@ -1423,9 +1423,9 @@
       "source": "catalog-only",
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7107,
@@ -1435,9 +1435,9 @@
       "source": "catalog-only",
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7108,
@@ -1447,9 +1447,9 @@
       "source": "catalog-only",
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7109,
@@ -1459,9 +1459,9 @@
       "source": "catalog-only",
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7110,
@@ -1470,9 +1470,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7111,
@@ -1481,9 +1481,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7201,
@@ -1492,9 +1492,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7202,
@@ -1503,9 +1503,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7203,
@@ -1514,9 +1514,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7204,
@@ -1525,9 +1525,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7205,
@@ -1536,9 +1536,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7206,
@@ -1547,9 +1547,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7207,
@@ -1558,9 +1558,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7301,
@@ -1570,9 +1570,9 @@
       "source": "catalog-only",
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7302,
@@ -1581,9 +1581,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7404,
@@ -1592,9 +1592,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7501,
@@ -1603,9 +1603,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7502,
@@ -1615,9 +1615,9 @@
       "source": "catalog-only",
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7503,
@@ -1626,9 +1626,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7504,
@@ -1637,9 +1637,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7505,
@@ -1648,9 +1648,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7601,
@@ -1659,9 +1659,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7701,
@@ -1670,9 +1670,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 7702,
@@ -1682,9 +1682,9 @@
       "source": "catalog-only",
       "issues": [
         "Bonus is present but spend requirement is missing.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8003,
@@ -1693,9 +1693,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8012,
@@ -1706,9 +1706,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8015,
@@ -1719,9 +1719,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8016,
@@ -1732,9 +1732,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8017,
@@ -1745,9 +1745,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8019,
@@ -1758,9 +1758,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8020,
@@ -1771,9 +1771,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8021,
@@ -1784,9 +1784,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8101,
@@ -1795,9 +1795,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8102,
@@ -1807,9 +1807,9 @@
       "source": "catalog-only",
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8103,
@@ -1820,9 +1820,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8104,
@@ -1831,9 +1831,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8105,
@@ -1842,9 +1842,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8106,
@@ -1854,9 +1854,9 @@
       "source": "catalog-only",
       "issues": [
         "Bonus is present but spend requirement is missing.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8107,
@@ -1867,9 +1867,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8108,
@@ -1880,9 +1880,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8109,
@@ -1893,9 +1893,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8110,
@@ -1906,9 +1906,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8111,
@@ -1919,9 +1919,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8112,
@@ -1931,9 +1931,9 @@
       "source": "catalog-only",
       "issues": [
         "Bonus is present but spend requirement is missing.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8113,
@@ -1943,9 +1943,9 @@
       "source": "catalog-only",
       "issues": [
         "Bonus is present but spend requirement is missing.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8114,
@@ -1955,9 +1955,9 @@
       "source": "catalog-only",
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8115,
@@ -1967,9 +1967,9 @@
       "source": "catalog-only",
       "issues": [
         "Bonus is present but spend requirement is missing.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8204,
@@ -1978,9 +1978,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8206,
@@ -1989,9 +1989,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8207,
@@ -2002,9 +2002,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8208,
@@ -2015,9 +2015,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8209,
@@ -2027,9 +2027,9 @@
       "source": "catalog-only",
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8302,
@@ -2038,9 +2038,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8401,
@@ -2049,9 +2049,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8402,
@@ -2060,9 +2060,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8408,
@@ -2073,9 +2073,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8409,
@@ -2086,9 +2086,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8501,
@@ -2099,9 +2099,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8502,
@@ -2110,9 +2110,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8503,
@@ -2121,9 +2121,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8504,
@@ -2134,9 +2134,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8505,
@@ -2146,9 +2146,9 @@
       "source": "catalog-only",
       "issues": [
         "Bonus is present but spend requirement is missing.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8506,
@@ -2159,9 +2159,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8507,
@@ -2172,9 +2172,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8508,
@@ -2185,9 +2185,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8602,
@@ -2198,9 +2198,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8603,
@@ -2211,9 +2211,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8605,
@@ -2222,9 +2222,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8606,
@@ -2234,9 +2234,9 @@
       "source": "catalog-only",
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8701,
@@ -2245,9 +2245,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8702,
@@ -2258,9 +2258,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8703,
@@ -2271,9 +2271,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8704,
@@ -2284,9 +2284,9 @@
       "issues": [
         "Catalog contradiction: verified=true while offer note says Verify current offer.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8705,
@@ -2295,9 +2295,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8706,
@@ -2307,9 +2307,9 @@
       "source": "catalog-only",
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8801,
@@ -2319,9 +2319,9 @@
       "source": "catalog-only",
       "issues": [
         "Bonus is present but spend requirement is missing.",
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8816,
@@ -2331,9 +2331,9 @@
       "source": "catalog-only",
       "issues": [
         "Bonus is present but spend requirement is missing.",
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8817,
@@ -2342,9 +2342,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8803,
@@ -2354,9 +2354,9 @@
       "source": "catalog-only",
       "issues": [
         "Bonus is present but spend requirement is missing.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8804,
@@ -2366,9 +2366,9 @@
       "source": "catalog-only",
       "issues": [
         "Bonus is present but spend requirement is missing.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8805,
@@ -2377,9 +2377,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8806,
@@ -2388,9 +2388,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8807,
@@ -2399,9 +2399,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8808,
@@ -2411,9 +2411,9 @@
       "source": "catalog-only",
       "issues": [
         "Bonus is present but spend requirement is missing.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8809,
@@ -2423,9 +2423,9 @@
       "source": "catalog-only",
       "issues": [
         "Bonus is present but spend requirement is missing.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8810,
@@ -2435,9 +2435,9 @@
       "source": "catalog-only",
       "issues": [
         "Bonus is present but spend requirement is missing.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8811,
@@ -2447,9 +2447,9 @@
       "source": "catalog-only",
       "issues": [
         "Bonus is present but spend requirement is missing.",
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8812,
@@ -2458,7 +2458,7 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8901,
@@ -2467,9 +2467,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 15 days old."
+        "Verification is 16 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8902,
@@ -2478,9 +2478,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 15 days old."
+        "Verification is 16 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8903,
@@ -2489,9 +2489,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 15 days old."
+        "Verification is 16 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     },
     {
       "id": 8904,
@@ -2500,9 +2500,9 @@
       "status": "unmonitored",
       "source": "catalog-only",
       "issues": [
-        "Verification is 15 days old."
+        "Verification is 16 days old."
       ],
-      "checkedAt": "2026-10-09T14:34:21.956Z"
+      "checkedAt": "2026-10-10T14:26:48.866Z"
     }
   ]
 }
