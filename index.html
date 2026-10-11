@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>Cardimize v11.3.43</title>
+  <title>Cardimize v11.3.44</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -86,6 +86,11 @@
     .home-mini b{color:#172033}
     .hero-cta{background:var(--blue);color:#fff;border-radius:14px;box-shadow:0 6px 16px rgba(36,107,253,.18)}
     .hero-foot{color:#98a2b3}
+    .home-expert{margin-top:20px;padding:20px 18px;background:#f6f7fa;border-radius:22px}
+    .home-expert h3{margin:0 0 10px;font-size:18px;line-height:1.3}
+    .home-expert p{margin:0 0 16px;color:var(--muted);font-size:13px;line-height:1.5}
+    .home-expert .btn{width:100%;padding:13px 10px;font-size:14px}
+    .home-expert .expert-optimize{display:block;width:100%;margin-top:12px;background:transparent;color:var(--blue);font-size:13px;box-shadow:none}
     .snapshot{background:#f8fafc;border:0;box-shadow:none;padding:14px 15px}
     .slot{background:#e9edf2}.slot.used{background:#246bfd}
     .home-grid{gap:9px}
@@ -127,7 +132,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Find the right credit card for you.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.43</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Find the right credit card for you.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.44</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -1381,6 +1386,7 @@ function browseCards(){showView('offersView')}
 function home(){
   return `<div class="home-stage">
     <div class="home-hero"><div class="eyebrow">MAXIMIZE YOUR CREDIT CARD REWARDS</div><h2>Earn more from the money you already spend.</h2><p>Find a credit card for more cash back, travel rewards, or a great sign-up bonus.</p><button class="hero-cta" onclick="openFindFlow()">Find my credit card →</button><div class="hero-foot">3 easy questions.</div></div>
+    <div class="home-expert"><h3>Know what you’re looking for?</h3><p>Compare rewards, bonuses, and fees with your own filters.</p><button class="btn ghost" onclick="browseCards()">Browse &amp; filter credit cards →</button><button class="expert-optimize" onclick="showView('moreView')">Optimize your next move →</button></div>
   </div>`
 }
 
@@ -1797,11 +1803,28 @@ function offers(){
   const p=marketPath();
   return `<div class="between"><div><div class="section" style="margin-top:0">${p==='business'?'Business card market':p==='personal'?'Personal card market':'Card market'}</div><div class="small"><b>${list.length}</b> shown • <b>${total}</b> total cards in catalog • ${businessCount} business • ${personalCount} personal • snapshot ${data.catalogVersion||''}</div></div></div>
   <div class="card" style="margin:12px 0"><div class="small">BROWSE</div><div class="row" style="margin-top:8px;flex-wrap:wrap"><button class="btn ${p==='business'?'':'ghost'}" onclick="setMarketPath('business')">Business</button><button class="btn ${p==='personal'?'':'ghost'}" onclick="setMarketPath('personal')">Personal</button><button class="btn ${p==='either'?'':'ghost'}" onclick="setMarketPath('either')">Both</button></div><div class="help">Browse is independent from your recommendation answers. Switching this filter will not change your Find-a-Card strategy.</div><div class="field" style="margin-top:12px"><label class="field-label">Search this market</label><input id="marketSearch" placeholder="Search issuer, card, airline, hotel, cash back…" oninput="filterMarket()"></div></div>
+  <div class="card formgrid" style="margin-bottom:12px"><div class="field"><label class="field-label" for="marketReward">Rewards</label><select id="marketReward" onchange="filterMarket()"><option value="all">All rewards</option><option value="cash">Cash back</option><option value="points">Points &amp; travel rewards</option></select></div><div class="field"><label class="field-label" for="marketFee">Annual fee</label><select id="marketFee" onchange="filterMarket()"><option value="all">Any annual fee</option><option value="0">$0 annual fee</option><option value="95">Up to $95</option><option value="250">Up to $250</option><option value="550">Up to $550</option></select></div><div class="field"><label class="field-label" for="marketBonus">Sign-up bonus</label><select id="marketBonus" onchange="filterMarket()"><option value="all">All offers</option><option value="bonus">With a sign-up bonus</option><option value="historical">Historical-high bonus</option><option value="newlaunch">New or refreshed cards</option></select></div></div>
   <div class="note" style="margin-bottom:12px"><b>Neutral catalog view:</b> Cards are not grayed out because they do not fit your current preferences. Missing offer data is labeled separately as <b>Offer needs verification</b>.</div>
   <div id="marketGroups">${issuers.map(issuer=>`<div class="market-group" data-issuer="${issuer.toLowerCase()}"><div class="section">${issuer}</div><div class="list">${list.filter(o=>(o.issuer||'Other')===issuer).map(o=>`<div class="market-card" data-search="${`${o.name} ${o.issuer} ${(o.tags||[]).join(' ')} ${o.status||''} ${o.promoNote||''} ${o.promoCashBackRate||''}`.toLowerCase()}">${marketCard(o)}</div>`).join('')}</div></div>`).join('')}</div>
   <div class="note" style="margin-top:16px"><b>Database structure:</b> Card identity is kept separate from changing offer information in the recommendation logic. Statuses such as closed-new, membership, regional, or availability-varies are retained so existing users can track cards without Cardimize pretending they are universally open to new applicants. Offers change frequently and should be verified before application.</div>`;
 }
-function filterMarket(){const q=($('#marketSearch')?.value||'').trim().toLowerCase();$$('.market-card').forEach(el=>el.style.display=!q||el.dataset.search.includes(q)?'':'none');$$('.market-group').forEach(g=>{const any=[...g.querySelectorAll('.market-card')].some(x=>x.style.display!=='none');g.style.display=any?'':'none'})}
+function filterMarket(){
+  const q=($('#marketSearch')?.value||'').trim().toLowerCase();
+  const reward=$('#marketReward')?.value||'all', fee=$('#marketFee')?.value||'all', bonus=$('#marketBonus')?.value||'all';
+  const list=marketOffers();
+  $$('.market-group').forEach(g=>{
+    const groupOffers=list.filter(o=>String(o.issuer||'Other').toLowerCase()===g.dataset.issuer);
+    [...g.querySelectorAll('.market-card')].forEach((el,i)=>{
+      const o=groupOffers[i]; if(!o)return;
+      const cash=cashRedemptionInfo(o), isCash=cash.kind==='cash'||cash.kind==='equivalent';
+      const rewardMatch=reward==='all'||(reward==='cash'?isCash:!!pointCurrency(o));
+      const feeMatch=fee==='all'||Number(o.af||0)<=Number(fee);
+      const bonusMatch=bonus==='all'||(bonus==='bonus'?Number(o.bonus||0)>0:bonus==='historical'?!!o.verified&&historicalHighInfo(o).isHigh:isNewlyLaunchedCard(o));
+      el.style.display=(!q||el.dataset.search.includes(q))&&rewardMatch&&feeMatch&&bonusMatch?'':'none';
+    });
+    g.style.display=[...g.querySelectorAll('.market-card')].some(x=>x.style.display!=='none')?'':'none';
+  });
+}
 
 function benefits(){const sorted=[...data.benefits].sort((a,b)=>new Date(a.expires||'2999-12-31')-new Date(b.expires||'2999-12-31'));const sw=savedStrategy('southwest_cp');return `<div class="between"><div class="section" style="margin-top:0">Benefits & Strategies</div><button onclick="showAddBenefit()">+ Add</button></div><div class="card strategy-card" style="margin-bottom:12px"><div class="small">COMPANION BENEFITS</div><h3>Track passes, fares, and certificates</h3><div class="small">Cardimize uses expiration dates to avoid recommending unnecessary overlap and to suggest when to plan the next companion benefit.</div></div><div id="addBenefitBox"></div><div class="list">${sorted.map(b=>`<div class="item between"><div><div class="item-title">${b.name}</div><div class="meta">${b.kind==='companion'?'Companion benefit • ':''}${b.program?b.program+' • ':''}${b.value||''}${b.expires?' • Expires '+b.expires:''}</div></div>${b.expires?`<span class="pill ${daysTo(b.expires)<60?'red':daysTo(b.expires)<120?'amber':'green'}">${daysTo(b.expires)} days</span>`:''}</div>`).join('')||'<div class="empty">No benefits tracked yet.</div>'}</div><div class="section">Saved Strategies</div><div class="card"><h3>Southwest Companion Pass timing</h3><div class="small">Save a target qualification year only if you want Cardimize to preserve Southwest opportunities for that plan.</div><div class="formgrid" style="margin-top:10px"><div class="field"><label class="field-label">Target qualification year</label><input id="swTarget" type="number" min="2026" max="2035" value="${sw?.targetYear||''}" placeholder="e.g. 2028"></div><div class="field"><label class="field-label">Optional note</label><input id="swNote" value="${sw?.note||''}" placeholder="e.g. wait until current pass ends"></div></div><div class="row" style="margin-top:10px"><button onclick="saveSouthwestStrategy()">Save strategy</button>${sw?`<button class="btn ghost" onclick="removeSouthwestStrategy()">Remove</button>`:''}</div></div>`}
 function showAddBenefit(){const box=$('#addBenefitBox');if(!box)return;box.innerHTML=`<div class="card" style="margin-bottom:12px"><h3>Add benefit</h3><div class="formgrid"><div class="field"><label class="field-label">Benefit name</label><input id="bn" placeholder="e.g. Atmos companion fare"></div><div class="field"><label class="field-label">Type</label><select id="bk"><option value="general">General benefit</option><option value="companion">Companion pass / fare / certificate</option></select></div><div class="field"><label class="field-label">Airline / program</label><input id="bp" placeholder="e.g. Southwest, Atmos"></div><div class="field"><label class="field-label">Expiration date</label><input id="be" type="date"></div></div><div class="field" style="margin-top:10px"><label class="field-label">Value / note</label><input id="bv" placeholder="Optional note"></div><button style="margin-top:10px" onclick="addBenefit()">Save benefit</button></div>`}
