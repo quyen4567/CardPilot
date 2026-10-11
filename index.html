@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>Cardimize v11.3.42</title>
+  <title>Cardimize v11.3.43</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -77,9 +77,9 @@
     .home-stage{margin:0}
     .home-hero{background:#fff;color:var(--text);border:0;border-radius:24px;padding:20px 18px 18px;box-shadow:0 8px 28px rgba(16,24,40,.055)}
     .home-hero:before{width:150px;height:150px;border:0;background:radial-gradient(circle,rgba(36,107,253,.09),rgba(36,107,253,0) 70%);right:-35px;top:-50px}
-    .home-hero:after{color:#246bfd;opacity:.13;font-size:40px;right:20px;top:16px}
+    .home-hero:after{content:none}
     .eyebrow{color:#246bfd;opacity:1;font-size:10px;letter-spacing:.11em}
-    .home-hero h2{color:#172033;font-size:29px;line-height:1.05;margin:8px 0 9px}
+    .home-hero h2{color:#172033;font-size:28px;line-height:1.15;margin:14px 0 14px}
     .home-hero p{color:#667085;font-size:13px;line-height:1.5}
     .home-minirow{gap:8px;margin-top:14px}
     .home-mini{background:#f7f9fc;border:0;color:#667085;border-radius:13px;padding:10px 11px}
@@ -127,7 +127,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Your next card, made simple.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.42</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Find the right credit card for you.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.43</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -1379,22 +1379,8 @@ function restartFindFlow(){
 }
 function browseCards(){showView('offersView')}
 function home(){
-  const f=five24(), top=rankedOffers().find(x=>x.fit.status==='consider')||rankedOffers()[0];
-  const exp=[...data.benefits].filter(b=>b.expires).sort((a,b)=>new Date(a.expires)-new Date(b.expires))[0];
-  const historyKnown=recentCardHistoryKnown();
-  const used=historyKnown?Math.max(0,Math.min(5,f)):0;
-  const slotsLeft=historyKnown?Math.max(0,5-f):null;
   return `<div class="home-stage">
-    <div class="home-hero"><div class="eyebrow">CARDIMIZE • MORE FROM YOUR CARDS</div><h2>Make your next card work for you. ✨</h2><p>Tell us what matters to you. We’ll compare rewards, bonuses and fees to help you choose a card that fits.</p><div class="home-minirow"><div class="home-mini"><b>${historyKnown?f+' card'+(f===1?'':'s'):'Add your cards'}</b>${historyKnown?'opened in the last 24 months':'for more personal suggestions'}</div><div class="home-mini"><b>${data.offers.length} cards</b>to compare</div></div><button class="hero-cta" onclick="openFindFlow()">Find my credit card →</button><div class="hero-foot">3 quick choices. Find your fit.</div></div>
-    <div class="snapshot"><div class="snapshot-top"><div><div class="snapshot-title">${historyKnown?'YOUR RECENT CARDS':'LET’S MAKE IT PERSONAL'}</div><div class="snapshot-count">${historyKnown?f+' card'+(f===1?'':'s'):'Your cards'}</div></div><span class="trust-chip">${historyKnown?'✓ Used in your matches':'Add when ready'}</span></div>${historyKnown?`<div class="slot-row bigslots">${[0,1,2,3,4].map(i=>`<span class="slot ${i<used?'used':''}"></span>`).join('')}</div><div class="snapshot-note">Cards opened in the last 24 months help us check which options may fit you.</div>`:`<div class="snapshot-note">Add your cards or answer a quick question when you search. We’ll use that to help find your next card.</div>`}</div>
-    <div class="home-section-title">Explore</div><div class="home-grid">
-      <button class="home-tile" onclick="browseCards()"><span class="tile-icon">🔥</span><b>Browse cards</b><small>Explore bonuses, cash back and travel rewards.</small></button>
-      <button class="home-tile" onclick="showView('cardsView')"><span class="tile-icon">👛</span><b>My wallet</b><small>${data.cards.length} saved card${data.cards.length===1?'':'s'}, opening dates and annual fees.</small></button>
-      <button class="home-tile" onclick="showView('moreView')"><span class="tile-icon">🧭</span><b>Optimize</b><small>Fine-tune what matters to you.</small></button>
-      <button class="home-tile" onclick="setSearchMode('results');save();showView('applyView')"><span class="tile-icon">✨</span><b>My matches</b><small>See your matches and why they fit.</small></button>
-    </div>
-    ${top?`<div class="insight"><div class="insight-head"><span class="insight-label">💡 A CARD TO EXPLORE</span><span class="source-badge">Rewards & bonuses</span></div><h3>${top.offer.name}</h3><div class="small">${currentOfferLabel(top.offer)} • Annual fee ${fmt(top.offer.af||0)}</div><button class="btn ghost" style="margin-top:10px" onclick="setSearchMode('results');save();showView('applyView')">See why it fits →</button></div>`:''}
-    ${exp?`<div class="insight"><div class="insight-label">⏰ COMING UP</div><h3>${exp.name}</h3><div class="small">A saved benefit expires ${exp.expires}. Review it before it disappears.</div></div>`:''}
+    <div class="home-hero"><div class="eyebrow">MAXIMIZE YOUR CREDIT CARD REWARDS</div><h2>Earn more from the money you already spend.</h2><p>Find a credit card for more cash back, travel rewards, or a great sign-up bonus.</p><button class="hero-cta" onclick="openFindFlow()">Find my credit card →</button><div class="hero-foot">3 easy questions.</div></div>
   </div>`
 }
 
