@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>Cardimize v11.3.44</title>
+  <title>Cardimize v11.3.45</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -91,6 +91,10 @@
     .home-expert p{margin:0 0 16px;color:var(--muted);font-size:13px;line-height:1.5}
     .home-expert .btn{width:100%;padding:13px 10px;font-size:14px}
     .home-expert .expert-optimize{display:block;width:100%;margin-top:12px;background:transparent;color:var(--blue);font-size:13px;box-shadow:none}
+    .home-curiosity{background:#f0f5ff}
+    .home-expert-links{padding:20px 12px 8px}
+    .home-expert-links h3{font-size:15px;line-height:1.3;margin:0 0 8px}
+    .home-expert-links button{display:block;background:transparent;color:var(--blue);padding:8px 0;text-align:left;font-size:14px}
     .snapshot{background:#f8fafc;border:0;box-shadow:none;padding:14px 15px}
     .slot{background:#e9edf2}.slot.used{background:#246bfd}
     .home-grid{gap:9px}
@@ -132,7 +136,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Find the right credit card for you.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.44</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Find the right credit card for you.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.45</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -1386,7 +1390,8 @@ function browseCards(){showView('offersView')}
 function home(){
   return `<div class="home-stage">
     <div class="home-hero"><div class="eyebrow">MAXIMIZE YOUR CREDIT CARD REWARDS</div><h2>Earn more from the money you already spend.</h2><p>Find a credit card for more cash back, travel rewards, or a great sign-up bonus.</p><button class="hero-cta" onclick="openFindFlow()">Find my credit card →</button><div class="hero-foot">3 easy questions.</div></div>
-    <div class="home-expert"><h3>Know what you’re looking for?</h3><p>Compare rewards, bonuses, and fees with your own filters.</p><button class="btn ghost" onclick="browseCards()">Browse &amp; filter credit cards →</button><button class="expert-optimize" onclick="showView('moreView')">Optimize your next move →</button></div>
+    <div class="home-expert home-curiosity"><h3>Could your next credit card give you more?</h3><p>Explore cash back, travel rewards, and welcome bonuses that could fit your everyday spending.</p><button class="btn ghost" onclick="browseCards()">See what’s available →</button></div>
+    <div class="home-expert-links"><h3>Know what you’re looking for?</h3><button onclick="browseCards()">Browse &amp; filter credit cards →</button><button onclick="showView('moreView')">Optimize your next move →</button></div>
   </div>`
 }
 
