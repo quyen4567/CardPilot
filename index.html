@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>Cardimize v11.3.45</title>
+  <title>Cardimize v11.3.46</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -132,11 +132,27 @@
 .quick-subpanel{margin-top:10px;padding:10px 12px;border:1px solid #dbe4f0;border-radius:14px;background:#f8fbff}
 .quick-offer-group{margin-top:4px;padding-top:2px;border-top:1px solid #edf1f7}
 .compact-chips{grid-template-columns:repeat(auto-fit,minmax(135px,1fr))}
-</style>
+
+    /* Shared action sizing keeps anchors and buttons aligned on mobile. */
+    .rec-buttons{align-items:stretch;grid-template-columns:repeat(2,minmax(0,1fr))}
+    .rec-buttons>.btn{margin:0!important;display:flex!important;align-items:center;justify-content:center;min-height:52px;width:100%;font:700 13px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;text-align:center;padding:11px 10px}
+    .save-card{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;min-height:44px;margin-top:9px;font-size:13px}
+    .save-card[aria-pressed="true"]{background:#eef4ff;color:#205ecf;border-color:#b8ccf7}
+    .ownership-actions{margin-top:10px;font-size:12px;color:#667085}
+    .ownership-actions summary{cursor:pointer;padding:7px 0;font-weight:600}
+    .ownership-actions .row{align-items:stretch;gap:8px;margin-top:7px}
+    .ownership-actions button{flex:1;min-width:0;font-size:12px;line-height:1.35}
+    .lifestyle-check{margin-top:11px;padding:10px 12px;border-radius:12px;background:#f7f9fc;color:#475467;font-size:12px;line-height:1.5}
+    .shortlist-table{width:100%;border-collapse:collapse;font-size:12px}
+    .shortlist-table th,.shortlist-table td{padding:9px 6px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+    .shortlist-table th{color:#667085;font-weight:600}
+    .shortlist-table th:first-child{width:40%}
+    @media(max-width:350px){.rec-buttons{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Find the right credit card for you.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.45</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Find the right credit card for you.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.46</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -146,6 +162,7 @@
     <section id="relationshipsView" class="hidden"></section>
     <section id="moreView" class="hidden"></section>
     <section id="bankRulesView" class="hidden"></section>
+    <section id="savedCardsView" class="hidden"></section>
   </main>
   <nav class="tabs">
     <button class="tab active" data-view="homeView"><span>⌂</span>Home</button>
@@ -164,6 +181,7 @@ const defaultData={
   offers:[]
 };
 let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
+data.savedCardIds=Array.isArray(data.savedCardIds)?[...new Set(data.savedCardIds.map(String))]:[];
 
 // Card catalog is loaded from cards.json so offer/link updates do not require rebuilding the UI.
 let BUSINESS_CATALOG=[];
@@ -1514,7 +1532,7 @@ function historicalHighUnknownCandidates(){
 }
 function historicalUnknownCard(x){
   const o=x.offer;
-  return `<div class="item"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div><span class="pill amber">History needs verification</span></div><div style="margin-top:9px"><b>${currentOfferLabel(o)}</b></div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}<div class="small" style="margin-top:7px;color:#667085"><b>Historical high:</b> current public offer is verified, but Cardimize does not yet have a verified comparable historical public high for this card.</div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}</div>`;
+  return `<div class="item"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div><span class="pill amber">History needs verification</span></div><div style="margin-top:9px"><b>${currentOfferLabel(o)}</b></div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}<div class="small" style="margin-top:7px;color:#667085"><b>Historical high:</b> current public offer is verified, but Cardimize does not yet have a verified comparable historical public high for this card.</div>${lifestyleGuidanceHTML(o)}<div class="rec-buttons"><button class="btn ghost" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}</div>${saveCardButtonHTML(o)}${cardHistoryActionsHTML(o)}</div>`;
 }
 function refinementRankLabel(rank){
   const m={overall:'Best overall value',bonus:'Most valuable current bonus',leastspend:'Lowest spend to earn a sign-up bonus',efficiency:'Best sign-up bonus return on required spend',hist100:'Best historical-high offer',cost:'Lowest annual fee',cashEverywhere:'Highest cash back everywhere',cashCategory:'Highest cash back in a category',pointsEverywhere:'Best points/miles earning everywhere',pointsCategory:'Best points/miles earning in a category',rewards:'Best general rewards rate'};
@@ -1590,7 +1608,7 @@ function refinedRecommendationCard(x,rank){
   if(rankMode==='pointsCategory'){const pr=bestPointCategory(o);metric=pr?`<div class="small" style="margin-top:5px;color:#365d96"><b>Category earning:</b> ${pr.rate}X on ${pr.category}${pr.estimatedLow!=null?` • estimated reward value about ${pr.estimatedLow.toFixed(1)}%–${pr.estimatedHigh.toFixed(1)}%`:''}.</div>`:'';}
   if(rankMode==='hist100')metric=historicalHighInfo(o).isHigh?`<div class="small" style="margin-top:5px;color:#365d96"><b>Historical high:</b> current offer matches this card's known historical-high bonus.</div>`:`<div class="small" style="margin-top:5px;color:#667085"><b>Historical high:</b> current offer does not match the known historical high.</div>`;
   if(rankMode==='cost')metric=`<div class="small" style="margin-top:5px;color:#365d96"><b>Annual fee:</b> ${fmt(Number(o.af||0))}.</div>`;
-  return `<div class="item" style=""><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}${cashRewardText(o)}${cashPromoText(o)}${categoryCashBackText(o)}${pointEarningText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${metric}<button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
+  return `<div class="item" style=""><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}${cashRewardText(o)}${cashPromoText(o)}${categoryCashBackText(o)}${pointEarningText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${metric}${lifestyleGuidanceHTML(o)}<div class="rec-buttons"><button class="btn ghost" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}</div>${saveCardButtonHTML(o)}${cardHistoryActionsHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
 }
 function five24AfterApprovalHTML(o){
   const f=five24();
@@ -1672,14 +1690,35 @@ function toggleBroadenSearch(){
   localStorage.setItem('cardpilotData',JSON.stringify(data));
   render();showView('applyView',true);
 }
-function cardHistoryActionsHTML(o){return `<div class="row" style="gap:8px;margin-top:9px;flex-wrap:wrap"><button class="btn ghost" style="flex:1;min-width:130px" onclick="openCardHistoryModal(${o.id},'current')">✓ I have this card</button><button class="btn ghost" style="flex:1;min-width:145px" onclick="openCardHistoryModal(${o.id},'previous')">I had this card before</button></div>`}
+function cardHistoryActionsHTML(o){return `<details class="ownership-actions"><summary>Have or had this card?</summary><div class="row"><button class="btn ghost" onclick="openCardHistoryModal(${o.id},'current')">Currently have it</button><button class="btn ghost" onclick="openCardHistoryModal(${o.id},'previous')">Previously had it</button></div></details>`}
+function isCardSaved(id){return data.savedCardIds.includes(String(id))}
+function saveCardButtonHTML(o){const saved=isCardSaved(o.id);return `<button class="btn ghost save-card" data-save-card="${o.id}" aria-pressed="${saved}" onclick="toggleSavedCard(${o.id},this)">${saved?'Saved for later':'Save for later'}</button>`}
+function toggleSavedCard(id,button){
+  const key=String(id),saved=isCardSaved(id);data.savedCardIds=saved?data.savedCardIds.filter(x=>x!==key):[...data.savedCardIds,key];
+  localStorage.setItem('cardpilotData',JSON.stringify(data));
+  document.querySelectorAll('[data-save-card]').forEach(b=>{if(b.dataset.saveCard===key){b.setAttribute('aria-pressed',String(!saved));b.textContent=!saved?'Saved for later':'Save for later';}});
+  $('#savedCardsView').innerHTML=savedCardsPage();$('#moreView').innerHTML=morePage();
+  document.querySelectorAll('[data-saved-count]').forEach(b=>b.textContent=`Saved cards (${data.savedCardIds.length})`);
+}
+function cardLifestyleGuidance(o){
+  const hotel=hotelProgram(o),airline=airlineProgram(o);
+  if(hotel){const names={ihg:'IHG hotels',hyatt:'Hyatt hotels',marriott:'Marriott hotels',hilton:'Hilton hotels',wyndham:'Wyndham hotels',choice:'Choice hotels'};return `You don’t need to be a regular guest at ${names[hotel]||'this hotel brand'} to consider this card—but have a plan to use the points and make sure the benefits fit your lifestyle.`;}
+  if(airline)return 'You don’t need to fly this airline regularly to consider this card—but check its routes, have a plan to use the rewards, and make sure the benefits fit your lifestyle.';
+  return 'Consider this card if its rewards and benefits fit your lifestyle, and you can justify the annual fee with benefits you’ll actually use.';
+}
+function lifestyleGuidanceHTML(o){return `<div class="lifestyle-check"><b>Does it fit your lifestyle?</b><br>${cardLifestyleGuidance(o)}</div>`}
+function savedCardsPage(){
+  const selected=data.savedCardIds.map(id=>data.offers.find(o=>String(o.id)===id)).filter(Boolean);
+  const missing=data.savedCardIds.length-selected.length;
+  return `<div class="welcome"><h2>Saved cards</h2><p>Your shortlist to compare and consider later. Saving a card does not mark it as owned.</p></div><button class="btn ghost" onclick="showView('applyView')">Back to results</button>${missing?`<div class="note" style="margin-top:12px">${missing} saved card(s) are unavailable in the current catalog. Your saved choices are retained.</div>`:''}${selected.length?`<div class="card" style="margin-top:14px"><h3>Compare your shortlist</h3><table class="shortlist-table"><thead><tr><th scope="col">Card</th><th scope="col">Annual fee</th><th scope="col">Bonus / required spend</th></tr></thead><tbody>${selected.map(o=>`<tr><th scope="row">${o.name}</th><td>${fmt(o.af||0)}</td><td>${currentOfferLabel(o)}<br><span class="small">${currentSpendLabel(o)}</span></td></tr>`).join('')}</tbody></table><div class="small" style="margin-top:9px">Check the current issuer offer before applying. Saved cards stay here when you change your search.</div></div><div class="list" style="margin-top:14px">${selected.map(o=>`<div class="simple-rec"><div class="item-title">${o.name}</div><div class="meta">${o.issuer} • ${o.type} • Annual fee ${fmt(o.af||0)}</div><div class="rec-bonus">${currentOfferLabel(o)}</div><div class="small">${currentSpendLabel(o)}</div>${bonusValueText(o)}${lifestyleGuidanceHTML(o)}<div class="rec-buttons"><button class="btn ghost" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}</div>${saveCardButtonHTML(o)}${cardHistoryActionsHTML(o)}</div>`).join('')}</div>`:'<div class="empty">No cards saved yet. Tap “Save for later” on a recommendation or while browsing.</div>'}`;
+}
 function openCardHistoryModal(id,status){
   const o=data.offers.find(x=>x.id===id);if(!o)return;
   const old=document.getElementById('cardHistoryModal');if(old)old.remove();
   const matches=(data.cards||[]).filter(c=>normalizedCardName(c.name)===normalizedCardName(o.name));
   const historyTarget=status==='previous'&&matches.length?`<div class="field" style="margin-top:14px"><label class="field-label">Which saved account should be marked previously held?</label><select id="histExisting">${matches.map((c,i)=>`<option value="${c.id}">Account ${i+1}${c.opened?' • opened '+c.opened:''} • ${cardHoldingStatus(c)==='previous'?'previously held':'currently held'}</option>`).join('')}<option value="new">Add a separate prior account</option></select></div>`:'';
   const wrap=document.createElement('div');wrap.id='cardHistoryModal';wrap.style.cssText='position:fixed;inset:0;background:rgba(15,23,42,.48);z-index:9999;display:flex;align-items:center;justify-content:center;padding:18px';
-  wrap.innerHTML=`<div style="width:min(520px,100%);max-height:88vh;overflow:auto;background:#fff;border-radius:22px;padding:20px;box-shadow:0 18px 55px rgba(0,0,0,.28)"><div class="between"><div><div class="small">CARD HISTORY</div><h2 style="margin:4px 0 4px">${o.name}</h2><div class="small">${status==='current'?'Save this as a card you currently hold. It will be removed from recommendations that exclude cards you already have.':'Save a prior card so Cardimize can apply verified issuer welcome-bonus rules without treating it as a current holding.'}</div></div><button class="btn ghost" onclick="document.getElementById('cardHistoryModal').remove()">✕</button></div><div class="field" style="margin-top:14px"><label class="field-label">Account opened (optional)</label><input id="histOpened" type="date"></div><div class="field" style="margin-top:10px"><label class="field-label">Did you receive the welcome bonus?</label><select id="histBonus"><option value="unknown">Not sure / not recorded</option><option value="yes">Yes</option><option value="no">No</option></select></div><div class="field" style="margin-top:10px"><label class="field-label">Bonus received date (optional)</label><input id="histBonusDate" type="date"></div><div class="note" style="margin-top:12px"><b>Issuer-rule only:</b> Cardimize will use official issuer eligibility wording stored for this card. If no verified issuer rule is available, it will not invent one.</div><button class="primary-action" onclick="saveRecommendedCardHistory(${id},'${status}')">Save & rerank recommendations</button></div>`;
+  wrap.innerHTML=`<div style="width:min(520px,100%);max-height:88vh;overflow:auto;background:#fff;border-radius:22px;padding:20px;box-shadow:0 18px 55px rgba(0,0,0,.28)"><div class="between"><div><div class="small">CARD HISTORY</div><h2 style="margin:4px 0 4px">${o.name}</h2><div class="small">${status==='current'?'Save this as a card you currently hold. It will be removed from recommendations that exclude cards you already have.':'Save a prior card so Cardimize can apply verified issuer welcome-bonus rules without treating it as a current holding.'}</div></div><button class="btn ghost" onclick="document.getElementById('cardHistoryModal').remove()">✕</button></div>${historyTarget}<div class="field" style="margin-top:14px"><label class="field-label">Account opened (optional)</label><input id="histOpened" type="date"></div><div class="field" style="margin-top:10px"><label class="field-label">Did you receive the welcome bonus?</label><select id="histBonus"><option value="unknown">Not sure / not recorded</option><option value="yes">Yes</option><option value="no">No</option></select></div><div class="field" style="margin-top:10px"><label class="field-label">Bonus received date (optional)</label><input id="histBonusDate" type="date"></div><div class="note" style="margin-top:12px"><b>Issuer-rule only:</b> Cardimize will use official issuer eligibility wording stored for this card. If no verified issuer rule is available, it will not invent one.</div><button class="primary-action" onclick="saveRecommendedCardHistory(${id},'${status}')">Save & rerank recommendations</button></div>`;
   wrap.addEventListener('click',e=>{if(e.target===wrap)wrap.remove()});document.body.appendChild(wrap);
 }
 function saveRecommendedCardHistory(id,status){
@@ -1705,7 +1744,7 @@ function simpleRecommendationCard(x,rank,compact=false){
   const o=x.offer, fit=x.fit;
   const reasons=(fit.reasons||[]).slice(0,compact?1:3);
   const badge=fit.status==='verify'?'Offer needs verification':'Recommendation';
-  const body=`<div class="rec-bonus">${currentOfferLabel(o)}</div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}${cashRewardText(o)}${cashPromoText(o)}${categoryCashBackText(o)}${pointEarningText(o)}${reasons.length?`<div class="reason-list">${reasons.map(r=>`<div class="reason-item">✓ ${r}</div>`).join('')}</div>`:''}${five24AfterApprovalHTML(o)}<div class="rec-buttons"><button class="btn ghost" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}</div>${cardHistoryActionsHTML(o)}<details class="details-clean"><summary>Advanced details</summary>${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}${bankRulesLinkHTML()}<div class="small" style="margin-top:7px">${historicalOfferText(o)}${o.verifiedDate?` • Offer data checked ${o.verifiedDate}`:''}</div></details>`;
+  const body=`<div class="rec-bonus">${currentOfferLabel(o)}</div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}${cashRewardText(o)}${cashPromoText(o)}${categoryCashBackText(o)}${pointEarningText(o)}${reasons.length?`<div class="reason-list">${reasons.map(r=>`<div class="reason-item">✓ ${r}</div>`).join('')}</div>`:''}${five24AfterApprovalHTML(o)}${lifestyleGuidanceHTML(o)}<div class="rec-buttons"><button class="btn ghost" onclick="whyOffer(${o.id})">Why this card?</button>${issuerLinkHTML(o)}</div>${saveCardButtonHTML(o)}${cardHistoryActionsHTML(o)}<details class="details-clean"><summary>Advanced details</summary>${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}${bankRulesLinkHTML()}<div class="small" style="margin-top:7px">${historicalOfferText(o)}${o.verifiedDate?` • Offer data checked ${o.verifiedDate}`:''}</div></details>`;
   return `<div class="simple-rec"><div class="between"><div class="rankline"><span class="ranknum">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • Annual fee ${fmt(o.af||0)}</div></div></div><span class="pill green">${badge}</span></div>${compact?`<details class="details-clean"><summary>See offer & fit details</summary>${body}</details>`:body}</div>`;
 }
 function toggleMoreRecommendations(){
@@ -1740,7 +1779,7 @@ function apply(){
   const extraRefined=refinedAll.slice(5,10);
   const historicalUnknown=refineActive?historicalHighUnknownCandidates():[];
   return `<div class="between" style="margin-bottom:12px"><button class="btn ghost" onclick="showView('homeView')">← Home</button><button class="btn ghost" onclick="openPreferencePicker()">Fine-tune</button></div>
-  <div class="welcome"><div class="small">FIND A CARD</div><h2>Your best matches ✨</h2><p>Your shortlist based on the preferences you selected. Change the search anytime without changing your saved cards.</p></div><div class="session-actions"><button class="btn ghost" onclick="changeFindAnswers()">✏️ Change 3 quick answers</button><button class="btn ghost" onclick="restartFindFlow()">↻ New search</button></div>
+  <div class="welcome"><div class="small">FIND A CARD</div><h2>Your best matches ✨</h2><p>Your shortlist based on the preferences you selected. Change the search anytime without changing your saved cards.</p></div><button class="btn ghost" data-saved-count style="margin-top:10px" onclick="showView('savedCardsView')">Saved cards (${data.savedCardIds.length})</button><div class="session-actions"><button class="btn ghost" onclick="changeFindAnswers()">✏️ Change 3 quick answers</button><button class="btn ghost" onclick="restartFindFlow()">↻ New search</button></div>
   ${recentCardHistoryKnown()&&f>=5?`<div class="warningbox"><b>${f}/24:</b> Chase cards affected by 5/24 are handled using your saved settings.</div>`:''}
   ${top.length?`<div id="recommendationResults" class="section" style="margin-top:14px">Top ${Math.min(5,top.length)} recommendations</div><div class="section-hint">These are ranked matches from the categories you selected. ${top.length===1?'This result uses':`All ${top.length} use`} the same visual treatment so you can decide which tradeoffs matter most.</div><div class="list" style="margin-top:12px">${top.map((x,i)=>simpleRecommendationCard(x,i+1,false)).join('')}${data.profile.showMoreRecommendations?extraTop.map((x,i)=>simpleRecommendationCard(x,i+6,true)).join(''):''}</div>${extraTop.length?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleMoreRecommendations()">${data.profile.showMoreRecommendations?'Show fewer':'Show 5 more'}</button>`:''}${exactPool.length<5?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleBroadenSearch()">${data.profile.broadenSearch?'Use original search':'Broaden search'}</button><div class="small" style="margin-top:6px;text-align:center;color:#667085">${data.profile.broadenSearch?'Showing adjacent card categories in addition to your original selection.':'Only '+exactPool.length+' card'+(exactPool.length===1?'':'s')+' matched your selected category closely. Broaden only if you want adjacent options.'}</div>`:''}`:emptyRecommendationHTML()}
   <div class="card" style="margin-top:14px"><div class="small">REFINE YOUR LIST</div><h3 style="margin:4px 0 5px">Want to fine-tune these recommendations?</h3><div class="small">Use the quick fine-tuning sections below. Advanced strategy settings remain available separately when you need them.</div></div>
@@ -1764,7 +1803,7 @@ function rankedOfferCard(x,rank){
   const o=x.offer, fit=x.fit;
   const badge=rank===1?'Best match':rank===2?'Next best':'Strong alternative';
   const why=[...fit.reasons].slice(0,4).map(r=>`<div style="margin-top:4px;color:#157347">✓ ${r}</div>`).join('');
-  return `<div class="item" style=""><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}${categoryCashBackText(o)}${pointEarningText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:8px">${why}</div><button class="btn ghost" style="margin-top:9px" onclick="whyOffer(${o.id})">Why this is #${rank}</button>${issuerLinkHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
+  return `<div class="item" style=""><div class="between"><div style="display:flex;gap:10px;align-items:flex-start"><span class="stepdot" style="flex:0 0 auto">${rank}</span><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af)} • ${currentSpendLabel(o)}</div></div></div><span class="pill green">${badge}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}${categoryCashBackText(o)}${pointEarningText(o)}${subReturnText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}<div class="small" style="margin-top:8px">${why}</div>${lifestyleGuidanceHTML(o)}<div class="rec-buttons"><button class="btn ghost" onclick="whyOffer(${o.id})">Why this is #${rank}</button>${issuerLinkHTML(o)}</div>${saveCardButtonHTML(o)}${cardHistoryActionsHTML(o)}<div class="small" style="margin-top:7px">${o.verified?'Verified '+o.verifiedDate:'Needs verification'}</div></div>`;
 }
 function offerCard(o,reason=false,fit=null){
   fit=fit||offerFit(o);
@@ -1774,7 +1813,7 @@ function offerCard(o,reason=false,fit=null){
 function whyOffer(id){
   const o=data.offers.find(x=>x.id===id);if(!o)return;
   const fit=offerFit(o);
-  const parts=[`${o.name}: ${fit.label}`];
+  const parts=[`${o.name}: ${fit.label}`,cardLifestyleGuidance(o)];
   if(fit.reasons.length)parts.push('Why it fits:\n• '+fit.reasons.join('\n• '));
   if(fit.cautions.length)parts.push('What holds it back:\n• '+fit.cautions.join('\n• ')); const be=bonusEligibilityInfo(o); if(be.warnings.length)parts.push('Welcome-bonus eligibility:\n• '+be.warnings.join('\n• '));
   parts.push(`Pathway: ${pathLabel()}. Cardimize checks your hard eligibility and setup constraints first, then compares the factors that matter for your selected ranking: preferences, sign-up bonus economics, ongoing rewards, annual fee, 5/24 strategy, relationships, eligibility, and portfolio overlap. Historical offer data is context only.`);
@@ -1797,7 +1836,7 @@ function marketStatus(o){
 }
 function marketCard(o){
   const st=marketStatus(o);
-  return `<div class="item"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af||0)} • ${currentSpendLabel(o)}</div></div><span class="pill ${st.tone}">${st.label}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}${cashPromoText(o)}${categoryCashBackText(o)}${pointEarningText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${o.promoNote?`<div class="small" style="margin-top:7px;color:#365d96"><b>Promo details:</b> ${o.promoNote}</div>`:''}${o.offerNote?`<div class="small" style="margin-top:7px">${o.offerNote}</div>`:''}<div class="small" style="margin-top:7px">${o.verified?`Offer data checked ${o.verifiedDate||''}`:'Current offer still needs verification'} • Browse view does not judge whether this card fits your personal strategy.</div>${issuerLinkHTML(o)}</div>`;
+  return `<div class="item"><div class="between"><div><div class="item-title">${o.name}</div><div class="meta">${o.issuer||''}${o.issuer?' • ':''}${o.type} • AF ${fmt(o.af||0)} • ${currentSpendLabel(o)}</div></div><span class="pill ${st.tone}">${st.label}</span></div><div class="between" style="margin-top:9px"><b>${currentOfferLabel(o)}</b><div class="small">${historicalOfferText(o)}</div></div>${offerVisualBadgesHTML(o)}${bonusValueText(o)}${cashPromoText(o)}${categoryCashBackText(o)}${pointEarningText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${o.promoNote?`<div class="small" style="margin-top:7px;color:#365d96"><b>Promo details:</b> ${o.promoNote}</div>`:''}${o.offerNote?`<div class="small" style="margin-top:7px">${o.offerNote}</div>`:''}<div class="small" style="margin-top:7px">${o.verified?`Offer data checked ${o.verifiedDate||''}`:'Current offer still needs verification'} • Browse view does not judge whether this card fits your personal strategy.</div>${issuerLinkHTML(o)}${saveCardButtonHTML(o)}</div>`;
 }
 function offers(){
   const list=marketOffers();
@@ -1862,6 +1901,7 @@ function bankRulesLinkHTML(){return `<div class="small" style="margin-top:10px">
 
 function morePage(){
   return `<div class="welcome"><div class="small">MORE</div><h2>Optimize</h2><p>Get more from your cards. Plan your next move.</p></div><div class="more-list" style="margin-top:14px">
+  <button class="more-row" onclick="showView('savedCardsView')"><span><b>Saved cards (${data.savedCardIds.length})</b><span>Compare cards you’re considering for later.</span></span><span class="more-arrow">›</span></button>
   <button class="more-row" onclick="showView('bankRulesView')"><span><b>Bank application rules</b><span>Official bonus rules and reported approval patterns.</span></span><span class="more-arrow">›</span></button>
   <button class="more-row" onclick="showView('relationshipsView')"><span><b>Banking & investment relationships</b><span>BofA/Merrill, Citi, Schwab, Morgan Stanley, Bilt, Robinhood, and more.</span></span><span class="more-arrow">›</span></button>
   <button class="more-row" onclick="showView('benefitsView')"><span><b>Benefits & saved strategies</b><span>Companion benefits, expiration dates, and saved timing strategies.</span></span><span class="more-arrow">›</span></button>
@@ -1879,8 +1919,9 @@ function render(){
   $('#relationshipsView').innerHTML=relationshipsPage();
   $('#moreView').innerHTML=morePage();
   $('#bankRulesView').innerHTML=bankRulesPage();
+  $('#savedCardsView').innerHTML=savedCardsPage();
 }
-function showView(id,preserveScroll=false){const y=window.scrollY;$$('main section').forEach(s=>s.classList.add('hidden')); $('#'+id).classList.remove('hidden'); $$('.tab').forEach(t=>t.classList.toggle('active',(t.dataset.view===id||(id==='bankRulesView'&&t.dataset.view==='moreView')))); const titles={homeView:'Cardimize',cardsView:'My Cards',applyView:'Find a Card',offersView:'Browse Cards',benefitsView:'Benefits & Strategies',relationshipsView:'Relationships',moreView:'Optimize',bankRulesView:'Bank application rules'}; $('#title').textContent=titles[id]||'Cardimize'; if(preserveScroll){requestAnimationFrame(()=>window.scrollTo(0,y));}else{window.scrollTo(0,0)}}
+function showView(id,preserveScroll=false){const y=window.scrollY;$$('main section').forEach(s=>s.classList.add('hidden')); $('#'+id).classList.remove('hidden'); $$('.tab').forEach(t=>t.classList.toggle('active',(t.dataset.view===id||(['bankRulesView','savedCardsView'].includes(id)&&t.dataset.view==='moreView')))); const titles={homeView:'Cardimize',cardsView:'My Cards',applyView:'Find a Card',offersView:'Browse Cards',benefitsView:'Benefits & Strategies',relationshipsView:'Relationships',moreView:'Optimize',bankRulesView:'Bank application rules',savedCardsView:'Saved cards'}; $('#title').textContent=titles[id]||'Cardimize'; if(preserveScroll){requestAnimationFrame(()=>window.scrollTo(0,y));}else{window.scrollTo(0,0)}}
 $$('.tab').forEach(t=>t.onclick=()=>t.dataset.view==='applyView'?openFindFlow():showView(t.dataset.view));
 async function loadCatalog(){
   try{
