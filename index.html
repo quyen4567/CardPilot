@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <title>Cardimize v11.3.46</title>
+  <title>Cardimize v11.3.47</title>
   <style>
     :root{--navy:#0d2743;--blue:#1769ff;--bg:#f4f7fb;--card:#fff;--text:#162233;--muted:#667085;--green:#19a35b;--amber:#d97706;--red:#d92d20;--line:#e6eaf0}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -152,7 +152,7 @@
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Find the right credit card for you.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.46</div></div></header>
+  <header class="top"><div class="between" style="align-items:flex-start"><div><h1 id="title">Cardimize</h1><div class="sub" id="subtitle">Find the right credit card for you.</div></div><div class="small" style="color:#dbe8ff;font-weight:800;margin-top:4px">v11.3.47</div></div></header>
   <main class="content">
     <section id="homeView"></section>
     <section id="cardsView" class="hidden"></section>
@@ -186,7 +186,7 @@ data.savedCardIds=Array.isArray(data.savedCardIds)?[...new Set(data.savedCardIds
 // Card catalog is loaded from cards.json so offer/link updates do not require rebuilding the UI.
 let BUSINESS_CATALOG=[];
 let PERSONAL_CATALOG=[];
-const CATALOG_VERSION='2026-10-07.2';
+const CATALOG_VERSION='2026-10-13.3';
 // v11.3.42: prior ownership is neutral unless a verified official issuer rule restricts eligibility; previously held cards no longer count as current benefit overlap.
 
 function migrateV8(){
@@ -195,14 +195,11 @@ function migrateV8(){
     data.profile.cardPath=data.profile.businessFirst===true?'business':data.profile.businessFirst===false?'personal':'either';
   }
   data.profile.businessFirst=data.profile.cardPath!=='personal';
-  if(data.catalogVersion!==CATALOG_VERSION){
-    // Refresh the market catalog from cards.json. Saved cards live in data.cards,
-    // so replacing data.offers does not delete the user's wallet. This also prevents stale
-    // cached offer fields from overriding corrected valuations or eligibility requirements.
-    data.offers=[...BUSINESS_CATALOG,...PERSONAL_CATALOG];
-    data.catalogVersion=CATALOG_VERSION;
-    localStorage.setItem('cardpilotData',JSON.stringify(data));
-  }
+  // Always adopt the successfully fetched catalog, even if its version is unchanged.
+  // User wallet, saved cards, profile, and benefits are stored separately.
+  data.offers=[...BUSINESS_CATALOG,...PERSONAL_CATALOG];
+  data.catalogVersion=data.catalogSourceVersion||CATALOG_VERSION;
+  localStorage.setItem('cardpilotData',JSON.stringify(data));
 }
 // Catalog migration runs after cards.json loads.
 
@@ -983,10 +980,10 @@ function pointsRateScore(o){
 function currentOfferLabel(o){
   const bonus=Number(o.bonus||0), extra=Number(o.bonusCashExtra||0);
   if(bonus>0){
-    const main=bonus.toLocaleString()+' '+(o.unit||'');
+    const main=(o.bonusIsUpTo?'Up to ':'')+bonus.toLocaleString()+' '+(o.unit||'');
     return extra>0 ? `${main} + ${fmt(extra)} ${String(o.issuer||'').toLowerCase()==='bilt'?'Bilt Cash':'cash'}` : main;
   }
-  if(o.offerState==='first-year-cashback-match') return 'Unlimited first-year Cashback Match';
+  if(o.offerState==='first-year-cashback-match') return /miles/i.test(o.name||'')?'Unlimited first-year miles match':'Unlimited first-year Cashback Match';
   if(o.offerState==='no-standard-public-sub') return 'No sign-up bonus';
   if(o.offerState==='invitation-waitlist') return 'Invitation / waitlist offer';
   if(o.offerState==='personalized') return 'Personalized / up-to offer';
@@ -994,7 +991,8 @@ function currentOfferLabel(o){
   return 'Current public offer not yet verified';
 }
 function currentSpendLabel(o){
-  if(o.spend!==null&&o.spend!==undefined) return 'Spend '+fmt(o.spend);
+  if(o.spend===0 && o.offerRequirementType==='approval-only') return 'Upon approval—no spending required';
+  if(o.spend!==null&&o.spend!==undefined) return 'Spend '+fmt(o.spend)+(o.spendPeriod?(/^(by|before) /i.test(o.spendPeriod)?' ':' within ')+o.spendPeriod:'');
   if(o.offerState==='first-year-cashback-match') return 'No purchase minimum for match';
   if(o.offerState==='no-standard-public-sub') return 'No sign-up bonus';
   return 'Spend requirement: verify';
@@ -1111,14 +1109,19 @@ function portfolioBenefitWanted(k){const ints=data.profile.interests||[];const s
 function portfolioEffect(o){const inv=ownedBenefitInventory(),sig=benefitSignature(o),dupes=[];const labels={priorityPass:'Priority Pass / lounge access',lounge:'premium lounge access',hotelCredit:'hotel/travel credits',hotelStatus:'hotel status',freeNight:'free-night certificates',airlineCredit:'airline credits',freeBags:'free checked bags',companion:'companion benefit',eliteNights:'elite-night credits',cruiseCredit:'cruise/onboard credits'};for(const [k,v] of Object.entries(sig))if(v&&inv[k])dupes.push(labels[k]||k);const pref=data.profile.overlapPref||'some';let score=0,reasons=[],cautions=[];if(dupes.length){if(pref==='avoid')score-=Math.min(24,dupes.length*6);else if(pref==='some')score-=Math.min(10,dupes.length*2);if(pref!=='fine')cautions.push(`Portfolio overlap: ${dupes.slice(0,3).join(', ')}${dupes.length>3?' and more':''}. Cardimize reduces the value of benefits you already have.`);else reasons.push(`You allow benefit overlap, so duplicate ${dupes.slice(0,2).join(' and ')} are not penalized.`);}const adds=[];let wantedAdds=0;for(const [k,v] of Object.entries(sig))if(v&&!inv[k]){adds.push(labels[k]||k);if(portfolioBenefitWanted(k))wantedAdds++;}if(wantedAdds){score+=Math.min(9,wantedAdds*3);reasons.push(`Adds benefits you specifically selected and do not already have: ${adds.filter(label=>Object.entries(labels).some(([k,v])=>v===label&&portfolioBenefitWanted(k))).slice(0,3).join(', ')}.`);}return {score,reasons,cautions,dupes,adds};}
 function subSpendMax(){const v=data.profile.subSpendPref||'any';const limits={1000:1000,3000:3000,5000:5000,10000:10000,'10000plus':Infinity,15000:15000,20000:20000,30000:30000,50000:50000};return Object.prototype.hasOwnProperty.call(limits,v)?limits[v]:Infinity}
 function subSpendLabel(){const v=data.profile.subSpendPref||'any';return {1000:'Up to $1,000',3000:'Up to $3,000',5000:'Up to $5,000',10000:'Up to $10,000','10000plus':'$10,000+',15000:'Up to $15,000',20000:'Up to $20,000',30000:'Up to $30,000',50000:'Up to $50,000','any':'$10,000+ / no upper filter'}[v]||'$10,000+'}
+// Shared contract for catalog validation and monitoring. Embedded in index.html.
 function offerDataQuality(o){
   const issues=[];
-  if(!o.verified)issues.push('Offer has not been verified yet.');
-  if(!o.verifiedDate&&o.verified)issues.push('Verification date is missing.');
-  if(Number(o.bonus||0)>0 && (o.spend===null||o.spend===undefined))issues.push('Minimum-spend requirement is not yet verified.');
-  if(!Number(o.bonus||0) && !['no-standard-public-sub','invitation-waitlist','personalized'].includes(o.offerState))issues.push('Current public welcome offer is not yet verified.');
+  if(!o.verified) issues.push('Offer has not been verified yet.');
+  if(o.verified && !o.verifiedDate) issues.push('Verification date is missing.');
+  if(Number(o.bonus||0)>0 && o.spend==null) issues.push('Minimum-spend requirement is not yet verified.');
+  if(!Number(o.bonus||0) && !['no-standard-public-sub','invitation-waitlist','personalized','first-year-cashback-match'].includes(o.offerState)) issues.push('Current public welcome offer is not yet verified.');
+  if(o.verified && /verify current offer/i.test(String(o.offerNote||''))) issues.push('Offer note contradicts verification.');
+  if(o.offerExpires && o.offerExpires < new Date().toISOString().slice(0,10)) issues.push('The recorded welcome offer has expired.');
   return {issues,needsReview:issues.length>0};
 }
+
+
 function isSecuredOffer(o){return (o.tags||[]).some(t=>String(t).toLowerCase()==='secured')||/\bsecured\b/i.test(String(o.name||''));}
 function isNicheSpecialtyOffer(o){
   const tags=(o.tags||[]).map(t=>String(t).toLowerCase());
@@ -1297,10 +1300,10 @@ function offerFit(o){
     // Missing or unverified offer data is a data-quality state, not a user mismatch.
     if(!status){
       if(isNicheSpecialtyOffer(o)) status='specialty';
+      else if(quality.needsReview && !cautions.some(hardMismatchCaution)) status='verify';
       else if(ongoingRewardIntent) status='consider';
       else if(hasKnownSub) status='consider';
       else if(Number(o.bonus||0)>0 && o.spend!=null) status='consider';
-      else if(quality.needsReview && !cautions.some(hardMismatchCaution)) status='verify';
       else status='avoid';
     }
   }
@@ -1630,7 +1633,7 @@ function simpleOtherCard(x){
 function simpleVerifyCard(x){
   const o=x.offer,q=offerDataQuality(o);
   const msg=q.issues[0]||'Offer details need verification before Cardimize compares this card as an apply-now option.';
-  return `<div class="verify-card"><div class="verify-title">DATA CHECK • NOT A MISMATCH</div><b>${o.name}</b><div class="meta">${o.issuer||''} • ${o.type} • Annual fee ${fmt(o.af||0)}</div><div class="small" style="margin-top:6px">${msg}</div><button class="btn ghost" style="margin-top:8px;padding:7px 9px" onclick="whyOffer(${o.id})">Review known details</button></div>`;
+  return `<div class="verify-card"><div class="verify-title">OFFER DETAILS PENDING</div><b>${o.name}</b><div class="meta">${o.issuer||''} • ${o.type} • Annual fee ${fmt(o.af||0)}</div><div class="small" style="margin-top:6px">${msg}</div><button class="btn ghost" style="margin-top:8px;padding:7px 9px" onclick="whyOffer(${o.id})">Review known details</button></div>`;
 }
 function simpleSpecialtyCard(x){
   const o=x.offer;
@@ -1787,7 +1790,7 @@ function apply(){
   ${excludedCurrentCardsHTML()}
   ${refineActive?`<div id="refinedResults" class="section">Refined results</div><div class="section-hint">${(data.profile.refineRank||'overall')==='hist100'?`Ranking only the ${refinedAll.length} recommended card${refinedAll.length===1?'':'s'} from your search that have a verified current offer and a verified comparable historical public high.`:`Showing the top ${refinedAll.length} cards after checking all eligible cards matching your selected rewards and limits.`}</div><div class="list">${refined.map((x,i)=>simpleRecommendationCard(x,i+1)).join('')}${data.profile.showMoreRefinedRecommendations?extraRefined.map((x,i)=>simpleRecommendationCard(x,i+6,true)).join(''):''}</div>${extraRefined.length?`<button class="btn ghost" style="width:100%;margin-top:10px" onclick="toggleMoreRefinedRecommendations()">${data.profile.showMoreRefinedRecommendations?'Show fewer':'Next 5'}</button>`:''}${(data.profile.refineRank||'overall')==='hist100'&&historicalUnknown.length?`<details class="card" style="margin-top:14px" open><summary><b>Historical high not yet verified (${historicalUnknown.length})</b></summary><div class="section-hint">These cards have a verified current public offer, but Cardimize does not yet have a verified comparable historical public high. They are shown separately rather than being ranked against known historical highs.</div><div class="list">${historicalUnknown.slice(0,5).map(historicalUnknownCard).join('')}</div>${historicalUnknown.length>5?`<div class="small" style="margin-top:9px">${historicalUnknown.length-5} more are available in Browse Cards.</div>`:''}</details>`:''}`:''}
   ${waits.length?`<details class="card" style="margin-top:14px"><summary><b>Worth waiting for (${waits.length})</b></summary><div class="section-hint">Strong possibilities where timing or eligibility gives Cardimize a concrete reason to wait.</div><div class="list">${waits.slice(0,6).map(x=>offerCard(x.offer,true,x.fit)).join('')}</div></details>`:''}
-  ${verification.length?`<details class="card" style="margin-top:12px"><summary><b>Offer data to verify (${verification.length})</b></summary><div class="section-hint">These are <b>not</b> counted as preference mismatches. Cardimize is missing enough current offer data that it would be misleading to rank them as apply-now recommendations.</div><div class="other-preview">${verification.slice(0,4).map(x=>simpleVerifyCard(x)).join('')}</div>${verification.length>4?`<div class="small" style="margin-top:9px">${verification.length-4} more are available in Browse Cards.</div>`:''}</details>`:''}
+  ${verification.length?`<details class="card" style="margin-top:12px"><summary><b>Other cards—offer details pending (${verification.length})</b></summary><div class="section-hint">We’re checking the current offer terms for these cards before recommending them.</div><div class="other-preview">${verification.slice(0,4).map(x=>simpleVerifyCard(x)).join('')}</div>${verification.length>4?`<div class="small" style="margin-top:9px">${verification.length-4} more are available in Browse Cards.</div>`:''}</details>`:''}
   ${nonmatches.length?`<details class="card" style="margin-top:12px"><summary><b>Other cards that don't match this search (${nonmatches.length})</b></summary><div class="section-hint">Kept compact on purpose. These cards have an actual preference, eligibility, fee, spend, ownership, or strategy reason for ranking lower.</div><div class="other-preview">${nonmatches.slice(0,3).map(x=>simpleOtherCard(x)).join('')}</div>${nonmatches.length>3?`<div class="small" style="margin-top:9px">${nonmatches.length-3} more are available in Browse Cards.</div>`:''}</details>`:''}
   ${specialty.length?`<details class="card" style="margin-top:12px"><summary><b>Specialty cards (${specialty.length})</b></summary><div class="section-hint">Available when you need them, but intentionally separated from mainstream rewards recommendations.</div><div class="other-preview">${specialty.slice(0,3).map(x=>simpleSpecialtyCard(x)).join('')}</div></details>`:''}
   ${valuationInfoHTML()}`;
@@ -1925,7 +1928,7 @@ function showView(id,preserveScroll=false){const y=window.scrollY;$$('main secti
 $$('.tab').forEach(t=>t.onclick=()=>t.dataset.view==='applyView'?openFindFlow():showView(t.dataset.view));
 async function loadCatalog(){
   try{
-    const r=await fetch('cards.json?v='+encodeURIComponent(CATALOG_VERSION),{cache:'no-store'});
+    const r=await fetch('cards.json?v='+Date.now(),{cache:'no-store'});
     if(!r.ok) throw new Error('cards.json HTTP '+r.status);
     const payload=await r.json();
     if(!payload||!Array.isArray(payload.cards)) throw new Error('Invalid cards.json');

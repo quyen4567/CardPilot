@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-10-07.2",
-  "generatedAt": "2026-10-07",
+  "catalogVersion": "2026-10-13.3",
+  "generatedAt": "2026-10-13T00:13:26.704179+00:00",
   "cards": [
     {
       "id": 7001,
@@ -41,7 +41,8 @@
         "verifiedDate": "2026-10-06",
         "ruleType": "no-fee-business-family-ever",
         "summary": "Chase states the new cardmember bonus may not be available if you have ever had this card or any other Chase for Business card without an annual fee."
-      }
+      },
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7002,
@@ -81,7 +82,8 @@
         "verifiedDate": "2026-10-06",
         "ruleType": "no-fee-business-family-ever",
         "summary": "Chase states the new cardmember bonus may not be available if you have ever had this card or any other Chase for Business card without an annual fee."
-      }
+      },
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7003,
@@ -120,7 +122,8 @@
         "verifiedDate": "2026-10-06",
         "ruleType": "same-card-ever",
         "summary": "Chase states the new cardmember bonus may not be available if you have ever had Ink Business Preferred."
-      }
+      },
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7004,
@@ -151,7 +154,8 @@
         "verifiedDate": "2026-10-06",
         "ruleType": "same-card-ever",
         "summary": "Chase states the new cardmember bonus may not be available if you have ever had Ink Business Premier."
-      }
+      },
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7005,
@@ -180,7 +184,8 @@
         "verifiedDate": "2026-10-06",
         "ruleType": "same-card-ever",
         "summary": "Chase states the new cardmember bonus may not be available if you have ever had Sapphire Reserve for Business."
-      }
+      },
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7006,
@@ -200,7 +205,8 @@
         "hyatt"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7007,
@@ -241,7 +247,8 @@
       ],
       "refreshDate": "2026-10-01",
       "launchSourceUrl": "https://www.ihgplc.com/en/news-and-media/news-releases/2026/chase-introduces-new-ihg-one-rewards-premier-select-credit-card-and-portfolio",
-      "launchVerifiedDate": "2026-10-07"
+      "launchVerifiedDate": "2026-10-07",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7008,
@@ -261,7 +268,8 @@
         "southwest"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7009,
@@ -293,7 +301,8 @@
         "3,000",
         "3 months",
         "149"
-      ]
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7010,
@@ -339,7 +348,8 @@
         "10,000",
         "employee card",
         "150"
-      ]
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7011,
@@ -386,7 +396,8 @@
         "10,000",
         "employee card",
         "695"
-      ]
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7101,
@@ -426,7 +437,8 @@
           "capNote": "2X on up to $2 million of these eligible purchases per calendar year."
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7102,
@@ -466,27 +478,47 @@
         }
       ],
       "pointsEarnVerifiedDate": "2026-10-04",
-      "pointsEarnNote": "Eligible 4X categories include U.S. advertising, electronics/software/cloud, restaurants, gas, transit and wireless service."
+      "pointsEarnNote": "Eligible 4X categories include U.S. advertising, electronics/software/cloud, restaurants, gas, transit and wireless service.",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7103,
       "issuer": "American Express",
       "name": "Graphite Business Cash Unlimited",
       "type": "Business",
-      "bonus": 0,
-      "unit": "offer varies",
+      "bonus": 1500,
+      "unit": "cash",
       "hist": null,
-      "spend": 20000,
+      "spend": 50000,
       "af": 295,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Welcome offer varies; verify before applying.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "Earn $1,500 cash back after $50,000 in purchases within 6 months.",
       "tags": [
         "cash"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "offerState": "verified-current",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": 20000,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Welcome offer varies; verify before applying."
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/graphite-business-cash-unlimited-card/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/graphite-business-cash-unlimited-card/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerType": "public",
+      "monitorExpected": [
+        "1500",
+        "50000",
+        "6 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7104,
@@ -510,7 +542,8 @@
       "histPublicDate": "2026",
       "histStatus": "verified-public-high",
       "histSourceLabel": "American Express",
-      "histSourceUrl": "https://www.americanexpress.com/en-us/campaigns/small-business/credit-cards/blue-business-cash/explore-now/"
+      "histSourceUrl": "https://www.americanexpress.com/en-us/campaigns/small-business/credit-cards/blue-business-cash/explore-now/",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7105,
@@ -523,7 +556,7 @@
       "spend": null,
       "af": 0,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
       "offerNote": "Current welcome offer varies / verify in-session.",
       "tags": [
@@ -537,43 +570,69 @@
       "targetedHighDate": "2026-01",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club / Upgraded Points",
-      "histSourceUrl": "https://pocketfinanceclub.com/cards/amex-blue-business-plus/"
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/amex-blue-business-plus/",
+      "reviewReason": "Current welcome offer needs official-source review; official source located but full applicable terms still need confirmation",
+      "reviewOpenedDate": "2026-10-13",
+      "offerState": "needs-review",
+      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex/",
+      "issuerUrlVerified": false,
+      "lastAttemptedSourceReview": "2026-10-13",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7106,
       "issuer": "American Express",
       "name": "Business Green Rewards Card",
       "type": "Business",
-      "bonus": 0,
+      "bonus": 15000,
       "unit": "offer varies",
       "hist": null,
-      "spend": null,
+      "spend": 3000,
       "af": 95,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Current welcome offer varies / verify in-session.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "15,000 Membership Rewards points after $3,000 in purchases in 3 months.",
       "tags": [
         "travel",
         "transferable"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "offerState": "verified-current",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Current welcome offer varies / verify in-session."
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerType": "public",
+      "monitorExpected": [
+        "15000",
+        "3000",
+        "3 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7107,
       "issuer": "American Express",
       "name": "Delta SkyMiles Gold Business",
       "type": "Business",
-      "bonus": 0,
+      "bonus": 90000,
       "unit": "Delta miles",
       "hist": 90000,
-      "spend": null,
+      "spend": 6000,
       "af": 150,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Current welcome offer varies; $0 intro annual fee first year, then $150.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "90,000 Delta miles after $6,000 in purchases within 6 months. Offer ends November 4, 2026.",
       "tags": [
         "airline",
         "delta"
@@ -583,22 +642,46 @@
       "histPublicDate": "2026-08",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points",
-      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/gold-delta-skymiles-business-credit-card-american-express/welcome-offer-history/"
+      "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/gold-delta-skymiles-business-credit-card-american-express/welcome-offer-history/",
+      "offerState": "verified-current",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Delta miles",
+        "af": 150,
+        "verified": false,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Current welcome offer varies; $0 intro annual fee first year, then $150."
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerType": "public",
+      "offerExpires": "2026-11-04",
+      "monitorExpected": [
+        "90000",
+        "6000",
+        "6 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7108,
       "issuer": "American Express",
       "name": "Delta SkyMiles Platinum Business",
       "type": "Business",
-      "bonus": 0,
+      "bonus": 100000,
       "unit": "Delta miles",
       "hist": 100000,
-      "spend": null,
+      "spend": 8000,
       "af": 350,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Current welcome offer varies.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "100,000 Delta miles after $8,000 in purchases within 6 months. Offer ends November 4, 2026.",
       "tags": [
         "airline",
         "delta"
@@ -608,22 +691,46 @@
       "histPublicDate": "2026-08",
       "histStatus": "verified-public-high",
       "histSourceLabel": "The Points Guy",
-      "histSourceUrl": "https://thepointsguy.com/credit-cards/reviews/platinum-delta-skymiles-business-card-review/"
+      "histSourceUrl": "https://thepointsguy.com/credit-cards/reviews/platinum-delta-skymiles-business-card-review/",
+      "offerState": "verified-current",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Delta miles",
+        "af": 350,
+        "verified": false,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Current welcome offer varies."
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerType": "public",
+      "offerExpires": "2026-11-04",
+      "monitorExpected": [
+        "100000",
+        "8000",
+        "6 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7109,
       "issuer": "American Express",
       "name": "Delta SkyMiles Reserve Business",
       "type": "Business",
-      "bonus": 0,
+      "bonus": 200000,
       "unit": "Delta miles",
       "hist": 200000,
-      "spend": null,
+      "spend": 20000,
       "af": 650,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Current welcome offer varies.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "200,000 Delta miles after $20,000 in purchases within 6 months. Offer ends November 4, 2026.",
       "tags": [
         "airline",
         "delta",
@@ -634,7 +741,31 @@
       "histPublicDate": "2026-08",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points",
-      "histSourceUrl": "https://upgradedpoints.com/news/delta-amex-best-ever-welcome-offers-2026/"
+      "histSourceUrl": "https://upgradedpoints.com/news/delta-amex-best-ever-welcome-offers-2026/",
+      "offerState": "verified-current",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Delta miles",
+        "af": 650,
+        "verified": false,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Current welcome offer varies."
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerType": "public",
+      "offerExpires": "2026-11-04",
+      "monitorExpected": [
+        "200000",
+        "20000",
+        "6 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7110,
@@ -660,7 +791,8 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points",
       "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/marriott-bonvoy-business-card/welcome-offer-history/",
-      "histAlternativeNote": "Historical offers also reached 5 Free Night Awards (up to 50K points each), which is not directly comparable to a points-only bonus."
+      "histAlternativeNote": "Historical offers also reached 5 Free Night Awards (up to 50K points each), which is not directly comparable to a points-only bonus.",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7111,
@@ -685,7 +817,8 @@
       "histPublicDate": "2024-03",
       "histStatus": "verified-public-high",
       "histSourceLabel": "The Points Guy",
-      "histSourceUrl": "https://thepointsguy.com/credit-cards/hilton-american-express-best-welcome-offers/"
+      "histSourceUrl": "https://thepointsguy.com/credit-cards/hilton-american-express-best-welcome-offers/",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7201,
@@ -727,7 +860,8 @@
           "type": "portal"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7202,
@@ -760,7 +894,8 @@
           "type": "portal"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7203,
@@ -785,7 +920,8 @@
       "histPublicDate": "2026",
       "histStatus": "best-documented",
       "histSourceLabel": "Doctor of Credit",
-      "histSourceUrl": "https://www.doctorofcredit.com/capital-one-business-spark-cash-select-spark-miles-select-increased-signup-bonus-750-50000-no-annual-fee/"
+      "histSourceUrl": "https://www.doctorofcredit.com/capital-one-business-spark-cash-select-spark-miles-select-increased-signup-bonus-750-50000-no-annual-fee/",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7204,
@@ -808,7 +944,8 @@
       "histPublicDate": "2024-02",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Doctor of Credit",
-      "histSourceUrl": "https://www.doctorofcredit.com/capital-one-spark-cash-plus-1500-3000-signup-bonus-20000-100000-spend-required/"
+      "histSourceUrl": "https://www.doctorofcredit.com/capital-one-spark-cash-plus-1500-3000-signup-bonus-20000-100000-spend-required/",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7205,
@@ -832,7 +969,8 @@
       "histPublicDate": "2025",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Doctor of Credit",
-      "histSourceUrl": "https://www.doctorofcredit.com/capital-one-spark-cash-business-card-1000-signup-bonus-with-10000-spend/"
+      "histSourceUrl": "https://www.doctorofcredit.com/capital-one-spark-cash-business-card-1000-signup-bonus-with-10000-spend/",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7206,
@@ -856,7 +994,8 @@
       "histPublicDate": "2025-09",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Doctor of Credit",
-      "histSourceUrl": "https://www.doctorofcredit.com/capital-one-business-spark-cash-select-spark-miles-select-increased-signup-bonus-750-50000-no-annual-fee/"
+      "histSourceUrl": "https://www.doctorofcredit.com/capital-one-business-spark-cash-select-spark-miles-select-increased-signup-bonus-750-50000-no-annual-fee/",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7207,
@@ -879,28 +1018,53 @@
         "capital one"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7301,
       "issuer": "Citi",
       "name": "Citi / AAdvantage Business World Elite Mastercard",
       "type": "Business",
-      "bonus": 0,
+      "bonus": 65000,
       "unit": "AAdvantage miles",
       "hist": null,
-      "spend": null,
+      "spend": 4000,
       "af": 99,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Current bonus varies; $0 intro annual fee first year, then $99.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "65,000 AAdvantage miles after $4,000 in purchases in 4 months. $0 introductory annual fee for the first year, then $99.",
       "tags": [
         "airline",
         "aadvantage"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "offerState": "verified-current",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "AAdvantage miles",
+        "af": 99,
+        "verified": false,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Current bonus varies; $0 intro annual fee first year, then $99."
+      },
+      "spendPeriod": "4 months",
+      "issuerUrl": "https://creditcards.aa.com/credit-cards/citi-business-card-american-airlines-direct/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://creditcards.aa.com/credit-cards/citi-business-card-american-airlines-direct/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerType": "public",
+      "introAnnualFeeNote": "$0 first year, then $99",
+      "monitorExpected": [
+        "65000",
+        "4000",
+        "4 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7302,
@@ -933,7 +1097,8 @@
         "travel"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7401,
@@ -972,7 +1137,8 @@
       "offerState": "verified-current",
       "promoNote": "Ongoing rewards: unlimited 1.5% cash back on purchases; eligible Preferred Rewards for Business members can earn a relationship bonus, up to 2.62% at Platinum Honors.",
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7402,
@@ -1009,7 +1175,8 @@
       "offerState": "verified-current",
       "promoNote": "Ongoing rewards: 3% cash back in a choice category, 2% on dining, and 1% on other purchases. The 3% and 2% rates apply to the first $50,000 in combined choice-category/dining purchases each calendar year, then 1%; eligible Preferred Rewards for Business members can earn more.",
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7403,
@@ -1044,7 +1211,8 @@
       "offerNote": "Official Bank of America online offer: 50,000 bonus points after at least $5,000 in purchases in the first 90 days of account opening; issuer states the bonus can be redeemed for a $500 statement credit toward travel or dining purchases.",
       "promoNote": "Ongoing rewards: 3 points per $1 on travel booked through the Bank of America Travel Center and 1.5 points per $1 on other purchases; eligible Preferred Rewards for Business members can earn more.",
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7404,
@@ -1070,7 +1238,8 @@
       "histPublicSpend": 5000,
       "histSourceLabel": "Alaska Airlines announcement; The Points Guy offer history",
       "histSourceUrl": "https://news.alaskaair.com/loyalty/introducing-atmos-for-business-an-innovative-ecosystem-for-business-travel-that-rewards-companies-and-their-employees/",
-      "histAlternativeNote": "80,000-point public offer documented by Alaska Airlines; public spend requirement and offer periods corroborated by The Points Guy. Higher special-channel offers are not included in this public comparison."
+      "histAlternativeNote": "80,000-point public offer documented by Alaska Airlines; public spend requirement and offer periods corroborated by The Points Guy. Higher special-channel offers are not included in this public comparison.",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7501,
@@ -1089,7 +1258,8 @@
         "cash"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7502,
@@ -1102,14 +1272,20 @@
       "spend": null,
       "af": 0,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
       "offerNote": "0% intro APR for 12 billing cycles; no standard sign-up bonus tracked.",
       "tags": [
         "apr"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "reviewReason": "Current welcome offer needs official-source review",
+      "reviewOpenedDate": "2026-10-13",
+      "offerState": "needs-review",
+      "issuerUrl": "https://www.usbank.com/business-banking/business-credit-cards/business-shield-credit-card.html",
+      "issuerUrlVerified": false,
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 7503,
@@ -1132,7 +1308,8 @@
       "histPublicDate": "2024-02",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club / U.S. Bank",
-      "histSourceUrl": "https://pocketfinanceclub.com/cards/us-bank-business-altitude-power/"
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/us-bank-business-altitude-power/",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7504,
@@ -1152,7 +1329,8 @@
         "travel"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7505,
@@ -1176,7 +1354,8 @@
       "histPublicDate": "2020",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club / Doctor of Credit",
-      "histSourceUrl": "https://pocketfinanceclub.com/cards/us-bank-business-leverage/"
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/us-bank-business-leverage/",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7601,
@@ -1207,7 +1386,8 @@
       "histPublicDate": "2022-08",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club / US Credit Card Guide",
-      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/wells-fargo-signify-business-cash/"
+      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/wells-fargo-signify-business-cash/",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7701,
@@ -1232,7 +1412,8 @@
       "histPublicDate": "2026-06",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club",
-      "histSourceUrl": "https://pocketfinanceclub.com/cards/wyndham-earner-business/"
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/wyndham-earner-business/",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 7702,
@@ -1242,12 +1423,12 @@
       "bonus": 50000,
       "unit": "TrueBlue points",
       "hist": 80000,
-      "spend": null,
+      "spend": 4000,
       "af": 99,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "50K current introductory offer; verify spend requirement before applying.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "50,000 points after $4,000 in purchases and payment of the annual fee, both within 90 days.",
       "tags": [
         "airline",
         "jetblue"
@@ -1257,7 +1438,31 @@
       "histPublicDate": "2025-08",
       "histStatus": "verified-public-high",
       "histSourceLabel": "BonusEagle",
-      "histSourceUrl": "https://www.bonuseagle.com/offers"
+      "histSourceUrl": "https://www.bonuseagle.com/offers",
+      "previousOfferSnapshot": {
+        "bonus": 50000,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "TrueBlue points",
+        "af": 99,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "50K current introductory offer; verify spend requirement before applying."
+      },
+      "spendPeriod": "90 days",
+      "issuerUrl": "https://cards.barclaycardus.com/banking/cards/jetblue-business-card/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://cards.barclaycardus.com/banking/cards/jetblue-business-card/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "additionalRequirement": "Pay the annual fee in full within 90 days.",
+      "monitorExpected": [
+        "50000",
+        "4000",
+        "90 days"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8001,
@@ -1341,7 +1546,8 @@
         "verifiedDate": "2026-10-06",
         "ruleType": "same-card-prior-or-bonus",
         "summary": "Chase states this card is unavailable if you currently have it open, and the new cardmember bonus may not be available if you previously held this card or received a new cardmember bonus for this card."
-      }
+      },
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8002,
@@ -1405,7 +1611,8 @@
         "verifiedDate": "2026-10-06",
         "ruleType": "same-card-prior-or-bonus",
         "summary": "Chase states this card is unavailable if you currently have it open, and the new cardmember bonus may not be available if you previously held this card or received a new cardmember bonus for this card."
-      }
+      },
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8003,
@@ -1432,7 +1639,8 @@
       "histPublicDate": "2025-12",
       "histStatus": "verified-public-high",
       "histSourceLabel": "The Points Guy",
-      "histSourceUrl": "https://thepointsguy.com/credit-cards/chase-best-welcome-offers/"
+      "histSourceUrl": "https://thepointsguy.com/credit-cards/chase-best-welcome-offers/",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8004,
@@ -1480,7 +1688,8 @@
       "rewardsVerifiedDate": "2026-10-04",
       "rewardsSource": "official-issuer",
       "currentQuarterCategories": "Q4 2026: grocery stores (excluding Walmart and Target), dining, and American Red Cross donations",
-      "currentQuarterEnd": "2026-12-31"
+      "currentQuarterEnd": "2026-12-31",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8005,
@@ -1513,7 +1722,8 @@
       "offerType": "public",
       "confidence": "official-issuer",
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8006,
@@ -1546,7 +1756,8 @@
       "offerType": "public",
       "confidence": "official-issuer",
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8007,
@@ -1579,7 +1790,8 @@
       "offerType": "public",
       "confidence": "official-issuer",
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8008,
@@ -1646,7 +1858,8 @@
           "type": "fixed"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8009,
@@ -1687,7 +1900,8 @@
       "histResearchDate": "2026-09-27",
       "histStatus": "tracked-catalog-history",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8010,
@@ -1733,7 +1947,8 @@
       "histSourceLabel": "Upgraded Points",
       "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/united-club-infinite-card/welcome-offer-history/",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8011,
@@ -1778,23 +1993,24 @@
       "histSourceLabel": "Pocket Finance Club / Upgraded Points",
       "histSourceUrl": "https://pocketfinanceclub.com/cards/united-gateway/",
       "offerType": "public",
-      "confidence": "official-issuer"
+      "confidence": "official-issuer",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8012,
       "issuer": "Chase",
       "name": "World of Hyatt",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 30000,
       "unit": "Hyatt points",
       "hist": 65000,
-      "spend": null,
+      "spend": 3000,
       "af": 95,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "30,000 bonus points after $3,000 in 3 months. Additional first-six-month 2X earning on up to $15,000 is separate from the fixed bonus; advertised up to 60,000 includes base earning.",
       "tags": [
         "hotel",
         "hyatt"
@@ -1805,7 +2021,33 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points",
       "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/chase-hyatt-credit-card/welcome-offer-history/",
-      "histAlternativeNote": "The card has also offered 5 Category 1-4 free-night awards; certificate offers are not directly comparable to points-only offers."
+      "histAlternativeNote": "The card has also offered 5 Category 1-4 free-night awards; certificate offers are not directly comparable to points-only offers.",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Hyatt points",
+        "af": 95,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "offerRequirementType": "qualifying-activities",
+      "spendQualifiedBonus": 30000,
+      "bonusIsUpTo": false,
+      "monitorExpected": [
+        "30000",
+        "3000",
+        "3 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8013,
@@ -1847,7 +2089,8 @@
       ],
       "refreshDate": "2026-10-01",
       "launchSourceUrl": "https://www.ihgplc.com/en/news-and-media/news-releases/2026/chase-introduces-new-ihg-one-rewards-premier-select-credit-card-and-portfolio",
-      "launchVerifiedDate": "2026-10-07"
+      "launchVerifiedDate": "2026-10-07",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8014,
@@ -1889,23 +2132,24 @@
       ],
       "refreshDate": "2026-10-01",
       "launchSourceUrl": "https://www.ihgplc.com/en/news-and-media/news-releases/2026/chase-introduces-new-ihg-one-rewards-premier-select-credit-card-and-portfolio",
-      "launchVerifiedDate": "2026-10-07"
+      "launchVerifiedDate": "2026-10-07",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8015,
       "issuer": "Chase",
       "name": "Marriott Bonvoy Bold",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 45000,
       "unit": "Marriott points",
       "hist": null,
-      "spend": null,
+      "spend": 1000,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "45,000 Marriott points after $1,000 in purchases within 3 months.",
       "tags": [
         "hotel",
         "marriott"
@@ -1926,7 +2170,30 @@
           "type": "fixed"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Marriott points",
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "45000",
+        "1000",
+        "3 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8016,
@@ -1940,7 +2207,7 @@
       "af": 95,
       "reports": true,
       "status": "open",
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
@@ -1968,23 +2235,27 @@
           "capNote": "3X on the first $6,000 in combined purchases in these categories annually."
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "reviewReason": "Current welcome offer needs official-source review; Legacy note conflicts with verified flag",
+      "reviewOpenedDate": "2026-10-13",
+      "offerState": "needs-review",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8017,
       "issuer": "Chase",
       "name": "Marriott Bonvoy Bountiful",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 85000,
       "unit": "Marriott points",
       "hist": null,
-      "spend": null,
+      "spend": 4000,
       "af": 250,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "85,000 Marriott points after $4,000 in purchases within 3 months.",
       "tags": [
         "hotel",
         "marriott"
@@ -2006,7 +2277,30 @@
           "capNote": "4X on the first $15,000 in combined purchases in these categories annually."
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Marriott points",
+        "af": 250,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bountiful",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bountiful",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "85000",
+        "4000",
+        "3 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8018,
@@ -2048,73 +2342,143 @@
         "20,000",
         "12 months",
         "195"
-      ]
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8019,
       "issuer": "Chase",
       "name": "British Airways Visa Signature",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 75000,
       "unit": "Avios",
       "hist": 100000,
-      "spend": null,
+      "spend": 5000,
       "af": 95,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "75,000 Avios after $5,000 in purchases within 3 months. This is the Chase public page offer; other official channels may differ.",
       "tags": [
         "airline",
         "avios"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Avios",
+        "af": 95,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/avios/british-airways",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://creditcards.chase.com/travel-credit-cards/avios/british-airways",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "75000",
+        "5000",
+        "3 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8020,
       "issuer": "Chase",
       "name": "Iberia Visa Signature",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 75000,
       "unit": "Avios",
       "hist": 100000,
-      "spend": null,
+      "spend": 5000,
       "af": 95,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "75,000 Avios after $5,000 in purchases within 3 months. This is the Chase public page offer; other official channels may differ.",
       "tags": [
         "airline",
         "avios"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Avios",
+        "af": 95,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/avios/iberia",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://creditcards.chase.com/travel-credit-cards/avios/iberia",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "75000",
+        "5000",
+        "3 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8021,
       "issuer": "Chase",
       "name": "Aer Lingus Visa Signature",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 75000,
       "unit": "Avios",
       "hist": 100000,
-      "spend": null,
+      "spend": 5000,
       "af": 95,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "75,000 Avios after $5,000 in purchases within 3 months. This is the Chase public page offer; other official channels may differ.",
       "tags": [
         "airline",
         "avios"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Avios",
+        "af": 95,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/avios/aer-lingus",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://creditcards.chase.com/travel-credit-cards/avios/aer-lingus",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "75000",
+        "5000",
+        "3 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8101,
@@ -2154,23 +2518,24 @@
           "type": "portal"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8102,
       "issuer": "American Express",
       "name": "Gold Card",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 100000,
       "unit": "Membership Rewards points",
       "hist": 100000,
-      "spend": null,
+      "spend": 8000,
       "af": 325,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Welcome offer varies by applicant.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "Personalized welcome offer: as high as 100,000 Membership Rewards points after $8,000 in 6 months. The actual offer can be lower or unavailable.",
       "tags": [
         "travel",
         "transferable",
@@ -2214,7 +2579,29 @@
           "type": "portal"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "offerState": "verified-current",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Welcome offer varies by applicant."
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/card/gold-card/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.americanexpress.com/us/credit-cards/card/gold-card/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerType": "public",
+      "monitorExpected": [
+        "100000",
+        "8000",
+        "6 months"
+      ],
+      "bonusIsUpTo": true,
+      "offerRequirementType": "personalized",
+      "histComparable": false,
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8103,
@@ -2228,7 +2615,7 @@
       "af": 150,
       "reports": true,
       "status": "open",
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
@@ -2237,7 +2624,11 @@
         "amex"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "reviewReason": "Current welcome offer needs official-source review; Legacy note conflicts with verified flag",
+      "reviewOpenedDate": "2026-10-13",
+      "offerState": "needs-review",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8104,
@@ -2273,7 +2664,8 @@
       "catchAllCashBackRate": 1,
       "introAnnualFeeNote": "$0 introductory annual fee for the first year, then $95.",
       "rewardsVerifiedDate": "2026-10-04",
-      "rewardsSource": "official-issuer"
+      "rewardsSource": "official-issuer",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8105,
@@ -2299,45 +2691,75 @@
       "histPublicDate": "2026",
       "histStatus": "verified-public-high",
       "histSourceLabel": "BonusEagle / Upgraded Points",
-      "histSourceUrl": "https://www.bonuseagle.com/offers"
+      "histSourceUrl": "https://www.bonuseagle.com/offers",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8106,
       "issuer": "American Express",
       "name": "Delta SkyMiles Gold",
       "type": "Personal",
-      "bonus": 50000,
+      "bonus": 80000,
       "unit": "Delta miles + statement credit",
       "hist": 90000,
-      "spend": null,
+      "spend": 3000,
       "af": 150,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "DoC tracks 50K + $400 variant; other structures may be better depending on valuation.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "Personalized offer: as high as 80,000 miles plus $250 statement credit after $3,000 in 6 months. Your actual offer can be lower or unavailable. Ends November 4, 2026.",
       "tags": [
         "airline",
         "delta"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "previousOfferSnapshot": {
+        "bonus": 50000,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Delta miles + statement credit",
+        "af": 150,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "DoC tracks 50K + $400 variant; other structures may be better depending on valuation."
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "bonusIsUpTo": true,
+      "bonusCashExtra": 250,
+      "offerExpires": "2026-11-04",
+      "introAnnualFeeNote": "$0 first year, then $150",
+      "offerRequirementType": "personalized",
+      "monitorExpected": [
+        "80000",
+        "3000",
+        "6 months"
+      ],
+      "histComparable": false,
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8107,
       "issuer": "American Express",
       "name": "Delta SkyMiles Platinum",
       "type": "Personal",
-      "bonus": 0,
-      "unit": "Delta miles",
+      "bonus": 90000,
+      "unit": "Delta miles + statement credit",
       "hist": 100000,
-      "spend": null,
+      "spend": 4000,
       "af": 350,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "Personalized offer: as high as 90,000 miles plus $300 statement credit after $4,000 in 6 months. Your actual offer can be lower or unavailable. Ends November 4, 2026.",
       "tags": [
         "airline",
         "delta"
@@ -2347,23 +2769,51 @@
       "histPublicDate": "2026",
       "histStatus": "verified-public-high",
       "histSourceLabel": "BonusEagle",
-      "histSourceUrl": "https://www.bonuseagle.com/offers"
+      "histSourceUrl": "https://www.bonuseagle.com/offers",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Delta miles",
+        "af": 350,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "bonusIsUpTo": true,
+      "bonusCashExtra": 300,
+      "offerExpires": "2026-11-04",
+      "offerRequirementType": "personalized",
+      "monitorExpected": [
+        "90000",
+        "4000",
+        "6 months"
+      ],
+      "histComparable": false,
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8108,
       "issuer": "American Express",
       "name": "Delta SkyMiles Reserve",
       "type": "Personal",
-      "bonus": 0,
-      "unit": "Delta miles",
+      "bonus": 50000,
+      "unit": "Delta miles + flight certificates",
       "hist": 125000,
-      "spend": null,
+      "spend": 10000,
       "af": 650,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "50,000 miles plus two round-trip Delta Comfort flight certificates after $10,000 in 6 months. Restrictions and certificate taxes apply. Ends November 4, 2026.",
       "tags": [
         "airline",
         "delta",
@@ -2374,23 +2824,49 @@
       "histPublicDate": "historical",
       "histStatus": "verified-public-high",
       "histSourceLabel": "BonusEagle",
-      "histSourceUrl": "https://www.bonuseagle.com/offers"
+      "histSourceUrl": "https://www.bonuseagle.com/offers",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Delta miles",
+        "af": 650,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "offerExpires": "2026-11-04",
+      "offerRequirementType": "qualifying-activities",
+      "additionalRequirement": "Two flight certificates have destination, advance-booking and tax restrictions.",
+      "monitorExpected": [
+        "50000",
+        "10000",
+        "6 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8109,
       "issuer": "American Express",
       "name": "Hilton Honors",
       "type": "Personal",
-      "bonus": 0,
-      "unit": "Hilton points",
+      "bonus": 70000,
+      "unit": "Hilton points + Free Night Reward",
       "hist": 130000,
-      "spend": null,
+      "spend": 2000,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "70,000 Hilton points plus a Free Night Reward after $2,000 in 6 months. Ends January 13, 2027. Certificate restrictions apply.",
       "tags": [
         "hotel",
         "hilton"
@@ -2425,23 +2901,47 @@
           "type": "fixed"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "offerState": "verified-current",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Hilton points",
+        "af": 0,
+        "verified": false,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerType": "public",
+      "offerExpires": "2027-01-13",
+      "monitorExpected": [
+        "70000",
+        "2000",
+        "6 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8110,
       "issuer": "American Express",
       "name": "Hilton Honors Surpass",
       "type": "Personal",
-      "bonus": 0,
-      "unit": "Hilton points",
+      "bonus": 130000,
+      "unit": "Hilton points + Free Night Reward",
       "hist": 180000,
-      "spend": null,
+      "spend": 3000,
       "af": 150,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "130,000 Hilton points plus a Free Night Reward after $3,000 in 6 months. Ends January 13, 2027. Certificate restrictions apply.",
       "tags": [
         "hotel",
         "hilton"
@@ -2481,23 +2981,47 @@
           "type": "fixed"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "offerState": "verified-current",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Hilton points",
+        "af": 150,
+        "verified": false,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerType": "public",
+      "offerExpires": "2027-01-13",
+      "monitorExpected": [
+        "130000",
+        "3000",
+        "6 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8111,
       "issuer": "American Express",
       "name": "Hilton Honors Aspire",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 200000,
       "unit": "Hilton points",
       "hist": 200000,
-      "spend": null,
+      "spend": 6000,
       "af": 550,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "200,000 Hilton points after $6,000 in 6 months. Ends January 13, 2027. Certificate restrictions apply.",
       "tags": [
         "hotel",
         "hilton",
@@ -2523,68 +3047,138 @@
           "type": "fixed"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "offerState": "verified-current",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Hilton points",
+        "af": 550,
+        "verified": false,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerType": "public",
+      "offerExpires": "2027-01-13",
+      "monitorExpected": [
+        "200000",
+        "6000",
+        "6 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8112,
       "issuer": "American Express",
       "name": "Marriott Bonvoy Bevy",
       "type": "Personal",
-      "bonus": 125000,
-      "unit": "Marriott points + statement credit",
+      "bonus": 85000,
+      "unit": "Marriott points",
       "hist": 175000,
-      "spend": null,
+      "spend": 5000,
       "af": 250,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "DoC tracks an NLL 125K + $150 variant; verify eligibility/offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "85,000 Marriott Bonvoy points after $5,000 in purchases within 6 months. Official Marriott public offer; prior 125K + credit variant is not assumed current.",
       "tags": [
         "hotel",
         "marriott"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "previousOfferSnapshot": {
+        "bonus": 125000,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Marriott points + statement credit",
+        "af": 250,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "DoC tracks an NLL 125K + $150 variant; verify eligibility/offer."
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://www.marriott.com/credit-cards/marriott-bonvoy-bevy-american-express-card.mi",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.marriott.com/credit-cards/marriott-bonvoy-bevy-american-express-card.mi",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "85000",
+        "5000",
+        "6 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8113,
       "issuer": "American Express",
       "name": "Marriott Bonvoy Brilliant",
       "type": "Personal",
-      "bonus": 150000,
-      "unit": "Marriott points + statement credit",
+      "bonus": 100000,
+      "unit": "Marriott points",
       "hist": 200000,
-      "spend": null,
+      "spend": 6000,
       "af": 650,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "DoC tracks an NLL 150K + $250 variant; verify eligibility/offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "100,000 Marriott Bonvoy points after $6,000 in purchases within 6 months. Official Marriott public offer; prior 150K + credit variant is not assumed current.",
       "tags": [
         "hotel",
         "marriott",
         "premium"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "previousOfferSnapshot": {
+        "bonus": 150000,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Marriott points + statement credit",
+        "af": 650,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "DoC tracks an NLL 150K + $250 variant; verify eligibility/offer."
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://www.marriott.com/credit-cards/marriott-bonvoy-brilliant-american-express-card.mi",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.marriott.com/credit-cards/marriott-bonvoy-brilliant-american-express-card.mi",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "100000",
+        "6000",
+        "6 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8114,
       "issuer": "American Express",
       "name": "Platinum Card for Charles Schwab",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 80000,
       "unit": "Membership Rewards points",
       "hist": null,
-      "spend": null,
+      "spend": 12000,
       "af": 895,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Requires an eligible Schwab account. Schwab relationship can add an annual appreciation bonus based on qualifying holdings.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "80,000 Membership Rewards points after $12,000 in purchases in 6 months. Requires an eligible Schwab account.",
       "tags": [
         "travel",
         "transferable",
@@ -2604,7 +3198,26 @@
           "type": "travel"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "offerState": "verified-current",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Requires an eligible Schwab account. Schwab relationship can add an annual appreciation bonus based on qualifying holdings."
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://www.schwab.com/credit-cards/platinum-card",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.schwab.com/credit-cards/platinum-card",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerType": "public",
+      "monitorExpected": [
+        "80000",
+        "12000",
+        "6 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8115,
@@ -2614,13 +3227,13 @@
       "bonus": 80000,
       "unit": "Membership Rewards points",
       "hist": null,
-      "spend": null,
+      "spend": 12000,
       "af": 895,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Requires an eligible Morgan Stanley account. Eligible Platinum CashPlus clients may receive an annual engagement bonus.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "80,000 Membership Rewards points after $12,000 in purchases in 6 months. Requires an eligible Morgan Stanley brokerage or bank account.",
       "tags": [
         "travel",
         "transferable",
@@ -2640,7 +3253,30 @@
           "type": "travel"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "previousOfferSnapshot": {
+        "bonus": 80000,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Membership Rewards points",
+        "af": 895,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Requires an eligible Morgan Stanley account. Eligible Platinum CashPlus clients may receive an annual engagement bonus."
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://apply.americanexpress.com/amex-morgan-stanley-credit-cards/?page_url=38",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://apply.americanexpress.com/amex-morgan-stanley-credit-cards/?page_url=38",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "80000",
+        "12000",
+        "6 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8201,
@@ -2722,7 +3358,8 @@
           "Citi Premier"
         ],
         "summary": "Citi states the new account bonus is not available if you currently have or previously had a Citi Strata Premier or Citi Premier account."
-      }
+      },
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8202,
@@ -2793,7 +3430,8 @@
         "verifiedDate": "2026-10-06",
         "ruleType": "same-card-ever",
         "summary": "Citi states the new account bonus is not available if you currently have or previously had a Citi Strata Elite account."
-      }
+      },
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8203,
@@ -2878,7 +3516,8 @@
           "Citi Strata Student"
         ],
         "summary": "Citi states the new account bonus is not available if you currently have or previously had a Citi Strata or Citi Strata Student account."
-      }
+      },
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8204,
@@ -2908,7 +3547,8 @@
       "histSourceLabel": "BonusEagle",
       "histSourceUrl": "https://www.bonuseagle.com/offers",
       "catchAllCashBackRate": 2,
-      "catchAllCashBackCapNote": "2% total cash back structure: 1% when you buy plus 1% as you pay, under current terms."
+      "catchAllCashBackCapNote": "2% total cash back structure: 1% when you buy plus 1% as you pay, under current terms.",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8205,
@@ -2922,9 +3562,9 @@
       "af": 0,
       "reports": true,
       "status": "closed-new",
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
-      "offerNote": "Closed to new applications; retained for existing-card tracking/product-change context.",
+      "offerNote": "Citi stopped accepting new Custom Cash applications on May 28, 2026. Existing accounts remain usable.",
       "tags": [
         "cash",
         "citi",
@@ -2941,7 +3581,12 @@
       "rewardsVerifiedDate": "2026-10-04",
       "rewardsSource": "official-issuer",
       "issuerUrl": "https://www.citi.com/credit-cards/citi-custom-cash-credit-card",
-      "issuerUrlVerified": "2026-10-04"
+      "issuerUrlVerified": false,
+      "reviewReason": "Closed to new applications; retained for existing cardholders only.",
+      "reviewOpenedDate": "2026-10-13",
+      "offerState": "historical-only",
+      "lastAttemptedSourceReview": "2026-10-13",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8206,
@@ -2964,7 +3609,8 @@
         "premium"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8207,
@@ -2978,7 +3624,7 @@
       "af": 99,
       "reports": true,
       "status": "open",
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
@@ -2986,29 +3632,39 @@
         "aadvantage"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "reviewReason": "Current welcome offer needs official-source review; Legacy note conflicts with verified flag",
+      "reviewOpenedDate": "2026-10-13",
+      "offerState": "needs-review",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8208,
       "issuer": "Citi",
       "name": "AAdvantage Globe",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 60000,
       "unit": "AAdvantage miles",
       "hist": 90000,
-      "spend": null,
+      "spend": 4000,
       "af": 350,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "60,000 AAdvantage miles after $4,000 in purchases within 3 months. Official American Airlines channel offer.",
       "tags": [
         "airline",
         "aadvantage"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "offerState": "verified-current",
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceCheckedDate": "2026-10-13",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8209,
@@ -3022,7 +3678,7 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
       "offerNote": "Requires Costco membership; no standard sign-up bonus tracked.",
       "tags": [
@@ -3030,7 +3686,11 @@
         "costco"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "reviewReason": "Current welcome offer needs official-source review",
+      "reviewOpenedDate": "2026-10-13",
+      "offerState": "needs-review",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8210,
@@ -3055,7 +3715,8 @@
         "citi"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8301,
@@ -3109,7 +3770,8 @@
           "type": "portal"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8302,
@@ -3146,7 +3808,8 @@
           "type": "portal"
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8303,
@@ -3183,7 +3846,8 @@
       "histPublicDate": "2023-02",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club",
-      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/capital-one-ventureone/"
+      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/capital-one-ventureone/",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8304,
@@ -3221,7 +3885,8 @@
       "histPublicDate": "2024-10",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club",
-      "histSourceUrl": "https://pocketfinanceclub.com/cards/capital-one-savor/"
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/capital-one-savor/",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8305,
@@ -3258,7 +3923,8 @@
       "histPublicDate": "2020-10",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club",
-      "histSourceUrl": "https://pocketfinanceclub.com/cards/capital-one-quicksilver/"
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/capital-one-quicksilver/",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8401,
@@ -3281,7 +3947,8 @@
         "bofa"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8402,
@@ -3304,7 +3971,8 @@
         "bofa"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8403,
@@ -3366,7 +4034,8 @@
         "verifiedDate": "2026-10-06",
         "ruleType": "issuer-rule-not-published",
         "summary": "CardPilot has not verified a current Bank of America issuer rule that makes prior ownership of Customized Cash Rewards an automatic repeat-bonus disqualifier. Prior ownership therefore remains neutral and the card stays recommendable; verify the terms presented with the application."
-      }
+      },
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8404,
@@ -3395,7 +4064,8 @@
       "histPublicDate": "2026-09",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club",
-      "histSourceUrl": "https://pocketfinanceclub.com/cards/bank-of-america-unlimited-cash/"
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/bank-of-america-unlimited-cash/",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8405,
@@ -3432,7 +4102,8 @@
       "histPublicDate": "2020+",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club",
-      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/bank-of-america-travel-rewards/"
+      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/bank-of-america-travel-rewards/",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8406,
@@ -3482,7 +4153,8 @@
         }
       ],
       "pointsEarnVerifiedDate": "2026-10-04",
-      "pointsEarnNote": "Eligible Bank of America account holders can receive a 10% rewards bonus on points earned from card purchases."
+      "pointsEarnNote": "Eligible Bank of America account holders can receive a 10% rewards bonus on points earned from card purchases.",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8407,
@@ -3528,29 +4200,53 @@
         }
       ],
       "pointsEarnVerifiedDate": "2026-10-04",
-      "pointsEarnNote": "Eligible Bank of America account holders can receive a 10% rewards bonus on points earned from card purchases."
+      "pointsEarnNote": "Eligible Bank of America account holders can receive a 10% rewards bonus on points earned from card purchases.",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8408,
       "issuer": "Bank of America",
-      "name": "Air France KLM World Elite Mastercard",
+      "name": "Air France KLM Visa Signature",
       "type": "Personal",
-      "bonus": 0,
-      "unit": "Flying Blue miles",
+      "bonus": 70000,
+      "unit": "Flying Blue miles + XP",
       "hist": 100000,
-      "spend": null,
+      "spend": 3000,
       "af": 89,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Elevated offer reached 100K + XP in 2026; verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "70,000 Flying Blue miles plus 100 XP after $3,000 in 90 days. Official Air France channel offer; verify the application uses this channel.",
       "tags": [
         "airline",
         "flying blue"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "offerState": "verified-current",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Flying Blue miles",
+        "af": 89,
+        "verified": false,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Elevated offer reached 100K + XP in 2026; verify current offer."
+      },
+      "spendPeriod": "90 days",
+      "issuerUrl": "https://wwws.airfrance.us/information/flyingblue/carte-bancaire-partenaire",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://wwws.airfrance.us/information/flyingblue/carte-bancaire-partenaire",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerType": "public",
+      "monitorExpected": [
+        "70000",
+        "3000",
+        "90 days"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8409,
@@ -3564,7 +4260,7 @@
       "af": 79,
       "reports": true,
       "status": "open",
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
@@ -3572,23 +4268,27 @@
         "spirit"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "reviewReason": "Current welcome offer needs official-source review; Legacy note conflicts with verified flag",
+      "reviewOpenedDate": "2026-10-13",
+      "offerState": "needs-review",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8501,
       "issuer": "Wells Fargo",
       "name": "Autograph",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 20000,
       "unit": "Wells Fargo Rewards",
       "hist": 30000,
-      "spend": null,
+      "spend": 1000,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "20,000 Wells Fargo Rewards points after $1,000 in purchases in 3 months.",
       "tags": [
         "travel",
         "cash",
@@ -3599,7 +4299,30 @@
       "histPublicDate": "2022-09",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club",
-      "histSourceUrl": "https://pocketfinanceclub.com/cards/wells-fargo-autograph/"
+      "histSourceUrl": "https://pocketfinanceclub.com/cards/wells-fargo-autograph/",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Wells Fargo Rewards",
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.wellsfargo.com/autograph-visa-credit-card/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://creditcards.wellsfargo.com/autograph-visa-credit-card/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "20000",
+        "1000",
+        "3 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8502,
@@ -3622,23 +4345,24 @@
         "wells fargo"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8503,
       "issuer": "Wells Fargo",
       "name": "Active Cash",
       "type": "Personal",
-      "bonus": 200,
+      "bonus": 100,
       "unit": "cash",
       "hist": 250,
-      "spend": 1500,
+      "spend": 500,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "DoC tracks $200 after $1,500 in six months.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "Earn $100 cash rewards after $500 in purchases in 3 months. Offers vary by channel.",
       "tags": [
         "cash",
         "wells fargo"
@@ -3648,7 +4372,30 @@
       "histPublicDate": "2022-08",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Thiccstack",
-      "histSourceUrl": "https://thiccstack.com/cards/wellsfargo-active-cash"
+      "histSourceUrl": "https://thiccstack.com/cards/wellsfargo-active-cash",
+      "previousOfferSnapshot": {
+        "bonus": 200,
+        "spend": 1500,
+        "spendPeriod": null,
+        "unit": "cash",
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "DoC tracks $200 after $1,500 in six months."
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.wellsfargo.com/active-cash-credit-card/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://creditcards.wellsfargo.com/active-cash-credit-card/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "100",
+        "500",
+        "3 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8504,
@@ -3662,7 +4409,7 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
@@ -3670,7 +4417,11 @@
         "wells fargo"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "reviewReason": "Current welcome offer needs official-source review; Legacy note conflicts with verified flag",
+      "reviewOpenedDate": "2026-10-13",
+      "offerState": "needs-review",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8505,
@@ -3680,13 +4431,13 @@
       "bonus": 60000,
       "unit": "Choice points",
       "hist": 60000,
-      "spend": null,
+      "spend": 1000,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "DoC tracks 60K offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "60,000 Choice points after $1,000 in purchases in 3 months.",
       "tags": [
         "hotel",
         "choice"
@@ -3696,45 +4447,91 @@
       "histPublicDate": "2026-06",
       "histStatus": "verified-public-high",
       "histSourceLabel": "NerdWallet",
-      "histSourceUrl": "https://www.nerdwallet.com/credit-cards/news/choice-privileges-60K-bonus-june-2026"
+      "histSourceUrl": "https://www.nerdwallet.com/credit-cards/news/choice-privileges-60K-bonus-june-2026",
+      "previousOfferSnapshot": {
+        "bonus": 60000,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Choice points",
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "DoC tracks 60K offer."
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.wellsfargo.com/choice-hotel-privileges-mastercard/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://creditcards.wellsfargo.com/choice-hotel-privileges-mastercard/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "60000",
+        "1000",
+        "3 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8506,
       "issuer": "Wells Fargo",
       "name": "Choice Privileges Select Mastercard",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 60000,
       "unit": "Choice points",
       "hist": null,
-      "spend": null,
+      "spend": 3000,
       "af": 95,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "60,000 Choice points after $3,000 in purchases in 3 months.",
       "tags": [
         "hotel",
         "choice"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Choice points",
+        "af": 95,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.wellsfargo.com/choice-hotels-privileges-select-mastercard/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://creditcards.wellsfargo.com/choice-hotels-privileges-select-mastercard/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "60000",
+        "3000",
+        "3 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8507,
       "issuer": "Wells Fargo",
       "name": "One Key Card",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 250,
       "unit": "OneKeyCash",
       "hist": 400,
-      "spend": null,
+      "spend": 2000,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "Earn $250 OneKeyCash after $2,000 in purchases in 3 months. OneKeyCash is restricted travel credit, not cash.",
       "tags": [
         "travel",
         "expedia"
@@ -3744,29 +4541,75 @@
       "histPublicDate": "2024-07",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Credit Compound",
-      "histSourceUrl": "https://creditcompound.com/cards/one-key-card"
+      "histSourceUrl": "https://creditcompound.com/cards/one-key-card",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "OneKeyCash",
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.wellsfargo.com/one-key-credit-card/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://creditcards.wellsfargo.com/one-key-credit-card/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "250",
+        "2000",
+        "3 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8508,
       "issuer": "Wells Fargo",
       "name": "One Key+ Card",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 350,
       "unit": "OneKeyCash",
       "hist": null,
-      "spend": null,
+      "spend": 3000,
       "af": 99,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "Earn $350 OneKeyCash after $3,000 in purchases in 3 months. OneKeyCash is restricted travel credit, not cash.",
       "tags": [
         "travel",
         "expedia"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "OneKeyCash",
+        "af": 99,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.wellsfargo.com/one-key-plus-credit-card/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://creditcards.wellsfargo.com/one-key-plus-credit-card/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "350",
+        "3000",
+        "3 months"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8601,
@@ -3781,8 +4624,8 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-10-04",
-      "offerNote": "Official U.S. Bank terms: unlimited 2% cash back on every eligible purchase, with Smartly relationship tiers up to 4% on the first $10,000 in eligible net purchases each billing cycle; $0 annual fee.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "No fixed welcome bonus is currently advertised on the official product page. Ranked for ongoing rewards.",
       "tags": [
         "cash",
         "us bank",
@@ -3801,7 +4644,7 @@
         "100000": 4
       },
       "relationshipRequirement": "U.S. Bank Smartly Savings plus qualifying balances in U.S. Bank Smartly Checking and/or Safe Debit accounts are required for the 2.5%\u20134% tiers.",
-      "offerState": "verified-current",
+      "offerState": "no-standard-public-sub",
       "offerType": "public",
       "confidence": "official-issuer",
       "issuerUrl": "https://www.usbank.com/credit-cards/bank-smartly-visa-signature-credit-card.html",
@@ -3816,52 +4659,99 @@
         "10,000",
         "100,000",
         "no annual fee"
-      ]
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8602,
       "issuer": "U.S. Bank",
       "name": "Altitude Go",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 20000,
       "unit": "points",
       "hist": null,
-      "spend": null,
+      "spend": 1000,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "20,000 bonus points after $1,000 in net purchases within 90 days. Prior bonus within five years can restrict eligibility.",
       "tags": [
         "cash",
         "dining",
         "us bank"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "points",
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "90 days",
+      "issuerUrl": "https://www.usbank.com/credit-cards/altitude-go-visa-signature-credit-card.html",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.usbank.com/credit-cards/altitude-go-visa-signature-credit-card.html",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "20000",
+        "1000",
+        "90 days"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8603,
       "issuer": "U.S. Bank",
       "name": "Altitude Connect",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 20000,
       "unit": "points",
       "hist": 30000,
-      "spend": null,
+      "spend": 1000,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "20,000 bonus points after $1,000 in net purchases within 90 days. Prior bonus within five years can restrict eligibility.",
       "tags": [
         "travel",
         "us bank"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "points",
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Verify current offer."
+      },
+      "spendPeriod": "90 days",
+      "issuerUrl": "https://www.usbank.com/credit-cards/altitude-connect-visa-signature-credit-card.html",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.usbank.com/credit-cards/altitude-connect-visa-signature-credit-card.html",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "20000",
+        "1000",
+        "90 days"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8604,
@@ -3906,7 +4796,8 @@
         "5% cash back",
         "2,000",
         "no annual fee"
-      ]
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8605,
@@ -3928,7 +4819,8 @@
         "us bank"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8606,
@@ -3942,7 +4834,7 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
       "offerNote": "APR-focused product; no standard sign-up bonus tracked.",
       "tags": [
@@ -3950,7 +4842,11 @@
         "us bank"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "reviewReason": "Current welcome offer needs official-source review",
+      "reviewOpenedDate": "2026-10-13",
+      "offerState": "needs-review",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8701,
@@ -3972,30 +4868,43 @@
         "jetblue"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8702,
       "issuer": "Barclays",
       "name": "JetBlue Premier",
       "type": "Personal",
-      "bonus": 0,
+      "bonus": 90000,
       "unit": "TrueBlue points",
       "hist": 100000,
-      "spend": null,
+      "spend": 5000,
       "af": 499,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Verify current offer.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "90,000 TrueBlue points after $5,000 in purchases and payment of the annual fee, both within 90 days.",
       "tags": [
         "airline",
         "jetblue",
         "premium"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "offerState": "verified-current",
+      "issuerUrl": "https://cards.barclaycardus.com/banking/cards/jetblue-premier-card/",
+      "issuerUrlVerified": "2026-10-13",
+      "lastAttemptedSourceReview": "2026-10-13",
+      "monitoringStatus": "source-configured",
+      "spendPeriod": "90 days",
+      "additionalRequirement": "Pay the annual fee in full within 90 days.",
+      "monitorExpected": [
+        "90000",
+        "5000",
+        "90 days"
+      ]
     },
     {
       "id": 8703,
@@ -4009,7 +4918,7 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
@@ -4017,7 +4926,14 @@
         "wyndham"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "reviewReason": "Current welcome offer needs official-source review; Legacy note conflicts with verified flag; official source located but full applicable terms still need confirmation",
+      "reviewOpenedDate": "2026-10-13",
+      "offerState": "needs-review",
+      "issuerUrl": "https://cards.barclaycardus.com/banking/cards/wyndham-rewards-earner-card/",
+      "issuerUrlVerified": false,
+      "lastAttemptedSourceReview": "2026-10-13",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8704,
@@ -4031,7 +4947,7 @@
       "af": 95,
       "reports": true,
       "status": "open",
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
       "offerNote": "Verify current offer.",
       "tags": [
@@ -4043,7 +4959,14 @@
       "histPublicDate": "2026-06",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club",
-      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/wyndham-earner-plus/"
+      "histSourceUrl": "https://www.pocketfinanceclub.com/cards/wyndham-earner-plus/",
+      "reviewReason": "Current welcome offer needs official-source review; Legacy note conflicts with verified flag; official source located but full applicable terms still need confirmation",
+      "reviewOpenedDate": "2026-10-13",
+      "offerState": "needs-review",
+      "issuerUrl": "https://cards.barclaycardus.com/banking/cards/wyndham-rewards-earner-plus-card/",
+      "issuerUrlVerified": false,
+      "lastAttemptedSourceReview": "2026-10-13",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8705,
@@ -4066,7 +4989,8 @@
         "premium"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8706,
@@ -4080,7 +5004,7 @@
       "af": 99,
       "reports": true,
       "status": "availability-varies",
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
       "offerNote": "Application availability can vary; verify before applying.",
       "tags": [
@@ -4088,7 +5012,11 @@
         "aadvantage"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "reviewReason": "Current welcome offer needs official-source review",
+      "reviewOpenedDate": "2026-10-13",
+      "offerState": "needs-review",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8801,
@@ -4098,13 +5026,13 @@
       "bonus": 100,
       "unit": "Bilt Cash",
       "hist": null,
-      "spend": null,
+      "spend": 0,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-22",
-      "offerNote": "Current Bilt 2.0 entry card. $100 Bilt Cash on approval under current terms; $0 annual fee; earns Bilt rewards on everyday spend and housing through Bilt.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "$100 Bilt Cash upon approval; no spending requirement. Bilt Cash is restricted program credit, not withdrawable cash.",
       "tags": [
         "bilt",
         "travel",
@@ -4145,7 +5073,30 @@
           "capNote": "Up to 1.25X depending on the selected Bilt housing rewards option and current terms."
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "previousOfferSnapshot": {
+        "bonus": 100,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Bilt Cash",
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-22",
+        "offerNote": "Current Bilt 2.0 entry card. $100 Bilt Cash on approval under current terms; $0 annual fee; earns Bilt rewards on everyday spend and housing through Bilt."
+      },
+      "spendPeriod": null,
+      "issuerUrl": "https://www.bilt.com/card/blue",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.bilt.com/card/blue",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "offerRequirementType": "approval-only",
+      "monitorExpected": [
+        "100",
+        "0"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8816,
@@ -4155,13 +5106,13 @@
       "bonus": 200,
       "unit": "Bilt Cash",
       "hist": null,
-      "spend": null,
+      "spend": 0,
       "af": 95,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-22",
-      "offerNote": "Current Bilt 2.0 mid-tier card. $200 Bilt Cash on approval under current terms; $95 annual fee; 3X dining or grocery, 2X travel, and $100 annual Bilt Travel Hotel credit.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "$200 Bilt Cash upon approval; no spending requirement. Bilt Cash is restricted program credit, not withdrawable cash.",
       "tags": [
         "bilt",
         "travel",
@@ -4216,7 +5167,30 @@
           "capNote": "Up to 1.25X depending on housing rewards option."
         }
       ],
-      "pointsEarnVerifiedDate": "2026-10-04"
+      "pointsEarnVerifiedDate": "2026-10-04",
+      "previousOfferSnapshot": {
+        "bonus": 200,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Bilt Cash",
+        "af": 95,
+        "verified": true,
+        "verifiedDate": "2026-09-22",
+        "offerNote": "Current Bilt 2.0 mid-tier card. $200 Bilt Cash on approval under current terms; $95 annual fee; 3X dining or grocery, 2X travel, and $100 annual Bilt Travel Hotel credit."
+      },
+      "spendPeriod": null,
+      "issuerUrl": "https://www.bilt.com/card/obsidian",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.bilt.com/card/obsidian",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "offerRequirementType": "approval-only",
+      "monitorExpected": [
+        "200",
+        "0"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8817,
@@ -4280,7 +5254,8 @@
         }
       ],
       "pointsEarnVerifiedDate": "2026-10-04",
-      "pointsEarnNote": "2X on other everyday purchases."
+      "pointsEarnNote": "2X on other everyday purchases.",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8802,
@@ -4290,7 +5265,7 @@
       "bonus": 0,
       "unit": "cash",
       "hist": null,
-      "spend": null,
+      "spend": 0,
       "af": 0,
       "reports": true,
       "status": "open",
@@ -4330,30 +5305,56 @@
         "1,500",
         "Cashback Match",
         "no annual fee"
-      ]
+      ],
+      "offerRequirementType": "first-year-match",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8803,
       "issuer": "Discover",
       "name": "Discover it Miles",
       "type": "Personal",
-      "bonus": 100,
-      "unit": "cash + first-year match",
+      "bonus": 0,
+      "unit": "Discover miles",
       "hist": null,
-      "spend": null,
+      "spend": 0,
       "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "DoC tracks $100 referral plus first-year rewards match.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "Discover matches miles earned at the end of the first year. A $100 referral offer is not assumed available to every applicant.",
       "tags": [
         "cash",
         "travel",
         "discover"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "offerState": "first-year-cashback-match",
+      "previousOfferSnapshot": {
+        "bonus": 100,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "cash + first-year match",
+        "af": 0,
+        "verified": false,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "DoC tracks $100 referral plus first-year rewards match."
+      },
+      "spendPeriod": null,
+      "issuerUrl": "https://www.discover.com/credit-cards/card-smarts/discover-match-for-discover-miles-credit-card-rewards-matching/",
+      "issuerUrlVerified": false,
+      "offerSourceUrl": "https://www.discover.com/credit-cards/card-smarts/discover-match-for-discover-miles-credit-card-rewards-matching/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerType": "public-first-year-match",
+      "offerRequirementType": "first-year-match",
+      "firstYearCashBackMatchMultiplier": 2,
+      "monitorExpected": [
+        "0",
+        "0"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8804,
@@ -4367,7 +5368,7 @@
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
       "offerNote": "DoC tracks a $75 targeted/referral-style bonus; availability can vary.",
       "tags": [
@@ -4375,7 +5376,11 @@
         "apple"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "reviewReason": "Spending requirement needs official-source review",
+      "reviewOpenedDate": "2026-10-13",
+      "offerState": "needs-review",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8805,
@@ -4401,7 +5406,8 @@
       "histResearchDate": "2026-09-27",
       "histStatus": "tracked-catalog-history",
       "catchAllCashBackRate": 2,
-      "catchAllCashBackCapNote": "2% cash back when rewards are deposited into an eligible Fidelity account."
+      "catchAllCashBackCapNote": "2% cash back when rewards are deposited into an eligible Fidelity account.",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8815,
@@ -4441,7 +5447,8 @@
         "Robinhood Gold",
         "no annual fee",
         "50"
-      ]
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8806,
@@ -4467,7 +5474,8 @@
       "histResearchDate": "2026-09-27",
       "histStatus": "research-pending",
       "catchAllCashBackRate": 2,
-      "catchAllCashBackCapNote": "2% cash back on eligible purchases under the current catalog earning structure; issuer terms should be checked before applying."
+      "catchAllCashBackCapNote": "2% cash back on eligible purchases under the current catalog earning structure; issuer terms should be checked before applying.",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8807,
@@ -4489,7 +5497,8 @@
         "pnc"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8808,
@@ -4499,19 +5508,32 @@
       "bonus": 50000,
       "unit": "points",
       "hist": null,
-      "spend": null,
+      "spend": 3000,
       "af": 95,
       "reports": true,
       "status": "membership",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "USAA membership eligibility required; DoC tracks 50K.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "50,000 points after $3,000 in qualifying purchases by January 31, 2027. This is an absolute spending deadline; membership eligibility applies.",
       "tags": [
         "travel",
         "usaa"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "offerState": "verified-current",
+      "issuerUrl": "https://www.usaa.com/banking/credit-cards-public/rewards/",
+      "issuerUrlVerified": false,
+      "lastAttemptedSourceReview": "2026-10-13",
+      "monitoringStatus": "source-configured",
+      "spendPeriod": "by January 31, 2027",
+      "offerRequirementType": "qualifying-activities",
+      "offerSourceCheckedDate": "2026-10-13",
+      "monitorExpected": [
+        "50000",
+        "3000",
+        "January 31, 2027"
+      ]
     },
     {
       "id": 8809,
@@ -4525,7 +5547,7 @@
       "af": 49,
       "reports": true,
       "status": "membership",
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
       "offerNote": "Navy Federal membership eligibility required; offer can vary.",
       "tags": [
@@ -4533,7 +5555,14 @@
         "navy federal"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "reviewReason": "Spending requirement needs official-source review; official source located but full applicable terms still need confirmation",
+      "reviewOpenedDate": "2026-10-13",
+      "offerState": "needs-review",
+      "issuerUrl": "https://www.navyfederal.org/loans-cards/credit-cards/flagship-upgrade.html",
+      "issuerUrlVerified": false,
+      "lastAttemptedSourceReview": "2026-10-13",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8810,
@@ -4541,21 +5570,44 @@
       "name": "Pathfinder Rewards",
       "type": "Personal",
       "bonus": 50000,
-      "unit": "points + statement credit",
+      "unit": "PenFed points",
       "hist": null,
-      "spend": null,
+      "spend": 3000,
       "af": 95,
       "reports": true,
       "status": "membership",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Membership required; DoC tracks 50K + $50.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "50,000 points after $3,000 in purchases within 90 days. Membership and annual-fee waiver requirements apply.",
       "tags": [
         "travel",
         "penfed"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "offerState": "verified-current",
+      "previousOfferSnapshot": {
+        "bonus": 50000,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "points + statement credit",
+        "af": 95,
+        "verified": false,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Membership required; DoC tracks 50K + $50."
+      },
+      "spendPeriod": "90 days",
+      "issuerUrl": "https://www.penfed.org/credit-cards/pathfinder-rewards-visa",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.penfed.org/credit-cards/pathfinder-rewards-visa",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerType": "public",
+      "monitorExpected": [
+        "50000",
+        "3000",
+        "90 days"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8811,
@@ -4563,43 +5615,89 @@
       "name": "Virgin Red Rewards Mastercard",
       "type": "Personal",
       "bonus": 60000,
-      "unit": "Virgin points + credit",
+      "unit": "Virgin points",
       "hist": 75000,
-      "spend": null,
+      "spend": 4000,
       "af": 99,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "DoC tracks 60K + $200; previous high 75K.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "60,000 Virgin Points after $4,000 in net purchases within 90 days. Link the card to Virgin Red; account must be open and in good standing.",
       "tags": [
         "airline",
         "virgin"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "previousOfferSnapshot": {
+        "bonus": 60000,
+        "spend": null,
+        "spendPeriod": null,
+        "unit": "Virgin points + credit",
+        "af": 99,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "DoC tracks 60K + $200; previous high 75K."
+      },
+      "spendPeriod": "90 days",
+      "issuerUrl": "https://www.virginatlantic.com/en-US/flying-club/credit-card",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://www.virginatlantic.com/en-US/flying-club/credit-card",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerState": "verified-current",
+      "offerType": "public",
+      "monitorExpected": [
+        "60000",
+        "4000",
+        "90 days"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8812,
       "issuer": "Barclays",
       "name": "Carnival Rewards Mastercard",
       "type": "Personal",
-      "bonus": 50000,
+      "bonus": 20000,
       "unit": "points",
       "hist": 50000,
       "spend": 1000,
       "af": 0,
       "reports": true,
       "status": "open",
-      "verified": false,
-      "verifiedDate": null,
+      "verified": true,
+      "verifiedDate": "2026-10-13",
       "tags": [
         "carnival",
         "cruise"
       ],
-      "offerNote": "Carnival co-branded card issued by Barclays. Earns Carnival Rewards Points on card purchases; current exact welcome-offer terms should be verified before applying.",
+      "offerNote": "20,000 Carnival Rewards points after $1,000 in purchases in the first 90 days. Replaces the older unverified 50,000-point record.",
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "offerState": "verified-current",
+      "previousOfferSnapshot": {
+        "bonus": 50000,
+        "spend": 1000,
+        "spendPeriod": null,
+        "unit": "points",
+        "af": 0,
+        "verified": false,
+        "verifiedDate": null,
+        "offerNote": "Carnival co-branded card issued by Barclays. Earns Carnival Rewards Points on card purchases; current exact welcome-offer terms should be verified before applying."
+      },
+      "spendPeriod": "90 days",
+      "issuerUrl": "https://cards.barclaycardus.com/banking/cards/carnival-rewards-mastercard/",
+      "issuerUrlVerified": "2026-10-13",
+      "offerSourceUrl": "https://cards.barclaycardus.com/banking/cards/carnival-rewards-mastercard/",
+      "offerSourceCheckedDate": "2026-10-13",
+      "offerType": "public",
+      "monitorExpected": [
+        "20000",
+        "1000",
+        "90 days"
+      ],
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8901,
@@ -4624,7 +5722,8 @@
         "travel"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8902,
@@ -4650,7 +5749,8 @@
         "premium"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "tracked-catalog-history"
+      "histStatus": "tracked-catalog-history",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8903,
@@ -4673,7 +5773,8 @@
         "travel"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8904,
@@ -4696,7 +5797,8 @@
         "travel"
       ],
       "histResearchDate": "2026-09-27",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "monitoringStatus": "source-needed"
     },
     {
       "id": 8022,
@@ -4743,7 +5845,8 @@
       "histSourceUrl": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select",
       "launchDate": "2026-10-01",
       "launchSourceUrl": "https://www.ihgplc.com/en/news-and-media/news-releases/2026/chase-introduces-new-ihg-one-rewards-premier-select-credit-card-and-portfolio",
-      "launchVerifiedDate": "2026-10-07"
+      "launchVerifiedDate": "2026-10-07",
+      "monitoringStatus": "source-configured"
     },
     {
       "id": 8905,
@@ -4792,7 +5895,8 @@
       "rewardsVerifiedDate": "2026-10-04",
       "rewardsSource": "official-issuer",
       "histResearchDate": "2026-10-04",
-      "histStatus": "research-pending"
+      "histStatus": "research-pending",
+      "monitoringStatus": "source-configured"
     }
   ],
   "historicalHighResearch": {
