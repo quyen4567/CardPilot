@@ -1,16 +1,340 @@
 {
-  "catalogVersion": "2026-10-07.2",
-  "checkedAt": "2026-10-12T14:36:31.993Z",
+  "catalogVersion": "2026-10-13.3",
+  "checkedAt": "2026-10-13T05:58:47.488Z",
   "counts": {
-    "verified": 16,
-    "needs_review": 26,
+    "verified": 5,
+    "needs_review": 139,
     "blocked_by_issuer": 0,
     "broken": 0,
-    "unmonitored": 102
+    "unmonitored": 0
   },
-  "monitoredCards": 42,
+  "monitoredCards": 89,
   "totalCards": 144,
-  "changeCandidates": [],
+  "changeCandidates": [
+    {
+      "id": 7001,
+      "issuer": "Chase",
+      "name": "Ink Business Unlimited",
+      "status": "needs_review",
+      "url": "https://creditcards.chase.com/business-credit-cards/ink/unlimited",
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": true,
+        "bonus": 750,
+        "spend": 6000,
+        "spendPeriod": "3 months",
+        "af": 0,
+        "snippet": "Earn $750 cash back after you spend $6,000 on purchases in the first 3 months after account opening",
+        "reason": "Unique direct offer pattern detected"
+      }
+    },
+    {
+      "id": 7002,
+      "issuer": "Chase",
+      "name": "Ink Business Cash",
+      "status": "needs_review",
+      "url": "https://creditcards.chase.com/business-credit-cards/ink/cash",
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": true,
+        "bonus": 750,
+        "spend": 6000,
+        "spendPeriod": "3 months",
+        "af": 0,
+        "snippet": "Earn $750 cash back after you spend $6,000 on purchases in the first 3 months after account opening",
+        "reason": "Unique direct offer pattern detected"
+      }
+    },
+    {
+      "id": 7009,
+      "issuer": "Chase",
+      "name": "Southwest Premier Business",
+      "status": "needs_review",
+      "url": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 80000,
+        "spend": 3000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "80,000 points after you spend $3,000 on purchases in the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 7010,
+      "issuer": "Chase",
+      "name": "United Business",
+      "status": "needs_review",
+      "url": "https://creditcards.chase.com/business-credit-cards/united/united-business-card",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 90000,
+        "spend": 5000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 7011,
+      "issuer": "Chase",
+      "name": "United Club Business",
+      "status": "needs_review",
+      "url": "https://creditcards.chase.com/business-credit-cards/united/united-club-business",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 90000,
+        "spend": 5000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8005,
+      "issuer": "Chase",
+      "name": "Southwest Rapid Rewards Plus",
+      "status": "needs_review",
+      "url": "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 50000,
+        "spend": 1000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "Earn 50,000 bonus points * 2X points on Southwest Airlines purchases and on the first $5,000 in combined purchases at gas stations and grocery stores per year * 1X points on all other purchases * NEW CARDMEMBER OFFER Earn 50,000 bonus points after you spend $1,000 on purchases in the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8006,
+      "issuer": "Chase",
+      "name": "Southwest Rapid Rewards Premier",
+      "status": "needs_review",
+      "url": "https://creditcards.chase.com/travel-credit-cards/southwest/premier",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 55000,
+        "spend": 1500,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "Earn 55,000 bonus points * 3X points on Southwest Airlines purchases * 2X points on the first $8,000 in combined purchases at grocery stores and restaurants per year * NEW CARDMEMBER OFFER Earn 55,000 bonus points after you spend $1,500 on purchases in the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8007,
+      "issuer": "Chase",
+      "name": "Southwest Rapid Rewards Priority",
+      "status": "needs_review",
+      "url": "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 60000,
+        "spend": 2000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "Earn 60,000 bonus points * 4X points on Southwest Airlines purchases * 2X points at gas stations and restaurants * NEW CARDMEMBER OFFER Earn 60,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8008,
+      "issuer": "Chase",
+      "name": "United Explorer",
+      "status": "needs_review",
+      "url": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": true,
+        "bonus": 70000,
+        "spend": 3000,
+        "spendPeriod": "3 months",
+        "af": 0,
+        "snippet": "70,000 Miles: To qualify, you must make $3,000 in purchases during the first 3 months from account opening",
+        "reason": "Unique direct offer pattern detected"
+      }
+    },
+    {
+      "id": 8009,
+      "issuer": "Chase",
+      "name": "United Quest",
+      "status": "needs_review",
+      "url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 80000,
+        "spend": 4000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "80,000 Miles: To qualify, you must make $4,000 in purchases during the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8010,
+      "issuer": "Chase",
+      "name": "United Club",
+      "status": "needs_review",
+      "url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 90000,
+        "spend": 5000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8011,
+      "issuer": "Chase",
+      "name": "United Gateway",
+      "status": "needs_review",
+      "url": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": true,
+        "bonus": 40000,
+        "spend": 1000,
+        "spendPeriod": "3 months",
+        "af": 0,
+        "snippet": "40,000 Miles: To qualify, you must make $1,000 in purchases during the first 3 months from account opening",
+        "reason": "Unique direct offer pattern detected"
+      }
+    },
+    {
+      "id": 8018,
+      "issuer": "Chase",
+      "name": "Aeroplan Card",
+      "status": "needs_review",
+      "url": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 40000,
+        "spend": 20000,
+        "spendPeriod": "12 months",
+        "af": null,
+        "snippet": "40,000 bonus points after you spend $20,000 on purchases in the first 12 months",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8109,
+      "issuer": "American Express",
+      "name": "Hilton Honors",
+      "status": "needs_review",
+      "url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 200000,
+        "spend": 6000,
+        "spendPeriod": "6 months",
+        "af": null,
+        "snippet": "Earn 200,000 Bonus Points† Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8110,
+      "issuer": "American Express",
+      "name": "Hilton Honors Surpass",
+      "status": "needs_review",
+      "url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 200000,
+        "spend": 6000,
+        "spendPeriod": "6 months",
+        "af": null,
+        "snippet": "Earn 200,000 Bonus Points† Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8303,
+      "issuer": "Capital One",
+      "name": "VentureOne Rewards",
+      "status": "needs_review",
+      "url": "https://www.capitalone.com/credit-cards/ventureone/",
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": true,
+        "bonus": 20000,
+        "spend": 500,
+        "spendPeriod": "3 months",
+        "af": 0,
+        "snippet": "20,000 bonus miles once you spend $500 on purchases within the first 3 months from account opening 1 Low Intro APR 0% intro APR for 15 months on purchases and balance transfers; 18.74% - 28.74% variable APR after that; Balance transfer fee applies",
+        "reason": "Unique direct offer pattern detected"
+      }
+    },
+    {
+      "id": 8604,
+      "issuer": "U.S. Bank",
+      "name": "Cash+",
+      "status": "needs_review",
+      "url": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html",
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": true,
+        "bonus": 200,
+        "spend": 1000,
+        "spendPeriod": "90 days",
+        "af": 0,
+        "snippet": "Get a $200 bonus For a limited time, earn a $200 rewards bonus after you spend $1,000 in eligible purchases within the first 90 days of account opening",
+        "reason": "Unique direct offer pattern detected"
+      }
+    },
+    {
+      "id": 8703,
+      "issuer": "Barclays",
+      "name": "Wyndham Rewards Earner",
+      "status": "needs_review",
+      "url": "https://cards.barclaycardus.com/banking/cards/wyndham-rewards-earner-card/",
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": true,
+        "bonus": 45000,
+        "spend": 500,
+        "spendPeriod": "180 days",
+        "af": 0,
+        "snippet": "earn 45,000 bonus points after spending $500 at Hotels by Wyndham in the first 180 days",
+        "reason": "Unique direct offer pattern detected"
+      }
+    },
+    {
+      "id": 8704,
+      "issuer": "Barclays",
+      "name": "Wyndham Rewards Earner Plus",
+      "status": "needs_review",
+      "url": "https://cards.barclaycardus.com/banking/cards/wyndham-rewards-earner-plus-card/",
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": true,
+        "bonus": 55000,
+        "spend": 500,
+        "spendPeriod": "180 days",
+        "af": 95,
+        "snippet": "earn 55,000 bonus points after spending $500 at Hotels by Wyndham in the first 180 days",
+        "reason": "Unique direct offer pattern detected"
+      }
+    }
+  ],
   "results": [
     {
       "id": 7001,
@@ -29,18 +353,19 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
       "detectedOffer": {
         "confidence": "high",
-        "changed": false,
+        "changed": true,
         "bonus": 750,
         "spend": 6000,
+        "spendPeriod": "3 months",
         "af": 0,
-        "snippet": "Earn $750 cash back after you spend $6,000",
+        "snippet": "Earn $750 cash back after you spend $6,000 on purchases in the first 3 months after account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7002,
@@ -59,24 +384,25 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old."
       ],
       "detectedOffer": {
         "confidence": "high",
-        "changed": false,
+        "changed": true,
         "bonus": 750,
         "spend": 6000,
+        "spendPeriod": "3 months",
         "af": 0,
-        "snippet": "Earn $750 cash back after you spend $6,000",
+        "snippet": "Earn $750 cash back after you spend $6,000 on purchases in the first 3 months after account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7007,
       "issuer": "Chase",
       "name": "IHG One Rewards Business",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/IHG/business",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/IHG/business",
@@ -90,35 +416,34 @@
         "employee card"
       ],
       "missingTerms": [],
-      "issues": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 3 unique bonus/spend pairs",
+        "reason": "Detected 2 unique bonus/spend pairs",
         "candidates": [
-          {
-            "bonus": 20000,
-            "spend": 25000,
-            "snippet": "Earn 20,000 bonus points Earn 20,000 bonus points after you spend $25,000"
-          },
           {
             "bonus": 190000,
             "spend": 5000,
-            "snippet": "190,000 Points: To qualify, you must make $5,000 in purchases"
+            "spendPeriod": "3 months",
+            "snippet": "Earn 190,000 Bonus Points after spending $5,000 in the first 3 months from account opening"
           },
           {
-            "bonus": 50000,
-            "spend": 60000,
-            "snippet": "50,000 points after spending $60,000 on purchases"
+            "bonus": 20000,
+            "spend": 25000,
+            "spendPeriod": null,
+            "snippet": "Earn 20,000 bonus points Earn 20,000 bonus points after you spend $25,000 on purchases each calendar year"
           }
         ]
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7009,
       "issuer": "Chase",
       "name": "Southwest Premier Business",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business",
@@ -130,23 +455,26 @@
         "149"
       ],
       "missingTerms": [],
-      "issues": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
       "detectedOffer": {
-        "confidence": "high",
-        "changed": false,
+        "confidence": "review",
+        "changed": true,
         "bonus": 80000,
         "spend": 3000,
-        "af": 149,
-        "snippet": "80,000 points after you spend $3,000 on purchases",
-        "reason": "Unique direct offer pattern detected"
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "80,000 points after you spend $3,000 on purchases in the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7010,
       "issuer": "Chase",
       "name": "United Business",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/united/united-business-card",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/united/united-business-card",
@@ -163,30 +491,26 @@
         "150"
       ],
       "missingTerms": [],
-      "issues": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 2 unique bonus/spend pairs",
-        "candidates": [
-          {
-            "bonus": 100000,
-            "spend": 5000,
-            "snippet": "100,000 bonus miles + 2,000 Premier qualifying points (PQP) Earn 90,000 bonus miles + 2,000 PQP after you spend $5,000 on purchases"
-          },
-          {
-            "bonus": 90000,
-            "spend": 5000,
-            "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases"
-          }
-        ]
+        "changed": true,
+        "bonus": 90000,
+        "spend": 5000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7011,
       "issuer": "Chase",
       "name": "United Club Business",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/united/united-club-business",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/united/united-club-business",
@@ -203,24 +527,260 @@
         "695"
       ],
       "missingTerms": [],
-      "issues": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 2 unique bonus/spend pairs",
+        "changed": true,
+        "bonus": 90000,
+        "spend": 5000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 7103,
+      "issuer": "American Express",
+      "name": "Graphite Business Cash Unlimited",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/graphite-business-cash-unlimited-card/",
+      "finalUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/graphite-business-cash-unlimited-card/",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "1500",
+        "50000",
+        "6 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": false,
+        "bonus": 1500,
+        "spend": 50000,
+        "spendPeriod": "6 months",
+        "af": null,
+        "snippet": "Earn $1,500 cash back after you spend $50,000 in purchases on your new Card within the first 6 months of Card Membership",
+        "reason": "Offer pattern requires review"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 7105,
+      "issuer": "American Express",
+      "name": "Blue Business Plus",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex/",
+      "finalUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex/",
+      "source": "issuer-page",
+      "expectedTerms": [],
+      "missingTerms": [],
+      "issues": [
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
+        "No current bonus is stored and no explicit no-offer state is set.",
+        "Verification is 22 days old."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 7106,
+      "issuer": "American Express",
+      "name": "Business Green Rewards Card",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/",
+      "finalUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "15000",
+        "3000",
+        "3 months"
+      ],
+      "missingTerms": [
+        "15000",
+        "3000"
+      ],
+      "issues": [
+        "Issuer page loaded, but expected offer wording was not fully extracted: 15000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 3000"
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 7107,
+      "issuer": "American Express",
+      "name": "Delta SkyMiles Gold Business",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
+      "finalUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "90000",
+        "6000",
+        "6 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 3 unique bonus/spend pairs",
         "candidates": [
           {
-            "bonus": 100000,
-            "spend": 5000,
-            "snippet": "100,000 bonus miles + 2,000 Premier qualifying points (PQP) Earn 90,000 bonus miles + 2,000 PQP after you spend $5,000 on purchases"
+            "bonus": 90000,
+            "spend": 6000,
+            "spendPeriod": "6 months",
+            "snippet": "EARN 90,000 BONUS MILES Earn 90,000 bonus miles after you make $6,000 in eligible purchases on your Card in the first 6 months"
           },
           {
-            "bonus": 90000,
-            "spend": 5000,
-            "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases"
+            "bonus": 100000,
+            "spend": 8000,
+            "spendPeriod": "6 months",
+            "snippet": "EARN 100,000 BONUS MILES Earn 100,000 bonus miles after you make $8,000 in eligible purchases on your Card in the first 6 months"
+          },
+          {
+            "bonus": 200000,
+            "spend": 20000,
+            "spendPeriod": "6 months",
+            "snippet": "EARN 200,000 BONUS MILES Earn 200,000 bonus miles after you make $20,000 in eligible purchases on your Card in the first 6 months"
           }
         ]
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 7108,
+      "issuer": "American Express",
+      "name": "Delta SkyMiles Platinum Business",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
+      "finalUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "100000",
+        "8000",
+        "6 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 3 unique bonus/spend pairs",
+        "candidates": [
+          {
+            "bonus": 90000,
+            "spend": 6000,
+            "spendPeriod": "6 months",
+            "snippet": "EARN 90,000 BONUS MILES Earn 90,000 bonus miles after you make $6,000 in eligible purchases on your Card in the first 6 months"
+          },
+          {
+            "bonus": 100000,
+            "spend": 8000,
+            "spendPeriod": "6 months",
+            "snippet": "EARN 100,000 BONUS MILES Earn 100,000 bonus miles after you make $8,000 in eligible purchases on your Card in the first 6 months"
+          },
+          {
+            "bonus": 200000,
+            "spend": 20000,
+            "spendPeriod": "6 months",
+            "snippet": "EARN 200,000 BONUS MILES Earn 200,000 bonus miles after you make $20,000 in eligible purchases on your Card in the first 6 months"
+          }
+        ]
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 7109,
+      "issuer": "American Express",
+      "name": "Delta SkyMiles Reserve Business",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
+      "finalUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "200000",
+        "20000",
+        "6 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 3 unique bonus/spend pairs",
+        "candidates": [
+          {
+            "bonus": 90000,
+            "spend": 6000,
+            "spendPeriod": "6 months",
+            "snippet": "EARN 90,000 BONUS MILES Earn 90,000 bonus miles after you make $6,000 in eligible purchases on your Card in the first 6 months"
+          },
+          {
+            "bonus": 100000,
+            "spend": 8000,
+            "spendPeriod": "6 months",
+            "snippet": "EARN 100,000 BONUS MILES Earn 100,000 bonus miles after you make $8,000 in eligible purchases on your Card in the first 6 months"
+          },
+          {
+            "bonus": 200000,
+            "spend": 20000,
+            "spendPeriod": "6 months",
+            "snippet": "EARN 200,000 BONUS MILES Earn 200,000 bonus miles after you make $20,000 in eligible purchases on your Card in the first 6 months"
+          }
+        ]
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 7301,
+      "issuer": "Citi",
+      "name": "Citi / AAdvantage Business World Elite Mastercard",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://creditcards.aa.com/credit-cards/citi-business-card-american-airlines-direct/",
+      "finalUrl": "https://creditcards.aa.com/credit-cards/citi-business-card-american-airlines-direct/",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "65000",
+        "4000",
+        "4 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7401,
@@ -239,14 +799,14 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7402,
@@ -265,14 +825,14 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7403,
@@ -291,14 +851,66 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 7502,
+      "issuer": "U.S. Bank",
+      "name": "Business Shield",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.usbank.com/business-banking/business-credit-cards/business-shield-credit-card.html",
+      "finalUrl": "https://www.usbank.com/business-banking/business-credit-cards/business-shield-credit-card.html",
+      "source": "issuer-page",
+      "expectedTerms": [],
+      "missingTerms": [],
+      "issues": [
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
+        "No current bonus is stored and no explicit no-offer state is set.",
+        "Verification is 22 days old."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 7702,
+      "issuer": "Barclays",
+      "name": "JetBlue Business",
+      "status": "verified",
+      "httpStatus": 200,
+      "url": "https://cards.barclaycardus.com/banking/cards/jetblue-business-card/",
+      "finalUrl": "https://cards.barclaycardus.com/banking/cards/jetblue-business-card/",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "50000",
+        "4000",
+        "90 days"
+      ],
+      "missingTerms": [],
+      "issues": [],
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": false,
+        "bonus": 50000,
+        "spend": 4000,
+        "spendPeriod": "90 days",
+        "af": 99,
+        "snippet": "Earn 50,000 bonus points after qualifying account activity 2 6X points on eligible JetBlue purchases 2 2X points at restaurants and office supply stores 2 Group 3 boarding on JetBlue-operated flights 2,4 Rewards Earn 50,000 bonus points after spending $4,000 on purchases and paying the annual fee in full, both within the first 90 days",
+        "reason": "Unique direct offer pattern detected"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8001,
@@ -317,7 +929,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -326,16 +938,18 @@
           {
             "bonus": 75000,
             "spend": 5000,
-            "snippet": "Earn 75,000 points after you spend $5,000"
+            "spendPeriod": "3 months",
+            "snippet": "Earn 75,000 points after you spend $5,000 in purchases in the first 3 months from account opening"
           },
           {
             "bonus": 100000,
             "spend": 6000,
-            "snippet": "Earn 100,000 bonus points after you spend $6,000"
+            "spendPeriod": "3 months",
+            "snippet": "Earn 100,000 bonus points after you spend $6,000 on purchases in the first 3 months from account opening See details Opens new credit card offers and promotions in the same window Refer friends if you already have a Chase Sapphire ® Credit Card"
           }
         ]
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8002,
@@ -354,7 +968,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -363,22 +977,24 @@
           {
             "bonus": 100000,
             "spend": 6000,
-            "snippet": "Earn 100,000 points after you spend $6,000"
+            "spendPeriod": "3 months",
+            "snippet": "Earn 100,000 points after you spend $6,000 in purchases in the first 3 months from account opening * $2,000 value of 100,000 points for select flights and hotels through Chase Travel SM * + $3,000+ in annual value opens overlay through travel and lifestyle benef"
           },
           {
             "bonus": 75000,
             "spend": 5000,
-            "snippet": "Earn 75,000 bonus points after you spend $5,000"
+            "spendPeriod": "3 months",
+            "snippet": "Earn 75,000 bonus points after you spend $5,000 on purchases in the first 3 months from account opening See details Opens new credit card offers and promotions in the same window Refer friends if you already have a Chase Sapphire ® Credit Card"
           }
         ]
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8004,
       "issuer": "Chase",
       "name": "Freedom Flex",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex",
       "finalUrl": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex",
@@ -390,7 +1006,9 @@
         "0 annual fee"
       ],
       "missingTerms": [],
-      "issues": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 2 unique bonus/spend pairs",
@@ -398,16 +1016,18 @@
           {
             "bonus": 250,
             "spend": 500,
-            "snippet": "Earn a $250 bonus after you spend $500"
+            "spendPeriod": "3 months",
+            "snippet": "Earn a $250 bonus after you spend $500 on purchases in the first 3 months from account opening"
           },
           {
             "bonus": 2027,
             "spend": 500,
-            "snippet": "2027 Cash Back Rewards & Benefits NEW CARDMEMBER OFFER Earn a $200 Strike through $250 bonus Earn a $250 bonus after you spend $500 on purchases"
+            "spendPeriod": "3 months",
+            "snippet": "2027 Cash Back Rewards & Benefits NEW CARDMEMBER OFFER Earn a $200 Strike through $250 bonus Earn a $250 bonus after you spend $500 on purchases in the first 3 months from account opening"
           }
         ]
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8005,
@@ -426,18 +1046,19 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
       "detectedOffer": {
-        "confidence": "high",
-        "changed": false,
+        "confidence": "review",
+        "changed": true,
         "bonus": 50000,
         "spend": 1000,
-        "af": 99,
-        "snippet": "Earn 50,000 bonus points * 2X points on Southwest Airlines purchases and on the first $5,000 in combined purchases at gas stations and grocery stores per year * 1X points on all other purchases * NEW CARDMEMBER OFFER Earn 50,000 bonus points after you spend $1,000",
-        "reason": "Unique direct offer pattern detected"
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "Earn 50,000 bonus points * 2X points on Southwest Airlines purchases and on the first $5,000 in combined purchases at gas stations and grocery stores per year * 1X points on all other purchases * NEW CARDMEMBER OFFER Earn 50,000 bonus points after you spend $1,000 on purchases in the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8006,
@@ -456,18 +1077,19 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
       "detectedOffer": {
-        "confidence": "high",
-        "changed": false,
+        "confidence": "review",
+        "changed": true,
         "bonus": 55000,
         "spend": 1500,
-        "af": 149,
-        "snippet": "Earn 55,000 bonus points * 3X points on Southwest Airlines purchases * 2X points on the first $8,000 in combined purchases at grocery stores and restaurants per year * NEW CARDMEMBER OFFER Earn 55,000 bonus points after you spend $1,500",
-        "reason": "Unique direct offer pattern detected"
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "Earn 55,000 bonus points * 3X points on Southwest Airlines purchases * 2X points on the first $8,000 in combined purchases at grocery stores and restaurants per year * NEW CARDMEMBER OFFER Earn 55,000 bonus points after you spend $1,500 on purchases in the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8007,
@@ -486,24 +1108,25 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
       "detectedOffer": {
-        "confidence": "high",
-        "changed": false,
+        "confidence": "review",
+        "changed": true,
         "bonus": 60000,
         "spend": 2000,
-        "af": 229,
-        "snippet": "Earn 60,000 bonus points * 4X points on Southwest Airlines purchases * 2X points at gas stations and restaurants * NEW CARDMEMBER OFFER Earn 60,000 bonus points after you spend $2,000",
-        "reason": "Unique direct offer pattern detected"
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "Earn 60,000 bonus points * 4X points on Southwest Airlines purchases * 2X points at gas stations and restaurants * NEW CARDMEMBER OFFER Earn 60,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8008,
       "issuer": "Chase",
       "name": "United Explorer",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
@@ -518,30 +1141,26 @@
         "150"
       ],
       "missingTerms": [],
-      "issues": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
       "detectedOffer": {
-        "confidence": "review",
-        "reason": "Detected 2 unique bonus/spend pairs",
-        "candidates": [
-          {
-            "bonus": 70000,
-            "spend": 3000,
-            "snippet": "Earn 70,000 bonus miles after you spend $3,000"
-          },
-          {
-            "bonus": 80000,
-            "spend": 3000,
-            "snippet": "80,000 bonus miles Earn 70,000 bonus miles after you spend $3,000 on purchases"
-          }
-        ]
+        "confidence": "high",
+        "changed": true,
+        "bonus": 70000,
+        "spend": 3000,
+        "spendPeriod": "3 months",
+        "af": 0,
+        "snippet": "70,000 Miles: To qualify, you must make $3,000 in purchases during the first 3 months from account opening",
+        "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8009,
       "issuer": "Chase",
       "name": "United Quest",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
@@ -556,30 +1175,26 @@
         "350"
       ],
       "missingTerms": [],
-      "issues": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 2 unique bonus/spend pairs",
-        "candidates": [
-          {
-            "bonus": 90000,
-            "spend": 4000,
-            "snippet": "90,000 bonus miles + 500 Premier qualifying points (PQP) Earn 500 PQP after first purchase and 80,000 bonus miles after you spend $4,000 on purchases"
-          },
-          {
-            "bonus": 80000,
-            "spend": 4000,
-            "snippet": "80,000 Miles: To qualify, you must make $4,000 in purchases"
-          }
-        ]
+        "changed": true,
+        "bonus": 80000,
+        "spend": 4000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "80,000 Miles: To qualify, you must make $4,000 in purchases during the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8010,
       "issuer": "Chase",
       "name": "United Club",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
@@ -594,30 +1209,26 @@
         "695"
       ],
       "missingTerms": [],
-      "issues": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 2 unique bonus/spend pairs",
-        "candidates": [
-          {
-            "bonus": 100000,
-            "spend": 5000,
-            "snippet": "100,000 bonus miles Earn 90,000 bonus miles after you spend $5,000 on purchases"
-          },
-          {
-            "bonus": 90000,
-            "spend": 5000,
-            "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases"
-          }
-        ]
+        "changed": true,
+        "bonus": 90000,
+        "spend": 5000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8011,
       "issuer": "Chase",
       "name": "United Gateway",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
@@ -632,30 +1243,56 @@
         "no annual fee"
       ],
       "missingTerms": [],
-      "issues": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": true,
+        "bonus": 40000,
+        "spend": 1000,
+        "spendPeriod": "3 months",
+        "af": 0,
+        "snippet": "40,000 Miles: To qualify, you must make $1,000 in purchases during the first 3 months from account opening",
+        "reason": "Unique direct offer pattern detected"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8012,
+      "issuer": "Chase",
+      "name": "World of Hyatt",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
+      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "30000",
+        "3000",
+        "3 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 2 unique bonus/spend pairs",
-        "candidates": [
-          {
-            "bonus": 40000,
-            "spend": 1000,
-            "snippet": "Earn 40,000 bonus miles after you spend $1,000"
-          },
-          {
-            "bonus": 50000,
-            "spend": 1000,
-            "snippet": "50,000 bonus miles Earn 40,000 bonus miles after you spend $1,000 on purchases"
-          }
-        ]
+        "changed": false,
+        "bonus": 30000,
+        "spend": 3000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "30,000 Bonus Points After You Spend $3,000 On Purchases In The First 3 Months From Account Opening: The credit card is not available to either (i) current Cardmembers of this credit card, or (ii) previous Card members of this credit card who received a new Card member bonus ",
+        "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8013,
       "issuer": "Chase",
       "name": "IHG One Rewards Credit Card",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/one-rewards",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/one-rewards",
@@ -669,7 +1306,9 @@
         "authorized user"
       ],
       "missingTerms": [],
-      "issues": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 2 unique bonus/spend pairs",
@@ -677,22 +1316,24 @@
           {
             "bonus": 125000,
             "spend": 2000,
-            "snippet": "Earn 125,000 Bonus Points after you spend $2,000"
+            "spendPeriod": "3 months",
+            "snippet": "Earn 125,000 Bonus Points after you spend $2,000 on purchases in the first 3 months from account opening"
           },
           {
             "bonus": 10000,
             "spend": 15000,
-            "snippet": "Earn 10,000 bonus points Earn 10,000 bonus points after you spend $15,000"
+            "spendPeriod": null,
+            "snippet": "Earn 10,000 bonus points Earn 10,000 bonus points after you spend $15,000 on purchases each calendar year"
           }
         ]
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8014,
       "issuer": "Chase",
       "name": "IHG One Rewards Premier",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier",
@@ -706,7 +1347,9 @@
         "authorized user"
       ],
       "missingTerms": [],
-      "issues": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 2 unique bonus/spend pairs",
@@ -714,22 +1357,82 @@
           {
             "bonus": 180000,
             "spend": 3000,
-            "snippet": "Earn 180,000 Bonus Points after you spend $3,000"
+            "spendPeriod": "3 months",
+            "snippet": "Earn 180,000 Bonus Points after you spend $3,000 on purchases in the first 3 months from account opening"
           },
           {
             "bonus": 15000,
             "spend": 15000,
-            "snippet": "Earn 15,000 bonus points Earn 15,000 bonus points after you spend $15,000"
+            "spendPeriod": null,
+            "snippet": "Earn 15,000 bonus points Earn 15,000 bonus points after you spend $15,000 on purchases each calendar year"
           }
         ]
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8015,
+      "issuer": "Chase",
+      "name": "Marriott Bonvoy Bold",
+      "status": "verified",
+      "httpStatus": 200,
+      "url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold",
+      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "45000",
+        "1000",
+        "3 months"
+      ],
+      "missingTerms": [],
+      "issues": [],
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": false,
+        "bonus": 45000,
+        "spend": 1000,
+        "spendPeriod": "3 months",
+        "af": 0,
+        "snippet": "Earn 45,000 Bonus Points Earn 45,000 Bonus Points after spending $1,000 on eligible purchases within 3 months of account opening with the Marriott Bonvoy Bold ® Credit Card",
+        "reason": "Unique direct offer pattern detected"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8017,
+      "issuer": "Chase",
+      "name": "Marriott Bonvoy Bountiful",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bountiful",
+      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bountiful",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "85000",
+        "4000",
+        "3 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": false,
+        "bonus": 85000,
+        "spend": 4000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "Earn 85,000 Bonus Points after you spend $4,000 in purchases in your first 3 months from your account opening",
+        "reason": "Offer pattern requires review"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8018,
       "issuer": "Chase",
       "name": "Aeroplan Card",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan",
@@ -745,29 +1448,440 @@
         "195"
       ],
       "missingTerms": [],
-      "issues": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 3 unique bonus/spend pairs",
+        "changed": true,
+        "bonus": 40000,
+        "spend": 20000,
+        "spendPeriod": "12 months",
+        "af": null,
+        "snippet": "40,000 bonus points after you spend $20,000 on purchases in the first 12 months",
+        "reason": "Offer pattern requires review"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8019,
+      "issuer": "Chase",
+      "name": "British Airways Visa Signature",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://creditcards.chase.com/travel-credit-cards/avios/british-airways",
+      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/avios/british-airways",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "75000",
+        "5000",
+        "3 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8020,
+      "issuer": "Chase",
+      "name": "Iberia Visa Signature",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://creditcards.chase.com/travel-credit-cards/avios/iberia",
+      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/avios/iberia",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "75000",
+        "5000",
+        "3 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8021,
+      "issuer": "Chase",
+      "name": "Aer Lingus Visa Signature",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://creditcards.chase.com/travel-credit-cards/avios/aer-lingus",
+      "finalUrl": "https://creditcards.chase.com/travel-credit-cards/avios/aer-lingus",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "75000",
+        "5000",
+        "3 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8102,
+      "issuer": "American Express",
+      "name": "Gold Card",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.americanexpress.com/us/credit-cards/card/gold-card/",
+      "finalUrl": "https://www.americanexpress.com/us/credit-cards/card/gold-card/",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "100000",
+        "8000",
+        "6 months"
+      ],
+      "missingTerms": [
+        "100000",
+        "8000",
+        "6 months"
+      ],
+      "issues": [
+        "Issuer page loaded, but expected offer wording was not fully extracted: 100000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 8000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 6 months"
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8106,
+      "issuer": "American Express",
+      "name": "Delta SkyMiles Gold",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards",
+      "finalUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "80000",
+        "3000",
+        "6 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 2 unique bonus/spend pairs",
         "candidates": [
           {
-            "bonus": 75000,
-            "spend": 4000,
-            "snippet": "Earn 75,000 bonus points after you spend $4,000"
+            "bonus": 10000,
+            "spend": 1000,
+            "spendPeriod": "6 months",
+            "snippet": "Earn 10,000 bonus miles after you spend $1,000 in eligible purchases on your new Card in the first 6 Months.† $0 Annual Fee¤ ¤Rates & Fees Use Pay with Miles to reduce the cost of Delta tickets on delta.com"
           },
           {
-            "bonus": 40000,
-            "spend": 20000,
-            "snippet": "40,000 bonus points after you spend $20,000 on purchases"
-          },
-          {
-            "bonus": 115000,
-            "spend": 4000,
-            "snippet": "115,000 bonus points Earn 75,000 bonus points after you spend $4,000 on purchases"
+            "bonus": 50000,
+            "spend": 10000,
+            "spendPeriod": "6 months",
+            "snippet": "50,000 Bonus Miles, after you spend $10,000 in purchases in your first 6 months of Card Membership"
           }
         ]
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8107,
+      "issuer": "American Express",
+      "name": "Delta SkyMiles Platinum",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards",
+      "finalUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "90000",
+        "4000",
+        "6 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 2 unique bonus/spend pairs",
+        "candidates": [
+          {
+            "bonus": 10000,
+            "spend": 1000,
+            "spendPeriod": "6 months",
+            "snippet": "Earn 10,000 bonus miles after you spend $1,000 in eligible purchases on your new Card in the first 6 Months.† $0 Annual Fee¤ ¤Rates & Fees Use Pay with Miles to reduce the cost of Delta tickets on delta.com"
+          },
+          {
+            "bonus": 50000,
+            "spend": 10000,
+            "spendPeriod": "6 months",
+            "snippet": "50,000 Bonus Miles, after you spend $10,000 in purchases in your first 6 months of Card Membership"
+          }
+        ]
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8108,
+      "issuer": "American Express",
+      "name": "Delta SkyMiles Reserve",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards",
+      "finalUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "50000",
+        "10000",
+        "6 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 2 unique bonus/spend pairs",
+        "candidates": [
+          {
+            "bonus": 10000,
+            "spend": 1000,
+            "spendPeriod": "6 months",
+            "snippet": "Earn 10,000 bonus miles after you spend $1,000 in eligible purchases on your new Card in the first 6 Months.† $0 Annual Fee¤ ¤Rates & Fees Use Pay with Miles to reduce the cost of Delta tickets on delta.com"
+          },
+          {
+            "bonus": 50000,
+            "spend": 10000,
+            "spendPeriod": "6 months",
+            "snippet": "50,000 Bonus Miles, after you spend $10,000 in purchases in your first 6 months of Card Membership"
+          }
+        ]
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8109,
+      "issuer": "American Express",
+      "name": "Hilton Honors",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "finalUrl": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "70000",
+        "2000",
+        "6 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 200000,
+        "spend": 6000,
+        "spendPeriod": "6 months",
+        "af": null,
+        "snippet": "Earn 200,000 Bonus Points† Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
+        "reason": "Offer pattern requires review"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8110,
+      "issuer": "American Express",
+      "name": "Hilton Honors Surpass",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "finalUrl": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "130000",
+        "3000",
+        "6 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 200000,
+        "spend": 6000,
+        "spendPeriod": "6 months",
+        "af": null,
+        "snippet": "Earn 200,000 Bonus Points† Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
+        "reason": "Offer pattern requires review"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8111,
+      "issuer": "American Express",
+      "name": "Hilton Honors Aspire",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "finalUrl": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "200000",
+        "6000",
+        "6 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": false,
+        "bonus": 200000,
+        "spend": 6000,
+        "spendPeriod": "6 months",
+        "af": null,
+        "snippet": "Earn 200,000 Bonus Points† Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
+        "reason": "Offer pattern requires review"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8112,
+      "issuer": "American Express",
+      "name": "Marriott Bonvoy Bevy",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.marriott.com/credit-cards/marriott-bonvoy-bevy-american-express-card.mi",
+      "finalUrl": "https://www.marriott.com/credit-cards/marriott-bonvoy-bevy-american-express-card.mi",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "85000",
+        "5000",
+        "6 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": false,
+        "bonus": 85000,
+        "spend": 5000,
+        "spendPeriod": "6 months",
+        "af": null,
+        "snippet": "85000 Bonus Points after you use your new Card to make $5000 in purchases within the first 6 months of Card Membership.† $250 Annual Fee*",
+        "reason": "Offer pattern requires review"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8113,
+      "issuer": "American Express",
+      "name": "Marriott Bonvoy Brilliant",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.marriott.com/credit-cards/marriott-bonvoy-brilliant-american-express-card.mi",
+      "finalUrl": "https://www.marriott.com/credit-cards/marriott-bonvoy-brilliant-american-express-card.mi",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "100000",
+        "6000",
+        "6 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": false,
+        "bonus": 100000,
+        "spend": 6000,
+        "spendPeriod": "6 months",
+        "af": null,
+        "snippet": "100000 Bonus Points after you use your new Card to make $6000 in purchases within the first 6 months of Card Membership.† $650 Annual Fee*",
+        "reason": "Offer pattern requires review"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8114,
+      "issuer": "American Express",
+      "name": "Platinum Card for Charles Schwab",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.schwab.com/credit-cards/platinum-card",
+      "finalUrl": "https://www.schwab.com/credit-cards/platinum-card",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "80000",
+        "12000",
+        "6 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8115,
+      "issuer": "American Express",
+      "name": "Platinum Card for Morgan Stanley",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://apply.americanexpress.com/amex-morgan-stanley-credit-cards/?page_url=38",
+      "finalUrl": "https://apply.americanexpress.com/amex-morgan-stanley-credit-cards/?page_url=38",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "80000",
+        "12000",
+        "6 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8201,
@@ -785,17 +1899,21 @@
         "95"
       ],
       "missingTerms": [
-        "4,000"
+        "60,000",
+        "4,000",
+        "3 months"
       ],
       "issues": [
-        "Issuer page loaded, but expected offer wording was not fully extracted: 4,000"
+        "Issuer page loaded, but expected offer wording was not fully extracted: 60,000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 4,000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8202,
@@ -813,18 +1931,22 @@
         "595"
       ],
       "missingTerms": [
-        "75,000"
+        "75,000",
+        "6,000",
+        "3 months"
       ],
       "issues": [
-        "Verification is 16 days old.",
-        "Issuer page loaded, but expected offer wording was not fully extracted: 75,000"
+        "Verification is 17 days old.",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 75,000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 6,000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8203,
@@ -842,18 +1964,20 @@
         "0 annual fee"
       ],
       "missingTerms": [
-        "20,000"
+        "20,000",
+        "3 months"
       ],
       "issues": [
-        "Verification is 16 days old.",
-        "Issuer page loaded, but expected offer wording was not fully extracted: 20,000"
+        "Verification is 17 days old.",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 20,000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8205,
@@ -863,19 +1987,41 @@
       "httpStatus": 200,
       "url": "https://www.citi.com/credit-cards/citi-custom-cash-credit-card",
       "finalUrl": "https://www.citi.com/credit-cards/citi-custom-cash-credit-card",
-      "source": "direct-product-page",
+      "source": "issuer-page",
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
+        "Verification is 22 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8208,
+      "issuer": "Citi",
+      "name": "AAdvantage Globe",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/",
+      "finalUrl": "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/",
+      "source": "direct-product-page",
+      "expectedTerms": [],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8210,
@@ -889,14 +2035,14 @@
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [
-        "Verification is 19 days old."
+        "Verification is 20 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8301,
@@ -913,16 +2059,23 @@
         "3 months",
         "395"
       ],
-      "missingTerms": [],
+      "missingTerms": [
+        "75,000",
+        "4,000",
+        "3 months"
+      ],
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old.",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 75,000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 4,000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8303,
@@ -941,18 +2094,19 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
       "detectedOffer": {
         "confidence": "high",
-        "changed": false,
+        "changed": true,
         "bonus": 20000,
         "spend": 500,
+        "spendPeriod": "3 months",
         "af": 0,
-        "snippet": "20,000 bonus miles once you spend $500 on purchases",
+        "snippet": "20,000 bonus miles once you spend $500 on purchases within the first 3 months from account opening 1 Low Intro APR 0% intro APR for 15 months on purchases and balance transfers; 18.74% - 28.74% variable APR after that; Balance transfer fee applies",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8304,
@@ -971,14 +2125,14 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8305,
@@ -995,22 +2149,29 @@
         "3 months",
         "0 annual fee"
       ],
-      "missingTerms": [],
+      "missingTerms": [
+        "500",
+        "3 months",
+        "0 annual fee"
+      ],
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old.",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 500",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 3 months",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 0 annual fee"
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8403,
       "issuer": "Bank of America",
       "name": "Customized Cash Rewards",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
@@ -1023,14 +2184,26 @@
         "6% cash back",
         "first year"
       ],
-      "missingTerms": [],
-      "issues": [],
+      "missingTerms": [
+        "200",
+        "1,000",
+        "90 days",
+        "6% cash back",
+        "first year"
+      ],
+      "issues": [
+        "Issuer page loaded, but expected offer wording was not fully extracted: 200",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 1,000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 90 days",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 6% cash back",
+        "Issuer page loaded, but expected offer wording was not fully extracted: first year"
+      ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8404,
@@ -1044,14 +2217,14 @@
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [
-        "Verification is 19 days old."
+        "Verification is 20 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8405,
@@ -1068,16 +2241,23 @@
         "90 days",
         "no annual fee"
       ],
-      "missingTerms": [],
+      "missingTerms": [
+        "25,000",
+        "1,000",
+        "90 days"
+      ],
       "issues": [
-        "Verification is 16 days old."
+        "Verification is 17 days old.",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 25,000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 1,000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 90 days"
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8406,
@@ -1097,13 +2277,15 @@
       ],
       "missingTerms": [
         "50,000",
+        "1,500",
         "90 days",
         "99 Companion Fare",
         "95 annual fee"
       ],
       "issues": [
-        "Verification is 16 days old.",
+        "Verification is 17 days old.",
         "Issuer page loaded, but expected offer wording was not fully extracted: 50,000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 1,500",
         "Issuer page loaded, but expected offer wording was not fully extracted: 90 days",
         "Issuer page loaded, but expected offer wording was not fully extracted: 99 Companion Fare",
         "Issuer page loaded, but expected offer wording was not fully extracted: 95 annual fee"
@@ -1113,7 +2295,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8407,
@@ -1134,13 +2316,15 @@
       "missingTerms": [
         "70,000",
         "25,000-point Global Companion Award",
+        "3,000",
         "90 days",
         "395 annual fee"
       ],
       "issues": [
-        "Verification is 16 days old.",
+        "Verification is 17 days old.",
         "Issuer page loaded, but expected offer wording was not fully extracted: 70,000",
         "Issuer page loaded, but expected offer wording was not fully extracted: 25,000-point Global Companion Award",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 3,000",
         "Issuer page loaded, but expected offer wording was not fully extracted: 90 days",
         "Issuer page loaded, but expected offer wording was not fully extracted: 395 annual fee"
       ],
@@ -1149,7 +2333,185 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8408,
+      "issuer": "Bank of America",
+      "name": "Air France KLM Visa Signature",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://wwws.airfrance.us/information/flyingblue/carte-bancaire-partenaire",
+      "finalUrl": "https://wwws.airfrance.us/information/flyingblue/carte-bancaire-partenaire",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "70000",
+        "3000",
+        "90 days"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8501,
+      "issuer": "Wells Fargo",
+      "name": "Autograph",
+      "status": "verified",
+      "httpStatus": 200,
+      "url": "https://creditcards.wellsfargo.com/autograph-visa-credit-card/",
+      "finalUrl": "https://creditcards.wellsfargo.com/autograph-visa-credit-card/?sub_channel=WEB&vendor_code=WF",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "20000",
+        "1000",
+        "3 months"
+      ],
+      "missingTerms": [],
+      "issues": [],
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": false,
+        "bonus": 20000,
+        "spend": 1000,
+        "spendPeriod": "3 months",
+        "af": 0,
+        "snippet": "Earn 20,000 bonus points when you spend $1,000 in purchases in the first 3 months 1 Plus, earn 3X points for many ways to keep life in motion",
+        "reason": "Unique direct offer pattern detected"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8503,
+      "issuer": "Wells Fargo",
+      "name": "Active Cash",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://creditcards.wellsfargo.com/active-cash-credit-card/",
+      "finalUrl": "https://creditcards.wellsfargo.com/active-cash-credit-card/?sub_channel=WEB&vendor_code=WF",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "100",
+        "500",
+        "3 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8505,
+      "issuer": "Wells Fargo",
+      "name": "Choice Privileges Mastercard",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://creditcards.wellsfargo.com/choice-hotel-privileges-mastercard/",
+      "finalUrl": "https://creditcards.wellsfargo.com/choice-hotel-privileges-mastercard/?sub_channel=WEB&vendor_code=WF",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "60000",
+        "1000",
+        "3 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8506,
+      "issuer": "Wells Fargo",
+      "name": "Choice Privileges Select Mastercard",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://creditcards.wellsfargo.com/choice-hotels-privileges-select-mastercard/",
+      "finalUrl": "https://creditcards.wellsfargo.com/choice-hotels-privileges-select-mastercard/?sub_channel=WEB&vendor_code=WF",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "60000",
+        "3000",
+        "3 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8507,
+      "issuer": "Wells Fargo",
+      "name": "One Key Card",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://creditcards.wellsfargo.com/one-key-credit-card/",
+      "finalUrl": "https://creditcards.wellsfargo.com/one-key-credit-card/?sub_channel=WEB&vendor_code=WF",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "250",
+        "2000",
+        "3 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8508,
+      "issuer": "Wells Fargo",
+      "name": "One Key+ Card",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://creditcards.wellsfargo.com/one-key-plus-credit-card/",
+      "finalUrl": "https://creditcards.wellsfargo.com/one-key-plus-credit-card/?sub_channel=WEB&vendor_code=WF",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "350",
+        "3000",
+        "3 months"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8601,
@@ -1171,20 +2533,70 @@
       ],
       "missingTerms": [],
       "issues": [
-        "No current bonus is stored and no explicit no-offer state is set."
+        "Offer terms could not be independently extracted with high confidence."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8602,
+      "issuer": "U.S. Bank",
+      "name": "Altitude Go",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.usbank.com/credit-cards/altitude-go-visa-signature-credit-card.html",
+      "finalUrl": "https://www.usbank.com/credit-cards/altitude-go-visa-signature-credit-card.html",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "20000",
+        "1000",
+        "90 days"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8603,
+      "issuer": "U.S. Bank",
+      "name": "Altitude Connect",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.usbank.com/credit-cards/altitude-connect-visa-signature-credit-card.html",
+      "finalUrl": "https://www.usbank.com/credit-cards/altitude-connect-visa-signature-credit-card.html",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "20000",
+        "1000",
+        "90 days"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8604,
       "issuer": "U.S. Bank",
       "name": "Cash+",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html",
       "finalUrl": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html",
@@ -1198,17 +2610,154 @@
         "no annual fee"
       ],
       "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": true,
+        "bonus": 200,
+        "spend": 1000,
+        "spendPeriod": "90 days",
+        "af": 0,
+        "snippet": "Get a $200 bonus For a limited time, earn a $200 rewards bonus after you spend $1,000 in eligible purchases within the first 90 days of account opening",
+        "reason": "Unique direct offer pattern detected"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8702,
+      "issuer": "Barclays",
+      "name": "JetBlue Premier",
+      "status": "verified",
+      "httpStatus": 200,
+      "url": "https://cards.barclaycardus.com/banking/cards/jetblue-premier-card/",
+      "finalUrl": "https://cards.barclaycardus.com/banking/cards/jetblue-premier-card/",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "90000",
+        "5000",
+        "90 days"
+      ],
+      "missingTerms": [],
       "issues": [],
       "detectedOffer": {
         "confidence": "high",
         "changed": false,
-        "bonus": 200,
-        "spend": 1000,
-        "af": 0,
-        "snippet": "Get a $200 bonus For a limited time, earn a $200 rewards bonus after you spend $1,000",
+        "bonus": 90000,
+        "spend": 5000,
+        "spendPeriod": "90 days",
+        "af": 499,
+        "snippet": "Earn 90,000 bonus points after qualifying account activity 2 6X points on eligible JetBlue purchases 2 2X points at restaurants and eligible grocery stores 2 $499 annual fee ($150 for each authorized user) 1 Rewards Earn 90,000 bonus points after spending $5,000 on purchases and paying the annual fee in full, both within the first 90 days 2 6X points on eligible JetBlue purchases 2 2X points at restaurants and eligible grocery stores 2 1X points on all other purchases 2 Benefit",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8703,
+      "issuer": "Barclays",
+      "name": "Wyndham Rewards Earner",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://cards.barclaycardus.com/banking/cards/wyndham-rewards-earner-card/",
+      "finalUrl": "https://cards.barclaycardus.com/banking/cards/wyndham-rewards-earner-card/",
+      "source": "issuer-page",
+      "expectedTerms": [],
+      "missingTerms": [],
+      "issues": [
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
+        "No current bonus is stored and no explicit no-offer state is set.",
+        "Verification is 22 days old."
+      ],
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": true,
+        "bonus": 45000,
+        "spend": 500,
+        "spendPeriod": "180 days",
+        "af": 0,
+        "snippet": "earn 45,000 bonus points after spending $500 at Hotels by Wyndham in the first 180 days",
+        "reason": "Unique direct offer pattern detected"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8704,
+      "issuer": "Barclays",
+      "name": "Wyndham Rewards Earner Plus",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://cards.barclaycardus.com/banking/cards/wyndham-rewards-earner-plus-card/",
+      "finalUrl": "https://cards.barclaycardus.com/banking/cards/wyndham-rewards-earner-plus-card/",
+      "source": "issuer-page",
+      "expectedTerms": [],
+      "missingTerms": [],
+      "issues": [
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
+        "No current bonus is stored and no explicit no-offer state is set.",
+        "Verification is 22 days old."
+      ],
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": true,
+        "bonus": 55000,
+        "spend": 500,
+        "spendPeriod": "180 days",
+        "af": 95,
+        "snippet": "earn 55,000 bonus points after spending $500 at Hotels by Wyndham in the first 180 days",
+        "reason": "Unique direct offer pattern detected"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8801,
+      "issuer": "Bilt",
+      "name": "Bilt Blue Card",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.bilt.com/card/blue",
+      "finalUrl": "https://www.bilt.com/card/blue",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "100",
+        "0"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8816,
+      "issuer": "Bilt",
+      "name": "Bilt Obsidian Card",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.bilt.com/card/obsidian",
+      "finalUrl": "https://www.bilt.com/card/obsidian",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "200",
+        "0"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8802,
@@ -1226,6 +2775,33 @@
         "Cashback Match",
         "no annual fee"
       ],
+      "missingTerms": [
+        "1,500"
+      ],
+      "issues": [
+        "No current bonus is stored and no explicit no-offer state is set.",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 1,500"
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8803,
+      "issuer": "Discover",
+      "name": "Discover it Miles",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.discover.com/credit-cards/card-smarts/discover-match-for-discover-miles-credit-card-rewards-matching/",
+      "finalUrl": "https://www.discover.com/credit-cards/card-smarts/discover-match-for-discover-miles-credit-card-rewards-matching/",
+      "source": "issuer-page",
+      "expectedTerms": [
+        "0",
+        "0"
+      ],
       "missingTerms": [],
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set."
@@ -1235,13 +2811,13 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8815,
       "issuer": "Robinhood",
       "name": "Robinhood Gold Card",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://robinhood.com/creditcard/",
       "finalUrl": "https://robinhood.com/creditcard/",
@@ -1252,20 +2828,159 @@
         "no annual fee",
         "50"
       ],
-      "missingTerms": [],
-      "issues": [],
+      "missingTerms": [
+        "50"
+      ],
+      "issues": [
+        "Issuer page loaded, but expected offer wording was not fully extracted: 50"
+      ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8808,
+      "issuer": "USAA",
+      "name": "Eagle Navigator Visa Signature",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.usaa.com/banking/credit-cards-public/rewards/",
+      "finalUrl": "https://www.usaa.com/banking/credit-cards-public/rewards/?akredirect=true",
+      "source": "issuer-page",
+      "expectedTerms": [
+        "50000",
+        "3000",
+        "January 31, 2027"
+      ],
+      "missingTerms": [
+        "50000",
+        "3000",
+        "January 31, 2027"
+      ],
+      "issues": [
+        "Issuer page loaded, but expected offer wording was not fully extracted: 50000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 3000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: January 31, 2027"
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8809,
+      "issuer": "Navy Federal",
+      "name": "Flagship Rewards",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.navyfederal.org/loans-cards/credit-cards/flagship-upgrade.html",
+      "finalUrl": "https://www.navyfederal.org/loans-cards/credit-cards/flagship-upgrade.html",
+      "source": "issuer-page",
+      "expectedTerms": [],
+      "missingTerms": [],
+      "issues": [
+        "Offer has not been verified yet.",
+        "Minimum-spend requirement is not yet verified.",
+        "Bonus is present but spend requirement is missing.",
+        "Verification is 22 days old."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8810,
+      "issuer": "PenFed",
+      "name": "Pathfinder Rewards",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.penfed.org/credit-cards/pathfinder-rewards-visa",
+      "finalUrl": "https://www.penfed.org/credit-cards/pathfinder-rewards-visa",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "50000",
+        "3000",
+        "90 days"
+      ],
+      "missingTerms": [
+        "3000"
+      ],
+      "issues": [
+        "Issuer page loaded, but expected offer wording was not fully extracted: 3000"
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8811,
+      "issuer": "Synchrony",
+      "name": "Virgin Red Rewards Mastercard",
+      "status": "needs_review",
+      "httpStatus": 200,
+      "url": "https://www.virginatlantic.com/en-US/flying-club/credit-card",
+      "finalUrl": "https://www.virginatlantic.com/en-US/flying-club/credit-card",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "60000",
+        "4000",
+        "90 days"
+      ],
+      "missingTerms": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Detected 0 unique bonus/spend pairs",
+        "candidates": []
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
+    },
+    {
+      "id": 8812,
+      "issuer": "Barclays",
+      "name": "Carnival Rewards Mastercard",
+      "status": "verified",
+      "httpStatus": 200,
+      "url": "https://cards.barclaycardus.com/banking/cards/carnival-rewards-mastercard/",
+      "finalUrl": "https://cards.barclaycardus.com/banking/cards/carnival-rewards-mastercard/",
+      "source": "direct-product-page",
+      "expectedTerms": [
+        "20000",
+        "1000",
+        "90 days"
+      ],
+      "missingTerms": [],
+      "issues": [],
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": false,
+        "bonus": 20000,
+        "spend": 1000,
+        "spendPeriod": "90 days",
+        "af": 0,
+        "snippet": "Earn 20,000 points after spending $1,000 on purchases in the first 90 days",
+        "reason": "Unique direct offer pattern detected"
+      },
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8022,
       "issuer": "Chase",
       "name": "IHG One Rewards Premier Select",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select",
@@ -1279,29 +2994,28 @@
         "authorized user"
       ],
       "missingTerms": [],
-      "issues": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 3 unique bonus/spend pairs",
+        "reason": "Detected 2 unique bonus/spend pairs",
         "candidates": [
           {
             "bonus": 200000,
             "spend": 5000,
-            "snippet": "Earn 200,000 Bonus Points after you spend $5,000"
+            "spendPeriod": "3 months",
+            "snippet": "Earn 200,000 Bonus Points after you spend $5,000 on purchases in the first 3 months from account opening"
           },
           {
             "bonus": 20000,
             "spend": 15000,
-            "snippet": "Earn 20,000 bonus points Earn 20,000 bonus points after you spend $15,000"
-          },
-          {
-            "bonus": 60000,
-            "spend": 40000,
-            "snippet": "60,000 points after spending $40,000 on purchases"
+            "spendPeriod": null,
+            "snippet": "Earn 20,000 bonus points Earn 20,000 bonus points after you spend $15,000 on purchases each calendar year"
           }
         ]
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8905,
@@ -1321,1218 +3035,714 @@
         "no annual fee"
       ],
       "missingTerms": [
-        "90 days"
+        "100",
+        "1,000",
+        "90 days",
+        "5% cash back",
+        "3% cash back",
+        "no annual fee"
       ],
       "issues": [
-        "Issuer page loaded, but expected offer wording was not fully extracted: 90 days"
+        "Issuer page loaded, but expected offer wording was not fully extracted: 100",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 1,000",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 90 days",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 5% cash back",
+        "Issuer page loaded, but expected offer wording was not fully extracted: 3% cash back",
+        "Issuer page loaded, but expected offer wording was not fully extracted: no annual fee"
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7003,
       "issuer": "Chase",
       "name": "Ink Business Preferred",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7004,
       "issuer": "Chase",
       "name": "Ink Business Premier",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7005,
       "issuer": "Chase",
       "name": "Sapphire Reserve for Business",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7006,
       "issuer": "Chase",
       "name": "World of Hyatt Business",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7008,
       "issuer": "Chase",
       "name": "Southwest Performance Business",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7101,
       "issuer": "American Express",
       "name": "Business Platinum Card",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 20 days old."
+        "Verification is 21 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7102,
       "issuer": "American Express",
       "name": "Business Gold Card",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 20 days old."
+        "Verification is 21 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 7103,
-      "issuer": "American Express",
-      "name": "Graphite Business Cash Unlimited",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7104,
       "issuer": "American Express",
       "name": "Blue Business Cash",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 7105,
-      "issuer": "American Express",
-      "name": "Blue Business Plus",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 7106,
-      "issuer": "American Express",
-      "name": "Business Green Rewards Card",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 7107,
-      "issuer": "American Express",
-      "name": "Delta SkyMiles Gold Business",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 7108,
-      "issuer": "American Express",
-      "name": "Delta SkyMiles Platinum Business",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 7109,
-      "issuer": "American Express",
-      "name": "Delta SkyMiles Reserve Business",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7110,
       "issuer": "American Express",
       "name": "Marriott Bonvoy Business",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7111,
       "issuer": "American Express",
       "name": "Hilton Honors Business",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7201,
       "issuer": "Capital One",
       "name": "Venture X Business",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 20 days old."
+        "Verification is 21 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7202,
       "issuer": "Capital One",
       "name": "Venture Business",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 20 days old."
+        "Verification is 21 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7203,
       "issuer": "Capital One",
       "name": "VentureOne Business",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 19 days old."
+        "Verification is 20 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7204,
       "issuer": "Capital One",
       "name": "Spark Cash Plus",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7205,
       "issuer": "Capital One",
       "name": "Spark Cash",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 19 days old."
+        "Verification is 20 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7206,
       "issuer": "Capital One",
       "name": "Spark Cash Select",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 19 days old."
+        "Verification is 20 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7207,
       "issuer": "Capital One",
       "name": "Spark Classic",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 19 days old."
+        "Verification is 20 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 7301,
-      "issuer": "Citi",
-      "name": "Citi / AAdvantage Business World Elite Mastercard",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7302,
       "issuer": "Citi",
       "name": "Costco Anywhere Visa Business by Citi",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 20 days old."
+        "Verification is 21 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7404,
       "issuer": "Bank of America",
       "name": "Atmos Rewards Visa Signature Business",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7501,
       "issuer": "U.S. Bank",
       "name": "Business Triple Cash Rewards",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 7502,
-      "issuer": "U.S. Bank",
-      "name": "Business Shield",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7503,
       "issuer": "U.S. Bank",
       "name": "Business Altitude Power",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7504,
       "issuer": "U.S. Bank",
       "name": "Business Altitude Connect",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7505,
       "issuer": "U.S. Bank",
       "name": "Business Leverage",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7601,
       "issuer": "Wells Fargo",
       "name": "Signify Business Cash",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 20 days old."
+        "Verification is 21 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 7701,
       "issuer": "Barclays",
       "name": "Wyndham Rewards Earner Business",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 7702,
-      "issuer": "Barclays",
-      "name": "JetBlue Business",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Bonus is present but spend requirement is missing.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8003,
       "issuer": "Chase",
       "name": "Freedom Unlimited",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8012,
-      "issuer": "Chase",
-      "name": "World of Hyatt",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8015,
-      "issuer": "Chase",
-      "name": "Marriott Bonvoy Bold",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8016,
       "issuer": "Chase",
       "name": "Marriott Bonvoy Boundless",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8017,
-      "issuer": "Chase",
-      "name": "Marriott Bonvoy Bountiful",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8019,
-      "issuer": "Chase",
-      "name": "British Airways Visa Signature",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8020,
-      "issuer": "Chase",
-      "name": "Iberia Visa Signature",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8021,
-      "issuer": "Chase",
-      "name": "Aer Lingus Visa Signature",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8101,
       "issuer": "American Express",
       "name": "Platinum Card",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8102,
-      "issuer": "American Express",
-      "name": "Gold Card",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8103,
       "issuer": "American Express",
       "name": "Green Card",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8104,
       "issuer": "American Express",
       "name": "Blue Cash Preferred",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8105,
       "issuer": "American Express",
       "name": "Blue Cash Everyday",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8106,
-      "issuer": "American Express",
-      "name": "Delta SkyMiles Gold",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Bonus is present but spend requirement is missing.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8107,
-      "issuer": "American Express",
-      "name": "Delta SkyMiles Platinum",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8108,
-      "issuer": "American Express",
-      "name": "Delta SkyMiles Reserve",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8109,
-      "issuer": "American Express",
-      "name": "Hilton Honors",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8110,
-      "issuer": "American Express",
-      "name": "Hilton Honors Surpass",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8111,
-      "issuer": "American Express",
-      "name": "Hilton Honors Aspire",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8112,
-      "issuer": "American Express",
-      "name": "Marriott Bonvoy Bevy",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Bonus is present but spend requirement is missing.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8113,
-      "issuer": "American Express",
-      "name": "Marriott Bonvoy Brilliant",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Bonus is present but spend requirement is missing.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8114,
-      "issuer": "American Express",
-      "name": "Platinum Card for Charles Schwab",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8115,
-      "issuer": "American Express",
-      "name": "Platinum Card for Morgan Stanley",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Bonus is present but spend requirement is missing.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8204,
       "issuer": "Citi",
       "name": "Double Cash",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8206,
       "issuer": "Citi",
       "name": "AAdvantage Executive",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8207,
       "issuer": "Citi",
       "name": "AAdvantage Platinum Select",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8208,
-      "issuer": "Citi",
-      "name": "AAdvantage Globe",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8209,
       "issuer": "Citi",
       "name": "Costco Anywhere Visa",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8302,
       "issuer": "Capital One",
       "name": "Venture Rewards",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8401,
       "issuer": "Bank of America",
       "name": "Premium Rewards",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8402,
       "issuer": "Bank of America",
       "name": "Premium Rewards Elite",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8408,
-      "issuer": "Bank of America",
-      "name": "Air France KLM World Elite Mastercard",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8409,
       "issuer": "Bank of America",
       "name": "Free Spirit Travel More World Elite Mastercard",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8501,
-      "issuer": "Wells Fargo",
-      "name": "Autograph",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8502,
       "issuer": "Wells Fargo",
       "name": "Autograph Journey",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8503,
-      "issuer": "Wells Fargo",
-      "name": "Active Cash",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8504,
       "issuer": "Wells Fargo",
       "name": "Attune",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8505,
-      "issuer": "Wells Fargo",
-      "name": "Choice Privileges Mastercard",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Bonus is present but spend requirement is missing.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8506,
-      "issuer": "Wells Fargo",
-      "name": "Choice Privileges Select Mastercard",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8507,
-      "issuer": "Wells Fargo",
-      "name": "One Key Card",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8508,
-      "issuer": "Wells Fargo",
-      "name": "One Key+ Card",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8602,
-      "issuer": "U.S. Bank",
-      "name": "Altitude Go",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8603,
-      "issuer": "U.S. Bank",
-      "name": "Altitude Connect",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8605,
       "issuer": "U.S. Bank",
       "name": "Shopper Cash Rewards",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8606,
       "issuer": "U.S. Bank",
       "name": "Shield Visa",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8701,
       "issuer": "Barclays",
       "name": "JetBlue Plus",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8702,
-      "issuer": "Barclays",
-      "name": "JetBlue Premier",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8703,
-      "issuer": "Barclays",
-      "name": "Wyndham Rewards Earner",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8704,
-      "issuer": "Barclays",
-      "name": "Wyndham Rewards Earner Plus",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Catalog contradiction: verified=true while offer note says Verify current offer.",
-        "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8705,
       "issuer": "Barclays",
       "name": "Wyndham Rewards Earner Premier",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8706,
       "issuer": "Barclays",
       "name": "AAdvantage Aviator Red",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8801,
-      "issuer": "Bilt",
-      "name": "Bilt Blue Card",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Bonus is present but spend requirement is missing.",
-        "Verification is 20 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8816,
-      "issuer": "Bilt",
-      "name": "Bilt Obsidian Card",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Bonus is present but spend requirement is missing.",
-        "Verification is 20 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8817,
       "issuer": "Bilt",
       "name": "Bilt Palladium Card",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 20 days old."
+        "Verification is 21 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8803,
-      "issuer": "Discover",
-      "name": "Discover it Miles",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Bonus is present but spend requirement is missing.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8804,
       "issuer": "Apple / Goldman Sachs",
       "name": "Apple Card",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
+        "Offer has not been verified yet.",
+        "Minimum-spend requirement is not yet verified.",
         "Bonus is present but spend requirement is missing.",
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8805,
       "issuer": "Fidelity",
       "name": "Fidelity Rewards Visa Signature",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8806,
       "issuer": "SoFi",
       "name": "SoFi Credit Card",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8807,
       "issuer": "PNC",
       "name": "PNC Cash Rewards",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 21 days old."
+        "Verification is 22 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8808,
-      "issuer": "USAA",
-      "name": "Eagle Navigator Visa Signature",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Bonus is present but spend requirement is missing.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8809,
-      "issuer": "Navy Federal",
-      "name": "Flagship Rewards",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Bonus is present but spend requirement is missing.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8810,
-      "issuer": "PenFed",
-      "name": "Pathfinder Rewards",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Bonus is present but spend requirement is missing.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8811,
-      "issuer": "Synchrony",
-      "name": "Virgin Red Rewards Mastercard",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [
-        "Bonus is present but spend requirement is missing.",
-        "Verification is 21 days old."
-      ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
-    },
-    {
-      "id": 8812,
-      "issuer": "Barclays",
-      "name": "Carnival Rewards Mastercard",
-      "status": "unmonitored",
-      "source": "catalog-only",
-      "issues": [],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8901,
       "issuer": "Bank of America",
       "name": "Royal ONE Visa Signature",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8902,
       "issuer": "Bank of America",
       "name": "Royal ONE Plus Visa Signature",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8903,
       "issuer": "Bank of America",
       "name": "Norwegian Cruise Line World Mastercard",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8904,
       "issuer": "Barclays",
       "name": "Princess Rewards Visa",
-      "status": "unmonitored",
+      "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 18 days old."
+        "Verification is 19 days old.",
+        "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-12T14:36:31.993Z"
+      "checkedAt": "2026-10-13T05:58:47.488Z"
     }
   ]
 }

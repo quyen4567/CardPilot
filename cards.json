@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-10-13.3",
-  "generatedAt": "2026-10-13T00:13:26.704179+00:00",
+  "catalogVersion": "2026-10-13.4",
+  "generatedAt": "2026-10-13T05:58:56.691Z",
   "cards": [
     {
       "id": 7001,
@@ -15,8 +15,8 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-24",
-      "offerNote": "Current public Chase offer: $750 cash back after $6,000 in purchases in the first 3 months after account opening. $0 annual fee. Offers can vary by channel and change over time.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "Automatically verified on the issuer product page 2026-10-13. Current public offer: 750 cash after 6,000 in qualifying spend within 3 months. No annual fee. Offers can vary by channel and change over time.",
       "offerType": "public-current",
       "confidence": "high",
       "tags": [
@@ -27,10 +27,10 @@
       "issuerUrl": "https://creditcards.chase.com/business-credit-cards/ink/unlimited",
       "issuerUrlVerified": "2026-09-24",
       "monitorExpected": [
-        "750 cash back",
-        "6000",
+        "750",
+        "6,000",
         "3 months",
-        "0 annual fee"
+        "no annual fee"
       ],
       "histResearchDate": "2026-09-27",
       "histStatus": "tracked-catalog-history",
@@ -42,7 +42,15 @@
         "ruleType": "no-fee-business-family-ever",
         "summary": "Chase states the new cardmember bonus may not be available if you have ever had this card or any other Chase for Business card without an annual fee."
       },
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastKnownOffer": {
+        "bonus": 750,
+        "spend": 6000,
+        "af": 0,
+        "verifiedDate": "2026-09-24",
+        "source": "https://creditcards.chase.com/business-credit-cards/ink/unlimited"
+      },
+      "spendPeriod": "3 months"
     },
     {
       "id": 7002,
@@ -56,8 +64,8 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-24",
-      "offerNote": "Current public Chase offer: $750 cash back after $6,000 in purchases in the first 3 months after account opening. $0 annual fee. Offers can vary by channel and change over time.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "Automatically verified on the issuer product page 2026-10-13. Current public offer: 750 cash after 6,000 in qualifying spend within 3 months. No annual fee. Offers can vary by channel and change over time.",
       "offerType": "public-current",
       "confidence": "high",
       "tags": [
@@ -68,10 +76,10 @@
       "issuerUrl": "https://creditcards.chase.com/business-credit-cards/ink/cash",
       "issuerUrlVerified": "2026-09-24",
       "monitorExpected": [
-        "750 cash back",
-        "6000",
+        "750",
+        "6,000",
         "3 months",
-        "0 annual fee"
+        "no annual fee"
       ],
       "histResearchDate": "2026-09-27",
       "histStatus": "tracked-catalog-history",
@@ -83,7 +91,15 @@
         "ruleType": "no-fee-business-family-ever",
         "summary": "Chase states the new cardmember bonus may not be available if you have ever had this card or any other Chase for Business card without an annual fee."
       },
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastKnownOffer": {
+        "bonus": 750,
+        "spend": 6000,
+        "af": 0,
+        "verifiedDate": "2026-09-24",
+        "source": "https://creditcards.chase.com/business-credit-cards/ink/cash"
+      },
+      "spendPeriod": "3 months"
     },
     {
       "id": 7003,
@@ -1462,7 +1478,8 @@
         "4000",
         "90 days"
       ],
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastSuccessfulCheck": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8001,
@@ -1798,41 +1815,38 @@
       "issuer": "Chase",
       "name": "United Explorer",
       "type": "Personal",
-      "bonus": 80000,
+      "bonus": 70000,
       "unit": "United miles",
       "hist": 80000,
       "spend": 3000,
-      "af": 150,
+      "af": 0,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-10-03",
-      "offerNote": "Official Chase page labels the current 80,000-mile offer \u201cOUR BEST OFFER RETURNS\u201d: 70,000 miles after $3,000 in purchases in the first 3 months, plus 10,000 miles after adding an authorized user in the first 3 months. $0 intro annual fee first year, then $150. Higher special-channel offers are tracked separately.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "Automatically verified on the issuer product page 2026-10-13. Current public offer: 70,000 United miles after 3,000 in qualifying spend within 3 months. No annual fee. Offers can vary by channel and change over time.",
       "tags": [
         "airline",
         "united"
       ],
       "spendQualifiedBonus": 70000,
       "bonusIsUpTo": true,
-      "spendPeriod": "first 3 months from account opening",
+      "spendPeriod": "3 months",
       "additionalRequirement": "Plus 10,000 bonus miles after adding an authorized user in the first 3 months.",
       "offerRequirementType": "split",
       "offerState": "verified-current",
       "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
       "issuerUrlVerified": "2026-10-03",
       "monitorExpected": [
-        "80,000",
         "70,000",
         "3,000",
         "3 months",
-        "10,000",
-        "authorized user",
-        "150"
+        "no annual fee"
       ],
       "histResearchDate": "2026-10-03",
       "histStatus": "verified-comparable-public-high",
       "offerType": "public",
-      "confidence": "official-issuer",
+      "confidence": "high",
       "histPublicStatus": "current",
       "histPublicDate": "2026-10-03",
       "histComparable": true,
@@ -1859,7 +1873,15 @@
         }
       ],
       "pointsEarnVerifiedDate": "2026-10-04",
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastKnownOffer": {
+        "bonus": 80000,
+        "spend": 3000,
+        "spendPeriod": "first 3 months from account opening",
+        "af": 150,
+        "verifiedDate": "2026-10-03",
+        "source": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer"
+      }
     },
     {
       "id": 8009,
@@ -1955,7 +1977,7 @@
       "issuer": "Chase",
       "name": "United Gateway",
       "type": "Personal",
-      "bonus": 50000,
+      "bonus": 40000,
       "unit": "United miles",
       "hist": 40000,
       "spend": 1000,
@@ -1963,27 +1985,24 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-10-02",
-      "offerNote": "Official Chase offer: up to 50,000 bonus miles. Earn 40,000 miles after $1,000 in purchases in the first 3 months, plus 10,000 miles after adding an authorized user in the first 3 months; $0 annual fee.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "Automatically verified on the issuer product page 2026-10-13. Current public offer: 40,000 United miles after 1,000 in qualifying spend within 3 months. No annual fee. Offers can vary by channel and change over time.",
       "tags": [
         "airline",
         "united"
       ],
       "spendQualifiedBonus": 40000,
       "bonusIsUpTo": true,
-      "spendPeriod": "first 3 months from account opening",
+      "spendPeriod": "3 months",
       "additionalRequirement": "Plus 10,000 bonus miles after adding an authorized user in the first 3 months.",
       "offerRequirementType": "split",
       "offerState": "verified-current",
       "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
       "issuerUrlVerified": "2026-10-02",
       "monitorExpected": [
-        "50,000",
         "40,000",
         "1,000",
         "3 months",
-        "10,000",
-        "authorized user",
         "no annual fee"
       ],
       "histResearchDate": "2026-09-27",
@@ -1993,8 +2012,16 @@
       "histSourceLabel": "Pocket Finance Club / Upgraded Points",
       "histSourceUrl": "https://pocketfinanceclub.com/cards/united-gateway/",
       "offerType": "public",
-      "confidence": "official-issuer",
-      "monitoringStatus": "source-configured"
+      "confidence": "high",
+      "monitoringStatus": "source-configured",
+      "lastKnownOffer": {
+        "bonus": 50000,
+        "spend": 1000,
+        "spendPeriod": "first 3 months from account opening",
+        "af": 0,
+        "verifiedDate": "2026-10-02",
+        "source": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway"
+      }
     },
     {
       "id": 8012,
@@ -2193,7 +2220,8 @@
         "1000",
         "3 months"
       ],
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastSuccessfulCheck": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8016,
@@ -2316,7 +2344,7 @@
       "status": "open",
       "verified": true,
       "verifiedDate": "2026-10-02",
-      "offerNote": "Official Chase best-ever offer: up to 115,000 Aeroplan points \u2014 75,000 after $4,000 in purchases in the first 3 months, plus 40,000 after $20,000 total purchases in the first 12 months. $195 annual fee.",
+      "offerNote": "Official Chase best-ever offer: up to 115,000 Aeroplan points — 75,000 after $4,000 in purchases in the first 3 months, plus 40,000 after $20,000 total purchases in the first 12 months. $195 annual fee.",
       "tags": [
         "airline",
         "aeroplan"
@@ -3414,7 +3442,7 @@
           "rate": 6,
           "category": "restaurants during Citi Nights",
           "type": "time-window",
-          "capNote": "Citi Nights applies Friday and Saturday from 6 PM\u20136 AM ET under current terms."
+          "capNote": "Citi Nights applies Friday and Saturday from 6 PM–6 AM ET under current terms."
         },
         {
           "rate": 3,
@@ -3824,8 +3852,8 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-09-26",
-      "offerNote": "Official Capital One public offer: 20,000 bonus miles after $500 in purchases within the first 3 months; $0 annual fee.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "Automatically verified on the issuer product page 2026-10-13. Current public offer: 20,000 Capital One miles after 500 in qualifying spend within 3 months. No annual fee. Offers can vary by channel and change over time.",
       "tags": [
         "travel",
         "capital one"
@@ -3835,19 +3863,27 @@
         "20,000",
         "500",
         "3 months",
-        "0 annual fee"
+        "no annual fee"
       ],
       "issuerUrlVerified": "2026-09-26",
       "offerState": "verified-current",
       "offerType": "public",
-      "confidence": "official-issuer",
+      "confidence": "high",
       "histResearchDate": "2026-09-27",
       "histPublicSpend": 1000,
       "histPublicDate": "2023-02",
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club",
       "histSourceUrl": "https://www.pocketfinanceclub.com/cards/capital-one-ventureone/",
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastKnownOffer": {
+        "bonus": 20000,
+        "spend": 500,
+        "af": 0,
+        "verifiedDate": "2026-09-26",
+        "source": "https://www.capitalone.com/credit-cards/ventureone/"
+      },
+      "spendPeriod": "3 months"
     },
     {
       "id": 8304,
@@ -4322,7 +4358,8 @@
         "1000",
         "3 months"
       ],
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastSuccessfulCheck": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8502,
@@ -4643,7 +4680,7 @@
         "50000": 3,
         "100000": 4
       },
-      "relationshipRequirement": "U.S. Bank Smartly Savings plus qualifying balances in U.S. Bank Smartly Checking and/or Safe Debit accounts are required for the 2.5%\u20134% tiers.",
+      "relationshipRequirement": "U.S. Bank Smartly Savings plus qualifying balances in U.S. Bank Smartly Checking and/or Safe Debit accounts are required for the 2.5%–4% tiers.",
       "offerState": "no-standard-public-sub",
       "offerType": "public",
       "confidence": "official-issuer",
@@ -4766,8 +4803,8 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-10-04",
-      "offerNote": "Official U.S. Bank offer: $200 bonus after $1,000 in eligible purchases within the first 90 days; $0 annual fee.",
+      "verifiedDate": "2026-10-13",
+      "offerNote": "Automatically verified on the issuer product page 2026-10-13. Current public offer: 200 cash after 1,000 in qualifying spend within 90 days. No annual fee. Offers can vary by channel and change over time.",
       "tags": [
         "cash",
         "us bank",
@@ -4784,7 +4821,7 @@
       "catchAllCashBackRate": 1,
       "offerState": "verified-current",
       "offerType": "public",
-      "confidence": "official-issuer",
+      "confidence": "high",
       "issuerUrl": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html",
       "issuerUrlVerified": "2026-10-04",
       "rewardsVerifiedDate": "2026-10-04",
@@ -4793,11 +4830,17 @@
         "200",
         "1,000",
         "90 days",
-        "5% cash back",
-        "2,000",
         "no annual fee"
       ],
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastKnownOffer": {
+        "bonus": 200,
+        "spend": 1000,
+        "af": 0,
+        "verifiedDate": "2026-10-04",
+        "source": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html"
+      },
+      "spendPeriod": "90 days"
     },
     {
       "id": 8605,
@@ -4904,7 +4947,8 @@
         "90000",
         "5000",
         "90 days"
-      ]
+      ],
+      "lastSuccessfulCheck": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8703,
@@ -5697,7 +5741,8 @@
         "1000",
         "90 days"
       ],
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastSuccessfulCheck": "2026-10-13T05:58:47.488Z"
     },
     {
       "id": 8901,

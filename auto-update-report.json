@@ -1,7 +1,1029 @@
 {
-  "checkedAt": "2026-10-12T14:36:31.993Z",
-  "autoUpdated": 0,
-  "needsHumanReview": 0,
-  "updates": [],
-  "reviews": []
+  "checkedAt": "2026-10-13T05:58:47.488Z",
+  "autoUpdated": 6,
+  "needsHumanReview": 133,
+  "updates": [
+    {
+      "id": 7001,
+      "issuer": "Chase",
+      "name": "Ink Business Unlimited",
+      "before": {
+        "bonus": 750,
+        "spend": 6000,
+        "af": 0
+      },
+      "after": {
+        "bonus": 750,
+        "spend": 6000,
+        "af": 0
+      }
+    },
+    {
+      "id": 7002,
+      "issuer": "Chase",
+      "name": "Ink Business Cash",
+      "before": {
+        "bonus": 750,
+        "spend": 6000,
+        "af": 0
+      },
+      "after": {
+        "bonus": 750,
+        "spend": 6000,
+        "af": 0
+      }
+    },
+    {
+      "id": 8008,
+      "issuer": "Chase",
+      "name": "United Explorer",
+      "before": {
+        "bonus": 80000,
+        "spend": 3000,
+        "spendPeriod": "first 3 months from account opening",
+        "af": 150
+      },
+      "after": {
+        "bonus": 70000,
+        "spend": 3000,
+        "af": 0
+      }
+    },
+    {
+      "id": 8011,
+      "issuer": "Chase",
+      "name": "United Gateway",
+      "before": {
+        "bonus": 50000,
+        "spend": 1000,
+        "spendPeriod": "first 3 months from account opening",
+        "af": 0
+      },
+      "after": {
+        "bonus": 40000,
+        "spend": 1000,
+        "af": 0
+      }
+    },
+    {
+      "id": 8303,
+      "issuer": "Capital One",
+      "name": "VentureOne Rewards",
+      "before": {
+        "bonus": 20000,
+        "spend": 500,
+        "af": 0
+      },
+      "after": {
+        "bonus": 20000,
+        "spend": 500,
+        "af": 0
+      }
+    },
+    {
+      "id": 8604,
+      "issuer": "U.S. Bank",
+      "name": "Cash+",
+      "before": {
+        "bonus": 200,
+        "spend": 1000,
+        "af": 0
+      },
+      "after": {
+        "bonus": 200,
+        "spend": 1000,
+        "af": 0
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "id": 7003,
+      "issuer": "Chase",
+      "name": "Ink Business Preferred",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7004,
+      "issuer": "Chase",
+      "name": "Ink Business Premier",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7005,
+      "issuer": "Chase",
+      "name": "Sapphire Reserve for Business",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7006,
+      "issuer": "Chase",
+      "name": "World of Hyatt Business",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7007,
+      "issuer": "Chase",
+      "name": "IHG One Rewards Business",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 7008,
+      "issuer": "Chase",
+      "name": "Southwest Performance Business",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7009,
+      "issuer": "Chase",
+      "name": "Southwest Premier Business",
+      "reason": "Detected change did not meet strict auto-update rules",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 80000,
+        "spend": 3000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "80,000 points after you spend $3,000 on purchases in the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 7010,
+      "issuer": "Chase",
+      "name": "United Business",
+      "reason": "Detected change did not meet strict auto-update rules",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 90000,
+        "spend": 5000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 7011,
+      "issuer": "Chase",
+      "name": "United Club Business",
+      "reason": "Detected change did not meet strict auto-update rules",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 90000,
+        "spend": 5000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 7101,
+      "issuer": "American Express",
+      "name": "Business Platinum Card",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7102,
+      "issuer": "American Express",
+      "name": "Business Gold Card",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7103,
+      "issuer": "American Express",
+      "name": "Graphite Business Cash Unlimited",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 7104,
+      "issuer": "American Express",
+      "name": "Blue Business Cash",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7105,
+      "issuer": "American Express",
+      "name": "Blue Business Plus",
+      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; No current bonus is stored and no explicit no-offer state is set.; Verification is 22 days old."
+    },
+    {
+      "id": 7106,
+      "issuer": "American Express",
+      "name": "Business Green Rewards Card",
+      "reason": "Issuer page loaded, but expected offer wording was not fully extracted: 15000; Issuer page loaded, but expected offer wording was not fully extracted: 3000"
+    },
+    {
+      "id": 7107,
+      "issuer": "American Express",
+      "name": "Delta SkyMiles Gold Business",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 7108,
+      "issuer": "American Express",
+      "name": "Delta SkyMiles Platinum Business",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 7109,
+      "issuer": "American Express",
+      "name": "Delta SkyMiles Reserve Business",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 7110,
+      "issuer": "American Express",
+      "name": "Marriott Bonvoy Business",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7111,
+      "issuer": "American Express",
+      "name": "Hilton Honors Business",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7201,
+      "issuer": "Capital One",
+      "name": "Venture X Business",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7202,
+      "issuer": "Capital One",
+      "name": "Venture Business",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7203,
+      "issuer": "Capital One",
+      "name": "VentureOne Business",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7204,
+      "issuer": "Capital One",
+      "name": "Spark Cash Plus",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7205,
+      "issuer": "Capital One",
+      "name": "Spark Cash",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7206,
+      "issuer": "Capital One",
+      "name": "Spark Cash Select",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7207,
+      "issuer": "Capital One",
+      "name": "Spark Classic",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7301,
+      "issuer": "Citi",
+      "name": "Citi / AAdvantage Business World Elite Mastercard",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 7302,
+      "issuer": "Citi",
+      "name": "Costco Anywhere Visa Business by Citi",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7401,
+      "issuer": "Bank of America",
+      "name": "Business Advantage Unlimited Cash Rewards",
+      "reason": "Verification is 17 days old."
+    },
+    {
+      "id": 7402,
+      "issuer": "Bank of America",
+      "name": "Business Advantage Customized Cash Rewards",
+      "reason": "Verification is 17 days old."
+    },
+    {
+      "id": 7403,
+      "issuer": "Bank of America",
+      "name": "Business Advantage Travel Rewards",
+      "reason": "Verification is 17 days old."
+    },
+    {
+      "id": 7404,
+      "issuer": "Bank of America",
+      "name": "Atmos Rewards Visa Signature Business",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7501,
+      "issuer": "U.S. Bank",
+      "name": "Business Triple Cash Rewards",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7502,
+      "issuer": "U.S. Bank",
+      "name": "Business Shield",
+      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; No current bonus is stored and no explicit no-offer state is set.; Verification is 22 days old."
+    },
+    {
+      "id": 7503,
+      "issuer": "U.S. Bank",
+      "name": "Business Altitude Power",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7504,
+      "issuer": "U.S. Bank",
+      "name": "Business Altitude Connect",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7505,
+      "issuer": "U.S. Bank",
+      "name": "Business Leverage",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7601,
+      "issuer": "Wells Fargo",
+      "name": "Signify Business Cash",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 7701,
+      "issuer": "Barclays",
+      "name": "Wyndham Rewards Earner Business",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8001,
+      "issuer": "Chase",
+      "name": "Sapphire Preferred",
+      "reason": "Verification is 17 days old."
+    },
+    {
+      "id": 8002,
+      "issuer": "Chase",
+      "name": "Sapphire Reserve",
+      "reason": "Verification is 17 days old."
+    },
+    {
+      "id": 8003,
+      "issuer": "Chase",
+      "name": "Freedom Unlimited",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8004,
+      "issuer": "Chase",
+      "name": "Freedom Flex",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8005,
+      "issuer": "Chase",
+      "name": "Southwest Rapid Rewards Plus",
+      "reason": "Detected change did not meet strict auto-update rules",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 50000,
+        "spend": 1000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "Earn 50,000 bonus points * 2X points on Southwest Airlines purchases and on the first $5,000 in combined purchases at gas stations and grocery stores per year * 1X points on all other purchases * NEW CARDMEMBER OFFER Earn 50,000 bonus points after you spend $1,000 on purchases in the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8006,
+      "issuer": "Chase",
+      "name": "Southwest Rapid Rewards Premier",
+      "reason": "Detected change did not meet strict auto-update rules",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 55000,
+        "spend": 1500,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "Earn 55,000 bonus points * 3X points on Southwest Airlines purchases * 2X points on the first $8,000 in combined purchases at grocery stores and restaurants per year * NEW CARDMEMBER OFFER Earn 55,000 bonus points after you spend $1,500 on purchases in the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8007,
+      "issuer": "Chase",
+      "name": "Southwest Rapid Rewards Priority",
+      "reason": "Detected change did not meet strict auto-update rules",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 60000,
+        "spend": 2000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "Earn 60,000 bonus points * 4X points on Southwest Airlines purchases * 2X points at gas stations and restaurants * NEW CARDMEMBER OFFER Earn 60,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8009,
+      "issuer": "Chase",
+      "name": "United Quest",
+      "reason": "Detected change did not meet strict auto-update rules",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 80000,
+        "spend": 4000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "80,000 Miles: To qualify, you must make $4,000 in purchases during the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8010,
+      "issuer": "Chase",
+      "name": "United Club",
+      "reason": "Detected change did not meet strict auto-update rules",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 90000,
+        "spend": 5000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8012,
+      "issuer": "Chase",
+      "name": "World of Hyatt",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8013,
+      "issuer": "Chase",
+      "name": "IHG One Rewards Credit Card",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8014,
+      "issuer": "Chase",
+      "name": "IHG One Rewards Premier",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8016,
+      "issuer": "Chase",
+      "name": "Marriott Bonvoy Boundless",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8017,
+      "issuer": "Chase",
+      "name": "Marriott Bonvoy Bountiful",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8018,
+      "issuer": "Chase",
+      "name": "Aeroplan Card",
+      "reason": "Detected change did not meet strict auto-update rules",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 40000,
+        "spend": 20000,
+        "spendPeriod": "12 months",
+        "af": null,
+        "snippet": "40,000 bonus points after you spend $20,000 on purchases in the first 12 months",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8019,
+      "issuer": "Chase",
+      "name": "British Airways Visa Signature",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8020,
+      "issuer": "Chase",
+      "name": "Iberia Visa Signature",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8021,
+      "issuer": "Chase",
+      "name": "Aer Lingus Visa Signature",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8101,
+      "issuer": "American Express",
+      "name": "Platinum Card",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8102,
+      "issuer": "American Express",
+      "name": "Gold Card",
+      "reason": "Issuer page loaded, but expected offer wording was not fully extracted: 100000; Issuer page loaded, but expected offer wording was not fully extracted: 8000; Issuer page loaded, but expected offer wording was not fully extracted: 6 months"
+    },
+    {
+      "id": 8103,
+      "issuer": "American Express",
+      "name": "Green Card",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8104,
+      "issuer": "American Express",
+      "name": "Blue Cash Preferred",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8105,
+      "issuer": "American Express",
+      "name": "Blue Cash Everyday",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8106,
+      "issuer": "American Express",
+      "name": "Delta SkyMiles Gold",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8107,
+      "issuer": "American Express",
+      "name": "Delta SkyMiles Platinum",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8108,
+      "issuer": "American Express",
+      "name": "Delta SkyMiles Reserve",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8109,
+      "issuer": "American Express",
+      "name": "Hilton Honors",
+      "reason": "Detected change did not meet strict auto-update rules",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 200000,
+        "spend": 6000,
+        "spendPeriod": "6 months",
+        "af": null,
+        "snippet": "Earn 200,000 Bonus Points† Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8110,
+      "issuer": "American Express",
+      "name": "Hilton Honors Surpass",
+      "reason": "Detected change did not meet strict auto-update rules",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 200000,
+        "spend": 6000,
+        "spendPeriod": "6 months",
+        "af": null,
+        "snippet": "Earn 200,000 Bonus Points† Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
+      "id": 8111,
+      "issuer": "American Express",
+      "name": "Hilton Honors Aspire",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8112,
+      "issuer": "American Express",
+      "name": "Marriott Bonvoy Bevy",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8113,
+      "issuer": "American Express",
+      "name": "Marriott Bonvoy Brilliant",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8114,
+      "issuer": "American Express",
+      "name": "Platinum Card for Charles Schwab",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8115,
+      "issuer": "American Express",
+      "name": "Platinum Card for Morgan Stanley",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8201,
+      "issuer": "Citi",
+      "name": "Strata Premier",
+      "reason": "Issuer page loaded, but expected offer wording was not fully extracted: 60,000; Issuer page loaded, but expected offer wording was not fully extracted: 4,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
+    },
+    {
+      "id": 8202,
+      "issuer": "Citi",
+      "name": "Strata Elite",
+      "reason": "Verification is 17 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 75,000; Issuer page loaded, but expected offer wording was not fully extracted: 6,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
+    },
+    {
+      "id": 8203,
+      "issuer": "Citi",
+      "name": "Strata",
+      "reason": "Verification is 17 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 20,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
+    },
+    {
+      "id": 8204,
+      "issuer": "Citi",
+      "name": "Double Cash",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8205,
+      "issuer": "Citi",
+      "name": "Custom Cash",
+      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; Verification is 22 days old."
+    },
+    {
+      "id": 8206,
+      "issuer": "Citi",
+      "name": "AAdvantage Executive",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8207,
+      "issuer": "Citi",
+      "name": "AAdvantage Platinum Select",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8208,
+      "issuer": "Citi",
+      "name": "AAdvantage Globe",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8209,
+      "issuer": "Citi",
+      "name": "Costco Anywhere Visa",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8210,
+      "issuer": "Citi",
+      "name": "AT&T Points Plus",
+      "reason": "Verification is 20 days old."
+    },
+    {
+      "id": 8301,
+      "issuer": "Capital One",
+      "name": "Venture X Rewards",
+      "reason": "Verification is 17 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 75,000; Issuer page loaded, but expected offer wording was not fully extracted: 4,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
+    },
+    {
+      "id": 8302,
+      "issuer": "Capital One",
+      "name": "Venture Rewards",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8304,
+      "issuer": "Capital One",
+      "name": "Savor Cash Rewards",
+      "reason": "Verification is 17 days old."
+    },
+    {
+      "id": 8305,
+      "issuer": "Capital One",
+      "name": "Quicksilver Cash Rewards",
+      "reason": "Verification is 17 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 500; Issuer page loaded, but expected offer wording was not fully extracted: 3 months; Issuer page loaded, but expected offer wording was not fully extracted: 0 annual fee"
+    },
+    {
+      "id": 8401,
+      "issuer": "Bank of America",
+      "name": "Premium Rewards",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8402,
+      "issuer": "Bank of America",
+      "name": "Premium Rewards Elite",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8403,
+      "issuer": "Bank of America",
+      "name": "Customized Cash Rewards",
+      "reason": "Issuer page loaded, but expected offer wording was not fully extracted: 200; Issuer page loaded, but expected offer wording was not fully extracted: 1,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 6% cash back; Issuer page loaded, but expected offer wording was not fully extracted: first year"
+    },
+    {
+      "id": 8404,
+      "issuer": "Bank of America",
+      "name": "Unlimited Cash Rewards",
+      "reason": "Verification is 20 days old."
+    },
+    {
+      "id": 8405,
+      "issuer": "Bank of America",
+      "name": "Travel Rewards",
+      "reason": "Verification is 17 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 25,000; Issuer page loaded, but expected offer wording was not fully extracted: 1,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days"
+    },
+    {
+      "id": 8406,
+      "issuer": "Bank of America",
+      "name": "Atmos Rewards Ascent",
+      "reason": "Verification is 17 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 50,000; Issuer page loaded, but expected offer wording was not fully extracted: 1,500; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 99 Companion Fare; Issuer page loaded, but expected offer wording was not fully extracted: 95 annual fee"
+    },
+    {
+      "id": 8407,
+      "issuer": "Bank of America",
+      "name": "Atmos Rewards Summit",
+      "reason": "Verification is 17 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 70,000; Issuer page loaded, but expected offer wording was not fully extracted: 25,000-point Global Companion Award; Issuer page loaded, but expected offer wording was not fully extracted: 3,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 395 annual fee"
+    },
+    {
+      "id": 8408,
+      "issuer": "Bank of America",
+      "name": "Air France KLM Visa Signature",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8409,
+      "issuer": "Bank of America",
+      "name": "Free Spirit Travel More World Elite Mastercard",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8502,
+      "issuer": "Wells Fargo",
+      "name": "Autograph Journey",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8503,
+      "issuer": "Wells Fargo",
+      "name": "Active Cash",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8504,
+      "issuer": "Wells Fargo",
+      "name": "Attune",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8505,
+      "issuer": "Wells Fargo",
+      "name": "Choice Privileges Mastercard",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8506,
+      "issuer": "Wells Fargo",
+      "name": "Choice Privileges Select Mastercard",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8507,
+      "issuer": "Wells Fargo",
+      "name": "One Key Card",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8508,
+      "issuer": "Wells Fargo",
+      "name": "One Key+ Card",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8601,
+      "issuer": "U.S. Bank",
+      "name": "Bank Smartly Visa Signature",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8602,
+      "issuer": "U.S. Bank",
+      "name": "Altitude Go",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8603,
+      "issuer": "U.S. Bank",
+      "name": "Altitude Connect",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8605,
+      "issuer": "U.S. Bank",
+      "name": "Shopper Cash Rewards",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8606,
+      "issuer": "U.S. Bank",
+      "name": "Shield Visa",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8701,
+      "issuer": "Barclays",
+      "name": "JetBlue Plus",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8703,
+      "issuer": "Barclays",
+      "name": "Wyndham Rewards Earner",
+      "reason": "Detected change did not meet strict auto-update rules",
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": true,
+        "bonus": 45000,
+        "spend": 500,
+        "spendPeriod": "180 days",
+        "af": 0,
+        "snippet": "earn 45,000 bonus points after spending $500 at Hotels by Wyndham in the first 180 days",
+        "reason": "Unique direct offer pattern detected"
+      }
+    },
+    {
+      "id": 8704,
+      "issuer": "Barclays",
+      "name": "Wyndham Rewards Earner Plus",
+      "reason": "Detected change did not meet strict auto-update rules",
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": true,
+        "bonus": 55000,
+        "spend": 500,
+        "spendPeriod": "180 days",
+        "af": 95,
+        "snippet": "earn 55,000 bonus points after spending $500 at Hotels by Wyndham in the first 180 days",
+        "reason": "Unique direct offer pattern detected"
+      }
+    },
+    {
+      "id": 8705,
+      "issuer": "Barclays",
+      "name": "Wyndham Rewards Earner Premier",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8706,
+      "issuer": "Barclays",
+      "name": "AAdvantage Aviator Red",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8801,
+      "issuer": "Bilt",
+      "name": "Bilt Blue Card",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8816,
+      "issuer": "Bilt",
+      "name": "Bilt Obsidian Card",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8817,
+      "issuer": "Bilt",
+      "name": "Bilt Palladium Card",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8802,
+      "issuer": "Discover",
+      "name": "Discover it Cash Back",
+      "reason": "No current bonus is stored and no explicit no-offer state is set.; Issuer page loaded, but expected offer wording was not fully extracted: 1,500"
+    },
+    {
+      "id": 8803,
+      "issuer": "Discover",
+      "name": "Discover it Miles",
+      "reason": "No current bonus is stored and no explicit no-offer state is set."
+    },
+    {
+      "id": 8804,
+      "issuer": "Apple / Goldman Sachs",
+      "name": "Apple Card",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8805,
+      "issuer": "Fidelity",
+      "name": "Fidelity Rewards Visa Signature",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8815,
+      "issuer": "Robinhood",
+      "name": "Robinhood Gold Card",
+      "reason": "Issuer page loaded, but expected offer wording was not fully extracted: 50"
+    },
+    {
+      "id": 8806,
+      "issuer": "SoFi",
+      "name": "SoFi Credit Card",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8807,
+      "issuer": "PNC",
+      "name": "PNC Cash Rewards",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8808,
+      "issuer": "USAA",
+      "name": "Eagle Navigator Visa Signature",
+      "reason": "Issuer page loaded, but expected offer wording was not fully extracted: 50000; Issuer page loaded, but expected offer wording was not fully extracted: 3000; Issuer page loaded, but expected offer wording was not fully extracted: January 31, 2027"
+    },
+    {
+      "id": 8809,
+      "issuer": "Navy Federal",
+      "name": "Flagship Rewards",
+      "reason": "Offer has not been verified yet.; Minimum-spend requirement is not yet verified.; Bonus is present but spend requirement is missing.; Verification is 22 days old."
+    },
+    {
+      "id": 8810,
+      "issuer": "PenFed",
+      "name": "Pathfinder Rewards",
+      "reason": "Issuer page loaded, but expected offer wording was not fully extracted: 3000"
+    },
+    {
+      "id": 8811,
+      "issuer": "Synchrony",
+      "name": "Virgin Red Rewards Mastercard",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8901,
+      "issuer": "Bank of America",
+      "name": "Royal ONE Visa Signature",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8902,
+      "issuer": "Bank of America",
+      "name": "Royal ONE Plus Visa Signature",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8903,
+      "issuer": "Bank of America",
+      "name": "Norwegian Cruise Line World Mastercard",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8904,
+      "issuer": "Barclays",
+      "name": "Princess Rewards Visa",
+      "reason": "Issuer monitoring source is missing; offer needs source review."
+    },
+    {
+      "id": 8022,
+      "issuer": "Chase",
+      "name": "IHG One Rewards Premier Select",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8905,
+      "issuer": "AAA / Comenity Capital Bank",
+      "name": "AAA Daily Advantage Visa Signature",
+      "reason": "Issuer page loaded, but expected offer wording was not fully extracted: 100; Issuer page loaded, but expected offer wording was not fully extracted: 1,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 5% cash back; Issuer page loaded, but expected offer wording was not fully extracted: 3% cash back; Issuer page loaded, but expected offer wording was not fully extracted: no annual fee"
+    }
+  ]
 }
