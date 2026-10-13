@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-10-13.4",
-  "generatedAt": "2026-10-13T05:58:56.691Z",
+  "catalogVersion": "2026-10-13.5",
+  "generatedAt": "2026-10-13T14:36:14.692Z",
   "cards": [
     {
       "id": 7001,
@@ -50,7 +50,8 @@
         "verifiedDate": "2026-09-24",
         "source": "https://creditcards.chase.com/business-credit-cards/ink/unlimited"
       },
-      "spendPeriod": "3 months"
+      "spendPeriod": "3 months",
+      "lastSuccessfulCheck": "2026-10-13T14:36:02.488Z"
     },
     {
       "id": 7002,
@@ -99,7 +100,8 @@
         "verifiedDate": "2026-09-24",
         "source": "https://creditcards.chase.com/business-credit-cards/ink/cash"
       },
-      "spendPeriod": "3 months"
+      "spendPeriod": "3 months",
+      "lastSuccessfulCheck": "2026-10-13T14:36:02.488Z"
     },
     {
       "id": 7003,
@@ -1479,7 +1481,7 @@
         "90 days"
       ],
       "monitoringStatus": "source-configured",
-      "lastSuccessfulCheck": "2026-10-13T05:58:47.488Z"
+      "lastSuccessfulCheck": "2026-10-13T14:36:02.488Z"
     },
     {
       "id": 8001,
@@ -1881,7 +1883,8 @@
         "af": 150,
         "verifiedDate": "2026-10-03",
         "source": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer"
-      }
+      },
+      "lastSuccessfulCheck": "2026-10-13T14:36:02.488Z"
     },
     {
       "id": 8009,
@@ -2021,7 +2024,8 @@
         "af": 0,
         "verifiedDate": "2026-10-02",
         "source": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway"
-      }
+      },
+      "lastSuccessfulCheck": "2026-10-13T14:36:02.488Z"
     },
     {
       "id": 8012,
@@ -2221,7 +2225,7 @@
         "3 months"
       ],
       "monitoringStatus": "source-configured",
-      "lastSuccessfulCheck": "2026-10-13T05:58:47.488Z"
+      "lastSuccessfulCheck": "2026-10-13T14:36:02.488Z"
     },
     {
       "id": 8016,
@@ -3883,7 +3887,8 @@
         "verifiedDate": "2026-09-26",
         "source": "https://www.capitalone.com/credit-cards/ventureone/"
       },
-      "spendPeriod": "3 months"
+      "spendPeriod": "3 months",
+      "lastSuccessfulCheck": "2026-10-13T14:36:02.488Z"
     },
     {
       "id": 8304,
@@ -4359,7 +4364,7 @@
         "3 months"
       ],
       "monitoringStatus": "source-configured",
-      "lastSuccessfulCheck": "2026-10-13T05:58:47.488Z"
+      "lastSuccessfulCheck": "2026-10-13T14:36:02.488Z"
     },
     {
       "id": 8502,
@@ -4840,7 +4845,8 @@
         "verifiedDate": "2026-10-04",
         "source": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html"
       },
-      "spendPeriod": "90 days"
+      "spendPeriod": "90 days",
+      "lastSuccessfulCheck": "2026-10-13T14:36:02.488Z"
     },
     {
       "id": 8605,
@@ -4948,7 +4954,7 @@
         "5000",
         "90 days"
       ],
-      "lastSuccessfulCheck": "2026-10-13T05:58:47.488Z"
+      "lastSuccessfulCheck": "2026-10-13T14:36:02.488Z"
     },
     {
       "id": 8703,
@@ -5742,7 +5748,7 @@
         "90 days"
       ],
       "monitoringStatus": "source-configured",
-      "lastSuccessfulCheck": "2026-10-13T05:58:47.488Z"
+      "lastSuccessfulCheck": "2026-10-13T14:36:02.488Z"
     },
     {
       "id": 8901,
