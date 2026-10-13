@@ -1,3 +1,4 @@
+import {verifiedRecordErrors} from './offer-quality.mjs';
 import fs from 'fs';
 const path=process.argv[2]||'cards.json';
 const p=JSON.parse(fs.readFileSync(path,'utf8'));
@@ -5,6 +6,7 @@ const cards=Array.isArray(p.cards)?p.cards:[];
 const errs=[];
 const ids=new Set();
 for(const c of cards){
+  for(const issue of verifiedRecordErrors(c)) errs.push(`Card ${c.id} ${c.name}: ${issue}`);
   if(c.id==null) errs.push('Card missing id');
   else if(ids.has(String(c.id))) errs.push(`Duplicate id ${c.id}`); else ids.add(String(c.id));
   if(!c.name||!c.issuer) errs.push(`Card ${c.id} missing name/issuer`);

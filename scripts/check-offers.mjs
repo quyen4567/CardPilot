@@ -1,3 +1,4 @@
+import {offerDataQuality} from './offer-quality.mjs';
 import fs from 'fs';
 
 const catalogPath = process.argv[2] || 'cards.json';
@@ -45,7 +46,7 @@ function termFound(body,term){
   return false;
 }
 function localQuality(c){
-  const issues=[];
+  const issues=[...offerDataQuality(c).issues];
   if(c.verified && /verify current offer/i.test(String(c.offerNote||''))) issues.push('Catalog contradiction: verified=true while offer note says Verify current offer.');
   if(c.verified && !c.verifiedDate) issues.push('Verified offer is missing verifiedDate.');
   if(Number(c.bonus||0)>0 && c.spend==null && !['qualifying-activities','personalized','up-to','research-pending'].includes(c.offerRequirementType)) issues.push('Bonus is present but spend requirement is missing.');
@@ -60,43 +61,48 @@ function unitKind(c){
 }
 function parseNum(x){ return Number(String(x).replace(/[$,\s]/g,'')); }
 function extractOffer(text,c){
-  const t=String(text||'').replace(/\s+/g,' ');
+  const t=String(text||'').replace(/\b([0-9]+)k\b/ig,(_,n)=>String(Number(n)*1000)).replace(/\s+/g,' ');
   const candidates=[];
   const kind=unitKind(c);
   const patterns = kind==='cash' ? [
-    /(?:earn|get|receive)\s+(?:a\s+)?\$?([0-9][0-9,]{1,6})\s+(?:cash back|statement credit|bonus)[^.!?]{0,180}?(?:after|when)\s+(?:you\s+)?(?:spend|make)\s+\$?([0-9][0-9,]{2,7})/ig,
+    /(?:earn|get|receive)\s+(?:a\s+)?\$?([0-9][0-9,]{1,6})\s+(?:cash back|statement credit|bonus)[^.!?]{0,180}?(?:after|when)\s+(?:you\s+)?(?:spend(?:ing)?|make)\s+\$?([0-9][0-9,]{2,7})/ig,
     /\$?([0-9][0-9,]{1,6})\s+(?:cash back|statement credit|bonus)[^.!?]{0,180}?\$?([0-9][0-9,]{2,7})\s+(?:in purchases|on purchases|spend)/ig
   ] : [
-    /(?:earn|get|receive)\s+(?:up to\s+)?([0-9][0-9,]{3,7})\s+(?:bonus\s+)?(?:points|miles)[^.!?]{0,220}?(?:after|when)\s+(?:you\s+)?(?:spend|make)\s+\$?([0-9][0-9,]{2,7})/ig,
+    /(?:earn|get|receive)\s+(?:up to\s+)?([0-9][0-9,]{3,7})\s+(?:bonus\s+)?(?:points|miles)[^.!?]{0,220}?(?:after|when)\s+(?:you\s+)?(?:spend(?:ing)?|make)\s+\$?([0-9][0-9,]{2,7})/ig,
     /([0-9][0-9,]{3,7})\s+(?:bonus\s+)?(?:points|miles)[^.!?]{0,220}?\$?([0-9][0-9,]{2,7})\s+(?:in purchases|on purchases|spend)/ig
   ];
   for(const re of patterns){
     for(const m of t.matchAll(re)){
       const bonus=parseNum(m[1]), spend=parseNum(m[2]);
-      const snippet=m[0].slice(0,320);
+      const preceding=t.slice(Math.max(0,m.index-100),m.index);
+      if(/as high as|up to|targeted|personalized|preselected|invitation only|additional|plus another/i.test(preceding))continue;
+      const snippet=t.slice(m.index,m.index+m[0].length+220).split(/[.!?](?:\s|$)/)[0].slice(0,600);
+      const periodMatch=snippet.match(/(?:first|within)\s+(?:the\s+(?:first\s+)?)?(\d+)\s*(months?|days?)/i);
+      const spendPeriod=periodMatch?`${periodMatch[1]} ${periodMatch[2].toLowerCase()}`:null;
       if(!Number.isFinite(bonus)||!Number.isFinite(spend)||bonus<=0||spend<=0) continue;
-      if(/\b(up to|additional|plus another|each year|anniversary)\b/i.test(snippet)) continue;
+      if(/\b(up to|additional|plus another|and also earn|and earn|each year|anniversary)\b/i.test(snippet)) continue;
       if(kind==='cash' && bonus>5000) continue;
       if(kind==='points' && bonus<5000) continue;
-      candidates.push({bonus,spend,snippet});
+      candidates.push({bonus,spend,spendPeriod,snippet});
     }
   }
   const uniq=[];
   const seen=new Set();
   for(const x of candidates){ const k=`${x.bonus}:${x.spend}`; if(!seen.has(k)){seen.add(k);uniq.push(x);} }
-  const afMatches=[...t.matchAll(/(?:annual fee(?:\s+is|:)?|\$)(?:\s*)\$?([0-9]{1,4})\s*(?:annual fee|per year|a year)?/ig)]
-    .map(m=>parseNum(m[1])).filter(x=>Number.isFinite(x)&&x>=0&&x<=1500);
+  // Fee extraction must be adjacent to fee language, never any arbitrary dollar amount.
+  const afMatches=[...t.matchAll(/(?:annual fee(?:\s+is|:)?\s*\$([0-9,]+)|\$([0-9,]+)\s+annual fee)/ig)]
+    .map(m=>parseNum(m[1]||m[2])).filter(x=>Number.isFinite(x)&&x>=0&&x<=1500);
   if(/no annual fee/i.test(t)) afMatches.push(0);
   const afUniq=[...new Set(afMatches)];
   if(uniq.length!==1) return {confidence:'review',reason:`Detected ${uniq.length} unique bonus/spend pairs`,candidates:uniq.slice(0,6)};
   const x=uniq[0];
-  const af = afUniq.includes(Number(c.af)) ? Number(c.af) : (afUniq.length===1 ? afUniq[0] : null);
+  const af=afUniq.length===1?afUniq[0]:null;
   const currentName=normalize(c.name).split(' ').filter(w=>w.length>3).slice(0,3);
   const pageNorm=normalize(t.slice(0,30000));
   const nameSignal=currentName.length===0 || currentName.some(w=>pageNorm.includes(w));
-  const changed=x.bonus!==Number(c.bonus||0) || x.spend!==Number(c.spend||0) || (af!=null && af!==Number(c.af||0));
-  const safe = nameSignal && !/\b(up to|targeted|preselected|pre-selected|mail offer|invitation only)\b/i.test(x.snippet);
-  return {confidence:safe?'high':'review',changed,bonus:x.bonus,spend:x.spend,af,snippet:x.snippet,reason:safe?'Unique direct offer pattern detected':'Offer pattern requires review'};
+  const changed=x.bonus!==Number(c.bonus||0) || x.spend!==Number(c.spend||0) || (af!=null && af!==Number(c.af||0)) || (x.spendPeriod && normalize(x.spendPeriod)!==normalize(c.spendPeriod||''));
+  const safe = nameSignal && !!x.spendPeriod && af!==null && !/\b(up to|targeted|preselected|pre-selected|mail offer|invitation only)\b/i.test(x.snippet);
+  return {confidence:safe?'high':'review',changed,bonus:x.bonus,spend:x.spend,spendPeriod:x.spendPeriod,af,snippet:x.snippet,reason:safe?'Unique direct offer pattern detected':'Offer pattern requires review'};
 }
 
 async function fetchCard(c){
@@ -113,10 +119,15 @@ async function fetchCard(c){
     if(res.status>=500 && res.status<=599) return {id:c.id,issuer:c.issuer,name:c.name,status:'needs_review',httpStatus:res.status,url:c.issuerUrl,issues:[...localIssues,`Issuer server returned HTTP ${res.status}; treated as temporary issuer error, not a CardPilot workflow failure.`],checkedAt:now.toISOString()};
     if(res.status<200||res.status>=400) return {id:c.id,issuer:c.issuer,name:c.name,status:'broken',httpStatus:res.status,url:c.issuerUrl,issues:[...localIssues,`HTTP ${res.status}`],checkedAt:now.toISOString()};
     const expected=Array.isArray(c.monitorExpected)?c.monitorExpected:[];
-    const missing=expected.filter(t=>!termFound(body,t));
-    const detectedOffer=extractOffer(htmlToText(body),c);
+    const text=htmlToText(body);
+    const missing=expected.filter(t=>!termFound(text,t));
+    const detectedOffer=extractOffer(text,c);
     const issues=[...localIssues,...missing.map(t=>`Issuer page loaded, but expected offer wording was not fully extracted: ${t}`)];
-    const status=issues.length?'needs_review':'verified';
+    // Reconfirmation uses the current page, independent of the age of stored verification.
+    const substantiveIssues=localIssues.filter(x=>!/^Verification is/.test(x));
+    const reconfirmed=c.issuerUrlVerified && detectedOffer.confidence==='high' && !detectedOffer.changed && !substantiveIssues.filter(x=>x!=='Offer has not been verified yet.').length && !missing.length;
+    const status=reconfirmed?'verified':'needs_review';
+    if(!reconfirmed && !issues.length)issues.push('Offer terms could not be independently extracted with high confidence.');
     return {id:c.id,issuer:c.issuer,name:c.name,status,httpStatus:res.status,url:c.issuerUrl,finalUrl:res.url,source:c.issuerUrlVerified?'direct-product-page':'issuer-page',expectedTerms:expected,missingTerms:missing,issues,detectedOffer,checkedAt:now.toISOString()};
   }catch(error){
     const msg=String(error);
@@ -126,7 +137,7 @@ async function fetchCard(c){
 }
 
 const monitored=cards.filter(c=>c.issuerUrl);
-const unmonitored=cards.filter(c=>!c.issuerUrl).map(c=>({id:c.id,issuer:c.issuer,name:c.name,status:'unmonitored',source:'catalog-only',issues:localQuality(c),checkedAt:now.toISOString()}));
+const unmonitored=cards.filter(c=>!c.issuerUrl).map(c=>({id:c.id,issuer:c.issuer,name:c.name,status:'needs_review',source:'catalog-only',issues:[...localQuality(c),'No issuer monitoring source is configured.'],checkedAt:now.toISOString()}));
 const results=[];
 for(let i=0;i<monitored.length;i+=5) results.push(...await Promise.all(monitored.slice(i,i+5).map(fetchCard)));
 results.push(...unmonitored);
