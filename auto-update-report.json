@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-13T14:36:02.488Z",
+  "checkedAt": "2026-10-14T14:42:51.183Z",
   "autoUpdated": 0,
   "needsHumanReview": 133,
   "updates": [],
@@ -116,7 +116,7 @@
       "id": 7105,
       "issuer": "American Express",
       "name": "Blue Business Plus",
-      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; No current bonus is stored and no explicit no-offer state is set.; Verification is 22 days old."
+      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; No current bonus is stored and no explicit no-offer state is set.; Verification is 23 days old."
     },
     {
       "id": 7106,
@@ -212,19 +212,19 @@
       "id": 7401,
       "issuer": "Bank of America",
       "name": "Business Advantage Unlimited Cash Rewards",
-      "reason": "Verification is 17 days old."
+      "reason": "Verification is 18 days old."
     },
     {
       "id": 7402,
       "issuer": "Bank of America",
       "name": "Business Advantage Customized Cash Rewards",
-      "reason": "Verification is 17 days old."
+      "reason": "Verification is 18 days old."
     },
     {
       "id": 7403,
       "issuer": "Bank of America",
       "name": "Business Advantage Travel Rewards",
-      "reason": "Verification is 17 days old."
+      "reason": "Verification is 18 days old."
     },
     {
       "id": 7404,
@@ -242,7 +242,7 @@
       "id": 7502,
       "issuer": "U.S. Bank",
       "name": "Business Shield",
-      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; No current bonus is stored and no explicit no-offer state is set.; Verification is 22 days old."
+      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; No current bonus is stored and no explicit no-offer state is set.; Verification is 23 days old."
     },
     {
       "id": 7503,
@@ -278,13 +278,13 @@
       "id": 8001,
       "issuer": "Chase",
       "name": "Sapphire Preferred",
-      "reason": "Verification is 17 days old."
+      "reason": "Verification is 18 days old."
     },
     {
       "id": 8002,
       "issuer": "Chase",
       "name": "Sapphire Reserve",
-      "reason": "Verification is 17 days old."
+      "reason": "Verification is 18 days old."
     },
     {
       "id": 8003,
@@ -562,13 +562,13 @@
       "id": 8202,
       "issuer": "Citi",
       "name": "Strata Elite",
-      "reason": "Verification is 17 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 75,000; Issuer page loaded, but expected offer wording was not fully extracted: 6,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
+      "reason": "Verification is 18 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 75,000; Issuer page loaded, but expected offer wording was not fully extracted: 6,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
     },
     {
       "id": 8203,
       "issuer": "Citi",
       "name": "Strata",
-      "reason": "Verification is 17 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 20,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
+      "reason": "Verification is 18 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 20,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
     },
     {
       "id": 8204,
@@ -580,7 +580,7 @@
       "id": 8205,
       "issuer": "Citi",
       "name": "Custom Cash",
-      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; Verification is 22 days old."
+      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; Verification is 23 days old."
     },
     {
       "id": 8206,
@@ -610,13 +610,13 @@
       "id": 8210,
       "issuer": "Citi",
       "name": "AT&T Points Plus",
-      "reason": "Verification is 20 days old."
+      "reason": "Verification is 21 days old."
     },
     {
       "id": 8301,
       "issuer": "Capital One",
       "name": "Venture X Rewards",
-      "reason": "Verification is 17 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 75,000; Issuer page loaded, but expected offer wording was not fully extracted: 4,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
+      "reason": "Verification is 18 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 75,000; Issuer page loaded, but expected offer wording was not fully extracted: 4,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
     },
     {
       "id": 8302,
@@ -628,13 +628,13 @@
       "id": 8304,
       "issuer": "Capital One",
       "name": "Savor Cash Rewards",
-      "reason": "Verification is 17 days old."
+      "reason": "Verification is 18 days old."
     },
     {
       "id": 8305,
       "issuer": "Capital One",
       "name": "Quicksilver Cash Rewards",
-      "reason": "Verification is 17 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 500; Issuer page loaded, but expected offer wording was not fully extracted: 3 months; Issuer page loaded, but expected offer wording was not fully extracted: 0 annual fee"
+      "reason": "Verification is 18 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 500; Issuer page loaded, but expected offer wording was not fully extracted: 3 months; Issuer page loaded, but expected offer wording was not fully extracted: 0 annual fee"
     },
     {
       "id": 8401,
@@ -658,25 +658,25 @@
       "id": 8404,
       "issuer": "Bank of America",
       "name": "Unlimited Cash Rewards",
-      "reason": "Verification is 20 days old."
+      "reason": "Verification is 21 days old."
     },
     {
       "id": 8405,
       "issuer": "Bank of America",
       "name": "Travel Rewards",
-      "reason": "Verification is 17 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 25,000; Issuer page loaded, but expected offer wording was not fully extracted: 1,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days"
+      "reason": "Verification is 18 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 25,000; Issuer page loaded, but expected offer wording was not fully extracted: 1,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days"
     },
     {
       "id": 8406,
       "issuer": "Bank of America",
       "name": "Atmos Rewards Ascent",
-      "reason": "Verification is 17 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 50,000; Issuer page loaded, but expected offer wording was not fully extracted: 1,500; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 99 Companion Fare; Issuer page loaded, but expected offer wording was not fully extracted: 95 annual fee"
+      "reason": "Verification is 18 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 50,000; Issuer page loaded, but expected offer wording was not fully extracted: 1,500; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 99 Companion Fare; Issuer page loaded, but expected offer wording was not fully extracted: 95 annual fee"
     },
     {
       "id": 8407,
       "issuer": "Bank of America",
       "name": "Atmos Rewards Summit",
-      "reason": "Verification is 17 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 70,000; Issuer page loaded, but expected offer wording was not fully extracted: 25,000-point Global Companion Award; Issuer page loaded, but expected offer wording was not fully extracted: 3,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 395 annual fee"
+      "reason": "Verification is 18 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 70,000; Issuer page loaded, but expected offer wording was not fully extracted: 25,000-point Global Companion Award; Issuer page loaded, but expected offer wording was not fully extracted: 3,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 395 annual fee"
     },
     {
       "id": 8408,
@@ -882,7 +882,7 @@
       "id": 8809,
       "issuer": "Navy Federal",
       "name": "Flagship Rewards",
-      "reason": "Offer has not been verified yet.; Minimum-spend requirement is not yet verified.; Bonus is present but spend requirement is missing.; Verification is 22 days old."
+      "reason": "Offer has not been verified yet.; Minimum-spend requirement is not yet verified.; Bonus is present but spend requirement is missing.; Verification is 23 days old."
     },
     {
       "id": 8810,
