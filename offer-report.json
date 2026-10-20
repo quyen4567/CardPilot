@@ -1,6 +1,6 @@
 {
-  "catalogVersion": "2026-10-18.1",
-  "checkedAt": "2026-10-19T14:47:02.872Z",
+  "catalogVersion": "2026-10-19.1",
+  "checkedAt": "2026-10-20T14:44:16.326Z",
   "counts": {
     "verified": 11,
     "needs_review": 133,
@@ -231,6 +231,23 @@
         "snippet": "earn 55,000 bonus points after spending $500 at Hotels by Wyndham in the first 180 days",
         "reason": "Unique direct offer pattern detected"
       }
+    },
+    {
+      "id": 8802,
+      "issuer": "Discover",
+      "name": "Discover it Cash Back",
+      "status": "needs_review",
+      "url": "https://www.discover.com/credit-cards/cash-back/it-card/",
+      "detectedOffer": {
+        "confidence": "high",
+        "changed": true,
+        "bonus": 200,
+        "spend": 500,
+        "spendPeriod": "3 months",
+        "af": 0,
+        "snippet": "Earn a $200 Bonus Earn a $200 bonus statement credit when you spend $500 in the first 3 months",
+        "reason": "Unique direct offer pattern detected"
+      }
     }
   ],
   "results": [
@@ -261,7 +278,7 @@
         "snippet": "Earn $750 cash back after you spend $6,000 on purchases in the first 3 months after account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7002,
@@ -290,7 +307,7 @@
         "snippet": "Earn $750 cash back after you spend $6,000 on purchases in the first 3 months after account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7007,
@@ -311,7 +328,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -331,7 +348,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7009,
@@ -350,7 +367,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -362,7 +379,7 @@
         "snippet": "80,000 points after you spend $3,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7010,
@@ -386,7 +403,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -398,7 +415,7 @@
         "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7011,
@@ -422,7 +439,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -434,7 +451,7 @@
         "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7103,
@@ -464,7 +481,7 @@
         "snippet": "Earn $1,500 cash back after you spend $50,000 in purchases on your new Card within the first 6 months of Card Membership",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7105,
@@ -481,14 +498,14 @@
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 28 days old."
+        "Verification is 29 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7106,
@@ -517,7 +534,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7107,
@@ -561,7 +578,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7108,
@@ -605,7 +622,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7109,
@@ -649,7 +666,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7301,
@@ -674,7 +691,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7401,
@@ -693,14 +710,14 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 23 days old."
+        "Verification is 24 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7402,
@@ -719,14 +736,14 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 23 days old."
+        "Verification is 24 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7403,
@@ -745,14 +762,14 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 23 days old."
+        "Verification is 24 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7502,
@@ -769,14 +786,14 @@
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 28 days old."
+        "Verification is 29 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7702,
@@ -804,7 +821,7 @@
         "snippet": "Earn 50,000 bonus points after qualifying account activity 2 6X points on eligible JetBlue purchases 2 2X points at restaurants and office supply stores 2 Group 3 boarding on JetBlue-operated flights 2,4 Rewards Earn 50,000 bonus points after spending $4,000 on purchases and paying the annual fee in full, both within the first 90 days",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8001,
@@ -823,7 +840,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 23 days old."
+        "Verification is 24 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -843,7 +860,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8002,
@@ -862,7 +879,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 23 days old."
+        "Verification is 24 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -882,7 +899,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8004,
@@ -901,7 +918,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -921,7 +938,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8005,
@@ -940,7 +957,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 23 days old."
+        "Verification is 24 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -952,7 +969,7 @@
         "snippet": "Earn 50,000 bonus points * 2X points on Southwest Airlines purchases and on the first $5,000 in combined purchases at gas stations and grocery stores per year * 1X points on all other purchases * NEW CARDMEMBER OFFER Earn 50,000 bonus points after you spend $1,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8006,
@@ -971,7 +988,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 23 days old."
+        "Verification is 24 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -983,7 +1000,7 @@
         "snippet": "Earn 55,000 bonus points * 3X points on Southwest Airlines purchases * 2X points on the first $8,000 in combined purchases at grocery stores and restaurants per year * NEW CARDMEMBER OFFER Earn 55,000 bonus points after you spend $1,500 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8007,
@@ -1002,7 +1019,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 23 days old."
+        "Verification is 24 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -1014,7 +1031,7 @@
         "snippet": "Earn 60,000 bonus points * 4X points on Southwest Airlines purchases * 2X points at gas stations and restaurants * NEW CARDMEMBER OFFER Earn 60,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8008,
@@ -1043,7 +1060,7 @@
         "snippet": "70,000 Miles: To qualify, you must make $3,000 in purchases during the first 3 months from account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8009,
@@ -1065,7 +1082,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -1077,7 +1094,7 @@
         "snippet": "80,000 Miles: To qualify, you must make $4,000 in purchases during the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8010,
@@ -1099,7 +1116,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -1111,7 +1128,7 @@
         "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8011,
@@ -1140,7 +1157,7 @@
         "snippet": "40,000 Miles: To qualify, you must make $1,000 in purchases during the first 3 months from account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8012,
@@ -1170,7 +1187,7 @@
         "snippet": "30,000 Bonus Points After You Spend $3,000 On Purchases In The First 3 Months From Account Opening: The credit card is not available to either (i) current Cardmembers of this credit card, or (ii) previous Card members of this credit card who received a new Card member bonus ",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8013,
@@ -1191,7 +1208,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -1211,7 +1228,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8014,
@@ -1232,7 +1249,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -1252,7 +1269,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8015,
@@ -1280,7 +1297,7 @@
         "snippet": "Earn 45,000 Bonus Points Earn 45,000 Bonus Points after spending $1,000 on eligible purchases within 3 months of account opening with the Marriott Bonvoy Bold ® Credit Card",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8017,
@@ -1310,7 +1327,7 @@
         "snippet": "Earn 85,000 Bonus Points after you spend $4,000 in purchases in your first 3 months from your account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8018,
@@ -1333,7 +1350,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -1345,7 +1362,7 @@
         "snippet": "40,000 bonus points after you spend $20,000 on purchases in the first 12 months",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8019,
@@ -1370,7 +1387,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8020,
@@ -1395,7 +1412,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8021,
@@ -1420,7 +1437,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8102,
@@ -1451,7 +1468,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8106,
@@ -1489,7 +1506,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8107,
@@ -1527,7 +1544,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8108,
@@ -1565,7 +1582,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8109,
@@ -1595,7 +1612,7 @@
         "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8110,
@@ -1625,7 +1642,7 @@
         "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8111,
@@ -1655,7 +1672,7 @@
         "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8112,
@@ -1685,7 +1702,7 @@
         "snippet": "85000 Bonus Points after you use your new Card to make $5000 in purchases within the first 6 months of Card Membership.† $250 Annual Fee*",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8113,
@@ -1715,7 +1732,7 @@
         "snippet": "100000 Bonus Points after you use your new Card to make $6000 in purchases within the first 6 months of Card Membership.† $650 Annual Fee*",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8114,
@@ -1740,7 +1757,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8115,
@@ -1765,7 +1782,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8201,
@@ -1788,7 +1805,7 @@
         "3 months"
       ],
       "issues": [
-        "Verification is 15 days old.",
+        "Verification is 16 days old.",
         "Issuer page loaded, but expected offer wording was not fully extracted: 60,000",
         "Issuer page loaded, but expected offer wording was not fully extracted: 4,000",
         "Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
@@ -1798,7 +1815,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8202,
@@ -1821,7 +1838,7 @@
         "3 months"
       ],
       "issues": [
-        "Verification is 23 days old.",
+        "Verification is 24 days old.",
         "Issuer page loaded, but expected offer wording was not fully extracted: 75,000",
         "Issuer page loaded, but expected offer wording was not fully extracted: 6,000",
         "Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
@@ -1831,7 +1848,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8203,
@@ -1853,7 +1870,7 @@
         "3 months"
       ],
       "issues": [
-        "Verification is 23 days old.",
+        "Verification is 24 days old.",
         "Issuer page loaded, but expected offer wording was not fully extracted: 20,000",
         "Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
       ],
@@ -1862,7 +1879,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8205,
@@ -1878,14 +1895,14 @@
       "issues": [
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
-        "Verification is 28 days old."
+        "Verification is 29 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8208,
@@ -1906,7 +1923,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8210,
@@ -1920,14 +1937,14 @@
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [
-        "Verification is 26 days old."
+        "Verification is 27 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8301,
@@ -1950,7 +1967,7 @@
         "3 months"
       ],
       "issues": [
-        "Verification is 23 days old.",
+        "Verification is 24 days old.",
         "Issuer page loaded, but expected offer wording was not fully extracted: 75,000",
         "Issuer page loaded, but expected offer wording was not fully extracted: 4,000",
         "Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
@@ -1960,7 +1977,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8303,
@@ -1989,7 +2006,7 @@
         "snippet": "20,000 bonus miles once you spend $500 on purchases within the first 3 months from account opening 1 Low Intro APR 0% intro APR for 15 months on purchases and balance transfers; 18.74% - 28.74% variable APR after that; Balance transfer fee applies",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8304,
@@ -2008,14 +2025,14 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 23 days old."
+        "Verification is 24 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8305,
@@ -2038,7 +2055,7 @@
         "0 annual fee"
       ],
       "issues": [
-        "Verification is 23 days old.",
+        "Verification is 24 days old.",
         "Issuer page loaded, but expected offer wording was not fully extracted: 500",
         "Issuer page loaded, but expected offer wording was not fully extracted: 3 months",
         "Issuer page loaded, but expected offer wording was not fully extracted: 0 annual fee"
@@ -2048,7 +2065,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8403,
@@ -2075,7 +2092,7 @@
         "first year"
       ],
       "issues": [
-        "Verification is 16 days old.",
+        "Verification is 17 days old.",
         "Issuer page loaded, but expected offer wording was not fully extracted: 200",
         "Issuer page loaded, but expected offer wording was not fully extracted: 1,000",
         "Issuer page loaded, but expected offer wording was not fully extracted: 90 days",
@@ -2087,7 +2104,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8404,
@@ -2101,14 +2118,14 @@
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [
-        "Verification is 26 days old."
+        "Verification is 27 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8405,
@@ -2131,7 +2148,7 @@
         "90 days"
       ],
       "issues": [
-        "Verification is 23 days old.",
+        "Verification is 24 days old.",
         "Issuer page loaded, but expected offer wording was not fully extracted: 25,000",
         "Issuer page loaded, but expected offer wording was not fully extracted: 1,000",
         "Issuer page loaded, but expected offer wording was not fully extracted: 90 days"
@@ -2141,7 +2158,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8406,
@@ -2167,7 +2184,7 @@
         "95 annual fee"
       ],
       "issues": [
-        "Verification is 23 days old.",
+        "Verification is 24 days old.",
         "Issuer page loaded, but expected offer wording was not fully extracted: 50,000",
         "Issuer page loaded, but expected offer wording was not fully extracted: 1,500",
         "Issuer page loaded, but expected offer wording was not fully extracted: 90 days",
@@ -2179,7 +2196,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8407,
@@ -2205,7 +2222,7 @@
         "395 annual fee"
       ],
       "issues": [
-        "Verification is 23 days old.",
+        "Verification is 24 days old.",
         "Issuer page loaded, but expected offer wording was not fully extracted: 70,000",
         "Issuer page loaded, but expected offer wording was not fully extracted: 25,000-point Global Companion Award",
         "Issuer page loaded, but expected offer wording was not fully extracted: 3,000",
@@ -2217,7 +2234,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8408,
@@ -2242,7 +2259,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8501,
@@ -2267,10 +2284,10 @@
         "spend": 1000,
         "spendPeriod": "3 months",
         "af": 0,
-        "snippet": "Earn 20,000 bonus points when you spend $1,000 in purchases in the first 3 months 1 Plus, earn 3X points for many ways to keep life in motion",
+        "snippet": "Earn 20,000 bonus points when you spend $1,000 in purchases in the first 3 months 1 – that’s a $200 cash redemption value $0 Annual Fee Important Credit Terms Apply now Offers may differ from time to time and depend on the marketing channel",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8503,
@@ -2295,7 +2312,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8505,
@@ -2320,7 +2337,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8506,
@@ -2345,7 +2362,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8507,
@@ -2370,7 +2387,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8508,
@@ -2395,7 +2412,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8601,
@@ -2424,7 +2441,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8602,
@@ -2449,7 +2466,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8603,
@@ -2474,7 +2491,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8604,
@@ -2503,7 +2520,7 @@
         "snippet": "Get a $200 bonus For a limited time, earn a $200 rewards bonus after you spend $1,000 in eligible purchases within the first 90 days of account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8702,
@@ -2531,7 +2548,7 @@
         "snippet": "Earn 90,000 bonus points after qualifying account activity 2 6X points on eligible JetBlue purchases 2 2X points at restaurants and eligible grocery stores 2 $499 annual fee ($150 for each authorized user) 1 Rewards Earn 90,000 bonus points after spending $5,000 on purchases and paying the annual fee in full, both within the first 90 days 2 6X points on eligible JetBlue purchases 2 2X points at restaurants and eligible grocery stores 2 1X points on all other purchases 2 Benefit",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8703,
@@ -2548,7 +2565,7 @@
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 28 days old."
+        "Verification is 29 days old."
       ],
       "detectedOffer": {
         "confidence": "high",
@@ -2560,7 +2577,7 @@
         "snippet": "earn 45,000 bonus points after spending $500 at Hotels by Wyndham in the first 180 days",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8704,
@@ -2577,7 +2594,7 @@
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 28 days old."
+        "Verification is 29 days old."
       ],
       "detectedOffer": {
         "confidence": "high",
@@ -2589,7 +2606,7 @@
         "snippet": "earn 55,000 bonus points after spending $500 at Hotels by Wyndham in the first 180 days",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8801,
@@ -2613,7 +2630,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8816,
@@ -2637,7 +2654,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8802,
@@ -2660,14 +2677,20 @@
       ],
       "issues": [
         "No current bonus is stored and no explicit no-offer state is set.",
+        "Verification is 15 days old.",
         "Issuer page loaded, but expected offer wording was not fully extracted: 1,500"
       ],
       "detectedOffer": {
-        "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
-        "candidates": []
+        "confidence": "high",
+        "changed": true,
+        "bonus": 200,
+        "spend": 500,
+        "spendPeriod": "3 months",
+        "af": 0,
+        "snippet": "Earn a $200 Bonus Earn a $200 bonus statement credit when you spend $500 in the first 3 months",
+        "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8803,
@@ -2691,7 +2714,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8815,
@@ -2712,7 +2735,7 @@
         "50"
       ],
       "issues": [
-        "Verification is 15 days old.",
+        "Verification is 16 days old.",
         "Issuer page loaded, but expected offer wording was not fully extracted: 50"
       ],
       "detectedOffer": {
@@ -2720,7 +2743,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8808,
@@ -2751,7 +2774,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8809,
@@ -2768,14 +2791,14 @@
         "Offer has not been verified yet.",
         "Minimum-spend requirement is not yet verified.",
         "Bonus is present but spend requirement is missing.",
-        "Verification is 28 days old."
+        "Verification is 29 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8810,
@@ -2802,7 +2825,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8811,
@@ -2827,7 +2850,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8812,
@@ -2855,7 +2878,7 @@
         "snippet": "Earn 20,000 points after spending $1,000 on purchases in the first 90 days",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8022,
@@ -2876,7 +2899,7 @@
       ],
       "missingTerms": [],
       "issues": [
-        "Verification is 17 days old."
+        "Verification is 18 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -2896,7 +2919,7 @@
           }
         ]
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8905,
@@ -2924,7 +2947,7 @@
         "no annual fee"
       ],
       "issues": [
-        "Verification is 15 days old.",
+        "Verification is 16 days old.",
         "Issuer page loaded, but expected offer wording was not fully extracted: 100",
         "Issuer page loaded, but expected offer wording was not fully extracted: 1,000",
         "Issuer page loaded, but expected offer wording was not fully extracted: 90 days",
@@ -2937,7 +2960,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7003,
@@ -2946,10 +2969,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7004,
@@ -2958,10 +2981,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7005,
@@ -2970,10 +2993,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7006,
@@ -2982,10 +3005,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7008,
@@ -2994,10 +3017,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7101,
@@ -3006,10 +3029,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 27 days old.",
+        "Verification is 28 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7102,
@@ -3018,10 +3041,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 27 days old.",
+        "Verification is 28 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7104,
@@ -3030,10 +3053,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7110,
@@ -3042,10 +3065,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7111,
@@ -3054,10 +3077,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7201,
@@ -3066,10 +3089,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 27 days old.",
+        "Verification is 28 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7202,
@@ -3078,10 +3101,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 27 days old.",
+        "Verification is 28 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7203,
@@ -3090,10 +3113,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 26 days old.",
+        "Verification is 27 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7204,
@@ -3102,10 +3125,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7205,
@@ -3114,10 +3137,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 26 days old.",
+        "Verification is 27 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7206,
@@ -3126,10 +3149,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 26 days old.",
+        "Verification is 27 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7207,
@@ -3138,10 +3161,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 26 days old.",
+        "Verification is 27 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7302,
@@ -3150,10 +3173,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 27 days old.",
+        "Verification is 28 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7404,
@@ -3162,10 +3185,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7501,
@@ -3174,10 +3197,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7503,
@@ -3186,10 +3209,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7504,
@@ -3198,10 +3221,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7505,
@@ -3210,10 +3233,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7601,
@@ -3222,10 +3245,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 27 days old.",
+        "Verification is 28 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 7701,
@@ -3234,10 +3257,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8003,
@@ -3246,10 +3269,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8016,
@@ -3261,10 +3284,10 @@
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8101,
@@ -3273,10 +3296,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8103,
@@ -3288,10 +3311,10 @@
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8104,
@@ -3300,10 +3323,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8105,
@@ -3312,10 +3335,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8204,
@@ -3324,10 +3347,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8206,
@@ -3336,10 +3359,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8207,
@@ -3351,10 +3374,10 @@
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8209,
@@ -3366,10 +3389,10 @@
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8302,
@@ -3378,10 +3401,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8401,
@@ -3390,10 +3413,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8402,
@@ -3402,10 +3425,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8409,
@@ -3417,10 +3440,10 @@
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8502,
@@ -3429,10 +3452,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8504,
@@ -3444,10 +3467,10 @@
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8605,
@@ -3456,10 +3479,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8606,
@@ -3471,10 +3494,10 @@
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8701,
@@ -3483,10 +3506,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8705,
@@ -3495,10 +3518,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8706,
@@ -3510,10 +3533,10 @@
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
         "No current bonus is stored and no explicit no-offer state is set.",
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8817,
@@ -3522,10 +3545,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 27 days old.",
+        "Verification is 28 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8804,
@@ -3537,10 +3560,10 @@
         "Offer has not been verified yet.",
         "Minimum-spend requirement is not yet verified.",
         "Bonus is present but spend requirement is missing.",
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8805,
@@ -3549,10 +3572,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8806,
@@ -3561,10 +3584,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8807,
@@ -3573,10 +3596,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 28 days old.",
+        "Verification is 29 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8901,
@@ -3585,10 +3608,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 25 days old.",
+        "Verification is 26 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8902,
@@ -3597,10 +3620,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 25 days old.",
+        "Verification is 26 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8903,
@@ -3609,10 +3632,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 25 days old.",
+        "Verification is 26 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     },
     {
       "id": 8904,
@@ -3621,10 +3644,10 @@
       "status": "needs_review",
       "source": "catalog-only",
       "issues": [
-        "Verification is 25 days old.",
+        "Verification is 26 days old.",
         "No issuer monitoring source is configured."
       ],
-      "checkedAt": "2026-10-19T14:47:02.872Z"
+      "checkedAt": "2026-10-20T14:44:16.326Z"
     }
   ]
 }
