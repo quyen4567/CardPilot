@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-10-24.1",
-  "generatedAt": "2026-10-24T17:34:57.094Z",
+  "catalogVersion": "2026-10-25.1",
+  "generatedAt": "2026-10-25T17:47:37.158Z",
   "cards": [
     {
       "id": 7001,
@@ -15,7 +15,7 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-10-24",
+      "verifiedDate": "2026-10-25",
       "offerNote": "Automatically verified on the issuer product page 2026-10-13. Current public offer: 750 cash after 6,000 in qualifying spend within 3 months. No annual fee. Offers can vary by channel and change over time.",
       "offerType": "public-current",
       "confidence": "high",
@@ -51,7 +51,7 @@
         "source": "https://creditcards.chase.com/business-credit-cards/ink/unlimited"
       },
       "spendPeriod": "3 months",
-      "lastSuccessfulCheck": "2026-10-24T17:34:48.244Z"
+      "lastSuccessfulCheck": "2026-10-25T17:47:14.862Z"
     },
     {
       "id": 7002,
@@ -65,7 +65,7 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-10-24",
+      "verifiedDate": "2026-10-25",
       "offerNote": "Automatically verified on the issuer product page 2026-10-13. Current public offer: 750 cash after 6,000 in qualifying spend within 3 months. No annual fee. Offers can vary by channel and change over time.",
       "offerType": "public-current",
       "confidence": "high",
@@ -101,7 +101,7 @@
         "source": "https://creditcards.chase.com/business-credit-cards/ink/cash"
       },
       "spendPeriod": "3 months",
-      "lastSuccessfulCheck": "2026-10-24T17:34:48.244Z"
+      "lastSuccessfulCheck": "2026-10-25T17:47:14.862Z"
     },
     {
       "id": 7003,
@@ -1445,7 +1445,7 @@
       "af": 99,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-10-24",
+      "verifiedDate": "2026-10-25",
       "offerNote": "50,000 points after $4,000 in purchases and payment of the annual fee, both within 90 days.",
       "tags": [
         "airline",
@@ -1481,7 +1481,7 @@
         "90 days"
       ],
       "monitoringStatus": "source-configured",
-      "lastSuccessfulCheck": "2026-10-24T17:34:48.244Z"
+      "lastSuccessfulCheck": "2026-10-25T17:47:14.862Z"
     },
     {
       "id": 8001,
@@ -1825,7 +1825,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-10-24",
+      "verifiedDate": "2026-10-25",
       "offerNote": "Automatically verified on the issuer product page 2026-10-13. Current public offer: 70,000 United miles after 3,000 in qualifying spend within 3 months. No annual fee. Offers can vary by channel and change over time.",
       "tags": [
         "airline",
@@ -1884,7 +1884,7 @@
         "verifiedDate": "2026-10-03",
         "source": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer"
       },
-      "lastSuccessfulCheck": "2026-10-24T17:34:48.244Z"
+      "lastSuccessfulCheck": "2026-10-25T17:47:14.862Z"
     },
     {
       "id": 8009,
@@ -1988,7 +1988,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-10-24",
+      "verifiedDate": "2026-10-25",
       "offerNote": "Automatically verified on the issuer product page 2026-10-13. Current public offer: 40,000 United miles after 1,000 in qualifying spend within 3 months. No annual fee. Offers can vary by channel and change over time.",
       "tags": [
         "airline",
@@ -2025,7 +2025,7 @@
         "verifiedDate": "2026-10-02",
         "source": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway"
       },
-      "lastSuccessfulCheck": "2026-10-24T17:34:48.244Z"
+      "lastSuccessfulCheck": "2026-10-25T17:47:14.862Z"
     },
     {
       "id": 8012,
@@ -2179,7 +2179,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-10-24",
+      "verifiedDate": "2026-10-25",
       "offerNote": "45,000 Marriott points after $1,000 in purchases within 3 months.",
       "tags": [
         "hotel",
@@ -2225,7 +2225,7 @@
         "3 months"
       ],
       "monitoringStatus": "source-configured",
-      "lastSuccessfulCheck": "2026-10-24T17:34:48.244Z"
+      "lastSuccessfulCheck": "2026-10-25T17:47:14.862Z"
     },
     {
       "id": 8016,
@@ -3856,7 +3856,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-10-24",
+      "verifiedDate": "2026-10-25",
       "offerNote": "Automatically verified on the issuer product page 2026-10-13. Current public offer: 20,000 Capital One miles after 500 in qualifying spend within 3 months. No annual fee. Offers can vary by channel and change over time.",
       "tags": [
         "travel",
@@ -3888,7 +3888,7 @@
         "source": "https://www.capitalone.com/credit-cards/ventureone/"
       },
       "spendPeriod": "3 months",
-      "lastSuccessfulCheck": "2026-10-24T17:34:48.244Z"
+      "lastSuccessfulCheck": "2026-10-25T17:47:14.862Z"
     },
     {
       "id": 8304,
@@ -4328,7 +4328,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-10-24",
+      "verifiedDate": "2026-10-25",
       "offerNote": "20,000 Wells Fargo Rewards points after $1,000 in purchases in 3 months.",
       "tags": [
         "travel",
@@ -4364,7 +4364,7 @@
         "3 months"
       ],
       "monitoringStatus": "source-configured",
-      "lastSuccessfulCheck": "2026-10-24T17:34:48.244Z"
+      "lastSuccessfulCheck": "2026-10-25T17:47:14.862Z"
     },
     {
       "id": 8502,
@@ -4808,7 +4808,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-10-24",
+      "verifiedDate": "2026-10-25",
       "offerNote": "Automatically verified on the issuer product page 2026-10-13. Current public offer: 200 cash after 1,000 in qualifying spend within 90 days. No annual fee. Offers can vary by channel and change over time.",
       "tags": [
         "cash",
@@ -4846,7 +4846,7 @@
         "source": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html"
       },
       "spendPeriod": "90 days",
-      "lastSuccessfulCheck": "2026-10-24T17:34:48.244Z"
+      "lastSuccessfulCheck": "2026-10-25T17:47:14.862Z"
     },
     {
       "id": 8605,
@@ -4933,7 +4933,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-10-24",
+      "verifiedDate": "2026-10-25",
       "offerNote": "90,000 TrueBlue points after $5,000 in purchases and payment of the annual fee, both within 90 days.",
       "tags": [
         "airline",
@@ -4954,7 +4954,7 @@
         "5000",
         "90 days"
       ],
-      "lastSuccessfulCheck": "2026-10-24T17:34:48.244Z"
+      "lastSuccessfulCheck": "2026-10-25T17:47:14.862Z"
     },
     {
       "id": 8703,
@@ -5717,7 +5717,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-10-24",
+      "verifiedDate": "2026-10-25",
       "tags": [
         "carnival",
         "cruise"
@@ -5748,7 +5748,7 @@
         "90 days"
       ],
       "monitoringStatus": "source-configured",
-      "lastSuccessfulCheck": "2026-10-24T17:34:48.244Z"
+      "lastSuccessfulCheck": "2026-10-25T17:47:14.862Z"
     },
     {
       "id": 8901,
