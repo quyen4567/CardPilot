@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-28T19:33:39.486Z",
+  "checkedAt": "2026-10-29T19:45:57.523Z",
   "autoUpdated": 0,
   "needsHumanReview": 133,
   "updates": [],
@@ -32,7 +32,7 @@
       "id": 7007,
       "issuer": "Chase",
       "name": "IHG One Rewards Business",
-      "reason": "Verification is 26 days old."
+      "reason": "Verification is 27 days old."
     },
     {
       "id": 7008,
@@ -48,11 +48,11 @@
       "detectedOffer": {
         "confidence": "review",
         "changed": true,
-        "bonus": 80000,
+        "bonus": 60000,
         "spend": 3000,
         "spendPeriod": "3 months",
         "af": null,
-        "snippet": "80,000 points after you spend $3,000 on purchases in the first 3 months from account opening",
+        "snippet": "Earn 60,000 points after you spend $3,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       }
     },
@@ -104,7 +104,7 @@
       "id": 7103,
       "issuer": "American Express",
       "name": "Graphite Business Cash Unlimited",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 7104,
@@ -116,31 +116,31 @@
       "id": 7105,
       "issuer": "American Express",
       "name": "Blue Business Plus",
-      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; No current bonus is stored and no explicit no-offer state is set.; Verification is 37 days old."
+      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; No current bonus is stored and no explicit no-offer state is set.; Verification is 38 days old."
     },
     {
       "id": 7106,
       "issuer": "American Express",
       "name": "Business Green Rewards Card",
-      "reason": "Verification is 15 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 15000; Issuer page loaded, but expected offer wording was not fully extracted: 3000"
+      "reason": "Verification is 16 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 15000; Issuer page loaded, but expected offer wording was not fully extracted: 3000"
     },
     {
       "id": 7107,
       "issuer": "American Express",
       "name": "Delta SkyMiles Gold Business",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 7108,
       "issuer": "American Express",
       "name": "Delta SkyMiles Platinum Business",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 7109,
       "issuer": "American Express",
       "name": "Delta SkyMiles Reserve Business",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 7110,
@@ -200,7 +200,7 @@
       "id": 7301,
       "issuer": "Citi",
       "name": "Citi / AAdvantage Business World Elite Mastercard",
-      "reason": "Verification is 15 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 65000; Issuer page loaded, but expected offer wording was not fully extracted: 4000; Issuer page loaded, but expected offer wording was not fully extracted: 4 months"
+      "reason": "Verification is 16 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 65000; Issuer page loaded, but expected offer wording was not fully extracted: 4000; Issuer page loaded, but expected offer wording was not fully extracted: 4 months"
     },
     {
       "id": 7302,
@@ -212,19 +212,19 @@
       "id": 7401,
       "issuer": "Bank of America",
       "name": "Business Advantage Unlimited Cash Rewards",
-      "reason": "Verification is 32 days old."
+      "reason": "Verification is 33 days old."
     },
     {
       "id": 7402,
       "issuer": "Bank of America",
       "name": "Business Advantage Customized Cash Rewards",
-      "reason": "Verification is 32 days old."
+      "reason": "Verification is 33 days old."
     },
     {
       "id": 7403,
       "issuer": "Bank of America",
       "name": "Business Advantage Travel Rewards",
-      "reason": "Verification is 32 days old."
+      "reason": "Verification is 33 days old."
     },
     {
       "id": 7404,
@@ -242,7 +242,7 @@
       "id": 7502,
       "issuer": "U.S. Bank",
       "name": "Business Shield",
-      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; No current bonus is stored and no explicit no-offer state is set.; Verification is 37 days old."
+      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; No current bonus is stored and no explicit no-offer state is set.; Verification is 38 days old."
     },
     {
       "id": 7503,
@@ -278,13 +278,13 @@
       "id": 8001,
       "issuer": "Chase",
       "name": "Sapphire Preferred",
-      "reason": "Verification is 32 days old."
+      "reason": "Verification is 33 days old."
     },
     {
       "id": 8002,
       "issuer": "Chase",
       "name": "Sapphire Reserve",
-      "reason": "Verification is 32 days old."
+      "reason": "Verification is 33 days old."
     },
     {
       "id": 8003,
@@ -296,7 +296,7 @@
       "id": 8004,
       "issuer": "Chase",
       "name": "Freedom Flex",
-      "reason": "Verification is 26 days old."
+      "reason": "Verification is 27 days old."
     },
     {
       "id": 8005,
@@ -306,11 +306,11 @@
       "detectedOffer": {
         "confidence": "review",
         "changed": true,
-        "bonus": 50000,
+        "bonus": 80000,
         "spend": 1000,
         "spendPeriod": "3 months",
         "af": null,
-        "snippet": "Earn 50,000 bonus points * 2X points on Southwest Airlines purchases and on the first $5,000 in combined purchases at gas stations and grocery stores per year * 1X points on all other purchases * NEW CARDMEMBER OFFER Earn 50,000 bonus points after you spend $1,000 on purchases in the first 3 months from account opening",
+        "snippet": "Earn 80,000 bonus points * 2X points on Southwest Airlines purchases and on the first $5,000 in combined purchases at gas stations and grocery stores per year * 1X points on all other purchases * NEW CARDMEMBER OFFER Earn 80,000 bonus points after you spend $1,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       }
     },
@@ -322,11 +322,11 @@
       "detectedOffer": {
         "confidence": "review",
         "changed": true,
-        "bonus": 55000,
-        "spend": 1500,
+        "bonus": 85000,
+        "spend": 2000,
         "spendPeriod": "3 months",
         "af": null,
-        "snippet": "Earn 55,000 bonus points * 3X points on Southwest Airlines purchases * 2X points on the first $8,000 in combined purchases at grocery stores and restaurants per year * NEW CARDMEMBER OFFER Earn 55,000 bonus points after you spend $1,500 on purchases in the first 3 months from account opening",
+        "snippet": "Earn 85,000 bonus points * 3X points on Southwest Airlines purchases * 2X points on the first $8,000 in combined purchases at grocery stores and restaurants per year * NEW CARDMEMBER OFFER Earn 85,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       }
     },
@@ -338,11 +338,11 @@
       "detectedOffer": {
         "confidence": "review",
         "changed": true,
-        "bonus": 60000,
-        "spend": 2000,
+        "bonus": 90000,
+        "spend": 3000,
         "spendPeriod": "3 months",
         "af": null,
-        "snippet": "Earn 60,000 bonus points * 4X points on Southwest Airlines purchases * 2X points at gas stations and restaurants * NEW CARDMEMBER OFFER Earn 60,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening",
+        "snippet": "Earn 90,000 bonus points * 4X points on Southwest Airlines purchases * 2X points at gas stations and restaurants * NEW CARDMEMBER OFFER Earn 90,000 bonus points after you spend $3,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       }
     },
@@ -382,19 +382,19 @@
       "id": 8012,
       "issuer": "Chase",
       "name": "World of Hyatt",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8013,
       "issuer": "Chase",
       "name": "IHG One Rewards Credit Card",
-      "reason": "Verification is 26 days old."
+      "reason": "Verification is 27 days old."
     },
     {
       "id": 8014,
       "issuer": "Chase",
       "name": "IHG One Rewards Premier",
-      "reason": "Verification is 26 days old."
+      "reason": "Verification is 27 days old."
     },
     {
       "id": 8016,
@@ -406,7 +406,7 @@
       "id": 8017,
       "issuer": "Chase",
       "name": "Marriott Bonvoy Bountiful",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8018,
@@ -428,19 +428,19 @@
       "id": 8019,
       "issuer": "Chase",
       "name": "British Airways Visa Signature",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8020,
       "issuer": "Chase",
       "name": "Iberia Visa Signature",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8021,
       "issuer": "Chase",
       "name": "Aer Lingus Visa Signature",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8101,
@@ -452,7 +452,7 @@
       "id": 8102,
       "issuer": "American Express",
       "name": "Gold Card",
-      "reason": "Verification is 15 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 100000; Issuer page loaded, but expected offer wording was not fully extracted: 8000; Issuer page loaded, but expected offer wording was not fully extracted: 6 months"
+      "reason": "Verification is 16 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 100000; Issuer page loaded, but expected offer wording was not fully extracted: 8000; Issuer page loaded, but expected offer wording was not fully extracted: 6 months"
     },
     {
       "id": 8103,
@@ -476,19 +476,19 @@
       "id": 8106,
       "issuer": "American Express",
       "name": "Delta SkyMiles Gold",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8107,
       "issuer": "American Express",
       "name": "Delta SkyMiles Platinum",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8108,
       "issuer": "American Express",
       "name": "Delta SkyMiles Reserve",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8109,
@@ -526,49 +526,49 @@
       "id": 8111,
       "issuer": "American Express",
       "name": "Hilton Honors Aspire",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8112,
       "issuer": "American Express",
       "name": "Marriott Bonvoy Bevy",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8113,
       "issuer": "American Express",
       "name": "Marriott Bonvoy Brilliant",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8114,
       "issuer": "American Express",
       "name": "Platinum Card for Charles Schwab",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8115,
       "issuer": "American Express",
       "name": "Platinum Card for Morgan Stanley",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8201,
       "issuer": "Citi",
       "name": "Strata Premier",
-      "reason": "Verification is 24 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 60,000; Issuer page loaded, but expected offer wording was not fully extracted: 4,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
+      "reason": "Verification is 25 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 60,000; Issuer page loaded, but expected offer wording was not fully extracted: 4,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
     },
     {
       "id": 8202,
       "issuer": "Citi",
       "name": "Strata Elite",
-      "reason": "Verification is 32 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 75,000; Issuer page loaded, but expected offer wording was not fully extracted: 6,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
+      "reason": "Verification is 33 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 75,000; Issuer page loaded, but expected offer wording was not fully extracted: 6,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
     },
     {
       "id": 8203,
       "issuer": "Citi",
       "name": "Strata",
-      "reason": "Verification is 32 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 20,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
+      "reason": "Verification is 33 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 20,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
     },
     {
       "id": 8204,
@@ -580,7 +580,7 @@
       "id": 8205,
       "issuer": "Citi",
       "name": "Custom Cash",
-      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; Verification is 37 days old."
+      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; Verification is 38 days old."
     },
     {
       "id": 8206,
@@ -598,7 +598,7 @@
       "id": 8208,
       "issuer": "Citi",
       "name": "AAdvantage Globe",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8209,
@@ -610,13 +610,13 @@
       "id": 8210,
       "issuer": "Citi",
       "name": "AT&T Points Plus",
-      "reason": "Verification is 35 days old."
+      "reason": "Verification is 36 days old."
     },
     {
       "id": 8301,
       "issuer": "Capital One",
       "name": "Venture X Rewards",
-      "reason": "Verification is 32 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 75,000; Issuer page loaded, but expected offer wording was not fully extracted: 4,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
+      "reason": "Verification is 33 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 75,000; Issuer page loaded, but expected offer wording was not fully extracted: 4,000; Issuer page loaded, but expected offer wording was not fully extracted: 3 months"
     },
     {
       "id": 8302,
@@ -628,13 +628,13 @@
       "id": 8304,
       "issuer": "Capital One",
       "name": "Savor Cash Rewards",
-      "reason": "Verification is 32 days old."
+      "reason": "Verification is 33 days old."
     },
     {
       "id": 8305,
       "issuer": "Capital One",
       "name": "Quicksilver Cash Rewards",
-      "reason": "Verification is 32 days old."
+      "reason": "Verification is 33 days old."
     },
     {
       "id": 8401,
@@ -652,37 +652,37 @@
       "id": 8403,
       "issuer": "Bank of America",
       "name": "Customized Cash Rewards",
-      "reason": "Verification is 25 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 200; Issuer page loaded, but expected offer wording was not fully extracted: 1,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 6% cash back; Issuer page loaded, but expected offer wording was not fully extracted: first year"
+      "reason": "Verification is 26 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 200; Issuer page loaded, but expected offer wording was not fully extracted: 1,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 6% cash back; Issuer page loaded, but expected offer wording was not fully extracted: first year"
     },
     {
       "id": 8404,
       "issuer": "Bank of America",
       "name": "Unlimited Cash Rewards",
-      "reason": "Verification is 35 days old."
+      "reason": "Verification is 36 days old."
     },
     {
       "id": 8405,
       "issuer": "Bank of America",
       "name": "Travel Rewards",
-      "reason": "Verification is 32 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 25,000; Issuer page loaded, but expected offer wording was not fully extracted: 1,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days"
+      "reason": "Verification is 33 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 25,000; Issuer page loaded, but expected offer wording was not fully extracted: 1,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days"
     },
     {
       "id": 8406,
       "issuer": "Bank of America",
       "name": "Atmos Rewards Ascent",
-      "reason": "Verification is 32 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 50,000; Issuer page loaded, but expected offer wording was not fully extracted: 1,500; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 99 Companion Fare; Issuer page loaded, but expected offer wording was not fully extracted: 95 annual fee"
+      "reason": "Verification is 33 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 50,000; Issuer page loaded, but expected offer wording was not fully extracted: 1,500; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 99 Companion Fare; Issuer page loaded, but expected offer wording was not fully extracted: 95 annual fee"
     },
     {
       "id": 8407,
       "issuer": "Bank of America",
       "name": "Atmos Rewards Summit",
-      "reason": "Verification is 32 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 70,000; Issuer page loaded, but expected offer wording was not fully extracted: 25,000-point Global Companion Award; Issuer page loaded, but expected offer wording was not fully extracted: 3,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 395 annual fee"
+      "reason": "Verification is 33 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 70,000; Issuer page loaded, but expected offer wording was not fully extracted: 25,000-point Global Companion Award; Issuer page loaded, but expected offer wording was not fully extracted: 3,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 395 annual fee"
     },
     {
       "id": 8408,
       "issuer": "Bank of America",
       "name": "Air France KLM Visa Signature",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8409,
@@ -700,7 +700,7 @@
       "id": 8503,
       "issuer": "Wells Fargo",
       "name": "Active Cash",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8504,
@@ -712,43 +712,43 @@
       "id": 8505,
       "issuer": "Wells Fargo",
       "name": "Choice Privileges Mastercard",
-      "reason": "Verification is 15 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 60000"
+      "reason": "Verification is 16 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 60000"
     },
     {
       "id": 8506,
       "issuer": "Wells Fargo",
       "name": "Choice Privileges Select Mastercard",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8507,
       "issuer": "Wells Fargo",
       "name": "One Key Card",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8508,
       "issuer": "Wells Fargo",
       "name": "One Key+ Card",
-      "reason": "Verification is 15 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 350"
+      "reason": "Verification is 16 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 350"
     },
     {
       "id": 8601,
       "issuer": "U.S. Bank",
       "name": "Bank Smartly Visa Signature",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8602,
       "issuer": "U.S. Bank",
       "name": "Altitude Go",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8603,
       "issuer": "U.S. Bank",
       "name": "Altitude Connect",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8605,
@@ -777,10 +777,10 @@
         "confidence": "high",
         "changed": true,
         "bonus": 45000,
-        "spend": 500,
-        "spendPeriod": "180 days",
+        "spend": 2000,
+        "spendPeriod": "90 days",
         "af": 0,
-        "snippet": "earn 45,000 bonus points after spending $500 at Hotels by Wyndham in the first 180 days",
+        "snippet": "Earn 45,000 bonus points after spending $2,000 on qualifying purchases in the first 90 days",
         "reason": "Unique direct offer pattern detected"
       }
     },
@@ -790,14 +790,14 @@
       "name": "Wyndham Rewards Earner Plus",
       "reason": "Detected change did not meet strict auto-update rules",
       "detectedOffer": {
-        "confidence": "high",
+        "confidence": "review",
         "changed": true,
-        "bonus": 55000,
+        "bonus": 45000,
         "spend": 500,
         "spendPeriod": "180 days",
-        "af": 95,
-        "snippet": "earn 55,000 bonus points after spending $500 at Hotels by Wyndham in the first 180 days",
-        "reason": "Unique direct offer pattern detected"
+        "af": null,
+        "snippet": "earn 45,000 bonus points after spending $500 at Hotels by Wyndham in the first 180 days",
+        "reason": "Offer pattern requires review"
       }
     },
     {
@@ -816,13 +816,13 @@
       "id": 8801,
       "issuer": "Bilt",
       "name": "Bilt Blue Card",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8816,
       "issuer": "Bilt",
       "name": "Bilt Obsidian Card",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8817,
@@ -850,7 +850,7 @@
       "id": 8803,
       "issuer": "Discover",
       "name": "Discover it Miles",
-      "reason": "No current bonus is stored and no explicit no-offer state is set.; Verification is 15 days old."
+      "reason": "No current bonus is stored and no explicit no-offer state is set.; Verification is 16 days old."
     },
     {
       "id": 8804,
@@ -868,7 +868,7 @@
       "id": 8815,
       "issuer": "Robinhood",
       "name": "Robinhood Gold Card",
-      "reason": "Verification is 24 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 50"
+      "reason": "Verification is 25 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 50"
     },
     {
       "id": 8806,
@@ -886,25 +886,25 @@
       "id": 8808,
       "issuer": "USAA",
       "name": "Eagle Navigator Visa Signature",
-      "reason": "Verification is 15 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 50000; Issuer page loaded, but expected offer wording was not fully extracted: 3000; Issuer page loaded, but expected offer wording was not fully extracted: January 31, 2027"
+      "reason": "Verification is 16 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 50000; Issuer page loaded, but expected offer wording was not fully extracted: 3000; Issuer page loaded, but expected offer wording was not fully extracted: January 31, 2027"
     },
     {
       "id": 8809,
       "issuer": "Navy Federal",
       "name": "Flagship Rewards",
-      "reason": "Offer has not been verified yet.; Minimum-spend requirement is not yet verified.; Bonus is present but spend requirement is missing.; Verification is 37 days old."
+      "reason": "Offer has not been verified yet.; Minimum-spend requirement is not yet verified.; Bonus is present but spend requirement is missing.; Verification is 38 days old."
     },
     {
       "id": 8810,
       "issuer": "PenFed",
       "name": "Pathfinder Rewards",
-      "reason": "Verification is 15 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 3000"
+      "reason": "Verification is 16 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 3000"
     },
     {
       "id": 8811,
       "issuer": "Synchrony",
       "name": "Virgin Red Rewards Mastercard",
-      "reason": "Verification is 15 days old."
+      "reason": "Verification is 16 days old."
     },
     {
       "id": 8901,
@@ -934,13 +934,13 @@
       "id": 8022,
       "issuer": "Chase",
       "name": "IHG One Rewards Premier Select",
-      "reason": "Verification is 26 days old."
+      "reason": "Verification is 27 days old."
     },
     {
       "id": 8905,
       "issuer": "AAA / Comenity Capital Bank",
       "name": "AAA Daily Advantage Visa Signature",
-      "reason": "Verification is 24 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 100; Issuer page loaded, but expected offer wording was not fully extracted: 1,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 5% cash back; Issuer page loaded, but expected offer wording was not fully extracted: 3% cash back; Issuer page loaded, but expected offer wording was not fully extracted: no annual fee"
+      "reason": "Verification is 25 days old.; Issuer page loaded, but expected offer wording was not fully extracted: 100; Issuer page loaded, but expected offer wording was not fully extracted: 1,000; Issuer page loaded, but expected offer wording was not fully extracted: 90 days; Issuer page loaded, but expected offer wording was not fully extracted: 5% cash back; Issuer page loaded, but expected offer wording was not fully extracted: 3% cash back; Issuer page loaded, but expected offer wording was not fully extracted: no annual fee"
     }
   ]
 }
