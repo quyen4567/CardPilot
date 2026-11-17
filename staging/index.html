@@ -1361,7 +1361,7 @@ function rankedOffers(){
         const av=offerEstimatedSubValue(a.offer), bv=offerEstimatedSubValue(b.offer);
         if(bv!==av)return bv-av;
       }
-      const aspend=Number(a.offer.spend||Infinity), bSpend=Number(b.offer.spend||Infinity);
+      const aspend=Number(a.offer.spend ?? Infinity), bSpend=Number(b.offer.spend ?? Infinity);
       if(aspend!==bSpend)return aspend-bSpend;
       const ar=subReturnRange(a.offer), br=subReturnRange(b.offer);
       const aroi=ar?ar.mid:-1, broi=br?br.mid:-1;

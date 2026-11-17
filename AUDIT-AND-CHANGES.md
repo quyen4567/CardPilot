@@ -31,3 +31,13 @@ BLOCKED. Use as a staging review artifact only. Do not publish or rely on its ol
 4. Owned and previously owned cards; distinguish approval from bonus eligibility.
 5. Clear search while retaining wallet; export/import and browser reload.
 6. IHG spending deadline and calendar-year scheduling (not yet implemented).
+
+## Development QA follow-up — November 16, 2026
+- GitHub Actions run 44003309061 passed the original regression suite, catalog validation, and all seven mobile Chromium scenarios for commit 69d0d92.
+- Its fresh release audit reports 143 of 143 active cards blocked, with monitoring sources on 93. The October snapshot above is historical; passing structural checks is not offer verification.
+- Reproduced and fixed a remaining default-ranking tie-break: equal-value bonuses now place $0 required spend ahead of $3,000, while missing spend remains unknown.
+- Added regression coverage for business-only filtering, least-spend and efficiency ranking, unverified-offer exclusion, and separate personal/business BofA tiers.
+- Added a mobile browser scenario for restarting a search and reloading without losing the wallet, shortlist, or business banking relationship.
+- Synchronized the lockfile package version to 11.3.49 without changing dependencies.
+- Local regression tests pass. Local Chromium cannot launch under the workspace's socket restrictions; the updated browser scenario must be validated by GitHub Actions.
+- Root app files, main, Pages settings, and publication remain unchanged. No offer data was refreshed by this QA patch.

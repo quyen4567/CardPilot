@@ -3,7 +3,7 @@
   "version": "11.3.49",
   "private": true,
   "scripts": {
-    "test": "node scripts/test-offer-pipeline.mjs && node scripts/test-release-gate.mjs && node scripts/test-publication.mjs",
+    "test": "node scripts/test-offer-pipeline.mjs && node scripts/test-ranking.mjs && node scripts/test-release-gate.mjs && node scripts/test-publication.mjs",
     "test:staging": "node scripts/test-staging-browser.mjs",
     "audit:release": "node scripts/release-audit.mjs staging/cards.json staging/release-audit.json"
   },

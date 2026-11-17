@@ -98,6 +98,23 @@ try{
   assert.equal(await page.evaluate(()=>data.offers.find(c=>c.id===8207).bonus),base.bonus);
   assert.equal(await page.evaluate(()=>data.savedCardIds[0]),'8207');
   results.push('Restoring the previous catalog rolls back offers without resetting the user.');
+  await page.evaluate(()=>{
+    data.profile.relationships.bofaBusiness='platinum-honors';
+    data.profile.relationships.bofaPersonal='none';
+    data.profile.feePref='95';data.profile.interests=['cash'];data.profile.subSpendPref='3000';
+  });
+  page.once('dialog',dialog=>dialog.accept());
+  await page.evaluate(()=>restartFindFlow());
+  assert.equal(await page.evaluate(()=>data.cards[0].id),'fixture-wallet');
+  assert.equal(await page.evaluate(()=>data.savedCardIds[0]),'8207');
+  assert.equal(await page.evaluate(()=>data.profile.relationships.bofaBusiness),'platinum-honors');
+  assert.equal(await page.evaluate(()=>data.profile.feePref),null);
+  assert.equal(await page.evaluate(()=>data.profile.interests.length),0);
+  await page.reload();await page.waitForFunction(()=>data.catalogLoadStatus==='live');
+  assert.equal(await page.evaluate(()=>data.cards[0].id),'fixture-wallet');
+  assert.equal(await page.evaluate(()=>data.savedCardIds[0]),'8207');
+  assert.equal(await page.evaluate(()=>data.profile.relationships.bofaBusiness),'platinum-honors');
+  results.push('Starting a new search preserves wallet, shortlist and banking relationships after reload.');
   assert.deepEqual(errors,[]);
   const candidateHash=crypto.createHash('sha256').update(fs.readFileSync(path.join(candidate,'index.html')))
     .update(fs.readFileSync(path.join(candidate,'cards.json'))).digest('hex');
