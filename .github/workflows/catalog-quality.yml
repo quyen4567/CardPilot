@@ -1,9 +1,9 @@
 name: CardPilot catalog quality
 on:
   push:
-    paths: ['index.html', 'cards.json', 'scripts/**', '.github/workflows/**', 'staging/**', 'package*.json']
+    paths: ['index.html', 'cards.json', 'scripts/**', '.github/workflows/**', 'staging/**', 'package*.json', 'release-candidate/**']
   pull_request:
-    paths: ['index.html', 'cards.json', 'scripts/**', '.github/workflows/**', 'staging/**', 'package*.json']
+    paths: ['index.html', 'cards.json', 'scripts/**', '.github/workflows/**', 'staging/**', 'package*.json', 'release-candidate/**']
 permissions:
   contents: read
 jobs:
@@ -23,6 +23,23 @@ jobs:
       - run: node scripts/validate-auto-update.mjs staging/cards.json
       - run: npm run test:staging
       - run: node scripts/release-audit.mjs staging/cards.json staging/release-audit.json --report-only
+      - name: Validate public release candidate
+        run: |
+          node scripts/validate-auto-update.mjs release-candidate/cards.json
+          node scripts/release-audit.mjs release-candidate/cards.json release-candidate/release-audit.json
+      - name: Browser-test exact public release candidate
+        env:
+          CARDPILOT_CANDIDATE_DIRECTORY: release-candidate
+        run: npm run test:staging
+      - name: Prepare approved public files
+        run: node scripts/prepare-release.mjs release-candidate approved-public
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cardimize-approved-public
+          path: |
+            approved-public
+            release-candidate/browser-qa.json
+            release-candidate/release-audit.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:

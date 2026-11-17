@@ -1,0 +1,11 @@
+{
+  "catalogVersion": "2026-11-16.3-confirmed-public-release",
+  "checkedAt": "2026-11-17T03:40:13.187Z",
+  "releaseReady": true,
+  "totalCards": 105,
+  "activeCards": 104,
+  "sourceCoverage": 104,
+  "confirmedSourceCoverage": 104,
+  "unresolvedOffers": 0,
+  "blockers": []
+}
