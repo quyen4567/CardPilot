@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checkedAt": "2026-10-13T07:17:08.623Z",
+  "candidateHash": "190c247f0590d4ff8ae71a58a4fb736933c5981a1c1bbcf7da8ee54b932f3b58",
+  "checks": [
+    "Rendered fallback extracts terms populated by JavaScript.",
+    "The daily pipeline fills missing dynamic terms and preserves them when the next read fails.",
+    "A new user loads the staging catalog.",
+    "A returning user receives changed terms without losing wallet, shortlist or preferences.",
+    "Expired offers leave apply-now recommendations.",
+    "A failed update preserves the last loaded terms and user data.",
+    "Restoring the previous catalog rolls back offers without resetting the user."
+  ]
+}

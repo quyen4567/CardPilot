@@ -1,10 +1,8 @@
+import {pathToFileURL} from 'node:url';
+import {readRenderedOfferPage,closeRenderedBrowser} from './read-rendered-offer.mjs';
 import {offerDataQuality} from './offer-quality.mjs';
 import fs from 'fs';
 
-const catalogPath = process.argv[2] || 'cards.json';
-const reportPath = process.argv[3] || 'offer-report.json';
-const payload = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
-const cards = Array.isArray(payload.cards) ? payload.cards : [];
 const now = new Date();
 
 function ageDays(dateStr){
@@ -29,7 +27,7 @@ function normalize(s){
   return String(s||'')
     .toLowerCase()
     .replace(/\$\s*/g,'')
-    .replace(/,/g,'')
+    .replace(/,/g,'').replace(/[®™]/g,'')
     .replace(/\bthousand\b/g,'000')
     .replace(/\b3\s*months?\b/g,'90 days')
     .replace(/\bfirst\s+3\s+months?\b/g,'first 90 days')
@@ -50,7 +48,7 @@ function localQuality(c){
   if(c.verified && /verify current offer/i.test(String(c.offerNote||''))) issues.push('Catalog contradiction: verified=true while offer note says Verify current offer.');
   if(c.verified && !c.verifiedDate) issues.push('Verified offer is missing verifiedDate.');
   if(Number(c.bonus||0)>0 && c.spend==null && !['qualifying-activities','personalized','up-to','research-pending'].includes(c.offerRequirementType)) issues.push('Bonus is present but spend requirement is missing.');
-  if(Number(c.bonus||0)===0 && !['no-standard-public-sub','invitation-waitlist','personalized','historical-only','research-pending'].includes(c.offerState)) issues.push('No current bonus is stored and no explicit no-offer state is set.');
+  if(Number(c.bonus||0)===0 && !['no-standard-public-sub','invitation-waitlist','personalized','historical-only','research-pending','first-year-cashback-match'].includes(c.offerState)) issues.push('No current bonus is stored and no explicit no-offer state is set.');
   const age=ageDays(c.verifiedDate);
   if(age>14 && age!==Infinity) issues.push(`Verification is ${age} days old.`);
   return issues;
@@ -65,11 +63,11 @@ function extractOffer(text,c){
   const candidates=[];
   const kind=unitKind(c);
   const patterns = kind==='cash' ? [
-    /(?:earn|get|receive)\s+(?:a\s+)?\$?([0-9][0-9,]{1,6})\s+(?:cash back|statement credit|bonus)[^.!?]{0,180}?(?:after|when)\s+(?:you\s+)?(?:spend(?:ing)?|make)\s+\$?([0-9][0-9,]{2,7})/ig,
-    /\$?([0-9][0-9,]{1,6})\s+(?:cash back|statement credit|bonus)[^.!?]{0,180}?\$?([0-9][0-9,]{2,7})\s+(?:in purchases|on purchases|spend)/ig
+    /(?:earn|get|receive)\s+(?:a\s+)?\$?([0-9][0-9,]{1,6})\s+(?:cash back|cash rewards(?: bonus)?|reward dollars|OneKeyCash|statement credit|bonus)[^.!?]{0,180}?(?:after|when)\s+(?:you\s+)?(?:spend(?:ing)?|make)\s+\$?([0-9][0-9,]{2,7})/ig,
+    /\$?([0-9][0-9,]{1,6})\s+(?:cash back|cash rewards(?: bonus)?|reward dollars|OneKeyCash|statement credit|bonus)[^.!?]{0,180}?\$?([0-9][0-9,]{2,7})\s+(?:in purchases|on purchases|spend)/ig
   ] : [
-    /(?:earn|get|receive)\s+(?:up to\s+)?([0-9][0-9,]{3,7})\s+(?:bonus\s+)?(?:points|miles)[^.!?]{0,220}?(?:after|when)\s+(?:you\s+)?(?:spend(?:ing)?|make)\s+\$?([0-9][0-9,]{2,7})/ig,
-    /([0-9][0-9,]{3,7})\s+(?:bonus\s+)?(?:points|miles)[^.!?]{0,220}?\$?([0-9][0-9,]{2,7})\s+(?:in purchases|on purchases|spend)/ig
+    /(?:earn|get|receive)\s+(?:up to\s+)?([0-9][0-9,]{3,7})\s+(?:[A-Za-z®™-]+\s+){0,5}(?:bonus\s+)?(?:points|miles)[^.!?]{0,220}?(?:after|when)\s+(?:you\s+)?(?:spend(?:ing)?|make)\s+\$?([0-9][0-9,]{2,7})/ig,
+    /([0-9][0-9,]{3,7})\s+(?:[A-Za-z®™-]+\s+){0,5}(?:bonus\s+)?(?:points|miles)[^.!?]{0,220}?\$?([0-9][0-9,]{2,7})\s+(?:in purchases|on purchases|spend)/ig
   ];
   for(const re of patterns){
     for(const m of t.matchAll(re)){
@@ -96,7 +94,9 @@ function extractOffer(text,c){
   const afUniq=[...new Set(afMatches)];
   if(uniq.length!==1) return {confidence:'review',reason:`Detected ${uniq.length} unique bonus/spend pairs`,candidates:uniq.slice(0,6)};
   const x=uniq[0];
-  const af=afUniq.length===1?afUniq[0]:null;
+  const recurringFee=t.match(/(?:\$0|no)[^.!?]{0,100}(?:first year|introductory)[^.!?]{0,100}(?:then|thereafter)[^0-9]{0,15}\$?([0-9]{1,4})/i)
+    ||t.match(/\$0[^.!?]{0,100}first year[^.!?]{0,100}\$([0-9]{1,4})[^.!?]{0,40}thereafter/i);
+  const af=recurringFee?parseNum(recurringFee[1]):afUniq.length===1?afUniq[0]:null;
   const currentName=normalize(c.name).split(' ').filter(w=>w.length>3).slice(0,3);
   const pageNorm=normalize(t.slice(0,30000));
   const nameSignal=currentName.length===0 || currentName.some(w=>pageNorm.includes(w));
@@ -119,16 +119,26 @@ async function fetchCard(c){
     if(res.status>=500 && res.status<=599) return {id:c.id,issuer:c.issuer,name:c.name,status:'needs_review',httpStatus:res.status,url:c.issuerUrl,issues:[...localIssues,`Issuer server returned HTTP ${res.status}; treated as temporary issuer error, not a CardPilot workflow failure.`],checkedAt:now.toISOString()};
     if(res.status<200||res.status>=400) return {id:c.id,issuer:c.issuer,name:c.name,status:'broken',httpStatus:res.status,url:c.issuerUrl,issues:[...localIssues,`HTTP ${res.status}`],checkedAt:now.toISOString()};
     const expected=Array.isArray(c.monitorExpected)?c.monitorExpected:[];
-    const text=htmlToText(body);
+    let text=htmlToText(body);
+    let detectedOffer=extractOffer(text,c);
+    let extractionMethod='static-public-page',renderError=null;
+    if(detectedOffer.confidence!=='high' && process.env.CARDPILOT_RENDERED_FALLBACK==='1'){
+      try{
+        const rendered=await readRenderedOfferPage(c.issuerUrl);
+        if(rendered.blocked)renderError='Issuer blocked the rendered public page.';
+        else if(rendered.httpStatus===200 && rendered.text){
+          text=rendered.text;detectedOffer=extractOffer(text,c);extractionMethod=rendered.method;
+        }else renderError=`Rendered source did not load usable terms (HTTP ${rendered.httpStatus}).`;
+      }catch(e){renderError=/timeout/i.test(String(e.message||e))?'Rendered extraction unavailable: issuer page timed out.':'Rendered extraction unavailable: browser or issuer connection failed.';}
+    }
     const missing=expected.filter(t=>!termFound(text,t));
-    const detectedOffer=extractOffer(text,c);
-    const issues=[...localIssues,...missing.map(t=>`Issuer page loaded, but expected offer wording was not fully extracted: ${t}`)];
+    const issues=[...localIssues,...(renderError?[renderError]:[]),...missing.map(t=>`Issuer page loaded, but expected offer wording was not fully extracted: ${t}`)];
     // Reconfirmation uses the current page, independent of the age of stored verification.
-    const substantiveIssues=localIssues.filter(x=>!/^Verification is/.test(x));
+    const substantiveIssues=localIssues.filter(x=>!/^Verification is/.test(x) && x!=='The recorded offer needs a fresh check.');
     const reconfirmed=c.issuerUrlVerified && detectedOffer.confidence==='high' && !detectedOffer.changed && !substantiveIssues.filter(x=>x!=='Offer has not been verified yet.').length && !missing.length;
     const status=reconfirmed?'verified':'needs_review';
     if(!reconfirmed && !issues.length)issues.push('Offer terms could not be independently extracted with high confidence.');
-    return {id:c.id,issuer:c.issuer,name:c.name,status,httpStatus:res.status,url:c.issuerUrl,finalUrl:res.url,source:c.issuerUrlVerified?'direct-product-page':'issuer-page',expectedTerms:expected,missingTerms:missing,issues,detectedOffer,checkedAt:now.toISOString()};
+    return {id:c.id,issuer:c.issuer,name:c.name,status,httpStatus:res.status,url:c.issuerUrl,finalUrl:res.url,source:c.issuerUrlVerified?'direct-product-page':'issuer-page',extractionMethod,expectedTerms:expected,missingTerms:missing,issues,detectedOffer,checkedAt:now.toISOString()};
   }catch(error){
     const msg=String(error);
     const blocked=/abort|timeout/i.test(msg);
@@ -136,19 +146,32 @@ async function fetchCard(c){
   }finally{clearTimeout(timer)}
 }
 
-const monitored=cards.filter(c=>c.issuerUrl);
-const unmonitored=cards.filter(c=>!c.issuerUrl).map(c=>({id:c.id,issuer:c.issuer,name:c.name,status:'needs_review',source:'catalog-only',issues:[...localQuality(c),'No issuer monitoring source is configured.'],checkedAt:now.toISOString()}));
+export {normalize,extractOffer,fetchCard};
+
+if(process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href){
+const catalogPath = process.argv[2] || 'cards.json';
+const reportPath = process.argv[3] || 'offer-report.json';
+const payload = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+const cards = Array.isArray(payload.cards) ? payload.cards : [];
+const activeCards=cards.filter(c=>c.status!=='closed-new');
+const monitored=activeCards.filter(c=>c.issuerUrl);
+const unmonitored=activeCards.filter(c=>!c.issuerUrl).map(c=>({id:c.id,issuer:c.issuer,name:c.name,status:'needs_review',source:'catalog-only',issues:[...localQuality(c),'No issuer monitoring source is configured.'],checkedAt:now.toISOString()}));
 const results=[];
 for(let i=0;i<monitored.length;i+=5) results.push(...await Promise.all(monitored.slice(i,i+5).map(fetchCard)));
 results.push(...unmonitored);
+await closeRenderedBrowser();
 const counts={verified:0,needs_review:0,blocked_by_issuer:0,broken:0,unmonitored:0};
 for(const r of results) counts[r.status]=(counts[r.status]||0)+1;
 const changeCandidates=results.filter(r=>r.detectedOffer?.changed).map(r=>({id:r.id,issuer:r.issuer,name:r.name,status:r.status,url:r.url,detectedOffer:r.detectedOffer}));
-const report={catalogVersion:payload.catalogVersion||null,checkedAt:now.toISOString(),counts,monitoredCards:monitored.length,totalCards:cards.length,changeCandidates,results};
+counts.unmonitored=unmonitored.length; // Coverage count overlaps the review queue.
+const coverage={activeCards:activeCards.length,sourceConfigured:monitored.length,missingSource:unmonitored.length,archivedCards:cards.length-activeCards.length};
+const report={catalogVersion:payload.catalogVersion||null,checkedAt:now.toISOString(),counts,coverage,monitoredCards:monitored.length,totalCards:cards.length,changeCandidates,results};
 fs.writeFileSync(reportPath,JSON.stringify(report,null,2));
-const lines=['# CardPilot offer monitoring','',`Catalog: ${report.catalogVersion||'unknown'}`,`Monitored issuer pages: ${monitored.length}/${cards.length}`,`Verified: ${counts.verified}`,`Needs review: ${counts.needs_review}`,`Blocked by issuer: ${counts.blocked_by_issuer}`,`Broken: ${counts.broken}`,`Unmonitored: ${counts.unmonitored}`,`Detected offer changes: ${changeCandidates.length}`,''];
+const lines=['# CardPilot offer monitoring','',`Catalog: ${report.catalogVersion||'unknown'}`,`Monitored issuer pages: ${monitored.length}/${activeCards.length} active cards`,`Verified: ${counts.verified}`,`Needs review: ${counts.needs_review}`,`Blocked by issuer: ${counts.blocked_by_issuer}`,`Broken: ${counts.broken}`,`Missing monitoring sources (also in review): ${counts.unmonitored}`,`Detected offer changes: ${changeCandidates.length}`,''];
 for(const r of results.filter(x=>['needs_review','blocked_by_issuer','broken'].includes(x.status))) lines.push(`- ${r.status==='needs_review'?'🔎':r.status==='blocked_by_issuer'?'⚠️':'❌'} **${r.issuer} — ${r.name}**: ${r.status}${r.issues?.length?` — ${r.issues.join('; ')}`:''}`);
 if(changeCandidates.length){ lines.push('','## Detected offer changes'); for(const c of changeCandidates) lines.push(`- ${c.detectedOffer.confidence==='high'?'✅':'🔎'} **${c.issuer} — ${c.name}**: ${c.detectedOffer.bonus} / spend ${c.detectedOffer.spend}${c.detectedOffer.af!=null?` / AF ${c.detectedOffer.af}`:''} (${c.detectedOffer.confidence})`); }
 if(process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,lines.join('\n')+'\n');
 console.log(lines.join('\n'));
 if(counts.broken) process.exitCode=1;
+
+}

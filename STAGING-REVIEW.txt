@@ -1,0 +1,61 @@
+CardPilot v11.3.48 staging review
+
+Status: local staging candidate; not installed on GitHub or published.
+Production index.html and cards.json match the current GitHub main branch.
+A captured copy of the live v11.3.47 site is included under rollback/.
+
+Implemented safeguards
+- Public-page Chromium fallback for offers populated by JavaScript.
+- Successful dynamic extraction can complete a previously missing simple offer.
+- Failed, blocked or ambiguous reads preserve confirmed terms instead of writing zero.
+- Recommendation checks reject expired offers, unverified fees and stale verification.
+- Structural validation remains runnable when offers expire, so monitoring can recover.
+- Release publication requires source coverage, complete terms and recent verification.
+- Browser QA is bound to the exact index.html and cards.json bytes being published.
+- A manual initial promotion enables subsequent validated automatic offer publication.
+- The offer workflow explicitly deploys the validated artifact rather than relying on
+  a bot commit to trigger another GitHub Pages build.
+- Approved source files are retained for the next automatic update.
+
+Verification
+Unit and pipeline regression tests passed.
+Real Chromium tested dynamic rendering, the actual daily checker/updater, new users,
+returning users, saved wallet/shortlist/preferences, expiry, outage and rollback.
+Live Citi browser extraction could not be confirmed in this environment because
+remote navigation timed out through the managed network. The fallback is tested
+with a delayed JavaScript fixture; a failed issuer read remains a review item.
+GitHub Actions runs and deployed staging verification remain pending installation.
+
+Data review
+Seven additional records were reviewed against official issuer/partner pages:
+Business Shield, Shield Visa, Costco Anywhere, Apple Card, Marriott Boundless,
+Wyndham Earner and Earner Plus. Certificates are not valued as unrestricted points;
+Wyndham hotel-spend bonus tiers remain separate from the fixed first tier.
+
+Release audit: BLOCKED; 78 active card records have one or more blockers.
+Monitoring sources configured: 93/143.
+
+Still-unconfirmed offers:
+- Blue Business Plus: Current official application-page terms could not be independently read. Secondary reported amounts are not substituted for issuer confirmation.
+- Green Card: Current official application-page terms could not be independently read. Secondary reported amounts are not substituted for issuer confirmation.
+- Free Spirit Travel More World Elite Mastercard: Current new-application availability and offer require official issuer confirmation. Existing-card benefits or replacement products are not treated as a new-account offer.
+- Attune: Current new-application availability and offer require official issuer confirmation. Existing-card benefits or replacement products are not treated as a new-account offer.
+- AAdvantage Aviator Red: Current new-application availability and offer require official issuer confirmation. Existing-card benefits or replacement products are not treated as a new-account offer.
+- Flagship Rewards: Current new-application availability and offer require official issuer confirmation. Existing-card benefits or replacement products are not treated as a new-account offer.
+
+Installation and publication
+1. Install the changes on the staging branch and inspect the GitHub checks.
+2. The staging preview files live in staging/. Root application files stay at v11.3.47.
+3. For the publication gate to control the site, configure GitHub Pages Source to
+   GitHub Actions. Branch-based publishing can bypass these checks for manual uploads.
+4. Complete the blockers listed in staging/release-audit.json. A green structural
+   test alone is not release approval.
+5. Run Publish reviewed CardPilot release only after the release audit is ready.
+   Its browser checks and exact-file hash gate run again before deployment.
+6. After the first approved promotion, the daily offer workflow can explicitly
+   publish passing production updates. Failed checks keep the last deployed site.
+7. Repository branch protections must allow the narrow approved-source/data bot
+   writes, or those writes must be routed through an approved PR workflow. Do not
+   assume branch protection and automatic bot commits are already configured.
+
+The publication changes are prepared but have not been activated in the account.

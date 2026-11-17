@@ -1,0 +1,32 @@
+name: CardPilot catalog quality
+on:
+  push:
+    paths: ['index.html', 'cards.json', 'scripts/**', '.github/workflows/**', 'staging/**', 'package*.json']
+  pull_request:
+    paths: ['index.html', 'cards.json', 'scripts/**', '.github/workflows/**', 'staging/**', 'package*.json']
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/validate-auto-update.mjs cards.json
+      - run: node scripts/verify-catalog.mjs cards.json
+      - run: npm test
+      - run: node scripts/validate-auto-update.mjs staging/cards.json
+      - run: npm run test:staging
+      - run: node scripts/release-audit.mjs staging/cards.json staging/release-audit.json --report-only
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cardpilot-staging-review
+          path: |
+            staging/release-audit.json
+            staging/browser-qa.json

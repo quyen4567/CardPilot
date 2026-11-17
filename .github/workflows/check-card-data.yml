@@ -9,15 +9,18 @@ on:
 permissions:
   contents: write
   issues: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: cardpilot-card-data-check
+  group: cardpilot-publication
   cancel-in-progress: false
 
 jobs:
   check-and-update:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
+    environment: github-pages
 
     steps:
       - name: Checkout repository
@@ -27,6 +30,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: npm
+
+      - name: Install pinned offer reader
+        run: npm ci
+
+      - name: Install public-page browser
+        run: npx playwright install --with-deps chromium
 
       - name: Run existing catalog verification
         shell: bash
@@ -39,6 +49,9 @@ jobs:
 
       - name: Validate automation inputs
         run: node scripts/validate-auto-update.mjs cards.json
+
+      - name: Test offer update regressions
+        run: node scripts/test-offer-pipeline.mjs
 
       - name: Run existing link checker
         continue-on-error: true
@@ -53,6 +66,8 @@ jobs:
       - name: Check issuer offers
         id: offers
         continue-on-error: true
+        env:
+          CARDPILOT_RENDERED_FALLBACK: '1'
         run: node scripts/check-offers.mjs cards.json offer-report.json
 
       - name: Apply only high-confidence offer changes
@@ -60,12 +75,12 @@ jobs:
         run: node scripts/auto-update-offers.mjs cards.json offer-report.json
 
       - name: Validate catalog after automatic updates
+        id: catalog
         if: always()
         run: node scripts/validate-auto-update.mjs cards.json
 
       - name: Re-run existing catalog verification
         if: always()
-        continue-on-error: true
         shell: bash
         run: |
           if [ -f scripts/verify-catalog.mjs ]; then
@@ -102,6 +117,9 @@ jobs:
             const broken = Number(offer?.counts?.broken || 0);
             const human = Number(auto?.needsHumanReview || 0);
             const shouldNotify = needsReview > 0 || broken > 0 || human > 0;
+            const crypto = require('crypto');
+            const reviewFingerprint = crypto.createHash('sha256').update(JSON.stringify((offer.results || []).filter(r => r.status !== 'verified').map(r => ({id:r.id,status:r.status,issues:(r.issues || []).map(x => x.replace(/Verification is \d+ days old\./g,'Verification is overdue.'))})).sort((a,b) => String(a.id).localeCompare(String(b.id))))).digest('hex');
+            const marker = `<!-- review-fingerprint:${reviewFingerprint} -->`;
 
             const owner = context.repo.owner;
             const repo = context.repo.repo;
@@ -129,10 +147,13 @@ jobs:
                 '### Items needing review',
                 ...(lines.length ? lines : ['- See the latest CardPilot Card Data Check workflow summary.']),
                 '',
-                `Last workflow: ${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`
+                `Last workflow: ${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`,
+                marker
               ].join('\n');
 
-              if (existing) {
+              if (existing && (existing.body || '').includes(marker)) {
+                core.info('Review queue unchanged; no repeat notification.');
+              } else if (existing) {
                 await github.rest.issues.update({ owner, repo, issue_number: existing.number, body });
                 await github.rest.issues.createComment({
                   owner, repo, issue_number: existing.number,
@@ -150,7 +171,7 @@ jobs:
             }
 
       - name: Commit safe catalog and monitoring changes
-        if: always()
+        if: always() && steps.catalog.outcome == 'success'
         shell: bash
         run: |
           git add cards.json offer-report.json auto-update-report.json 2>/dev/null || true
@@ -162,6 +183,39 @@ jobs:
           git config user.email 'cardpilot-offer-bot@users.noreply.github.com'
           git commit -m 'chore: automated CardPilot offer check'
           git push
+
+      - name: Check whether automatic publication has been approved
+        id: approved
+        run: |
+          if [ -f .release-state.json ]; then
+            echo 'enabled=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'enabled=false' >> "$GITHUB_OUTPUT"
+            echo 'Production publication remains disabled until the first reviewed release.'
+          fi
+
+      - name: Audit the updated production catalog
+        if: steps.approved.outputs.enabled == 'true' && steps.catalog.outcome == 'success'
+        run: node scripts/release-audit.mjs cards.json release-audit.json
+
+      - name: Test the production candidate in a browser
+        if: steps.approved.outputs.enabled == 'true' && success()
+        env:
+          CARDPILOT_CANDIDATE_DIRECTORY: '.'
+        run: npm run test:staging
+
+      - name: Prepare the exact validated production files
+        if: steps.approved.outputs.enabled == 'true' && success()
+        run: node scripts/prepare-release.mjs . candidate-dist
+
+      - uses: actions/configure-pages@v5
+        if: steps.approved.outputs.enabled == 'true' && success()
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.approved.outputs.enabled == 'true' && success()
+        with:
+          path: candidate-dist
+      - uses: actions/deploy-pages@v4
+        if: steps.approved.outputs.enabled == 'true' && success()
 
       - name: Fail only for genuinely broken issuer sources
         if: steps.offers.outcome == 'failure'

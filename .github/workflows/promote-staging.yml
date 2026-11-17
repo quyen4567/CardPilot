@@ -1,0 +1,70 @@
+name: Publish reviewed CardPilot release
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: cardpilot-publication
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/validate-auto-update.mjs staging/cards.json
+      - run: npm test
+      - run: npm run test:staging
+      - run: node scripts/release-audit.mjs staging/cards.json staging/release-audit.json
+      - run: node scripts/prepare-release.mjs staging candidate-dist
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cardpilot-release-review
+          path: |
+            staging/release-audit.json
+            staging/browser-qa.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cardpilot-approved-source
+          path: candidate-dist
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: candidate-dist
+  publish:
+    needs: verify
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: cardpilot-approved-source
+          path: approved-source
+      - name: Keep the approved source for subsequent automatic offer updates
+        run: |
+          cp approved-source/index.html index.html
+          cp approved-source/cards.json cards.json
+          cp approved-source/release-manifest.json .release-state.json
+          git add index.html cards.json .release-state.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git config user.name 'cardpilot-offer-bot'
+          git config user.email 'cardpilot-offer-bot@users.noreply.github.com'
+          git commit -m 'chore: retain the approved CardPilot release source'
+          git push

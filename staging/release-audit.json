@@ -1,0 +1,840 @@
+{
+  "catalogVersion": "2026-10-13.5-staging",
+  "checkedAt": "2026-10-13T07:00:01.553Z",
+  "releaseReady": false,
+  "totalCards": 144,
+  "activeCards": 143,
+  "sourceCoverage": 93,
+  "confirmedSourceCoverage": 89,
+  "unresolvedOffers": 6,
+  "blockers": [
+    {
+      "id": 7001,
+      "name": "Ink Business Unlimited",
+      "issuer": "Chase",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://creditcards.chase.com/business-credit-cards/ink/unlimited"
+    },
+    {
+      "id": 7002,
+      "name": "Ink Business Cash",
+      "issuer": "Chase",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://creditcards.chase.com/business-credit-cards/ink/cash"
+    },
+    {
+      "id": 7003,
+      "name": "Ink Business Preferred",
+      "issuer": "Chase",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7004,
+      "name": "Ink Business Premier",
+      "issuer": "Chase",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7005,
+      "name": "Sapphire Reserve for Business",
+      "issuer": "Chase",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7006,
+      "name": "World of Hyatt Business",
+      "issuer": "Chase",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7008,
+      "name": "Southwest Performance Business",
+      "issuer": "Chase",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7009,
+      "name": "Southwest Premier Business",
+      "issuer": "Chase",
+      "issues": [
+        "Spending deadline is missing"
+      ],
+      "source": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business"
+    },
+    {
+      "id": 7101,
+      "name": "Business Platinum Card",
+      "issuer": "American Express",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7102,
+      "name": "Business Gold Card",
+      "issuer": "American Express",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7104,
+      "name": "Blue Business Cash",
+      "issuer": "American Express",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7105,
+      "name": "Blue Business Plus",
+      "issuer": "American Express",
+      "issues": [
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
+        "Product-specific monitoring source not confirmed",
+        "Offer needs a successful check or manual official-source review within 14 days"
+      ],
+      "source": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex/"
+    },
+    {
+      "id": 7110,
+      "name": "Marriott Bonvoy Business",
+      "issuer": "American Express",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7111,
+      "name": "Hilton Honors Business",
+      "issuer": "American Express",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7201,
+      "name": "Venture X Business",
+      "issuer": "Capital One",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7202,
+      "name": "Venture Business",
+      "issuer": "Capital One",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7203,
+      "name": "VentureOne Business",
+      "issuer": "Capital One",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7204,
+      "name": "Spark Cash Plus",
+      "issuer": "Capital One",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7205,
+      "name": "Spark Cash",
+      "issuer": "Capital One",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7206,
+      "name": "Spark Cash Select",
+      "issuer": "Capital One",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7207,
+      "name": "Spark Classic",
+      "issuer": "Capital One",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days"
+      ],
+      "source": null
+    },
+    {
+      "id": 7302,
+      "name": "Costco Anywhere Visa Business by Citi",
+      "issuer": "Citi",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days"
+      ],
+      "source": null
+    },
+    {
+      "id": 7401,
+      "name": "Business Advantage Unlimited Cash Rewards",
+      "issuer": "Bank of America",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days"
+      ],
+      "source": "https://business.bankofamerica.com/en/credit-cards/business-advantage-unlimited-cash-rewards"
+    },
+    {
+      "id": 7402,
+      "name": "Business Advantage Customized Cash Rewards",
+      "issuer": "Bank of America",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days"
+      ],
+      "source": "https://business.bankofamerica.com/en/credit-cards/business-advantage-customized-cash-rewards"
+    },
+    {
+      "id": 7403,
+      "name": "Business Advantage Travel Rewards",
+      "issuer": "Bank of America",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days"
+      ],
+      "source": "https://business.bankofamerica.com/en/credit-cards/business-advantage-travel-rewards"
+    },
+    {
+      "id": 7404,
+      "name": "Atmos Rewards Visa Signature Business",
+      "issuer": "Bank of America",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7501,
+      "name": "Business Triple Cash Rewards",
+      "issuer": "U.S. Bank",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7503,
+      "name": "Business Altitude Power",
+      "issuer": "U.S. Bank",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7504,
+      "name": "Business Altitude Connect",
+      "issuer": "U.S. Bank",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7505,
+      "name": "Business Leverage",
+      "issuer": "U.S. Bank",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7601,
+      "name": "Signify Business Cash",
+      "issuer": "Wells Fargo",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 7701,
+      "name": "Wyndham Rewards Earner Business",
+      "issuer": "Barclays",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8001,
+      "name": "Sapphire Preferred",
+      "issuer": "Chase",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred"
+    },
+    {
+      "id": 8002,
+      "name": "Sapphire Reserve",
+      "issuer": "Chase",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve"
+    },
+    {
+      "id": 8003,
+      "name": "Freedom Unlimited",
+      "issuer": "Chase",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8004,
+      "name": "Freedom Flex",
+      "issuer": "Chase",
+      "issues": [
+        "Spending deadline is missing"
+      ],
+      "source": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex"
+    },
+    {
+      "id": 8005,
+      "name": "Southwest Rapid Rewards Plus",
+      "issuer": "Chase",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://creditcards.chase.com/travel-credit-cards/southwest/plus"
+    },
+    {
+      "id": 8006,
+      "name": "Southwest Rapid Rewards Premier",
+      "issuer": "Chase",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://creditcards.chase.com/travel-credit-cards/southwest/premier"
+    },
+    {
+      "id": 8007,
+      "name": "Southwest Rapid Rewards Priority",
+      "issuer": "Chase",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://creditcards.chase.com/travel-credit-cards/southwest/priority"
+    },
+    {
+      "id": 8101,
+      "name": "Platinum Card",
+      "issuer": "American Express",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8103,
+      "name": "Green Card",
+      "issuer": "American Express",
+      "issues": [
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days"
+      ],
+      "source": null
+    },
+    {
+      "id": 8104,
+      "name": "Blue Cash Preferred",
+      "issuer": "American Express",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8105,
+      "name": "Blue Cash Everyday",
+      "issuer": "American Express",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8202,
+      "name": "Strata Elite",
+      "issuer": "Citi",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://www.citi.com/credit-cards/citi-strata-elite-credit-card"
+    },
+    {
+      "id": 8203,
+      "name": "Strata",
+      "issuer": "Citi",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://www.citi.com/credit-cards/citi-strata-credit-card"
+    },
+    {
+      "id": 8204,
+      "name": "Double Cash",
+      "issuer": "Citi",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8206,
+      "name": "AAdvantage Executive",
+      "issuer": "Citi",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8210,
+      "name": "AT&T Points Plus",
+      "issuer": "Citi",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://www.citi.com/credit-cards/citi-att-pointsplus-credit-card"
+    },
+    {
+      "id": 8301,
+      "name": "Venture X Rewards",
+      "issuer": "Capital One",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://www.capitalone.com/credit-cards/venture-x/"
+    },
+    {
+      "id": 8302,
+      "name": "Venture Rewards",
+      "issuer": "Capital One",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8303,
+      "name": "VentureOne Rewards",
+      "issuer": "Capital One",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://www.capitalone.com/credit-cards/ventureone/"
+    },
+    {
+      "id": 8304,
+      "name": "Savor Cash Rewards",
+      "issuer": "Capital One",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://www.capitalone.com/credit-cards/savor/"
+    },
+    {
+      "id": 8305,
+      "name": "Quicksilver Cash Rewards",
+      "issuer": "Capital One",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://www.capitalone.com/credit-cards/quicksilver/"
+    },
+    {
+      "id": 8401,
+      "name": "Premium Rewards",
+      "issuer": "Bank of America",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8402,
+      "name": "Premium Rewards Elite",
+      "issuer": "Bank of America",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8404,
+      "name": "Unlimited Cash Rewards",
+      "issuer": "Bank of America",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/"
+    },
+    {
+      "id": 8405,
+      "name": "Travel Rewards",
+      "issuer": "Bank of America",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/"
+    },
+    {
+      "id": 8406,
+      "name": "Atmos Rewards Ascent",
+      "issuer": "Bank of America",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://www.bankofamerica.com/credit-cards/"
+    },
+    {
+      "id": 8407,
+      "name": "Atmos Rewards Summit",
+      "issuer": "Bank of America",
+      "issues": [
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-infinite-credit-card/"
+    },
+    {
+      "id": 8409,
+      "name": "Free Spirit Travel More World Elite Mastercard",
+      "issuer": "Bank of America",
+      "issues": [
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days"
+      ],
+      "source": null
+    },
+    {
+      "id": 8502,
+      "name": "Autograph Journey",
+      "issuer": "Wells Fargo",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8504,
+      "name": "Attune",
+      "issuer": "Wells Fargo",
+      "issues": [
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days"
+      ],
+      "source": null
+    },
+    {
+      "id": 8604,
+      "name": "Cash+",
+      "issuer": "U.S. Bank",
+      "issues": [
+        "Spending deadline is missing"
+      ],
+      "source": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html"
+    },
+    {
+      "id": 8605,
+      "name": "Shopper Cash Rewards",
+      "issuer": "U.S. Bank",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8701,
+      "name": "JetBlue Plus",
+      "issuer": "Barclays",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8705,
+      "name": "Wyndham Rewards Earner Premier",
+      "issuer": "Barclays",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8706,
+      "name": "AAdvantage Aviator Red",
+      "issuer": "Barclays",
+      "issues": [
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days"
+      ],
+      "source": null
+    },
+    {
+      "id": 8817,
+      "name": "Bilt Palladium Card",
+      "issuer": "Bilt",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8803,
+      "name": "Discover it Miles",
+      "issuer": "Discover",
+      "issues": [
+        "Product-specific monitoring source not confirmed"
+      ],
+      "source": "https://www.discover.com/credit-cards/card-smarts/discover-match-for-discover-miles-credit-card-rewards-matching/"
+    },
+    {
+      "id": 8805,
+      "name": "Fidelity Rewards Visa Signature",
+      "issuer": "Fidelity",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8806,
+      "name": "SoFi Credit Card",
+      "issuer": "SoFi",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8807,
+      "name": "PNC Cash Rewards",
+      "issuer": "PNC",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8808,
+      "name": "Eagle Navigator Visa Signature",
+      "issuer": "USAA",
+      "issues": [
+        "Product-specific monitoring source not confirmed"
+      ],
+      "source": "https://www.usaa.com/banking/credit-cards-public/rewards/"
+    },
+    {
+      "id": 8809,
+      "name": "Flagship Rewards",
+      "issuer": "Navy Federal",
+      "issues": [
+        "Offer has not been verified yet.",
+        "Minimum-spend requirement is not yet verified.",
+        "Product-specific monitoring source not confirmed",
+        "Offer needs a successful check or manual official-source review within 14 days"
+      ],
+      "source": "https://www.navyfederal.org/loans-cards/credit-cards/flagship-upgrade.html"
+    },
+    {
+      "id": 8901,
+      "name": "Royal ONE Visa Signature",
+      "issuer": "Bank of America",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8902,
+      "name": "Royal ONE Plus Visa Signature",
+      "issuer": "Bank of America",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8903,
+      "name": "Norwegian Cruise Line World Mastercard",
+      "issuer": "Bank of America",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    },
+    {
+      "id": 8904,
+      "name": "Princess Rewards Visa",
+      "issuer": "Barclays",
+      "issues": [
+        "No issuer monitoring source",
+        "Offer needs a successful check or manual official-source review within 14 days",
+        "Spending deadline is missing"
+      ],
+      "source": null
+    }
+  ]
+}
