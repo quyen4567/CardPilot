@@ -1,80 +1,23 @@
 {
-  "catalogVersion": "2026-11-16.2-business-review-staging",
-  "checkedAt": "2026-11-17T02:47:48.076Z",
+  "catalogVersion": "2026-11-16.3-full-offer-review-staging",
+  "checkedAt": "2026-11-17T03:06:00.278Z",
   "releaseReady": false,
   "totalCards": 144,
   "activeCards": 143,
-  "sourceCoverage": 118,
+  "sourceCoverage": 143,
   "confirmedSourceCoverage": 104,
-  "unresolvedOffers": 118,
+  "unresolvedOffers": 39,
   "blockers": [
-    {
-      "id": 7101,
-      "name": "Business Platinum Card",
-      "issuer": "American Express",
-      "issues": [
-        "Offer has not been verified yet.",
-        "Product-specific monitoring source not confirmed",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/"
-    },
-    {
-      "id": 7102,
-      "name": "Business Gold Card",
-      "issuer": "American Express",
-      "issues": [
-        "Offer has not been verified yet.",
-        "Product-specific monitoring source not confirmed",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-gold-card-amex/"
-    },
     {
       "id": 7103,
       "name": "Graphite Business Cash Unlimited",
       "issuer": "American Express",
       "issues": [
         "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/graphite-business-cash-unlimited-card/"
-    },
-    {
-      "id": 7104,
-      "name": "Blue Business Cash",
-      "issuer": "American Express",
-      "issues": [
-        "Offer has not been verified yet.",
-        "Product-specific monitoring source not confirmed",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://www.americanexpress.com/en-us/business/credit-cards/blue-business-cash/"
-    },
-    {
-      "id": 7105,
-      "name": "Blue Business Plus",
-      "issuer": "American Express",
-      "issues": [
-        "Offer has not been verified yet.",
-        "Current public welcome offer is not yet verified.",
-        "Product-specific monitoring source not confirmed",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex/"
-    },
-    {
-      "id": 7106,
-      "name": "Business Green Rewards Card",
-      "issuer": "American Express",
-      "issues": [
-        "Offer has not been verified yet.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/"
     },
     {
       "id": 7107,
@@ -83,6 +26,7 @@
       "issues": [
         "Offer has not been verified yet.",
         "The recorded welcome offer has expired.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards"
@@ -94,6 +38,7 @@
       "issues": [
         "Offer has not been verified yet.",
         "The recorded welcome offer has expired.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards"
@@ -105,57 +50,10 @@
       "issues": [
         "Offer has not been verified yet.",
         "The recorded welcome offer has expired.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards"
-    },
-    {
-      "id": 7110,
-      "name": "Marriott Bonvoy Business",
-      "issuer": "American Express",
-      "issues": [
-        "Offer has not been verified yet.",
-        "The recorded welcome offer has expired.",
-        "Product-specific monitoring source not confirmed",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amex-marriott-bonvoy-business-credit-card/"
-    },
-    {
-      "id": 7111,
-      "name": "Hilton Honors Business",
-      "issuer": "American Express",
-      "issues": [
-        "Offer has not been verified yet.",
-        "Product-specific monitoring source not confirmed",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/hilton-honors-business-credit-card/"
-    },
-    {
-      "id": 7302,
-      "name": "Costco Anywhere Visa Business by Citi",
-      "issuer": "Citi",
-      "issues": [
-        "Offer has not been verified yet.",
-        "Current public welcome offer is not yet verified.",
-        "Product-specific monitoring source not confirmed",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.citi.com/credit-cards/costco-anywhere-visa-business-card"
-    },
-    {
-      "id": 7502,
-      "name": "Business Shield",
-      "issuer": "U.S. Bank",
-      "issues": [
-        "Offer has not been verified yet.",
-        "Current public welcome offer is not yet verified.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.usbank.com/business-banking/business-credit-cards/business-shield-credit-card.html"
     },
     {
       "id": 7503,
@@ -194,263 +92,35 @@
       "source": "https://www.usbank.com/business-banking/business-credit-cards/business-leverage-visa-signature-credit-card.html"
     },
     {
-      "id": 7701,
-      "name": "Wyndham Rewards Earner Business",
-      "issuer": "Barclays",
-      "issues": [
-        "Offer has not been verified yet.",
-        "Product-specific monitoring source not confirmed",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://www.wyndhamrewardscreditcard.com/business/"
-    },
-    {
       "id": 7702,
       "name": "JetBlue Business",
       "issuer": "Barclays",
       "issues": [
         "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
-      "source": "https://cards.barclaycardus.com/banking/cards/jetblue-business-card/"
-    },
-    {
-      "id": 8001,
-      "name": "Sapphire Preferred",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred"
-    },
-    {
-      "id": 8002,
-      "name": "Sapphire Reserve",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve"
-    },
-    {
-      "id": 8003,
-      "name": "Freedom Unlimited",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
-    },
-    {
-      "id": 8004,
-      "name": "Freedom Flex",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex"
-    },
-    {
-      "id": 8005,
-      "name": "Southwest Rapid Rewards Plus",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/southwest/plus"
-    },
-    {
-      "id": 8006,
-      "name": "Southwest Rapid Rewards Premier",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/southwest/premier"
-    },
-    {
-      "id": 8007,
-      "name": "Southwest Rapid Rewards Priority",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/southwest/priority"
-    },
-    {
-      "id": 8008,
-      "name": "United Explorer",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer"
-    },
-    {
-      "id": 8009,
-      "name": "United Quest",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/united/united-quest"
-    },
-    {
-      "id": 8010,
-      "name": "United Club",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite"
-    },
-    {
-      "id": 8011,
-      "name": "United Gateway",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway"
-    },
-    {
-      "id": 8012,
-      "name": "World of Hyatt",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card"
-    },
-    {
-      "id": 8013,
-      "name": "IHG One Rewards Credit Card",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/one-rewards"
-    },
-    {
-      "id": 8014,
-      "name": "IHG One Rewards Premier",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier"
-    },
-    {
-      "id": 8015,
-      "name": "Marriott Bonvoy Bold",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold"
-    },
-    {
-      "id": 8016,
-      "name": "Marriott Bonvoy Boundless",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless"
-    },
-    {
-      "id": 8017,
-      "name": "Marriott Bonvoy Bountiful",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bountiful"
-    },
-    {
-      "id": 8018,
-      "name": "Aeroplan Card",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan"
-    },
-    {
-      "id": 8019,
-      "name": "British Airways Visa Signature",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/avios/british-airways"
-    },
-    {
-      "id": 8020,
-      "name": "Iberia Visa Signature",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/avios/iberia"
-    },
-    {
-      "id": 8021,
-      "name": "Aer Lingus Visa Signature",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/avios/aer-lingus"
+      "source": "https://www.jetblue.com/trueblue/credit-cards/jetblue-card-comparison"
     },
     {
       "id": 8101,
       "name": "Platinum Card",
       "issuer": "American Express",
       "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
-      "source": null
+      "source": "https://www.americanexpress.com/us/credit-cards/card/platinum/"
     },
     {
       "id": 8102,
       "name": "Gold Card",
       "issuer": "American Express",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://www.americanexpress.com/us/credit-cards/card/gold-card/"
@@ -462,42 +132,43 @@
       "issues": [
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
-        "No issuer monitoring source",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
-      "source": null
+      "source": "https://www.americanexpress.com/us/credit-cards/card/green/"
     },
     {
       "id": 8104,
       "name": "Blue Cash Preferred",
       "issuer": "American Express",
       "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
-      "source": null
+      "source": "https://www.americanexpress.com/us/credit-cards/card/blue-cash-preferred/"
     },
     {
       "id": 8105,
       "name": "Blue Cash Everyday",
       "issuer": "American Express",
       "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
-      "source": null
+      "source": "https://www.americanexpress.com/us/credit-cards/card/blue-cash-everyday/"
     },
     {
       "id": 8106,
       "name": "Delta SkyMiles Gold",
       "issuer": "American Express",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
         "The recorded welcome offer has expired.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards"
@@ -507,8 +178,9 @@
       "name": "Delta SkyMiles Platinum",
       "issuer": "American Express",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
         "The recorded welcome offer has expired.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards"
@@ -518,88 +190,31 @@
       "name": "Delta SkyMiles Reserve",
       "issuer": "American Express",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
         "The recorded welcome offer has expired.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards"
-    },
-    {
-      "id": 8109,
-      "name": "Hilton Honors",
-      "issuer": "American Express",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.hilton.com/en/hilton-honors/credit-cards/"
-    },
-    {
-      "id": 8110,
-      "name": "Hilton Honors Surpass",
-      "issuer": "American Express",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.hilton.com/en/hilton-honors/credit-cards/"
-    },
-    {
-      "id": 8111,
-      "name": "Hilton Honors Aspire",
-      "issuer": "American Express",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.hilton.com/en/hilton-honors/credit-cards/"
-    },
-    {
-      "id": 8112,
-      "name": "Marriott Bonvoy Bevy",
-      "issuer": "American Express",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.marriott.com/credit-cards/marriott-bonvoy-bevy-american-express-card.mi"
-    },
-    {
-      "id": 8113,
-      "name": "Marriott Bonvoy Brilliant",
-      "issuer": "American Express",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.marriott.com/credit-cards/marriott-bonvoy-brilliant-american-express-card.mi"
     },
     {
       "id": 8114,
       "name": "Platinum Card for Charles Schwab",
       "issuer": "American Express",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://www.schwab.com/credit-cards/platinum-card"
-    },
-    {
-      "id": 8115,
-      "name": "Platinum Card for Morgan Stanley",
-      "issuer": "American Express",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://apply.americanexpress.com/amex-morgan-stanley-credit-cards/?page_url=38"
     },
     {
       "id": 8201,
       "name": "Strata Premier",
       "issuer": "Citi",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://www.citi.com/credit-cards/citi-strata-premier-credit-card"
@@ -609,7 +224,8 @@
       "name": "Strata Elite",
       "issuer": "Citi",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
@@ -620,7 +236,8 @@
       "name": "Strata",
       "issuer": "Citi",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
@@ -631,61 +248,20 @@
       "name": "Double Cash",
       "issuer": "Citi",
       "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
-      "source": null
-    },
-    {
-      "id": 8206,
-      "name": "AAdvantage Executive",
-      "issuer": "Citi",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
-    },
-    {
-      "id": 8207,
-      "name": "AAdvantage Platinum Select",
-      "issuer": "Citi",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.citi.com/credit-cards/citi-aadvantage-platinum-select-world-elite-mastercard"
-    },
-    {
-      "id": 8208,
-      "name": "AAdvantage Globe",
-      "issuer": "Citi",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/"
-    },
-    {
-      "id": 8209,
-      "name": "Costco Anywhere Visa",
-      "issuer": "Citi",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.citi.com/credit-cards/costco-anywhere-visa-card"
+      "source": "https://www.citi.com/credit-cards/citi-double-cash-credit-card"
     },
     {
       "id": 8210,
       "name": "AT&T Points Plus",
       "issuer": "Citi",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
@@ -696,144 +272,12 @@
       "name": "Venture X Rewards",
       "issuer": "Capital One",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
       "source": "https://www.capitalone.com/credit-cards/venture-x/"
-    },
-    {
-      "id": 8302,
-      "name": "Venture Rewards",
-      "issuer": "Capital One",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
-    },
-    {
-      "id": 8303,
-      "name": "VentureOne Rewards",
-      "issuer": "Capital One",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://www.capitalone.com/credit-cards/ventureone/"
-    },
-    {
-      "id": 8304,
-      "name": "Savor Cash Rewards",
-      "issuer": "Capital One",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://www.capitalone.com/credit-cards/savor/"
-    },
-    {
-      "id": 8305,
-      "name": "Quicksilver Cash Rewards",
-      "issuer": "Capital One",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://www.capitalone.com/credit-cards/quicksilver/"
-    },
-    {
-      "id": 8401,
-      "name": "Premium Rewards",
-      "issuer": "Bank of America",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
-    },
-    {
-      "id": 8402,
-      "name": "Premium Rewards Elite",
-      "issuer": "Bank of America",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
-    },
-    {
-      "id": 8403,
-      "name": "Customized Cash Rewards",
-      "issuer": "Bank of America",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/"
-    },
-    {
-      "id": 8404,
-      "name": "Unlimited Cash Rewards",
-      "issuer": "Bank of America",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/"
-    },
-    {
-      "id": 8405,
-      "name": "Travel Rewards",
-      "issuer": "Bank of America",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/"
-    },
-    {
-      "id": 8406,
-      "name": "Atmos Rewards Ascent",
-      "issuer": "Bank of America",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://www.bankofamerica.com/credit-cards/"
-    },
-    {
-      "id": 8407,
-      "name": "Atmos Rewards Summit",
-      "issuer": "Bank of America",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-infinite-credit-card/"
-    },
-    {
-      "id": 8408,
-      "name": "Air France KLM Visa Signature",
-      "issuer": "Bank of America",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://wwws.airfrance.us/information/flyingblue/carte-bancaire-partenaire"
     },
     {
       "id": 8409,
@@ -842,42 +286,10 @@
       "issues": [
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
-        "No issuer monitoring source",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
-      "source": null
-    },
-    {
-      "id": 8501,
-      "name": "Autograph",
-      "issuer": "Wells Fargo",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.wellsfargo.com/autograph-visa-credit-card/"
-    },
-    {
-      "id": 8502,
-      "name": "Autograph Journey",
-      "issuer": "Wells Fargo",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
-    },
-    {
-      "id": 8503,
-      "name": "Active Cash",
-      "issuer": "Wells Fargo",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.wellsfargo.com/active-cash-credit-card/"
+      "source": "https://www.bankofamerica.com/credit-cards/"
     },
     {
       "id": 8504,
@@ -886,167 +298,56 @@
       "issues": [
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
-        "No issuer monitoring source",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
-      "source": null
-    },
-    {
-      "id": 8505,
-      "name": "Choice Privileges Mastercard",
-      "issuer": "Wells Fargo",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.wellsfargo.com/choice-hotel-privileges-mastercard/"
-    },
-    {
-      "id": 8506,
-      "name": "Choice Privileges Select Mastercard",
-      "issuer": "Wells Fargo",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.wellsfargo.com/choice-hotels-privileges-select-mastercard/"
-    },
-    {
-      "id": 8507,
-      "name": "One Key Card",
-      "issuer": "Wells Fargo",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.wellsfargo.com/one-key-credit-card/"
+      "source": "https://creditcards.wellsfargo.com/attune-credit-card/"
     },
     {
       "id": 8508,
       "name": "One Key+ Card",
       "issuer": "Wells Fargo",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://creditcards.wellsfargo.com/one-key-plus-credit-card/"
-    },
-    {
-      "id": 8601,
-      "name": "Bank Smartly Visa Signature",
-      "issuer": "U.S. Bank",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.usbank.com/credit-cards/bank-smartly-visa-signature-credit-card.html"
-    },
-    {
-      "id": 8602,
-      "name": "Altitude Go",
-      "issuer": "U.S. Bank",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.usbank.com/credit-cards/altitude-go-visa-signature-credit-card.html"
-    },
-    {
-      "id": 8603,
-      "name": "Altitude Connect",
-      "issuer": "U.S. Bank",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.usbank.com/credit-cards/altitude-connect-visa-signature-credit-card.html"
-    },
-    {
-      "id": 8604,
-      "name": "Cash+",
-      "issuer": "U.S. Bank",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html"
     },
     {
       "id": 8605,
       "name": "Shopper Cash Rewards",
       "issuer": "U.S. Bank",
       "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
-      "source": null
-    },
-    {
-      "id": 8606,
-      "name": "Shield Visa",
-      "issuer": "U.S. Bank",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.usbank.com/credit-cards/shield-visa-credit-card.html"
+      "source": "https://www.usbank.com/credit-cards/shopper-cash-rewards-visa-signature-credit-card.html"
     },
     {
       "id": 8701,
       "name": "JetBlue Plus",
       "issuer": "Barclays",
       "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
-      "source": null
+      "source": "https://www.jetblue.com/trueblue/credit-cards/jetblue-card-comparison"
     },
     {
       "id": 8702,
       "name": "JetBlue Premier",
       "issuer": "Barclays",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
-      "source": "https://cards.barclaycardus.com/banking/cards/jetblue-premier-card/"
-    },
-    {
-      "id": 8703,
-      "name": "Wyndham Rewards Earner",
-      "issuer": "Barclays",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://cards.barclaycardus.com/banking/cards/wyndham-rewards-earner-card/"
-    },
-    {
-      "id": 8704,
-      "name": "Wyndham Rewards Earner Plus",
-      "issuer": "Barclays",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://cards.barclaycardus.com/banking/cards/wyndham-rewards-earner-plus-card/"
-    },
-    {
-      "id": 8705,
-      "name": "Wyndham Rewards Earner Premier",
-      "issuer": "Barclays",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
+      "source": "https://www.jetblue.com/trueblue/credit-cards/jetblue-card-comparison"
     },
     {
       "id": 8706,
@@ -1055,149 +356,64 @@
       "issues": [
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
-        "No issuer monitoring source",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
-      "source": null
+      "source": "https://cards.barclaycardus.com/banking/cards/aadvantage-aviator-red-world-elite-mastercard/"
     },
     {
       "id": 8801,
       "name": "Bilt Blue Card",
       "issuer": "Bilt",
       "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.bilt.com/card/blue"
-    },
-    {
-      "id": 8816,
-      "name": "Bilt Obsidian Card",
-      "issuer": "Bilt",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.bilt.com/card/obsidian"
-    },
-    {
-      "id": 8817,
-      "name": "Bilt Palladium Card",
-      "issuer": "Bilt",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
-    },
-    {
-      "id": 8802,
-      "name": "Discover it Cash Back",
-      "issuer": "Discover",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.discover.com/credit-cards/cash-back/it-card/"
-    },
-    {
-      "id": 8803,
-      "name": "Discover it Miles",
-      "issuer": "Discover",
-      "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
         "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
-      "source": "https://www.discover.com/credit-cards/card-smarts/discover-match-for-discover-miles-credit-card-rewards-matching/"
-    },
-    {
-      "id": 8804,
-      "name": "Apple Card",
-      "issuer": "Apple / Goldman Sachs",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.apple.com/apple-card/"
+      "source": "https://www.bilt.com/card/blue"
     },
     {
       "id": 8805,
       "name": "Fidelity Rewards Visa Signature",
       "issuer": "Fidelity",
       "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
-      "source": null
-    },
-    {
-      "id": 8815,
-      "name": "Robinhood Gold Card",
-      "issuer": "Robinhood",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://robinhood.com/creditcard/"
+      "source": "https://www.fidelity.com/spend-save/visa-signature-card"
     },
     {
       "id": 8806,
       "name": "SoFi Credit Card",
       "issuer": "SoFi",
       "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
-      "source": null
-    },
-    {
-      "id": 8807,
-      "name": "PNC Cash Rewards",
-      "issuer": "PNC",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
+      "source": "https://www.sofi.com/credit-card/"
     },
     {
       "id": 8808,
       "name": "Eagle Navigator Visa Signature",
       "issuer": "USAA",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
         "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://www.usaa.com/banking/credit-cards-public/rewards/"
     },
     {
-      "id": 8809,
-      "name": "Flagship Rewards",
-      "issuer": "Navy Federal",
-      "issues": [
-        "Offer has not been verified yet.",
-        "Minimum-spend requirement is not yet verified.",
-        "Product-specific monitoring source not confirmed",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://www.navyfederal.org/loans-cards/credit-cards/flagship-upgrade.html"
-    },
-    {
       "id": 8810,
       "name": "Pathfinder Rewards",
       "issuer": "PenFed",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://www.penfed.org/credit-cards/pathfinder-rewards-visa"
@@ -1207,7 +423,8 @@
       "name": "Virgin Red Rewards Mastercard",
       "issuer": "Synchrony",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://www.virginatlantic.com/en-US/flying-club/credit-card"
@@ -1217,75 +434,31 @@
       "name": "Carnival Rewards Mastercard",
       "issuer": "Barclays",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://cards.barclaycardus.com/banking/cards/carnival-rewards-mastercard/"
-    },
-    {
-      "id": 8901,
-      "name": "Royal ONE Visa Signature",
-      "issuer": "Bank of America",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
-    },
-    {
-      "id": 8902,
-      "name": "Royal ONE Plus Visa Signature",
-      "issuer": "Bank of America",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
-    },
-    {
-      "id": 8903,
-      "name": "Norwegian Cruise Line World Mastercard",
-      "issuer": "Bank of America",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
     },
     {
       "id": 8904,
       "name": "Princess Rewards Visa",
       "issuer": "Barclays",
       "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
-      "source": null
-    },
-    {
-      "id": 8022,
-      "name": "IHG One Rewards Premier Select",
-      "issuer": "Chase",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select"
+      "source": "https://www.princess.com/"
     },
     {
       "id": 8905,
       "name": "AAA Daily Advantage Visa Signature",
       "issuer": "AAA / Comenity Capital Bank",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://www.ace.aaa.com/financial/aaa-credit-card.html"

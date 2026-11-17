@@ -60,3 +60,14 @@ BLOCKED. Use as a staging review artifact only. Do not publish or rely on its ol
 - U.S. Bank Triple Cash's $750 bonus requires $6,000 on the Account Owner card within 180 days. Employee-card spend is excluded; 180 days is retained without converting it to calendar months.
 - Source evidence and prior values are recorded in staging/business-offer-review-remaining.json. The new audit leaves 118 of 143 active records blocked, with source URLs on 118. Unreadable URLs are not described as confirmed closures or offer changes.
 - This is a GitHub catalog refresh. No recurring offer-watch change is part of this patch. Email access remains prohibited.
+
+
+## Full review of 118 blocked offers — 2026-11-16
+
+Reviewed all 118 records that were blocked after the business-card reviews. Confirmed current public-channel welcome terms and ongoing annual fees for 79; 39 remain explicitly unverified because complete current terms could not be established. The catalog now has 104 confirmed active records out of 143 active records (144 total including one closed record). This is a review of current offers, not a comprehensive revalidation of historical highs, ongoing earning rates, or applicant eligibility. Channel-specific offers may differ from personalized or other public channels.
+
+`staging/offer-review-118.json` records all 118 IDs, prior values, exact official source URLs, reviewed terms, and unresolved reasons. Missing source data, inaccessible pages, personalized maxima, and conflicting headlines do not receive fresh verification. Unresolved prior numbers remain snapshots, excluded from the confirmed recommendation pool when confirmed matches exist.
+
+Updated base bonuses, spending deadlines and fees across issuers. Authorized-user bonuses and Wyndham hotel-spend tiers are recorded separately from base spending bonuses. Hyatt and Marriott certificate awards are identified as certificates, rather than point amounts. Bilt Cash and OneKeyCash are restricted currencies and cannot enter cash or point-value estimates. The Bilt Palladium points component remains valued as points; its additional Bilt Cash is excluded from cash value. Historical high comparability is disabled for certificate offers and the changed Navy Federal product.
+
+Validated the catalog and offer pipeline, ranking, release-gate and publication-integrity checks. Release remains blocked by 39 unresolved records. Existing root website files are unchanged; all application and data changes are confined to staging, with supporting tests and audit documentation. No deployment, branch merge, main-branch update, or Pages settings change is included.

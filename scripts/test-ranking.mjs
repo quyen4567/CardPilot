@@ -59,4 +59,27 @@ assert.equal(run('data.offers.find(x=>x.id===7201).bonus'),150000,'Venture X Bus
 assert.equal(run('data.offers.find(x=>x.id===7201).spend'),40000);
 assert.equal(run('data.offers.find(x=>x.id===7201).maximumCombinedBonus'),300000);
 assert.equal(run('data.offers.find(x=>x.id===7501).spendPeriod'),'180 days','Preserve day-based deadlines without converting to calendar months');
+// Restricted currencies and certificates must not inflate cash or point values.
+for(const id of [8012,8016,8507,8816]){
+  context.reviewOffer=context.reviewedCatalog.find(c=>c.id===id);
+  assert.equal(run('cashWelcomeValue(reviewOffer)'),0,`Restricted reward ${id} must not be cash`);
+  assert.equal(run('bonusValueRange(reviewOffer)'),null);
+  assert.equal(run('offerEstimatedSubValue(reviewOffer)'),0);
+}
+context.reviewOffer=context.reviewedCatalog.find(c=>c.id===8817);
+assert.equal(run('offerCashValue(reviewOffer)'),0,'Bilt Cash must not be unrestricted cash');
+assert.equal(run('pointCurrency(reviewOffer)'),'bilt','Palladium points remain points');
+context.reviewOffer=context.reviewedCatalog.find(c=>c.id===8704);
+assert.equal(run('reviewOffer.bonus'),45000,'Wyndham hotel-spend tier must not inflate base bonus');
+assert.equal(run('reviewOffer.maximumCombinedBonus'),100000);
+const fullReview=JSON.parse(fs.readFileSync(new URL('../staging/offer-review-118.json',import.meta.url),'utf8'));
+assert.equal(fullReview.records.length,118);
+assert.equal(new Set(fullReview.records.map(c=>c.id)).size,118);
+assert.equal(fullReview.records.filter(c=>c.status==='confirmed').length,fullReview.confirmedCount);
+for(const record of fullReview.records){
+  const card=context.reviewedCatalog.find(c=>c.id===record.id);
+  assert.equal(card.verified,record.status==='confirmed');
+  assert(record.evidence.sourceUrl);
+  if(!card.verified)assert(card.reviewReason&&card.reviewOpenedDate);
+}
 console.log('Ranking and relationship regression checks passed.');

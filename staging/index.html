@@ -874,6 +874,7 @@ function pointCurrency(o){
   return null;
 }
 function cashRedemptionInfo(o){
+  if(o.bonusRestricted||o.bonusIsCertificate)return {kind:'none',cpp:0,label:'Restricted reward; not cash back'};
   const tags=offerTags(o), cur=pointCurrency(o), unit=String(o.unit||'').toLowerCase(), name=String(o.name||'').toLowerCase();
   if(tags.cash||unit.includes('cash'))return {kind:'cash',cpp:1,label:'True cash back'};
   // Cash redemption value is intentionally separate from travel-point valuation.
@@ -893,6 +894,7 @@ function cashRewardEligible(o){
   return x.kind==='cash'||x.kind==='equivalent';
 }
 function cashWelcomeValue(o){
+  if(o.bonusRestricted||o.bonusIsCertificate)return Number(o.bonusCashExtra||0);
   const x=cashRedemptionInfo(o), bonus=Number(o.bonus||0), extra=Number(o.bonusCashExtra||0);
   if(!bonus&&!extra)return 0;
   const unit=String(o.unit||'').toLowerCase();
@@ -908,7 +910,7 @@ function cashRewardText(o){
   return `<div class="small" style="margin-top:6px;color:#0b6b3a"><b>Cash-back treatment:</b> ${mode}. Cardimize uses cash redemption value—not travel valuation—for this recommendation.</div>`;
 }
 function bonusValueRange(o){
-  if(o.bonusIsCertificate)return null;
+  if(o.bonusIsCertificate||o.bonusRestricted)return null;
   const cur=pointCurrency(o), pts=Number(o.bonus||0);
   if(!cur||!pts||!POINT_VALUATIONS[cur])return null;
   const v=POINT_VALUATIONS[cur];
@@ -916,6 +918,7 @@ function bonusValueRange(o){
   return {currency:cur,label:v.label,cppLow:v.low,cppHigh:v.high,low,high,mid:(low+high)/2,source:v.source};
 }
 function bonusValueText(o){
+  if(o.bonusRestricted)return '<div class="small" style="margin-top:5px">Restricted reward currency; excluded from cash and point-value estimates. See offer terms.</div>';
   const v=bonusValueRange(o);
   const unit=String(o.unit||'').toLowerCase();
   if(!v){
@@ -1444,12 +1447,14 @@ function saveCardEdit(id){const c=data.cards.find(x=>x.id===id);if(!c)return;c.n
 function removeCard(id){const c=data.cards.find(x=>x.id===id);if(!c)return;if(!confirm(`Remove ${c.name}? This cannot be undone.`))return;data.cards=data.cards.filter(c=>c.id!==id);save();showView('cardsView')}
 function relationshipsPage(){const r=data.profile.relationships||{};return `<div class="between"><div><div class="section" style="margin-top:0">Relationships & ecosystems</div><div class="small">Save your relationships here and choose whether Cardimize should apply relationship economics to recommendations.</div></div><button class="btn ghost" onclick="showView('homeView')">Done</button></div><div class="card" style="margin-top:14px"><div class="small">WHY THIS MATTERS</div><h3 style="margin-top:4px">Relationship benefits can change the best card</h3><div class="small">Examples include boosted Bank of America rewards, Citi relationship credits, and relationship-only Amex Platinum variants. When enabled, these settings affect recommendations but do not override a poor match with your selected goals. You can also save them without using them in ranking.</div></div><div class="card" style="margin-top:12px">${relationshipChoicesHTML()}${overlapChoicesHTML()}<div class="note" style="margin-top:12px"><b>Saved automatically.</b> ${data.profile.applyRelationships===false?'Relationships are saved, but economic boosts are not being used in rankings.':'Relationship advantages are currently being used in rankings.'}</div></div><div class="section">Current relationships</div><div class="card"><div class="kpi">${relationshipSummary()}</div><div class="small" style="margin-top:5px">You can return here anytime from Home or Apply Next.</div></div>`}
 function offerCashValue(o){
+  if(o.bonusRestricted||o.bonusIsCertificate)return Number(o.bonusCashExtra||0);
   const unit=String(o.unit||'').toLowerCase();
   const isPointOffer=!!pointCurrency(o);
   const fixedCash=(!isPointOffer && unit.includes('cash')) ? Number(o.bonus||0) : 0;
   return fixedCash + Number(o.bonusCashExtra||0);
 }
 function offerEstimatedSubValue(o){
+  if(o.bonusRestricted||o.bonusIsCertificate)return Number(o.bonusCashExtra||0);
   const unit=String(o.unit||'').toLowerCase();
   const v=bonusValueRange(o);
   const fixedCash=(!v && unit.includes('cash')) ? Number(o.bonus||0) : 0;
@@ -1458,6 +1463,7 @@ function offerEstimatedSubValue(o){
   return fixedCash + extraCash + pointsMid;
 }
 function subReturnRange(o){
+  if(o.bonusRestricted||o.bonusIsCertificate)return null;
   const spend=Number(o.spend||0);
   if(!spend)return null;
   const unit=String(o.unit||'').toLowerCase();
