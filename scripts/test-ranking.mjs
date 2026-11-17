@@ -55,4 +55,8 @@ assert(actual.some(x=>reviewedIds.has(x.offer.id)),'The search must include revi
 assert.equal(run('data.offers.find(x=>x.id===7010).bonus'),90000,'United numeric bonus must exclude employee-card miles and PQP');
 assert.equal(run('data.offers.find(x=>x.id===7007).bonus'),150000);
 assert.equal(run('data.offers.find(x=>x.id===7007).additionalBonus'),10000);
+assert.equal(run('data.offers.find(x=>x.id===7201).bonus'),150000,'Venture X Business must not price the full tiered maximum against first-tier spend');
+assert.equal(run('data.offers.find(x=>x.id===7201).spend'),40000);
+assert.equal(run('data.offers.find(x=>x.id===7201).maximumCombinedBonus'),300000);
+assert.equal(run('data.offers.find(x=>x.id===7501).spendPeriod'),'180 days','Preserve day-based deadlines without converting to calendar months');
 console.log('Ranking and relationship regression checks passed.');

@@ -1,12 +1,12 @@
 {
-  "catalogVersion": "2026-11-16.1-business-review-staging",
-  "checkedAt": "2026-11-17T02:41:59.573Z",
+  "catalogVersion": "2026-11-16.2-business-review-staging",
+  "checkedAt": "2026-11-17T02:47:48.076Z",
   "releaseReady": false,
   "totalCards": 144,
   "activeCards": 143,
-  "sourceCoverage": 104,
-  "confirmedSourceCoverage": 95,
-  "unresolvedOffers": 128,
+  "sourceCoverage": 118,
+  "confirmedSourceCoverage": 104,
+  "unresolvedOffers": 118,
   "blockers": [
     {
       "id": 7101,
@@ -135,127 +135,24 @@
       "source": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/hilton-honors-business-credit-card/"
     },
     {
-      "id": 7201,
-      "name": "Venture X Business",
-      "issuer": "Capital One",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
-    },
-    {
-      "id": 7202,
-      "name": "Venture Business",
-      "issuer": "Capital One",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
-    },
-    {
-      "id": 7203,
-      "name": "VentureOne Business",
-      "issuer": "Capital One",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
-    },
-    {
-      "id": 7204,
-      "name": "Spark Cash Plus",
-      "issuer": "Capital One",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
-    },
-    {
-      "id": 7205,
-      "name": "Spark Cash",
-      "issuer": "Capital One",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
-    },
-    {
-      "id": 7206,
-      "name": "Spark Cash Select",
-      "issuer": "Capital One",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
-    },
-    {
-      "id": 7207,
-      "name": "Spark Classic",
-      "issuer": "Capital One",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": null
-    },
-    {
-      "id": 7301,
-      "name": "Citi / AAdvantage Business World Elite Mastercard",
-      "issuer": "Citi",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "Offer needs a successful check or manual official-source review within 14 days"
-      ],
-      "source": "https://creditcards.aa.com/credit-cards/citi-business-card-american-airlines-direct/"
-    },
-    {
       "id": 7302,
       "name": "Costco Anywhere Visa Business by Citi",
       "issuer": "Citi",
       "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
-      "source": null
-    },
-    {
-      "id": 7501,
-      "name": "Business Triple Cash Rewards",
-      "issuer": "U.S. Bank",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
+      "source": "https://www.citi.com/credit-cards/costco-anywhere-visa-business-card"
     },
     {
       "id": 7502,
       "name": "Business Shield",
       "issuer": "U.S. Bank",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
+        "Current public welcome offer is not yet verified.",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://www.usbank.com/business-banking/business-credit-cards/business-shield-credit-card.html"
@@ -265,67 +162,55 @@
       "name": "Business Altitude Power",
       "issuer": "U.S. Bank",
       "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
-      "source": null
+      "source": "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-power-visa-signature-credit-card.html"
     },
     {
       "id": 7504,
       "name": "Business Altitude Connect",
       "issuer": "U.S. Bank",
       "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
-      "source": null
+      "source": "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-connect-credit-card.html"
     },
     {
       "id": 7505,
       "name": "Business Leverage",
       "issuer": "U.S. Bank",
       "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
-      "source": null
-    },
-    {
-      "id": 7601,
-      "name": "Signify Business Cash",
-      "issuer": "Wells Fargo",
-      "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
-        "Offer needs a successful check or manual official-source review within 14 days",
-        "Spending deadline is missing"
-      ],
-      "source": null
+      "source": "https://www.usbank.com/business-banking/business-credit-cards/business-leverage-visa-signature-credit-card.html"
     },
     {
       "id": 7701,
       "name": "Wyndham Rewards Earner Business",
       "issuer": "Barclays",
       "issues": [
-        "The recorded offer needs a fresh check.",
-        "No issuer monitoring source",
+        "Offer has not been verified yet.",
+        "Product-specific monitoring source not confirmed",
         "Offer needs a successful check or manual official-source review within 14 days",
         "Spending deadline is missing"
       ],
-      "source": null
+      "source": "https://www.wyndhamrewardscreditcard.com/business/"
     },
     {
       "id": 7702,
       "name": "JetBlue Business",
       "issuer": "Barclays",
       "issues": [
-        "The recorded offer needs a fresh check.",
+        "Offer has not been verified yet.",
         "Offer needs a successful check or manual official-source review within 14 days"
       ],
       "source": "https://cards.barclaycardus.com/banking/cards/jetblue-business-card/"

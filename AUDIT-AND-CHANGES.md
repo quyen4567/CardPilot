@@ -52,3 +52,11 @@ BLOCKED. Use as a staging review artifact only. Do not publish or rely on its ol
 - Preserved prior numeric terms and review observations for unresolved Amex records; set verified=false, with explicit review reasons. Did not reset their verification dates or copy indexed maximums into confirmed bonuses. Added a real-catalog regression verifying these records do not enter the confirmed business recommendation pool.
 - Evidence and per-record before/after scope are in staging/business-offer-review.json. Historical highs, earning rates, and eligibility history remain outside this pass.
 - Fresh audit: 128 of 143 active cards remain blocked; issuer sources are recorded for 104. Publication remains blocked. Production files, main, Pages settings, and deployment are unchanged.
+
+## Remaining business-card review — November 16, 2026
+- Reviewed the other 17 business cards: confirmed 10 from opened official sources and flagged 7 for unresolved pricing, inaccessible sources, or incomplete welcome terms. Across both passes, all 43 business records were reviewed: 25 confirmed and 18 unresolved. No personal cards changed.
+- Venture X Business's first tier is 150,000 miles after $40,000 within 4 months. Its additional tier requires $120,000 cumulative spend in that same window; the full 300,000-mile maximum is not divided by first-tier spend.
+- Citi AAdvantage Business's linked offer is 75,000 miles after $5,000 within 5 months, with a $0 first-year fee then $99. Spark Cash also has a first-year fee waiver recorded separately from its $95 ongoing fee.
+- U.S. Bank Triple Cash's $750 bonus requires $6,000 on the Account Owner card within 180 days. Employee-card spend is excluded; 180 days is retained without converting it to calendar months.
+- Source evidence and prior values are recorded in staging/business-offer-review-remaining.json. The new audit leaves 118 of 143 active records blocked, with source URLs on 118. Unreadable URLs are not described as confirmed closures or offer changes.
+- This is a GitHub catalog refresh. No recurring offer-watch change is part of this patch. Email access remains prohibited.

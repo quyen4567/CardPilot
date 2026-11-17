@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-11-16.1-business-review-staging",
-  "generatedAt": "2026-11-17T02:41:00.716390+00:00",
+  "catalogVersion": "2026-11-16.2-business-review-staging",
+  "generatedAt": "2026-11-17T02:47:47.763501+00:00",
   "cards": [
     {
       "id": 7001,
@@ -1327,14 +1327,14 @@
       "bonus": 150000,
       "unit": "Capital One miles",
       "hist": 400000,
-      "spend": 30000,
+      "spend": 40000,
       "af": 395,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-22",
-      "offerNote": "Current tracked base offer: 150K after $30K. Historical high reached 400K total with a much larger $150K total-spend requirement; compare spend tiers before treating offers as equivalent. Source: Doctor of Credit.",
-      "offerType": "public",
-      "confidence": "high",
+      "verifiedDate": "2026-11-16",
+      "offerNote": "Official public source reviewed 2026-11-16: 150,000 Capital One miles after $40,000 in the first 4 months; $395 ongoing annual fee. Terms apply to the linked channel. At $120,000 total spend within the same 4 months, an extra 150,000 miles and a $1,000 restricted Business Travel credit apply. Numeric bonus and spending-return calculations use only the $40,000 first tier.",
+      "offerType": "public-current",
+      "confidence": "official-issuer",
       "tags": [
         "travel",
         "transferable",
@@ -1360,7 +1360,45 @@
         }
       ],
       "pointsEarnVerifiedDate": "2026-10-04",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "source-configured",
+      "previousOfferSnapshot": {
+        "bonus": 150000,
+        "spend": 30000,
+        "spendPeriod": null,
+        "af": 395,
+        "verified": true,
+        "verifiedDate": "2026-09-22",
+        "offerNote": "Current tracked base offer: 150K after $30K. Historical high reached 400K total with a much larger $150K total-spend requirement; compare spend tiers before treating offers as equivalent. Source: Doctor of Credit.",
+        "issuerUrl": null
+      },
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "spendPeriod": "4 months",
+      "issuerUrl": "https://www.capitalone.com/small-business/credit-cards/venture-x-business/",
+      "issuerUrlVerified": "2026-11-16",
+      "offerSourceUrl": "https://www.capitalone.com/small-business/credit-cards/venture-x-business/",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerState": "verified-current",
+      "offerRequirementType": "tiered",
+      "monitorExpected": [
+        "150000",
+        "40000",
+        "4 months"
+      ],
+      "spendQualifiedBonus": 150000,
+      "maximumCombinedBonus": 300000,
+      "bonusTiers": [
+        {
+          "bonus": 150000,
+          "requiredCumulativeSpend": 40000,
+          "spendPeriod": "4 months"
+        },
+        {
+          "additionalBonus": 150000,
+          "requiredCumulativeSpend": 120000,
+          "spendPeriod": "4 months"
+        }
+      ]
     },
     {
       "id": 7202,
@@ -1374,10 +1412,10 @@
       "af": 95,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-22",
-      "offerNote": "Current tracked offer: 100K after $10K in 3 months. Prior launch/rebrand offer reached 150K with $30K spend. Source: Doctor of Credit.",
-      "offerType": "public",
-      "confidence": "high",
+      "verifiedDate": "2026-11-16",
+      "offerNote": "Official public source reviewed 2026-11-16: 100,000 Capital One miles after $10,000 in the first 3 months; $95 ongoing annual fee. Terms apply to the linked channel.",
+      "offerType": "public-current",
+      "confidence": "official-issuer",
       "tags": [
         "travel",
         "transferable"
@@ -1394,7 +1432,31 @@
         }
       ],
       "pointsEarnVerifiedDate": "2026-10-04",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "source-configured",
+      "previousOfferSnapshot": {
+        "bonus": 100000,
+        "spend": 10000,
+        "spendPeriod": null,
+        "af": 95,
+        "verified": true,
+        "verifiedDate": "2026-09-22",
+        "offerNote": "Current tracked offer: 100K after $10K in 3 months. Prior launch/rebrand offer reached 150K with $30K spend. Source: Doctor of Credit.",
+        "issuerUrl": null
+      },
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://www.capitalone.com/small-business/credit-cards/venture-business/",
+      "issuerUrlVerified": "2026-11-16",
+      "offerSourceUrl": "https://www.capitalone.com/small-business/credit-cards/venture-business/",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerState": "verified-current",
+      "offerRequirementType": "standard-spend",
+      "monitorExpected": [
+        "100000",
+        "10000",
+        "3 months"
+      ]
     },
     {
       "id": 7203,
@@ -1408,7 +1470,7 @@
       "af": 0,
       "reports": true,
       "verified": true,
-      "verifiedDate": "2026-09-23",
+      "verifiedDate": "2026-11-16",
       "reportingNote": "Capital One reports primary cardholder activity for this business card to personal credit bureaus, so it can add a personal account for 5/24 purposes.",
       "tags": [
         "travel",
@@ -1420,7 +1482,34 @@
       "histStatus": "best-documented",
       "histSourceLabel": "Doctor of Credit",
       "histSourceUrl": "https://www.doctorofcredit.com/capital-one-business-spark-cash-select-spark-miles-select-increased-signup-bonus-750-50000-no-annual-fee/",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "source-configured",
+      "previousOfferSnapshot": {
+        "bonus": 50000,
+        "spend": 4500,
+        "spendPeriod": null,
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-23",
+        "offerNote": null,
+        "issuerUrl": null
+      },
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://www.capitalone.com/small-business/credit-cards/ventureone-business/",
+      "issuerUrlVerified": "2026-11-16",
+      "offerSourceUrl": "https://www.capitalone.com/small-business/credit-cards/ventureone-business/",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerType": "public-current",
+      "confidence": "official-issuer",
+      "offerState": "verified-current",
+      "offerRequirementType": "standard-spend",
+      "monitorExpected": [
+        "50000",
+        "4500",
+        "3 months"
+      ],
+      "offerNote": "Official public source reviewed 2026-11-16: 50,000 Capital One miles after $4,500 in the first 3 months; $0 ongoing annual fee. Terms apply to the linked channel."
     },
     {
       "id": 7204,
@@ -1434,7 +1523,7 @@
       "af": 150,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
+      "verifiedDate": "2026-11-16",
       "tags": [
         "cash"
       ],
@@ -1444,7 +1533,34 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "Doctor of Credit",
       "histSourceUrl": "https://www.doctorofcredit.com/capital-one-spark-cash-plus-1500-3000-signup-bonus-20000-100000-spend-required/",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "source-configured",
+      "previousOfferSnapshot": {
+        "bonus": 2000,
+        "spend": 30000,
+        "spendPeriod": null,
+        "af": 150,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": null,
+        "issuerUrl": null
+      },
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://www.capitalone.com/small-business/credit-cards/spark-cash-plus/",
+      "issuerUrlVerified": "2026-11-16",
+      "offerSourceUrl": "https://www.capitalone.com/small-business/credit-cards/spark-cash-plus/",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerType": "public-current",
+      "confidence": "official-issuer",
+      "offerState": "verified-current",
+      "offerRequirementType": "tiered",
+      "monitorExpected": [
+        "2000",
+        "30000",
+        "3 months"
+      ],
+      "offerNote": "Official public source reviewed 2026-11-16: $2,000 cash back after $30,000 in the first 3 months; $150 ongoing annual fee. Terms apply to the linked channel. Additional $2,000 for each $500,000 spent in the first year is excluded from the base bonus. The $150 annual fee is refundable after $150,000 annual spend; the fee is not assumed waived."
     },
     {
       "id": 7205,
@@ -1458,7 +1574,7 @@
       "af": 95,
       "reports": true,
       "verified": true,
-      "verifiedDate": "2026-09-23",
+      "verifiedDate": "2026-11-16",
       "reportingNote": "Capital One reports primary cardholder activity for this business card to personal credit bureaus, so it can add a personal account for 5/24 purposes.",
       "tags": [
         "cash"
@@ -1469,7 +1585,36 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "Doctor of Credit",
       "histSourceUrl": "https://www.doctorofcredit.com/capital-one-spark-cash-business-card-1000-signup-bonus-with-10000-spend/",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "source-configured",
+      "previousOfferSnapshot": {
+        "bonus": 1000,
+        "spend": 10000,
+        "spendPeriod": null,
+        "af": 95,
+        "verified": true,
+        "verifiedDate": "2026-09-23",
+        "offerNote": null,
+        "issuerUrl": null
+      },
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://www.capitalone.com/small-business/credit-cards/spark-cash/",
+      "issuerUrlVerified": "2026-11-16",
+      "offerSourceUrl": "https://www.capitalone.com/small-business/credit-cards/spark-cash/",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerType": "public-current",
+      "confidence": "official-issuer",
+      "offerState": "verified-current",
+      "offerRequirementType": "standard-spend",
+      "monitorExpected": [
+        "1000",
+        "10000",
+        "3 months"
+      ],
+      "firstYearAnnualFee": 0,
+      "annualFeeNote": "$0 introductory annual fee for year one, then $95.",
+      "offerNote": "Official public source reviewed 2026-11-16: $1,000 cash back after $10,000 in the first 3 months; $95 ongoing annual fee. Terms apply to the linked channel. First-year annual fee is $0, then $95."
     },
     {
       "id": 7206,
@@ -1483,7 +1628,7 @@
       "af": 0,
       "reports": true,
       "verified": true,
-      "verifiedDate": "2026-09-23",
+      "verifiedDate": "2026-11-16",
       "reportingNote": "Capital One reports primary cardholder activity for this business card to personal credit bureaus, so it can add a personal account for 5/24 purposes.",
       "tags": [
         "cash"
@@ -1494,7 +1639,34 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "Doctor of Credit",
       "histSourceUrl": "https://www.doctorofcredit.com/capital-one-business-spark-cash-select-spark-miles-select-increased-signup-bonus-750-50000-no-annual-fee/",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "source-configured",
+      "previousOfferSnapshot": {
+        "bonus": 750,
+        "spend": 6000,
+        "spendPeriod": null,
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-23",
+        "offerNote": null,
+        "issuerUrl": null
+      },
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://www.capitalone.com/small-business/credit-cards/spark-cash-select/",
+      "issuerUrlVerified": "2026-11-16",
+      "offerSourceUrl": "https://www.capitalone.com/small-business/credit-cards/spark-cash-select/",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerType": "public-current",
+      "confidence": "official-issuer",
+      "offerState": "verified-current",
+      "offerRequirementType": "standard-spend",
+      "monitorExpected": [
+        "750",
+        "6000",
+        "3 months"
+      ],
+      "offerNote": "Official public source reviewed 2026-11-16: $750 cash back after $6,000 in the first 3 months; $0 ongoing annual fee. Terms apply to the linked channel."
     },
     {
       "id": 7207,
@@ -1508,9 +1680,9 @@
       "af": 0,
       "reports": true,
       "verified": true,
-      "verifiedDate": "2026-09-23",
+      "verifiedDate": "2026-11-16",
       "offerState": "no-standard-public-sub",
-      "offerNote": "No standard public sign-up bonus identified. Earns unlimited 1% cash back and 5% on hotels and rental cars booked through Capital One Business Travel.",
+      "offerNote": "Official product page reviewed 2026-11-16: no standard public welcome reward advertised; no annual fee. This is not a claim about targeted or referral offers.",
       "reportingNote": "Capital One reports primary cardholder activity for this business card to personal credit bureaus, so it can add a personal account for 5/24 purposes.",
       "tags": [
         "cash",
@@ -1518,22 +1690,43 @@
       ],
       "histResearchDate": "2026-09-27",
       "histStatus": "research-pending",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "source-configured",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-23",
+        "offerNote": "No standard public sign-up bonus identified. Earns unlimited 1% cash back and 5% on hotels and rental cars booked through Capital One Business Travel.",
+        "issuerUrl": null
+      },
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "spendPeriod": null,
+      "issuerUrl": "https://www.capitalone.com/small-business/credit-cards/spark-classic/",
+      "issuerUrlVerified": "2026-11-16",
+      "offerSourceUrl": "https://www.capitalone.com/small-business/credit-cards/spark-classic/",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerType": "public-current",
+      "confidence": "official-issuer",
+      "offerRequirementType": "no-standard-public-sub",
+      "monitorExpected": []
     },
     {
       "id": 7301,
       "issuer": "Citi",
       "name": "Citi / AAdvantage Business World Elite Mastercard",
       "type": "Business",
-      "bonus": 65000,
+      "bonus": 75000,
       "unit": "AAdvantage miles",
       "hist": null,
-      "spend": 4000,
+      "spend": 5000,
       "af": 99,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-10-13",
-      "offerNote": "65,000 AAdvantage miles after $4,000 in purchases in 4 months. $0 introductory annual fee for the first year, then $99.",
+      "verifiedDate": "2026-11-16",
+      "offerNote": "Official public source reviewed 2026-11-16: 75,000 AAdvantage miles after $5,000 in the first 5 months; $99 ongoing annual fee. Terms apply to the linked channel. First-year annual fee is $0, then $99.",
       "tags": [
         "airline",
         "aadvantage"
@@ -1542,28 +1735,34 @@
       "histStatus": "research-pending",
       "offerState": "verified-current",
       "previousOfferSnapshot": {
-        "bonus": 0,
-        "spend": null,
-        "spendPeriod": null,
-        "unit": "AAdvantage miles",
+        "bonus": 65000,
+        "spend": 4000,
+        "spendPeriod": "4 months",
         "af": 99,
-        "verified": false,
-        "verifiedDate": "2026-09-21",
-        "offerNote": "Current bonus varies; $0 intro annual fee first year, then $99."
+        "verified": true,
+        "verifiedDate": "2026-10-13",
+        "offerNote": "65,000 AAdvantage miles after $4,000 in purchases in 4 months. $0 introductory annual fee for the first year, then $99.",
+        "issuerUrl": "https://creditcards.aa.com/credit-cards/citi-business-card-american-airlines-direct/"
       },
-      "spendPeriod": "4 months",
+      "spendPeriod": "5 months",
       "issuerUrl": "https://creditcards.aa.com/credit-cards/citi-business-card-american-airlines-direct/",
-      "issuerUrlVerified": "2026-10-13",
+      "issuerUrlVerified": "2026-11-16",
       "offerSourceUrl": "https://creditcards.aa.com/credit-cards/citi-business-card-american-airlines-direct/",
-      "offerSourceCheckedDate": "2026-10-13",
-      "offerType": "public",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerType": "public-current",
       "introAnnualFeeNote": "$0 first year, then $99",
       "monitorExpected": [
-        "65000",
-        "4000",
-        "4 months"
+        "75000",
+        "5000",
+        "5 months"
       ],
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "confidence": "official-issuer",
+      "offerRequirementType": "standard-spend",
+      "firstYearAnnualFee": 0,
+      "annualFeeNote": "$0 introductory annual fee for year one, then $99."
     },
     {
       "id": 7302,
@@ -1576,10 +1775,10 @@
       "spend": null,
       "af": 0,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-22",
-      "offerState": "no-standard-public-sub",
-      "offerNote": "No standard sign-up bonus. Requires an active paid Costco membership.",
+      "offerState": "needs-review",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). The official page identifies active Costco membership as required, but numeric fee/pricing fields are missing from the readable response. No complete current welcome-offer/pricing confirmation was available. Prior numeric terms are retained, not reverified.",
       "perks": [
         "5% cash back on gas at Costco and 4% on other eligible gas/EV charging on the first $7,000 combined spend per year, then 1%",
         "3% cash back on restaurants and eligible travel, including Costco Travel",
@@ -1597,7 +1796,24 @@
       ],
       "histResearchDate": "2026-09-27",
       "histStatus": "research-pending",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "manual-review-required",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "spend": null,
+        "spendPeriod": null,
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-22",
+        "offerNote": "No standard sign-up bonus. Requires an active paid Costco membership.",
+        "issuerUrl": null
+      },
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "confidence": "needs-review",
+      "reviewReason": "The official page identifies active Costco membership as required, but numeric fee/pricing fields are missing from the readable response. No complete current welcome-offer/pricing confirmation was available.",
+      "reviewOpenedDate": "2026-11-16",
+      "issuerUrl": "https://www.citi.com/credit-cards/costco-anywhere-visa-business-card",
+      "monitorExpected": []
     },
     {
       "id": 7401,
@@ -1831,13 +2047,41 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
+      "verifiedDate": "2026-11-16",
       "tags": [
         "cash"
       ],
       "histResearchDate": "2026-09-27",
       "histStatus": "tracked-catalog-history",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "source-configured",
+      "previousOfferSnapshot": {
+        "bonus": 750,
+        "spend": 6000,
+        "spendPeriod": null,
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": null,
+        "issuerUrl": null
+      },
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "spendPeriod": "180 days",
+      "issuerUrl": "https://www.usbank.com/business-banking/business-credit-cards/business-triple-cash-back-credit-card.html",
+      "issuerUrlVerified": "2026-11-16",
+      "offerSourceUrl": "https://www.usbank.com/business-banking/business-credit-cards/business-triple-cash-back-credit-card.html",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerType": "public-current",
+      "confidence": "official-issuer",
+      "offerState": "verified-current",
+      "offerRequirementType": "standard-spend",
+      "monitorExpected": [
+        "750",
+        "6000",
+        "180 days"
+      ],
+      "additionalRequirement": "Account Owner card purchases only; employee cards do not count toward the welcome bonus.",
+      "offerNote": "Official public source reviewed 2026-11-16: $750 cash back after $6,000 in the first 180 days; $0 ongoing annual fee. Terms apply to the linked channel. Only eligible purchases on the Account Owner card count; employee-card spending is excluded."
     },
     {
       "id": 7502,
@@ -1850,26 +2094,27 @@
       "spend": null,
       "af": 0,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-10-13",
-      "offerNote": "No fixed welcome bonus is advertised on the reviewed official product page; this is an introductory-APR product.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). The official page confirms no annual fee and a 12-billing-cycle introductory APR, but includes generic rewards/points FAQs. A cash or points welcome bonus was not confirmed; absence of a displayed bonus is not proof of a zero offer. Prior numeric terms are retained, not reverified.",
       "tags": [
         "apr"
       ],
       "histResearchDate": "2026-09-27",
       "histStatus": "research-pending",
-      "offerState": "no-standard-public-sub",
+      "offerState": "needs-review",
       "issuerUrl": "https://www.usbank.com/business-banking/business-credit-cards/business-shield-credit-card.html",
       "issuerUrlVerified": "2026-10-13",
-      "monitoringStatus": "source-configured",
+      "monitoringStatus": "manual-review-required",
       "previousOfferSnapshot": {
         "bonus": 0,
         "spend": null,
         "spendPeriod": null,
-        "unit": "low APR",
-        "offerState": "needs-review",
-        "verifiedDate": "2026-09-21",
-        "offerNote": "0% intro APR for 12 billing cycles; no standard sign-up bonus tracked."
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-10-13",
+        "offerNote": "No fixed welcome bonus is advertised on the reviewed official product page; this is an introductory-APR product.",
+        "issuerUrl": "https://www.usbank.com/business-banking/business-credit-cards/business-shield-credit-card.html"
       },
       "offerSourceUrl": "https://www.usbank.com/business-banking/business-credit-cards/business-shield-credit-card.html",
       "offerSourceCheckedDate": "2026-10-13",
@@ -1877,7 +2122,12 @@
       "offerVerificationMethod": "Manual review of official issuer/partner page",
       "spendPeriod": null,
       "offerRequirementType": "no-public-bonus",
-      "monitorExpected": []
+      "monitorExpected": [],
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "confidence": "needs-review",
+      "reviewReason": "The official page confirms no annual fee and a 12-billing-cycle introductory APR, but includes generic rewards/points FAQs. A cash or points welcome bonus was not confirmed; absence of a displayed bonus is not proof of a zero offer.",
+      "reviewOpenedDate": "2026-11-16"
     },
     {
       "id": 7503,
@@ -1890,7 +2140,7 @@
       "spend": 10000,
       "af": 95,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
       "tags": [
         "travel"
@@ -1901,7 +2151,26 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club / U.S. Bank",
       "histSourceUrl": "https://pocketfinanceclub.com/cards/us-bank-business-altitude-power/",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "manual-review-required",
+      "previousOfferSnapshot": {
+        "bonus": 75000,
+        "spend": 10000,
+        "spendPeriod": null,
+        "af": 95,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": null,
+        "issuerUrl": null
+      },
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "offerState": "needs-review",
+      "confidence": "needs-review",
+      "reviewReason": "The attempted official product URL was inaccessible and the current issuer catalog did not establish matching Altitude Power application terms. Do not infer the product is closed from failed access.",
+      "reviewOpenedDate": "2026-11-16",
+      "issuerUrl": "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-power-visa-signature-credit-card.html",
+      "monitorExpected": [],
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). The attempted official product URL was inaccessible and the current issuer catalog did not establish matching Altitude Power application terms. Do not infer the product is closed from failed access. Prior numeric terms are retained, not reverified."
     },
     {
       "id": 7504,
@@ -1914,15 +2183,33 @@
       "spend": 6000,
       "af": 95,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
-      "offerNote": "$0 intro annual fee first year, then $95.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). The official page confirms 75,000 points after $6,000 on the Account Owner card within 180 days, with first-year fee waived. The ongoing fee rendered only as a missing numeric field; complete pricing remains unconfirmed. Prior numeric terms are retained, not reverified.",
       "tags": [
         "travel"
       ],
       "histResearchDate": "2026-09-27",
       "histStatus": "research-pending",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "manual-review-required",
+      "previousOfferSnapshot": {
+        "bonus": 75000,
+        "spend": 6000,
+        "spendPeriod": null,
+        "af": 95,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "$0 intro annual fee first year, then $95.",
+        "issuerUrl": null
+      },
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "offerState": "needs-review",
+      "confidence": "needs-review",
+      "reviewReason": "The official page confirms 75,000 points after $6,000 on the Account Owner card within 180 days, with first-year fee waived. The ongoing fee rendered only as a missing numeric field; complete pricing remains unconfirmed.",
+      "reviewOpenedDate": "2026-11-16",
+      "issuerUrl": "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-connect-credit-card.html",
+      "monitorExpected": []
     },
     {
       "id": 7505,
@@ -1935,9 +2222,9 @@
       "spend": 6000,
       "af": 95,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
-      "offerNote": "$0 intro annual fee first year, then $95.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). The attempted official product URL was inaccessible. Current new-account terms require confirmation; failed access alone does not establish that the card is closed. Prior numeric terms are retained, not reverified.",
       "tags": [
         "travel"
       ],
@@ -1947,7 +2234,25 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club / Doctor of Credit",
       "histSourceUrl": "https://pocketfinanceclub.com/cards/us-bank-business-leverage/",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "manual-review-required",
+      "previousOfferSnapshot": {
+        "bonus": 60000,
+        "spend": 6000,
+        "spendPeriod": null,
+        "af": 95,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "$0 intro annual fee first year, then $95.",
+        "issuerUrl": null
+      },
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "offerState": "needs-review",
+      "confidence": "needs-review",
+      "reviewReason": "The attempted official product URL was inaccessible. Current new-account terms require confirmation; failed access alone does not establish that the card is closed.",
+      "reviewOpenedDate": "2026-11-16",
+      "issuerUrl": "https://www.usbank.com/business-banking/business-credit-cards/business-leverage-visa-signature-credit-card.html",
+      "monitorExpected": []
     },
     {
       "id": 7601,
@@ -1961,9 +2266,9 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-22",
-      "offerState": "public",
-      "offerNote": "Current issuer terms show a $500 cash rewards bonus after $5,000 in qualifying purchases within 3 months.",
+      "verifiedDate": "2026-11-16",
+      "offerState": "verified-current",
+      "offerNote": "Official public source reviewed 2026-11-16: $500 cash back after $5,000 in the first 3 months; $0 ongoing annual fee. Terms apply to the linked channel.",
       "perks": [
         "Unlimited 2% cash rewards on qualifying purchases",
         "No annual fee",
@@ -1979,7 +2284,32 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club / US Credit Card Guide",
       "histSourceUrl": "https://www.pocketfinanceclub.com/cards/wells-fargo-signify-business-cash/",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "source-configured",
+      "previousOfferSnapshot": {
+        "bonus": 500,
+        "spend": 5000,
+        "spendPeriod": null,
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-22",
+        "offerNote": "Current issuer terms show a $500 cash rewards bonus after $5,000 in qualifying purchases within 3 months.",
+        "issuerUrl": null
+      },
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card/?sub_channel=WEB&vendor_code=WF",
+      "issuerUrlVerified": "2026-11-16",
+      "offerSourceUrl": "https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card/?sub_channel=WEB&vendor_code=WF",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerType": "public-current",
+      "confidence": "official-issuer",
+      "offerRequirementType": "standard-spend",
+      "monitorExpected": [
+        "500",
+        "5000",
+        "3 months"
+      ]
     },
     {
       "id": 7701,
@@ -1992,9 +2322,9 @@
       "spend": 3500,
       "af": 149,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
-      "offerNote": "45K after $3K in 90 days + 55K after $500 at Wyndham in 180 days.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). The official application site was inaccessible in this review. Retain previous numeric terms as unconfirmed; do not infer a changed offer or closure. Prior numeric terms are retained, not reverified.",
       "tags": [
         "hotel",
         "wyndham"
@@ -2005,7 +2335,25 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club",
       "histSourceUrl": "https://pocketfinanceclub.com/cards/wyndham-earner-business/",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "manual-review-required",
+      "previousOfferSnapshot": {
+        "bonus": 100000,
+        "spend": 3500,
+        "spendPeriod": null,
+        "af": 149,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "45K after $3K in 90 days + 55K after $500 at Wyndham in 180 days.",
+        "issuerUrl": null
+      },
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "offerState": "needs-review",
+      "confidence": "needs-review",
+      "reviewReason": "The official application site was inaccessible in this review. Retain previous numeric terms as unconfirmed; do not infer a changed offer or closure.",
+      "reviewOpenedDate": "2026-11-16",
+      "issuerUrl": "https://www.wyndhamrewardscreditcard.com/business/",
+      "monitorExpected": []
     },
     {
       "id": 7702,
@@ -2018,9 +2366,9 @@
       "spend": 4000,
       "af": 99,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-10-13",
-      "offerNote": "50,000 points after $4,000 in purchases and payment of the annual fee, both within 90 days.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). The official product page returned HTTP 403 to this review. Retain previous numeric terms as unconfirmed; blocked access is not evidence of an offer change or closure. Prior numeric terms are retained, not reverified.",
       "tags": [
         "airline",
         "jetblue"
@@ -2033,28 +2381,29 @@
       "histSourceUrl": "https://www.bonuseagle.com/offers",
       "previousOfferSnapshot": {
         "bonus": 50000,
-        "spend": null,
-        "spendPeriod": null,
-        "unit": "TrueBlue points",
+        "spend": 4000,
+        "spendPeriod": "90 days",
         "af": 99,
         "verified": true,
-        "verifiedDate": "2026-09-21",
-        "offerNote": "50K current introductory offer; verify spend requirement before applying."
+        "verifiedDate": "2026-10-13",
+        "offerNote": "50,000 points after $4,000 in purchases and payment of the annual fee, both within 90 days.",
+        "issuerUrl": "https://cards.barclaycardus.com/banking/cards/jetblue-business-card/"
       },
       "spendPeriod": "90 days",
       "issuerUrl": "https://cards.barclaycardus.com/banking/cards/jetblue-business-card/",
       "issuerUrlVerified": "2026-10-13",
       "offerSourceUrl": "https://cards.barclaycardus.com/banking/cards/jetblue-business-card/",
       "offerSourceCheckedDate": "2026-10-13",
-      "offerState": "verified-current",
+      "offerState": "needs-review",
       "offerType": "public",
       "additionalRequirement": "Pay the annual fee in full within 90 days.",
-      "monitorExpected": [
-        "50000",
-        "4000",
-        "90 days"
-      ],
-      "monitoringStatus": "source-configured"
+      "monitorExpected": [],
+      "monitoringStatus": "manual-review-required",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "confidence": "needs-review",
+      "reviewReason": "The official product page returned HTTP 403 to this review. Retain previous numeric terms as unconfirmed; blocked access is not evidence of an offer change or closure.",
+      "reviewOpenedDate": "2026-11-16"
     },
     {
       "id": 8001,
