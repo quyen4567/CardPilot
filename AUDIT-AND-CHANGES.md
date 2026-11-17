@@ -41,3 +41,14 @@ BLOCKED. Use as a staging review artifact only. Do not publish or rely on its ol
 - Synchronized the lockfile package version to 11.3.49 without changing dependencies.
 - Local regression tests pass. Local Chromium cannot launch under the workspace's socket restrictions; the updated browser scenario must be validated by GitHub Actions.
 - Root app files, main, Pages settings, and publication remain unchanged. No offer data was refreshed by this QA patch.
+
+## Business offer data review — November 16, 2026
+- Reviewed all 26 existing Chase, American Express, and Bank of America business records. Scope: current welcome reward, minimum spending, spending deadline, and annual fee. No personal-card records changed.
+- Confirmed 11 Chase and 4 BofA records against opened official public sources. Added missing spending deadlines, source URLs, and review dates. These are offers for the specific linked channel, not a claim that no better channel exists.
+- Corrected IHG Business to 150,000 spending-qualified points after $4,000 in 3 months, plus a separate 10,000-point employee-card condition. Corrected Southwest Premier Business to 60,000 points after $3,000 in 3 months. Sapphire Reserve Business's $30,000 spending window is 6 months.
+- United Business/Club numeric bonuses now represent 90,000 spending-qualified miles. The extra 10,000 employee-card miles and 2,000 PQP remain described separately, avoiding an inflated spending-return calculation.
+- Atmos's $95 fee assumes one card: $70 company fee plus $25 per card. Companion fare and anniversary spending conditions are separate from the points valuation.
+- Flagged 11 Amex offers for review. Official search indexes and opened pages sometimes disagree or omit welcome terms. Platinum/Gold linked terms show lower offers than indexed personalized maxima; Delta's current headline and comparison table conflict. Expired Marriott/Delta promotions are not relabeled current.
+- Preserved prior numeric terms and review observations for unresolved Amex records; set verified=false, with explicit review reasons. Did not reset their verification dates or copy indexed maximums into confirmed bonuses. Added a real-catalog regression verifying these records do not enter the confirmed business recommendation pool.
+- Evidence and per-record before/after scope are in staging/business-offer-review.json. Historical highs, earning rates, and eligibility history remain outside this pass.
+- Fresh audit: 128 of 143 active cards remain blocked; issuer sources are recorded for 104. Publication remains blocked. Production files, main, Pages settings, and deployment are unchanged.

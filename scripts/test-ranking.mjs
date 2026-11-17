@@ -37,4 +37,22 @@ run("data.profile.relationships={bofaPersonal:'premier',bofaBusiness:'none'}");
 assert.equal(run("bofaTierBonus('Business')"),0,'Personal status must not boost business rewards');
 run("data.profile.relationships.bofaBusiness='platinum-honors'");
 assert.equal(run("bofaTierBonus('Business')"),0.75);
+// Exercise the real reviewed catalog with a business search and a saved
+// banking relationship, not just the isolated sorting fixtures above.
+context.reviewedCatalog=JSON.parse(fs.readFileSync(new URL('../staging/cards.json',import.meta.url),'utf8')).cards;
+const review=JSON.parse(fs.readFileSync(new URL('../staging/business-offer-review.json',import.meta.url),'utf8'));
+const reviewedAt=Date.parse(review.reviewDate+'T12:00:00Z');
+context.Date=class extends Date {
+  constructor(...args){super(...(args.length?args:[reviewedAt]));}
+  static now(){return reviewedAt;}
+};
+run("data.offers=reviewedCatalog;data.profile.cardPath='business';data.profile.refineRank='leastspend'");
+const reviewedIds=new Set([7001,7002,7003,7004,7005,7006,7007,7008,7009,7010,7011,7401,7402,7403,7404]);
+const actual=run('refinementCandidates()');
+assert(actual.length>0,'The reviewed catalog must produce business recommendations');
+assert(actual.every(x=>x.offer.type==='Business'&&x.offer.verified===true),'Pending Amex records must not enter the confirmed recommendation pool');
+assert(actual.some(x=>reviewedIds.has(x.offer.id)),'The search must include reviewed business offers');
+assert.equal(run('data.offers.find(x=>x.id===7010).bonus'),90000,'United numeric bonus must exclude employee-card miles and PQP');
+assert.equal(run('data.offers.find(x=>x.id===7007).bonus'),150000);
+assert.equal(run('data.offers.find(x=>x.id===7007).additionalBonus'),10000);
 console.log('Ranking and relationship regression checks passed.');

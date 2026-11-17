@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-10-13.5-staging",
-  "generatedAt": "2026-10-13T06:49:23.950472+00:00",
+  "catalogVersion": "2026-11-16.1-business-review-staging",
+  "generatedAt": "2026-11-17T02:41:00.716390+00:00",
   "cards": [
     {
       "id": 7001,
@@ -15,22 +15,21 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-24",
-      "offerNote": "Current public Chase offer: $750 cash back after $6,000 in purchases in the first 3 months after account opening. $0 annual fee. Offers can vary by channel and change over time.",
+      "verifiedDate": "2026-11-16",
+      "offerNote": "Public source reviewed 2026-11-16: $750 cash back after $6,000 in purchases in the first 3 months from account opening; $0 annual fee. Offer applies to the linked channel and can change.",
       "offerType": "public-current",
-      "confidence": "high",
+      "confidence": "official-issuer",
       "tags": [
         "cash",
         "ultimate rewards"
       ],
       "offerState": "verified-current",
-      "issuerUrl": "https://creditcards.chase.com/business-credit-cards/ink/unlimited",
-      "issuerUrlVerified": "2026-09-24",
+      "issuerUrl": "https://creditcards.chase.com/business-credit-cards/ink/unlimited?iCELL=61FY",
+      "issuerUrlVerified": "2026-11-16",
       "monitorExpected": [
-        "750 cash back",
+        "750",
         "6000",
-        "3 months",
-        "0 annual fee"
+        "3 months"
       ],
       "histResearchDate": "2026-09-27",
       "histStatus": "tracked-catalog-history",
@@ -42,7 +41,26 @@
         "ruleType": "no-fee-business-family-ever",
         "summary": "Chase states the new cardmember bonus may not be available if you have ever had this card or any other Chase for Business card without an annual fee."
       },
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 750,
+        "unit": "cash",
+        "spend": 6000,
+        "spendPeriod": null,
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-24",
+        "offerNote": "Current public Chase offer: $750 cash back after $6,000 in purchases in the first 3 months after account opening. $0 annual fee. Offers can vary by channel and change over time.",
+        "offerExpires": null,
+        "issuerUrl": "https://creditcards.chase.com/business-credit-cards/ink/unlimited"
+      },
+      "spendPeriod": "3 months",
+      "offerSourceUrl": "https://creditcards.chase.com/business-credit-cards/ink/unlimited?iCELL=61FY",
+      "offerSourceCheckedDate": "2026-11-16",
+      "bonusIsUpTo": false,
+      "offerRequirementType": "standard-spend"
     },
     {
       "id": 7002,
@@ -56,22 +74,21 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-24",
-      "offerNote": "Current public Chase offer: $750 cash back after $6,000 in purchases in the first 3 months after account opening. $0 annual fee. Offers can vary by channel and change over time.",
+      "verifiedDate": "2026-11-16",
+      "offerNote": "Public source reviewed 2026-11-16: $750 cash back after $6,000 in purchases in the first 3 months from account opening; $0 annual fee. Offer applies to the linked channel and can change.",
       "offerType": "public-current",
-      "confidence": "high",
+      "confidence": "official-issuer",
       "tags": [
         "cash",
         "ultimate rewards"
       ],
       "offerState": "verified-current",
-      "issuerUrl": "https://creditcards.chase.com/business-credit-cards/ink/cash",
-      "issuerUrlVerified": "2026-09-24",
+      "issuerUrl": "https://creditcards.chase.com/business-credit-cards/ink/cash?iCELL=61FY",
+      "issuerUrlVerified": "2026-11-16",
       "monitorExpected": [
-        "750 cash back",
+        "750",
         "6000",
-        "3 months",
-        "0 annual fee"
+        "3 months"
       ],
       "histResearchDate": "2026-09-27",
       "histStatus": "tracked-catalog-history",
@@ -83,7 +100,26 @@
         "ruleType": "no-fee-business-family-ever",
         "summary": "Chase states the new cardmember bonus may not be available if you have ever had this card or any other Chase for Business card without an annual fee."
       },
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 750,
+        "unit": "cash",
+        "spend": 6000,
+        "spendPeriod": null,
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-24",
+        "offerNote": "Current public Chase offer: $750 cash back after $6,000 in purchases in the first 3 months after account opening. $0 annual fee. Offers can vary by channel and change over time.",
+        "offerExpires": null,
+        "issuerUrl": "https://creditcards.chase.com/business-credit-cards/ink/cash"
+      },
+      "spendPeriod": "3 months",
+      "offerSourceUrl": "https://creditcards.chase.com/business-credit-cards/ink/cash?iCELL=61FY",
+      "offerSourceCheckedDate": "2026-11-16",
+      "bonusIsUpTo": false,
+      "offerRequirementType": "standard-spend"
     },
     {
       "id": 7003,
@@ -97,7 +133,7 @@
       "af": 95,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
+      "verifiedDate": "2026-11-16",
       "tags": [
         "travel",
         "transferable"
@@ -123,7 +159,37 @@
         "ruleType": "same-card-ever",
         "summary": "Chase states the new cardmember bonus may not be available if you have ever had Ink Business Preferred."
       },
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 100000,
+        "unit": "Ultimate Rewards points",
+        "spend": 8000,
+        "spendPeriod": null,
+        "af": 95,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": null,
+        "offerExpires": null,
+        "issuerUrl": null
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.chase.com/business-credit-cards/ink/business-preferred?iCELL=61FY",
+      "issuerUrlVerified": "2026-11-16",
+      "offerSourceUrl": "https://creditcards.chase.com/business-credit-cards/ink/business-preferred?iCELL=61FY",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerState": "verified-current",
+      "offerType": "public-current",
+      "confidence": "official-issuer",
+      "bonusIsUpTo": false,
+      "monitorExpected": [
+        "100000",
+        "8000",
+        "3 months"
+      ],
+      "offerRequirementType": "standard-spend",
+      "offerNote": "Public source reviewed 2026-11-16: 100,000 Ultimate Rewards points after $8,000 in purchases in the first 3 months from account opening; $95 annual fee. Offer applies to the linked channel and can change."
     },
     {
       "id": 7004,
@@ -137,7 +203,7 @@
       "af": 195,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
+      "verifiedDate": "2026-11-16",
       "tags": [
         "cash"
       ],
@@ -155,7 +221,37 @@
         "ruleType": "same-card-ever",
         "summary": "Chase states the new cardmember bonus may not be available if you have ever had Ink Business Premier."
       },
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 1000,
+        "unit": "cash",
+        "spend": 10000,
+        "spendPeriod": null,
+        "af": 195,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": null,
+        "offerExpires": null,
+        "issuerUrl": null
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.chase.com/business-credit-cards/ink/premier?iCELL=61FY",
+      "issuerUrlVerified": "2026-11-16",
+      "offerSourceUrl": "https://creditcards.chase.com/business-credit-cards/ink/premier?iCELL=61FY",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerState": "verified-current",
+      "offerType": "public-current",
+      "confidence": "official-issuer",
+      "bonusIsUpTo": false,
+      "monitorExpected": [
+        "1000",
+        "10000",
+        "3 months"
+      ],
+      "offerRequirementType": "standard-spend",
+      "offerNote": "Public source reviewed 2026-11-16: $1,000 cash back after $10,000 in purchases in the first 3 months from account opening; $195 annual fee. Offer applies to the linked channel and can change."
     },
     {
       "id": 7005,
@@ -169,7 +265,7 @@
       "af": 795,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
+      "verifiedDate": "2026-11-16",
       "tags": [
         "travel",
         "transferable",
@@ -185,7 +281,37 @@
         "ruleType": "same-card-ever",
         "summary": "Chase states the new cardmember bonus may not be available if you have ever had Sapphire Reserve for Business."
       },
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 200000,
+        "unit": "Ultimate Rewards points",
+        "spend": 30000,
+        "spendPeriod": null,
+        "af": 795,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": null,
+        "offerExpires": null,
+        "issuerUrl": null
+      },
+      "spendPeriod": "6 months",
+      "issuerUrl": "https://creditcards.chase.com/business-credit-cards/sapphire/reserve?iCELL=61FY",
+      "issuerUrlVerified": "2026-11-16",
+      "offerSourceUrl": "https://creditcards.chase.com/business-credit-cards/sapphire/reserve?iCELL=61FY",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerState": "verified-current",
+      "offerType": "public-current",
+      "confidence": "official-issuer",
+      "bonusIsUpTo": false,
+      "monitorExpected": [
+        "200000",
+        "30000",
+        "6 months"
+      ],
+      "offerRequirementType": "standard-spend",
+      "offerNote": "Public source reviewed 2026-11-16: 200,000 Ultimate Rewards points after $30,000 in purchases in the first 6 months from account opening; $795 annual fee. Offer applies to the linked channel and can change."
     },
     {
       "id": 7006,
@@ -199,28 +325,58 @@
       "af": 199,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
+      "verifiedDate": "2026-11-16",
       "tags": [
         "hotel",
         "hyatt"
       ],
       "histResearchDate": "2026-09-27",
       "histStatus": "tracked-catalog-history",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 70000,
+        "unit": "Hyatt points",
+        "spend": 7000,
+        "spendPeriod": null,
+        "af": 199,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": null,
+        "offerExpires": null,
+        "issuerUrl": null
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.chase.com/business-credit-cards/world-of-hyatt/hyatt-business-card?iCELL=61FY",
+      "issuerUrlVerified": "2026-11-16",
+      "offerSourceUrl": "https://creditcards.chase.com/business-credit-cards/world-of-hyatt/hyatt-business-card?iCELL=61FY",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerState": "verified-current",
+      "offerType": "public-current",
+      "confidence": "official-issuer",
+      "bonusIsUpTo": false,
+      "monitorExpected": [
+        "70000",
+        "7000",
+        "3 months"
+      ],
+      "offerRequirementType": "standard-spend",
+      "offerNote": "Public source reviewed 2026-11-16: 70,000 Hyatt points after $7,000 in purchases in the first 3 months from account opening; $199 annual fee. Offer applies to the linked channel and can change."
     },
     {
       "id": 7007,
       "issuer": "Chase",
       "name": "IHG One Rewards Business",
       "type": "Business",
-      "bonus": 190000,
+      "bonus": 150000,
       "unit": "IHG points",
       "hist": 200000,
-      "spend": 5000,
+      "spend": 4000,
       "af": 200,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-10-02",
+      "verifiedDate": "2026-11-16",
       "tags": [
         "hotel",
         "ihg"
@@ -228,27 +384,43 @@
       "histResearchDate": "2026-09-27",
       "histStatus": "tracked-catalog-history",
       "offerState": "verified-current",
-      "offerType": "public",
+      "offerType": "public-current",
       "confidence": "official-issuer",
-      "offerNote": "Official Chase launch offer: 190,000 IHG One Rewards points after $5,000 in purchases in the first 3 months from account opening; $200 annual fee. Plus 10,000 bonus points after adding an employee card in the first 3 months.",
-      "spendQualifiedBonus": 190000,
-      "spendPeriod": "first 3 months from account opening",
-      "additionalRequirement": "Plus 10,000 bonus points after adding an employee card in the first 3 months from account opening.",
-      "offerRequirementType": "split",
+      "offerNote": "Public source reviewed 2026-11-16: 150,000 IHG points after $4,000 in purchases in the first 3 months from account opening; $200 annual fee. Offer applies to the linked channel and can change. An extra 10,000 for adding an employee card is separate from the spending bonus.",
+      "spendPeriod": "3 months",
       "issuerUrl": "https://creditcards.chase.com/business-credit-cards/IHG/business",
-      "issuerUrlVerified": "2026-10-02",
+      "issuerUrlVerified": "2026-11-16",
       "monitorExpected": [
-        "190,000",
-        "5,000",
-        "3 months",
-        "200",
-        "10,000",
-        "employee card"
+        "150000",
+        "4000",
+        "3 months"
       ],
       "refreshDate": "2026-10-01",
       "launchSourceUrl": "https://www.ihgplc.com/en/news-and-media/news-releases/2026/chase-introduces-new-ihg-one-rewards-premier-select-credit-card-and-portfolio",
       "launchVerifiedDate": "2026-10-07",
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 190000,
+        "unit": "IHG points",
+        "spend": 5000,
+        "spendPeriod": "first 3 months from account opening",
+        "af": 200,
+        "verified": true,
+        "verifiedDate": "2026-10-02",
+        "offerNote": "Official Chase launch offer: 190,000 IHG One Rewards points after $5,000 in purchases in the first 3 months from account opening; $200 annual fee. Plus 10,000 bonus points after adding an employee card in the first 3 months.",
+        "offerExpires": null,
+        "issuerUrl": "https://creditcards.chase.com/business-credit-cards/IHG/business"
+      },
+      "offerSourceUrl": "https://creditcards.chase.com/business-credit-cards/IHG/business",
+      "offerSourceCheckedDate": "2026-11-16",
+      "bonusIsUpTo": false,
+      "spendQualifiedBonus": 150000,
+      "offerRequirementType": "split",
+      "additionalRequirement": "An additional 10,000 points or miles requires adding an employee card within the first 3 months. This extra is excluded from the numeric bonus and bonus return calculation.",
+      "additionalBonus": 10000,
+      "maximumCombinedBonus": 160000
     },
     {
       "id": 7008,
@@ -262,28 +434,58 @@
       "af": 299,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
+      "verifiedDate": "2026-11-16",
       "tags": [
         "airline",
         "southwest"
       ],
       "histResearchDate": "2026-09-27",
       "histStatus": "tracked-catalog-history",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 80000,
+        "unit": "Rapid Rewards points",
+        "spend": 5000,
+        "spendPeriod": null,
+        "af": 299,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": null,
+        "offerExpires": null,
+        "issuerUrl": null
+      },
+      "spendPeriod": "3 months",
+      "issuerUrl": "https://creditcards.chase.com/business-credit-cards/southwest/performance-business?iCELL=61FY",
+      "issuerUrlVerified": "2026-11-16",
+      "offerSourceUrl": "https://creditcards.chase.com/business-credit-cards/southwest/performance-business?iCELL=61FY",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerState": "verified-current",
+      "offerType": "public-current",
+      "confidence": "official-issuer",
+      "bonusIsUpTo": false,
+      "monitorExpected": [
+        "80000",
+        "5000",
+        "3 months"
+      ],
+      "offerRequirementType": "standard-spend",
+      "offerNote": "Public source reviewed 2026-11-16: 80,000 Rapid Rewards points after $5,000 in purchases in the first 3 months from account opening; $299 annual fee. Offer applies to the linked channel and can change."
     },
     {
       "id": 7009,
       "issuer": "Chase",
       "name": "Southwest Premier Business",
       "type": "Business",
-      "bonus": 80000,
+      "bonus": 60000,
       "unit": "Rapid Rewards points",
       "hist": 120000,
       "spend": 3000,
       "af": 149,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-10-02",
+      "verifiedDate": "2026-11-16",
       "tags": [
         "airline",
         "southwest"
@@ -291,33 +493,51 @@
       "histResearchDate": "2026-09-27",
       "histStatus": "tracked-catalog-history",
       "offerState": "verified-current",
-      "offerType": "public",
+      "offerType": "public-current",
       "confidence": "official-issuer",
-      "offerNote": "Official Chase limited-time offer: 80,000 Rapid Rewards points after $3,000 in purchases in the first 3 months from account opening; $149 annual fee.",
-      "issuerUrl": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business",
-      "issuerUrlVerified": "2026-10-02",
+      "offerNote": "Public source reviewed 2026-11-16: 60,000 Rapid Rewards points after $3,000 in purchases in the first 3 months from account opening; $149 annual fee. Offer applies to the linked channel and can change.",
+      "issuerUrl": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business?iCELL=61FY",
+      "issuerUrlVerified": "2026-11-16",
       "monitorExpected": [
-        "80,000",
-        "3,000",
-        "3 months",
-        "149"
+        "60000",
+        "3000",
+        "3 months"
       ],
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 80000,
+        "unit": "Rapid Rewards points",
+        "spend": 3000,
+        "spendPeriod": null,
+        "af": 149,
+        "verified": true,
+        "verifiedDate": "2026-10-02",
+        "offerNote": "Official Chase limited-time offer: 80,000 Rapid Rewards points after $3,000 in purchases in the first 3 months from account opening; $149 annual fee.",
+        "offerExpires": null,
+        "issuerUrl": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business"
+      },
+      "spendPeriod": "3 months",
+      "offerSourceUrl": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business?iCELL=61FY",
+      "offerSourceCheckedDate": "2026-11-16",
+      "bonusIsUpTo": false,
+      "offerRequirementType": "standard-spend"
     },
     {
       "id": 7010,
       "issuer": "Chase",
       "name": "United Business",
       "type": "Business",
-      "bonus": 100000,
-      "unit": "United miles + PQP",
+      "bonus": 90000,
+      "unit": "United miles",
       "hist": 150000,
       "spend": 5000,
       "af": 150,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-10-02",
-      "offerNote": "Official Chase offer: up to 100,000 bonus miles + 2,000 PQP. Earn 90,000 miles + 2,000 PQP after $5,000 in purchases in the first 3 months, plus 10,000 miles after adding an employee card in the first 3 months.",
+      "verifiedDate": "2026-11-16",
+      "offerNote": "Public source reviewed 2026-11-16: 90,000 United miles after $5,000 in purchases in the first 3 months from account opening; $150 annual fee. Offer applies to the linked channel and can change. An extra 10,000 for adding an employee card is separate from the spending bonus. Spending also earns 2,000 PQP, excluded from redeemable-mile valuation.",
       "tags": [
         "airline",
         "united"
@@ -329,42 +549,54 @@
       "histSourceLabel": "Upgraded Points",
       "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/united-business-card/welcome-offer-history/",
       "offerState": "verified-current",
-      "offerType": "public",
+      "offerType": "public-current",
       "confidence": "official-issuer",
-      "spendQualifiedBonus": 90000,
-      "spendPeriod": "first 3 months from account opening",
-      "bonusIsUpTo": true,
-      "additionalRequirement": "Plus 10,000 bonus miles after adding an employee card in the first 3 months; base offer also includes 2,000 PQP.",
-      "offerRequirementType": "split",
+      "spendPeriod": "3 months",
+      "bonusIsUpTo": false,
       "issuerUrl": "https://creditcards.chase.com/business-credit-cards/united/united-business-card",
-      "issuerUrlVerified": "2026-10-02",
+      "issuerUrlVerified": "2026-11-16",
       "monitorExpected": [
-        "100,000",
-        "90,000",
-        "5,000",
-        "3 months",
-        "2,000",
-        "PQP",
-        "10,000",
-        "employee card",
-        "150"
+        "90000",
+        "5000",
+        "3 months"
       ],
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 100000,
+        "unit": "United miles + PQP",
+        "spend": 5000,
+        "spendPeriod": "first 3 months from account opening",
+        "af": 150,
+        "verified": true,
+        "verifiedDate": "2026-10-02",
+        "offerNote": "Official Chase offer: up to 100,000 bonus miles + 2,000 PQP. Earn 90,000 miles + 2,000 PQP after $5,000 in purchases in the first 3 months, plus 10,000 miles after adding an employee card in the first 3 months.",
+        "offerExpires": null,
+        "issuerUrl": "https://creditcards.chase.com/business-credit-cards/united/united-business-card"
+      },
+      "offerSourceUrl": "https://creditcards.chase.com/business-credit-cards/united/united-business-card",
+      "offerSourceCheckedDate": "2026-11-16",
+      "spendQualifiedBonus": 90000,
+      "offerRequirementType": "split",
+      "additionalRequirement": "An additional 10,000 points or miles requires adding an employee card within the first 3 months. This extra is excluded from the numeric bonus and bonus return calculation.",
+      "additionalBonus": 10000,
+      "maximumCombinedBonus": 100000
     },
     {
       "id": 7011,
       "issuer": "Chase",
       "name": "United Club Business",
       "type": "Business",
-      "bonus": 100000,
-      "unit": "United miles + PQP",
+      "bonus": 90000,
+      "unit": "United miles",
       "hist": 125000,
       "spend": 5000,
       "af": 695,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-10-02",
-      "offerNote": "Official Chase offer: up to 100,000 bonus miles + 2,000 PQP. Earn 90,000 miles + 2,000 PQP after $5,000 in purchases in the first 3 months, plus 10,000 miles after adding an employee card in the first 3 months.",
+      "verifiedDate": "2026-11-16",
+      "offerNote": "Public source reviewed 2026-11-16: 90,000 United miles after $5,000 in purchases in the first 3 months from account opening; $695 annual fee. Offer applies to the linked channel and can change. An extra 10,000 for adding an employee card is separate from the spending bonus. Spending also earns 2,000 PQP, excluded from redeemable-mile valuation.",
       "tags": [
         "airline",
         "united",
@@ -377,27 +609,39 @@
       "histSourceLabel": "The Points Guy",
       "histSourceUrl": "https://thepointsguy.com/credit-cards/united-chase-best-welcome-offers/",
       "offerState": "verified-current",
-      "offerType": "public",
+      "offerType": "public-current",
       "confidence": "official-issuer",
-      "spendQualifiedBonus": 90000,
-      "spendPeriod": "first 3 months from account opening",
-      "bonusIsUpTo": true,
-      "additionalRequirement": "Plus 10,000 bonus miles after adding an employee card in the first 3 months; base offer also includes 2,000 PQP.",
-      "offerRequirementType": "split",
+      "spendPeriod": "3 months",
+      "bonusIsUpTo": false,
       "issuerUrl": "https://creditcards.chase.com/business-credit-cards/united/united-club-business",
-      "issuerUrlVerified": "2026-10-02",
+      "issuerUrlVerified": "2026-11-16",
       "monitorExpected": [
-        "100,000",
-        "90,000",
-        "5,000",
-        "3 months",
-        "2,000",
-        "PQP",
-        "10,000",
-        "employee card",
-        "695"
+        "90000",
+        "5000",
+        "3 months"
       ],
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 100000,
+        "unit": "United miles + PQP",
+        "spend": 5000,
+        "spendPeriod": "first 3 months from account opening",
+        "af": 695,
+        "verified": true,
+        "verifiedDate": "2026-10-02",
+        "offerNote": "Official Chase offer: up to 100,000 bonus miles + 2,000 PQP. Earn 90,000 miles + 2,000 PQP after $5,000 in purchases in the first 3 months, plus 10,000 miles after adding an employee card in the first 3 months.",
+        "offerExpires": null,
+        "issuerUrl": "https://creditcards.chase.com/business-credit-cards/united/united-club-business"
+      },
+      "offerSourceUrl": "https://creditcards.chase.com/business-credit-cards/united/united-club-business",
+      "offerSourceCheckedDate": "2026-11-16",
+      "spendQualifiedBonus": 90000,
+      "offerRequirementType": "split",
+      "additionalRequirement": "An additional 10,000 points or miles requires adding an employee card within the first 3 months. This extra is excluded from the numeric bonus and bonus return calculation.",
+      "additionalBonus": 10000,
+      "maximumCombinedBonus": 100000
     },
     {
       "id": 7101,
@@ -410,11 +654,11 @@
       "spend": 20000,
       "af": 895,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-22",
-      "offerNote": "Current public Amex flow: as high as 300K after $20K in 3 months. Personalized offer may be lower. Historical high: 300K. Source: American Express + Doctor of Credit.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). Indexed advertising shows a personalized ceiling of 300,000 points; the opened linked terms show a different 150,000-point offer. The product page did not expose a matching welcome amount. Do not treat the ceiling as a guaranteed offer. Numeric bonus/spend below are retained from the previous catalog, not a newly verified offer.",
       "offerType": "personalized/up-to",
-      "confidence": "high",
+      "confidence": "needs-review",
       "tags": [
         "travel",
         "transferable",
@@ -438,7 +682,37 @@
         }
       ],
       "pointsEarnVerifiedDate": "2026-10-04",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "manual-review-required",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 300000,
+        "unit": "Membership Rewards points",
+        "spend": 20000,
+        "spendPeriod": null,
+        "af": 895,
+        "verified": true,
+        "verifiedDate": "2026-09-22",
+        "offerNote": "Current public Amex flow: as high as 300K after $20K in 3 months. Personalized offer may be lower. Historical high: 300K. Source: American Express + Doctor of Credit.",
+        "offerExpires": null,
+        "issuerUrl": null
+      },
+      "offerState": "needs-review",
+      "reviewReason": "Indexed advertising shows a personalized ceiling of 300,000 points; the opened linked terms show a different 150,000-point offer. The product page did not expose a matching welcome amount. Do not treat the ceiling as a guaranteed offer.",
+      "reviewOpenedDate": "2026-11-16",
+      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+      "offerSourceReviewDate": "2026-11-16",
+      "offerReviewObservation": {
+        "observedBonusOrMaximum": 300000,
+        "observedSpend": 20000,
+        "observedSpendPeriod": "3 months",
+        "sourceUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+        "checkedDate": "2026-11-16",
+        "confirmedCurrentOffer": false
+      },
+      "monitorExpected": [],
+      "bonusIsUpTo": true,
+      "offerRequirementType": "personalized"
     },
     {
       "id": 7102,
@@ -451,11 +725,11 @@
       "spend": 15000,
       "af": 375,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-22",
-      "offerNote": "Current public Amex flow: as high as 200K after $15K in 3 months. Personalized offer may be lower. Historical high tracked: 200K. Source: American Express + Doctor of Credit.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). Indexed advertising shows a personalized ceiling of 200,000 points; the opened linked terms show a different 100,000-point offer. The product page did not expose a matching welcome amount. Do not treat the ceiling as a guaranteed offer. Numeric bonus/spend below are retained from the previous catalog, not a newly verified offer.",
       "offerType": "personalized/up-to",
-      "confidence": "high",
+      "confidence": "needs-review",
       "tags": [
         "travel",
         "transferable"
@@ -479,7 +753,37 @@
       ],
       "pointsEarnVerifiedDate": "2026-10-04",
       "pointsEarnNote": "Eligible 4X categories include U.S. advertising, electronics/software/cloud, restaurants, gas, transit and wireless service.",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "manual-review-required",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 200000,
+        "unit": "Membership Rewards points",
+        "spend": 15000,
+        "spendPeriod": null,
+        "af": 375,
+        "verified": true,
+        "verifiedDate": "2026-09-22",
+        "offerNote": "Current public Amex flow: as high as 200K after $15K in 3 months. Personalized offer may be lower. Historical high tracked: 200K. Source: American Express + Doctor of Credit.",
+        "offerExpires": null,
+        "issuerUrl": null
+      },
+      "offerState": "needs-review",
+      "reviewReason": "Indexed advertising shows a personalized ceiling of 200,000 points; the opened linked terms show a different 100,000-point offer. The product page did not expose a matching welcome amount. Do not treat the ceiling as a guaranteed offer.",
+      "reviewOpenedDate": "2026-11-16",
+      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-gold-card-amex/",
+      "offerSourceReviewDate": "2026-11-16",
+      "offerReviewObservation": {
+        "observedBonusOrMaximum": 200000,
+        "observedSpend": 15000,
+        "observedSpendPeriod": "3 months",
+        "sourceUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-gold-card-amex/",
+        "checkedDate": "2026-11-16",
+        "confirmedCurrentOffer": false
+      },
+      "monitorExpected": [],
+      "bonusIsUpTo": true,
+      "offerRequirementType": "personalized"
     },
     {
       "id": 7103,
@@ -492,33 +796,51 @@
       "spend": 50000,
       "af": 295,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-10-13",
-      "offerNote": "Earn $1,500 cash back after $50,000 in purchases within 6 months.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). Official indexed pages disagree between a fixed $1,500 offer and a personalized maximum of $2,000. The opened product page did not expose matching welcome terms. Numeric bonus/spend below are retained from the previous catalog, not a newly verified offer.",
       "tags": [
         "cash"
       ],
       "histResearchDate": "2026-09-27",
       "histStatus": "research-pending",
-      "offerState": "verified-current",
+      "offerState": "needs-review",
       "previousOfferSnapshot": {
-        "bonus": 0,
-        "spend": 20000,
-        "verifiedDate": "2026-09-21",
-        "offerNote": "Welcome offer varies; verify before applying."
+        "bonus": 1500,
+        "unit": "cash",
+        "spend": 50000,
+        "spendPeriod": "6 months",
+        "af": 295,
+        "verified": true,
+        "verifiedDate": "2026-10-13",
+        "offerNote": "Earn $1,500 cash back after $50,000 in purchases within 6 months.",
+        "offerExpires": null,
+        "issuerUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/graphite-business-cash-unlimited-card/"
       },
       "spendPeriod": "6 months",
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/graphite-business-cash-unlimited-card/",
       "issuerUrlVerified": "2026-10-13",
       "offerSourceUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/graphite-business-cash-unlimited-card/",
       "offerSourceCheckedDate": "2026-10-13",
-      "offerType": "public",
-      "monitorExpected": [
-        "1500",
-        "50000",
-        "6 months"
-      ],
-      "monitoringStatus": "source-configured"
+      "offerType": "personalized/up-to",
+      "monitorExpected": [],
+      "monitoringStatus": "manual-review-required",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "confidence": "needs-review",
+      "reviewReason": "Official indexed pages disagree between a fixed $1,500 offer and a personalized maximum of $2,000. The opened product page did not expose matching welcome terms.",
+      "reviewOpenedDate": "2026-11-16",
+      "offerSourceReviewDate": "2026-11-16",
+      "offerReviewObservation": {
+        "observedBonusOrMaximum": 2000,
+        "observedSpend": 50000,
+        "observedSpendPeriod": "6 months",
+        "sourceUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/graphite-business-cash-unlimited-card/",
+        "checkedDate": "2026-11-16",
+        "confirmedCurrentOffer": false
+      },
+      "bonusIsUpTo": true,
+      "offerRequirementType": "personalized"
     },
     {
       "id": 7104,
@@ -531,9 +853,9 @@
       "spend": 5000,
       "af": 0,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
-      "offerNote": "A $500 pre-approved offer is available on some Amex pages; public offers may differ.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). Official indexed advertising describes up to $500, with a personalized amount. Opened product content did not expose complete matching welcome terms. Numeric bonus/spend below are retained from the previous catalog, not a newly verified offer.",
       "tags": [
         "cash"
       ],
@@ -543,7 +865,39 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "American Express",
       "histSourceUrl": "https://www.americanexpress.com/en-us/campaigns/small-business/credit-cards/blue-business-cash/explore-now/",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "manual-review-required",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 500,
+        "unit": "cash",
+        "spend": 5000,
+        "spendPeriod": null,
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "A $500 pre-approved offer is available on some Amex pages; public offers may differ.",
+        "offerExpires": null,
+        "issuerUrl": null
+      },
+      "offerState": "needs-review",
+      "confidence": "needs-review",
+      "reviewReason": "Official indexed advertising describes up to $500, with a personalized amount. Opened product content did not expose complete matching welcome terms.",
+      "reviewOpenedDate": "2026-11-16",
+      "issuerUrl": "https://www.americanexpress.com/en-us/business/credit-cards/blue-business-cash/",
+      "offerSourceReviewDate": "2026-11-16",
+      "offerReviewObservation": {
+        "observedBonusOrMaximum": 500,
+        "observedSpend": 5000,
+        "observedSpendPeriod": "3 months",
+        "sourceUrl": "https://www.americanexpress.com/en-us/business/credit-cards/blue-business-cash/",
+        "checkedDate": "2026-11-16",
+        "confirmedCurrentOffer": false
+      },
+      "monitorExpected": [],
+      "bonusIsUpTo": true,
+      "offerType": "personalized/up-to",
+      "offerRequirementType": "personalized"
     },
     {
       "id": 7105,
@@ -558,7 +912,7 @@
       "reports": false,
       "verified": false,
       "verifiedDate": "2026-09-21",
-      "offerNote": "Current welcome offer varies / verify in-session.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). Official indexed advertising describes up to 50,000 points, with a personalized amount. Opened product content exposed earning rates but no complete welcome terms. The $50,000 annual earning cap is not a welcome bonus. Numeric bonus/spend below are retained from the previous catalog, not a newly verified offer.",
       "tags": [
         "travel",
         "transferable"
@@ -571,15 +925,41 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "Pocket Finance Club / Upgraded Points",
       "histSourceUrl": "https://pocketfinanceclub.com/cards/amex-blue-business-plus/",
-      "reviewReason": "Current official application-page terms could not be independently read. Secondary reported amounts are not substituted for issuer confirmation.",
+      "reviewReason": "Official indexed advertising describes up to 50,000 points, with a personalized amount. Opened product content exposed earning rates but no complete welcome terms. The $50,000 annual earning cap is not a welcome bonus.",
       "reviewOpenedDate": "2026-10-13",
       "offerState": "needs-review",
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex/",
       "issuerUrlVerified": false,
       "lastAttemptedSourceReview": "2026-10-13",
-      "monitoringStatus": "source-configured",
-      "lastReviewAttemptDate": "2026-10-13",
-      "reviewOwner": "catalog-maintainer"
+      "monitoringStatus": "manual-review-required",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 0,
+        "unit": "offer varies",
+        "spend": null,
+        "spendPeriod": null,
+        "af": 0,
+        "verified": false,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Current welcome offer varies / verify in-session.",
+        "offerExpires": null,
+        "issuerUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex/"
+      },
+      "confidence": "needs-review",
+      "offerSourceReviewDate": "2026-11-16",
+      "offerReviewObservation": {
+        "observedBonusOrMaximum": 50000,
+        "observedSpend": 5000,
+        "observedSpendPeriod": "3 months",
+        "sourceUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex/",
+        "checkedDate": "2026-11-16",
+        "confirmedCurrentOffer": false
+      },
+      "monitorExpected": [],
+      "bonusIsUpTo": true,
+      "offerType": "personalized/up-to",
+      "offerRequirementType": "personalized"
     },
     {
       "id": 7106,
@@ -587,26 +967,32 @@
       "name": "Business Green Rewards Card",
       "type": "Business",
       "bonus": 15000,
-      "unit": "offer varies",
+      "unit": "Membership Rewards points",
       "hist": null,
       "spend": 3000,
       "af": 95,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-10-13",
-      "offerNote": "15,000 Membership Rewards points after $3,000 in purchases in 3 months.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). Official indexed advertising shows 15,000 Membership Rewards points after $3,000 in 3 months, but the opened product page did not expose those welcome terms. Numeric bonus/spend below are retained from the previous catalog, not a newly verified offer.",
       "tags": [
         "travel",
         "transferable"
       ],
       "histResearchDate": "2026-09-27",
       "histStatus": "research-pending",
-      "offerState": "verified-current",
+      "offerState": "needs-review",
       "previousOfferSnapshot": {
-        "bonus": 0,
-        "spend": null,
-        "verifiedDate": "2026-09-21",
-        "offerNote": "Current welcome offer varies / verify in-session."
+        "bonus": 15000,
+        "unit": "offer varies",
+        "spend": 3000,
+        "spendPeriod": "3 months",
+        "af": 95,
+        "verified": true,
+        "verifiedDate": "2026-10-13",
+        "offerNote": "15,000 Membership Rewards points after $3,000 in purchases in 3 months.",
+        "offerExpires": null,
+        "issuerUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/"
       },
       "spendPeriod": "3 months",
       "issuerUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/",
@@ -614,12 +1000,22 @@
       "offerSourceUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/",
       "offerSourceCheckedDate": "2026-10-13",
       "offerType": "public",
-      "monitorExpected": [
-        "15000",
-        "3000",
-        "3 months"
-      ],
-      "monitoringStatus": "source-configured"
+      "monitorExpected": [],
+      "monitoringStatus": "manual-review-required",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "confidence": "needs-review",
+      "reviewReason": "Official indexed advertising shows 15,000 Membership Rewards points after $3,000 in 3 months, but the opened product page did not expose those welcome terms.",
+      "reviewOpenedDate": "2026-11-16",
+      "offerSourceReviewDate": "2026-11-16",
+      "offerReviewObservation": {
+        "observedBonusOrMaximum": 15000,
+        "observedSpend": 3000,
+        "observedSpendPeriod": "3 months",
+        "sourceUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/",
+        "checkedDate": "2026-11-16",
+        "confirmedCurrentOffer": false
+      }
     },
     {
       "id": 7107,
@@ -632,9 +1028,9 @@
       "spend": 6000,
       "af": 150,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-10-13",
-      "offerNote": "90,000 Delta miles after $6,000 in purchases within 6 months. Offer ends November 4, 2026.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). The official Delta page advertises a personalized maximum of 85,000 miles, but its comparison table still shows the prior 90,000-mile promotion. The recorded November 4 offer is expired. Matching application terms require review. Numeric bonus/spend below are retained from the previous catalog, not a newly verified offer.",
       "tags": [
         "airline",
         "delta"
@@ -645,30 +1041,44 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points",
       "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/gold-delta-skymiles-business-credit-card-american-express/welcome-offer-history/",
-      "offerState": "verified-current",
+      "offerState": "needs-review",
       "previousOfferSnapshot": {
-        "bonus": 0,
-        "spend": null,
-        "spendPeriod": null,
+        "bonus": 90000,
         "unit": "Delta miles",
+        "spend": 6000,
+        "spendPeriod": "6 months",
         "af": 150,
-        "verified": false,
-        "verifiedDate": "2026-09-21",
-        "offerNote": "Current welcome offer varies; $0 intro annual fee first year, then $150."
+        "verified": true,
+        "verifiedDate": "2026-10-13",
+        "offerNote": "90,000 Delta miles after $6,000 in purchases within 6 months. Offer ends November 4, 2026.",
+        "offerExpires": "2026-11-04",
+        "issuerUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards"
       },
       "spendPeriod": "6 months",
       "issuerUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
       "issuerUrlVerified": "2026-10-13",
       "offerSourceUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
       "offerSourceCheckedDate": "2026-10-13",
-      "offerType": "public",
+      "offerType": "personalized/up-to",
       "offerExpires": "2026-11-04",
-      "monitorExpected": [
-        "90000",
-        "6000",
-        "6 months"
-      ],
-      "monitoringStatus": "source-configured"
+      "monitorExpected": [],
+      "monitoringStatus": "manual-review-required",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "confidence": "needs-review",
+      "reviewReason": "The official Delta page advertises a personalized maximum of 85,000 miles, but its comparison table still shows the prior 90,000-mile promotion. The recorded November 4 offer is expired. Matching application terms require review.",
+      "reviewOpenedDate": "2026-11-16",
+      "offerSourceReviewDate": "2026-11-16",
+      "offerReviewObservation": {
+        "observedBonusOrMaximum": 85000,
+        "observedSpend": 6000,
+        "observedSpendPeriod": "6 months",
+        "sourceUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
+        "checkedDate": "2026-11-16",
+        "confirmedCurrentOffer": false
+      },
+      "bonusIsUpTo": true,
+      "offerRequirementType": "personalized"
     },
     {
       "id": 7108,
@@ -681,9 +1091,9 @@
       "spend": 8000,
       "af": 350,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-10-13",
-      "offerNote": "100,000 Delta miles after $8,000 in purchases within 6 months. Offer ends November 4, 2026.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). The official Delta page advertises a personalized maximum of 100,000 miles after $10,000, differing from the old $8,000 requirement. Its comparison table retains prior promotion figures. The recorded November 4 offer is expired. Matching application terms require review. Numeric bonus/spend below are retained from the previous catalog, not a newly verified offer.",
       "tags": [
         "airline",
         "delta"
@@ -694,30 +1104,44 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "The Points Guy",
       "histSourceUrl": "https://thepointsguy.com/credit-cards/reviews/platinum-delta-skymiles-business-card-review/",
-      "offerState": "verified-current",
+      "offerState": "needs-review",
       "previousOfferSnapshot": {
-        "bonus": 0,
-        "spend": null,
-        "spendPeriod": null,
+        "bonus": 100000,
         "unit": "Delta miles",
+        "spend": 8000,
+        "spendPeriod": "6 months",
         "af": 350,
-        "verified": false,
-        "verifiedDate": "2026-09-21",
-        "offerNote": "Current welcome offer varies."
+        "verified": true,
+        "verifiedDate": "2026-10-13",
+        "offerNote": "100,000 Delta miles after $8,000 in purchases within 6 months. Offer ends November 4, 2026.",
+        "offerExpires": "2026-11-04",
+        "issuerUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards"
       },
       "spendPeriod": "6 months",
       "issuerUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
       "issuerUrlVerified": "2026-10-13",
       "offerSourceUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
       "offerSourceCheckedDate": "2026-10-13",
-      "offerType": "public",
+      "offerType": "personalized/up-to",
       "offerExpires": "2026-11-04",
-      "monitorExpected": [
-        "100000",
-        "8000",
-        "6 months"
-      ],
-      "monitoringStatus": "source-configured"
+      "monitorExpected": [],
+      "monitoringStatus": "manual-review-required",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "confidence": "needs-review",
+      "reviewReason": "The official Delta page advertises a personalized maximum of 100,000 miles after $10,000, differing from the old $8,000 requirement. Its comparison table retains prior promotion figures. The recorded November 4 offer is expired. Matching application terms require review.",
+      "reviewOpenedDate": "2026-11-16",
+      "offerSourceReviewDate": "2026-11-16",
+      "offerReviewObservation": {
+        "observedBonusOrMaximum": 100000,
+        "observedSpend": 10000,
+        "observedSpendPeriod": "6 months",
+        "sourceUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
+        "checkedDate": "2026-11-16",
+        "confirmedCurrentOffer": false
+      },
+      "bonusIsUpTo": true,
+      "offerRequirementType": "personalized"
     },
     {
       "id": 7109,
@@ -730,9 +1154,9 @@
       "spend": 20000,
       "af": 650,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-10-13",
-      "offerNote": "200,000 Delta miles after $20,000 in purchases within 6 months. Offer ends November 4, 2026.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). The official Delta page advertises a personalized maximum of 125,000 miles after $15,000, but its comparison table still shows 200,000 miles. The recorded November 4 offer is expired. Matching application terms require review. Numeric bonus/spend below are retained from the previous catalog, not a newly verified offer.",
       "tags": [
         "airline",
         "delta",
@@ -744,30 +1168,44 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "Upgraded Points",
       "histSourceUrl": "https://upgradedpoints.com/news/delta-amex-best-ever-welcome-offers-2026/",
-      "offerState": "verified-current",
+      "offerState": "needs-review",
       "previousOfferSnapshot": {
-        "bonus": 0,
-        "spend": null,
-        "spendPeriod": null,
+        "bonus": 200000,
         "unit": "Delta miles",
+        "spend": 20000,
+        "spendPeriod": "6 months",
         "af": 650,
-        "verified": false,
-        "verifiedDate": "2026-09-21",
-        "offerNote": "Current welcome offer varies."
+        "verified": true,
+        "verifiedDate": "2026-10-13",
+        "offerNote": "200,000 Delta miles after $20,000 in purchases within 6 months. Offer ends November 4, 2026.",
+        "offerExpires": "2026-11-04",
+        "issuerUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards"
       },
       "spendPeriod": "6 months",
       "issuerUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
       "issuerUrlVerified": "2026-10-13",
       "offerSourceUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
       "offerSourceCheckedDate": "2026-10-13",
-      "offerType": "public",
+      "offerType": "personalized/up-to",
       "offerExpires": "2026-11-04",
-      "monitorExpected": [
-        "200000",
-        "20000",
-        "6 months"
-      ],
-      "monitoringStatus": "source-configured"
+      "monitorExpected": [],
+      "monitoringStatus": "manual-review-required",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "confidence": "needs-review",
+      "reviewReason": "The official Delta page advertises a personalized maximum of 125,000 miles after $15,000, but its comparison table still shows 200,000 miles. The recorded November 4 offer is expired. Matching application terms require review.",
+      "reviewOpenedDate": "2026-11-16",
+      "offerSourceReviewDate": "2026-11-16",
+      "offerReviewObservation": {
+        "observedBonusOrMaximum": 125000,
+        "observedSpend": 15000,
+        "observedSpendPeriod": "6 months",
+        "sourceUrl": "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-business-cards",
+        "checkedDate": "2026-11-16",
+        "confirmedCurrentOffer": false
+      },
+      "bonusIsUpTo": true,
+      "offerRequirementType": "personalized"
     },
     {
       "id": 7110,
@@ -780,9 +1218,9 @@
       "spend": 8000,
       "af": 125,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
-      "offerNote": "100K points + 1 Free Night Award after $8K; offer ends 11/4/2026.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). Official indexed pages show 75,000 points after $6,000 in 6 months; a separate indexed 100,000-point plus free-night offer explicitly expired November 4. Complete current application terms were not confirmed. Numeric bonus/spend below are retained from the previous catalog, not a newly verified offer.",
       "tags": [
         "hotel",
         "marriott"
@@ -794,7 +1232,37 @@
       "histSourceLabel": "Upgraded Points",
       "histSourceUrl": "https://upgradedpoints.com/credit-cards/reviews/marriott-bonvoy-business-card/welcome-offer-history/",
       "histAlternativeNote": "Historical offers also reached 5 Free Night Awards (up to 50K points each), which is not directly comparable to a points-only bonus.",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "manual-review-required",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 100000,
+        "unit": "Marriott points + 50K free night",
+        "spend": 8000,
+        "spendPeriod": null,
+        "af": 125,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "100K points + 1 Free Night Award after $8K; offer ends 11/4/2026.",
+        "offerExpires": null,
+        "issuerUrl": null
+      },
+      "offerState": "needs-review",
+      "confidence": "needs-review",
+      "reviewReason": "Official indexed pages show 75,000 points after $6,000 in 6 months; a separate indexed 100,000-point plus free-night offer explicitly expired November 4. Complete current application terms were not confirmed.",
+      "reviewOpenedDate": "2026-11-16",
+      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amex-marriott-bonvoy-business-credit-card/",
+      "offerSourceReviewDate": "2026-11-16",
+      "offerReviewObservation": {
+        "observedBonusOrMaximum": 75000,
+        "observedSpend": 6000,
+        "observedSpendPeriod": "6 months",
+        "sourceUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amex-marriott-bonvoy-business-credit-card/",
+        "checkedDate": "2026-11-16",
+        "confirmedCurrentOffer": false
+      },
+      "monitorExpected": [],
+      "offerExpires": "2026-11-04"
     },
     {
       "id": 7111,
@@ -807,9 +1275,9 @@
       "spend": 8000,
       "af": 195,
       "reports": false,
-      "verified": true,
+      "verified": false,
       "verifiedDate": "2026-09-21",
-      "offerNote": "150K points + Free Night Reward after $8K; offer ends 1/13/2027.",
+      "offerNote": "CURRENT OFFER UNCONFIRMED (2026-11-16). Official indexed advertising shows 150,000 points plus a free-night reward after $8,000 in 6 months, ending January 13, 2027. Current application terms and certificate restrictions require confirmation; the certificate is not cash or unrestricted points. Numeric bonus/spend below are retained from the previous catalog, not a newly verified offer.",
       "tags": [
         "hotel",
         "hilton"
@@ -820,7 +1288,36 @@
       "histStatus": "verified-public-high",
       "histSourceLabel": "The Points Guy",
       "histSourceUrl": "https://thepointsguy.com/credit-cards/hilton-american-express-best-welcome-offers/",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "manual-review-required",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 150000,
+        "unit": "Hilton points + free night",
+        "spend": 8000,
+        "spendPeriod": null,
+        "af": 195,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "150K points + Free Night Reward after $8K; offer ends 1/13/2027.",
+        "offerExpires": null,
+        "issuerUrl": null
+      },
+      "offerState": "needs-review",
+      "confidence": "needs-review",
+      "reviewReason": "Official indexed advertising shows 150,000 points plus a free-night reward after $8,000 in 6 months, ending January 13, 2027. Current application terms and certificate restrictions require confirmation; the certificate is not cash or unrestricted points.",
+      "reviewOpenedDate": "2026-11-16",
+      "issuerUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/hilton-honors-business-credit-card/",
+      "offerSourceReviewDate": "2026-11-16",
+      "offerReviewObservation": {
+        "observedBonusOrMaximum": 150000,
+        "observedSpend": 8000,
+        "observedSpendPeriod": "6 months",
+        "sourceUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/hilton-honors-business-credit-card/",
+        "checkedDate": "2026-11-16",
+        "confirmedCurrentOffer": false
+      },
+      "monitorExpected": []
     },
     {
       "id": 7201,
@@ -1118,29 +1615,45 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-26",
-      "offerNote": "Official Bank of America online offer: $500 cash rewards bonus after at least $5,000 in purchases within 90 days of account opening. Online-only offer; issuer says it may not be available if you leave the page, visit a financial center, or call.",
-      "offerType": "public",
+      "verifiedDate": "2026-11-16",
+      "offerNote": "Public source reviewed 2026-11-16: $500 cash back after $5,000 in purchases in the first 90 days from account opening; $0 annual fee. Offer applies to the linked channel and can change.",
+      "offerType": "public-current",
       "confidence": "official-issuer",
       "tags": [
         "cash",
         "bofa"
       ],
-      "spendQualifiedBonus": 500,
-      "spendPeriod": "90 days of account opening",
+      "spendPeriod": "90 days",
       "issuerUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-unlimited-cash-rewards",
-      "issuerUrlVerified": "2026-09-26",
+      "issuerUrlVerified": "2026-11-16",
       "monitorExpected": [
         "500",
-        "5,000",
-        "90 days",
-        "no annual fee"
+        "5000",
+        "90 days"
       ],
       "offerState": "verified-current",
       "promoNote": "Ongoing rewards: unlimited 1.5% cash back on purchases; eligible Preferred Rewards for Business members can earn a relationship bonus, up to 2.62% at Platinum Honors.",
       "histResearchDate": "2026-09-27",
       "histStatus": "tracked-catalog-history",
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 500,
+        "unit": "cash",
+        "spend": 5000,
+        "spendPeriod": "90 days of account opening",
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-26",
+        "offerNote": "Official Bank of America online offer: $500 cash rewards bonus after at least $5,000 in purchases within 90 days of account opening. Online-only offer; issuer says it may not be available if you leave the page, visit a financial center, or call.",
+        "offerExpires": null,
+        "issuerUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-unlimited-cash-rewards"
+      },
+      "offerSourceUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-unlimited-cash-rewards",
+      "offerSourceCheckedDate": "2026-11-16",
+      "bonusIsUpTo": false,
+      "offerRequirementType": "standard-spend"
     },
     {
       "id": 7402,
@@ -1156,29 +1669,45 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-26",
-      "offerNote": "Official Bank of America online offer: $500 cash rewards bonus after at least $5,000 in purchases within 90 days of account opening. Online-only offer; issuer says it may not be available if you leave the page, visit a financial center, or call.",
-      "offerType": "public",
+      "verifiedDate": "2026-11-16",
+      "offerNote": "Public source reviewed 2026-11-16: $500 cash back after $5,000 in purchases in the first 90 days from account opening; $0 annual fee. Offer applies to the linked channel and can change.",
+      "offerType": "public-current",
       "confidence": "official-issuer",
       "tags": [
         "cash",
         "bofa"
       ],
-      "spendQualifiedBonus": 500,
-      "spendPeriod": "90 days of account opening",
+      "spendPeriod": "90 days",
       "issuerUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-customized-cash-rewards",
-      "issuerUrlVerified": "2026-09-26",
+      "issuerUrlVerified": "2026-11-16",
       "monitorExpected": [
         "500",
-        "5,000",
-        "90 days",
-        "no annual fee"
+        "5000",
+        "90 days"
       ],
       "offerState": "verified-current",
       "promoNote": "Ongoing rewards: 3% cash back in a choice category, 2% on dining, and 1% on other purchases. The 3% and 2% rates apply to the first $50,000 in combined choice-category/dining purchases each calendar year, then 1%; eligible Preferred Rewards for Business members can earn more.",
       "histResearchDate": "2026-09-27",
       "histStatus": "tracked-catalog-history",
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 500,
+        "unit": "cash",
+        "spend": 5000,
+        "spendPeriod": "90 days of account opening",
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-26",
+        "offerNote": "Official Bank of America online offer: $500 cash rewards bonus after at least $5,000 in purchases within 90 days of account opening. Online-only offer; issuer says it may not be available if you leave the page, visit a financial center, or call.",
+        "offerExpires": null,
+        "issuerUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-customized-cash-rewards"
+      },
+      "offerSourceUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-customized-cash-rewards",
+      "offerSourceCheckedDate": "2026-11-16",
+      "bonusIsUpTo": false,
+      "offerRequirementType": "standard-spend"
     },
     {
       "id": 7403,
@@ -1192,29 +1721,45 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-26",
+      "verifiedDate": "2026-11-16",
       "tags": [
         "travel",
         "bofa"
       ],
-      "spendQualifiedBonus": 50000,
-      "spendPeriod": "first 90 days of account opening",
+      "spendPeriod": "90 days",
       "issuerUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-travel-rewards",
-      "issuerUrlVerified": "2026-09-26",
+      "issuerUrlVerified": "2026-11-16",
       "monitorExpected": [
-        "50,000",
-        "5,000",
-        "90 days",
-        "no annual fee"
+        "50000",
+        "5000",
+        "90 days"
       ],
       "offerState": "verified-current",
-      "offerType": "public",
+      "offerType": "public-current",
       "confidence": "official-issuer",
-      "offerNote": "Official Bank of America online offer: 50,000 bonus points after at least $5,000 in purchases in the first 90 days of account opening; issuer states the bonus can be redeemed for a $500 statement credit toward travel or dining purchases.",
+      "offerNote": "Public source reviewed 2026-11-16: 50,000 BofA points after $5,000 in purchases in the first 90 days from account opening; $0 annual fee. Offer applies to the linked channel and can change.",
       "promoNote": "Ongoing rewards: 3 points per $1 on travel booked through the Bank of America Travel Center and 1.5 points per $1 on other purchases; eligible Preferred Rewards for Business members can earn more.",
       "histResearchDate": "2026-09-27",
       "histStatus": "research-pending",
-      "monitoringStatus": "source-configured"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 50000,
+        "unit": "BofA points",
+        "spend": 5000,
+        "spendPeriod": "first 90 days of account opening",
+        "af": 0,
+        "verified": true,
+        "verifiedDate": "2026-09-26",
+        "offerNote": "Official Bank of America online offer: 50,000 bonus points after at least $5,000 in purchases in the first 90 days of account opening; issuer states the bonus can be redeemed for a $500 statement credit toward travel or dining purchases.",
+        "offerExpires": null,
+        "issuerUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-travel-rewards"
+      },
+      "offerSourceUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-travel-rewards",
+      "offerSourceCheckedDate": "2026-11-16",
+      "bonusIsUpTo": false,
+      "offerRequirementType": "standard-spend"
     },
     {
       "id": 7404,
@@ -1228,8 +1773,8 @@
       "af": 95,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-09-21",
-      "offerNote": "Limited-time offer; annual fee is $70 company + $25 per card.",
+      "verifiedDate": "2026-11-16",
+      "offerNote": "Public source reviewed 2026-11-16: 70,000 Atmos points + $99 companion fare after $4,000 in purchases in the first 90 days from account opening; $95 annual fee. Offer applies to the linked channel and can change. Fee is $70 per company plus $25 per card. Welcome offer includes a $99 Companion Fare plus taxes and fees from $23; its value is excluded from the numeric bonus.",
       "tags": [
         "airline",
         "atmos"
@@ -1241,7 +1786,38 @@
       "histSourceLabel": "Alaska Airlines announcement; The Points Guy offer history",
       "histSourceUrl": "https://news.alaskaair.com/loyalty/introducing-atmos-for-business-an-innovative-ecosystem-for-business-travel-that-rewards-companies-and-their-employees/",
       "histAlternativeNote": "80,000-point public offer documented by Alaska Airlines; public spend requirement and offer periods corroborated by The Points Guy. Higher special-channel offers are not included in this public comparison.",
-      "monitoringStatus": "source-needed"
+      "monitoringStatus": "source-configured",
+      "lastReviewAttemptDate": "2026-11-16",
+      "reviewOwner": "catalog-maintainer",
+      "previousOfferSnapshot": {
+        "bonus": 70000,
+        "unit": "Atmos points + $99 companion fare",
+        "spend": 4000,
+        "spendPeriod": null,
+        "af": 95,
+        "verified": true,
+        "verifiedDate": "2026-09-21",
+        "offerNote": "Limited-time offer; annual fee is $70 company + $25 per card.",
+        "offerExpires": null,
+        "issuerUrl": null
+      },
+      "spendPeriod": "90 days",
+      "issuerUrl": "https://business.bankofamerica.com/en/credit-cards/travel",
+      "issuerUrlVerified": "2026-11-16",
+      "offerSourceUrl": "https://business.bankofamerica.com/en/credit-cards/travel",
+      "offerSourceCheckedDate": "2026-11-16",
+      "offerState": "verified-current",
+      "offerType": "public-current",
+      "confidence": "official-issuer",
+      "bonusIsUpTo": false,
+      "monitorExpected": [
+        "70000",
+        "4000",
+        "90 days"
+      ],
+      "offerRequirementType": "standard-spend",
+      "annualFeeNote": "$70 company fee plus $25 per card; $95 assumes one card.",
+      "additionalRequirement": "$99 Companion Fare plus taxes and fees from $23 accompanies the welcome offer; no cash value assigned. Anniversary companion fare separately requires $6,000 in annual purchases."
     },
     {
       "id": 7501,
@@ -1823,7 +2399,7 @@
       "status": "open",
       "verified": true,
       "verifiedDate": "2026-10-03",
-      "offerNote": "Official Chase page labels the current 80,000-mile offer \u201cOUR BEST OFFER RETURNS\u201d: 70,000 miles after $3,000 in purchases in the first 3 months, plus 10,000 miles after adding an authorized user in the first 3 months. $0 intro annual fee first year, then $150. Higher special-channel offers are tracked separately.",
+      "offerNote": "Official Chase page labels the current 80,000-mile offer “OUR BEST OFFER RETURNS”: 70,000 miles after $3,000 in purchases in the first 3 months, plus 10,000 miles after adding an authorized user in the first 3 months. $0 intro annual fee first year, then $150. Higher special-channel offers are tracked separately.",
       "tags": [
         "airline",
         "united"
@@ -2354,7 +2930,7 @@
       "status": "open",
       "verified": true,
       "verifiedDate": "2026-10-02",
-      "offerNote": "Official Chase best-ever offer: up to 115,000 Aeroplan points \u2014 75,000 after $4,000 in purchases in the first 3 months, plus 40,000 after $20,000 total purchases in the first 12 months. $195 annual fee.",
+      "offerNote": "Official Chase best-ever offer: up to 115,000 Aeroplan points — 75,000 after $4,000 in purchases in the first 3 months, plus 40,000 after $20,000 total purchases in the first 12 months. $195 annual fee.",
       "tags": [
         "airline",
         "aeroplan"
@@ -3454,7 +4030,7 @@
           "rate": 6,
           "category": "restaurants during Citi Nights",
           "type": "time-window",
-          "capNote": "Citi Nights applies Friday and Saturday from 6 PM\u20136 AM ET under current terms."
+          "capNote": "Citi Nights applies Friday and Saturday from 6 PM–6 AM ET under current terms."
         },
         {
           "rate": 3,
@@ -4727,7 +5303,7 @@
         "50000": 3,
         "100000": 4
       },
-      "relationshipRequirement": "U.S. Bank Smartly Savings plus qualifying balances in U.S. Bank Smartly Checking and/or Safe Debit accounts are required for the 2.5%\u20134% tiers.",
+      "relationshipRequirement": "U.S. Bank Smartly Savings plus qualifying balances in U.S. Bank Smartly Checking and/or Safe Debit accounts are required for the 2.5%–4% tiers.",
       "offerState": "no-standard-public-sub",
       "offerType": "public",
       "confidence": "official-issuer",
