@@ -1,25 +1,8 @@
 {
-  "checkedAt": "2026-11-17T22:20:50.744Z",
-  "autoUpdated": 1,
+  "checkedAt": "2026-11-18T21:55:06.182Z",
+  "autoUpdated": 0,
   "needsHumanReview": 91,
-  "updates": [
-    {
-      "id": 8008,
-      "issuer": "Chase",
-      "name": "United Explorer",
-      "before": {
-        "bonus": 70000,
-        "spend": 3000,
-        "spendPeriod": "3 months",
-        "af": 150
-      },
-      "after": {
-        "bonus": 70000,
-        "spend": 3000,
-        "af": 0
-      }
-    }
-  ],
+  "updates": [],
   "reviews": [
     {
       "id": 7003,
@@ -385,7 +368,7 @@
       "id": 8205,
       "issuer": "Citi",
       "name": "Custom Cash",
-      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; Verification is 57 days old."
+      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; Verification is 58 days old."
     },
     {
       "id": 8206,

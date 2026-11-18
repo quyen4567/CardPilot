@@ -1,9 +1,9 @@
 {
-  "catalogVersion": "2026-11-16.3-confirmed-public-release",
-  "checkedAt": "2026-11-17T22:20:50.744Z",
+  "catalogVersion": "2026-11-17.1",
+  "checkedAt": "2026-11-18T21:55:06.182Z",
   "counts": {
-    "verified": 13,
-    "needs_review": 92,
+    "verified": 14,
+    "needs_review": 91,
     "blocked_by_issuer": 0,
     "broken": 0,
     "unmonitored": 0
@@ -26,23 +26,6 @@
         "af": null,
         "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
         "reason": "Offer pattern requires review"
-      }
-    },
-    {
-      "id": 8008,
-      "issuer": "Chase",
-      "name": "United Explorer",
-      "status": "needs_review",
-      "url": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
-      "detectedOffer": {
-        "confidence": "high",
-        "changed": true,
-        "bonus": 70000,
-        "spend": 3000,
-        "spendPeriod": "3 months",
-        "af": 0,
-        "snippet": "70,000 Miles: To qualify, you must make $3,000 in purchases during the first 3 months from account opening",
-        "reason": "Unique direct offer pattern detected"
       }
     },
     {
@@ -124,7 +107,7 @@
         "snippet": "Earn $750 cash back after you spend $6,000 on purchases in the first 3 months after account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7002,
@@ -152,7 +135,7 @@
         "snippet": "Earn $750 cash back after you spend $6,000 on purchases in the first 3 months after account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7003,
@@ -182,7 +165,7 @@
         "snippet": "Earn 100,000 bonus points after you spend $8,000 on purchases in the first 3 months after account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7004,
@@ -212,7 +195,7 @@
         "snippet": "Earn $1,000 bonus cash back after you spend $10,000 on purchases in your first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7005,
@@ -242,7 +225,7 @@
         "snippet": "200,000 points after you spend $30,000 on purchases in your first 6 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7006,
@@ -272,7 +255,7 @@
         "snippet": "Earn 70,000 Bonus Points after you spend $7,000 on purchases in the first 3 months of account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7007,
@@ -310,7 +293,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7008,
@@ -340,7 +323,7 @@
         "snippet": "Earn 80,000 points after you spend $5,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7009,
@@ -370,7 +353,7 @@
         "snippet": "Earn 60,000 points after you spend $3,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7010,
@@ -400,7 +383,7 @@
         "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7011,
@@ -430,7 +413,7 @@
         "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7101,
@@ -451,7 +434,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7102,
@@ -472,7 +455,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7104,
@@ -493,7 +476,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7105,
@@ -514,7 +497,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7106,
@@ -535,7 +518,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7110,
@@ -561,7 +544,7 @@
         "snippet": "75,000 Bonus Points after you use your new Card to make $6,000 in purchases within the first 6 months of Card Membership",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7111,
@@ -587,7 +570,7 @@
         "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7201,
@@ -612,7 +595,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7202,
@@ -637,7 +620,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7203,
@@ -665,7 +648,7 @@
         "snippet": "50,000 bonus miles p]:grv-tw-m-none\"> Earn a one-time bonus of 50,000 miles once you spend $4,500 on purchases within the first 3 months from account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7204,
@@ -690,7 +673,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7205,
@@ -715,7 +698,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7206,
@@ -740,7 +723,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7207,
@@ -761,7 +744,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7301,
@@ -786,7 +769,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7302,
@@ -807,7 +790,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7401,
@@ -832,7 +815,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7402,
@@ -857,7 +840,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7403,
@@ -882,7 +865,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7404,
@@ -907,7 +890,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7501,
@@ -932,7 +915,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7502,
@@ -953,7 +936,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7601,
@@ -978,7 +961,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 7701,
@@ -1036,7 +1019,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8001,
@@ -1070,7 +1053,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8002,
@@ -1104,7 +1087,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8003,
@@ -1128,7 +1111,7 @@
         "snippet": "Earn a $200 bonus Earn a $200 bonus after you spend $500 on purchases in the first 3 months from account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8004,
@@ -1162,7 +1145,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8005,
@@ -1188,7 +1171,7 @@
         "snippet": "Earn 80,000 bonus points * 2X points on Southwest Airlines purchases and on the first $5,000 in combined purchases at gas stations and grocery stores per year * 1X points on all other purchases * NEW CARDMEMBER OFFER Earn 80,000 bonus points after you spend $1,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8006,
@@ -1214,7 +1197,7 @@
         "snippet": "Earn 85,000 bonus points * 3X points on Southwest Airlines purchases * 2X points on the first $8,000 in combined purchases at grocery stores and restaurants per year * NEW CARDMEMBER OFFER Earn 85,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8007,
@@ -1237,28 +1220,31 @@
         "spend": 3000,
         "spendPeriod": "3 months",
         "af": null,
-        "snippet": "Earn 90,000 bonus points * 4X points on Southwest Airlines purchases * 2X points at gas stations and restaurants * NEW CARDMEMBER OFFER Earn 90,000 bonus points after you spend $3,000 on purchases in the first 3 months from account opening",
+        "snippet": "Earn 90,000 bonus points * 4X points on Southwest Airlines purchases * 2X points at gas stations and restaurants * NEW CARDMEMBER OFFER Earn 90,000 bonus points after you spend $3,000 on purchases in the first 3 months from account opening * AT A GLANCE First checked bag free",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8008,
       "issuer": "Chase",
       "name": "United Explorer",
-      "status": "needs_review",
+      "status": "verified",
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
       "source": "direct-product-page",
-      "expectedTerms": [],
-      "missingTerms": [],
-      "issues": [
-        "Offer terms could not be independently extracted with high confidence."
+      "expectedTerms": [
+        "70,000",
+        "3,000",
+        "3 months",
+        "no annual fee"
       ],
+      "missingTerms": [],
+      "issues": [],
       "detectedOffer": {
         "confidence": "high",
-        "changed": true,
+        "changed": false,
         "bonus": 70000,
         "spend": 3000,
         "spendPeriod": "3 months",
@@ -1266,7 +1252,7 @@
         "snippet": "70,000 Miles: To qualify, you must make $3,000 in purchases during the first 3 months from account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8009,
@@ -1292,7 +1278,7 @@
         "snippet": "80,000 Miles: To qualify, you must make $4,000 in purchases during the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8010,
@@ -1318,7 +1304,7 @@
         "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8011,
@@ -1342,7 +1328,7 @@
         "snippet": "40,000 Miles: To qualify, you must make $1,000 in purchases during the first 3 months from account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8012,
@@ -1363,7 +1349,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8013,
@@ -1397,7 +1383,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8014,
@@ -1427,11 +1413,11 @@
             "bonus": 15000,
             "spend": 15000,
             "spendPeriod": null,
-            "snippet": "Earn 15,000 bonus points Earn 15,000 bonus points after you spend $15,000 on purchases each calendar year"
+            "snippet": "15,000 bonus points after spending $15,000 in purchases with your IHG One Rewards Premier Credit Card each calendar year"
           }
         ]
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8015,
@@ -1455,7 +1441,7 @@
         "snippet": "Earn 45,000 Bonus Points Earn 45,000 Bonus Points after spending $1,000 on eligible purchases within 3 months of account opening with the Marriott Bonvoy Bold ® Credit Card",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8016,
@@ -1476,7 +1462,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8017,
@@ -1502,7 +1488,7 @@
         "snippet": "Earn 85,000 Bonus Points after you spend $4,000 in purchases in your first 3 months from your account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8018,
@@ -1528,7 +1514,7 @@
         "snippet": "60,000 Points: To qualify, you must make $3,000 in purchases during the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8019,
@@ -1549,7 +1535,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8020,
@@ -1570,7 +1556,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8021,
@@ -1591,7 +1577,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8109,
@@ -1617,7 +1603,7 @@
         "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8110,
@@ -1643,7 +1629,7 @@
         "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8111,
@@ -1669,7 +1655,7 @@
         "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8112,
@@ -1695,7 +1681,7 @@
         "snippet": "150000 Bonus Points plus a $250 statement credit after you use your new Card to make $5000 in purchases within the first 6 months of Card Membership",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8113,
@@ -1721,7 +1707,7 @@
         "snippet": "100000 Bonus Points after you use your new Card to make $6000 in purchases within the first 6 months of Card Membership.† $650 Annual Fee*",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8115,
@@ -1742,7 +1728,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8205,
@@ -1758,14 +1744,14 @@
       "issues": [
         "Offer has not been verified yet.",
         "Current public welcome offer is not yet verified.",
-        "Verification is 57 days old."
+        "Verification is 58 days old."
       ],
       "detectedOffer": {
         "confidence": "review",
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8206,
@@ -1786,7 +1772,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8207,
@@ -1807,7 +1793,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8208,
@@ -1828,7 +1814,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8209,
@@ -1849,7 +1835,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8302,
@@ -1873,7 +1859,7 @@
         "snippet": "75,000 bonus miles once you spend $4,000 on purchases within the first 3 months from account opening – that’s more than $1,000 in travel value",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8303,
@@ -1897,7 +1883,7 @@
         "snippet": "20,000 bonus miles once you spend $500 on purchases within the first 3 months from account opening 1 Low Intro APR 0% intro APR for 15 months on purchases and balance transfers; 18.74% - 28.74% variable APR after that; Balance transfer fee applies",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8304,
@@ -1918,7 +1904,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8305,
@@ -1939,7 +1925,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8401,
@@ -1960,7 +1946,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8402,
@@ -1981,7 +1967,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8403,
@@ -2002,7 +1988,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8404,
@@ -2023,7 +2009,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8405,
@@ -2044,7 +2030,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8406,
@@ -2065,7 +2051,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8407,
@@ -2086,7 +2072,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8408,
@@ -2107,7 +2093,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8501,
@@ -2131,7 +2117,7 @@
         "snippet": "Earn 20,000 bonus points when you spend $1,000 in purchases in the first 3 months 1 Plus, earn 3X points for many ways to keep life in motion",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8502,
@@ -2155,7 +2141,7 @@
         "snippet": "Earn 60,000 bonus points when you spend $4,000 in purchases in the first 3 months 1 - that’s $600 toward your next trip $95 Annual Fee Important Credit Terms Apply now Offers may differ from time to time and depend on the marketing channel",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8503,
@@ -2176,7 +2162,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8505,
@@ -2197,7 +2183,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8506,
@@ -2218,7 +2204,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8507,
@@ -2239,7 +2225,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8601,
@@ -2260,7 +2246,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8602,
@@ -2281,7 +2267,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8603,
@@ -2302,7 +2288,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8604,
@@ -2326,7 +2312,7 @@
         "snippet": "Get a $200 bonus For a limited time, earn a $200 rewards bonus after you spend $1,000 in eligible purchases within the first 90 days of account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8606,
@@ -2347,7 +2333,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8703,
@@ -2405,7 +2391,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8704,
@@ -2463,7 +2449,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8705,
@@ -2521,7 +2507,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8816,
@@ -2542,7 +2528,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8817,
@@ -2566,7 +2552,7 @@
         "snippet": "50,000 points and Gold Status After you spend $4,000 on purchases (excluding rent or mortgage) in your first 90 days",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8802,
@@ -2592,7 +2578,7 @@
         "snippet": "Earn a $200 Bonus Earn a $200 bonus statement credit when you spend $500 in the first 3 months",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8803,
@@ -2613,7 +2599,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8804,
@@ -2634,7 +2620,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8815,
@@ -2655,7 +2641,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8807,
@@ -2676,7 +2662,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8809,
@@ -2700,7 +2686,7 @@
         "snippet": "earn 50,000 bonus points ( a $500 value ) when you spend $4,000 in your first 90 days ",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8901,
@@ -2721,7 +2707,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8902,
@@ -2742,7 +2728,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8903,
@@ -2763,7 +2749,7 @@
         "reason": "Detected 0 unique bonus/spend pairs",
         "candidates": []
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     },
     {
       "id": 8022,
@@ -2793,11 +2779,11 @@
             "bonus": 20000,
             "spend": 15000,
             "spendPeriod": null,
-            "snippet": "20,000 bonus points after spending $15,000 in purchases with your IHG One Rewards Premier Select Credit Card each calendar year"
+            "snippet": "Earn 20,000 bonus points Earn 20,000 bonus points after you spend $15,000 on purchases each calendar year"
           }
         ]
       },
-      "checkedAt": "2026-11-17T22:20:50.744Z"
+      "checkedAt": "2026-11-18T21:55:06.182Z"
     }
   ]
 }
