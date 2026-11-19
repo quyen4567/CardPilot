@@ -149,6 +149,8 @@
     .shortlist-table th:first-child{width:40%}
     @media(max-width:350px){.rec-buttons{grid-template-columns:1fr}}
     .cash-payoff{background:#edf4e5;border:1px solid #d5e3cb;border-radius:16px;padding:13px 15px;margin:10px 0;color:#204533}
+  .cash-payoff-details{margin-top:10px}
+  .cash-payoff-details>summary{display:inline-block;text-align:left}
   .cash-payoff strong{display:block;font-size:1.35rem;line-height:1.25;margin:4px 0}
   .cash-payoff p{margin:4px 0;font-size:.875rem;line-height:1.45}
   .cash-payoff small{display:block;margin-top:6px;color:#456351;font-size:.8125rem}
@@ -1897,12 +1899,9 @@ function cashBonusPayoffHTML(o){
      (o.offerRequirementType && o.offerRequirementType!=='standard-spend') ||
      /targeted|personalized|up.to/i.test(`${o.offerType||''} ${o.offerState||''}`))return '';
   const net=o.bonus-fee;
-  const headline=net>0?'The bonus does the heavy lifting.':net===0?'The bonus covers the fee.':'The fee takes the lead.';
   const outcome=net>=0?`${fmt(net)} after the first-year fee`:`${fmt(-net)} first-year cost after the bonus`;
-  const renewal=Number.isFinite(o.af)&&o.af!==fee?` Then ${fmt(o.af)} per year.`:'';
-  return `<div class="cash-payoff"><p>${headline}</p><strong>${outcome}</strong>
-    <p>${fmt(o.bonus)} cash back bonus − ${fmt(fee)} first-year fee.${renewal}</p>
-    <p>${htmlSafe(currentSpendLabel(o))} to earn the bonus.</p>
+  return `<div class="cash-payoff"><strong>${outcome}</strong>
+    <p>${fmt(o.bonus)} cash back bonus − ${fmt(fee)} first-year fee.</p>
     <small>Bonus and card fee only. Rewards on purchases are extra.</small></div>`;
 }
 function calmOfferCard(x,rank=0,showReason=false){
@@ -1910,8 +1909,9 @@ function calmOfferCard(x,rank=0,showReason=false){
   const reason=fit.reasons?.find(r=>!r.includes('5/24'))||(showReason?fit.label:'Matches the goals and limits in your search.');
   const caution=fit.cautions?.[0];
   const payoff=x.payoff;
-  return `<article class="calm-offer ${rank===1?'best-offer':''}">${rank?`<div class="offer-eyebrow">${rank===1?'THE FRONT-RUNNER':`ALSO IN THE RUNNING · ${rank}`}</div>`:''}<div class="issuer-label">${htmlSafe(o.issuer)} · ${htmlSafe(o.type)}</div><h3>${htmlSafe(o.name)}</h3>${!checked?'<div class="pending-label">Offer needs verification</div>':''}${payoff||`<div class="offer-reward">${htmlSafe(friendlyOfferLabel(o))}</div>`}${checked?offerVisualBadgesHTML(o):''}${earningPreview(o)}${payoff?'':`<div class="offer-metrics"><div><span>To earn the bonus</span><b>${htmlSafe(o.spend===0?'No minimum purchase amount':currentSpendLabel(o))}</b></div><div><span>Annual fee</span><b>${annualFeeLabel(o)}</b></div></div>`}${(rank||showReason)?`<p class="fit-line">${htmlSafe(reason)}</p>`:''}${caution?`<p class="essential-caution">${htmlSafe(caution)}</p>`:''}<div class="calm-card-actions">${saveCardButtonHTML(o)}<button class="btn secondary" onclick="showView('savedCardsView')">Compare saved</button></div>
+  return `<article class="calm-offer ${rank===1?'best-offer':''}">${rank?`<div class="offer-eyebrow">${rank===1?'THE FRONT-RUNNER':`ALSO IN THE RUNNING · ${rank}`}</div>`:''}<div class="issuer-label">${htmlSafe(o.issuer)} · ${htmlSafe(o.type)}</div><h3>${htmlSafe(o.name)}</h3>${!checked?'<div class="pending-label">Offer needs verification</div>':''}<div class="offer-reward">${htmlSafe(friendlyOfferLabel(o))}</div>${checked?offerVisualBadgesHTML(o):''}${earningPreview(o)}<div class="offer-metrics"><div><span>To earn the bonus</span><b>${htmlSafe(o.spend===0?'No minimum purchase amount':currentSpendLabel(o))}</b></div><div><span>Annual fee</span><b>${annualFeeLabel(o)}</b></div></div>${(rank||showReason)?`<p class="fit-line">${htmlSafe(reason)}</p>`:''}${caution?`<p class="essential-caution">${htmlSafe(caution)}</p>`:''}<div class="calm-card-actions">${saveCardButtonHTML(o)}<button class="btn secondary" onclick="showView('savedCardsView')">Compare saved</button></div>
   ${o.status==='closed-new'?'':issuerLinkHTML(o)}
+  ${payoff?`<details class="cash-payoff-details"><summary class="btn ghost">See the math</summary>${payoff}</details>`:''}
   <details class="calm-details"><summary>Offer details</summary><div class="detail-body">${bonusValueText(o)}${subReturnText(o)}${cashPromoText(o)}${categoryCashBackText(o)}${pointEarningText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${lifestyleGuidanceHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}${rank?five24AfterApprovalHTML(o):''}<p class="small">${htmlSafe(o.offerNote||'')}</p><p class="small">${htmlSafe(historicalOfferText(o))}</p>${cardHistoryActionsHTML(o)}<p class="small">${checked?'Checked '+htmlSafe(o.verifiedDate):'Terms need verification'} · Confirm the offer and eligibility with the issuer.</p></div></details></article>`;
 }
 function apply(){
