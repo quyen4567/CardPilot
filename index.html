@@ -1576,7 +1576,7 @@ function issuerLinkHTML(o){
   try{address=new URL(dest.url);}catch{return '';}
   if(address.protocol!=='https:')return '';
   const label=dest.exact?'View offer / Apply at issuer':'Visit official issuer site';
-  return `<a class="btn ghost issuer-link" href="${htmlSafe(address.href)}" target="_top" rel="noreferrer">${label}</a>`;
+  return `<a class="btn ghost issuer-link" href="${htmlSafe(address.href)}" referrerpolicy="no-referrer">${label}</a>`;
 }
 
 
@@ -1889,7 +1889,8 @@ function calmOfferCard(x,rank=0,showReason=false){
   const reason=fit.reasons?.find(r=>!r.includes('5/24'))||(showReason?fit.label:'Matches the goals and limits in your search.');
   const caution=fit.cautions?.[0];
   return `<article class="calm-offer ${rank===1?'best-offer':''}">${rank?`<div class="offer-eyebrow">${rank===1?'THE FRONT-RUNNER':`ALSO IN THE RUNNING · ${rank}`}</div>`:''}<div class="issuer-label">${htmlSafe(o.issuer)} · ${htmlSafe(o.type)}</div><h3>${htmlSafe(o.name)}</h3>${!checked?'<div class="pending-label">Offer needs verification</div>':''}<div class="offer-reward">${htmlSafe(friendlyOfferLabel(o))}</div>${checked?offerVisualBadgesHTML(o):''}${earningPreview(o)}<div class="offer-metrics"><div><span>To earn the bonus</span><b>${htmlSafe(o.spend===0?'No minimum purchase amount':currentSpendLabel(o))}</b></div><div><span>Annual fee</span><b>${annualFeeLabel(o)}</b></div></div>${(rank||showReason)?`<p class="fit-line">${htmlSafe(reason)}</p>`:''}${caution?`<p class="essential-caution">${htmlSafe(caution)}</p>`:''}<div class="calm-card-actions">${saveCardButtonHTML(o)}<button class="btn secondary" onclick="showView('savedCardsView')">Compare saved</button></div>
-  <details class="calm-details"><summary>Offer details</summary><div class="detail-body">${bonusValueText(o)}${subReturnText(o)}${cashPromoText(o)}${categoryCashBackText(o)}${pointEarningText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${lifestyleGuidanceHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}${rank?five24AfterApprovalHTML(o):''}<p class="small">${htmlSafe(o.offerNote||'')}</p><p class="small">${htmlSafe(historicalOfferText(o))}</p>${cardHistoryActionsHTML(o)}${o.status==='closed-new'?'':issuerLinkHTML(o)}<p class="small">${checked?'Checked '+htmlSafe(o.verifiedDate):'Terms need verification'} · Confirm the offer and eligibility with the issuer.</p></div></details></article>`;
+  ${o.status==='closed-new'?'':issuerLinkHTML(o)}
+  <details class="calm-details"><summary>Offer details</summary><div class="detail-body">${bonusValueText(o)}${subReturnText(o)}${cashPromoText(o)}${categoryCashBackText(o)}${pointEarningText(o)}${catchAllCashText(o)}${personalReportingWarningHTML(o)}${perksHTML(o)}${lifestyleGuidanceHTML(o)}${bofaOngoingText(o)}${bonusEligibilityText(o)}${rank?five24AfterApprovalHTML(o):''}<p class="small">${htmlSafe(o.offerNote||'')}</p><p class="small">${htmlSafe(historicalOfferText(o))}</p>${cardHistoryActionsHTML(o)}<p class="small">${checked?'Checked '+htmlSafe(o.verifiedDate):'Terms need verification'} · Confirm the offer and eligibility with the issuer.</p></div></details></article>`;
 }
 function apply(){
   if(data.profile.editingPreferences)return `<button class="text-link back-link" onclick="data.profile.editingPreferences=false;save();render();showView('applyView')">← Back to matches</button>`+advancedOnboarding();
