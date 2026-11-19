@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-11-18.1",
-  "generatedAt": "2026-11-18T21:55:24.784Z",
+  "catalogVersion": "2026-11-19.1",
+  "generatedAt": "2026-11-19T13:17:11.301Z",
   "cards": [
     {
       "id": 7001,
@@ -2421,12 +2421,12 @@
       "unit": "United miles",
       "hist": 80000,
       "spend": 3000,
-      "af": 0,
+      "af": 150,
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-11-18",
-      "offerNote": "Automatically verified on the issuer product page 2026-11-17. Current public offer: 70,000 United miles after 3,000 in qualifying spend within 3 months. No annual fee. Offers can vary by channel and change over time.",
+      "verifiedDate": "2026-11-16",
+      "offerNote": "Official public channel reviewed 2026-11-16: 70,000 United miles; $3,000 qualifying purchases within 3 months; $0 annual fee for the first year, then $150 annually. An additional 10,000 miles/points requires an authorized user within 3 months and is excluded from the base bonus. PQP, where offered, is not redeemable miles.",
       "tags": [
         "airline",
         "united"
@@ -2435,16 +2435,11 @@
       "offerState": "verified-current",
       "issuerUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
       "issuerUrlVerified": "2026-11-16",
-      "monitorExpected": [
-        "70,000",
-        "3,000",
-        "3 months",
-        "no annual fee"
-      ],
+      "monitorExpected": [],
       "histResearchDate": "2026-10-03",
       "histStatus": "verified-comparable-public-high",
       "offerType": "public-channel-specific",
-      "confidence": "high",
+      "confidence": "official-public-source",
       "histPublicStatus": "current",
       "histPublicDate": "2026-10-03",
       "histComparable": true,
@@ -2490,16 +2485,7 @@
       "firstYearAnnualFee": 0,
       "offerRequirementType": "split",
       "additionalRequirement": "Add an authorized user within the first 3 months; see linked channel terms.",
-      "maximumCombinedBonus": 80000,
-      "lastKnownOffer": {
-        "bonus": 70000,
-        "spend": 3000,
-        "spendPeriod": "3 months",
-        "af": 150,
-        "verifiedDate": "2026-11-16",
-        "source": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer"
-      },
-      "lastSuccessfulCheck": "2026-11-18T21:55:06.182Z"
+      "maximumCombinedBonus": 80000
     },
     {
       "id": 8009,

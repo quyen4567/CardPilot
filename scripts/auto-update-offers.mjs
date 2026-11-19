@@ -1,4 +1,5 @@
 import fs from 'fs';
+import {sharedOfferSources,sourceKey} from './offer-source.mjs';
 
 const catalogPath=process.argv[2]||'cards.json';
 const reportPath=process.argv[3]||'offer-report.json';
@@ -9,6 +10,7 @@ const byId=new Map((report.results||[]).map(r=>[String(r.id),r]));
 const updates=[];
 const reviews=[];
 const catalogBefore=JSON.stringify(catalog);
+const sharedSources=sharedOfferSources(catalog.cards||[]);
 if(!Number.isFinite(Date.parse(report.checkedAt)) || Date.parse(report.checkedAt)>Date.now()+5*60*1000 || Date.now()-Date.parse(report.checkedAt)>24*60*60*1000 || report.catalogVersion!==catalog.catalogVersion) throw new Error('Offer report is stale or belongs to another catalog.');
 
 function money(n){return Number(n).toLocaleString('en-US');}
@@ -25,6 +27,16 @@ for(const card of catalog.cards||[]){
   const r=byId.get(String(card.id));
   if(!r||!card.issuerUrl){reviews.push({id:card.id,issuer:card.issuer,name:card.name,reason:'Issuer monitoring source is missing; offer needs source review.'});continue;}
   const d=r.detectedOffer;
+  if([card.issuerUrl,r.finalUrl].some(url=>sharedSources.has(sourceKey(url)))){
+    reviews.push({id:card.id,issuer:card.issuer,name:card.name,
+      reason:'Shared issuer page requires manual offer review.',detectedOffer:d});
+    continue;
+  }
+  if(d?.confidence==='high' && (d.af!==card.af || (d.firstYearAnnualFee??null)!==(card.firstYearAnnualFee??null))){
+    reviews.push({id:card.id,issuer:card.issuer,name:card.name,
+      reason:'Ongoing and first-year annual fees require manual review when they differ from the catalog.',detectedOffer:d});
+    continue;
+  }
   if(r.status==='verified' && r.url===card.issuerUrl && d?.confidence==='high' && !d.changed){
     card.verified=true;
     card.verifiedDate=today;
@@ -38,7 +50,7 @@ for(const card of catalog.cards||[]){
   const safe=d.confidence==='high' && d.spendPeriod && Number.isFinite(d.bonus) && Number.isFinite(d.spend) && d.bonus>0 && d.spend>0 && Number.isFinite(d.af) && direct && r.url===card.issuerUrl && r.httpStatus===200 && !/up to|targeted|personalized/i.test(String(card.offerType||'')+' '+String(card.offerState||''));
   if(!safe){ reviews.push({id:card.id,issuer:card.issuer,name:card.name,reason:'Detected change did not meet strict auto-update rules',detectedOffer:d}); continue; }
   // Do not auto-update tiered/multi-part or zero-offer structures.
-  if(['up-to','qualifying-activities','personalized'].includes(card.offerRequirementType) || /statement credit|certificate|free night|\+ credit/i.test(card.unit||'') || (card.offerExpires && card.offerExpires<today) || Number(card.bonus||0)===0){ reviews.push({id:card.id,issuer:card.issuer,name:card.name,reason:'Complex offer structure requires review',detectedOffer:d}); continue; }
+  if(['up-to','qualifying-activities','personalized','split'].includes(card.offerRequirementType) || /statement credit|certificate|free night|\+ credit/i.test(card.unit||'') || (card.offerExpires && card.offerExpires<today) || Number(card.bonus||0)===0){ reviews.push({id:card.id,issuer:card.issuer,name:card.name,reason:'Complex offer structure requires review',detectedOffer:d}); continue; }
   const before={bonus:card.bonus,spend:card.spend,spendPeriod:card.spendPeriod,af:card.af};
   card.lastKnownOffer={...before,verifiedDate:card.verifiedDate,source:card.issuerUrl};
   card.bonus=d.bonus;
@@ -46,13 +58,12 @@ for(const card of catalog.cards||[]){
   card.spendPeriod=d.spendPeriod;
   delete card.reviewReason;
   delete card.reviewOpenedDate;
-  if(d.af!=null) card.af=d.af;
   card.verified=true;
   card.verifiedDate=today;
   card.offerState='verified-current';
   card.confidence='high';
   card.monitorExpected=expectedTerms(card);
-  card.offerNote=`Automatically verified on the issuer product page ${today}. Current public offer: ${money(card.bonus)} ${card.unit||'reward'} after ${money(card.spend)} in qualifying spend within ${card.spendPeriod}.${card.af===0?' No annual fee.':` Annual fee: $${money(card.af)}.`} Offers can vary by channel and change over time.`;
+  card.offerNote=`Automatically verified on the issuer product page ${today}. Current public offer: ${money(card.bonus)} ${card.unit||'reward'} after ${money(card.spend)} in qualifying spend within ${card.spendPeriod}.${card.firstYearAnnualFee!=null && card.firstYearAnnualFee!==card.af?` Annual fee: $${money(card.firstYearAnnualFee)} the first year, then $${money(card.af)}.`:card.af===0?' No annual fee.':` Annual fee: $${money(card.af)}.`} Offers can vary by channel and change over time.`;
   updates.push({id:card.id,issuer:card.issuer,name:card.name,before,after:{bonus:card.bonus,spend:card.spend,af:card.af}});
 }
 
