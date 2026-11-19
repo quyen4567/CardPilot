@@ -1,0 +1,12 @@
+{
+  "name": "cardpilot",
+  "version": "11.3.49",
+  "private": true,
+  "scripts": {
+    "test": "node scripts/test-offer-pipeline.mjs && node scripts/test-ranking.mjs && node scripts/test-release-gate.mjs && node scripts/test-save.mjs",
+    "audit:release": "node scripts/release-audit.mjs cards.json"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

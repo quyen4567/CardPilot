@@ -1,4 +1,5 @@
 import fs from 'fs';
+import {normalize} from './check-offers.mjs';
 import {sharedOfferSources,sourceKey} from './offer-source.mjs';
 
 const catalogPath=process.argv[2]||'cards.json';
@@ -14,16 +15,25 @@ const sharedSources=sharedOfferSources(catalog.cards||[]);
 if(!Number.isFinite(Date.parse(report.checkedAt)) || Date.parse(report.checkedAt)>Date.now()+5*60*1000 || Date.now()-Date.parse(report.checkedAt)>24*60*60*1000 || report.catalogVersion!==catalog.catalogVersion) throw new Error('Offer report is stale or belongs to another catalog.');
 
 function money(n){return Number(n).toLocaleString('en-US');}
-function expectedTerms(card){
+function preservedMonitoringTerms(card){
+  const base=[String(card.bonus),String(card.spend),String(card.af),card.spendPeriod||'',
+    `${card.af} annual fee`,`annual fee ${card.af}`];
+  if(Number(card.af)===0)base.push('no annual fee','0 annual fee');
+  for(const label of ['cash back','cash rewards','points','miles','bonus points','bonus miles'])base.push(`${card.bonus} ${label}`);
+  const old=new Set(base.map(normalize));
+  return (card.monitorExpected||[]).filter(t=>!old.has(normalize(t)));
+}
+function expectedTerms(card,extra=[]){
   const terms=[];
   if(Number(card.bonus||0)>0) terms.push(money(card.bonus));
   if(Number(card.spend||0)>0) terms.push(money(card.spend));
   if(card.spendPeriod) terms.push(card.spendPeriod);
   if(Number(card.af||0)===0) terms.push('no annual fee'); else if(card.af!=null) terms.push(String(card.af));
-  return terms;
+  return [...new Set([...terms,...extra])];
 }
 
 for(const card of catalog.cards||[]){
+  if(card.status==='closed-new')continue;
   const r=byId.get(String(card.id));
   if(!r||!card.issuerUrl){reviews.push({id:card.id,issuer:card.issuer,name:card.name,reason:'Issuer monitoring source is missing; offer needs source review.'});continue;}
   const d=r.detectedOffer;
@@ -51,6 +61,10 @@ for(const card of catalog.cards||[]){
   if(!safe){ reviews.push({id:card.id,issuer:card.issuer,name:card.name,reason:'Detected change did not meet strict auto-update rules',detectedOffer:d}); continue; }
   // Do not auto-update tiered/multi-part or zero-offer structures.
   if(['up-to','qualifying-activities','personalized','split'].includes(card.offerRequirementType) || /statement credit|certificate|free night|\+ credit/i.test(card.unit||'') || (card.offerExpires && card.offerExpires<today) || Number(card.bonus||0)===0){ reviews.push({id:card.id,issuer:card.issuer,name:card.name,reason:'Complex offer structure requires review',detectedOffer:d}); continue; }
+  const extraMonitoringTerms=preservedMonitoringTerms(card);
+  if((r.missingTerms||[]).some(t=>extraMonitoringTerms.includes(t))){
+    reviews.push({id:card.id,issuer:card.issuer,name:card.name,reason:'Additional monitored benefit or eligibility terms need review.',detectedOffer:d});continue;
+  }
   const before={bonus:card.bonus,spend:card.spend,spendPeriod:card.spendPeriod,af:card.af};
   card.lastKnownOffer={...before,verifiedDate:card.verifiedDate,source:card.issuerUrl};
   card.bonus=d.bonus;
@@ -62,7 +76,10 @@ for(const card of catalog.cards||[]){
   card.verifiedDate=today;
   card.offerState='verified-current';
   card.confidence='high';
-  card.monitorExpected=expectedTerms(card);
+  card.offerSourceUrl=card.issuerUrl;
+  card.offerSourceCheckedDate=today;
+  card.lastSuccessfulCheck=report.checkedAt;
+  card.monitorExpected=expectedTerms(card,extraMonitoringTerms);
   card.offerNote=`Automatically verified on the issuer product page ${today}. Current public offer: ${money(card.bonus)} ${card.unit||'reward'} after ${money(card.spend)} in qualifying spend within ${card.spendPeriod}.${card.firstYearAnnualFee!=null && card.firstYearAnnualFee!==card.af?` Annual fee: $${money(card.firstYearAnnualFee)} the first year, then $${money(card.af)}.`:card.af===0?' No annual fee.':` Annual fee: $${money(card.af)}.`} Offers can vary by channel and change over time.`;
   updates.push({id:card.id,issuer:card.issuer,name:card.name,before,after:{bonus:card.bonus,spend:card.spend,af:card.af}});
 }

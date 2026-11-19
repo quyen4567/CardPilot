@@ -1,1 +1,17 @@
-{"passed":true,"checkedAt":"2026-11-17T03:42:31.481Z","candidateHash":"590e8bfa7d8d75cbf8784341107e3be03237d4a8597820d78e201b875df1df10","workflowRun":"https://github.com/quyen4567/CardPilot/actions/runs/44011898389","checks":["Rendered fallback extracts terms populated by JavaScript.","The daily pipeline fills missing dynamic terms and preserves them when the next read fails.","A new user loads the staging catalog.","A returning user receives changed terms without losing wallet, shortlist or preferences.","Expired offers leave apply-now recommendations.","A failed update preserves the last loaded terms and user data.","Restoring the previous catalog rolls back offers without resetting the user.","Starting a new search preserves wallet, shortlist and banking relationships after reload."]}
+{
+  "passed": true,
+  "checkedAt": "2026-11-19T13:54:25.777Z",
+  "candidateHash": "b6344085d9086f3f7ce0f4121255f78f615d95727d9058e518dece6fd22d901c",
+  "files": {
+    "index.html": "d69fedf7903d6b8d136bb38196e56211bc28d8b0e3012d587e6f0e8991f296f0",
+    "cards.json": "2e1321203fbce0a33a692f11c38f0ea5e9cdb18651126ee8bb420eb21288ef0d",
+    "redesign.css": "fa1e3eebfe86b75dd5fccf5f68a9ea2eac3dc559d05482064fa7a71b1c1bd0b2",
+    "motion.css": "8581eeef7fee5d429fca4003af70a1c1b858178ced875800c6aeffc357872952",
+    "manifest.webmanifest": "9da951267ccc2c007eb8bf2c9de9ea69bee7c07a48cf5446d980b7137ee24ed2"
+  },
+  "checks": [
+    "Guided business card search and Fine-tune rendered.",
+    "Saved card persisted after page reload.",
+    "Ink Business Premier issuer link opened the official Chase product page directly in the same browser tab."
+  ]
+}

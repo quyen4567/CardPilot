@@ -14,7 +14,7 @@ const script=html.split('<script>')[1].split('</script>')[0].replace(/bootstrap\
 const storage=new Map();
 const element={classList:{add(){},remove(){},toggle(){}},addEventListener(){},style:{}};
 const context=vm.createContext({console:{...console,error(){}},Date,Intl,URL,Set,Map,JSON,Math,Number,String,Array,Object,
-  document:{querySelector:()=>element,querySelectorAll:()=>[],getElementById:()=>element},
+  document:{documentElement:element,querySelector:()=>element,querySelectorAll:()=>[],getElementById:()=>element},
   localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},
   window:{},navigator:{},alert(){},setTimeout,clearTimeout});
 vm.runInContext(script,context);
@@ -45,7 +45,7 @@ assert.equal(vm.runInContext('offerDataQuality(offer).needsReview',context),offe
 
 const checker=fs.readFileSync(path.join(root,'scripts/check-offers.mjs'),'utf8');
 const parserSource=checker.slice(checker.indexOf('function normalize('),checker.indexOf('async function fetchCard('));
-const parser=vm.createContext({console,Date,Number,String,Set,offerDataQuality});vm.runInContext(parserSource,parser);
+const parser=vm.createContext({console,process:{env:{}},Date,Number,String,Set,offerDataQuality});vm.runInContext(parserSource,parser);
 parser.card=original;
 parser.text='Test Travel Card Earn 50,000 bonus points after spending $3,000 on purchases within the first 3 months. $95 annual fee.';
 assert.equal(vm.runInContext('extractOffer(text,card).confidence',parser),'high');
@@ -80,8 +80,8 @@ parser.AbortController=AbortController;parser.setTimeout=setTimeout;parser.clear
 parser.now=new Date();
 Object.assign(parser,{isHiltonComparison,sourceKey,sharedSources:sharedOfferSources([original])});
 vm.runInContext(checker.slice(checker.indexOf('function ageDays('),checker.indexOf('function htmlToText(')),parser);
-vm.runInContext(checker.slice(checker.indexOf('function htmlToText('),checker.indexOf('function normalize(')),parser);
-vm.runInContext(checker.slice(checker.indexOf('async function fetchCard('),checker.indexOf('const monitored=')),parser);
+vm.runInContext(checker.slice(checker.indexOf('function htmlToText('),checker.indexOf('export function normalize(')),parser);
+vm.runInContext(checker.slice(checker.indexOf('async function fetchCard('),checker.indexOf('if(process.argv[1]')),parser);
 parser.card={...original,verifiedDate:'2000-01-01',monitorExpected:['50000','3000','3 months']};
 parser.fetch=async()=>({status:200,url:original.issuerUrl,text:async()=>'<h1>Test Travel Card</h1>Earn 50,000 bonus points after spending $3,000 on purchases within the first 3 months. $95 annual fee.'});
 assert.equal((await vm.runInContext('fetchCard(card)',parser)).status,'verified','Age alone must not prevent current-page reconfirmation');

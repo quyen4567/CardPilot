@@ -1,13 +1,11 @@
 import {offerDataQuality} from './offer-quality.mjs';
 import fs from 'fs';
+import {pathToFileURL} from 'node:url';
 import {isHiltonComparison,sharedOfferSources,sourceKey} from './offer-source.mjs';
 
-const catalogPath = process.argv[2] || 'cards.json';
-const reportPath = process.argv[3] || 'offer-report.json';
-const payload = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
-const cards = Array.isArray(payload.cards) ? payload.cards : [];
 const now = new Date();
-const sharedSources=sharedOfferSources(cards);
+let sharedSources=sharedOfferSources([]);
+let renderedSource;
 
 function ageDays(dateStr){
   if(!dateStr) return Infinity;
@@ -48,11 +46,11 @@ function hiltonProductText(html,c){
   const paragraphs=[...section.matchAll(/<p\b[^>]*>([^]*?)<\/p\s*>/gi)];
   return [htmlToText(heading[2]),...paragraphs.map(p=>htmlToText(p[1]))].join('. ');
 }
-function normalize(s){
+export function normalize(s){
   return String(s||'')
     .toLowerCase()
     .replace(/\$\s*/g,'')
-    .replace(/,/g,'')
+    .replace(/[,®™]/g,'')
     .replace(/\bthousand\b/g,'000')
     .replace(/\b3\s*months?\b/g,'90 days')
     .replace(/\bfirst\s+3\s+months?\b/g,'first 90 days')
@@ -73,7 +71,7 @@ function localQuality(c){
   if(c.verified && /verify current offer/i.test(String(c.offerNote||''))) issues.push('Catalog contradiction: verified=true while offer note says Verify current offer.');
   if(c.verified && !c.verifiedDate) issues.push('Verified offer is missing verifiedDate.');
   if(Number(c.bonus||0)>0 && c.spend==null && !['qualifying-activities','personalized','up-to','research-pending'].includes(c.offerRequirementType)) issues.push('Bonus is present but spend requirement is missing.');
-  if(Number(c.bonus||0)===0 && !['no-standard-public-sub','invitation-waitlist','personalized','historical-only','research-pending'].includes(c.offerState)) issues.push('No current bonus is stored and no explicit no-offer state is set.');
+  if(Number(c.bonus||0)===0 && !['no-standard-public-sub','invitation-waitlist','personalized','historical-only','research-pending','first-year-cashback-match'].includes(c.offerState)) issues.push('No current bonus is stored and no explicit no-offer state is set.');
   const age=ageDays(c.verifiedDate);
   if(age>14 && age!==Infinity) issues.push(`Verification is ${age} days old.`);
   return issues;
@@ -159,22 +157,37 @@ async function fetchCard(c){
     if(res.status<200||res.status>=400) return {id:c.id,issuer:c.issuer,name:c.name,status:'broken',httpStatus:res.status,url:c.issuerUrl,issues:[...localIssues,`HTTP ${res.status}`],checkedAt:now.toISOString()};
     const expected=Array.isArray(c.monitorExpected)?c.monitorExpected:[];
     const shared=[c.issuerUrl,res.url].some(url=>sharedSources.has(sourceKey(url)));
-    const text=shared?(isHiltonComparison(res.url)?hiltonProductText(body,c):null):htmlToText(body);
-    const missing=expected.filter(t=>!termFound(text,t));
-    const detectedOffer=text===null
+    let text=shared?(isHiltonComparison(res.url)?hiltonProductText(body,c):null):htmlToText(body);
+    let detectedOffer=text===null
       ? {confidence:'review',reason:'Could not isolate a unique product section on the shared issuer page.'}
       : extractOffer(text,c,shared);
     if(shared && detectedOffer.confidence==='high'){
       detectedOffer.confidence='review';
       detectedOffer.reason='Product section matched on a shared issuer page; manual review required.';
     }
-    const issues=[...localIssues,...missing.map(t=>`Issuer page loaded, but expected offer wording was not fully extracted: ${t}`)];
+    let finalUrl=res.url;
+    let extractionMethod='static-public-page';
+    let renderIssue;
+    if(!shared && detectedOffer.confidence!=='high' && process.env.CARDPILOT_RENDERED_FALLBACK==='1'){
+      try{
+        renderedSource||=await import('./read-rendered-offer.mjs');
+        const rendered=await renderedSource.readRenderedOfferPage(c.issuerUrl);
+        if(rendered.httpStatus===200 && rendered.text && sourceKey(rendered.finalUrl)===sourceKey(res.url)){
+          finalUrl=rendered.finalUrl;
+          text=rendered.text;
+          detectedOffer=extractOffer(text,c);
+          extractionMethod=rendered.method;
+        }else renderIssue='Rendered issuer page did not supply terms from the same source.';
+      }catch{renderIssue='Rendered issuer page could not be read.';}
+    }
+    const missing=expected.filter(t=>!termFound(text,t));
+    const issues=[...localIssues,...(renderIssue?[renderIssue]:[]),...missing.map(t=>`Issuer page loaded, but expected offer wording was not fully extracted: ${t}`)];
     // Reconfirmation uses the current page, independent of the age of stored verification.
-    const substantiveIssues=localIssues.filter(x=>!/^Verification is/.test(x));
+    const substantiveIssues=localIssues.filter(x=>!/^Verification is/.test(x) && x!=='The recorded offer needs a fresh check.');
     const reconfirmed=c.issuerUrlVerified && detectedOffer.confidence==='high' && !detectedOffer.changed && !substantiveIssues.filter(x=>x!=='Offer has not been verified yet.').length && !missing.length;
     const status=reconfirmed?'verified':'needs_review';
     if(!reconfirmed && !issues.length)issues.push(shared?detectedOffer.reason:'Offer terms could not be independently extracted with high confidence.');
-    return {id:c.id,issuer:c.issuer,name:c.name,status,httpStatus:res.status,url:c.issuerUrl,finalUrl:res.url,source:shared?'shared-issuer-page':c.issuerUrlVerified?'direct-product-page':'issuer-page',expectedTerms:expected,missingTerms:missing,issues,detectedOffer,checkedAt:now.toISOString()};
+    return {id:c.id,issuer:c.issuer,name:c.name,status,httpStatus:res.status,url:c.issuerUrl,finalUrl,extractionMethod,source:shared?'shared-issuer-page':c.issuerUrlVerified?'direct-product-page':'issuer-page',expectedTerms:expected,missingTerms:missing,issues,detectedOffer,checkedAt:now.toISOString()};
   }catch(error){
     const msg=String(error);
     const blocked=/abort|timeout/i.test(msg);
@@ -182,15 +195,25 @@ async function fetchCard(c){
   }finally{clearTimeout(timer)}
 }
 
-const monitored=cards.filter(c=>c.issuerUrl);
-const unmonitored=cards.filter(c=>!c.issuerUrl).map(c=>({id:c.id,issuer:c.issuer,name:c.name,status:'needs_review',source:'catalog-only',issues:[...localQuality(c),'No issuer monitoring source is configured.'],checkedAt:now.toISOString()}));
+if(process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href){
+const catalogPath = process.argv[2] || 'cards.json';
+const reportPath = process.argv[3] || 'offer-report.json';
+const payload = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+const cards = Array.isArray(payload.cards) ? payload.cards : [];
+sharedSources=sharedOfferSources(cards);
+const activeCards=cards.filter(c=>c.status!=='closed-new');
+const monitored=activeCards.filter(c=>c.issuerUrl);
+const unmonitored=activeCards.filter(c=>!c.issuerUrl).map(c=>({id:c.id,issuer:c.issuer,name:c.name,status:'needs_review',source:'catalog-only',issues:[...localQuality(c),'No issuer monitoring source is configured.'],checkedAt:now.toISOString()}));
 const results=[];
 for(let i=0;i<monitored.length;i+=5) results.push(...await Promise.all(monitored.slice(i,i+5).map(fetchCard)));
 results.push(...unmonitored);
+if(renderedSource)await renderedSource.closeRenderedBrowser();
 const counts={verified:0,needs_review:0,blocked_by_issuer:0,broken:0,unmonitored:0};
 for(const r of results) counts[r.status]=(counts[r.status]||0)+1;
 const changeCandidates=results.filter(r=>r.detectedOffer?.changed).map(r=>({id:r.id,issuer:r.issuer,name:r.name,status:r.status,url:r.url,detectedOffer:r.detectedOffer}));
-const report={catalogVersion:payload.catalogVersion||null,checkedAt:now.toISOString(),counts,monitoredCards:monitored.length,totalCards:cards.length,changeCandidates,results};
+counts.unmonitored=unmonitored.length;
+const coverage={activeCards:activeCards.length,sourceConfigured:monitored.length,missingSource:unmonitored.length,archivedCards:cards.length-activeCards.length};
+const report={coverage,catalogVersion:payload.catalogVersion||null,checkedAt:now.toISOString(),counts,monitoredCards:monitored.length,totalCards:cards.length,changeCandidates,results};
 fs.writeFileSync(reportPath,JSON.stringify(report,null,2));
 const lines=['# CardPilot offer monitoring','',`Catalog: ${report.catalogVersion||'unknown'}`,`Monitored issuer pages: ${monitored.length}/${cards.length}`,`Verified: ${counts.verified}`,`Needs review: ${counts.needs_review}`,`Blocked by issuer: ${counts.blocked_by_issuer}`,`Broken: ${counts.broken}`,`Unmonitored: ${counts.unmonitored}`,`Detected offer changes: ${changeCandidates.length}`,''];
 for(const r of results.filter(x=>['needs_review','blocked_by_issuer','broken'].includes(x.status))) lines.push(`- ${r.status==='needs_review'?'🔎':r.status==='blocked_by_issuer'?'⚠️':'❌'} **${r.issuer} — ${r.name}**: ${r.status}${r.issues?.length?` — ${r.issues.join('; ')}`:''}`);
@@ -198,3 +221,4 @@ if(changeCandidates.length){ lines.push('','## Detected offer changes'); for(con
 if(process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,lines.join('\n')+'\n');
 console.log(lines.join('\n'));
 if(counts.broken) process.exitCode=1;
+}

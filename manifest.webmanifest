@@ -3,6 +3,6 @@
   "short_name": "Cardimize",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#f4f7fb",
-  "theme_color": "#0d2743"
+  "background_color": "#f5f8f2",
+  "theme_color": "#204d39"
 }
