@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-18T21:55:06.182Z",
+  "checkedAt": "2026-11-19T22:08:49.333Z",
   "autoUpdated": 0,
   "needsHumanReview": 91,
   "updates": [],
@@ -98,16 +98,17 @@
       "id": 7111,
       "issuer": "American Express",
       "name": "Hilton Honors Business",
-      "reason": "Detected change did not meet strict auto-update rules",
+      "reason": "Shared issuer page requires manual offer review.",
       "detectedOffer": {
         "confidence": "review",
-        "changed": true,
-        "bonus": 200000,
-        "spend": 6000,
+        "changed": false,
+        "bonus": 150000,
+        "spend": 8000,
         "spendPeriod": "6 months",
-        "af": null,
-        "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
-        "reason": "Offer pattern requires review"
+        "af": 195,
+        "firstYearAnnualFee": null,
+        "snippet": "Earn a Free Night Reward + 150,000 Hilton Honors Bonus Points after you spend $8,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27.",
+        "reason": "Product section matched on a shared issuer page; manual review required."
       }
     },
     {
@@ -243,6 +244,23 @@
       "reason": "Offer terms could not be independently extracted with high confidence."
     },
     {
+      "id": 8008,
+      "issuer": "Chase",
+      "name": "United Explorer",
+      "reason": "Detected change did not meet strict auto-update rules",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": true,
+        "bonus": 70000,
+        "spend": 3000,
+        "spendPeriod": "3 months",
+        "af": null,
+        "firstYearAnnualFee": null,
+        "snippet": "70,000 Miles: To qualify, you must make $3,000 in purchases during the first 3 months from account opening",
+        "reason": "Offer pattern requires review"
+      }
+    },
+    {
       "id": 8009,
       "issuer": "Chase",
       "name": "United Quest",
@@ -312,39 +330,52 @@
       "id": 8109,
       "issuer": "American Express",
       "name": "Hilton Honors",
-      "reason": "Detected change did not meet strict auto-update rules",
+      "reason": "Shared issuer page requires manual offer review.",
       "detectedOffer": {
         "confidence": "review",
-        "changed": true,
-        "bonus": 200000,
-        "spend": 6000,
+        "changed": false,
+        "bonus": 70000,
+        "spend": 2000,
         "spendPeriod": "6 months",
-        "af": null,
-        "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
-        "reason": "Offer pattern requires review"
+        "af": 0,
+        "firstYearAnnualFee": null,
+        "snippet": "Earn a Free Night Reward + 70,000 Hilton Honors Bonus Points after you spend $2,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27.",
+        "reason": "Product section matched on a shared issuer page; manual review required."
       }
     },
     {
       "id": 8110,
       "issuer": "American Express",
       "name": "Hilton Honors Surpass",
-      "reason": "Detected change did not meet strict auto-update rules",
+      "reason": "Shared issuer page requires manual offer review.",
       "detectedOffer": {
         "confidence": "review",
-        "changed": true,
-        "bonus": 200000,
-        "spend": 6000,
+        "changed": false,
+        "bonus": 130000,
+        "spend": 3000,
         "spendPeriod": "6 months",
-        "af": null,
-        "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
-        "reason": "Offer pattern requires review"
+        "af": 150,
+        "firstYearAnnualFee": null,
+        "snippet": "Earn a Free Night Reward + 130,000 Hilton Honors Bonus Points after you spend $3,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27.",
+        "reason": "Product section matched on a shared issuer page; manual review required."
       }
     },
     {
       "id": 8111,
       "issuer": "American Express",
       "name": "Hilton Honors Aspire",
-      "reason": "Offer terms could not be independently extracted with high confidence."
+      "reason": "Shared issuer page requires manual offer review.",
+      "detectedOffer": {
+        "confidence": "review",
+        "changed": false,
+        "bonus": 200000,
+        "spend": 6000,
+        "spendPeriod": "6 months",
+        "af": 550,
+        "firstYearAnnualFee": null,
+        "snippet": "Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27.",
+        "reason": "Product section matched on a shared issuer page; manual review required."
+      }
     },
     {
       "id": 8112,
@@ -363,12 +394,6 @@
       "issuer": "American Express",
       "name": "Platinum Card for Morgan Stanley",
       "reason": "Offer terms could not be independently extracted with high confidence."
-    },
-    {
-      "id": 8205,
-      "issuer": "Citi",
-      "name": "Custom Cash",
-      "reason": "Offer has not been verified yet.; Current public welcome offer is not yet verified.; Verification is 58 days old."
     },
     {
       "id": 8206,
@@ -452,7 +477,11 @@
       "id": 8408,
       "issuer": "Bank of America",
       "name": "Air France KLM Visa Signature",
-      "reason": "Offer terms could not be independently extracted with high confidence."
+      "reason": "Shared issuer page requires manual offer review.",
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Could not isolate a unique product section on the shared issuer page."
+      }
     },
     {
       "id": 8503,
@@ -538,6 +567,7 @@
         "spend": 500,
         "spendPeriod": "3 months",
         "af": 0,
+        "firstYearAnnualFee": null,
         "snippet": "Earn a $200 Bonus Earn a $200 bonus statement credit when you spend $500 in the first 3 months",
         "reason": "Unique direct offer pattern detected"
       }
@@ -546,7 +576,7 @@
       "id": 8803,
       "issuer": "Discover",
       "name": "Discover it Miles",
-      "reason": "No current bonus is stored and no explicit no-offer state is set."
+      "reason": "Offer terms could not be independently extracted with high confidence."
     },
     {
       "id": 8804,
@@ -582,7 +612,11 @@
       "id": 8903,
       "issuer": "Bank of America",
       "name": "Norwegian Cruise Line World Mastercard",
-      "reason": "Offer terms could not be independently extracted with high confidence."
+      "reason": "Shared issuer page requires manual offer review.",
+      "detectedOffer": {
+        "confidence": "review",
+        "reason": "Could not isolate a unique product section on the shared issuer page."
+      }
     },
     {
       "id": 8022,

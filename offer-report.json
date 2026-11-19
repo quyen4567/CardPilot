@@ -1,64 +1,37 @@
 {
-  "catalogVersion": "2026-11-17.1",
-  "checkedAt": "2026-11-18T21:55:06.182Z",
+  "coverage": {
+    "activeCards": 104,
+    "sourceConfigured": 104,
+    "missingSource": 0,
+    "archivedCards": 1
+  },
+  "catalogVersion": "2026-11-19.1",
+  "checkedAt": "2026-11-19T22:08:49.333Z",
   "counts": {
-    "verified": 14,
+    "verified": 13,
     "needs_review": 91,
     "blocked_by_issuer": 0,
     "broken": 0,
     "unmonitored": 0
   },
-  "monitoredCards": 105,
+  "monitoredCards": 104,
   "totalCards": 105,
   "changeCandidates": [
     {
-      "id": 7111,
-      "issuer": "American Express",
-      "name": "Hilton Honors Business",
+      "id": 8008,
+      "issuer": "Chase",
+      "name": "United Explorer",
       "status": "needs_review",
-      "url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "url": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
       "detectedOffer": {
         "confidence": "review",
         "changed": true,
-        "bonus": 200000,
-        "spend": 6000,
-        "spendPeriod": "6 months",
+        "bonus": 70000,
+        "spend": 3000,
+        "spendPeriod": "3 months",
         "af": null,
-        "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
-        "reason": "Offer pattern requires review"
-      }
-    },
-    {
-      "id": 8109,
-      "issuer": "American Express",
-      "name": "Hilton Honors",
-      "status": "needs_review",
-      "url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
-      "detectedOffer": {
-        "confidence": "review",
-        "changed": true,
-        "bonus": 200000,
-        "spend": 6000,
-        "spendPeriod": "6 months",
-        "af": null,
-        "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
-        "reason": "Offer pattern requires review"
-      }
-    },
-    {
-      "id": 8110,
-      "issuer": "American Express",
-      "name": "Hilton Honors Surpass",
-      "status": "needs_review",
-      "url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
-      "detectedOffer": {
-        "confidence": "review",
-        "changed": true,
-        "bonus": 200000,
-        "spend": 6000,
-        "spendPeriod": "6 months",
-        "af": null,
-        "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
+        "firstYearAnnualFee": null,
+        "snippet": "70,000 Miles: To qualify, you must make $3,000 in purchases during the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       }
     },
@@ -75,6 +48,7 @@
         "spend": 500,
         "spendPeriod": "3 months",
         "af": 0,
+        "firstYearAnnualFee": null,
         "snippet": "Earn a $200 Bonus Earn a $200 bonus statement credit when you spend $500 in the first 3 months",
         "reason": "Unique direct offer pattern detected"
       }
@@ -89,6 +63,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/ink/unlimited?iCELL=61FY",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/ink/unlimited?iCELL=61FY",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "750",
@@ -104,10 +79,11 @@
         "spend": 6000,
         "spendPeriod": "3 months",
         "af": 0,
+        "firstYearAnnualFee": null,
         "snippet": "Earn $750 cash back after you spend $6,000 on purchases in the first 3 months after account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7002,
@@ -117,6 +93,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/ink/cash?iCELL=61FY",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/ink/cash?iCELL=61FY",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "750",
@@ -132,10 +109,11 @@
         "spend": 6000,
         "spendPeriod": "3 months",
         "af": 0,
+        "firstYearAnnualFee": null,
         "snippet": "Earn $750 cash back after you spend $6,000 on purchases in the first 3 months after account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7003,
@@ -145,6 +123,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/ink/business-preferred?iCELL=61FY",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/ink/business-preferred?iCELL=61FY",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "100000",
@@ -162,10 +141,11 @@
         "spend": 8000,
         "spendPeriod": "3 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "Earn 100,000 bonus points after you spend $8,000 on purchases in the first 3 months after account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7004,
@@ -175,6 +155,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/ink/premier?iCELL=61FY",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/ink/premier?iCELL=61FY",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "1000",
@@ -192,10 +173,11 @@
         "spend": 10000,
         "spendPeriod": "3 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "Earn $1,000 bonus cash back after you spend $10,000 on purchases in your first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7005,
@@ -205,6 +187,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/sapphire/reserve?iCELL=61FY",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/sapphire/reserve?iCELL=61FY",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "200000",
@@ -222,10 +205,11 @@
         "spend": 30000,
         "spendPeriod": "6 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "200,000 points after you spend $30,000 on purchases in your first 6 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7006,
@@ -235,6 +219,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/world-of-hyatt/hyatt-business-card?iCELL=61FY",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/world-of-hyatt/hyatt-business-card?iCELL=61FY",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "70000",
@@ -252,10 +237,11 @@
         "spend": 7000,
         "spendPeriod": "3 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "Earn 70,000 Bonus Points after you spend $7,000 on purchases in the first 3 months of account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7007,
@@ -265,6 +251,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/IHG/business",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/IHG/business",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "150000",
@@ -277,7 +264,7 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 2 unique bonus/spend pairs",
+        "reason": "Detected 2 unique offer candidates",
         "candidates": [
           {
             "bonus": 150000,
@@ -293,7 +280,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7008,
@@ -303,6 +290,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/southwest/performance-business?iCELL=61FY",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/southwest/performance-business?iCELL=61FY",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "80000",
@@ -320,10 +308,11 @@
         "spend": 5000,
         "spendPeriod": "3 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "Earn 80,000 points after you spend $5,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7009,
@@ -333,6 +322,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business?iCELL=61FY",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business?iCELL=61FY",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "60000",
@@ -350,10 +340,11 @@
         "spend": 3000,
         "spendPeriod": "3 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "Earn 60,000 points after you spend $3,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7010,
@@ -363,6 +354,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/united/united-business-card",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/united/united-business-card",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "90000",
@@ -380,10 +372,11 @@
         "spend": 5000,
         "spendPeriod": "3 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7011,
@@ -393,6 +386,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/business-credit-cards/united/united-club-business",
       "finalUrl": "https://creditcards.chase.com/business-credit-cards/united/united-club-business",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "90000",
@@ -410,10 +404,11 @@
         "spend": 5000,
         "spendPeriod": "3 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7101,
@@ -423,6 +418,7 @@
       "httpStatus": 200,
       "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
       "finalUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -431,10 +427,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7102,
@@ -444,6 +440,7 @@
       "httpStatus": 200,
       "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-gold-card-amex/",
       "finalUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-gold-card-amex/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -452,10 +449,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7104,
@@ -465,6 +462,7 @@
       "httpStatus": 200,
       "url": "https://www.americanexpress.com/en-us/business/credit-cards/blue-business-cash/",
       "finalUrl": "https://www.americanexpress.com/en-us/business/credit-cards/blue-business-cash/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -473,10 +471,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7105,
@@ -486,6 +484,7 @@
       "httpStatus": 200,
       "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex/",
       "finalUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -494,10 +493,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7106,
@@ -507,6 +506,7 @@
       "httpStatus": 200,
       "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/",
       "finalUrl": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -515,10 +515,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7110,
@@ -528,6 +528,7 @@
       "httpStatus": 200,
       "url": "https://www.marriott.com/credit-cards/marriott-bonvoy-business-american-express-card.mi",
       "finalUrl": "https://www.marriott.com/credit-cards/marriott-bonvoy-business-american-express-card.mi",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -541,10 +542,11 @@
         "spend": 6000,
         "spendPeriod": "6 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "75,000 Bonus Points after you use your new Card to make $6,000 in purchases within the first 6 months of Card Membership",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7111,
@@ -554,23 +556,25 @@
       "httpStatus": 200,
       "url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
       "finalUrl": "https://www.hilton.com/en/hilton-honors/credit-cards/",
-      "source": "direct-product-page",
+      "extractionMethod": "static-public-page",
+      "source": "shared-issuer-page",
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [
-        "Offer terms could not be independently extracted with high confidence."
+        "Product section matched on a shared issuer page; manual review required."
       ],
       "detectedOffer": {
         "confidence": "review",
-        "changed": true,
-        "bonus": 200000,
-        "spend": 6000,
+        "changed": false,
+        "bonus": 150000,
+        "spend": 8000,
         "spendPeriod": "6 months",
-        "af": null,
-        "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
-        "reason": "Offer pattern requires review"
+        "af": 195,
+        "firstYearAnnualFee": null,
+        "snippet": "Earn a Free Night Reward + 150,000 Hilton Honors Bonus Points after you spend $8,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27.",
+        "reason": "Product section matched on a shared issuer page; manual review required."
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7201,
@@ -580,6 +584,7 @@
       "httpStatus": 200,
       "url": "https://www.capitalone.com/small-business/credit-cards/venture-x-business/",
       "finalUrl": "https://www.capitalone.com/small-business/credit-cards/venture-x-business/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "150000",
@@ -592,10 +597,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7202,
@@ -605,6 +610,7 @@
       "httpStatus": 200,
       "url": "https://www.capitalone.com/small-business/credit-cards/venture-business/",
       "finalUrl": "https://www.capitalone.com/small-business/credit-cards/venture-business/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "100000",
@@ -617,10 +623,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7203,
@@ -630,6 +636,7 @@
       "httpStatus": 200,
       "url": "https://www.capitalone.com/small-business/credit-cards/ventureone-business/",
       "finalUrl": "https://www.capitalone.com/small-business/credit-cards/ventureone-business/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "50000",
@@ -645,10 +652,11 @@
         "spend": 4500,
         "spendPeriod": "3 months",
         "af": 0,
+        "firstYearAnnualFee": null,
         "snippet": "50,000 bonus miles p]:grv-tw-m-none\"> Earn a one-time bonus of 50,000 miles once you spend $4,500 on purchases within the first 3 months from account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7204,
@@ -658,6 +666,7 @@
       "httpStatus": 200,
       "url": "https://www.capitalone.com/small-business/credit-cards/spark-cash-plus/",
       "finalUrl": "https://www.capitalone.com/small-business/credit-cards/spark-cash-plus/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "2000",
@@ -670,10 +679,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7205,
@@ -683,6 +692,7 @@
       "httpStatus": 200,
       "url": "https://www.capitalone.com/small-business/credit-cards/spark-cash/",
       "finalUrl": "https://www.capitalone.com/small-business/credit-cards/spark-cash/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "1000",
@@ -695,10 +705,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7206,
@@ -708,6 +718,7 @@
       "httpStatus": 200,
       "url": "https://www.capitalone.com/small-business/credit-cards/spark-cash-select/",
       "finalUrl": "https://www.capitalone.com/small-business/credit-cards/spark-cash-select/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "750",
@@ -720,10 +731,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7207,
@@ -733,6 +744,7 @@
       "httpStatus": 200,
       "url": "https://www.capitalone.com/small-business/credit-cards/spark-classic/",
       "finalUrl": "https://www.capitalone.com/small-business/credit-cards/spark-classic/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -741,10 +753,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7301,
@@ -754,6 +766,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.aa.com/credit-cards/citi-business-card-american-airlines-direct/",
       "finalUrl": "https://creditcards.aa.com/credit-cards/citi-business-card-american-airlines-direct/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "75000",
@@ -766,10 +779,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7302,
@@ -779,6 +792,7 @@
       "httpStatus": 200,
       "url": "https://www.citi.com/credit-cards/costco-anywhere-visa-business-card",
       "finalUrl": "https://www.citi.com/credit-cards/costco-anywhere-visa-business-card",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -787,10 +801,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7401,
@@ -800,6 +814,7 @@
       "httpStatus": 200,
       "url": "https://business.bankofamerica.com/en/credit-cards/business-advantage-unlimited-cash-rewards",
       "finalUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-unlimited-cash-rewards",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "500",
@@ -812,10 +827,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7402,
@@ -825,6 +840,7 @@
       "httpStatus": 200,
       "url": "https://business.bankofamerica.com/en/credit-cards/business-advantage-customized-cash-rewards",
       "finalUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-customized-cash-rewards",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "500",
@@ -837,10 +853,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7403,
@@ -850,6 +866,7 @@
       "httpStatus": 200,
       "url": "https://business.bankofamerica.com/en/credit-cards/business-advantage-travel-rewards",
       "finalUrl": "https://business.bankofamerica.com/en/credit-cards/business-advantage-travel-rewards",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "50000",
@@ -862,10 +879,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7404,
@@ -875,6 +892,7 @@
       "httpStatus": 200,
       "url": "https://business.bankofamerica.com/en/credit-cards/travel",
       "finalUrl": "https://business.bankofamerica.com/en/credit-cards/travel",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "70000",
@@ -887,10 +905,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7501,
@@ -900,6 +918,7 @@
       "httpStatus": 200,
       "url": "https://www.usbank.com/business-banking/business-credit-cards/business-triple-cash-back-credit-card.html",
       "finalUrl": "https://www.usbank.com/business-banking/business-credit-cards/business-triple-cash-back-credit-card.html",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "750",
@@ -912,10 +931,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7502,
@@ -925,6 +944,7 @@
       "httpStatus": 200,
       "url": "https://www.usbank.com/business-banking/business-credit-cards/business-shield-credit-card.html",
       "finalUrl": "https://www.usbank.com/business-banking/business-credit-cards/business-shield-credit-card.html",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -933,10 +953,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7601,
@@ -946,6 +966,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card/?sub_channel=WEB&vendor_code=WF",
       "finalUrl": "https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card/?sub_channel=WEB&vendor_code=WF",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [
         "500",
@@ -958,10 +979,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 7701,
@@ -971,6 +992,7 @@
       "httpStatus": 200,
       "url": "https://www.wyndhamrewardscreditcard.com/earner-business-card/",
       "finalUrl": "https://www.wyndhamrewardscreditcard.com/earner-business-card/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -979,7 +1001,7 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 7 unique bonus/spend pairs",
+        "reason": "Detected 7 unique offer candidates",
         "candidates": [
           {
             "bonus": 45000,
@@ -1019,7 +1041,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8001,
@@ -1029,6 +1051,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
       "finalUrl": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1037,23 +1060,23 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 2 unique bonus/spend pairs",
+        "reason": "Detected 2 unique offer candidates",
         "candidates": [
           {
             "bonus": 75000,
             "spend": 5000,
             "spendPeriod": "3 months",
-            "snippet": "Earn 75,000 points after you spend $5,000 on purchases in the first 3 months from account opening"
+            "snippet": "Earn 75,000 points after you spend $5,000 in purchases in the first 3 months from account opening"
           },
           {
             "bonus": 100000,
             "spend": 6000,
             "spendPeriod": "3 months",
-            "snippet": "Earn 100,000 bonus points after you spend $6,000 on purchases in the first 3 months from account opening See details Refer friends if you already have a Chase Sapphire ® Credit Card"
+            "snippet": "Earn 100,000 bonus points after you spend $6,000 on purchases in the first 3 months from account opening See details Opens new credit card offers and promotions in the same window Refer friends if you already have a Chase Sapphire ® Credit Card"
           }
         ]
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8002,
@@ -1063,6 +1086,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
       "finalUrl": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1071,7 +1095,7 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 2 unique bonus/spend pairs",
+        "reason": "Detected 2 unique offer candidates",
         "candidates": [
           {
             "bonus": 100000,
@@ -1087,7 +1111,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8003,
@@ -1097,6 +1121,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited",
       "finalUrl": "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1108,10 +1133,11 @@
         "spend": 500,
         "spendPeriod": "3 months",
         "af": 0,
+        "firstYearAnnualFee": null,
         "snippet": "Earn a $200 bonus Earn a $200 bonus after you spend $500 on purchases in the first 3 months from account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8004,
@@ -1121,6 +1147,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex",
       "finalUrl": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1129,7 +1156,7 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 2 unique bonus/spend pairs",
+        "reason": "Detected 2 unique offer candidates",
         "candidates": [
           {
             "bonus": 200,
@@ -1145,7 +1172,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8005,
@@ -1155,6 +1182,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1168,10 +1196,11 @@
         "spend": 1000,
         "spendPeriod": "3 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "Earn 80,000 bonus points * 2X points on Southwest Airlines purchases and on the first $5,000 in combined purchases at gas stations and grocery stores per year * 1X points on all other purchases * NEW CARDMEMBER OFFER Earn 80,000 bonus points after you spend $1,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8006,
@@ -1181,6 +1210,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/southwest/premier",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/southwest/premier",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1194,10 +1224,11 @@
         "spend": 2000,
         "spendPeriod": "3 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "Earn 85,000 bonus points * 3X points on Southwest Airlines purchases * 2X points on the first $8,000 in combined purchases at grocery stores and restaurants per year * NEW CARDMEMBER OFFER Earn 85,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8007,
@@ -1207,6 +1238,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1220,39 +1252,39 @@
         "spend": 3000,
         "spendPeriod": "3 months",
         "af": null,
-        "snippet": "Earn 90,000 bonus points * 4X points on Southwest Airlines purchases * 2X points at gas stations and restaurants * NEW CARDMEMBER OFFER Earn 90,000 bonus points after you spend $3,000 on purchases in the first 3 months from account opening * AT A GLANCE First checked bag free",
+        "firstYearAnnualFee": null,
+        "snippet": "Earn 90,000 bonus points * 4X points on Southwest Airlines purchases * 2X points at gas stations and restaurants * NEW CARDMEMBER OFFER Earn 90,000 bonus points after you spend $3,000 on purchases in the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8008,
       "issuer": "Chase",
       "name": "United Explorer",
-      "status": "verified",
+      "status": "needs_review",
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
-      "expectedTerms": [
-        "70,000",
-        "3,000",
-        "3 months",
-        "no annual fee"
-      ],
+      "expectedTerms": [],
       "missingTerms": [],
-      "issues": [],
+      "issues": [
+        "Offer terms could not be independently extracted with high confidence."
+      ],
       "detectedOffer": {
-        "confidence": "high",
-        "changed": false,
+        "confidence": "review",
+        "changed": true,
         "bonus": 70000,
         "spend": 3000,
         "spendPeriod": "3 months",
-        "af": 0,
+        "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "70,000 Miles: To qualify, you must make $3,000 in purchases during the first 3 months from account opening",
-        "reason": "Unique direct offer pattern detected"
+        "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8009,
@@ -1262,6 +1294,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1275,10 +1308,11 @@
         "spend": 4000,
         "spendPeriod": "3 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "80,000 Miles: To qualify, you must make $4,000 in purchases during the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8010,
@@ -1288,6 +1322,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1301,10 +1336,11 @@
         "spend": 5000,
         "spendPeriod": "3 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "90,000 Miles: To qualify, you must make $5,000 in purchases during the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8011,
@@ -1314,6 +1350,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1325,10 +1362,11 @@
         "spend": 1000,
         "spendPeriod": "3 months",
         "af": 0,
+        "firstYearAnnualFee": null,
         "snippet": "40,000 Miles: To qualify, you must make $1,000 in purchases during the first 3 months from account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8012,
@@ -1338,6 +1376,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1346,10 +1385,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8013,
@@ -1359,6 +1398,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/one-rewards?iCELL=61FY",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/one-rewards?iCELL=61FY",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1367,7 +1407,7 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 2 unique bonus/spend pairs",
+        "reason": "Detected 2 unique offer candidates",
         "candidates": [
           {
             "bonus": 80000,
@@ -1383,7 +1423,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8014,
@@ -1393,6 +1433,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1401,7 +1442,7 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 2 unique bonus/spend pairs",
+        "reason": "Detected 2 unique offer candidates",
         "candidates": [
           {
             "bonus": 140000,
@@ -1417,7 +1458,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8015,
@@ -1427,6 +1468,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1438,10 +1480,11 @@
         "spend": 1000,
         "spendPeriod": "3 months",
         "af": 0,
+        "firstYearAnnualFee": null,
         "snippet": "Earn 45,000 Bonus Points Earn 45,000 Bonus Points after spending $1,000 on eligible purchases within 3 months of account opening with the Marriott Bonvoy Bold ® Credit Card",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8016,
@@ -1451,6 +1494,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1459,10 +1503,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8017,
@@ -1472,6 +1516,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bountiful",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bountiful",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1485,10 +1530,11 @@
         "spend": 4000,
         "spendPeriod": "3 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "Earn 85,000 Bonus Points after you spend $4,000 in purchases in your first 3 months from your account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8018,
@@ -1498,6 +1544,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1511,10 +1558,11 @@
         "spend": 3000,
         "spendPeriod": "3 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "60,000 Points: To qualify, you must make $3,000 in purchases during the first 3 months from account opening",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8019,
@@ -1524,6 +1572,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/avios/british-airways",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/avios/british-airways",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1532,10 +1581,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8020,
@@ -1545,6 +1594,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/avios/iberia",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/avios/iberia",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1553,10 +1603,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8021,
@@ -1566,6 +1616,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/avios/aer-lingus",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/avios/aer-lingus",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1574,10 +1625,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8109,
@@ -1587,23 +1638,25 @@
       "httpStatus": 200,
       "url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
       "finalUrl": "https://www.hilton.com/en/hilton-honors/credit-cards/",
-      "source": "direct-product-page",
+      "extractionMethod": "static-public-page",
+      "source": "shared-issuer-page",
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [
-        "Offer terms could not be independently extracted with high confidence."
+        "Product section matched on a shared issuer page; manual review required."
       ],
       "detectedOffer": {
         "confidence": "review",
-        "changed": true,
-        "bonus": 200000,
-        "spend": 6000,
+        "changed": false,
+        "bonus": 70000,
+        "spend": 2000,
         "spendPeriod": "6 months",
-        "af": null,
-        "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
-        "reason": "Offer pattern requires review"
+        "af": 0,
+        "firstYearAnnualFee": null,
+        "snippet": "Earn a Free Night Reward + 70,000 Hilton Honors Bonus Points after you spend $2,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27.",
+        "reason": "Product section matched on a shared issuer page; manual review required."
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8110,
@@ -1613,23 +1666,25 @@
       "httpStatus": 200,
       "url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
       "finalUrl": "https://www.hilton.com/en/hilton-honors/credit-cards/",
-      "source": "direct-product-page",
+      "extractionMethod": "static-public-page",
+      "source": "shared-issuer-page",
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [
-        "Offer terms could not be independently extracted with high confidence."
+        "Product section matched on a shared issuer page; manual review required."
       ],
       "detectedOffer": {
         "confidence": "review",
-        "changed": true,
-        "bonus": 200000,
-        "spend": 6000,
+        "changed": false,
+        "bonus": 130000,
+        "spend": 3000,
         "spendPeriod": "6 months",
-        "af": null,
-        "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
-        "reason": "Offer pattern requires review"
+        "af": 150,
+        "firstYearAnnualFee": null,
+        "snippet": "Earn a Free Night Reward + 130,000 Hilton Honors Bonus Points after you spend $3,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27.",
+        "reason": "Product section matched on a shared issuer page; manual review required."
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8111,
@@ -1639,11 +1694,12 @@
       "httpStatus": 200,
       "url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
       "finalUrl": "https://www.hilton.com/en/hilton-honors/credit-cards/",
-      "source": "direct-product-page",
+      "extractionMethod": "static-public-page",
+      "source": "shared-issuer-page",
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [
-        "Offer terms could not be independently extracted with high confidence."
+        "Product section matched on a shared issuer page; manual review required."
       ],
       "detectedOffer": {
         "confidence": "review",
@@ -1651,11 +1707,12 @@
         "bonus": 200000,
         "spend": 6000,
         "spendPeriod": "6 months",
-        "af": null,
-        "snippet": "Earn 200,000 Bonus Points † Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27",
-        "reason": "Offer pattern requires review"
+        "af": 550,
+        "firstYearAnnualFee": null,
+        "snippet": "Earn 200,000 Hilton Honors Bonus Points after you spend $6,000 in eligible purchases on your Card in the first 6 months of Card Membership.† Offer ends 1/13/27.",
+        "reason": "Product section matched on a shared issuer page; manual review required."
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8112,
@@ -1665,6 +1722,7 @@
       "httpStatus": 200,
       "url": "https://www.marriott.com/credit-cards/marriott-bonvoy-bevy-american-express-card.mi",
       "finalUrl": "https://www.marriott.com/credit-cards/marriott-bonvoy-bevy-american-express-card.mi",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1678,10 +1736,11 @@
         "spend": 5000,
         "spendPeriod": "6 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "150000 Bonus Points plus a $250 statement credit after you use your new Card to make $5000 in purchases within the first 6 months of Card Membership",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8113,
@@ -1691,6 +1750,7 @@
       "httpStatus": 200,
       "url": "https://www.marriott.com/credit-cards/marriott-bonvoy-brilliant-american-express-card.mi",
       "finalUrl": "https://www.marriott.com/credit-cards/marriott-bonvoy-brilliant-american-express-card.mi",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1704,10 +1764,11 @@
         "spend": 6000,
         "spendPeriod": "6 months",
         "af": null,
+        "firstYearAnnualFee": null,
         "snippet": "100000 Bonus Points after you use your new Card to make $6000 in purchases within the first 6 months of Card Membership.† $650 Annual Fee*",
         "reason": "Offer pattern requires review"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8115,
@@ -1717,6 +1778,7 @@
       "httpStatus": 200,
       "url": "https://apply.americanexpress.com/amex-morgan-stanley-credit-cards/?page_url=38",
       "finalUrl": "https://apply.americanexpress.com/amex-morgan-stanley-credit-cards/?page_url=38",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1725,33 +1787,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
-    },
-    {
-      "id": 8205,
-      "issuer": "Citi",
-      "name": "Custom Cash",
-      "status": "needs_review",
-      "httpStatus": 200,
-      "url": "https://www.citi.com/credit-cards/citi-custom-cash-credit-card",
-      "finalUrl": "https://www.citi.com/credit-cards/citi-custom-cash-credit-card",
-      "source": "issuer-page",
-      "expectedTerms": [],
-      "missingTerms": [],
-      "issues": [
-        "Offer has not been verified yet.",
-        "Current public welcome offer is not yet verified.",
-        "Verification is 58 days old."
-      ],
-      "detectedOffer": {
-        "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
-        "candidates": []
-      },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8206,
@@ -1761,6 +1800,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.aa.com/credit-cards/citi-executive-card-american-airlines-direct/",
       "finalUrl": "https://creditcards.aa.com/credit-cards/citi-executive-card-american-airlines-direct/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1769,10 +1809,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8207,
@@ -1782,6 +1822,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.aa.com/credit-cards/citi-platinum-card-american-airlines-direct/",
       "finalUrl": "https://creditcards.aa.com/credit-cards/citi-platinum-card-american-airlines-direct/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1790,10 +1831,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8208,
@@ -1803,6 +1844,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/",
       "finalUrl": "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1811,10 +1853,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8209,
@@ -1824,6 +1866,7 @@
       "httpStatus": 200,
       "url": "https://www.citi.com/credit-cards/costco-anywhere-visa-card",
       "finalUrl": "https://www.citi.com/credit-cards/costco-anywhere-visa-card",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1832,10 +1875,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8302,
@@ -1845,6 +1888,7 @@
       "httpStatus": 200,
       "url": "https://www.capitalone.com/credit-cards/venture/",
       "finalUrl": "https://www.capitalone.com/credit-cards/venture/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1856,10 +1900,11 @@
         "spend": 4000,
         "spendPeriod": "3 months",
         "af": 95,
+        "firstYearAnnualFee": null,
         "snippet": "75,000 bonus miles once you spend $4,000 on purchases within the first 3 months from account opening – that’s more than $1,000 in travel value",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8303,
@@ -1869,6 +1914,7 @@
       "httpStatus": 200,
       "url": "https://www.capitalone.com/credit-cards/ventureone/",
       "finalUrl": "https://www.capitalone.com/credit-cards/ventureone/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1880,10 +1926,11 @@
         "spend": 500,
         "spendPeriod": "3 months",
         "af": 0,
+        "firstYearAnnualFee": null,
         "snippet": "20,000 bonus miles once you spend $500 on purchases within the first 3 months from account opening 1 Low Intro APR 0% intro APR for 15 months on purchases and balance transfers; 18.74% - 28.74% variable APR after that; Balance transfer fee applies",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8304,
@@ -1893,6 +1940,7 @@
       "httpStatus": 200,
       "url": "https://www.capitalone.com/credit-cards/savor/",
       "finalUrl": "https://www.capitalone.com/credit-cards/savor/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1901,10 +1949,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8305,
@@ -1914,6 +1962,7 @@
       "httpStatus": 200,
       "url": "https://www.capitalone.com/credit-cards/quicksilver/",
       "finalUrl": "https://www.capitalone.com/credit-cards/quicksilver/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1922,10 +1971,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8401,
@@ -1935,6 +1984,7 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-credit-card/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-credit-card/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1943,10 +1993,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8402,
@@ -1956,6 +2006,7 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-elite-credit-card/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-elite-credit-card/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1964,10 +2015,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8403,
@@ -1977,6 +2028,7 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -1985,10 +2037,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8404,
@@ -1998,6 +2050,7 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2006,10 +2059,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8405,
@@ -2019,6 +2072,7 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2027,10 +2081,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8406,
@@ -2040,6 +2094,7 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-credit-card/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-credit-card/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2048,10 +2103,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8407,
@@ -2061,6 +2116,7 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-infinite-credit-card/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-infinite-credit-card/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2069,10 +2125,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8408,
@@ -2082,18 +2138,18 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/",
-      "source": "direct-product-page",
+      "extractionMethod": "static-public-page",
+      "source": "shared-issuer-page",
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [
-        "Offer terms could not be independently extracted with high confidence."
+        "Could not isolate a unique product section on the shared issuer page."
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
-        "candidates": []
+        "reason": "Could not isolate a unique product section on the shared issuer page."
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8501,
@@ -2103,6 +2159,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.wellsfargo.com/autograph-visa-credit-card/?sub_channel=WEB&vendor_code=WF",
       "finalUrl": "https://creditcards.wellsfargo.com/autograph-visa-credit-card/?sub_channel=WEB&vendor_code=WF",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2114,10 +2171,11 @@
         "spend": 1000,
         "spendPeriod": "3 months",
         "af": 0,
+        "firstYearAnnualFee": null,
         "snippet": "Earn 20,000 bonus points when you spend $1,000 in purchases in the first 3 months 1 Plus, earn 3X points for many ways to keep life in motion",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8502,
@@ -2127,6 +2185,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.wellsfargo.com/autograph-journey-visa-credit-card/?sub_channel=WEB&vendor_code=WF",
       "finalUrl": "https://creditcards.wellsfargo.com/autograph-journey-visa-credit-card/?sub_channel=WEB&vendor_code=WF",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2138,10 +2197,11 @@
         "spend": 4000,
         "spendPeriod": "3 months",
         "af": 95,
+        "firstYearAnnualFee": null,
         "snippet": "Earn 60,000 bonus points when you spend $4,000 in purchases in the first 3 months 1 - that’s $600 toward your next trip $95 Annual Fee Important Credit Terms Apply now Offers may differ from time to time and depend on the marketing channel",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8503,
@@ -2151,6 +2211,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.wellsfargo.com/active-cash-credit-card/?sub_channel=WEB&vendor_code=WF",
       "finalUrl": "https://creditcards.wellsfargo.com/active-cash-credit-card/?sub_channel=WEB&vendor_code=WF",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2159,10 +2220,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8505,
@@ -2172,6 +2233,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.wellsfargo.com/choice-hotel-privileges-mastercard/?sub_channel=WEB&vendor_code=WF",
       "finalUrl": "https://creditcards.wellsfargo.com/choice-hotel-privileges-mastercard/?sub_channel=WEB&vendor_code=WF",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2180,10 +2242,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8506,
@@ -2193,6 +2255,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.wellsfargo.com/choice-hotels-privileges-select-mastercard/?sub_channel=WEB&vendor_code=WF",
       "finalUrl": "https://creditcards.wellsfargo.com/choice-hotels-privileges-select-mastercard/?sub_channel=WEB&vendor_code=WF",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2201,10 +2264,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8507,
@@ -2214,6 +2277,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.wellsfargo.com/one-key-credit-card/?sub_channel=WEB&vendor_code=WF",
       "finalUrl": "https://creditcards.wellsfargo.com/one-key-credit-card/?sub_channel=WEB&vendor_code=WF",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2222,10 +2286,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8601,
@@ -2235,6 +2299,7 @@
       "httpStatus": 200,
       "url": "https://www.usbank.com/credit-cards/bank-smartly-visa-signature-credit-card.html",
       "finalUrl": "https://www.usbank.com/credit-cards/bank-smartly-visa-signature-credit-card.html",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2243,10 +2308,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8602,
@@ -2256,6 +2321,7 @@
       "httpStatus": 200,
       "url": "https://www.usbank.com/credit-cards/altitude-go-visa-signature-credit-card.html",
       "finalUrl": "https://www.usbank.com/credit-cards/altitude-go-visa-signature-credit-card.html",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2264,10 +2330,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8603,
@@ -2277,6 +2343,7 @@
       "httpStatus": 200,
       "url": "https://www.usbank.com/credit-cards/altitude-connect-visa-signature-credit-card.html",
       "finalUrl": "https://www.usbank.com/credit-cards/altitude-connect-visa-signature-credit-card.html",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2285,10 +2352,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8604,
@@ -2298,6 +2365,7 @@
       "httpStatus": 200,
       "url": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html",
       "finalUrl": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2309,10 +2377,11 @@
         "spend": 1000,
         "spendPeriod": "90 days",
         "af": 0,
+        "firstYearAnnualFee": null,
         "snippet": "Get a $200 bonus For a limited time, earn a $200 rewards bonus after you spend $1,000 in eligible purchases within the first 90 days of account opening",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8606,
@@ -2322,6 +2391,7 @@
       "httpStatus": 200,
       "url": "https://www.usbank.com/credit-cards/shield-visa-credit-card.html",
       "finalUrl": "https://www.usbank.com/credit-cards/shield-visa-credit-card.html",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2330,10 +2400,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8703,
@@ -2343,6 +2413,7 @@
       "httpStatus": 200,
       "url": "https://www.wyndhamrewardscreditcard.com/earner-card/",
       "finalUrl": "https://www.wyndhamrewardscreditcard.com/earner-card/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2351,7 +2422,7 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 7 unique bonus/spend pairs",
+        "reason": "Detected 7 unique offer candidates",
         "candidates": [
           {
             "bonus": 45000,
@@ -2391,7 +2462,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8704,
@@ -2401,6 +2472,7 @@
       "httpStatus": 200,
       "url": "https://www.wyndhamrewardscreditcard.com/earner-plus-card/",
       "finalUrl": "https://www.wyndhamrewardscreditcard.com/earner-plus-card/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2409,7 +2481,7 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 7 unique bonus/spend pairs",
+        "reason": "Detected 7 unique offer candidates",
         "candidates": [
           {
             "bonus": 55000,
@@ -2449,7 +2521,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8705,
@@ -2459,6 +2531,7 @@
       "httpStatus": 200,
       "url": "https://www.wyndhamrewardscreditcard.com/earner-premier-card/",
       "finalUrl": "https://www.wyndhamrewardscreditcard.com/earner-premier-card/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2467,7 +2540,7 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 7 unique bonus/spend pairs",
+        "reason": "Detected 7 unique offer candidates",
         "candidates": [
           {
             "bonus": 30000,
@@ -2507,7 +2580,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8816,
@@ -2517,6 +2590,7 @@
       "httpStatus": 200,
       "url": "https://www.bilt.com/card/obsidian",
       "finalUrl": "https://www.bilt.com/card/obsidian",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2525,10 +2599,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8817,
@@ -2538,6 +2612,7 @@
       "httpStatus": 200,
       "url": "https://www.bilt.com/card/palladium",
       "finalUrl": "https://www.bilt.com/card/palladium",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2549,10 +2624,11 @@
         "spend": 4000,
         "spendPeriod": "90 days",
         "af": 495,
+        "firstYearAnnualFee": null,
         "snippet": "50,000 points and Gold Status After you spend $4,000 on purchases (excluding rent or mortgage) in your first 90 days",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8802,
@@ -2562,11 +2638,12 @@
       "httpStatus": 200,
       "url": "https://www.discover.com/credit-cards/cash-back/it-card/",
       "finalUrl": "https://www.discover.com/credit-cards/cash-back/it-card/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [
-        "No current bonus is stored and no explicit no-offer state is set."
+        "Offer terms could not be independently extracted with high confidence."
       ],
       "detectedOffer": {
         "confidence": "high",
@@ -2575,10 +2652,11 @@
         "spend": 500,
         "spendPeriod": "3 months",
         "af": 0,
+        "firstYearAnnualFee": null,
         "snippet": "Earn a $200 Bonus Earn a $200 bonus statement credit when you spend $500 in the first 3 months",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8803,
@@ -2588,18 +2666,19 @@
       "httpStatus": 200,
       "url": "https://www.discover.com/credit-cards/travel/",
       "finalUrl": "https://www.discover.com/credit-cards/travel/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [
-        "No current bonus is stored and no explicit no-offer state is set."
+        "Offer terms could not be independently extracted with high confidence."
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8804,
@@ -2609,6 +2688,7 @@
       "httpStatus": 200,
       "url": "https://www.apple.com/apple-card/",
       "finalUrl": "https://www.apple.com/apple-card/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2617,10 +2697,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8815,
@@ -2630,6 +2710,7 @@
       "httpStatus": 200,
       "url": "https://robinhood.com/creditcard/",
       "finalUrl": "https://robinhood.com/creditcard/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2638,10 +2719,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8807,
@@ -2651,6 +2732,7 @@
       "httpStatus": 200,
       "url": "https://www.pnc.com/en/personal-banking/banking/credit-cards/pnc-cash-rewards-visa-credit-card.html",
       "finalUrl": "https://www.pnc.com/en/personal-banking/banking/credit-cards/pnc-cash-rewards-visa-credit-card.html",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2659,10 +2741,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8809,
@@ -2672,6 +2754,7 @@
       "httpStatus": 200,
       "url": "https://www.navyfederal.org/loans-cards/credit-cards/flagship-premier-visa-signature.html",
       "finalUrl": "https://www.navyfederal.org/loans-cards/credit-cards/flagship-premier-visa-signature.html",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2683,10 +2766,11 @@
         "spend": 4000,
         "spendPeriod": "90 days",
         "af": 95,
+        "firstYearAnnualFee": null,
         "snippet": "earn 50,000 bonus points ( a $500 value ) when you spend $4,000 in your first 90 days ",
         "reason": "Unique direct offer pattern detected"
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8901,
@@ -2696,6 +2780,7 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/products/royal-one-credit-card/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/royal-one-credit-card/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2704,10 +2789,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8902,
@@ -2717,6 +2802,7 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/products/royal-one-plus-credit-card/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/products/royal-one-plus-credit-card/",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2725,10 +2811,10 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
+        "reason": "Detected 0 unique offer candidates",
         "candidates": []
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8903,
@@ -2738,18 +2824,18 @@
       "httpStatus": 200,
       "url": "https://www.bankofamerica.com/credit-cards/",
       "finalUrl": "https://www.bankofamerica.com/credit-cards/",
-      "source": "direct-product-page",
+      "extractionMethod": "static-public-page",
+      "source": "shared-issuer-page",
       "expectedTerms": [],
       "missingTerms": [],
       "issues": [
-        "Offer terms could not be independently extracted with high confidence."
+        "Could not isolate a unique product section on the shared issuer page."
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 0 unique bonus/spend pairs",
-        "candidates": []
+        "reason": "Could not isolate a unique product section on the shared issuer page."
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     },
     {
       "id": 8022,
@@ -2759,6 +2845,7 @@
       "httpStatus": 200,
       "url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select",
       "finalUrl": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select",
+      "extractionMethod": "static-public-page",
       "source": "direct-product-page",
       "expectedTerms": [],
       "missingTerms": [],
@@ -2767,7 +2854,7 @@
       ],
       "detectedOffer": {
         "confidence": "review",
-        "reason": "Detected 2 unique bonus/spend pairs",
+        "reason": "Detected 2 unique offer candidates",
         "candidates": [
           {
             "bonus": 150000,
@@ -2783,7 +2870,7 @@
           }
         ]
       },
-      "checkedAt": "2026-11-18T21:55:06.182Z"
+      "checkedAt": "2026-11-19T22:08:49.333Z"
     }
   ]
 }
