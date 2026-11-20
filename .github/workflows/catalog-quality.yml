@@ -1,0 +1,36 @@
+name: Cardimize quality
+
+on:
+  pull_request:
+    branches: [main, cardimize-development]
+  push:
+    branches: [main, cardimize-development]
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Cardimize quality checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          package-manager-cache: false
+
+      - name: Validate catalog integrity
+        run: |
+          node scripts/validate-auto-update.mjs cards.json
+          node scripts/verify-catalog.mjs cards.json
+
+      - name: Run regression tests
+        run: npm test
+
+      - name: Report catalog freshness (advisory)
+        run: node scripts/release-audit.mjs cards.json "$RUNNER_TEMP/cardimize-release-audit.json" --report-only
