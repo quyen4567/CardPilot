@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-11-19T22:08:49.333Z",
+  "checkedAt": "2026-11-20T21:48:40.735Z",
   "autoUpdated": 0,
-  "needsHumanReview": 91,
+  "needsHumanReview": 92,
   "updates": [],
   "reviews": [
     {
@@ -482,6 +482,12 @@
         "confidence": "review",
         "reason": "Could not isolate a unique product section on the shared issuer page."
       }
+    },
+    {
+      "id": 8502,
+      "issuer": "Wells Fargo",
+      "name": "Autograph Journey",
+      "reason": "Offer terms could not be independently extracted with high confidence."
     },
     {
       "id": 8503,
