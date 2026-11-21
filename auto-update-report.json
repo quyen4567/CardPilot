@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-11-20T21:48:40.735Z",
+  "checkedAt": "2026-11-21T20:31:07.575Z",
   "autoUpdated": 0,
-  "needsHumanReview": 92,
+  "needsHumanReview": 97,
   "updates": [],
   "reviews": [
     {
@@ -193,6 +193,24 @@
       "id": 7502,
       "issuer": "U.S. Bank",
       "name": "Business Shield",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 7506,
+      "issuer": "U.S. Bank",
+      "name": "Business Essentials",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 7507,
+      "issuer": "U.S. Bank",
+      "name": "Business Essentials Plus",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 7504,
+      "issuer": "U.S. Bank",
+      "name": "Business Altitude Connect",
       "reason": "Offer terms could not be independently extracted with high confidence."
     },
     {
@@ -484,12 +502,6 @@
       }
     },
     {
-      "id": 8502,
-      "issuer": "Wells Fargo",
-      "name": "Autograph Journey",
-      "reason": "Offer terms could not be independently extracted with high confidence."
-    },
-    {
       "id": 8503,
       "issuer": "Wells Fargo",
       "name": "Active Cash",
@@ -535,6 +547,24 @@
       "id": 8606,
       "issuer": "U.S. Bank",
       "name": "Shield Visa",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8607,
+      "issuer": "U.S. Bank",
+      "name": "Altitude Go Secured Visa",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8608,
+      "issuer": "U.S. Bank",
+      "name": "Cash+ Secured Visa",
+      "reason": "Offer terms could not be independently extracted with high confidence."
+    },
+    {
+      "id": 8609,
+      "issuer": "U.S. Bank",
+      "name": "Secured Visa",
       "reason": "Offer terms could not be independently extracted with high confidence."
     },
     {
