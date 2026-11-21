@@ -78,6 +78,22 @@ assert.equal(fullReview.records.filter(c=>c.status==='confirmed').length,fullRev
 for(const record of fullReview.records){
   const card=context.reviewedCatalog.find(c=>c.id===record.id);
   assert(record.evidence.sourceUrl);
-  if(card)assert.equal(card.verified,record.status==='confirmed');
+  // Business Altitude Connect was verified after the archived review.
+  if(card&&card.id!==7504)assert.equal(card.verified,record.status==='confirmed');
 }
+context.fetch=async()=>({ok:true,json:async()=>({cards:context.reviewedCatalog})});
+await run('loadCatalog()');
+run("data.profile.cardPath='either';data.profile.marketPath='either'");
+const usb=run("marketOffers().filter(card=>card.issuer==='U.S. Bank')");
+assert.equal(usb.length,13,'Browse must include the complete public U.S. Bank lineup');
+assert.equal(usb.filter(card=>card.type==='Business').length,5);
+const secured=usb.filter(card=>/secured/i.test(card.name));
+assert.equal(secured.length,3,'The loaded catalog must retain the secured cards');
+assert(secured.every(card=>card.issuerUrlVerified&&card.bonus===0));
+assert.equal(run('recommendationPool().some(({offer})=>isSecuredOffer(offer))'),false);
+const connect=usb.find(card=>card.id===7504);
+assert.equal(connect.name,'Business Altitude Connect','Reuse the archived product identity');
+assert.equal(connect.verified,true);
+assert.equal(connect.firstYearAnnualFee,0);
+assert.equal(connect.af,95);
 console.log('Ranking and relationship regression checks passed.');

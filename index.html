@@ -1626,7 +1626,7 @@ function broadenIntentMatches(o){
   return false;
 }
 function recommendationPool(){
-  const ranked=rankedOffers();
+  const ranked=rankedOffers().filter(x=>!isSecuredOffer(x.offer));
   const exact=ranked.filter(x=>x.fit.status==='consider'&&mainIntentMatches(x.offer));
   const exactFallback=ranked.filter(x=>x.fit.status!=='avoid'&&mainIntentMatches(x.offer));
   const base=exact.length?exact:exactFallback;
@@ -1803,8 +1803,8 @@ async function loadCatalog(){
     if(!r.ok) throw new Error('cards.json HTTP '+r.status);
     const payload=await r.json();
     if(!payload||!Array.isArray(payload.cards)) throw new Error('Invalid cards.json');
-    BUSINESS_CATALOG=payload.cards.filter(c=>c.type==='Business'&&!isSecuredOffer(c));
-    PERSONAL_CATALOG=payload.cards.filter(c=>c.type==='Personal'&&!isSecuredOffer(c));
+    BUSINESS_CATALOG=payload.cards.filter(c=>c.type==='Business');
+    PERSONAL_CATALOG=payload.cards.filter(c=>c.type==='Personal');
     if(payload.catalogVersion) data.catalogSourceVersion=payload.catalogVersion;
     migrateV8();
     data.catalogLoadStatus='live';
