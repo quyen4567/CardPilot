@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-11-21.2",
-  "generatedAt": "2026-11-21T20:31:20.800Z",
+  "catalogVersion": "2026-11-22.1",
+  "generatedAt": "2026-11-22T20:43:20.409Z",
   "cards": [
     {
       "id": 7001,
@@ -15,7 +15,7 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-11-21",
+      "verifiedDate": "2026-11-22",
       "offerNote": "Public source reviewed 2026-11-16: $750 cash back after $6,000 in purchases in the first 3 months from account opening; $0 annual fee. Offer applies to the linked channel and can change.",
       "offerType": "public-current",
       "confidence": "official-issuer",
@@ -61,7 +61,7 @@
       "offerSourceCheckedDate": "2026-11-16",
       "bonusIsUpTo": false,
       "offerRequirementType": "standard-spend",
-      "lastSuccessfulCheck": "2026-11-21T20:31:07.575Z"
+      "lastSuccessfulCheck": "2026-11-22T20:43:11.084Z"
     },
     {
       "id": 7002,
@@ -75,7 +75,7 @@
       "af": 0,
       "reports": false,
       "verified": true,
-      "verifiedDate": "2026-11-21",
+      "verifiedDate": "2026-11-22",
       "offerNote": "Public source reviewed 2026-11-16: $750 cash back after $6,000 in purchases in the first 3 months from account opening; $0 annual fee. Offer applies to the linked channel and can change.",
       "offerType": "public-current",
       "confidence": "official-issuer",
@@ -121,7 +121,7 @@
       "offerSourceCheckedDate": "2026-11-16",
       "bonusIsUpTo": false,
       "offerRequirementType": "standard-spend",
-      "lastSuccessfulCheck": "2026-11-21T20:31:07.575Z"
+      "lastSuccessfulCheck": "2026-11-22T20:43:11.084Z"
     },
     {
       "id": 7003,
@@ -1229,7 +1229,7 @@
       "af": 0,
       "reports": true,
       "verified": true,
-      "verifiedDate": "2026-11-21",
+      "verifiedDate": "2026-11-22",
       "reportingNote": "Capital One reports primary cardholder activity for this business card to personal credit bureaus, so it can add a personal account for 5/24 purposes.",
       "tags": [
         "travel",
@@ -1269,7 +1269,7 @@
         "3 months"
       ],
       "offerNote": "Official public source reviewed 2026-11-16: 50,000 Capital One miles after $4,500 in the first 3 months; $0 ongoing annual fee. Terms apply to the linked channel.",
-      "lastSuccessfulCheck": "2026-11-21T20:31:07.575Z"
+      "lastSuccessfulCheck": "2026-11-22T20:43:11.084Z"
     },
     {
       "id": 7204,
@@ -2313,7 +2313,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-11-21",
+      "verifiedDate": "2026-11-22",
       "offerNote": "Official public channel reviewed 2026-11-16: 200 cash / UR; $500 qualifying purchases within 3 months; $0 ongoing annual fee. Opened official product page and welcome-offer terms. Channel-specific public offer.",
       "tags": [
         "cash",
@@ -2348,7 +2348,7 @@
       "confidence": "official-public-source",
       "issuerUrl": "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited",
       "issuerUrlVerified": "2026-11-16",
-      "lastSuccessfulCheck": "2026-11-21T20:31:07.575Z"
+      "lastSuccessfulCheck": "2026-11-22T20:43:11.084Z"
     },
     {
       "id": 8004,
@@ -2730,7 +2730,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-11-21",
+      "verifiedDate": "2026-11-22",
       "offerNote": "Official public channel reviewed 2026-11-16: 40,000 United miles; $1,000 qualifying purchases within 3 months; $0 ongoing annual fee. An additional 10,000 miles/points requires an authorized user within 3 months and is excluded from the base bonus. PQP, where offered, is not redeemable miles.",
       "tags": [
         "airline",
@@ -2768,7 +2768,7 @@
       "offerRequirementType": "split",
       "additionalRequirement": "Add an authorized user within the first 3 months; see linked channel terms.",
       "maximumCombinedBonus": 50000,
-      "lastSuccessfulCheck": "2026-11-21T20:31:07.575Z"
+      "lastSuccessfulCheck": "2026-11-22T20:43:11.084Z"
     },
     {
       "id": 8012,
@@ -2937,7 +2937,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-11-21",
+      "verifiedDate": "2026-11-22",
       "offerNote": "Official public channel reviewed 2026-11-16: 45,000 Marriott points; $1,000 qualifying purchases within 3 months; $0 ongoing annual fee. Opened official product and offer terms.",
       "tags": [
         "hotel",
@@ -2982,7 +2982,7 @@
       "monitoringStatus": "manual-review-required",
       "offerReviewDate": "2026-11-16",
       "confidence": "official-public-source",
-      "lastSuccessfulCheck": "2026-11-21T20:31:07.575Z"
+      "lastSuccessfulCheck": "2026-11-22T20:43:11.084Z"
     },
     {
       "id": 8016,
@@ -3896,7 +3896,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-11-21",
+      "verifiedDate": "2026-11-22",
       "offerNote": "Official public channel reviewed 2026-11-16: 75,000 Capital One miles + travel credit; $4,000 qualifying purchases within 3 months; $95 ongoing annual fee. The $300 first-year restricted stays credit is separate from the miles bonus and is not unrestricted cash.",
       "tags": [
         "travel",
@@ -3941,7 +3941,7 @@
       "confidence": "official-public-source",
       "issuerUrl": "https://www.capitalone.com/credit-cards/venture/",
       "issuerUrlVerified": "2026-11-16",
-      "lastSuccessfulCheck": "2026-11-21T20:31:07.575Z"
+      "lastSuccessfulCheck": "2026-11-22T20:43:11.084Z"
     },
     {
       "id": 8303,
@@ -3956,7 +3956,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-11-21",
+      "verifiedDate": "2026-11-22",
       "offerNote": "Official public channel reviewed 2026-11-16: 20,000 Capital One miles; $500 qualifying purchases within 3 months; $0 ongoing annual fee. Opened official product and welcome-offer terms.",
       "tags": [
         "travel",
@@ -3990,7 +3990,7 @@
       "offerSourceUrl": "https://www.capitalone.com/credit-cards/ventureone/",
       "offerSourceCheckedDate": "2026-11-16",
       "spendPeriod": "3 months",
-      "lastSuccessfulCheck": "2026-11-21T20:31:07.575Z"
+      "lastSuccessfulCheck": "2026-11-22T20:43:11.084Z"
     },
     {
       "id": 8304,
@@ -4517,7 +4517,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-11-21",
+      "verifiedDate": "2026-11-22",
       "offerNote": "Official public channel reviewed 2026-11-16: 20,000 Wells Fargo Rewards; $1,000 qualifying purchases within 3 months; $0 ongoing annual fee. Official welcome-offer terms on product page.",
       "tags": [
         "travel",
@@ -4552,7 +4552,7 @@
       "monitoringStatus": "manual-review-required",
       "offerReviewDate": "2026-11-16",
       "confidence": "official-public-source",
-      "lastSuccessfulCheck": "2026-11-21T20:31:07.575Z"
+      "lastSuccessfulCheck": "2026-11-22T20:43:11.084Z"
     },
     {
       "id": 8502,
@@ -4567,7 +4567,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-11-21",
+      "verifiedDate": "2026-11-22",
       "offerNote": "Official public channel reviewed 2026-11-16: 60,000 Wells Fargo Rewards; $4,000 qualifying purchases within 3 months; $95 ongoing annual fee. Official welcome-offer terms on product page.",
       "tags": [
         "travel",
@@ -4598,7 +4598,7 @@
       "confidence": "official-public-source",
       "issuerUrl": "https://creditcards.wellsfargo.com/autograph-journey-visa-credit-card/?sub_channel=WEB&vendor_code=WF",
       "issuerUrlVerified": "2026-11-16",
-      "lastSuccessfulCheck": "2026-11-21T20:31:07.575Z"
+      "lastSuccessfulCheck": "2026-11-22T20:43:11.084Z"
     },
     {
       "id": 8503,
@@ -4950,7 +4950,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-11-21",
+      "verifiedDate": "2026-11-22",
       "offerNote": "Official public channel reviewed 2026-11-16: 200 cash; $1,000 qualifying purchases within 90 days; $0 ongoing annual fee. Official bonus disclosure and no-annual-fee confirmation; preserve 90-day deadline.",
       "tags": [
         "cash",
@@ -4990,7 +4990,7 @@
       "offerSourceUrl": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html",
       "offerSourceCheckedDate": "2026-11-16",
       "spendPeriod": "90 days",
-      "lastSuccessfulCheck": "2026-11-21T20:31:07.575Z"
+      "lastSuccessfulCheck": "2026-11-22T20:43:11.084Z"
     },
     {
       "id": 8606,
@@ -5414,7 +5414,7 @@
       "reports": true,
       "status": "open",
       "verified": true,
-      "verifiedDate": "2026-11-21",
+      "verifiedDate": "2026-11-22",
       "offerNote": "Official public channel reviewed 2026-11-16: 50,000 Bilt points; $4,000 qualifying purchases within 90 days; $495 ongoing annual fee. 50,000 Bilt Points and Gold status after $4,000 non-housing purchases in 90 days. $300 Bilt Cash upon approval is separate restricted currency, excluded from unrestricted cash valuation.",
       "tags": [
         "bilt",
@@ -5488,7 +5488,7 @@
       "bonusCashExtra": 0,
       "additionalBiltCash": 300,
       "offerRequirementType": "split",
-      "lastSuccessfulCheck": "2026-11-21T20:31:07.575Z"
+      "lastSuccessfulCheck": "2026-11-22T20:43:11.084Z"
     },
     {
       "id": 8802,
@@ -5755,7 +5755,7 @@
       "reports": true,
       "status": "membership",
       "verified": true,
-      "verifiedDate": "2026-11-21",
+      "verifiedDate": "2026-11-22",
       "offerNote": "Official public channel reviewed 2026-11-16: 50,000 points; $4,000 qualifying purchases within 90 days; $95 ongoing annual fee. Legacy flagship URL redirects to Flagship Premier. This record now explicitly names that current product; prior $49 legacy product terms are not assumed interchangeable. Membership eligibility required.",
       "tags": [
         "travel",
@@ -5790,7 +5790,7 @@
       "confidence": "official-public-source",
       "offerExpires": "2027-01-03",
       "histComparable": false,
-      "lastSuccessfulCheck": "2026-11-21T20:31:07.575Z"
+      "lastSuccessfulCheck": "2026-11-22T20:43:11.084Z"
     },
     {
       "id": 8901,
