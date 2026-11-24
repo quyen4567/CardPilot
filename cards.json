@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "2026-11-24.1",
-  "generatedAt": "2026-11-24T01:40:23.219Z",
+  "catalogVersion": "2026-11-24.2",
+  "generatedAt": "2026-11-24T23:28:57.147Z",
   "cards": [
     {
       "id": 7001,
@@ -61,7 +61,7 @@
       "offerSourceCheckedDate": "2026-11-16",
       "bonusIsUpTo": false,
       "offerRequirementType": "standard-spend",
-      "lastSuccessfulCheck": "2026-11-24T01:40:02.835Z"
+      "lastSuccessfulCheck": "2026-11-24T23:28:44.256Z"
     },
     {
       "id": 7002,
@@ -121,7 +121,7 @@
       "offerSourceCheckedDate": "2026-11-16",
       "bonusIsUpTo": false,
       "offerRequirementType": "standard-spend",
-      "lastSuccessfulCheck": "2026-11-24T01:40:02.835Z"
+      "lastSuccessfulCheck": "2026-11-24T23:28:44.256Z"
     },
     {
       "id": 7003,
@@ -1269,7 +1269,7 @@
         "3 months"
       ],
       "offerNote": "Official public source reviewed 2026-11-16: 50,000 Capital One miles after $4,500 in the first 3 months; $0 ongoing annual fee. Terms apply to the linked channel.",
-      "lastSuccessfulCheck": "2026-11-24T01:40:02.835Z"
+      "lastSuccessfulCheck": "2026-11-24T23:28:44.256Z"
     },
     {
       "id": 7204,
@@ -2348,7 +2348,7 @@
       "confidence": "official-public-source",
       "issuerUrl": "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited",
       "issuerUrlVerified": "2026-11-16",
-      "lastSuccessfulCheck": "2026-11-24T01:40:02.835Z"
+      "lastSuccessfulCheck": "2026-11-24T23:28:44.256Z"
     },
     {
       "id": 8004,
@@ -2768,7 +2768,7 @@
       "offerRequirementType": "split",
       "additionalRequirement": "Add an authorized user within the first 3 months; see linked channel terms.",
       "maximumCombinedBonus": 50000,
-      "lastSuccessfulCheck": "2026-11-24T01:40:02.835Z"
+      "lastSuccessfulCheck": "2026-11-24T23:28:44.256Z"
     },
     {
       "id": 8012,
@@ -2982,7 +2982,7 @@
       "monitoringStatus": "manual-review-required",
       "offerReviewDate": "2026-11-16",
       "confidence": "official-public-source",
-      "lastSuccessfulCheck": "2026-11-24T01:40:02.835Z"
+      "lastSuccessfulCheck": "2026-11-24T23:28:44.256Z"
     },
     {
       "id": 8016,
@@ -3941,7 +3941,7 @@
       "confidence": "official-public-source",
       "issuerUrl": "https://www.capitalone.com/credit-cards/venture/",
       "issuerUrlVerified": "2026-11-16",
-      "lastSuccessfulCheck": "2026-11-24T01:40:02.835Z"
+      "lastSuccessfulCheck": "2026-11-24T23:28:44.256Z"
     },
     {
       "id": 8303,
@@ -3990,7 +3990,7 @@
       "offerSourceUrl": "https://www.capitalone.com/credit-cards/ventureone/",
       "offerSourceCheckedDate": "2026-11-16",
       "spendPeriod": "3 months",
-      "lastSuccessfulCheck": "2026-11-24T01:40:02.835Z"
+      "lastSuccessfulCheck": "2026-11-24T23:28:44.256Z"
     },
     {
       "id": 8304,
@@ -4552,7 +4552,7 @@
       "monitoringStatus": "manual-review-required",
       "offerReviewDate": "2026-11-16",
       "confidence": "official-public-source",
-      "lastSuccessfulCheck": "2026-11-24T01:40:02.835Z"
+      "lastSuccessfulCheck": "2026-11-24T23:28:44.256Z"
     },
     {
       "id": 8502,
@@ -4990,7 +4990,7 @@
       "offerSourceUrl": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html",
       "offerSourceCheckedDate": "2026-11-16",
       "spendPeriod": "90 days",
-      "lastSuccessfulCheck": "2026-11-24T01:40:02.835Z"
+      "lastSuccessfulCheck": "2026-11-24T23:28:44.256Z"
     },
     {
       "id": 8606,
@@ -5488,7 +5488,7 @@
       "bonusCashExtra": 0,
       "additionalBiltCash": 300,
       "offerRequirementType": "split",
-      "lastSuccessfulCheck": "2026-11-24T01:40:02.835Z"
+      "lastSuccessfulCheck": "2026-11-24T23:28:44.256Z"
     },
     {
       "id": 8802,
@@ -5790,7 +5790,7 @@
       "confidence": "official-public-source",
       "offerExpires": "2027-01-03",
       "histComparable": false,
-      "lastSuccessfulCheck": "2026-11-24T01:40:02.835Z"
+      "lastSuccessfulCheck": "2026-11-24T23:28:44.256Z"
     },
     {
       "id": 8901,
