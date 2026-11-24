@@ -73,6 +73,14 @@ assert.equal(unitedDetected.changed,false);
 assert.equal(unitedDetected.confidence,'high');
 parser.text=unitedBonus+'$0 annual fee for the first year.';
 assert.equal(vm.runInContext('extractOffer(text,card).confidence',parser),'review','A first-year fee without an ongoing amount is ambiguous');
+parser.text=unitedBonus;
+assert.equal(vm.runInContext('extractOffer(text,card).changed',parser),false,'Unknown fees are not changes');
+assert.equal(vm.runInContext('extractOffer(text,card).confidence',parser),'review');
+parser.text=unitedBonus+'$150 annual fee.';
+assert.equal(vm.runInContext('extractOffer(text,card).changed',parser),false);
+assert.equal(vm.runInContext('extractOffer(text,card).confidence',parser),'review','Missing waiver evidence cannot reconfirm a recorded waiver');
+parser.text=unitedBonus+'$25 intro annual fee for the first year, then $150.';
+assert.equal(vm.runInContext('extractOffer(text,card).changed',parser),true,'Explicit fee changes must still be detected');
 parser.text=unitedBonus.replace('Explorer','Gateway')+'$0 intro annual fee for the first year, then $150.';
 assert.equal(vm.runInContext('extractOffer(text,card).confidence',parser),'review','A shared word in two product names cannot confirm a match');
 
