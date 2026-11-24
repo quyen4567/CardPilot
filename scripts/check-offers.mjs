@@ -136,9 +136,12 @@ function extractOffer(text,c,hilton=false){
   const {af,firstYearAnnualFee}=extractFees(t);
   const name=productNameText(c.name);
   const nameSignal=!!name && ` ${productNameText(t.slice(0,30000))} `.includes(` ${name} `);
-  const introChanged=firstYearAnnualFee!==(c.firstYearAnnualFee??null);
+  // Unknown fees are not evidence of a change. A known ongoing fee with an
+  // unconfirmed introductory fee must still require review if a waiver is recorded.
+  const introChanged=firstYearAnnualFee!=null && firstYearAnnualFee!==(c.firstYearAnnualFee??null);
+  const introUnconfirmed=firstYearAnnualFee==null && c.firstYearAnnualFee!=null;
   const changed=x.bonus!==Number(c.bonus||0) || x.spend!==Number(c.spend||0) || (af!=null && af!==c.af) || introChanged || (x.spendPeriod && normalize(x.spendPeriod)!==normalize(c.spendPeriod||''));
-  const safe = nameSignal && !!x.spendPeriod && af!==null && !/\b(up to|targeted|preselected|pre-selected|mail offer|invitation only)\b/i.test(x.snippet);
+  const safe = nameSignal && !!x.spendPeriod && af!==null && !introUnconfirmed && !/\b(up to|targeted|preselected|pre-selected|mail offer|invitation only)\b/i.test(x.snippet);
   return {confidence:safe?'high':'review',changed,bonus:x.bonus,spend:x.spend,spendPeriod:x.spendPeriod,af,firstYearAnnualFee,snippet:x.snippet,reason:safe?'Unique direct offer pattern detected':'Offer pattern requires review'};
 }
 
