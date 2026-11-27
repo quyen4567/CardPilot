@@ -180,6 +180,7 @@ const defaultData={
   offers:[]
 };
 let data=JSON.parse(localStorage.getItem('cardpilotData')||'null')||defaultData;
+data.benefits=Array.isArray(data.benefits)?data.benefits:[];
 data.savedCardIds=Array.isArray(data.savedCardIds)?[...new Set(data.savedCardIds.map(String))]:[];
 
 // Card catalog is loaded from cards.json so offer/link updates do not require rebuilding the UI.
@@ -316,7 +317,14 @@ function annualFeeLabel(o){
   if(o.firstYearAnnualFee!=null&&o.firstYearAnnualFee!==o.af)return `${fmt(o.firstYearAnnualFee)} first year, then ${fmt(o.af)}`;
   return fmt(o.af);
 }
-function daysTo(d){return Math.ceil((new Date(d+'T12:00:00')-new Date())/86400000)}
+function daysTo(d){
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(d))return NaN;
+  const expiry=new Date(d+'T00:00:00Z');
+  if(Number.isNaN(expiry.getTime())||expiry.toISOString().slice(0,10)!==d)return NaN;
+  const today=new Date();
+  const todayUTC=Date.UTC(today.getFullYear(),today.getMonth(),today.getDate());
+  return (expiry.getTime()-todayUTC)/86400000;
+}
 function five24Cutoff(){const d=new Date(); d.setHours(0,0,0,0); d.setMonth(d.getMonth()-24); return d}
 function validOpenDate(c){if(!c||!c.opened)return null;const d=new Date(c.opened+'T12:00:00');return Number.isNaN(d.getTime())?null:d}
 function counts524(c){
@@ -385,7 +393,7 @@ function openPreferencePicker(){
 }
 function setupNeeds(){const needs=[];if(!data.cards.length)needs.push('Add the cards you already have');if(!data.profile.cardPath)needs.push('Choose personal, business, or both');if(!data.profile.feePref)needs.push('Choose an annual-fee preference');if(!data.profile.subSpendPref)needs.push('Choose a maximum sign-up bonus spending limit');if(!Array.isArray(data.profile.interests)||!data.profile.interests.length)needs.push('Choose what matters in your next card');return needs}
 function isChase(o){return String(o.issuer||'').toLowerCase().includes('chase')}
-function nextAction(){const exp=[...data.benefits].filter(b=>b.expires).sort((a,b)=>new Date(a.expires)-new Date(b.expires))[0];if(exp&&daysTo(exp.expires)<=60)return {title:`Use ${exp.name}`,detail:`Expires in ${daysTo(exp.expires)} days`,why:'An expiring benefit may be more urgent than opening another card.'};const r=rankedOffers().find(x=>x.fit.status==='consider')||rankedOffers().find(x=>x.fit.status==='wait');if(r)return {title:`Review ${r.offer.name}`,detail:`${r.fit.label}`,why:r.fit.reasons[0]||r.fit.cautions[0]||'It is the strongest fit among the cards currently tracked.'};return {title:'Review your card options',detail:'Your setup is complete.',why:'Cardimize can now compare the market against your pathway, 5/24 status, annual-fee preference, and selected interests.'}}
+function nextAction(){const exp=data.benefits.filter(benefitIsActive).sort((a,b)=>a.expires.localeCompare(b.expires))[0];if(exp&&daysTo(exp.expires)<=60)return {title:`Use ${exp.name}`,detail:`Expires in ${daysTo(exp.expires)} days`,why:'An expiring benefit may be more urgent than opening another card.'};const r=rankedOffers().find(x=>x.fit.status==='consider')||rankedOffers().find(x=>x.fit.status==='wait');if(r)return {title:`Review ${r.offer.name}`,detail:`${r.fit.label}`,why:r.fit.reasons[0]||r.fit.cautions[0]||'It is the strongest fit among the cards currently tracked.'};return {title:'Review your card options',detail:'Your setup is complete.',why:'Cardimize can now compare the market against your pathway, 5/24 status, annual-fee preference, and selected interests.'}}
 function quickCashStyleHTML(){
   const ints=data.profile.interests||[];
   if(!ints.includes('cash'))return '';
@@ -1101,8 +1109,11 @@ function valuationInfoHTML(){
   return `<details class="card" style="margin-top:14px"><summary><b>How Cardimize values points</b></summary><div class="small" style="margin-top:9px"><b>Estimated values only.</b> Point and mile values are estimates based on typical redemption values and can vary significantly depending on how, when, and where you redeem. They are not cash values or guaranteed redemption rates. When Cash back is selected, Cardimize instead uses the reward's cash redemption value and does not substitute a higher travel valuation.</div><div class="small" style="margin-top:8px">Cardimize uses valuation ranges rather than a single fixed value. Current ranges include Bank of America points, Hyatt, Marriott, Hilton, IHG, Wyndham, Choice, Bilt, Chase Ultimate Rewards, Amex Membership Rewards, Citi ThankYou, Capital One miles, and Wells Fargo Rewards.</div><div class="small" style="margin-top:8px">Sources include current independent valuation references such as Frequent Miler and The Points Guy where available. <b>Last updated ${VALUATION_LAST_UPDATED}.</b></div><div class="small" style="margin-top:8px">Free-night certificates and other non-point perks are shown separately because their value depends heavily on the specific redemption.</div></details>`;
 }
 function feeRule(o){const p=data.profile.feePref||'any',af=Number(o.af||0);const limits={0:0,none:0,95:95,250:250,550:550,895:895};if(Object.prototype.hasOwnProperty.call(limits,p)&&af>limits[p])return {blocked:true,msg:`The annual fee exceeds your ${limits[p]===0?'$0':'$'+limits[p]} maximum.`};return {blocked:false,msg:''}}
-function companionBenefits(){return (data.benefits||[]).filter(b=>b.kind==='companion'&&b.expires)}
-function activeCompanionBenefits(){return companionBenefits().filter(b=>daysTo(b.expires)>=0).sort((a,b)=>new Date(a.expires)-new Date(b.expires))}
+function benefitIsActive(benefit){return !benefit.redeemed&&daysTo(benefit.expires)>=0}
+function activeCompanionBenefits(){
+  return data.benefits.filter(b=>b.kind==='companion'&&benefitIsActive(b))
+    .sort((a,b)=>a.expires.localeCompare(b.expires));
+}
 function savedStrategy(type){return (data.profile.savedStrategies||[]).find(s=>s.type===type)}
 function companionSelected(){return (data.profile.subInterests?.airline||[]).includes('companion')}
 function companionOverlapAdvice(){const active=activeCompanionBenefits();if(!active.length)return null;const next=active[0];const d=daysTo(next.expires);return {benefit:next,days:d,message:d>120?`You already have ${next.name} for about ${d} more days. Cardimize will generally favor using that benefit before adding another overlapping companion benefit.`:`Your existing ${next.name} expires in ${d} days, so a replacement companion strategy may be worth planning now.`}}
@@ -1743,9 +1754,105 @@ function filterMarket(){
   });
 }
 
-function benefits(){const sorted=[...data.benefits].sort((a,b)=>new Date(a.expires||'2999-12-31')-new Date(b.expires||'2999-12-31'));const sw=savedStrategy('southwest_cp');return `<div class="between"><div class="section" style="margin-top:0">Benefits & Strategies</div><button onclick="showAddBenefit()">+ Add</button></div><div class="card strategy-card" style="margin-bottom:12px"><div class="small">COMPANION BENEFITS</div><h3>Track passes, fares, and certificates</h3><div class="small">Cardimize uses expiration dates to avoid recommending unnecessary overlap and to suggest when to plan the next companion benefit.</div></div><div id="addBenefitBox"></div><div class="list">${sorted.map(b=>`<div class="item between"><div><div class="item-title">${b.name}</div><div class="meta">${b.kind==='companion'?'Companion benefit • ':''}${b.program?b.program+' • ':''}${b.value||''}${b.expires?' • Expires '+b.expires:''}</div></div>${b.expires?`<span class="pill ${daysTo(b.expires)<60?'red':daysTo(b.expires)<120?'amber':'green'}">${daysTo(b.expires)} days</span>`:''}</div>`).join('')||'<div class="empty">No benefits tracked yet.</div>'}</div><div class="section">Saved Strategies</div><div class="card"><h3>Southwest Companion Pass timing</h3><div class="small">Save a target qualification year only if you want Cardimize to preserve Southwest opportunities for that plan.</div><div class="formgrid" style="margin-top:10px"><div class="field"><label class="field-label">Target qualification year</label><input id="swTarget" type="number" min="2026" max="2035" value="${sw?.targetYear||''}" placeholder="e.g. 2028"></div><div class="field"><label class="field-label">Optional note</label><input id="swNote" value="${sw?.note||''}" placeholder="e.g. wait until current pass ends"></div></div><div class="row" style="margin-top:10px"><button onclick="saveSouthwestStrategy()">Save strategy</button>${sw?`<button class="btn ghost" onclick="removeSouthwestStrategy()">Remove</button>`:''}</div></div>`}
-function showAddBenefit(){const box=$('#addBenefitBox');if(!box)return;box.innerHTML=`<div class="card" style="margin-bottom:12px"><h3>Add benefit</h3><div class="formgrid"><div class="field"><label class="field-label">Benefit name</label><input id="bn" placeholder="e.g. Atmos companion fare"></div><div class="field"><label class="field-label">Type</label><select id="bk"><option value="general">General benefit</option><option value="companion">Companion pass / fare / certificate</option></select></div><div class="field"><label class="field-label">Airline / program</label><input id="bp" placeholder="e.g. Southwest, Atmos"></div><div class="field"><label class="field-label">Expiration date</label><input id="be" type="date"></div></div><div class="field" style="margin-top:10px"><label class="field-label">Value / note</label><input id="bv" placeholder="Optional note"></div><button style="margin-top:10px" onclick="addBenefit()">Save benefit</button></div>`}
-function addBenefit(){if(!$('#bn').value)return;data.benefits.push({id:Date.now(),name:$('#bn').value,kind:$('#bk').value,program:$('#bp').value,value:$('#bv').value,expires:$('#be').value});save();showView('benefitsView')}
+const benefitTypes={
+  general:'General benefit',
+  single:'Single-use companion fare / certificate',
+  reusable:'Reusable companion pass',
+  companion:'Companion benefit · type unspecified'
+};
+function benefitType(benefit){
+  if(benefit?.kind!=='companion')return 'general';
+  return ['single','reusable'].includes(benefit.companionType)?benefit.companionType:'companion';
+}
+function benefitRow(benefit,index){
+  const {name,program,value,expires,redeemed}=benefit;
+  const type=benefitType(benefit);
+  const days=daysTo(expires);
+  const details=[benefitTypes[type],program,value,expires&&'Expires '+expires].filter(Boolean);
+  const status=redeemed?'Redeemed':days<0?'Expired':days===0?'Expires today':
+    days>0?days+' days left':type!=='general'?'No expiration recorded':'';
+  const color=redeemed?'':days<60?'red':days<120?'amber':days>=120?'green':'';
+  return `<div class="item">
+    <div class="between">
+      <div class="item-title" style="overflow-wrap:anywhere">${htmlSafe(name)}</div>
+      ${status?`<span class="pill ${color}">${status}</span>`:''}
+    </div>
+    <div class="meta" style="overflow-wrap:anywhere">${htmlSafe(details.join(' • '))}</div>
+    <div class="row" style="margin-top:8px;flex-wrap:wrap">
+      <button class="btn ghost" type="button" onclick="showBenefitForm(${index})">Edit</button>
+      ${type==='single'?`<button class="btn ghost" type="button" onclick="toggleBenefitRedemption(${index})">${redeemed?'Undo redemption':'Mark redeemed'}</button>`:''}
+      <button class="btn ghost danger" type="button" onclick="removeBenefit(${index})">Remove</button>
+    </div>
+  </div>`;
+}
+function benefits(){
+  const sorted=data.benefits.map((benefit,index)=>({benefit,index}))
+    .sort((a,b)=>(a.benefit.expires||'9999-12-31').localeCompare(b.benefit.expires||'9999-12-31'));
+  const sw=savedStrategy('southwest_cp');
+  return `<div class="between"><div class="section" style="margin-top:0">Benefits & Strategies</div><button type="button" onclick="showBenefitForm()">+ Add</button></div>
+    <div class="card strategy-card" style="margin-bottom:12px"><h3>Track passes, fares, and certificates</h3>
+      <div class="small">Mark single-use fares and certificates redeemed after use. Reusable passes stay available through expiration. Recommendations use unredeemed companion benefits with a current expiration date.</div>
+    </div>
+    <div id="addBenefitBox"></div>
+    <div class="list">${sorted.map(({benefit,index})=>benefitRow(benefit,index)).join('')||'<div class="empty">No benefits tracked yet.</div>'}</div>
+    <div class="section">Saved Strategies</div><div class="card"><h3>Southwest Companion Pass timing</h3><div class="small">Save a target qualification year only if you want Cardimize to preserve Southwest opportunities for that plan.</div><div class="formgrid" style="margin-top:10px"><div class="field"><label class="field-label">Target qualification year</label><input id="swTarget" type="number" min="2026" max="2035" value="${sw?.targetYear||''}" placeholder="e.g. 2028"></div><div class="field"><label class="field-label">Optional note</label><input id="swNote" value="${htmlSafe(sw?.note)}" placeholder="e.g. wait until current pass ends"></div></div><div class="row" style="margin-top:10px"><button onclick="saveSouthwestStrategy()">Save strategy</button>${sw?`<button class="btn ghost" onclick="removeSouthwestStrategy()">Remove</button>`:''}</div></div>`;
+}
+function showBenefitForm(index=null){
+  const benefit=index===null?{}:data.benefits[index];
+  if(!benefit)return;
+  const type=benefitType(benefit);
+  const options=Object.entries(benefitTypes).filter(([key])=>key!=='companion'||type==='companion');
+  const box=$('#addBenefitBox');
+  box.innerHTML=`<form class="card" style="margin-bottom:12px" onsubmit="event.preventDefault();saveBenefit(${index})">
+    <h3>${index===null?'Add benefit':'Edit benefit'}</h3>
+    <div class="formgrid">
+      <div class="field"><label class="field-label" for="bn">Benefit name</label><input id="bn" required value="${htmlSafe(benefit.name)}" placeholder="e.g. Atmos companion fare"></div>
+      <div class="field"><label class="field-label" for="bk">Type</label><select id="bk">${options.map(([key,label])=>`<option value="${key}" ${type===key?'selected':''}>${label}</option>`).join('')}</select></div>
+      <div class="field"><label class="field-label" for="bp">Airline / program</label><input id="bp" value="${htmlSafe(benefit.program)}" placeholder="e.g. Southwest, Atmos"></div>
+      <div class="field"><label class="field-label" for="be">Expiration date</label><input id="be" type="date" value="${htmlSafe(benefit.expires)}"></div>
+    </div>
+    ${type==='companion'?'<p class="small">Choose single-use to enable redemption for this benefit.</p>':''}
+    <div class="field" style="margin-top:10px"><label class="field-label" for="bv">Value / note</label><input id="bv" value="${htmlSafe(benefit.value)}" placeholder="Optional note"></div>
+    <div class="row" style="margin-top:10px"><button type="submit">Save benefit</button><button class="btn ghost" type="button" onclick="this.form.parentElement.replaceChildren()">Cancel</button></div>
+  </form>`;
+  $('#bn').focus();
+}
+function saveBenefit(index){
+  const previous=index===null?{id:Date.now()}:data.benefits[index];
+  if(!previous)return;
+  const name=$('#bn').value.trim();
+  if(!name){alert('Enter a benefit name.');return}
+  const type=$('#bk').value;
+  const benefit={
+    ...previous,name,kind:type==='general'?'general':'companion',
+    program:$('#bp').value,value:$('#bv').value,expires:$('#be').value
+  };
+  if(type==='single'||type==='reusable')benefit.companionType=type;
+  else delete benefit.companionType;
+  if(type!=='single')delete benefit.redeemed;
+  const benefits=[...data.benefits];
+  if(index===null)benefits.push(benefit);
+  else benefits[index]=benefit;
+  saveBenefits(benefits);
+}
+function toggleBenefitRedemption(index){
+  const benefit=data.benefits[index];
+  if(!benefit||benefitType(benefit)!=='single')return;
+  const benefits=[...data.benefits];
+  benefits[index]={...benefit,redeemed:!benefit.redeemed};
+  saveBenefits(benefits);
+}
+function removeBenefit(index){
+  const benefit=data.benefits[index];
+  if(!benefit||!confirm(`Remove ${benefit.name}?`))return;
+  saveBenefits(data.benefits.filter((_,i)=>i!==index));
+}
+function saveBenefits(benefits){
+  try{localStorage.setItem('cardpilotData',JSON.stringify({...data,benefits}));}
+  catch{alert('Could not save your benefit changes on this device.');return}
+  data.benefits=benefits;
+  render();
+}
 function saveSouthwestStrategy(){const y=+($('#swTarget')?.value||0);if(!y){alert('Enter a target year.');return}data.profile.savedStrategies=(data.profile.savedStrategies||[]).filter(s=>s.type!=='southwest_cp');data.profile.savedStrategies.push({type:'southwest_cp',targetYear:y,note:$('#swNote')?.value||''});save();showView('benefitsView')}
 function removeSouthwestStrategy(){data.profile.savedStrategies=(data.profile.savedStrategies||[]).filter(s=>s.type!=='southwest_cp');save();showView('benefitsView')}
 const BANK_APPLICATION_RULES_CHECKED='2026-10-06';
