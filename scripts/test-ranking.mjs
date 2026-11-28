@@ -5,7 +5,7 @@ import vm from 'node:vm';
 const html=fs.readFileSync(new URL('../index.html',import.meta.url),'utf8');
 const script=html.split('<script>')[1].split('</script>')[0].replace(/bootstrap\(\);\s*$/,'');
 const storage=new Map();
-const element={classList:{add(){},remove(){},toggle(){}},addEventListener(){},style:{}};
+const element={classList:{add(){},remove(){},toggle(){}},addEventListener(){},scrollIntoView(){},style:{}};
 const context=vm.createContext({console,Date,Intl,URL,Set,Map,JSON,Math,Number,String,Array,Object,
   document:{documentElement:element,querySelector:()=>element,querySelectorAll:()=>[],getElementById:()=>element},
   localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},
@@ -20,14 +20,13 @@ context.fixtures=[
   {...base,id:3,name:'Unknown requirement',spend:null},
   {...base,id:4,name:'Personal approval only',type:'Personal',spend:0,bonus:1000},
 ];
-vm.runInContext("data.offers=fixtures;data.cards=[];data.profile={cardPath:'business',interests:['none'],subInterests:{},relationships:{},feePref:'any',subSpendPref:'10000plus',ownedCardMode:'include',refineCardType:'Business'}",context);
+vm.runInContext("data.offers=fixtures;data.cards=[];data.profile={cardPath:'business',interests:['none'],subInterests:{},relationships:{},feePref:'any',subSpendPref:'10000plus',ownedCardMode:'include',refineCardType:'Personal'}",context);
 const run=code=>vm.runInContext(code,context);
 assert.equal(run('offerFit(data.offers[0]).status'),'consider');
 assert.equal(run('offerFit(data.offers[1]).status'),'consider');
 assert.equal(run('offerFit(data.offers[2]).status'),'verify');
 assert.equal(run('rankedOffers()[0].offer.id'),2,'Equal bonuses must favor $0 required spend over $3,000');
 assert.equal(run('rankedOffers().at(-1).offer.id'),3,'Unknown spend must not be treated as zero');
-run("data.profile.refineRank='leastspend'");
 assert.equal(run('refinementCandidates()[0].offer.id'),2);
 assert.equal(run('refinementCandidates().some(x=>x.offer.type!=="Business")'),false);
 run("data.profile.refineRank='efficiency'");
@@ -45,7 +44,7 @@ context.Date=class extends Date {
   constructor(...args){super(...(args.length?args:[reviewedAt]));}
   static now(){return reviewedAt;}
 };
-run("data.offers=reviewedCatalog;data.profile.cardPath='business';data.profile.refineRank='leastspend'");
+run("data.offers=reviewedCatalog;data.profile.cardPath='business';data.profile.refineRank='overall'");
 const reviewedIds=new Set([7001,7002,7003,7004,7005,7006,7007,7008,7009,7010,7011,7401,7402,7403,7404]);
 const actual=run('refinementCandidates()');
 assert(actual.length>0,'The reviewed catalog must produce business recommendations');
@@ -80,8 +79,13 @@ assert.match(run('simpleWizard()'),/value="pointsBonus">Highest point bonus/);
 const fields={simpleSpend:{value:'10000plus'},simpleFee:{value:'any'},simpleBonusRank:{value:'cashBonus'}};
 context.document.getElementById=id=>fields[id]||element;
 run('finishSimpleSearch()');
-assert.equal(run('data.profile.refineRank'),'cashBonus');
-assert.match(run('refinementPanelHTML()'),/value="cashBonus" selected/);
+assert.equal(run('primaryBonusRank()'),'cashBonus');
+const refinementPanel=run('refinementPanelHTML()');
+assert.match(refinementPanel,/What matters next\?/);
+assert.doesNotMatch(refinementPanel,/refineCardTypeSelect|Highest cash welcome bonus|Highest point bonus|Personal|Business/);
+for(const priority of ['rewards','categoryRewards','efficiency','hist100']){
+  assert(refinementPanel.includes(`value="${priority}"`));
+}
 const cashBonuses=run('refinementCandidates().map(({offer})=>({id:offer.id,bonus:offer.bonus,unit:offer.unit,spend:offer.spend,type:offer.type}))');
 assert.equal(cashBonuses[0].id,7204,'Spark Cash Plus must rank first among business cash offers at the widest limits');
 assert(cashBonuses.every(({unit,type})=>unit==='cash'&&type==='Business'));
@@ -96,7 +100,7 @@ assert.equal(run("fixedCashWelcomeBonus({unit:'cash / UR',bonus:200})"),200,'Adv
 
 fields.simpleBonusRank.value='pointsBonus';
 run('finishSimpleSearch()');
-assert.equal(run('data.profile.refineRank'),'pointsBonus');
+assert.equal(run('primaryBonusRank()'),'pointsBonus');
 assert.match(run('apply()'),/Ranked by the number of points or miles/);
 run('simpleGo(2)');
 assert.match(run('simpleWizard()'),/value="pointsBonus" selected/);
@@ -106,6 +110,19 @@ assert(pointBonuses.every(({bonus,type})=>bonus>0&&type==='Business'));
 assert(pointBonuses.every((offer,i)=>i===0||pointBonuses[i-1].bonus>=offer.bonus));
 assert(pointBonuses.some(({id})=>id===7010),'Include miles from airline currencies without a redemption valuation');
 assert(!pointBonuses.some(({id})=>id===7204),'Exclude fixed cash from the points ranking');
+fields.refineRankSelect={value:'efficiency'};
+run('applyRefinement()');
+assert.equal(run('primaryBonusRank()'),'pointsBonus','Fine-tune must preserve the welcome bonus choice');
+assert.equal(run('data.profile.cardPath'),'business','Fine-tune must reuse the original card type');
+assert.equal(run('data.profile.subSpendPref'),'10000plus');
+assert.equal(run('data.profile.feePref'),'any');
+const refinedPoints=run('refinementCandidates().map(({offer})=>({id:offer.id,ratio:subReturnRange(offer)?.mid??-1}))');
+assert(refinedPoints.every(({id})=>pointBonuses.some(o=>o.id===id)));
+assert(refinedPoints.every((offer,i)=>i===0||refinedPoints[i-1].ratio>=offer.ratio));
+run('clearRefinement()');
+assert.equal(run('nextPriority()'),'overall');
+assert.equal(run('refinementCandidates().map(({offer})=>offer.id).join()'),pointBonuses.map(o=>o.id).join());
+
 assert.equal(run("pointsWelcomeBonus({unit:'Free Night Awards',bonus:4,bonusIsCertificate:true})"),0);
 assert.equal(run("pointsWelcomeBonus({unit:'OneKeyCash',bonus:250,bonusRestricted:true})"),0);
 assert.equal(run("pointsWelcomeBonus({unit:'Avios',bonus:75000})"),75000);
