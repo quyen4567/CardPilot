@@ -1578,7 +1578,20 @@ function refinementPanelHTML(){
   const selectedRank=validRanks.includes(rank)?rank:'overall';
   const cardChoices=[['all','Personal + business'],['Business','Business only'],['Personal','Personal only']];
   const changed=selectedRank!=='overall'||cardType!=='all';
-  return `<details id="refinementPanel" class="card" style="margin:12px 0" ${changed?'open':''}><summary><b>Fine-tune recommendations · The nerdy bits</b><span class="small" style="margin-left:8px">${changed?refinementSummary():'Optional'}</span></summary><div class="small" style="margin:8px 0 12px">Your reward focus is already set to <b>${refinementRewardLabel()}</b> from your earlier answers. Fine-tune only what you want to change.</div><div class="subchoices"><h4 style="margin:0 0 8px">1. Card type</h4><select id="refineCardTypeSelect" class="input" style="width:100%">${cardChoices.map(x=>`<option value="${x[0]}" ${cardType===x[0]?'selected':''}>${x[1]}</option>`).join('')}</select></div><div class="subchoices" style="margin-top:10px"><h4 style="margin:0 0 8px">2. What matters most?</h4><select id="refineRankSelect" class="input" style="width:100%">${rankChoices.map(x=>`<option value="${x[0]}" ${selectedRank===x[0]?'selected':''}>${x[1]}</option>`).join('')}</select></div><button class="btn" style="width:100%;margin-top:12px" onclick="applyRefinement()">Update recommendations ↓</button>${changed?`<button class="btn ghost" style="width:100%;margin-top:8px" onclick="clearRefinement()">Reset fine-tuning</button>`:''}</details>`;
+  return `<details id="refinementPanel" class="card" style="margin:12px 0" ${changed?'open':''}>
+    <summary><b>Fine-tune your matches</b>${changed?`<span class="small" style="margin-left:8px">${refinementSummary()}</span>`:''}</summary>
+    <div class="subchoices" style="margin-top:10px">
+      <h4 style="margin:0 0 8px"><label for="refineCardTypeSelect">Card type</label></h4>
+      <select id="refineCardTypeSelect" class="input" style="width:100%">${cardChoices.map(x=>`<option value="${x[0]}" ${cardType===x[0]?'selected':''}>${x[1]}</option>`).join('')}</select>
+    </div>
+    <div class="subchoices" style="margin-top:10px">
+      <h4 style="margin:0 0 8px"><label for="refineRankSelect">What matters next?</label></h4>
+      <p id="refineRankHelp" class="small" style="margin:0 0 8px">Pick what puts a card on top. The others can cope.</p>
+      <select id="refineRankSelect" aria-describedby="refineRankHelp" class="input" style="width:100%">${rankChoices.map(x=>`<option value="${x[0]}" ${selectedRank===x[0]?'selected':''}>${x[1]}</option>`).join('')}</select>
+    </div>
+    <button class="btn" style="width:100%;margin-top:12px" onclick="applyRefinement()">Re-rank my cards ↑</button>
+    ${changed?`<button class="btn ghost" style="width:100%;margin-top:8px" onclick="clearRefinement()">Reset fine-tuning</button>`:''}
+  </details>`;
 }
 
 function officialCardUrl(o){
