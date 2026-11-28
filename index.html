@@ -1437,6 +1437,11 @@ function offerCashValue(o){
   const fixedCash=(!isPointOffer && unit.includes('cash')) ? Number(o.bonus||0) : 0;
   return fixedCash + Number(o.bonusCashExtra||0);
 }
+function fixedCashWelcomeBonus(o){
+  if(o.bonusRestricted||o.bonusIsCertificate)return 0;
+  const unit=String(o.unit||'').trim().toLowerCase();
+  return /^(cash|cash back|cash \/ ur)$/.test(unit) ? Number(o.bonus||0) : 0;
+}
 function offerEstimatedSubValue(o){
   if(o.bonusRestricted||o.bonusIsCertificate)return Number(o.bonusCashExtra||0);
   const unit=String(o.unit||'').toLowerCase();
@@ -1507,6 +1512,11 @@ function refinementCandidates(){
   // that original recommendation pool and does not ask the user to choose reward type again.
   let arr=recommendationPool().filter(x=>!x.fit.disabled&&x.fit.status!=='save'&&refineTypeMatches(x.offer,type)&&(cardType==='all'||x.offer.type===cardType));
   if(rank==='bonus')arr.sort((a,b)=>{const av=offerEstimatedSubValue(a.offer),bv=offerEstimatedSubValue(b.offer);if(bv!==av)return bv-av;const ar=subReturnRange(a.offer),br=subReturnRange(b.offer);const aroi=ar?ar.mid:-1,broi=br?br.mid:-1;if(broi!==aroi)return broi-aroi;return Number(a.offer.spend ?? Infinity)-Number(b.offer.spend ?? Infinity)||b.fit.score-a.fit.score;});
+  else if(rank==='cashBonus'){
+    arr=arr.filter(({offer})=>fixedCashWelcomeBonus(offer)>0);
+    arr.sort((a,b)=>fixedCashWelcomeBonus(b.offer)-fixedCashWelcomeBonus(a.offer)
+      ||Number(a.offer.spend ?? Infinity)-Number(b.offer.spend ?? Infinity)||b.fit.score-a.fit.score);
+  }
   else if(rank==='leastspend')arr.sort((a,b)=>{const as=Number(a.offer.spend ?? Infinity),bs=Number(b.offer.spend ?? Infinity);if(as!==bs)return as-bs;return offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score;});
   else if(rank==='efficiency')arr.sort((a,b)=>{const ar=subReturnRange(a.offer)?.mid||0,br=subReturnRange(b.offer)?.mid||0;if(br!==ar)return br-ar;return offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score;});
   else if(rank==='hist100'){
@@ -1533,7 +1543,7 @@ function historicalHighUnknownCandidates(){
   }).sort((a,b)=>offerEstimatedSubValue(b.offer)-offerEstimatedSubValue(a.offer)||b.fit.score-a.fit.score);
 }
 function refinementRankLabel(rank){
-  const m={overall:'Best overall value',bonus:'Most valuable current bonus',leastspend:'Lowest spend to earn a sign-up bonus',efficiency:'Best sign-up bonus return on required spend',hist100:'Best historical-high offer',cost:'Lowest annual fee',cashEverywhere:'Highest cash back everywhere',cashCategory:'Highest cash back in a category',pointsEverywhere:'Best points/miles earning everywhere',pointsCategory:'Best points/miles earning in a category',rewards:'Best general rewards rate'};
+  const m={overall:'Best overall value',bonus:'Most valuable current bonus',cashBonus:'Highest cash welcome bonus',leastspend:'Lowest spend to earn a sign-up bonus',efficiency:'Best sign-up bonus return on required spend',hist100:'Best historical-high offer',cost:'Lowest annual fee',cashEverywhere:'Highest cash back everywhere',cashCategory:'Highest cash back in a category',pointsEverywhere:'Best points/miles earning everywhere',pointsCategory:'Best points/miles earning in a category',rewards:'Best general rewards rate'};
   return m[rank]||m.overall;
 }
 function refinementSummary(){
@@ -1550,12 +1560,13 @@ function applyRefinement(){
 function clearRefinement(){data.profile.refineRank='overall';data.profile.refineCardType='all';data.profile.refineType=refinementTypeFromSearch();data.profile.showMoreRefinedRecommendations=false;save();render();showView('applyView');setTimeout(()=>document.getElementById('refinementPanel')?.scrollIntoView({behavior:'smooth',block:'start'}),40)}
 function refinementPanelHTML(){
   const rank=data.profile.refineRank||'overall',cardType=data.profile.refineCardType||'all',focus=refinementRewardFocus();
-  const common=[['bonus','Most valuable current bonus'],['leastspend','Lowest spend to earn a sign-up bonus'],['hist100','🔥 Best historical-high offer'],['cost','Lowest annual fee']];
+  const cashBonusChoice=['cashBonus',refinementRankLabel('cashBonus')];
+  const common=[['bonus','Most valuable current bonus'],...(focus==='points'?[]:[cashBonusChoice]),['leastspend','Lowest spend to earn a sign-up bonus'],['hist100','🔥 Best historical-high offer'],['cost','Lowest annual fee']];
   const rankChoices=focus==='cash'
     ? [['overall','Best overall cash-back value'],['cashEverywhere','Highest cash back everywhere'],['cashCategory','Highest cash back in a category'],...common]
     : focus==='points'
       ? [['overall','Best overall points & miles value'],['pointsEverywhere','Best points/miles earning everywhere'],['pointsCategory','Best points/miles earning in a category'],...common]
-      : [['overall','Best overall reward value'],['bonus','Most valuable current bonus'],['leastspend','Lowest spend to earn a sign-up bonus'],['efficiency','Best sign-up bonus return on required spend'],['hist100','🔥 Best historical-high offer'],['cost','Lowest annual fee']];
+      : [['overall','Best overall reward value'],['bonus','Most valuable current bonus'],cashBonusChoice,['leastspend','Lowest spend to earn a sign-up bonus'],['efficiency','Best sign-up bonus return on required spend'],['hist100','🔥 Best historical-high offer'],['cost','Lowest annual fee']];
   const validRanks=rankChoices.map(x=>x[0]);
   const selectedRank=validRanks.includes(rank)?rank:'overall';
   const cardChoices=[['all','Personal + business'],['Business','Business only'],['Personal','Personal only']];
@@ -1953,8 +1964,9 @@ function friendlyOfferLabel(o){return currentOfferLabel(o).replace(/^([\d,]+) ca
 function htmlSafe(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function simpleGo(step){simpleStep=step;save();render();showView(step?'applyView':'homeView');}
 function chooseSimpleGoal(goal){
-  data.profile.simpleGoal=goal;data.profile.interests=[goal==='cash'?'cash':goal==='travel'?'points':'hist'];
-  data.profile.refineRank=goal==='bonus'?'bonus':'overall';data.profile.refineCardType='all';
+  data.profile.simpleGoal=goal;
+  data.profile.interests=[({cash:'cash',travel:'points',bonus:'hist'})[goal]||'none'];
+  data.profile.refineRank=['bonus','cashBonus'].includes(goal)?goal:'overall';data.profile.refineCardType='all';
   data.profile.refineType=goal==='cash'?'cash':goal==='travel'?'points':'all';
   data.profile.showRecommendation=false;data.profile.editingPreferences=false;setSearchMode('questions');simpleLimit=3;simpleGo(1);
 }
@@ -1976,7 +1988,7 @@ function home(){
   return `<div class="calm-home"><div class="preview-tag">LESS GUESSWORK. MORE GOOD STUFF.</div><h2>Your money called.<br><span class="hero-punch">It wants better perks.</span></h2><p class="calm-lead">You do the spending. Let the card do something useful for once.</p>
   ${returning?`<button class="resume-search" onclick="openFindFlow()"><span><b>Your matches missed you.</b><small>Same preferences. Zero repeat interrogation.</small></span><span aria-hidden="true">→</span></button>`:''}
   <div class="goal-label">What are we making your next card do?</div><div class="goal-stack">
-  ${[['cash','💵','Earn more cash back','Because “thanks for your purchase” isn’t a reward.'],['travel','✈️','Help pay for travel','Your grocery bill could use a side hustle. Preferably airfare.'],['bonus','🎉','Go big on the welcome bonus','Make the bank roll out the red carpet—in cash or points. Meet the spending requirement. Collect your welcome bonus.']].map(([key,icon,title,sub])=>`<button class="goal-card" onclick="chooseSimpleGoal('${key}')"><span class="goal-icon" aria-hidden="true">${icon}</span><span><b>${title}</b><small>${sub}</small></span><span class="goal-arrow" aria-hidden="true">›</span></button>`).join('')}</div>
+  ${[['cash','💵','Earn more cash back','Because “thanks for your purchase” isn’t a reward.'],['travel','✈️','Help pay for travel','Your grocery bill could use a side hustle. Preferably airfare.'],['bonus','🎉','Go big on the welcome bonus','Make the bank roll out the red carpet—in cash or points. Meet the spending requirement. Collect your welcome bonus.'],['cashBonus','💰','Highest cash welcome bonus','Compare fixed cash offers by dollar amount.']].map(([key,icon,title,sub])=>`<button class="goal-card" onclick="chooseSimpleGoal('${key}')"><span class="goal-icon" aria-hidden="true">${icon}</span><span><b>${title}</b><small>${sub}</small></span><span class="goal-arrow" aria-hidden="true">›</span></button>`).join('')}</div>
   <div class="calm-footer">Card math. With a pulse.<br><span>Preferences stay on this device.</span></div><button class="text-link" onclick="browseCards()">Just here to window-shop? Browse cards →</button></div>`;
 }
 function simpleWizard(){
@@ -2006,7 +2018,7 @@ function apply(){
   if(!data.profile.simpleGoal)return home();
   const refined=(data.profile.refineRank||'overall')!=='overall'||(data.profile.refineCardType||'all')!=='all';
   const pool=(refined?refinementCandidates():recommendationPool()).filter(x=>x.offer.verified&&!offerDataQuality(x.offer).needsReview);
-  return `<div class="results-heading"><div class="preview-tag">THE SHORTLIST. FINALLY.</div><h2>A shorter list.<br>You’re welcome.</h2><p>${htmlSafe(pathLabel())} · ${htmlSafe(feePrefLabel())}</p><button class="text-link" onclick="changeFindAnswers()">✏️ Change my search</button><button class="text-link" onclick="restartFindFlow()">↻ Start over</button></div>
+  return `<div class="results-heading"><div class="preview-tag">THE SHORTLIST. FINALLY.</div><h2>A shorter list.<br>You’re welcome.</h2><p>${htmlSafe(pathLabel())} · ${htmlSafe(feePrefLabel())}</p>${data.profile.refineRank==='cashBonus'?'<p>Ranked by fixed cash welcome bonus before annual fees.</p>':''}<button class="text-link" onclick="changeFindAnswers()">✏️ Change my search</button><button class="text-link" onclick="restartFindFlow()">↻ Start over</button></div>
   <div class="list" id="recommendationResults">${pool.length?pool.slice(0,simpleLimit).map((x,i)=>calmOfferCard(x,i+1)).join(''):`<div class="empty-state"><h3>Well, that’s a picky combination.</h3><p>No confirmed offers fit these settings. Try different filters—your budget still gets the final say.</p><button onclick="changeFindAnswers()">Change search</button><button class="btn ghost" onclick="clearRefinement()">Reset fine-tuning</button></div>`}</div>
   ${pool.length>simpleLimit?`<button class="btn ghost more-matches" onclick="simpleLimit+=5;render();showView('applyView',true)">Show next ${Math.min(5,pool.length-simpleLimit)} matches ↓</button>`:''}<p class="quiet-note">Recommendations use available offer terms and your preferences. Approval and welcome-bonus eligibility are determined by the issuer.</p><details class="calm-details"><summary>How estimates work</summary>${valuationInfoHTML().replace(/^<details[^>]*><summary>.*?<\/summary>|<\/details>$/g,'')}</details>
   ${additionalMatchGroupsHTML(pool)}
