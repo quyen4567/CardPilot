@@ -9,7 +9,7 @@ const element={classList:{add(){},remove(){},toggle(){}},addEventListener(){},st
 const context=vm.createContext({console,Date,Intl,URL,Set,Map,JSON,Math,Number,String,Array,Object,
   document:{documentElement:element,querySelector:()=>element,querySelectorAll:()=>[],getElementById:()=>element},
   localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},
-  window:{},navigator:{},alert(){},setTimeout,clearTimeout});
+  window:{scrollTo(){}},navigator:{},alert(){},setTimeout,clearTimeout});
 vm.runInContext(script,context);
 const base={issuer:'Fixture',type:'Business',bonus:200,unit:'cash',af:0,verified:true,
   verifiedDate:new Date().toISOString().slice(0,10),tags:['cash'],issuerUrl:'https://issuer.example/card',
@@ -71,6 +71,24 @@ assert.equal(run('pointCurrency(reviewOffer)'),'bilt','Palladium points remain p
 context.reviewOffer=context.reviewedCatalog.find(c=>c.id===8704);
 assert.equal(run('reviewOffer.bonus'),45000,'Wyndham hotel-spend tier must not inflate base bonus');
 assert.equal(run('reviewOffer.maximumCombinedBonus'),100000);
+// Exercise the cash welcome bonus goal with the same filters as the normal search.
+assert.match(run('home()'),/chooseSimpleGoal\('cashBonus'\)/);
+run("chooseSimpleGoal('cashBonus')");
+assert.equal(run('data.profile.refineRank'),'cashBonus');
+assert.match(run('refinementPanelHTML()'),/value="cashBonus" selected/);
+run("data.offers=reviewedCatalog;data.profile.cardPath='business';data.profile.feePref='any';data.profile.subSpendPref='10000plus'");
+const cashBonuses=run('refinementCandidates().map(({offer})=>({id:offer.id,bonus:offer.bonus,unit:offer.unit,spend:offer.spend,type:offer.type}))');
+assert.equal(cashBonuses[0].id,7204,'Spark Cash Plus must rank first among business cash offers at the widest limits');
+assert(cashBonuses.every(({unit,type})=>unit==='cash'&&type==='Business'));
+assert(cashBonuses.every((offer,i)=>i===0||cashBonuses[i-1].bonus>=offer.bonus));
+run("data.profile.subSpendPref='10000';data.profile.feePref='0'");
+const limitedCashBonuses=run('refinementCandidates()');
+assert(limitedCashBonuses.length>0);
+assert(limitedCashBonuses.every(({offer})=>offer.spend<=10000&&offer.af===0));
+assert.equal(run("fixedCashWelcomeBonus(data.offers.find(o=>o.id===8112))"),0,'Separate statement credits must not enter the cash ranking');
+assert.equal(run("fixedCashWelcomeBonus(data.offers.find(o=>o.id===8816))"),0,'Restricted Bilt Cash must not enter the cash ranking');
+assert.equal(run("fixedCashWelcomeBonus({unit:'cash / UR',bonus:200})"),200,'Advertised fixed cash remains cash when the issuer also allows points');
+
 const fullReview=JSON.parse(fs.readFileSync(new URL('../staging/offer-review-118.json',import.meta.url),'utf8'));
 assert.equal(fullReview.records.length,118);
 assert.equal(new Set(fullReview.records.map(c=>c.id)).size,118);
