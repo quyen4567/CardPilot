@@ -71,12 +71,17 @@ assert.equal(run('pointCurrency(reviewOffer)'),'bilt','Palladium points remain p
 context.reviewOffer=context.reviewedCatalog.find(c=>c.id===8704);
 assert.equal(run('reviewOffer.bonus'),45000,'Wyndham hotel-spend tier must not inflate base bonus');
 assert.equal(run('reviewOffer.maximumCombinedBonus'),100000);
-// Exercise the cash welcome bonus goal with the same filters as the normal search.
-assert.match(run('home()'),/chooseSimpleGoal\('cashBonus'\)/);
-run("chooseSimpleGoal('cashBonus')");
+// Both ranking choices run through the welcome bonus wizard and respect the search filters.
+assert.match(run('home()'),/chooseSimpleGoal\('bonus'\)/);
+assert.doesNotMatch(run('home()'),/chooseSimpleGoal\('cashBonus'\)/);
+run("chooseSimpleGoal('bonus');chooseSimplePath('business');data.profile.reduceMotion=true");
+assert.match(run('simpleWizard()'),/value="cashBonus" selected>Highest cash welcome bonus/);
+assert.match(run('simpleWizard()'),/value="pointsBonus">Highest point bonus/);
+const fields={simpleSpend:{value:'10000plus'},simpleFee:{value:'any'},simpleBonusRank:{value:'cashBonus'}};
+context.document.getElementById=id=>fields[id]||element;
+run('finishSimpleSearch()');
 assert.equal(run('data.profile.refineRank'),'cashBonus');
 assert.match(run('refinementPanelHTML()'),/value="cashBonus" selected/);
-run("data.offers=reviewedCatalog;data.profile.cardPath='business';data.profile.feePref='any';data.profile.subSpendPref='10000plus'");
 const cashBonuses=run('refinementCandidates().map(({offer})=>({id:offer.id,bonus:offer.bonus,unit:offer.unit,spend:offer.spend,type:offer.type}))');
 assert.equal(cashBonuses[0].id,7204,'Spark Cash Plus must rank first among business cash offers at the widest limits');
 assert(cashBonuses.every(({unit,type})=>unit==='cash'&&type==='Business'));
@@ -88,6 +93,25 @@ assert(limitedCashBonuses.every(({offer})=>offer.spend<=10000&&offer.af===0));
 assert.equal(run("fixedCashWelcomeBonus(data.offers.find(o=>o.id===8112))"),0,'Separate statement credits must not enter the cash ranking');
 assert.equal(run("fixedCashWelcomeBonus(data.offers.find(o=>o.id===8816))"),0,'Restricted Bilt Cash must not enter the cash ranking');
 assert.equal(run("fixedCashWelcomeBonus({unit:'cash / UR',bonus:200})"),200,'Advertised fixed cash remains cash when the issuer also allows points');
+
+fields.simpleBonusRank.value='pointsBonus';
+run('finishSimpleSearch()');
+assert.equal(run('data.profile.refineRank'),'pointsBonus');
+assert.match(run('apply()'),/Ranked by the number of points or miles/);
+run('simpleGo(2)');
+assert.match(run('simpleWizard()'),/value="pointsBonus" selected/);
+const pointBonuses=run('refinementCandidates().map(({offer})=>({id:offer.id,bonus:pointsWelcomeBonus(offer),type:offer.type}))');
+assert(pointBonuses.length>0);
+assert(pointBonuses.every(({bonus,type})=>bonus>0&&type==='Business'));
+assert(pointBonuses.every((offer,i)=>i===0||pointBonuses[i-1].bonus>=offer.bonus));
+assert(pointBonuses.some(({id})=>id===7010),'Include miles from airline currencies without a redemption valuation');
+assert(!pointBonuses.some(({id})=>id===7204),'Exclude fixed cash from the points ranking');
+assert.equal(run("pointsWelcomeBonus({unit:'Free Night Awards',bonus:4,bonusIsCertificate:true})"),0);
+assert.equal(run("pointsWelcomeBonus({unit:'OneKeyCash',bonus:250,bonusRestricted:true})"),0);
+assert.equal(run("pointsWelcomeBonus({unit:'Avios',bonus:75000})"),75000);
+assert.equal(run("pointsWelcomeBonus(data.offers.find(o=>o.id===7201))"),150000,'Use the bonus tied to the displayed spend tier');
+run("chooseSimpleGoal('travel');chooseSimplePath('personal')");
+assert.doesNotMatch(run('simpleWizard()'),/id="simpleBonusRank"/);
 
 const fullReview=JSON.parse(fs.readFileSync(new URL('../staging/offer-review-118.json',import.meta.url),'utf8'));
 assert.equal(fullReview.records.length,118);
